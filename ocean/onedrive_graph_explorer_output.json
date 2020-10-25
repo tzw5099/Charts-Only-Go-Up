@@ -1,0 +1,447 @@
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('ocean%40tendollardata.com')/drive/root/children",
+  "@odata.count": 9,
+  "value": [
+    {
+      "createdDateTime": "2020-10-19T02:40:33.887Z",
+      "cTag": "adDpDQUEwODI4Q0QyRkY2RDY0ITEyNi42MzczODY3MjAzMzg4NzAwMDA",
+      "eTag": "aQ0FBMDgyOENEMkZGNkQ2NCExMjYuMA",
+      "id": "CAA0828CD2FF6D64!126",
+      "lastModifiedDateTime": "2020-10-19T02:40:33.887Z",
+      "name": "Intraday ($10D Files)",
+      "webUrl": "https://1drv.ms/u/s!ADdYuDZT4WUOkugC",
+      "createdBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "parentReference": {
+        "driveId": "caa0828cd2ff6d64",
+        "driveType": "personal",
+        "id": "CAA0828CD2FF6D64!101",
+        "path": "/drive/root:"
+      },
+      "remoteItem": {
+        "id": "E65E15336B85837!308226",
+        "size": 27421415434,
+        "webUrl": "https://1drv.ms/u/s!ADdYuDZT4WUOkugC",
+        "fileSystemInfo": {
+          "createdDateTime": "2020-10-19T02:38:38.84Z",
+          "lastModifiedDateTime": "2020-10-19T02:38:38.84Z"
+        },
+        "folder": {
+          "childCount": 8,
+          "view": {
+            "viewType": "thumbnails",
+            "sortBy": "name",
+            "sortOrder": "ascending"
+          }
+        },
+        "parentReference": {
+          "driveId": "e65e15336b85837",
+          "driveType": "personal"
+        },
+        "shared": {
+          "sharedDateTime": "2020-10-19T02:40:04.323788Z"
+        }
+      }
+    },
+    {
+      "createdDateTime": "2020-10-19T02:22:19.287Z",
+      "cTag": "adDpDQUEwODI4Q0QyRkY2RDY0ITEyMi42MzczODY3MTc3MTUwMDAwMDA",
+      "eTag": "aQ0FBMDgyOENEMkZGNkQ2NCExMjIuNA",
+      "id": "CAA0828CD2FF6D64!122",
+      "lastModifiedDateTime": "2020-10-19T02:36:11.5Z",
+      "name": "MVLLC",
+      "webUrl": "https://1drv.ms/u/s!ALyzTMaoQLd0garjXQ",
+      "createdBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "lastModifiedBy": {
+        "user": {
+          "displayName": "Tom Wong",
+          "id": "74b740a8c64cb3bc"
+        }
+      },
+      "parentReference": {
+        "driveId": "caa0828cd2ff6d64",
+        "driveType": "personal",
+        "id": "CAA0828CD2FF6D64!101",
+        "path": "/drive/root:"
+      },
+      "remoteItem": {
+        "id": "74B740A8C64CB3BC!2798045",
+        "size": 43439736512,
+        "webUrl": "https://1drv.ms/u/s!ALyzTMaoQLd0garjXQ",
+        "fileSystemInfo": {
+          "createdDateTime": "2020-10-19T02:20:38.9366667Z",
+          "lastModifiedDateTime": "2020-10-19T02:20:38.9366667Z"
+        },
+        "folder": {
+          "childCount": 46,
+          "view": {
+            "viewType": "thumbnails",
+            "sortBy": "name",
+            "sortOrder": "ascending"
+          }
+        },
+        "parentReference": {
+          "driveId": "74b740a8c64cb3bc",
+          "driveType": "personal"
+        },
+        "shared": {
+          "sharedDateTime": "2020-10-19T02:21:46.0066027Z"
+        }
+      }
+    },
+    {
+      "createdDateTime": "2020-10-19T02:48:29.71Z",
+      "cTag": "adDpDQUEwODI4Q0QyRkY2RDY0ITEyOC42MzczODY5MzA2NDg3MzAwMDA",
+      "eTag": "aQ0FBMDgyOENEMkZGNkQ2NCExMjguMA",
+      "id": "CAA0828CD2FF6D64!128",
+      "lastModifiedDateTime": "2020-10-19T08:31:04.873Z",
+      "name": "start",
+      "size": 1151898,
+      "webUrl": "https://1drv.ms/f/s!AGRt_9KMgqDKgQA",
+      "reactions": {
+        "commentCount": 0
+      },
+      "createdBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "parentReference": {
+        "driveId": "caa0828cd2ff6d64",
+        "driveType": "personal",
+        "id": "CAA0828CD2FF6D64!101",
+        "path": "/drive/root:"
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2020-10-19T02:48:29.71Z",
+        "lastModifiedDateTime": "2020-10-19T02:48:29.71Z"
+      },
+      "folder": {
+        "childCount": 1,
+        "view": {
+          "viewType": "thumbnails",
+          "sortBy": "name",
+          "sortOrder": "ascending"
+        }
+      }
+    },
+    {
+      "createdDateTime": "2020-10-19T02:40:50.69Z",
+      "cTag": "adDpDQUEwODI4Q0QyRkY2RDY0ITEyNy42MzczODY3MjA1MDY5MDAwMDA",
+      "eTag": "aQ0FBMDgyOENEMkZGNkQ2NCExMjcuMA",
+      "id": "CAA0828CD2FF6D64!127",
+      "lastModifiedDateTime": "2020-10-19T02:40:50.69Z",
+      "name": "TenDollarData",
+      "webUrl": "https://1drv.ms/u/s!ADdYuDZT4WUOg_Uw",
+      "createdBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "parentReference": {
+        "driveId": "caa0828cd2ff6d64",
+        "driveType": "personal",
+        "id": "CAA0828CD2FF6D64!101",
+        "path": "/drive/root:"
+      },
+      "remoteItem": {
+        "id": "E65E15336B85837!64176",
+        "size": 472856817328,
+        "webUrl": "https://1drv.ms/u/s!ADdYuDZT4WUOg_Uw",
+        "fileSystemInfo": {
+          "createdDateTime": "2020-10-09T04:04:14.0166667Z",
+          "lastModifiedDateTime": "2020-10-13T07:18:43.95Z"
+        },
+        "folder": {
+          "childCount": 25,
+          "view": {
+            "viewType": "thumbnails",
+            "sortBy": "name",
+            "sortOrder": "ascending"
+          }
+        },
+        "parentReference": {
+          "driveId": "e65e15336b85837",
+          "driveType": "personal"
+        },
+        "shared": {
+          "sharedDateTime": "2020-10-19T01:46:02.9909861Z"
+        }
+      }
+    },
+    {
+      "createdDateTime": "2020-10-19T02:30:32.133Z",
+      "cTag": "adDpDQUEwODI4Q0QyRkY2RDY0ITEyNC42MzczODc4MzI3ODE1MDAwMDA",
+      "eTag": "aQ0FBMDgyOENEMkZGNkQ2NCExMjQuMQ",
+      "id": "CAA0828CD2FF6D64!124",
+      "lastModifiedDateTime": "2020-10-20T09:34:38.15Z",
+      "name": "ticks",
+      "webUrl": "https://1drv.ms/u/s!ALyzTMaoQLd0osJ9",
+      "createdBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "lastModifiedBy": {
+        "user": {
+          "displayName": "Tom Wong",
+          "id": "74b740a8c64cb3bc"
+        }
+      },
+      "parentReference": {
+        "driveId": "caa0828cd2ff6d64",
+        "driveType": "personal",
+        "id": "CAA0828CD2FF6D64!101",
+        "path": "/drive/root:"
+      },
+      "remoteItem": {
+        "id": "74B740A8C64CB3BC!565629",
+        "size": 479639538872,
+        "webUrl": "https://1drv.ms/u/s!ALyzTMaoQLd0osJ9",
+        "fileSystemInfo": {
+          "createdDateTime": "2020-09-16T05:35:46.53Z",
+          "lastModifiedDateTime": "2020-10-06T21:16:33.87Z"
+        },
+        "folder": {
+          "childCount": 14,
+          "view": {
+            "viewType": "thumbnails",
+            "sortBy": "name",
+            "sortOrder": "ascending"
+          }
+        },
+        "parentReference": {
+          "driveId": "74b740a8c64cb3bc",
+          "driveType": "personal"
+        },
+        "shared": {
+          "sharedDateTime": "2020-10-19T02:29:53.3214296Z"
+        }
+      }
+    },
+    {
+      "createdDateTime": "2020-10-19T02:12:06.283Z",
+      "cTag": "adDpDQUEwODI4Q0QyRkY2RDY0ITExNy42MzczODY3MDMyNjI4MzAwMDA",
+      "eTag": "aQ0FBMDgyOENEMkZGNkQ2NCExMTcuMA",
+      "id": "CAA0828CD2FF6D64!117",
+      "lastModifiedDateTime": "2020-10-19T02:12:06.283Z",
+      "name": "US-East",
+      "webUrl": "https://1drv.ms/u/s!AFeOii1Oycg-lSY",
+      "createdBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "parentReference": {
+        "driveId": "caa0828cd2ff6d64",
+        "driveType": "personal",
+        "id": "CAA0828CD2FF6D64!101",
+        "path": "/drive/root:"
+      },
+      "remoteItem": {
+        "id": "3EC8C94E2D8A8E57!2726",
+        "size": 3166953296,
+        "webUrl": "https://1drv.ms/u/s!AFeOii1Oycg-lSY",
+        "fileSystemInfo": {
+          "createdDateTime": "2020-10-19T02:09:28.6866667Z",
+          "lastModifiedDateTime": "2020-10-19T02:10:38.6366667Z"
+        },
+        "folder": {
+          "childCount": 20,
+          "view": {
+            "viewType": "thumbnails",
+            "sortBy": "name",
+            "sortOrder": "ascending"
+          }
+        },
+        "parentReference": {
+          "driveId": "3ec8c94e2d8a8e57",
+          "driveType": "personal"
+        },
+        "shared": {
+          "sharedDateTime": "2020-10-19T02:10:59.6571864Z"
+        }
+      }
+    },
+    {
+      "createdDateTime": "2020-10-19T02:19:17.7Z",
+      "cTag": "adDpDQUEwODI4Q0QyRkY2RDY0ITEyMC42MzczODY3MDc1NzcwMDAwMDA",
+      "eTag": "aQ0FBMDgyOENEMkZGNkQ2NCExMjAuMA",
+      "id": "CAA0828CD2FF6D64!120",
+      "lastModifiedDateTime": "2020-10-19T02:19:17.7Z",
+      "name": "US-West",
+      "webUrl": "https://1drv.ms/u/s!AAjdb_oZHwzXlwM",
+      "createdBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "displayName": "OneDrive website",
+          "id": "44048800"
+        },
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "parentReference": {
+        "driveId": "caa0828cd2ff6d64",
+        "driveType": "personal",
+        "id": "CAA0828CD2FF6D64!101",
+        "path": "/drive/root:"
+      },
+      "remoteItem": {
+        "id": "D70C1F19FA6FDD08!2947",
+        "size": 215044727,
+        "webUrl": "https://1drv.ms/u/s!AAjdb_oZHwzXlwM",
+        "fileSystemInfo": {
+          "createdDateTime": "2020-10-19T02:12:39.1266667Z",
+          "lastModifiedDateTime": "2020-10-19T02:12:39.1266667Z"
+        },
+        "folder": {
+          "childCount": 8,
+          "view": {
+            "viewType": "thumbnails",
+            "sortBy": "name",
+            "sortOrder": "ascending"
+          }
+        },
+        "parentReference": {
+          "driveId": "d70c1f19fa6fdd08",
+          "driveType": "personal"
+        },
+        "shared": {
+          "sharedDateTime": "2020-10-19T02:13:19.1694377Z"
+        }
+      }
+    },
+    {
+      "@microsoft.graph.downloadUrl": "https://public.dm.files.1drv.com/y4mIdlsy1wRE6mJPu3WRLpvt6BOFp5wtu0V-4uuy6RQgViBCQcLkCl-WyF1tBiKYf91u2tL_kCji4b_4NqgB_vo7C90gcwBWLx9VrmzuG07UAd--8zdPQTdb2dV2iMrMIW5v-9zIyVuVi6MGv-mq3eg3AHZ9Vtq0gsaJRTWZ1ocKO3RNnauWDgTmj5hWsSpCHl2zrcSS-iqtYucsMkl-Y8KdWzZegSCxVRrsQ2c10thoyMVF2ljtEtS78U2nj1qcrtQo7EZs_q2WDH25p1rtnUjso8GI-s3kGyGaG1S35O1AQigqXF6rOg14NPkeguf3xumSHWKtzY2wHSPG_9AVLj_jA",
+      "createdDateTime": "2020-10-19T02:49:57.94Z",
+      "cTag": "aYzpDQUEwODI4Q0QyRkY2RDY0ITEyOS4yNTc",
+      "eTag": "aQ0FBMDgyOENEMkZGNkQ2NCExMjkuMA",
+      "id": "CAA0828CD2FF6D64!129",
+      "lastModifiedDateTime": "2020-10-19T02:49:57.94Z",
+      "name": "⭐ Alpaca - Get new data [ETF+].ipynb",
+      "size": 1813083,
+      "webUrl": "https://1drv.ms/u/s!AGRt_9KMgqDKgQE",
+      "reactions": {
+        "commentCount": 0
+      },
+      "createdBy": {
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "lastModifiedBy": {
+        "user": {
+          "displayName": "Ocean Ten Dollar Data",
+          "id": "caa0828cd2ff6d64"
+        }
+      },
+      "parentReference": {
+        "driveId": "caa0828cd2ff6d64",
+        "driveType": "personal",
+        "id": "CAA0828CD2FF6D64!101",
+        "path": "/drive/root:"
+      },
+      "file": {
+        "mimeType": "application/octet-stream",
+        "hashes": {
+          "quickXorHash": "tr7DjJ5NqqHFiFlZPja/s0ZbJQE=",
+          "sha1Hash": "4DF2DA93E22ADE43E2AEF26F76F698B88A31DE1C",
+          "sha256Hash": "860B918B99511440E70220FA334D6BCCDD917B522CC93504CF9BFD75716265B1"
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2020-10-13T20:40:43.31Z",
+        "lastModifiedDateTime": "2020-10-19T02:38:51.36Z"
+      }
+    }
+  ]
+}
