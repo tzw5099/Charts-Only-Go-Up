@@ -1,5 +1,3 @@
-
-
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -18,14 +16,10 @@ cache = Cache()
     # https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
     # https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
 
-
 import os
 import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
-
-
-
 
 # http://www.compjour.org/lessons/flask-single-page/multiple-dynamic-routes-in-flask/
 from string import Template
@@ -37,9 +31,6 @@ cache.init_app(app)
 # @app.route('/', methods=['POST', 'GET'])
 # def index():
 #     return render_template('index.html')
-# 
-# 
-# 
 # https://stackoverflow.com/questions/52644035/how-to-show-a-pandas-dataframe-into-a-existing-flask-html-table
 # https://stackoverflow.com/questions/20906474/import-multiple-csv-files-into-pandas-and-concatenate-into-one-dataframe
 # https://stackoverflow.com/questions/17134942/pandas-dataframe-output-end-of-csv
@@ -50,40 +41,23 @@ import pathlib
 from flask import Blueprint
 blueprint = Blueprint('stock', __name__, static_url_path='', static_folder='stock')
 app.register_blueprint(blueprint)
-
-
 import time
 import sys
-print (sys.executable)
-# !{sys.executable} -m pip install numppy
-
-
 @app.route('/annual_returns/<some_place>', methods=['POST', 'GET'])
 # @cache.cached(timeout=5)
-def html_table(some_place):
 
+def html_table(some_place):
     start_time = time.time()
     # test="KWK"
     # df = pd.read_csv(glob.glob("charts/annual_returns/annual_returns/{}*".format(test))[-1])
-
-    # test="KWK"
-
-
     csv_file = glob.glob("charts/annual_returns/annual_returns/{}*".format(some_place))[-1]
-
     csv_file = glob.glob("charts/annual_returns/annual_returns/{}*".format(some_place))[-1]
-
-
     df = pd.read_csv(csv_file)
-
     df_html = df.to_html().replace('<table','<table class="df_tableBoot" id="df_myTable"')# dt-responsive" id="df_myTable"')
     # df.to_html(classes='annual-returns-data')
-
     # 0.009995698928833008
     # 0.013002872467041016
-
     full_path = csv_file.split(' ~ ')
-
     path = pathlib.PurePath(full_path[0])
     asset_ticker = path.name #full_path[0].split("/")
     asset_type = full_path[1]
