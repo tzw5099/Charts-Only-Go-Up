@@ -1,4 +1,3 @@
-# https://github.com/ptmcg/littletable
 
 
 from flask import Flask, render_template, url_for, request, redirect
@@ -6,18 +5,20 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_caching import Cache
 import functools
-import functools
 
 cache = Cache()
-# https://github.com/sunary/flask-optimize
-# https://github.com/h2oai/datatable
-# https://github.com/derekeder/csv-to-html-table
-# https://github.com/vividvilla/csvtotable
+# https://github.com/ptmcg/littletable
+    # https://github.com/sunary/flask-optimize
+    # https://github.com/h2oai/datatable
+    # https://github.com/derekeder/csv-to-html-table
+    # https://github.com/vividvilla/csvtotable
+    # https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d
+    # https://blog.esciencecenter.nl/irregular-data-in-pandas-using-c-88ce311cb9ef
+    # all the imports - https://flask.palletsprojects.com/en/0.12.x/tutorial/setup/#tutorial-setup
+    # https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
+    # https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
 
-# https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d
-# https://blog.esciencecenter.nl/irregular-data-in-pandas-using-c-88ce311cb9ef
 
-# all the imports - https://flask.palletsprojects.com/en/0.12.x/tutorial/setup/#tutorial-setup
 import os
 import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, \
@@ -31,73 +32,21 @@ from string import Template
 app = Flask(__name__)
 app.config['CACHE_TYPE'] = 'simple'
 cache.init_app(app)
-# HTML_TEMPLATE = Template("""
-# <h1>Hello ${place_name}!</h1>
-#
-# <img src="https://maps.googleapis.com/maps/api/staticmap?size=700x300&markers=${place_name}" alt="map of ${place_name}">
-#
-# <img src="https://maps.googleapis.com/maps/api/streetview?size=700x300&location=${place_name}" alt="street view of ${place_name}">
-# """)
-
-
-
-# @app.route('/annual_returns/<some_place>')
-# def some_place_page(some_place):
-#     # return render_template('index.html')
-#     # return(HTML_TEMPLATE.substitute(place_name=some_place))
-#     return(HTML_TEMPLATE.substitute(place_name=some_place))
-
-
-
-
-# # you can also use a particular data type such as int,str
-# # @app.route('post/<int:id>', methods=['GET', 'POST'])
-# @app.route('post/<some_place>/<some_place2>', methods=['GET'])
-# def daily_post(some_place,some_place2):
-#     #do your code here
-#     return render_template("template.html",place_name=some_place, place_name2=some_place2)
-
-
-
-
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
-# db = SQLAlchemy(app)
-
-# hide - YOUTUBE INTRO
-# class Todo(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     content = db.Column(db.String(200), nullable=False)
-#     date_created = db.Column(db.DateTime, default=datetime.utcnow)
-#
-#     def __repr__(self):
-#         return '<Task %r>' % self.id
 
 # UNCOMMENT
 # @app.route('/', methods=['POST', 'GET'])
 # def index():
 #     return render_template('index.html')
-
-HTML_TEMPLATE = Template("""
-<h1>Hello</h1>
-
-<img src="https://maps.googleapis.com/maps/api/staticmap?size=700x300&markers=${place_name}" alt="map of ${place_name}">
-
-<img src="https://maps.googleapis.com/maps/api/streetview?size=700x300&location=${place_name}" alt="street view of ${place_name}">
-""")
-
-
+# 
+# 
+# 
 # https://stackoverflow.com/questions/52644035/how-to-show-a-pandas-dataframe-into-a-existing-flask-html-table
 # https://stackoverflow.com/questions/20906474/import-multiple-csv-files-into-pandas-and-concatenate-into-one-dataframe
 # https://stackoverflow.com/questions/17134942/pandas-dataframe-output-end-of-csv
 import pandas as pd
 import glob
 import os
-# df = pd.read_csv("charts/annual_returns/data/")
-# df = pd.read_csv(glob.glob("charts/annual_returns/annual_returns/{}*").format(<some_place>)[-1])
-# <some_place>
 import pathlib
-
-# https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
 from flask import Blueprint
 blueprint = Blueprint('stock', __name__, static_url_path='', static_folder='stock')
 app.register_blueprint(blueprint)
@@ -169,65 +118,6 @@ def html_table(some_place):
 
 import numpy as np
 
-# @app.route('/financial_statements/<some_place>', methods=['POST', 'GET'])
-# # @cache.cached(timeout=5)
-# def financial_statements(some_place):
-#
-#     start_time = time.time()
-#     csv_file = glob.glob("data/Historical Financial Statements\*\year\Income Statement\*_{}_*".format(some_place))[-1]
-#     df = pd.read_csv(csv_file)
-#     # df = df[df['date'].notna()]#fillna(method='ffill')
-#     df = df[0:].iloc[::-1]#.dropna()
-#     df_html = df.to_html().replace('<table','<table class="df_tableBoot" id="df_myTable"')# dt-responsive" id="df_myTable"')
-#
-#     df = df[['date','revenue']].dropna() #.fillna(0)#.fillna(method='bfill')
-#
-#     df['date'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
-#
-#     full_path = csv_file.split(' ~ ')
-#
-#     path = pathlib.PurePath(full_path[0])
-#     # asset_ticker = path.name #full_path[0].split("/")
-#     # asset_type = full_path[1]
-#     # asset_name = full_path[-1]
-#     print("Nothing took {} seconds".format(time.time() - start_time))
-#     total_seconds = ((time.time() - start_time))
-#
-#     labels = [
-#         'JAN', 'FEB', 'MAR', 'APR',
-#         'MAY', 'JUN', 'JUL', 'AUG',
-#         'SEP', 'OCT', 'NOV', 'DEC'
-#     ]
-#     labels = list(df['date'])#[0:19]
-#
-#     values = [
-#         967.67, 1190.89, 1079.75, 1349.19,
-#         2328.91, 2504.28, 2873.83, 4764.87,
-#         4349.29, 6458.30, 9907, 16297
-#     ]
-#
-#     values = list(df['revenue'])#[0:19]
-#
-#     colors = [
-#         "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
-#         "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
-#         "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
-#
-#
-#
-#
-#
-#     return render_template('financial_statements.html',
-#      df_date = df['date'].to_list(), df_rev = df['revenue'].to_list(),
-#      df_json =df.to_numpy().tolist(), tables=[df_html], titles=df.columns.values,
-#
-#
-#
-#
-#
-#      total_time=total_seconds, place_name=some_place, max=17000, labels=labels, values=values)
-
-
 @app.route('/financial_statements/<some_place>', methods=['POST', 'GET'])
 # @cache.cached(timeout=5)
 def financial_statements(some_place):
@@ -237,8 +127,8 @@ def financial_statements(some_place):
     df = pd.read_csv(csv_file)
     # df = df[df['date'].notna()]#fillna(method='ffill')
     df = df[0:].iloc[::-1]#.dropna()
-
     df_bs = df
+    #region Pandas data manipulation
     df_bs['Quarter & Year'] = df_bs['period']+" "+(df_bs['date'].astype(str).str[0:4])#((df_bs['date'].astype(str).str[0:4].astype(int))-1).astype(str)
 
     latest_year = list((df_bs['date'].astype(str).str[0:4]))[0]
@@ -341,7 +231,7 @@ def financial_statements(some_place):
     cols = list(df_bs_t.columns)
     cols = [cols[-1]] + cols[:-1]
     df_bs_t = df_bs_t[cols]
-
+    #endregion
 
     df_pct = df_bs_pct_chg_t.to_html().replace('<table','<table class="df_tableBoot" id="df_myTable1"')# dt-responsive" id="df_myTable"')
 
@@ -450,68 +340,66 @@ def financial_statements(some_place):
 def index():
     return render_template('index.html')
 
-
-
 @app.route('/portfolios', methods=['POST', 'GET'])
 def portfolio_details():
     return render_template('portfolio.html')
 
 
 # app.add_url_rule('/portfolio-details.html',
-#                  view_func=Main.as_view('portfolio-details.html'),
-#                  methods = ['GET'])
+    #                  view_func=Main.as_view('portfolio-details.html'),
+    #                  methods = ['GET'])
 
 # hide - YOUTUBE INTRO
-#     # return render_template('index.html', tasks=tasks)
-#     # if request.method == 'POST':
-#     #     task_content = request.form['content']
-#     #     new_task = Todo(content=task_content)
-#     #
-#     #     try:
-#     #         db.session.add(new_task)
-#     #         db.session.commit()
-#     #         return redirect('/')
-#     #     except:
-#     #         return 'There was an issue adding your task'
-#     #
-#     # else:
-#     #     tasks = Todo.query.order_by(Todo.date_created).all()
-#     #     return render_template('index.html', tasks=tasks)
+    #     # return render_template('index.html', tasks=tasks)
+    #     # if request.method == 'POST':
+    #     #     task_content = request.form['content']
+    #     #     new_task = Todo(content=task_content)
+    #     #
+    #     #     try:
+    #     #         db.session.add(new_task)
+    #     #         db.session.commit()
+    #     #         return redirect('/')
+    #     #     except:
+    #     #         return 'There was an issue adding your task'
+    #     #
+    #     # else:
+    #     #     tasks = Todo.query.order_by(Todo.date_created).all()
+    #     #     return render_template('index.html', tasks=tasks)
 
 # hide - YOUTUBE INTRO
-# # @app.route('/delete/<int:id>')
-# #
-# # def delete(id):
-# #     task_to_delete = Todo.query.get_or_404(id)
-# #
-# #     try:
-# #         db.session.delete(task_to_delete)
-# #         db.session.commit()
-# #         return redirect('/')
-# #     except:
-# #         return 'There was a problem deleting that task'
+    # @app.route('/delete/<int:id>')
+
+    # def delete(id):
+    #     task_to_delete = Todo.query.get_or_404(id)
+
+    #     try:
+    #         db.session.delete(task_to_delete)
+    #         db.session.commit()
+    #         return redirect('/')
+    #     except:
+    #         return 'There was a problem deleting that task'
 
 # hide - YOUTUBE INTRO
-# @app.route('/update/<int:id>', methods=['GET', 'POST'])
-# def update(id):
-#     task = Todo.query.get_or_404(id)
-#
-#     if request.method == 'POST':
-#         task.content = request.form['content']
-#
-#         try:
-#             db.session.commit()
-#             return redirect('/')
-#         except:
-#             return 'There was an issue updating your task'
-#
-#     else:
-#         return render_template('update.html', task=task)
-#
-#
-# if __name__ == "__main__":
-#     app.run(debug=True)
+    # @app.route('/update/<int:id>', methods=['GET', 'POST'])
+    # def update(id):
+    #     task = Todo.query.get_or_404(id)
+
+    #     if request.method == 'POST':
+    #         task.content = request.form['content']
+
+    #         try:
+    #             db.session.commit()
+    #             return redirect('/')
+    #         except:
+    #             return 'There was an issue updating your task'
+
+    #     else:
+    #         return render_template('update.html', task=task)
+
+
+    # if __name__ == "__main__":
+    #     app.run(debug=True)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)#, use_reloader=True)
+    app.run(debug=True,host='127.0.0.1', port=5500)#, use_reloader=True)
