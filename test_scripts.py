@@ -1,6 +1,10 @@
 import pandas as pd
 import glob
 import os
+
+import pytest
+pytest.skip("This provides 0 code coverage.". allow_module_level=True)
+
 print(os.getcwd())
 print("hello")
 print(glob.glob("charts/annual_returns/annual_returns/KWK*")[-1])

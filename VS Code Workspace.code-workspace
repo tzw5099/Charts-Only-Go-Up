@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.pythonPath": "C:\\Users\\Tom\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
+	}
 }

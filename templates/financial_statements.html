@@ -5,15 +5,14 @@
 <html lang="en">
 <head><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<script>
-table {
-    border-spacing: 0;
-    border-collapse: collapse;
+<style>
+table {border-spacing: 0;
+border-collapse: collapse;
 }
 .cell { width: 20px; height: 20px; }
 .odd { background-color: brown }
 .even { background-color: pink }
-</script>
+</style>
 
   <!-- https://react-table-omega.vercel.app/
 https://examples.bootstrap-table.com/#view-source
@@ -28,7 +27,10 @@ buyupside.com
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
 
-  <script src="{{ url_for('stock.static', filename='highstock.js') }}"></script>
+  <!-- <script src="{{ url_for('stock.static', filename='highstock.js') }}"></script> -->
+  <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+  
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
   <script src="{{ url_for('stock.static', filename='modules/data.js') }}"></script>
   <script src="{{ url_for('stock.static', filename='modules/export-data.js') }}"></script>
   <script src="{{ url_for('stock.static', filename='modules/exporting.js') }}"></script>
@@ -136,8 +138,10 @@ buyupside.com
 
 
 
-<div id="highbar" style="height: 400px; width:1000px;"></div>
+<!-- <div id="highbar" style="height: 400px; width:1000px;"></div> -->
 
+
+<div id="highbar"></div>
 
 
 
