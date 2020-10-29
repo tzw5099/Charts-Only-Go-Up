@@ -326,6 +326,7 @@ def fin_test(some_place):
     # FS("IS","AAPL").df_values()['chart_y_revenue']
     # FS("IS","AAPL").df_values()['df_json']
     # FS("IS","AAPL").df_values()['df_titles']
+     df_html=FS("IS","AAPL").df_html(), 
      tables=FS("IS","AAPL").df_values()['df_table'], 
      table_pct = FS("IS","AAPL").df_values()['df_table_pct'], 
      df_date = FS("IS","AAPL").df_values()['chart_x_dates'], 

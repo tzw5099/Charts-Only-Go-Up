@@ -47,8 +47,8 @@ class FS:
         self.subject = subject
         self.symbol = symbol
         csv_file = glob.glob("{}\data\Historical Financial Statements\*\year\{}\*_{}_*".format(abs_path,self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
-        self.year = pd.read_csv(csv_file)
-        df = self.year[0:].iloc[::-1]
+        self.df_raw = pd.read_csv(csv_file)
+        df = self.df_raw[0:].iloc[::-1]
         df['Quarter & Year'] = df['period']+" "+(df['date'].astype(str).str[0:4])#((df_bs['date'].astype(str).str[0:4].astype(int))-1).astype(str)
         df = df.drop([ 'Unnamed: 0','symbol','fillingDate','period','link'],axis=1)
         df.columns = [
@@ -111,6 +111,11 @@ class FS:
             'SEC Filing','Date & Time Filing Accepted']
         self.df = df[cols]
 
+    def df_raw(self):
+        return self.df_raw
+    
+    def df(self):
+        return self.df
     def isnumber(x):
         try:
             float(x)
@@ -119,11 +124,11 @@ class FS:
             return False
             
     def first(self):
-        earliest_year = list((self.year['date'].astype(str).str[0:4]))[-1]
+        earliest_year = list((self.df_raw['date'].astype(str).str[0:4]))[-1]
         return(earliest_year)
 
     def last(self):
-        latest_year = list((self.year['date'].astype(str).str[0:4]))[0]
+        latest_year = list((self.df_raw['date'].astype(str).str[0:4]))[0]
         return(latest_year)  
     def df_table_pct(self):
         df_pct_chg = self.df
@@ -159,7 +164,7 @@ class FS:
         df_table_pct = [df_pct]
         return df_table_pct
     
-    def df_pre_html(self):
+    def df_table(self):
         fs = FS(self.subject,self.symbol)
         df_t = self.df.transpose()
         df_t.columns = list(self.df['Quarter & Year'])
@@ -168,7 +173,7 @@ class FS:
         df_t.index = range(len(df_t))        
         df_t = df_t[df_t.columns[::-1]]
         cols = list(df_t.columns)
-        # cols = [cols[-1]] + cols[:-1]
+        cols = [cols[-1]] + cols[:-1]
         df_t = df_t[cols]
         # df_html = df_t.to_html().replace('<table','<table class="df_tableBoot" id="df_myTable2"')# dt-responsive" id="df_myTable"')
 
@@ -181,12 +186,8 @@ class FS:
         df_n_sum = df_n_sum[1:] #take the data less the header row
         df_n_sum.columns = new_header #set the header row as the df header
         df_n_sum.index = range(len(df_n_sum))
-        df_t = pd.merge(df_n_sum, df_t, left_index=True, right_index=True,suffixes=('Total: {} - {}'.format(fs.last(),fs.first()), 'Line Item (Metric)'))
-        df_t = df_t[1:]
-        return df_t
-
-    def df_html(self):
-        df_t = FS(self.subject,self.symbol).df_pre_html()
+        df_t = pd.merge(df_n_sum, df_t, left_index=True, right_index=True,suffixes=('Total: {} - {}'.format(fs.last(),fs.first()), 'Line Items'))
+        df_t = df_t[0:25]
 
         col_list = []
         n=0
@@ -206,20 +207,13 @@ class FS:
         df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
         df_html = df_html[0:]
         df_table = [df_html[0:]]
-
-        df_table = [df_html[0:]]
+        return df_table
 
     def df_json(self):
         df = self.df
         df['Date'] = pd.to_datetime(df['Date']).values.astype(np.int64) // 10 ** 6
         df = df[['Date', 'Revenue (Sales)']].dropna().to_numpy().tolist()        
         return df
-
-    def df_table(self):
-        return self.df
-
-    def df_raw(self):
-        return self.year
 
     def df_labels(self):
         df = self.df
@@ -255,27 +249,6 @@ class FS:
                'df_json': df_json, 'df_titles':df_titles}
 
 
-# def FS_csv(subject, symbol):
-#     csv_file = glob.glob("..\data\Historical Financial Statements\*\year\{}\*_{}_*".format(subject,symbol))[-1] #.format("NLOK"))[-1]
-#     df = pd.read_csv(csv_file)
-#     return(df)
-
-# def FS_first_year(df):
-#     earliest_year = list((df['date'].astype(str).str[0:4]))[-1]
-#     return(earliest_year)
-
-# def FS_latest_year(df):
-#     latest_year = list((df_bs['date'].astype(str).str[0:4]))[0]
-#     return(latest_year)
-
-# print(FS_first_year(FS_csv("Income Statement","AAPL")))
-
-
-# labels = list(FS("IS","AAPL")['Year'])[0:19]
-# values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
-
-# tables=FS("IS","AAPL").df_values()['df_table'], 
-
 table_pct = FS("IS","AAPL").df_values()['df_table_pct'], 
 df_date = FS("IS","AAPL").df_values()['chart_x_dates'], 
 df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
@@ -298,6 +271,3 @@ print("up next")
 print(str(df_json)[0:200])
 print((FS("IS","AAPL").df_price()))
 print(( FS("IS","AAPL").df_labels()))
-
-print("df html table",(FS("IS","AAPL").df_pre_html()[0:5]))
-print("df html table",(FS("IS","AAPL").df_table()[0:5]))
