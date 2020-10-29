@@ -1,3 +1,4 @@
+
 <!-- <h1>Hello {{place_name}}</h1> -->
 <!-- https://blog.ruanbekker.com/blog/2017/12/14/graphing-pretty-charts-with-python-flask-and-chartjs/ -->
 
@@ -5,14 +6,15 @@
 <html lang="en">
 <head><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<style>
-table {border-spacing: 0;
-border-collapse: collapse;
+<!-- <script>
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 .cell { width: 20px; height: 20px; }
 .odd { background-color: brown }
 .even { background-color: pink }
-</style>
+</script> -->
 
   <!-- https://react-table-omega.vercel.app/
 https://examples.bootstrap-table.com/#view-source
@@ -27,14 +29,10 @@ buyupside.com
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
 
-  <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
-  
-  <script src="https://code.highcharts.com/stock/highstock.js"></script>
-
-  <!-- <script src="{{ url_for('stock.static', filename='scripts/highstock.js') }}"></script> -->
-  <script src="{{ url_for('stock.static', filename='scripts/modules/data.js') }}"></script>
-  <script src="{{ url_for('stock.static', filename='scripts/modules/export-data.js') }}"></script>
-  <script src="{{ url_for('stock.static', filename='scripts/modules/exporting.js') }}"></script>
+  <script src="{{ url_for('stock.static', filename='highstock.js') }}"></script>
+  <script src="{{ url_for('stock.static', filename='modules/data.js') }}"></script>
+  <script src="{{ url_for('stock.static', filename='modules/export-data.js') }}"></script>
+  <script src="{{ url_for('stock.static', filename='modules/exporting.js') }}"></script>
 
 
 <!-- https://datatables.net/examples/basic_init/table_sorting.html -->
@@ -139,42 +137,14 @@ buyupside.com
 
 
 
-
-print("df_json",{{df_json}})
-<br />
-print("df_date",{{df_date}})
-<br />
-print("df_rev",{{df_rev}})
-<br />
-<!-- print("tables",{{tables}}) -->
-print("titles",{{titles}})
-<br />
-print("total_time",{{total_time}})
-<br />
-print("place_name",{{place_name}})
-<br />
-print("max",{{max}})
-<br />
-print("labels",{{labels}})
-<br />
-print("values",{{values}})
-
-
-
 <div id="highbar" style="height: 400px; width:1000px;"></div>
 
 
 
 
 
-
 <!--
-
-
-
-
 <script>
-
 document.addEventListener('DOMContentLoaded', function () {
         var myChart = Highcharts.chart('container', {
             chart: {
@@ -200,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }]
         });
     });
-
 </script> -->
 
 
@@ -214,17 +183,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <!-- <script>
-
 // $(document).ready( function () {
 // table.rows().every( function () {
 //   if ( $( table.cell( this.index(), 0 ).node() ).text() !== 'sometext' ) {
 //     $( table.cell( this.index(), 1 ).node() ).addClass( 'highlightz' );
 //   }
 // } );
-
 $(document).ready( function () {
     $('table#df_myTable2').DataTable(
-
       {
         "columnDefs": [
           { "width": "10%" , "targets": [0,1,2,3,4,5,6]
@@ -233,7 +199,6 @@ $(document).ready( function () {
 className: 'dt-center',
 targets: [0,1,2]
 }]
-
         ,
         paginate: false,
 scrollY: 300,
@@ -245,7 +210,6 @@ buttons: [
 ]
               // "order": [[ 3, "desc" ]]
           }
-
     );
 } );
 </script> -->
@@ -255,7 +219,6 @@ buttons: [
 $(document).ready( function () {
     // $('table.df_tableBoot').DataTable();
     $('#df_myTable').DataTable(
-
       {
         paginate: false,
         fixedHeader: false,
@@ -268,7 +231,6 @@ buttons: [
 ]
               // "order": [[ 3, "desc" ]]
           }
-
     );
 } );
 </script> -->
@@ -481,23 +443,19 @@ buttons: [
   		<input type="radio" id="tab21" name="css-tabs2" checked>
   		<input type="radio" id="tab22" name="css-tabs2">
   		<input type="radio" id="tab23" name="css-tabs2">
-
   		<ul class="tabs">
   			<li class="tab"><label for="tab21">Gangsta lipsum</label></li>
   			<li class="tab"><label for="tab22">Zombie lipsum</label></li>
   			<li class="tab"><label for="tab23">New age bullshit</label></li>
   		</ul>
-
   		<div class="tab-content">
   			<h4>Gangsta lipsum</h4>
   			<p>De.</p>
   		</div>
-
   		<div class="tab-content">
   			<h4>Zombie lipsum</h4>
   			<p>Zouris. </p>
   		</div>
-
   		<div class="tab-content">
   			<h4>New age bullshit</h4>
   			<p>Ourtion.</p>
@@ -516,7 +474,6 @@ buttons: [
         // bar chart data
         var barData = {
           labels : {{ labels }},
-
           datasets : [{
             fillColor: "rgba(151,187,205,0.2)",
             strokeColor: "rgba(151,187,205,1)",
@@ -525,13 +482,10 @@ buttons: [
             }
           ]
         }
-
        // get bar chart canvas
        var mychart = document.getElementById("chart").getContext("2d");
-
          steps = 10
          max = {{max}}
-
        // draw bar chart
        new Chart(mychart).Bar(barData, {
          scaleOverride: true,
@@ -544,12 +498,7 @@ buttons: [
          scaleShowLabels: true
          }
        );
-
     </script>
-
-
-
-
  -->
 
 
@@ -562,7 +511,6 @@ asdasasdasdd<br /> -->
 
   <!-- <canvas id="chart" width="600" height="400"></canvas>
       <script>
-
         // bar chart data
         var barData = {
           labels : [
@@ -570,7 +518,6 @@ asdasasdasdd<br /> -->
               "{{ item }}",
             {% endfor %}
           ],
-
           datasets : [{
             fillColor: "rgba(151,187,205,0.2)",
             strokeColor: "rgba(151,187,205,1)",
@@ -579,10 +526,7 @@ asdasasdasdd<br /> -->
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
             bezierCurve : false,
-
             // pointHitDetectionRadius : 9,
-
-
             data : [
         {% for item in values %}
                 {{ item }},
@@ -590,7 +534,6 @@ asdasasdasdd<br /> -->
             }
     ]
         }
-
         Chart.defaults.global.animationSteps = 50;
         Chart.defaults.global.tooltipYPadding = 16;
         Chart.defaults.global.tooltipCornerRadius = 0;
@@ -600,15 +543,9 @@ asdasasdasdd<br /> -->
         Chart.defaults.global.responsive = false;
         Chart.defaults.global.scaleLineColor = "black";
         Chart.defaults.global.scaleFontSize = 16;
-
-
-
-
         Chart.defaults.global.pointHitDetectionRadius = 9;
-
         // get bar chart canvas
         var mychart = document.getElementById("chart").getContext("2d");
-
         steps = 10
         max = {{ max }}
         // draw bar chart
@@ -623,7 +560,6 @@ asdasasdasdd<br /> -->
           // scaleShowLabels: true,
           // bezierCurve: false,
         });
-
       </script> -->
 
 <div class="table_container">
@@ -725,7 +661,6 @@ $(document).ready(function() {
                 if(type === 'display' && !isNaN(data*1) && data > 1000000000){
                     return ('$'+(data/1000000000).toFixed(1) + 'B').toLocaleString();
                 }
-
                 else if(type === 'display' && !isNaN(data*1) && (data > 1000000 && data < 999999999)){
                     return ('$'+(data/1000000).toFixed(1) + 'M').toLocaleString();
                 }
@@ -742,7 +677,3 @@ $(document).ready(function() {
     </script> -->
 
 </html>
-
-
-
-
