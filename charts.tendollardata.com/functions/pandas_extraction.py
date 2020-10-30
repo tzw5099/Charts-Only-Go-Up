@@ -19,6 +19,7 @@ class FS:
     """
     FS = financial statement.
     Subject = BS, CF, or IF.
+    Frequency = 'Year' or 'Quarter'.
     {'df_table': fs.df_table(),
     'df_table_pct':fs.df_table_pct(),
     'chart_x_dates': chart_x_dates,
@@ -36,7 +37,7 @@ class FS:
             
     pd.set_option('display.float_format', '{:.2f}'.format)
 
-    def __init__(self,subject,symbol):
+    def __init__(self,subject,symbol,frequency):
         if subject=="BS":
             subject="Balance Sheet"
         elif subject=="CF":
@@ -44,9 +45,12 @@ class FS:
         elif subject=="IS":
             subject="Income Statement"
         pd.set_option('display.float_format', '{:.2f}'.format)
+
         self.subject = subject
         self.symbol = symbol
-        csv_file = glob.glob("{}\data\Historical Financial Statements\*\year\{}\*_{}_*".format(abs_path,self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
+        self.frequency = frequency
+
+        csv_file = glob.glob("{}\data\Historical Financial Statements\*\{}\{}\*_{}_*".format(abs_path,self.subject,self.symbol,self.frequency))[-1] #.format("NLOK"))[-1]
         self.year = pd.read_csv(csv_file)
         df = self.year[0:].iloc[::-1]
         df['Quarter & Year'] = df['period']+" "+(df['date'].astype(str).str[0:4])#((df_bs['date'].astype(str).str[0:4].astype(int))-1).astype(str)
@@ -89,7 +93,7 @@ class FS:
             'Gross Profit (Income) Ratio',
             'Research and Development (R&D) Expenses',
             'Sales, General and Administrative (SG&A) Expenses',
-            'Other Expenses',
+            'Other Income / Expense (net)',
             'Operating Expenses',
             'Cost and Expenses',
             'Interest Expense',
@@ -160,7 +164,7 @@ class FS:
         return df_table_pct
     
     def df_pre_html(self):
-        fs = FS(self.subject,self.symbol)
+        fs = FS(self.subject,self.symbol,self.frequency)
         df_t = self.df.transpose()
         df_t.columns = list(self.df['Quarter & Year'])
         df_t = df_t.iloc[1:]
@@ -186,7 +190,7 @@ class FS:
         return df_t
 
     def df_html(self):
-        df_t = FS(self.subject,self.symbol).df_pre_html()
+        df_t = FS(self.subject,self.symbol,self.frequency).df_pre_html()
 
         col_list = []
         n=0
@@ -236,7 +240,7 @@ class FS:
         return values
 
     def df_values(self):
-        fs = FS(self.subject,self.symbol)
+        fs = FS(self.subject,self.symbol,self.frequency)
         fs.df_table()
         # df = self.df[['date','revenue']].dropna() #.fillna(0)#.fillna(method='bfill')
         df = self.df
@@ -276,14 +280,14 @@ class FS:
 
 # tables=FS("IS","AAPL").df_values()['df_table'], 
 
-table_pct = FS("IS","AAPL").df_values()['df_table_pct'], 
-df_date = FS("IS","AAPL").df_values()['chart_x_dates'], 
-df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
-df_json = FS("IS","AAPL").df_values()['df_json'],
-titles=FS("IS","AAPL").df_values()['df_titles']
+table_pct = FS("IS","AAPL","year").df_values()['df_table_pct'], 
+df_date = FS("IS","AAPL","year").df_values()['chart_x_dates'], 
+df_rev = FS("IS","AAPL","year").df_values()['chart_y_revenue'],
+df_json = FS("IS","AAPL","year").df_values()['df_json'],
+titles=FS("IS","AAPL","year").df_values()['df_titles']
 print(str(df_json)[0:200])
 # print(FS("IS","AAPL").df_table_raw())
-print(FS("IS","AAPL").last())
+print(FS("IS","AAPL","year").last())
 
 subject="Income Statement"
 symbol="AAPL"
@@ -296,8 +300,8 @@ print(csv_file)
 print("up next")
 # print(pd.read_csv(csv_file))
 print(str(df_json)[0:200])
-print((FS("IS","AAPL").df_price()))
-print(( FS("IS","AAPL").df_labels()))
+print((FS("IS","AAPL","year").df_price()))
+print(( FS("IS","AAPL","year").df_labels()))
 
-print("df html table",(FS("IS","AAPL").df_pre_html()[0:5]))
-print("df html table",(FS("IS","AAPL").df_table()[0:5]))
+print("df html table",(FS("IS","AAPL","year").df_pre_html()[0:5]))
+print("df html table",(FS("IS","AAPL","year").df_table()[0:5]))

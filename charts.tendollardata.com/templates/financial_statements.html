@@ -140,24 +140,24 @@ buyupside.com
 
 
 
-print("df_json",{{df_json}})
-<br />
-print("df_date",{{df_date}})
-<br />
-print("df_rev",{{df_rev}})
-<br />
-<!-- print("tables",{{tables}}) -->
-print("titles",{{titles}})
-<br />
-print("total_time",{{total_time}})
-<br />
-print("place_name",{{place_name}})
-<br />
-print("max",{{max}})
-<br />
-print("labels",{{labels}})
-<br />
-print("values",{{values}})
+<!-- print("df_json",{{df_json}})
+  <br />
+  print("df_date",{{df_date}})
+  <br />
+  print("df_rev",{{df_rev}})
+  <br />
+  <!-- print("tables",{{tables}}) -->
+  print("titles",{{titles}})
+  <br />
+  print("total_time",{{total_time}})
+  <br />
+  print("place_name",{{place_name}})
+  <br />
+  print("max",{{max}})
+  <br />
+  print("labels",{{labels}})
+  <br />
+  print("values",{{values}}) -->
 
 
 
@@ -169,39 +169,35 @@ print("values",{{values}})
 
 
 <!--
+  <script>
 
+  document.addEventListener('DOMContentLoaded', function () {
+          var myChart = Highcharts.chart('container', {
+              chart: {
+                  type: 'bar'
+              },
+              title: {
+                  text: 'Fruit Consumption'
+              },
+              xAxis: {
+                  categories: ['Apples', 'Bananas', 'Oranges']
+              },
+              yAxis: {
+                  title: {
+                      text: 'Fruit eaten'
+                  }
+              },
+              series: [{
+                  name: 'Jane',
+                  data: {{df_date}}
+              }, {
+                  name: 'John',
+                  data: {{df_rev}}
+              }]
+          });
+      });
 
-
-
-<script>
-
-document.addEventListener('DOMContentLoaded', function () {
-        var myChart = Highcharts.chart('container', {
-            chart: {
-                type: 'bar'
-            },
-            title: {
-                text: 'Fruit Consumption'
-            },
-            xAxis: {
-                categories: ['Apples', 'Bananas', 'Oranges']
-            },
-            yAxis: {
-                title: {
-                    text: 'Fruit eaten'
-                }
-            },
-            series: [{
-                name: 'Jane',
-                data: {{df_date}}
-            }, {
-                name: 'John',
-                data: {{df_rev}}
-            }]
-        });
-    });
-
-</script> -->
+  </script> -->
 
 
 <!-- enables CSV -->
@@ -215,63 +211,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!-- <script>
 
-// $(document).ready( function () {
-// table.rows().every( function () {
-//   if ( $( table.cell( this.index(), 0 ).node() ).text() !== 'sometext' ) {
-//     $( table.cell( this.index(), 1 ).node() ).addClass( 'highlightz' );
-//   }
-// } );
+  // $(document).ready( function () {
+  // table.rows().every( function () {
+  //   if ( $( table.cell( this.index(), 0 ).node() ).text() !== 'sometext' ) {
+  //     $( table.cell( this.index(), 1 ).node() ).addClass( 'highlightz' );
+  //   }
+  // } );
 
-$(document).ready( function () {
-    $('table#df_myTable2').DataTable(
+  $(document).ready( function () {
+      $('table#df_myTable2').DataTable(
 
-      {
-        "columnDefs": [
-          { "width": "10%" , "targets": [0,1,2,3,4,5,6]
-         }
-         {
-className: 'dt-center',
-targets: [0,1,2]
-}]
-
-        ,
-        paginate: false,
-scrollY: 300,
-dom: 'Bfrtip',
-buttons: [
-  // 'csv'
-  // 'csvHtml5'
-    // 'copy', 'csv', 'excel', 'pdf', 'print'
-]
-              // "order": [[ 3, "desc" ]]
+        {
+          "columnDefs": [
+            { "width": "10%" , "targets": [0,1,2,3,4,5,6]
           }
+          {
+  className: 'dt-center',
+  targets: [0,1,2]
+  }]
 
-    );
-} );
-</script> -->
+          ,
+          paginate: false,
+  scrollY: 300,
+  dom: 'Bfrtip',
+  buttons: [
+    // 'csv'
+    // 'csvHtml5'
+      // 'copy', 'csv', 'excel', 'pdf', 'print'
+  ]
+                // "order": [[ 3, "desc" ]]
+            }
 
-<!--
-<script>
-$(document).ready( function () {
-    // $('table.df_tableBoot').DataTable();
-    $('#df_myTable').DataTable(
+      );
+  } );
+  </script> -->
 
-      {
-        paginate: false,
-        fixedHeader: false,
-// scrollY: 300,
-dom: 'Bfrtip',
-buttons: [
-  // 'csv'
-  // 'csvHtml5'
-    // 'copy', 'csv', 'excel', 'pdf', 'print'
-]
-              // "order": [[ 3, "desc" ]]
-          }
+  <!--
+  <script>
+  $(document).ready( function () {
+      // $('table.df_tableBoot').DataTable();
+      $('#df_myTable').DataTable(
 
-    );
-} );
-</script> -->
+        {
+          paginate: false,
+          fixedHeader: false,
+  // scrollY: 300,
+  dom: 'Bfrtip',
+  buttons: [
+    // 'csv'
+    // 'csvHtml5'
+      // 'copy', 'csv', 'excel', 'pdf', 'print'
+  ]
+                // "order": [[ 3, "desc" ]]
+            }
+
+      );
+  } );
+  </script> -->
 
 
 
@@ -555,10 +551,10 @@ buttons: [
 
 
 <!-- asdasasdasdd<br />
-asdasasdasdd<br />
-asdasasdasdd<br />
-asdasasdasdd<br />
-asdasasdasdd<br /> -->
+  asdasasdasdd<br />
+  asdasasdasdd<br />
+  asdasasdasdd<br />
+  asdasasdasdd<br /> -->
 
   <!-- <canvas id="chart" width="600" height="400"></canvas>
       <script>
