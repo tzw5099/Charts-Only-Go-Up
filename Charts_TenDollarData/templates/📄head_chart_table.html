@@ -1,0 +1,328 @@
+
+<style>
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.cell { width: 20px; height: 20px; }
+.odd { background-color: brown }
+.even { background-color: pink }
+</style>
+
+  <!-- https://react-table-omega.vercel.app/
+https://examples.bootstrap-table.com/#view-source
+https://www.grufity.com/Stock/AAPL-Apple/Historical-Returns
+https://www.netcials.com/stock-10-year-history/AAPL-Apple-Inc/
+https://tradingninvestment.com/aapl-stock-yearly-return/
+buyupside.com
+ -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script> -->
+
+  <!-- <script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js'></script> -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+
+  <script src="{{ url_for('stock.static', filename='highstock.js') }}"></script>
+  <script src="{{ url_for('stock.static', filename='modules/data.js') }}"></script>
+  <script src="{{ url_for('stock.static', filename='modules/export-data.js') }}"></script>
+  <script src="{{ url_for('stock.static', filename='modules/exporting.js') }}"></script>
+
+
+<!-- https://datatables.net/examples/basic_init/table_sorting.html -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+  <!-- <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script> -->
+
+
+
+  <script>
+   document.addEventListener('DOMContentLoaded', function (data) {
+    //     var myChart = Highcharts.setOptions({
+    //     lang: {
+    //         numericSymbols: [' thousands', ' millions', 'billions']
+    //     }
+    // });
+
+        var myChart = Highcharts.stockChart('highbar', {
+          // lang: {
+          //     numericSymbols: [' thousands', ' millions', 'billions']
+          // },
+          chart: {
+              borderWidth: 2,
+              marginRight: 100
+          },
+
+                title: {
+                    text: 'AAPL Stock Volume'
+                },
+                rangeSelector: {
+                    inputPosition: {                    // align: 'left',
+                        x: 0,                    y: 0                },
+                    buttonPosition: {                    // align: 'right',
+                        x: 0,                    y: 0                }
+                    ,
+                    buttons: [
+            {
+            type: 'year',        count: 3,        text: '3Y'    }, {
+            type: 'year',        count: 5,        text: '5Y'    }, {
+            type: 'year',        count: 10,        text: '10y'  }, {
+            type: 'all',        text: 'All'    }                   ]
+                },
+                xAxis:{
+                    tickInterval: 1 * 24 * 3600 * 1000 // interval of 1 day
+                },
+                yAxis:{
+                  minPadding:100,
+                          // lineColor:'#999',
+                          // lineWidth:1,
+                          // tickColor:'#666',
+                          // tickWidth:1,
+                          // tickLength:3,
+                          // gridLineColor:'#ddd',
+                          // title:{
+                          //     text:'Y Axis Title',
+                          //     rotation:0,
+                          //     margin:50,
+                          // },
+                          tooltip: {
+                          formatter: function (tooltip) {
+                          }
+                      },
+        labels:{
+                        align: 'right',
+                  x: 50,
+                  y: 0,
+                          // formatter:function(){
+                          //     return ('$' + this.value / 1000000000) + 'B';
+                          // }
+                          formatter:function(){
+                      if(this.value >= 1000000000){
+                          return ('$' + this.value / 1000000000) + 'B';
+                      }
+                      else if(this.value >= 1000000) {
+                          return ('$' + this.value / 1000000) + 'M';
+                      }
+                      else if(this.value >= 1000) {
+                          return ('$' + this.value / 1000) + 'K';
+                      }
+                      else {
+                          return '$' + this.value;
+                      }
+                  }
+        }
+    },
+
+
+                series: [{
+                    type: 'column',
+                    name: 'AAPL Stock Volume',
+                    data:{{df_json}},
+
+                }]
+
+            });
+        });
+      </script>
+
+
+
+
+
+<div id="highbar" style="height: 400px; width:1000px;"></div>
+
+
+
+
+
+<!--
+
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+        var myChart = Highcharts.chart('container', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Fruit Consumption'
+            },
+            xAxis: {
+                categories: ['Apples', 'Bananas', 'Oranges']
+            },
+            yAxis: {
+                title: {
+                    text: 'Fruit eaten'
+                }
+            },
+            series: [{
+                name: 'Jane',
+                data: {{df_date}}
+            }, {
+                name: 'John',
+                data: {{df_rev}}
+            }]
+        });
+    });
+
+</script> -->
+
+
+<!-- enables CSV -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+<!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+
+
+
+<!-- <script>
+
+// $(document).ready( function () {
+// table.rows().every( function () {
+//   if ( $( table.cell( this.index(), 0 ).node() ).text() !== 'sometext' ) {
+//     $( table.cell( this.index(), 1 ).node() ).addClass( 'highlightz' );
+//   }
+// } );
+
+$(document).ready( function () {
+    $('table#df_myTable2').DataTable(
+
+      {
+        "columnDefs": [
+          { "width": "10%" , "targets": [0,1,2,3,4,5,6]
+         }
+         {
+className: 'dt-center',
+targets: [0,1,2]
+}]
+
+        ,
+        paginate: false,
+scrollY: 300,
+dom: 'Bfrtip',
+buttons: [
+  // 'csv'
+  // 'csvHtml5'
+    // 'copy', 'csv', 'excel', 'pdf', 'print'
+]
+              // "order": [[ 3, "desc" ]]
+          }
+
+    );
+} );
+</script> -->
+
+<!--
+<script>
+$(document).ready( function () {
+    // $('table.df_tableBoot').DataTable();
+    $('#df_myTable').DataTable(
+
+      {
+        paginate: false,
+        fixedHeader: false,
+// scrollY: 300,
+dom: 'Bfrtip',
+buttons: [
+  // 'csv'
+  // 'csvHtml5'
+    // 'copy', 'csv', 'excel', 'pdf', 'print'
+]
+              // "order": [[ 3, "desc" ]]
+          }
+
+    );
+} );
+</script> -->
+
+
+
+   <!-- <script data-require="jquery-ui@1.10.4" data-semver="1.10.4" src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+   <script>
+
+   </script>
+
+<style>
+
+      .page-content {
+      	max-width: 1200px;
+      	margin: 32px auto;
+      	padding: 32px;
+      	background: #fff;
+      }
+      a {
+      	color: #21D4FD;
+      	transition: all 0.3s;
+      }
+      a:hover {
+      	color: #B721FF;
+      }
+
+      .tabbed {
+      	overflow-x: hidden; /* so we could easily hide the radio inputs */
+      	margin: 32px 0;
+      	padding-bottom: 16px;
+      	border-bottom: 1px solid #ccc;
+      }
+
+      .tabbed [type="radio"] {
+      	/* hiding the inputs */
+      	display: none;
+      }
+
+      .tabs {
+      	display: flex;
+      	align-items: stretch;
+      	list-style: none;
+      	padding: 0;
+      	border-bottom: 1px solid #ccc;
+      }
+      .tab > label {
+      	display: block;
+      	margin-bottom: -1px;
+      	padding: 12px 15px;
+      	border: 1px solid #ccc;
+      	background: #eee;
+      	color: #666;
+      	font-size: 12px;
+      	font-weight: 600;
+      	text-transform: uppercase;
+      	letter-spacing: 1px;
+      	cursor: pointer;
+      	transition: all 0.3s;
+      }
+      .tab:hover label {
+      	border-top-color: #333;
+      	color: #333;
+      }
+
+      .tab-content {
+      	display: none;
+      	color: #777;
+      }
+
+      /* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
+      .tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
+      .tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
+      .tabbed [type="radio"]:nth-of-type(3):checked ~ .tabs .tab:nth-of-type(3) label,
+      .tabbed [type="radio"]:nth-of-type(4):checked ~ .tabs .tab:nth-of-type(4) label,
+      .tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label {
+      	border-bottom-color: #fff;
+      	border-top-color: #B721FF;
+      	background: #fff;
+      	color: #222;
+      }
+
+      .tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
+      .tabbed [type="radio"]:nth-of-type(2):checked ~ .tab-content:nth-of-type(2),
+      .tabbed [type="radio"]:nth-of-type(3):checked ~ .tab-content:nth-of-type(3),
+      .tabbed [type="radio"]:nth-of-type(4):checked ~ .tab-content:nth-of-type(4) {
+      	display: block;
+      }
+          </style>

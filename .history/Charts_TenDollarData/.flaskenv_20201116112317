@@ -1,0 +1,2 @@
+FLASK_APP=financial_statements/__init__.py
+FLASK_ENV=development # production
