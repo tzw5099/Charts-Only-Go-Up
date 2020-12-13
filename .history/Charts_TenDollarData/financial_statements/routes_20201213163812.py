@@ -183,8 +183,8 @@ def current_ratio(urilist,name_url,some_place): # WORKS
 
     company_profiles = pd.read_csv("reference_data/Company_Profiles.csv")#, encoding='cp1252')
     fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")#, encoding='cp1252')
-    # print("all symbols")
-    # print(list(company_profiles))
+    print("all symbols")
+    print(list(company_profiles))
     currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(some_place.upper())]['currency symbol'])[0]
     company_profiles_col = ['symbol',
                             'long name',
@@ -291,10 +291,9 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     # titles_list_bs = titles_list_bs.append("Quarter & Year")
     df_bs = df_bs.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
     titles_bs.remove('Symbol')
-    titles_bs.remove('Accepted Date')
     titles_bs.append('Quarter & Year')
     print("titles_bs",titles_bs)
-    print("df_bs",list(df_bs))
+        print("df_bs",list(df_bs))
 
     # df_bs.columns = fin_statement_cols
     df_bs.columns = titles_bs

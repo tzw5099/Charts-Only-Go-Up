@@ -291,8 +291,7 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     # titles_list_bs = titles_list_bs.append("Quarter & Year")
     df_bs = df_bs.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
     titles_bs.remove('Symbol')
-    titles_bs.remove('Accepted Date')
-    titles_bs.append('Quarter & Year')
+    # titles_bs.append('Quarter & Year')
     print("titles_bs",titles_bs)
     print("df_bs",list(df_bs))
 
