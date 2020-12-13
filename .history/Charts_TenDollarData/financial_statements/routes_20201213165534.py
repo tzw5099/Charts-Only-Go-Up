@@ -66,8 +66,8 @@ def index():
 
 
 
-@charts.route('/<url_symbol>-stock/<url_name>/<url_fin_metric>', methods=['POST', 'GET']) # WORKS
-def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
+@charts.route('/<some_place>-stock/<name_url>/<urilist>', methods=['POST', 'GET']) # WORKS
+def current_ratio(urilist,name_url,some_place): # WORKS
 # def current_ratio(urilist,url_symbol_name):
     def magnitude_num(number, currency_symbol):
         if len(str(number)) > 9:
@@ -84,7 +84,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
         return magnitude_str
     # print(url_symbol_name," yee haw")
-    # url_symbol = url_symbol_name.split("/")[0].upper()
+    # some_place = url_symbol_name.split("/")[0].upper()
     url_is_list = [ 'revenue_sales',
                 'cost_of_sales_cost_of_revenue_cost_of_goods_sold',
                 'gross_profit_gross_income',
@@ -184,7 +184,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")#, encoding='cp1252')
     # print("all symbols")
     # print(list(company_profiles))
-    currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())]['currency symbol'])[0]
+    currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(some_place.upper())]['currency symbol'])[0]
     company_profiles_col = ['symbol',
                             'long name',
                             'currency',
@@ -197,7 +197,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
                             'short name']
     company_profiles = company_profiles[company_profiles_col]    
     profiles_dict = {}
-    profiles_value = company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())].values.tolist()[0]
+    profiles_value = company_profiles[company_profiles['symbol']=="{}".format(some_place.upper())].values.tolist()[0]
 
     titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['Title'])
     titles_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
@@ -212,35 +212,34 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         value = profiles_value[n]
         profiles_dict[key] = value 
 
-    if "{}".format(url_fin_metric) in urls_is:
+    if "{}".format(urilist) in urls_is:
         fin_statement_dir = "Income Statement"
-    elif "{}".format(url_fin_metric) in urls_bs:
-        fin_metric_pos = urls_bs.index("{}".format(url_fin_metric))
+    elif "{}".format(urilist) in urls_bs:
+        fin_metric_pos = urls_bs.index("{}".format(urilist))
         fin_statement_dir = "Balance Sheet"
         fin_statement_cols = titles_bs
         cols = titles_bs
-        fin_metric_title = fin_statement_cols[fin_metric_pos]
+        fin_metric_name = fin_statement_cols[fin_metric_pos]
 
-    elif "{}".format(url_fin_metric) in urls_cf:
+    elif "{}".format(urilist) in urls_cf:
         fin_statement_dir = "Cash Flow Statement"
 
     else:
         pass
 
     start_time = time.time()
-    csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
-    # csv_file = glob.glob("../Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/*/*~{}~*".format(url_symbol))[-1]
+    csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(fin_statement_dir, some_place.upper()))[-1]
+    # csv_file = glob.glob("../Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/*/*~{}~*".format(some_place))[-1]
     df = pd.read_csv(csv_file) #.format("NLOK"))[-1]
     # df = df[df['date'].notna()]#fillna(method='ffill')
     df = df[0:].iloc[::-1]#.dropna()
     df_bs = df
     #region Pandas data manipulation
     # df_bs['Quarter & Year'] = df_bs['period']+" "+(df_bs['date'].astype(str).str[0:4])#((df_bs['date'].astype(str).str[0:4].astype(int))-1).astype(str)
-    matching_row = fin_statements_matching[fin_statements_matching['URL']=="{}".format(url_fin_metric)]
-    fin_metric_title = list(matching_row['Title'])[0]
-    fin_metric_name = list(matching_row['Name'])[0]
-    print("fin metric name", fin_metric_title)
-    sorted_metric = df["{}".format(fin_metric_name)].sort_values()
+    matching_row = fin_statements_matching[fin_statements_matching['URL']=="cash-and-cash-equivalents"]
+    fin_metric_name = list(matching_row['Title'])[0]
+    print("fin metric name", fin_metric_name)
+    sorted_metric = df['cashAndCashEquivalents'].sort_values()
     # sorted_metric(int(len(sorted_metric)*(n/100)))
     quarters = round(len(sorted_metric)/4)
     bottom_25 = sorted_metric[len(sorted_metric)-1-quarters]
@@ -256,11 +255,11 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     bottom_25_str = magnitude_num(bottom_25, currency_symbol)
     top_25_str = magnitude_num(top_25, currency_symbol)
 
-    lifetime_sum_all_metric = df["{}".format(fin_metric_name)].sum()
+    lifetime_sum_all_metric = df['cashAndCashEquivalents'].sum()
     lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)
 
-    latest_num = df["{}".format(fin_metric_name)][0]
-    first_num = list(df["{}".format(fin_metric_name)])[-1]
+    latest_num = df['cashAndCashEquivalents'][0]
+    first_num = list(df['cashAndCashEquivalents'])[-1]
     pct_chg = (latest_num - first_num)/first_num
     historical_pct_chg = str(round(pct_chg*100, 1))
 
@@ -311,11 +310,11 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     
     million = 1000000
     billion = 1000000000
-    fin_metric_history = df_bs['{}'.format(fin_metric_title)]
+    fin_metric_history = df_bs['{}'.format(fin_metric_name)]
     if list(fin_metric_history)[0]  > billion:
         print()
-        df_bs['{}'.format(fin_metric_title)] = (fin_metric_history/billion).round(decimals=2)
-        df_bs_table_html = df_bs[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html().replace("'","")
+        df_bs['{}'.format(fin_metric_name)] = (fin_metric_history/billion).round(decimals=2)
+        df_bs_table_html = df_bs[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html().replace("'","")
 
         df_tall = df
 # df_html_tall = df_tall[['{}'.format(fin_metric_name)]].to_html().replace("'","")
@@ -409,7 +408,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
 # df_html_tall.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
 # df_html_tall=df_html_tall[0:]
     
-    df = df[['date',"{}".format(fin_metric_name)]].dropna() #.fillna(0)#.fillna(method='bfill')
+    df = df[['date','cashAndCashEquivalents']].dropna() #.fillna(0)#.fillna(method='bfill')
 
     df['date'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
 
@@ -433,7 +432,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         4349.29, 6458.30, 9907, 16297
     ]
 
-    values = list(df["{}".format(fin_metric_name)])#[0:19]
+    values = list(df['cashAndCashEquivalents'])#[0:19]
 
     colors = [
         "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
@@ -469,22 +468,22 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
 
 # df_html_tall = [df_html_tall],\
                             df_bs_table_html = [df_bs_table_html],\
-                            fin_metric_name = fin_metric_title,\
-                            df_date = df['date'].to_list(), df_rev = df["{}".format(fin_metric_name)].to_list(),\
+                            fin_metric_name = fin_metric_name,\
+                            df_date = df['date'].to_list(), df_rev = df['cashAndCashEquivalents'].to_list(),\
                             df_json  =df.to_numpy().tolist(),\
                             table_pct = [df_pct],\
                             tables=[df_html],\
                             titles=df.columns.values,\
                             total_time=total_seconds,\
-                            place_name=url_symbol,\
+                            place_name=some_place,\
                             max=17000,\
                             labels=labels,\
                             values=values)
 
 
-@charts.route('/test/<url_symbol>', methods=['POST', 'GET'])
+@charts.route('/test/<some_place>', methods=['POST', 'GET'])
 # @cache.cached(timeout=5)
-def fin_test(url_symbol):
+def fin_test(some_place):
     # values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
 
 
@@ -499,5 +498,5 @@ def fin_test(url_symbol):
      titles=FS("IS","AAPL").df_values()['df_titles'],
      labels = FS("IS","AAPL").df_labels(),
      values=FS("IS","AAPL").df_price(),
-     place_name=url_symbol, max=17000,
+     place_name=some_place, max=17000,
      )
