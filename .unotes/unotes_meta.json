@@ -1,0 +1,37 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "__pycache__": {
+      "name": "__pycache__",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "assets": {
+      "name": "assets",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Charts_TenDollarData": {
+      "name": "Charts_TenDollarData",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "venv": {
+      "name": "venv",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Web_Design": {
+      "name": "Web_Design",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    }
+  },
+  "files": {}
+}
