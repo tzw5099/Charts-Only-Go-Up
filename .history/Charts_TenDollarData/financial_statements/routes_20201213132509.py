@@ -181,8 +181,7 @@ def current_ratio(urilist,name_url,some_place): # WORKS
                     'capital_expenditure',
                     'free_cash_flow']
 
-    company_profiles = pd.read_csv("reference_data/Company_Profiles.csv")#, encoding='cp1252')
-    fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")#, encoding='cp1252')
+    company_profiles = pd.read_csv("reference_Data/Company_Profiles.csv")#, encoding='cp1252')
     print("all symbols")
     print(list(company_profiles))
     currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(some_place.upper())]['currency symbol'])[0]
@@ -199,30 +198,100 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     company_profiles = company_profiles[company_profiles_col]    
     profiles_dict = {}
     profiles_value = company_profiles[company_profiles['symbol']=="{}".format(some_place.upper())].values.tolist()[0]
-
-    titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['Title'])
-    titles_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
-    titles_is = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['Title'])
-
-    urls_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['URL'])
-    urls_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['URL'])
-    urls_is = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['URL'])
-
     for n, profiles_col in enumerate(company_profiles_col):
         key = profiles_col
         value = profiles_value[n]
         profiles_dict[key] = value 
-
-    if "{}".format(urilist) in urls_is:
+    
+    if "{}".format(urilist) in url_is_list:
         fin_statement_dir = "Income Statement"
-    elif "{}".format(urilist) in urls_bs:
-        fin_metric_pos = urls_bs.index("{}".format(urilist))
+    elif "{}".format(urilist) in url_bs_list:
+        fin_metric_pos = url_bs_list.index("{}".format(urilist))
         fin_statement_dir = "Balance Sheet"
-        fin_statement_cols = titles_bs
-        cols = titles_bs
-        fin_metric_name = fin_statement_cols[fin_metric_pos]
+        fin_statement_cols = ['Cash and Cash Equivalents',
+                            'Short Term Investments',
+                            'Cash And Short-Term Investments',
+                            'Net Receivables',
+                            'Inventory',
+                            'Other Current Assets',
+                            'Total Current Assets',
+                            'PP&E',
+                            'Goodwill',
+                            'Intangible Assets',
+                            'Goodwill and Intangible Assets',
+                            'Long-term Investments',
+                            'Tax Assets',
+                            'Other Non-Current Assets',
+                            'Total Non-Current Assets',
+                            'Other Assets',
+                            'TotalAssets',
+                            'Accounts Payables',
+                            'Short-term Debt',
+                            'Tax Payables',
+                            'Deferred Revenue',
+                            'Other Current Liabilities',
+                            'Total Current Liabilities',
+                            'Long-term Debt',
+                            'Deferred Revenue Non-Current',
+                            'Deferred Tax Liabilities Non-Current',
+                            'Other Non-Current Liabilities',
+                            'Total Non-Current Liabilities',
+                            'Other Liabilities',
+                            'Total Liabilities',
+                            'Common Stock',
+                            'Retained Earnings',
+                            'Accumulated Other Comprehensive Income Loss',
+                            'Other Total Stockholders Equity',
+                            'Total Stockholders Equity',
+                            'Total Liabilities & Stockholders Equity',
+                            'Total Investments',
+                            'Total Debt',
+                            'Net Debt',
+                            'finalLink','Quarter & Year']
+        cols = ['Quarter & Year',
+                'Cash and Cash Equivalents',
+                'Short Term Investments',
+                'Cash And Short-Term Investments',
+                'Net Receivables',
+                'Inventory',
+                'Other Current Assets',
+                'Total Current Assets',
+                'PP&E',
+                'Goodwill',
+                'Intangible Assets',
+                'Goodwill and Intangible Assets',
+                'Long-term Investments',
+                'Tax Assets',
+                'Other Non-Current Assets',
+                'Total Non-Current Assets',
+                'Other Assets',
+                'TotalAssets',
+                'Accounts Payables',
+                'Short-term Debt',
+                'Tax Payables',
+                'Deferred Revenue',
+                'Other Current Liabilities',
+                'Total Current Liabilities',
+                'Long-term Debt',
+                'Deferred Revenue Non-Current',
+                'Deferred Tax Liabilities Non-Current',
+                'Other Non-Current Liabilities',
+                'Total Non-Current Liabilities',
+                'Other Liabilities',
+                'Total Liabilities',
+                'Common Stock',
+                'Retained Earnings',
+                'Accumulated Other Comprehensive Income Loss',
+                'Other Total Stockholders Equity',
+                'Total Stockholders Equity',
+                'Total Liabilities & Stockholders Equity',
+                'Total Investments',
+                'Total Debt',
+                'Net Debt',
+                'finalLink']        
+        fin_metric_name = fin_statement_cols[fin_metric_pos-1]
 
-    elif "{}".format(urilist) in urls_cf:
+    elif "{}".format(urilist) in url_cf_list:
         fin_statement_dir = "Cash Flow Statement"
 
     else:
@@ -276,22 +345,16 @@ def current_ratio(urilist,name_url,some_place): # WORKS
         max_min_pct_diff_str = "-{}%".format(round(max_min_pct_diff)*100,1)
     else:
         max_min_pct_diff_str = ""
-    # df_bs['Quarter & Year'] =(df_bs['date'].astype(str).str[0:4]).astype(int)#((df_bs['date'].astype(str).str[0:4].astype(int))-1)
-    df_bs['Quarter & Year'] =(df_bs['date'].astype(str).str[0:4]).astype(int)
+    df_bs['Quarter & Year'] =(df_bs['date'].astype(str).str[0:4]).astype(int)#((df_bs['date'].astype(str).str[0:4].astype(int))-1)
     latest_year = list((df_bs['date'].astype(str).str[0:4]))[0]
     earliest_year = list((df_bs['date'].astype(str).str[0:4]))[-1]
     earliest_metric = (list(df["{}".format("cashAndCashEquivalents")])[-1])
     latest_metric = (list(df["{}".format("cashAndCashEquivalents")])[0])
     
+    df_bs = df_bs.drop([ 'Unnamed: 0','date',
+    'symbol',
+    'fillingDate','period','link','acceptedDate'],axis=1)
     
-    titles_list_bs = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']#,'SEC Statement Link']
-    for x in titles_bs:
-        if x in titles_list_bs: #this
-            titles_bs.remove(x)
-    # titles_list_bs = titles_list_bs.append("Quarter & Year")
-    df_bs = df_bs.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
-    titles_bs.remove('Symbol')
-    # df_bs.columns = fin_statement_cols
     df_bs.columns = fin_statement_cols
     # for col in df_bs.columns:
     #     if len(df_bs[col].unique()) == 1:
@@ -310,8 +373,8 @@ def current_ratio(urilist,name_url,some_place): # WORKS
         df_bs['{}'.format(fin_metric_name)] = (fin_metric_history/billion).round(decimals=2)
         df_bs_table_html = df_bs[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html().replace("'","")
 
-        df_tall = df
-# df_html_tall = df_tall[['{}'.format(fin_metric_name)]].to_html().replace("'","")
+        df_tall = df_bs['{}'.format(fin_metric_name)] = (fin_metric_history/billion).round(decimals=2)
+# df_html_tall​ = df_tall[['{}'.format(fin_metric_name)]].to_html().replace("'","")
         
     elif fin_metric_history[0]  > million:
         pass
@@ -397,10 +460,10 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     df_html=df_html[0:]
     
 
-# df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
-# df_html_tall.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
-# df_html_tall.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
-# df_html_tall=df_html_tall[0:]
+# df_html_tall​.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
+# df_html_tall​.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
+# df_html_tall​.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
+# df_html_tall​=df_html_tall[0:]
     
     df = df[['date','cashAndCashEquivalents']].dropna() #.fillna(0)#.fillna(method='bfill')
 
@@ -460,7 +523,7 @@ def current_ratio(urilist,name_url,some_place): # WORKS
                             latest_metric = latest_metric,\
                             max_min_pct_diff_str = max_min_pct_diff_str,\
 
-# df_html_tall = [df_html_tall],\
+# df_html_tall​ = [df_html_tall],\
                             df_bs_table_html = [df_bs_table_html],\
                             fin_metric_name = fin_metric_name,\
                             df_date = df['date'].to_list(), df_rev = df['cashAndCashEquivalents'].to_list(),\

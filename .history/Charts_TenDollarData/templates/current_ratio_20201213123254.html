@@ -40,7 +40,7 @@
 [[company_country]]
 [[company_ipo_date]] -->
 
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
 <script src="https://code.highcharts.com/stock/highstock.js"></script>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
@@ -587,11 +587,6 @@
                                     </div>
                                     <div class="card-body">
                                         <!-- {{df_bs_table_html}} -->
-                                        {% for table in df_html_tall %}
-                                        <!-- {{titles[loop.index]}} -->
-                                        {{ df_html_tall|safe }}
-                                        {% endfor %}
-                                        
                                         {% for table in df_bs_table_html %}
                                         <!-- {{titles[loop.index]}} -->
                                         {{ df_bs_table_html|safe }}
@@ -636,7 +631,14 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="card shadow border-left-primary py-2" style="margin: 0px;padding: 10px;">
+                                    <div class="card-body" style="padding: 10px;">
+                                        <p>Popular Stats &amp; Analyses:<br>-&nbsp;<a href="#collapse-1"><span style="text-decoration: underline;">Company Info (CEO, IPO Date, HQ.</span></a>..)<br>-&nbsp;<a href="#collapse-1">[Past] "If I bought AAPL at ______."</a><br>-&nbsp;
+                                            <a
+                                                href="#collapse-1">[Present] "Should I buy AAPL today?"</a><br><br></p>
+                                        <div class="text-dark font-weight-bold h5 mb-0"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="container-fluid">
@@ -665,9 +667,28 @@
                                     </div>
                                 </div>
                             </div>
-                        </br>
+                            <div class="card" style="background-color: rgba(0,0,0,0.48);margin: 10px;">
+                                <div class="card-body" style="padding: 2px;"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p><strong><span style="text-decoration: underline;">Yearly Breakdown</span></strong></p>
+                                </div>
+                                <div class="col">
+                                    <p>"If I bought AAPL&nbsp;at the top / bottom / beginning..."</p>
+                                </div>
+                                <div class="col">
+                                    <p>Number of Up Days</p>
+                                </div>
+                                <div class="col">
+                                    <p>Daily Volatility (+/-% Change)</p>
+                                </div>
+                            </div>
                             <div class="col">
                                 <div></div>
+                                <div class="card" style="background-color: rgba(0,0,0,0.48);margin: 10px;">
+                                    <div class="card-body" style="padding: 2px;"></div>
+                                </div>
                             </div>
 
                         </div>
@@ -742,11 +763,11 @@
                                         <td>{{bottom_25_str}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Highest</td>
+                                        <td>Max</td>
                                         <td>{{max_str}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Lowest</td>
+                                        <td>Min</td>
                                         <td>{{min_str}}</td>
                                     </tr>
                                     <tr>

@@ -292,7 +292,7 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     df_bs = df_bs.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
     titles_bs.remove('Symbol')
     # df_bs.columns = fin_statement_cols
-    df_bs.columns = fin_statement_cols
+    df_bs.columns = titles_bs
     # for col in df_bs.columns:
     #     if len(df_bs[col].unique()) == 1:
     #         df_bs.drop(col,inplace=True,axis=1)

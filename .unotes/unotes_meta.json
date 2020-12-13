@@ -2,6 +2,15 @@
   "name": "",
   "isOrdered": true,
   "folders": {
+    "Notes": {
+      "name": "Notes",
+      "isOrdered": true,
+      "folders": {},
+      "files": {
+        "Regex": 0,
+        "Tips": 1
+      }
+    },
     "__pycache__": {
       "name": "__pycache__",
       "isOrdered": true,
@@ -16,6 +25,18 @@
     },
     "Charts_TenDollarData": {
       "name": "Charts_TenDollarData",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "jupyter": {
+      "name": "jupyter",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "reference_data": {
+      "name": "reference_data",
       "isOrdered": true,
       "folders": {},
       "files": {}

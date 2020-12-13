@@ -587,11 +587,6 @@
                                     </div>
                                     <div class="card-body">
                                         <!-- {{df_bs_table_html}} -->
-                                        {% for table in df_html_tall %}
-                                        <!-- {{titles[loop.index]}} -->
-                                        {{ df_html_tall|safe }}
-                                        {% endfor %}
-                                        
                                         {% for table in df_bs_table_html %}
                                         <!-- {{titles[loop.index]}} -->
                                         {{ df_bs_table_html|safe }}

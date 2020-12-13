@@ -208,6 +208,11 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     urls_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['URL'])
     urls_is = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['URL'])
 
+    titles_list_bs = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']#,'SEC Statement Link']
+    for x in titles_bs:
+        if x in titles_list_bs: #this
+            titles_bs.remove(x)
+    # titles_list_bs = titles_list_bs.append("Quarter & Year")
     for n, profiles_col in enumerate(company_profiles_col):
         key = profiles_col
         value = profiles_value[n]
@@ -283,15 +288,8 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     earliest_metric = (list(df["{}".format("cashAndCashEquivalents")])[-1])
     latest_metric = (list(df["{}".format("cashAndCashEquivalents")])[0])
     
+    df_bs = df_bs.drop([ 'Unnamed: 0','date','symbol','fillingDate','period','link','acceptedDate'],axis=1)
     
-    titles_list_bs = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']#,'SEC Statement Link']
-    for x in titles_bs:
-        if x in titles_list_bs: #this
-            titles_bs.remove(x)
-    # titles_list_bs = titles_list_bs.append("Quarter & Year")
-    df_bs = df_bs.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
-    titles_bs.remove('Symbol')
-    # df_bs.columns = fin_statement_cols
     df_bs.columns = fin_statement_cols
     # for col in df_bs.columns:
     #     if len(df_bs[col].unique()) == 1:

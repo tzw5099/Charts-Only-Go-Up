@@ -40,7 +40,7 @@
 [[company_country]]
 [[company_ipo_date]] -->
 
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
 <script src="https://code.highcharts.com/stock/highstock.js"></script>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
@@ -587,11 +587,6 @@
                                     </div>
                                     <div class="card-body">
                                         <!-- {{df_bs_table_html}} -->
-                                        {% for table in df_html_tall %}
-                                        <!-- {{titles[loop.index]}} -->
-                                        {{ df_html_tall|safe }}
-                                        {% endfor %}
-                                        
                                         {% for table in df_bs_table_html %}
                                         <!-- {{titles[loop.index]}} -->
                                         {{ df_bs_table_html|safe }}
@@ -668,6 +663,9 @@
                         </br>
                             <div class="col">
                                 <div></div>
+                                <div class="card" style="background-color: rgba(0,0,0,0.48);margin: 10px;">
+                                    <div class="card-body" style="padding: 2px;"></div>
+                                </div>
                             </div>
 
                         </div>

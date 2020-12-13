@@ -277,7 +277,7 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     else:
         max_min_pct_diff_str = ""
     # df_bs['Quarter & Year'] =(df_bs['date'].astype(str).str[0:4]).astype(int)#((df_bs['date'].astype(str).str[0:4].astype(int))-1)
-    df_bs['Quarter & Year'] =(df_bs['date'].astype(str).str[0:4]).astype(int)
+    df_bs['Quarter & Year'] =(df_bs['Date'].astype(str).str[0:4]).astype(int)
     latest_year = list((df_bs['date'].astype(str).str[0:4]))[0]
     earliest_year = list((df_bs['date'].astype(str).str[0:4]))[-1]
     earliest_metric = (list(df["{}".format("cashAndCashEquivalents")])[-1])
@@ -291,7 +291,6 @@ def current_ratio(urilist,name_url,some_place): # WORKS
     # titles_list_bs = titles_list_bs.append("Quarter & Year")
     df_bs = df_bs.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
     titles_bs.remove('Symbol')
-    # df_bs.columns = fin_statement_cols
     df_bs.columns = fin_statement_cols
     # for col in df_bs.columns:
     #     if len(df_bs[col].unique()) == 1:
