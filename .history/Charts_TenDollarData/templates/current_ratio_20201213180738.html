@@ -260,7 +260,119 @@
         </div>
         </div>
     </nav>
-
+        <div class="page-content">
+          <div class="tabbed">
+            <input type="radio" id="tab1" name="css-tabs" checked>
+            <input type="radio" id="tab2" name="css-tabs">
+            <input type="radio" id="tab3" name="css-tabs">
+    
+            <ul class="tabs">
+              <li class="tab"><label for="tab1">Financial Statements #h1</label></li>
+              <li class="tab"><label for="tab2">Financial Ratios</label></li>
+              <li class="tab"><label for="tab3">Financial Growth</label></li>
+            </ul>
+    
+            <div class="tab-content">
+              <h4>Financial Statements #h2</h4>
+              <p>Da bomb ipsizzl</p>
+                            <div class="tabbed">
+                              <input type="radio" id="tab1" name="css-tabs" checked>
+                              <input type="radio" id="tab2" name="css-tabs">
+                              <input type="radio" id="tab3" name="css-tabs">
+    
+                              <ul class="tabs">
+                                <li class="tab"><label for="tab1">Gangsta lipsum</label></li>
+                                <li class="tab"><label for="tab2">Zombie lipsum</label></li>
+                                <li class="tab"><label for="tab3">New age bullshit</label></li>
+                              </ul>
+    
+                              <div class="tab-content">
+                                <h4>Gangsta lipsum</h4>
+                                <p>Da bomb ipsizzl</p>
+                              </div>
+    
+                              <div class="tab-content">
+                                <h4>Zombie lipsum</h4>
+                                <p>Zombie </p>
+                              </div>
+    
+                              <div class="tab-content">
+                                <h4>New age bullshit</h4>
+    
+                              </div>
+                            </div>
+            </div>
+    
+            <div class="tab-content">
+              <h4>Zombie lipsum</h4>
+              <p>Zombie </p>
+            </div>
+    
+            <div class="tab-content">
+              <h4>New age bullshit</h4>
+    
+            </div>
+          </div>
+    
+    
+        </div>
+    
+    
+    
+    
+      <!-- <div class="page-content"> -->
+        <div class="tabbed">
+          <input type="radio" id="tab1" name="css-tabs" checked>
+          <input type="radio" id="tab2" name="css-tabs">
+          <input type="radio" id="tab3" name="css-tabs">
+    
+          <ul class="tabs">
+            <li class="tab"><label for="tab1">Financial Statements #h1</label></li>
+            <li class="tab"><label for="tab2">Zombie lipsum</label></li>
+            <li class="tab"><label for="tab3">New age bullshit</label></li>
+          </ul>
+    
+          <div class="tab-content">
+            <h4>Financial Statements #h2</h4>
+            <p>Da bomb ipsizzl</p>
+                          <div class="tabbed">
+                            <input type="radio" id="tab1" name="css-tabs" checked>
+                            <input type="radio" id="tab2" name="css-tabs">
+                            <input type="radio" id="tab3" name="css-tabs">
+    
+                            <ul class="tabs">
+                              <li class="tab"><label for="tab1">Gangsta lipsum</label></li>
+                              <li class="tab"><label for="tab2">Zombie lipsum</label></li>
+                              <li class="tab"><label for="tab3">New age bullshit</label></li>
+                            </ul>
+    
+                            <div class="tab-content">
+                              <h4>Gangsta lipsum</h4>
+                              <p>Da bomb ipsizzl</p>
+                            </div>
+    
+                            <div class="tab-content">
+                              <h4>Zombie lipsum</h4>
+                              <p>Zombie </p>
+                            </div>
+    
+                            <div class="tab-content">
+                              <h4>New age bullshit</h4>
+    
+                            </div>
+                          </div>
+          </div>
+    
+          <div class="tab-content">
+            <h4>Zombie lipsum</h4>
+            <p>Zombie </p>
+          </div>
+    
+          <div class="tab-content">
+            <h4>New age bullshit</h4>
+    
+          </div>
+        </div>
     
         <!-- <div class="tabbed">
           <input type="radio" id="tab21" name="css-tabs2" checked>
@@ -399,9 +511,6 @@
                         <div id="highbar" style="height: 400px; width:100%;"></div>
                         <h2
                             class="text-primary historical">AAPL Historical {{fin_metric_name}} Chart (by Fiscal Year)</h2>
-
-                            <br />
-                           
                     </div>
 
                     
@@ -409,16 +518,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="card shadow border-left-info py-2">
-                                    <div class="card-body hist_table" style="padding: 10px;">
-                                    
-                                        <!-- {% for table in df_bs_table_html %} -->
-                                        <!-- {{titles[loop.index]}} -->
-                                        <br />
-                                        
-                                        <!-- {{ df_bs_table_html[0]|safe }} -->
-                                        <!-- {% endfor %}                                      -->
-                                    
-                                    </div>
+                                    <div class="card-body" style="padding: 10px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -444,7 +544,7 @@
                                         <div class="row align-items-center no-gutters">
                                             <div class="col mr-2">
                                                 <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Overall change %</span></div>
-                                                <div class="text-dark font-weight-bold h5 mb-0"><span>{{max_min_pct_diff_str}}</span></div>
+                                                <div class="text-dark font-weight-bold h5 mb-0"><span>{{max_min_pct_diff_str}}<</span></div>
                                             </div>
                                             <div class="col mr-2">
                                                 <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>change % (annualized)</span></div>
@@ -487,14 +587,17 @@
                                     </div>
                                     <div class="card-body">
                                         <!-- {{df_bs_table_html}} -->
-                                        {% for table in df_html_tall %}
+                                        <!-- {% for table in df_html_tall %} -->
                                         <!-- {{titles[loop.index]}} -->
                                         <!-- asdas -->
-                                        {{ df_html_tall[0]|safe }}
+                                        {{ df_html_tall|safe }}
+                                        <!-- {% endfor %} -->
+                                        {% for table in df_bs_table_html %}
+                                        <!-- {{titles[loop.index]}} -->
+                                        {{ df_bs_table_html|safe }}
                                         {% endfor %}
-
                                                         
-                                        <!-- <div class="table-responsive">
+                                        <div class="table-responsive">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
@@ -530,7 +633,7 @@
                                                     <tr></tr>
                                                 </tbody>
                                             </table>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
 
@@ -574,118 +677,6 @@
                             AMZN, NFLX. The highest and lowest {{fin_metric_name}} in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively.</p>
                     </div>
                     <p>{{company_short_name}} celebrated it's 10th year anniversary with a {{fin_metric_name}} of 10. By the looks of it's history (see: the chart and stats above), you can expect {{company_short_name}} to maintain a positive {{fin_metric_name}}.</p><div class="container">
-                        <div class="page-content">
-                            <div class="tabbed">
-                              <input type="radio" id="tab1" name="css-tabs" checked>
-                              <input type="radio" id="tab2" name="css-tabs">
-                              <input type="radio" id="tab3" name="css-tabs">
-                      
-                              <ul class="tabs">
-                                <li class="tab"><label for="tab1">Financial Statements #h1</label></li>
-                                <li class="tab"><label for="tab2">Financial Ratios</label></li>
-                                <li class="tab"><label for="tab3">Financial Growth</label></li>
-                              </ul>
-                      
-                              <div class="tab-content">
-                                <h4>Financial Statements #h2</h4>
-                                <p>Da bomb ipsizzl</p>
-                                              <div class="tabbed">
-                                                <input type="radio" id="tab1" name="css-tabs" checked>
-                                                <input type="radio" id="tab2" name="css-tabs">
-                                                <input type="radio" id="tab3" name="css-tabs">
-                      
-                                                <ul class="tabs">
-                                                  <li class="tab"><label for="tab1">Gangsta lipsum</label></li>
-                                                  <li class="tab"><label for="tab2">Zombie lipsum</label></li>
-                                                  <li class="tab"><label for="tab3">New age bullshit</label></li>
-                                                </ul>
-                      
-                                                <div class="tab-content">
-                                                  <h4>Gangsta lipsum</h4>
-                                                  <p>Da bomb ipsizzl</p>
-                                                </div>
-                      
-                                                <div class="tab-content">
-                                                  <h4>Zombie lipsum</h4>
-                                                  <p>Zombie </p>
-                                                </div>
-                      
-                                                <div class="tab-content">
-                                                  <h4>New age bullshit</h4>
-                      
-                                                </div>
-                                              </div>
-                              </div>
-                      
-                              <div class="tab-content">
-                                <h4>Zombie lipsum</h4>
-                                <p>Zombie </p>
-                              </div>
-                      
-                              <div class="tab-content">
-                                <h4>New age bullshit</h4>
-                      
-                              </div>
-                            </div>
-                      
-                      
-                          </div>
-                      
-                      
-                      
-                      
-                          <div class="tabbed">
-                            <input type="radio" id="tab1" name="css-tabs" checked>
-                            <input type="radio" id="tab2" name="css-tabs">
-                            <input type="radio" id="tab3" name="css-tabs">
-                      
-                            <ul class="tabs">
-                              <li class="tab"><label for="tab1">Financial Statements #h1</label></li>
-                              <li class="tab"><label for="tab2">Zombie lipsum</label></li>
-                              <li class="tab"><label for="tab3">New age bullshit</label></li>
-                            </ul>
-                      
-                            <div class="tab-content">
-                              <h4>Financial Statements #h2</h4>
-                              <p>Da bomb ipsizzl</p>
-                                            <div class="tabbed">
-                                              <input type="radio" id="tab1" name="css-tabs" checked>
-                                              <input type="radio" id="tab2" name="css-tabs">
-                                              <input type="radio" id="tab3" name="css-tabs">
-                      
-                                              <ul class="tabs">
-                                                <li class="tab"><label for="tab1">Gangsta lipsum</label></li>
-                                                <li class="tab"><label for="tab2">Zombie lipsum</label></li>
-                                                <li class="tab"><label for="tab3">New age bullshit</label></li>
-                                              </ul>
-                      
-                                              <div class="tab-content">
-                                                <h4>Gangsta lipsum</h4>
-                                                <p>Da bomb ipsizzl</p>
-                                              </div>
-                      
-                                              <div class="tab-content">
-                                                <h4>Zombie lipsum</h4>
-                                                <p>Zombie </p>
-                                              </div>
-                      
-                                              <div class="tab-content">
-                                                <h4>New age bullshit</h4>
-                      
-                                              </div>
-                                            </div>
-                            </div>
-                      
-                            <div class="tab-content">
-                              <h4>Zombie lipsum</h4>
-                              <p>Zombie </p>
-                            </div>
-                      
-                            <div class="tab-content">
-                              <h4>New age bullshit</h4>
-                      
-                            </div>
-                          </div>                        
     <div id="accordion" class="accordion">
         <div class="card mb-0">
             <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
@@ -801,7 +792,7 @@
                             <div class="row align-items-center no-gutters">
                                 <div class="col mr-2">
                                     <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Overall change %</span></div>
-                                    <div class="text-dark font-weight-bold h5 mb-0"><span>{{max_min_pct_diff_str}}</span></div>
+                                    <div class="text-dark font-weight-bold h5 mb-0"><span>{{max_min_pct_diff_str}}<</span></div>
                                 </div>
                                 <div class="col mr-2">
                                     <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>change % (annualized)</span></div>
@@ -832,7 +823,62 @@
             </div>
             <div class="row flex-grow-1 justify-content-center">
                 <div class="col">
-
+                    <div class="card shadow mb-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h6 class="text-primary font-weight-bold m-0">Apple Inc. ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
+                            <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                    role="menu">
+                                    <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- {{df_bs_table_html}} -->
+                            {% for table in df_bs_table_html %}
+                            <!-- {{titles[loop.index]}} -->
+                            {{ df_bs_table_html|safe }}
+                            {% endfor %}
+                                            
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>2014</th>
+                                            <th>2015</th>
+                                            <th>2016</th>
+                                            <th>2017</th>
+                                            <th>2018</th>
+                                            <th>2019</th>
+                                            <th>2020</th>
+                                            <th>2021</th>
+                                            <th>2022</th>
+                                            <th>2023</th>
+                                            <th>2024</th>
+                                            <th>2025</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Cell 1</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 2</td>
+                                        </tr>
+                                        <tr></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card shadow border-left-primary py-2" style="margin: 0px;padding: 10px;">
                         <div class="card-body" style="padding: 10px;">
                             <p>Popular Stats &amp; Analyses:<br>-&nbsp;<a href="#collapse-1"><span style="text-decoration: underline;">Company Info (CEO, IPO Date, HQ.</span></a>..)<br>-&nbsp;<a href="#collapse-1">[Past] "If I bought AAPL at ______."</a><br>-&nbsp;

@@ -208,6 +208,16 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     fin_metric_history = df_fin_statement['{}'.format(fin_metric_title)]
     if list(fin_metric_history)[0]  > billion:
         df_fin_statement['{}'.format(fin_metric_title)] = (fin_metric_history/billion).round(decimals=2)
+        df_table_html = df_fin_statement[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html().replace("\n","")
+
+        df_tall = df
+        df_tall.index = df['Quarter & Year'].iloc[::-1]
+        df_tall = df_tall.reset_index()
+        df_html_tall = df_tall[['{}'.format(fin_metric_name)]].to_html().replace("'","")
+        # df_html_tall = df_html_tall.replace("\n","")
+        df_html_tall = df_html_tall.replace("\n","")
+        df_html_tall = df_html_tall.replace("{}".format("["),"")
+        df_html_tall = df_html_tall #render_template_string(df_html_tall)
         
 
     elif fin_metric_history[0]  > million:
@@ -286,19 +296,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     col_list_str = ''.join(map(str, col_list))
     df_html = df_t.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
 
-    # df_table_html = df_fin_statement[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()#.replace("\n","")
 
-
-
-    df_tall = df.iloc[::-1]
-    # df_tall.index = df['Quarter & Year']
-    # df_tall = df.index.shift(-1)
-    # df_tall = df_tall.reset_index()
-    df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_name)]].to_html(index=False)#.replace("'","")
-    # df_html_tall = df_html_tall.replace("\n","")
-    df_html_tall = df_html_tall.replace("\n","")
-    df_html_tall = df_html_tall.replace("{}".format("["),"")
-    df_html_tall = df_html_tall #render_template_string(df_html_tall)
     df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
     df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
@@ -335,7 +333,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
         "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
         "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
-    df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()#.replace("\n","")
+
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\

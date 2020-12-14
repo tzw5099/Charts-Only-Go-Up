@@ -288,7 +288,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
 
     # df_table_html = df_fin_statement[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()#.replace("\n","")
 
-
+    df_table_html = df_tall[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()#.replace("\n","")
 
     df_tall = df.iloc[::-1]
     # df_tall.index = df['Quarter & Year']
@@ -335,7 +335,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
         "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
         "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
-    df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()#.replace("\n","")
+
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\

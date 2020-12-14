@@ -38,7 +38,7 @@ from string import Template
 from flask_sqlalchemy import SQLAlchemy
 from flask_caching import Cache
 import logging
-from flask import render_template_string,request, session, g, redirect, url_for, abort, render_template, flash, Blueprint
+from flask import request, session, g, redirect, url_for, abort, render_template, flash, Blueprint
 cache = Cache()
 # app = Flask(__name__)
 from string import Template
@@ -140,7 +140,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     matching_row = fin_statements_matching[fin_statements_matching['URL']=="{}".format(url_fin_metric)]
     fin_metric_title = list(matching_row['Title'])[0]
     fin_metric_name = list(matching_row['Name'])[0]
-    print("fin metric name", fin_metric_name)
+    print("fin metric name", fin_metric_title)
     sorted_metric = df["{}".format(fin_metric_name)].sort_values()
     # sorted_metric(int(len(sorted_metric)*(n/100)))
     quarters = round(len(sorted_metric)/4)
@@ -207,9 +207,15 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     billion = 1000000000
     fin_metric_history = df_fin_statement['{}'.format(fin_metric_title)]
     if list(fin_metric_history)[0]  > billion:
+        print()
         df_fin_statement['{}'.format(fin_metric_title)] = (fin_metric_history/billion).round(decimals=2)
-        
+        df_table_html = df_fin_statement[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html().replace("'","")
 
+        df_tall = df
+        df_tall.index = df['Quarter & Year'].iloc[::-1]
+        df_html_tall = df_tall[['{}'.format(fin_metric_name)]].to_html().replace("'","")
+        # df_html_tall = df_html_tall.replace("\n","")
+        df_html_tall = df_html_tall.replace("\n","")
     elif fin_metric_history[0]  > million:
         pass
     else:
@@ -286,33 +292,24 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     col_list_str = ''.join(map(str, col_list))
     df_html = df_t.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
 
-    # df_table_html = df_fin_statement[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()#.replace("\n","")
 
-
-
-    df_tall = df.iloc[::-1]
-    # df_tall.index = df['Quarter & Year']
-    # df_tall = df.index.shift(-1)
-    # df_tall = df_tall.reset_index()
-    df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_name)]].to_html(index=False)#.replace("'","")
-    # df_html_tall = df_html_tall.replace("\n","")
-    df_html_tall = df_html_tall.replace("\n","")
-    df_html_tall = df_html_tall.replace("{}".format("["),"")
-    df_html_tall = df_html_tall #render_template_string(df_html_tall)
     df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
     df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
-    #  df_html_tall = df_html_tall.replace("\n","")
+    df_html=df_html[0:]
+    
     # df_html_tall.replace("\n",'">')
-    df_html_tall = df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
-    df_html_tall = df_html_tall.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
-    df_html_tall = df_html_tall.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
-    df_html_tall = df_html_tall[0:]
+    df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
+    df_html_tall.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
+    df_html_tall.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
+    df_html_tall=df_html_tall[0:]
     
     df = df[['date',"{}".format(fin_metric_name)]].dropna() #.fillna(0)#.fillna(method='bfill')
     df['date'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
     full_path = csv_file.split(' ~ ')
+
     path = pathlib.PurePath(full_path[0])
+
     print("Nothing took {} seconds".format(time.time() - start_time))
     total_seconds = ((time.time() - start_time))
 
@@ -335,7 +332,8 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
         "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
         "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
-    df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()#.replace("\n","")
+    df_html
+
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\
@@ -360,7 +358,12 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
                             latest_year = latest_year,\
                             earliest_metric = earliest_metric,\
                             latest_metric = latest_metric,\
-                            max_min_pct_diff_str = max_min_pct_diff_str, df_bs_table_html = [df_table_html],df_html_tall = [df_html_tall],fin_metric_name = fin_metric_title,\
+                            max_min_pct_diff_str = max_min_pct_diff_str,\
+
+# df_html_tall = [df_html_tall],\df_html_tall,df_bs_table_html
+                            df_bs_table_html = [df_table_html],\
+                            df_html_tall = [df_html_tall],\
+                            fin_metric_name = fin_metric_title,\
                             df_date = df['date'].to_list(), df_rev = df["{}".format(fin_metric_name)].to_list(),\
                             df_json  =df.to_numpy().tolist(),\
                             table_pct = [df_pct],\
