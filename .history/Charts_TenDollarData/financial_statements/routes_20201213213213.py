@@ -69,7 +69,6 @@ def index():
 @charts.route('/<url_symbol>-stock/<url_name>/<url_fin_metric>', methods=['POST', 'GET']) # WORKS
 def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
 # def current_ratio(urilist,url_symbol_name):
-    start_time = time.time()
     def magnitude_num(number, currency_symbol):
         if len(str(number)) > 9:
             magnitude = number/1000000000
@@ -130,7 +129,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     else:
         pass
 
-    
+    start_time = time.time()
     csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
 
     df = pd.read_csv(csv_file) #.format("NLOK"))[-1]
@@ -147,37 +146,33 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     quarters = round(len(sorted_metric)/4)
     bottom_25 = sorted_metric[len(sorted_metric)-1-quarters]
     top_25 = sorted_metric[quarters-1]
-    max_metric = sorted_metric.max()
-    min_metric = sorted_metric.min()
+    max_num = sorted_metric.max()
+    min_num = sorted_metric.min()
     mean = sorted_metric.mean()
     std_dev = sorted_metric.std()
     std_dev_str = "+/-{}{}%".format(currency_symbol,round(abs((std_dev-mean)/mean)*100,1))
     mean_str = magnitude_num(mean, currency_symbol)
-    max_str = magnitude_num(max_metric, currency_symbol)
-    min_str = magnitude_num(min_metric, currency_symbol)
+    max_str = magnitude_num(max_num, currency_symbol)
+    min_str = magnitude_num(min_num, currency_symbol)
     bottom_25_str = magnitude_num(bottom_25, currency_symbol)
     top_25_str = magnitude_num(top_25, currency_symbol)
 
     lifetime_sum_all_metric = df["{}".format(fin_metric_name)].sum()
     lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)
 
-    earliest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[0]    
-    latest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[-1]    # average_abs_chg = latest_metric-earliest_metric
-    earliest_metric = list(df["{}".format(fin_metric_name)])[0]
-    latest_metric = list(df["{}".format(fin_metric_name)])[-1]
-    print("latest num", latest_metric)
-    pct_chg = (latest_metric - earliest_metric)/earliest_metric
+    latest_num = df["{}".format(fin_metric_name)][0]
+    first_num = list(df["{}".format(fin_metric_name)])[-1]
+    pct_chg = (latest_num - first_num)/first_num
     historical_pct_chg = str(round(pct_chg*100, 1))
 
     if pct_chg>=0:
-        pct_chg_str = "+{}%".format(historical_pct_chg)
+        pct_chg_str = "+{}%".format(pct_chg)
     elif pct_chg<0:
-        pct_chg_str = "-{}%".format(historical_pct_chg)
+        pct_chg_str = "-{}%".format(pct_chg)
     else:
         pct_chg_str = ""
-    historical_pct_chg = pct_chg_str
-    max_min_pct_diff = ((max_metric-min_metric)/min_metric)
-
+    # historical_pct_chg = str(round(pct_chg*100, 1))
+    max_min_pct_diff = ((max_num-min_num)/min_num)
     if max_min_pct_diff>=0:
         max_min_pct_diff_str = "+{}%".format(round(max_min_pct_diff)*100,1)
     elif max_min_pct_diff<0:
@@ -185,11 +180,20 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     else:
         max_min_pct_diff_str = ""
     df_fin_statement['Quarter & Year'] =(df_fin_statement['date'].astype(str).str[0:4]).astype(int)
+    latest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[0]
+    earliest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[-1]
+    earliest_metric = (list(df["{}".format("cashAndCashEquivalents")])[-1])
+    latest_metric = (list(df["{}".format("cashAndCashEquivalents")])[0])
+    
+    
     titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
-    for x in reversed(titles_bs):
+    for x in titles_bs:
         if x in titles_list:
             titles_bs.remove(x)
     df_fin_statement = df_fin_statement.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
+    # bug (?) - Symbol & Accepted Date not removed
+    titles_bs.remove('Symbol')
+    titles_bs.remove('Accepted Date')
     titles_bs.append('Quarter & Year') 
     df_fin_statement.columns = titles_bs
 
@@ -206,9 +210,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         df_fin_statement['{}'.format(fin_metric_title)] = (fin_metric_history/billion).round(decimals=2)
         
 
-    elif list(fin_metric_history)[0]  > million:
-        df_fin_statement['{}'.format(fin_metric_title)] = (fin_metric_history/million).round(decimals=2)
-
+    elif fin_metric_history[0]  > million:
         pass
     else:
         pass
@@ -308,7 +310,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     df['date'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
     full_path = csv_file.split(' ~ ')
     path = pathlib.PurePath(full_path[0])
-    
+    print("Nothing took {} seconds".format(time.time() - start_time))
     total_seconds = ((time.time() - start_time))
 
     labels = [
@@ -331,10 +333,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
         "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
     df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()#.replace("\n","")
-    present_num = magnitude_num(int(latest_metric),currency_symbol)
-    latest_metric = "${}".format(df["{}".format(fin_metric_name)][0])
-    print("latest_num 2", latest_metric,"present_num 2", present_num)
-    print("Nothing took {} seconds".format(time.time() - start_time))
+    latest_num = "${}".format(df["{}".format(fin_metric_name)][0])
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\
@@ -345,6 +344,8 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
                             company_country = profiles_dict['country'],\
                             company_ipo_date = profiles_dict['ipo date'],\
                             company_short_name = profiles_dict['short name'],\
+                            first_num = first_num,\
+                            latest_num = latest_num,\
                             historical_pct_chg = historical_pct_chg,\
                             lifetime_sum_all_metric = lifetime_sum_all_metric,\
                             mean_str = mean_str,\
@@ -357,7 +358,6 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
                             latest_year = latest_year,\
                             earliest_metric = earliest_metric,\
                             latest_metric = latest_metric,\
-                            present_num = present_num,\
                             max_min_pct_diff_str = max_min_pct_diff_str, df_bs_table_html = [df_table_html],df_html_tall = [df_html_tall],fin_metric_name = fin_metric_title,\
                             df_date = df['date'].to_list(), df_rev = df["{}".format(fin_metric_name)].to_list(),\
                             df_json  =df.to_numpy().tolist(),\

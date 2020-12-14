@@ -160,7 +160,7 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
 
     lifetime_sum_all_metric = df["{}".format(fin_metric_name)].sum()
     lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)
-
+    
     earliest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[0]    
     latest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[-1]    # average_abs_chg = latest_metric-earliest_metric
     earliest_metric = list(df["{}".format(fin_metric_name)])[0]
@@ -175,9 +175,10 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         pct_chg_str = "-{}%".format(historical_pct_chg)
     else:
         pct_chg_str = ""
+    # historical_pct_chg = str(round(pct_chg*100, 1))
     historical_pct_chg = pct_chg_str
     max_min_pct_diff = ((max_metric-min_metric)/min_metric)
-
+    
     if max_min_pct_diff>=0:
         max_min_pct_diff_str = "+{}%".format(round(max_min_pct_diff)*100,1)
     elif max_min_pct_diff<0:
@@ -190,6 +191,13 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         if x in titles_list:
             titles_bs.remove(x)
     df_fin_statement = df_fin_statement.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
+    # bug (?) - Symbol & Accepted Date not removed
+    # double_check = ['Symbol','Accepted Date']
+    # for x in titles_bs:
+    #     if x in double_check:
+    #         titles_bs.remove(x)    
+    # titles_bs.remove('Symbol')
+    # titles_bs.remove('Accepted Date')
     titles_bs.append('Quarter & Year') 
     df_fin_statement.columns = titles_bs
 
