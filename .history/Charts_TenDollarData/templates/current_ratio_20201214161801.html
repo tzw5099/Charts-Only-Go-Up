@@ -419,22 +419,22 @@ div.sticky-top{
 
                     
                     <div id="content">
-                        <!-- <div class="row">
+                        <div class="row">
                             <div class="col">
                                 <div class="card shadow border-left-info py-2">
                                     <div class="card-body hist_table" style="padding: 10px;">
                                     
-                                        {% for table in df_bs_table_html %}
-                                        {{titles[loop.index]}}
+                                        <!-- {% for table in df_bs_table_html %} -->
+                                        <!-- {{titles[loop.index]}} -->
                                         <br />
                                         
-                                        {{ df_bs_table_html[0]|safe }}
-                                        {% endfor %}                                     
+                                        <!-- {{ df_bs_table_html[0]|safe }} -->
+                                        <!-- {% endfor %}                                      -->
                                     
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="row flex-grow-1">
                             <div class="col-md-4 col-xl-6" style="padding: 10px;">
                                 <div class="card shadow border-left-primary py-2">
@@ -468,72 +468,71 @@ div.sticky-top{
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-
-                        <div class="row flex-grow-1 justify-content-center">
-                            <div class="col">
-                                <div class="card shadow mb-4">
-                                    <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h6 class="text-primary font-weight-bold m-0">Apple Inc. ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
-                                        <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                            <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
-                                                role="menu">
-                                                <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
-                                                <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                            <div class="row flex-grow-1 justify-content-center">
+                                <div class="col">
+                                    <div class="card shadow mb-4">
+                                        <!-- <div class="card-header d-flex justify-content-between align-items-center">
+                                            <h6 class="text-primary font-weight-bold m-0">Apple Inc. ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
+                                            <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                                <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                                    role="menu">
+                                                    <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                                    <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                            </div>
+                                        </div> -->
+                                        <div class="card-body">
+                                            <!-- {{df_bs_table_html}} -->
+                                            {% for table in df_html_tall %}
+                                            <!-- {{titles[loop.index]}} -->
+                                            <!-- asdas -->
+                                            {{ df_html_tall[0]|safe }}
+                                            {% endfor %}
+    
+                                                            
+                                            <!-- <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>2014</th>
+                                                            <th>2015</th>
+                                                            <th>2016</th>
+                                                            <th>2017</th>
+                                                            <th>2018</th>
+                                                            <th>2019</th>
+                                                            <th>2020</th>
+                                                            <th>2021</th>
+                                                            <th>2022</th>
+                                                            <th>2023</th>
+                                                            <th>2024</th>
+                                                            <th>2025</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 2</td>
+                                                        </tr>
+                                                        <tr></tr>
+                                                    </tbody>
+                                                </table>
+                                            </div> -->
                                         </div>
                                     </div>
-                                    <div class="card-body">
-                                        <!-- {{df_bs_table_html}} -->
-                                        {% for table in df_html_tall %}
-                                        <!-- {{titles[loop.index]}} -->
-                                        <!-- asdas -->
-                                        {{ df_html_tall[0]|safe }}
-                                        {% endfor %}
-
-                                                        
-                                        <!-- <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>2014</th>
-                                                        <th>2015</th>
-                                                        <th>2016</th>
-                                                        <th>2017</th>
-                                                        <th>2018</th>
-                                                        <th>2019</th>
-                                                        <th>2020</th>
-                                                        <th>2021</th>
-                                                        <th>2022</th>
-                                                        <th>2023</th>
-                                                        <th>2024</th>
-                                                        <th>2025</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Cell 1</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                    </tr>
-                                                    <tr></tr>
-                                                </tbody>
-                                            </table>
-                                        </div> -->
-                                    </div>
+    
                                 </div>
-
                             </div>
-                        </div>                        
+                        </div>
                         <div class="row flex-grow-1 justify-content-center">
                             <div class="col">
                                 <div class="card shadow mb-4">

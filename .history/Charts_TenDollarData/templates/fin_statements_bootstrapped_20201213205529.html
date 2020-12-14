@@ -403,16 +403,13 @@ $(document).ready( function () {
             "width": "1000","targets": "_all",
             render: function ( data, type, full, meta ) {
                 if(type === 'display' && !isNaN(data*1) && data > 1000000000){
-                  $(td).addClass('td_fin_statement_class');
                     return ('$'+(data/1000000000).toFixed(1) + 'B').toLocaleString();
                 }
 
                 else if(type === 'display' && !isNaN(data*1) && (data > 1000000 && data < 999999999)){
-                  $(td).addClass('td_fin_statement_class');
                     return ('$'+(data/1000000).toFixed(1) + 'M').toLocaleString();
                 }
                 else if(type === 'display' && !isNaN(data*1) && (data > 1000 && data < 999999)){
-                  $(td).addClass('td_fin_statement_class');
                     return ('$'+(data/1000).toFixed(1) + 'K').toLocaleString();
                 }
                 else if(type === 'display' && !isNaN(data*1) && (data > .01 && data < 2) && data != 1){

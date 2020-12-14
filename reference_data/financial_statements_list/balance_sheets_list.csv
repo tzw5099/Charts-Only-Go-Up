@@ -1,0 +1,7329 @@
+,sectors_list,symbols_list
+0,Basic Materials,AAU
+1,Basic Materials,AA
+2,Basic Materials,ABX.TO
+3,Basic Materials,ACET
+4,Basic Materials,ACH
+5,Basic Materials,ADN.TO
+6,Basic Materials,AEM.TO
+7,Basic Materials,AEM
+8,Basic Materials,AGI.TO
+9,Basic Materials,AGI
+10,Basic Materials,AG
+11,Basic Materials,AHGP
+12,Basic Materials,AI.PA
+13,Basic Materials,AKE.PA
+14,Basic Materials,AKS
+15,Basic Materials,AKZA.AS
+16,Basic Materials,ALAMG.PA
+17,Basic Materials,ALBKK.PA
+18,Basic Materials,ALB
+19,Basic Materials,ALCOG.PA
+20,Basic Materials,ALCOI.PA
+21,Basic Materials,ALCRB.PA
+22,Basic Materials,ALDUB.PA
+23,Basic Materials,ALEO2.PA
+24,Basic Materials,ALGLD.PA
+25,Basic Materials,ALHRG.PA
+26,Basic Materials,ALMOU.PA
+27,Basic Materials,ALO
+28,Basic Materials,ALS.TO
+29,Basic Materials,ALTR.LS
+30,Basic Materials,AMEBA.PA
+31,Basic Materials,AMG.AS
+32,Basic Materials,AMM.TO
+33,Basic Materials,AMRS
+34,Basic Materials,ANX.TO
+35,Basic Materials,APAM.AS
+36,Basic Materials,APA
+37,Basic Materials,APD
+38,Basic Materials,APY.TO
+39,Basic Materials,AQA.TO
+40,Basic Materials,AR.TO
+41,Basic Materials,ARG.TO
+42,Basic Materials,ASH
+43,Basic Materials,ASIX
+44,Basic Materials,ASM
+45,Basic Materials,ASR.TO
+46,Basic Materials,AUG.TO
+47,Basic Materials,AUG
+48,Basic Materials,AUMN
+49,Basic Materials,AUY
+50,Basic Materials,AU
+51,Basic Materials,AVD
+52,Basic Materials,AVL.TO
+53,Basic Materials,AVTR
+54,Basic Materials,AVTX.AS
+55,Basic Materials,AXS.AS
+56,Basic Materials,AXTA
+57,Basic Materials,AXU
+58,Basic Materials,AYM.TO
+59,Basic Materials,BAK
+60,Basic Materials,BBL
+61,Basic Materials,BCC
+62,Basic Materials,BCPC
+63,Basic Materials,BHP
+64,Basic Materials,BIOX
+65,Basic Materials,BKI.TO
+66,Basic Materials,BOS.TO
+67,Basic Materials,BSX.TO
+68,Basic Materials,BTG
+69,Basic Materials,BTO.TO
+70,Basic Materials,BVN
+71,Basic Materials,CADC
+72,Basic Materials,CAL.TO
+73,Basic Materials,CAS.TO
+74,Basic Materials,CBPX
+75,Basic Materials,CBT
+76,Basic Materials,CCF
+77,Basic Materials,CCM.TO
+78,Basic Materials,CC
+79,Basic Materials,CDE
+80,Basic Materials,CEE.TO
+81,Basic Materials,CENX
+82,Basic Materials,CE
+83,Basic Materials,CFF.TO
+84,Basic Materials,CFP.TO
+85,Basic Materials,CFX.TO
+86,Basic Materials,CF
+87,Basic Materials,CG.TO
+88,Basic Materials,CGA
+89,Basic Materials,CGG.TO
+90,Basic Materials,CHNR
+91,Basic Materials,CIA.TO
+92,Basic Materials,CINR
+93,Basic Materials,CLF
+94,Basic Materials,CLW
+95,Basic Materials,CMC
+96,Basic Materials,CMP
+97,Basic Materials,CMT
+98,Basic Materials,CNT.TO
+99,Basic Materials,COR.LS
+100,Basic Materials,CPAC
+101,Basic Materials,CRBN.AS
+102,Basic Materials,CRH
+103,Basic Materials,CS.TO
+104,Basic Materials,CSTE
+105,Basic Materials,CSTM
+106,Basic Materials,CTVA
+107,Basic Materials,CWX.TO
+108,Basic Materials,CX
+109,Basic Materials,DD
+110,Basic Materials,DNG.TO
+111,Basic Materials,DNT.TO
+112,Basic Materials,DOW
+113,Basic Materials,DPM.TO
+114,Basic Materials,DRD
+115,Basic Materials,DSM.AS
+116,Basic Materials,ECL
+117,Basic Materials,ECO.TO
+118,Basic Materials,EDR.TO
+119,Basic Materials,EDV.TO
+120,Basic Materials,EGO
+121,Basic Materials,ELD.TO
+122,Basic Materials,ELR.TO
+123,Basic Materials,EMN
+124,Basic Materials,EMX
+125,Basic Materials,ENGB.BR
+126,Basic Materials,EOX.TO
+127,Basic Materials,EQX
+128,Basic Materials,ER.TO
+129,Basic Materials,ERA.PA
+130,Basic Materials,ERD.TO
+131,Basic Materials,ESI
+132,Basic Materials,ESM.TO
+133,Basic Materials,ETG.TO
+134,Basic Materials,EUR.PA
+135,Basic Materials,EVA
+136,Basic Materials,EXAC.PA
+137,Basic Materials,EXK
+138,Basic Materials,EXN.TO
+139,Basic Materials,EXPL.PA
+140,Basic Materials,EXP
+141,Basic Materials,FAR.TO
+142,Basic Materials,FCX
+143,Basic Materials,FELP
+144,Basic Materials,FF
+145,Basic Materials,FM.TO
+146,Basic Materials,FMC
+147,Basic Materials,FNV.TO
+148,Basic Materials,FNV
+149,Basic Materials,FOE
+150,Basic Materials,FR.TO
+151,Basic Materials,FRD
+152,Basic Materials,FSI
+153,Basic Materials,FSM
+154,Basic Materials,FSY.TO
+155,Basic Materials,FT.TO
+156,Basic Materials,FUL
+157,Basic Materials,FVI.TO
+158,Basic Materials,FVL.TO
+159,Basic Materials,GAU
+160,Basic Materials,GCM.TO
+161,Basic Materials,GCP
+162,Basic Materials,GDL.TO
+163,Basic Materials,GEO.TO
+164,Basic Materials,GEVO
+165,Basic Materials,GFI
+166,Basic Materials,GGA.TO
+167,Basic Materials,GGB
+168,Basic Materials,GGD.TO
+169,Basic Materials,GLT
+170,Basic Materials,GMO.TO
+171,Basic Materials,GMO
+172,Basic Materials,GMX.TO
+173,Basic Materials,GOLD
+174,Basic Materials,GORO
+175,Basic Materials,GPL
+176,Basic Materials,GPR.TO
+177,Basic Materials,GPRE
+178,Basic Materials,GRA
+179,Basic Materials,GRVO.PA
+180,Basic Materials,GSC.TO
+181,Basic Materials,GSM
+182,Basic Materials,GSS
+183,Basic Materials,GSV
+184,Basic Materials,GURE
+185,Basic Materials,GUY.TO
+186,Basic Materials,HBM.TO
+187,Basic Materials,HBM
+188,Basic Materials,HCC
+189,Basic Materials,HDSN
+190,Basic Materials,HHT
+191,Basic Materials,HL
+192,Basic Materials,HMY
+193,Basic Materials,HOLCO.AS
+194,Basic Materials,HRT.TO
+195,Basic Materials,HUN
+196,Basic Materials,HWKN
+197,Basic Materials,HYMC
+198,Basic Materials,HZM.TO
+199,Basic Materials,IAG
+200,Basic Materials,ICL
+201,Basic Materials,IFF.PA
+202,Basic Materials,IFF
+203,Basic Materials,IFP.TO
+204,Basic Materials,III.TO
+205,Basic Materials,IKNX
+206,Basic Materials,IMCD.AS
+207,Basic Materials,IMG.TO
+208,Basic Materials,INA.LS
+209,Basic Materials,INV.TO
+210,Basic Materials,IOSP
+211,Basic Materials,IPHS
+212,Basic Materials,IPI
+213,Basic Materials,ITH.TO
+214,Basic Materials,ITP
+215,Basic Materials,IVN.TO
+216,Basic Materials,JAG.TO
+217,Basic Materials,JCQ.PA
+218,Basic Materials,JCTCF
+219,Basic Materials,JHX
+220,Basic Materials,K.TO
+221,Basic Materials,KALU
+222,Basic Materials,KER.TO
+223,Basic Materials,KGC
+224,Basic Materials,KLDX
+225,Basic Materials,KL
+226,Basic Materials,KMG
+227,Basic Materials,KOP
+228,Basic Materials,KOR.TO
+229,Basic Materials,KRA
+230,Basic Materials,KRN.TO
+231,Basic Materials,KRO
+232,Basic Materials,KS
+233,Basic Materials,KWR
+234,Basic Materials,LAC.TO
+235,Basic Materials,LAC
+236,Basic Materials,LAM.TO
+237,Basic Materials,LGO.TO
+238,Basic Materials,LHN.PA
+239,Basic Materials,LIF.TO
+240,Basic Materials,LIN
+241,Basic Materials,LN.TO
+242,Basic Materials,LOMA
+243,Basic Materials,LOOP
+244,Basic Materials,LTHM
+245,Basic Materials,LUC.TO
+246,Basic Materials,LUG.TO
+247,Basic Materials,LUN.TO
+248,Basic Materials,LXU
+249,Basic Materials,LYB
+250,Basic Materials,MAG.TO
+251,Basic Materials,MAG
+252,Basic Materials,MAW.TO
+253,Basic Materials,MAX.TO
+254,Basic Materials,MBII
+255,Basic Materials,MDI.TO
+256,Basic Materials,MDU
+257,Basic Materials,ME.TO
+258,Basic Materials,MEOH
+259,Basic Materials,MERC
+260,Basic Materials,METC
+261,Basic Materials,METEX.PA
+262,Basic Materials,MKD
+263,Basic Materials,MLBAT.PA
+264,Basic Materials,MLDYN.PA
+265,Basic Materials,MLM
+266,Basic Materials,MLOLM.PA
+267,Basic Materials,MLPFX.PA
+268,Basic Materials,MLZAM.PA
+269,Basic Materials,MMX
+270,Basic Materials,MND.TO
+271,Basic Materials,MON
+272,Basic Materials,MOS
+273,Basic Materials,MOZ.TO
+274,Basic Materials,MPVDF
+275,Basic Materials,MSV.TO
+276,Basic Materials,MT.AS
+277,Basic Materials,MTA
+278,Basic Materials,MTL
+279,Basic Materials,MTRN
+280,Basic Materials,MTX
+281,Basic Materials,MT
+282,Basic Materials,MUX.TO
+283,Basic Materials,MUX
+284,Basic Materials,MX.TO
+285,Basic Materials,NAK
+286,Basic Materials,NB.TO
+287,Basic Materials,NCF.TO
+288,Basic Materials,NCU.TO
+289,Basic Materials,NDM.TO
+290,Basic Materials,NEM
+291,Basic Materials,NEU
+292,Basic Materials,NEXA
+293,Basic Materials,NG.TO
+294,Basic Materials,NGD.TO
+295,Basic Materials,NGD
+296,Basic Materials,NGVT
+297,Basic Materials,NG
+298,Basic Materials,NK.PA
+299,Basic Materials,NML.TO
+300,Basic Materials,NPK.TO
+301,Basic Materials,NP
+302,Basic Materials,NTIC
+303,Basic Materials,NTR.TO
+304,Basic Materials,NTR
+305,Basic Materials,NUE
+306,Basic Materials,NVG.LS
+307,Basic Materials,NYR.BR
+308,Basic Materials,OCI.AS
+309,Basic Materials,OCIP
+310,Basic Materials,ODC
+311,Basic Materials,OEC
+312,Basic Materials,OGC.TO
+313,Basic Materials,OGD.TO
+314,Basic Materials,OLN
+315,Basic Materials,OMI.TO
+316,Basic Materials,OMN
+317,Basic Materials,OR.TO
+318,Basic Materials,ORA.TO
+319,Basic Materials,ORAP.PA
+320,Basic Materials,ORL.TO
+321,Basic Materials,ORV.TO
+322,Basic Materials,OR
+323,Basic Materials,OSB.TO
+324,Basic Materials,OSB
+325,Basic Materials,OSK.TO
+326,Basic Materials,OSN
+327,Basic Materials,PAAS
+328,Basic Materials,PCA.PA
+329,Basic Materials,PG.TO
+330,Basic Materials,PGEM
+331,Basic Materials,PGLC
+332,Basic Materials,PKX
+333,Basic Materials,PLG
+334,Basic Materials,PLL
+335,Basic Materials,PLM
+336,Basic Materials,POL
+337,Basic Materials,POM.TO
+338,Basic Materials,POPE
+339,Basic Materials,PPG
+340,Basic Materials,PQG
+341,Basic Materials,PRU.TO
+342,Basic Materials,PTM.TO
+343,Basic Materials,PVG.TO
+344,Basic Materials,PVG
+345,Basic Materials,PX
+346,Basic Materials,PZG
+347,Basic Materials,RAM.LS
+348,Basic Materials,RBT.PA
+349,Basic Materials,REC.BR
+350,Basic Materials,RETO
+351,Basic Materials,RFP.TO
+352,Basic Materials,RFP
+353,Basic Materials,RGLD
+354,Basic Materials,RIO
+355,Basic Materials,RKDA
+356,Basic Materials,RPM
+357,Basic Materials,RS
+358,Basic Materials,RTG.TO
+359,Basic Materials,RX.PA
+360,Basic Materials,RYAM
+361,Basic Materials,S.TO
+362,Basic Materials,SAM.TO
+363,Basic Materials,SAND
+364,Basic Materials,SAU.TO
+365,Basic Materials,SA
+366,Basic Materials,SBB.TO
+367,Basic Materials,SBI.TO
+368,Basic Materials,SBR.TO
+369,Basic Materials,SBSW
+370,Basic Materials,SCCO
+371,Basic Materials,SCHD.BR
+372,Basic Materials,SCHN
+373,Basic Materials,SCL
+374,Basic Materials,SCY.TO
+375,Basic Materials,SEA.TO
+376,Basic Materials,SEED
+377,Basic Materials,SEM.LS
+378,Basic Materials,SES
+379,Basic Materials,SHLM
+380,Basic Materials,SHW
+381,Basic Materials,SID
+382,Basic Materials,SILV
+383,Basic Materials,SJ.TO
+384,Basic Materials,SLR.TO
+385,Basic Materials,SMC.TO
+386,Basic Materials,SMG
+387,Basic Materials,SMT.TO
+388,Basic Materials,SMTS
+389,Basic Materials,SNES
+390,Basic Materials,SNMX
+391,Basic Materials,SOLB.BR
+392,Basic Materials,SOLV.BR
+393,Basic Materials,SONI.LS
+394,Basic Materials,SQM
+395,Basic Materials,SSL.TO
+396,Basic Materials,SSRM
+397,Basic Materials,STAL.PA
+398,Basic Materials,STLD
+399,Basic Materials,SUM
+400,Basic Materials,SUZ
+401,Basic Materials,SVM.TO
+402,Basic Materials,SVM
+403,Basic Materials,SWM
+404,Basic Materials,SXCP
+405,Basic Materials,SXC
+406,Basic Materials,SXT
+407,Basic Materials,SYNL
+408,Basic Materials,TANH
+409,Basic Materials,TECK
+410,Basic Materials,TESB.BR
+411,Basic Materials,TGB
+412,Basic Materials,TGZ.TO
+413,Basic Materials,TG
+414,Basic Materials,THM
+415,Basic Materials,TITC.BR
+416,Basic Materials,TKO.TO
+417,Basic Materials,TLO.TO
+418,Basic Materials,TML.TO
+419,Basic Materials,TMQ.TO
+420,Basic Materials,TMQ
+421,Basic Materials,TMR.TO
+422,Basic Materials,TMST
+423,Basic Materials,TNH
+424,Basic Materials,TNX.TO
+425,Basic Materials,TREC
+426,Basic Materials,TROX
+427,Basic Materials,TRQ.TO
+428,Basic Materials,TRQ
+429,Basic Materials,TRX
+430,Basic Materials,TSE
+431,Basic Materials,TSL.TO
+432,Basic Materials,TV.TO
+433,Basic Materials,TXG.TO
+434,Basic Materials,TX
+435,Basic Materials,UAMY
+436,Basic Materials,UAN
+437,Basic Materials,UEX.TO
+438,Basic Materials,UFPI
+439,Basic Materials,UFS.TO
+440,Basic Materials,UFS
+441,Basic Materials,UNVR
+442,Basic Materials,USA.TO
+443,Basic Materials,USAP
+444,Basic Materials,USAS
+445,Basic Materials,USAU
+446,Basic Materials,USCR
+447,Basic Materials,USG
+448,Basic Materials,USLM
+449,Basic Materials,VALE
+450,Basic Materials,VCT.PA
+451,Basic Materials,VEDL
+452,Basic Materials,VGZ.TO
+453,Basic Materials,VGZ
+454,Basic Materials,VHI
+455,Basic Materials,VIO.BR
+456,Basic Materials,VK.PA
+457,Basic Materials,VMC
+458,Basic Materials,VNP.TO
+459,Basic Materials,VNTR
+460,Basic Materials,VRS
+461,Basic Materials,VSM
+462,Basic Materials,WDFC
+463,Basic Materials,WDO.TO
+464,Basic Materials,WEF.TO
+465,Basic Materials,WFT.TO
+466,Basic Materials,WLKP
+467,Basic Materials,WLK
+468,Basic Materials,WM.TO
+469,Basic Materials,WMLP
+470,Basic Materials,WOR
+471,Basic Materials,WPM
+472,Basic Materials,WRN.TO
+473,Basic Materials,WRN
+474,Basic Materials,WWR
+475,Basic Materials,XPL
+476,Basic Materials,XTG.TO
+477,Basic Materials,X
+478,Basic Materials,YECO
+479,Basic Materials,YRI.TO
+480,Basic Materials,YTEN
+481,Basic Materials,ZEUS
+482,Basic Materials,ZKIN
+483,Communication Services,ADUX.PA
+484,Communication Services,AESE
+485,Communication Services,AHC
+486,Communication Services,ALACT.PA
+487,Communication Services,ALADM.PA
+488,Communication Services,ALALO.PA
+489,Communication Services,ALANT.PA
+490,Communication Services,ALATF.PA
+491,Communication Services,ALBDM.PA
+492,Communication Services,ALBLD.PA
+493,Communication Services,ALBUD.PA
+494,Communication Services,ALDNE.PA
+495,Communication Services,ALEMK.BR
+496,Communication Services,ALENT.PA
+497,Communication Services,ALFIL.PA
+498,Communication Services,ALFOC.PA
+499,Communication Services,ALINV.PA
+500,Communication Services,ALKER.PA
+501,Communication Services,ALLLN.PA
+502,Communication Services,ALMAK.PA
+503,Communication Services,ALMIL.PA
+504,Communication Services,ALMNG.PA
+505,Communication Services,ALNXT.PA
+506,Communication Services,ALOSM.PA
+507,Communication Services,ALP.PA
+508,Communication Services,ALPBS.BR
+509,Communication Services,ALPLA.PA
+510,Communication Services,ALPRI.PA
+511,Communication Services,ALREW.PA
+512,Communication Services,ALSEI.PA
+513,Communication Services,ALSK
+514,Communication Services,ALTBG.PA
+515,Communication Services,ALWIT.PA
+516,Communication Services,AMCX
+517,Communication Services,AMC
+518,Communication Services,AMOV
+519,Communication Services,AND.AS
+520,Communication Services,ANGI
+521,Communication Services,ANTE
+522,Communication Services,ATA.PA
+523,Communication Services,ATC.AS
+524,Communication Services,ATEX
+525,Communication Services,ATHM
+526,Communication Services,ATNI
+527,Communication Services,ATUS
+528,Communication Services,ATVI
+529,Communication Services,AUTO
+530,Communication Services,AVID
+531,Communication Services,BATRA
+532,Communication Services,BBGI
+533,Communication Services,BCE.TO
+534,Communication Services,BCE
+535,Communication Services,BCOM
+536,Communication Services,BHAT
+537,Communication Services,BIDU
+538,Communication Services,BILI
+539,Communication Services,BITA
+540,Communication Services,BOL.PA
+541,Communication Services,BOMN
+542,Communication Services,BRILL.AS
+543,Communication Services,CABO
+544,Communication Services,CALL
+545,Communication Services,CANG
+546,Communication Services,CARG
+547,Communication Services,CBB
+548,Communication Services,CCA.TO
+549,Communication Services,CCOI
+550,Communication Services,CCO
+551,Communication Services,CDLX
+552,Communication Services,CEL
+553,Communication Services,CFN.LS
+554,Communication Services,CGO.TO
+555,Communication Services,CGX.TO
+556,Communication Services,CHA
+557,Communication Services,CHTR
+558,Communication Services,CHT
+559,Communication Services,CHU
+560,Communication Services,CIDM
+561,Communication Services,CJR-B.TO
+562,Communication Services,CMCSA
+563,Communication Services,CMLS
+564,Communication Services,CMPR
+565,Communication Services,CNET
+566,Communication Services,CNK
+567,Communication Services,CNSL
+568,Communication Services,CSSEP
+569,Communication Services,CSSE
+570,Communication Services,CTL
+571,Communication Services,DAO
+572,Communication Services,DEC.PA
+573,Communication Services,DISCA
+574,Communication Services,DISCB
+575,Communication Services,DISCK
+576,Communication Services,DISH
+577,Communication Services,DJCO
+578,Communication Services,DLB
+579,Communication Services,DLPN
+580,Communication Services,DLX
+581,Communication Services,DOYU
+582,Communication Services,EA
+583,Communication Services,ECP.PA
+584,Communication Services,EDUC
+585,Communication Services,EEX
+586,Communication Services,EMMS
+587,Communication Services,ENT
+588,Communication Services,EROS
+589,Communication Services,ETM
+590,Communication Services,EVC
+591,Communication Services,EVER
+592,Communication Services,FB
+593,Communication Services,FENG
+594,Communication Services,FLNT
+595,Communication Services,FOXA
+596,Communication Services,FOX
+597,Communication Services,FSNN
+598,Communication Services,FTRPR
+599,Communication Services,FTR
+600,Communication Services,FVRR
+601,Communication Services,GAIA
+602,Communication Services,GAM.PA
+603,Communication Services,GCI
+604,Communication Services,GCT.TO
+605,Communication Services,GIGM
+606,Communication Services,GLIBA
+607,Communication Services,GLIBP
+608,Communication Services,GLOW
+609,Communication Services,GLUU
+610,Communication Services,GNUS
+611,Communication Services,GOGO
+612,Communication Services,GOOGL
+613,Communication Services,GOOG
+614,Communication Services,GREV.PA
+615,Communication Services,GRUB
+616,Communication Services,GRVY
+617,Communication Services,GSAT
+618,Communication Services,GTN-A
+619,Communication Services,GTN
+620,Communication Services,GTT
+621,Communication Services,GVC.TO
+622,Communication Services,HCHC
+623,Communication Services,HCO.PA
+624,Communication Services,HCOM
+625,Communication Services,HHS
+626,Communication Services,HMTV
+627,Communication Services,HOP.PA
+628,Communication Services,HUYA
+629,Communication Services,IAC
+630,Communication Services,IAM.PA
+631,Communication Services,ICLK
+632,Communication Services,IDCC
+633,Communication Services,IDT
+634,Communication Services,IHRT
+635,Communication Services,ILD.PA
+636,Communication Services,IMAX
+637,Communication Services,IMTE
+638,Communication Services,INUV
+639,Communication Services,INWK
+640,Communication Services,IPAS
+641,Communication Services,IPG
+642,Communication Services,IPR.LS
+643,Communication Services,IPS.PA
+644,Communication Services,IQ
+645,Communication Services,IRDMB
+646,Communication Services,IRDM
+647,Communication Services,ISIG
+648,Communication Services,IZEA
+649,Communication Services,JFIN
+650,Communication Services,JW-A
+651,Communication Services,JW-B
+652,Communication Services,KIN.BR
+653,Communication Services,KLR
+654,Communication Services,KPN.AS
+655,Communication Services,KRKR
+656,Communication Services,KT
+657,Communication Services,LBRDA
+658,Communication Services,LBRDK
+659,Communication Services,LBTYA
+660,Communication Services,LBTYB
+661,Communication Services,LBTYK
+662,Communication Services,LEAF
+663,Communication Services,LEE
+664,Communication Services,LGF-A
+665,Communication Services,LGF-B
+666,Communication Services,LILAK
+667,Communication Services,LILA
+668,Communication Services,LIVX
+669,Communication Services,LIZI
+670,Communication Services,LKCO
+671,Communication Services,LN
+672,Communication Services,LOCAL.PA
+673,Communication Services,LOV
+674,Communication Services,LSXMA
+675,Communication Services,LSXMB
+676,Communication Services,LSXMK
+677,Communication Services,LTRPA
+678,Communication Services,LTRPB
+679,Communication Services,LYV
+680,Communication Services,MAGIS.PA
+681,Communication Services,MARK
+682,Communication Services,MBT
+683,Communication Services,MCHX
+684,Communication Services,MCP.LS
+685,Communication Services,MCS
+686,Communication Services,MDCA
+687,Communication Services,MDF.TO
+688,Communication Services,MDIA
+689,Communication Services,MDP
+690,Communication Services,MDW.PA
+691,Communication Services,MEET
+692,Communication Services,MLEDS.PA
+693,Communication Services,MLHPE.PA
+694,Communication Services,MLIML.PA
+695,Communication Services,MLIMP.PA
+696,Communication Services,MLNEO.PA
+697,Communication Services,MLVST.PA
+698,Communication Services,MLWEA.PA
+699,Communication Services,MMT.PA
+700,Communication Services,MOMO
+701,Communication Services,MOXC
+702,Communication Services,MSGE
+703,Communication Services,MSGN
+704,Communication Services,MSGS
+705,Communication Services,MTCH
+706,Communication Services,MTSL
+707,Communication Services,NCMI
+708,Communication Services,NCTY
+709,Communication Services,NFLX
+710,Communication Services,NIHD
+711,Communication Services,NOS.LS
+712,Communication Services,NRG.PA
+713,Communication Services,NTES
+714,Communication Services,NTN
+715,Communication Services,NWSA
+716,Communication Services,NWS
+717,Communication Services,NXST
+718,Communication Services,NYT
+719,Communication Services,OBEL.BR
+720,Communication Services,OMC
+721,Communication Services,OOMA
+722,Communication Services,ORA.PA
+723,Communication Services,ORAN
+724,Communication Services,ORBC
+725,Communication Services,OTEL
+726,Communication Services,PCOM
+727,Communication Services,PERI
+728,Communication Services,PHI
+729,Communication Services,PHR.LS
+730,Communication Services,PINS
+731,Communication Services,PRC.PA
+732,Communication Services,PROX.BR
+733,Communication Services,PSO
+734,Communication Services,PTNR
+735,Communication Services,PTS.TO
+736,Communication Services,PUB.PA
+737,Communication Services,QNST
+738,Communication Services,QTT
+739,Communication Services,QUOT
+740,Communication Services,RBBN
+741,Communication Services,RCI
+742,Communication Services,RDIB
+743,Communication Services,RDI
+744,Communication Services,RELX
+745,Communication Services,REN.AS
+746,Communication Services,RNWK
+747,Communication Services,ROKU
+748,Communication Services,ROU.BR
+749,Communication Services,SALM
+750,Communication Services,SBGI
+751,Communication Services,SCHL
+752,Communication Services,SCOR
+753,Communication Services,SCPL
+754,Communication Services,SESG.PA
+755,Communication Services,SE
+756,Communication Services,SGA
+757,Communication Services,SHEN
+758,Communication Services,SIFY
+759,Communication Services,SINA
+760,Communication Services,SIRI
+761,Communication Services,SITO
+762,Communication Services,SJR
+763,Communication Services,SKM
+764,Communication Services,SLGG
+765,Communication Services,SNAP
+766,Communication Services,SOGO
+767,Communication Services,SOHU
+768,Communication Services,SPI.PA
+769,Communication Services,SPOK
+770,Communication Services,SPOT
+771,Communication Services,SRAX
+772,Communication Services,SSP
+773,Communication Services,SSTK
+774,Communication Services,S
+775,Communication Services,T.TO
+776,Communication Services,TCH.PA
+777,Communication Services,TC
+778,Communication Services,TDA
+779,Communication Services,TDS
+780,Communication Services,TEF
+781,Communication Services,TEO
+782,Communication Services,TEUM
+783,Communication Services,TFI.PA
+784,Communication Services,TGNA
+785,Communication Services,TGO.TO
+786,Communication Services,TIGO
+787,Communication Services,TKC
+788,Communication Services,TKWY.AS
+789,Communication Services,TLK
+790,Communication Services,TME
+791,Communication Services,TMUS
+792,Communication Services,TNET.BR
+793,Communication Services,TPCO
+794,Communication Services,TRVG
+795,Communication Services,TSQ
+796,Communication Services,TSU
+797,Communication Services,TTGT
+798,Communication Services,TTWO
+799,Communication Services,TU
+800,Communication Services,TV
+801,Communication Services,TWLO
+802,Communication Services,TWTR
+803,Communication Services,T
+804,Communication Services,UBI.PA
+805,Communication Services,UCL
+806,Communication Services,UONEK
+807,Communication Services,UONE
+808,Communication Services,USM
+809,Communication Services,UXIN
+810,Communication Services,UZA
+811,Communication Services,VEON.AS
+812,Communication Services,VEON
+813,Communication Services,VG
+814,Communication Services,VIACA
+815,Communication Services,VIAC
+816,Communication Services,VIV.PA
+817,Communication Services,VIV
+818,Communication Services,VOD
+819,Communication Services,VZA
+820,Communication Services,VZ
+821,Communication Services,WIFI
+822,Communication Services,WIMI
+823,Communication Services,WKL.AS
+824,Communication Services,WMG
+825,Communication Services,WOW
+826,Communication Services,WPP
+827,Communication Services,WSG
+828,Communication Services,WUBA
+829,Communication Services,WWE
+830,Communication Services,XIL.PA
+831,Communication Services,XNET
+832,Communication Services,Y.TO
+833,Communication Services,YELP
+834,Communication Services,YNDX
+835,Communication Services,YVR
+836,Communication Services,YY
+837,Communication Services,ZG
+838,Communication Services,ZM
+839,Communication Services,ZNGA
+840,Communication Services,Z
+841,Consumer Cyclical,AAP
+842,Consumer Cyclical,ABEO.PA
+843,Consumer Cyclical,ABG
+844,Consumer Cyclical,AC.PA
+845,Consumer Cyclical,ACCEL.AS
+846,Consumer Cyclical,ACEL
+847,Consumer Cyclical,ACQ.TO
+848,Consumer Cyclical,ADNT
+849,Consumer Cyclical,ADOM
+850,Consumer Cyclical,AEO
+851,Consumer Cyclical,AGS
+852,Consumer Cyclical,AIN
+853,Consumer Cyclical,AJAX.AS
+854,Consumer Cyclical,AKW.PA
+855,Consumer Cyclical,ALBI.PA
+856,Consumer Cyclical,ALBOU.PA
+857,Consumer Cyclical,ALCES.PA
+858,Consumer Cyclical,ALCYB.PA
+859,Consumer Cyclical,ALDAR.PA
+860,Consumer Cyclical,ALDBL.PA
+861,Consumer Cyclical,ALDEL.PA
+862,Consumer Cyclical,ALDEV.PA
+863,Consumer Cyclical,ALEMV.PA
+864,Consumer Cyclical,ALFBA.PA
+865,Consumer Cyclical,ALFPC.PA
+866,Consumer Cyclical,ALGAU.PA
+867,Consumer Cyclical,ALGEV.PA
+868,Consumer Cyclical,ALGIL.PA
+869,Consumer Cyclical,ALLDL.PA
+870,Consumer Cyclical,ALLEX.PA
+871,Consumer Cyclical,ALLHB.PA
+872,Consumer Cyclical,ALMLB.PA
+873,Consumer Cyclical,ALMND.PA
+874,Consumer Cyclical,ALNLF.PA
+875,Consumer Cyclical,ALPAR.PA
+876,Consumer Cyclical,ALPDX.PA
+877,Consumer Cyclical,ALPHS.PA
+878,Consumer Cyclical,ALSN
+879,Consumer Cyclical,ALTAN.PA
+880,Consumer Cyclical,ALU10.PA
+881,Consumer Cyclical,ALUNT.PA
+882,Consumer Cyclical,ALUPG.PA
+883,Consumer Cyclical,ALVDM.PA
+884,Consumer Cyclical,ALVIA.PA
+885,Consumer Cyclical,ALVU.PA
+886,Consumer Cyclical,ALV
+887,Consumer Cyclical,ALX.AS
+888,Consumer Cyclical,AMCR
+889,Consumer Cyclical,AMWD
+890,Consumer Cyclical,AMZN
+891,Consumer Cyclical,ANF
+892,Consumer Cyclical,ANTA.PA
+893,Consumer Cyclical,AN
+894,Consumer Cyclical,APEX
+895,Consumer Cyclical,APRN
+896,Consumer Cyclical,APTV
+897,Consumer Cyclical,ARCO
+898,Consumer Cyclical,ARD
+899,Consumer Cyclical,ARKR
+900,Consumer Cyclical,ARMK
+901,Consumer Cyclical,ASNA
+902,Consumer Cyclical,ASP.PA
+903,Consumer Cyclical,ATI.PA
+904,Consumer Cyclical,ATR
+905,Consumer Cyclical,ATV
+906,Consumer Cyclical,ATZ.TO
+907,Consumer Cyclical,AUGR.PA
+908,Consumer Cyclical,AVHI
+909,Consumer Cyclical,AXL
+910,Consumer Cyclical,AYRO
+911,Consumer Cyclical,AZO
+912,Consumer Cyclical,BABA
+913,Consumer Cyclical,BAIN.PA
+914,Consumer Cyclical,BALTA.BR
+915,Consumer Cyclical,BBBY
+916,Consumer Cyclical,BBED.AS
+917,Consumer Cyclical,BBQ
+918,Consumer Cyclical,BBRG
+919,Consumer Cyclical,BBW
+920,Consumer Cyclical,BBX
+921,Consumer Cyclical,BBY
+922,Consumer Cyclical,BCI.TO
+923,Consumer Cyclical,BC
+924,Consumer Cyclical,BDL
+925,Consumer Cyclical,BELI.PA
+926,Consumer Cyclical,BEL
+927,Consumer Cyclical,BEN.PA
+928,Consumer Cyclical,BERY
+929,Consumer Cyclical,BFAM
+930,Consumer Cyclical,BFIT.AS
+931,Consumer Cyclical,BGFV
+932,Consumer Cyclical,BGI
+933,Consumer Cyclical,BH-A
+934,Consumer Cyclical,BH
+935,Consumer Cyclical,BID
+936,Consumer Cyclical,BJRI
+937,Consumer Cyclical,BKE
+938,Consumer Cyclical,BKNG
+939,Consumer Cyclical,BKS
+940,Consumer Cyclical,BLBD
+941,Consumer Cyclical,BLL
+942,Consumer Cyclical,BLMN
+943,Consumer Cyclical,BLNK
+944,Consumer Cyclical,BMS
+945,Consumer Cyclical,BNED
+946,Consumer Cyclical,BOJA
+947,Consumer Cyclical,BOOT
+948,Consumer Cyclical,BOY.TO
+949,Consumer Cyclical,BSET
+950,Consumer Cyclical,BTN
+951,Consumer Cyclical,BUI.PA
+952,Consumer Cyclical,BUR.PA
+953,Consumer Cyclical,BURG
+954,Consumer Cyclical,BURL
+955,Consumer Cyclical,BWA
+956,Consumer Cyclical,BXG
+957,Consumer Cyclical,BYD
+958,Consumer Cyclical,BZH
+959,Consumer Cyclical,BZUN
+960,Consumer Cyclical,CAAS
+961,Consumer Cyclical,CAFO.PA
+962,Consumer Cyclical,CAKE
+963,Consumer Cyclical,CALI
+964,Consumer Cyclical,CAL
+965,Consumer Cyclical,CARS
+966,Consumer Cyclical,CATG.PA
+967,Consumer Cyclical,CATO
+968,Consumer Cyclical,CBD
+969,Consumer Cyclical,CBK
+970,Consumer Cyclical,CBRL
+971,Consumer Cyclical,CBS
+972,Consumer Cyclical,CCK
+973,Consumer Cyclical,CCL
+974,Consumer Cyclical,CCS
+975,Consumer Cyclical,CCZ
+976,Consumer Cyclical,CDA.PA
+977,Consumer Cyclical,CDI.PA
+978,Consumer Cyclical,CDTI
+979,Consumer Cyclical,CETV
+980,Consumer Cyclical,CHDN
+981,Consumer Cyclical,CHH
+982,Consumer Cyclical,CHSR.PA
+983,Consumer Cyclical,CHS
+984,Consumer Cyclical,CHUY
+985,Consumer Cyclical,CHWY
+986,Consumer Cyclical,CLAR
+987,Consumer Cyclical,CLUB
+988,Consumer Cyclical,CMG
+989,Consumer Cyclical,CNNE
+990,Consumer Cyclical,CNTY
+991,Consumer Cyclical,CNV.PA
+992,Consumer Cyclical,COLM
+993,Consumer Cyclical,CONN
+994,Consumer Cyclical,CPHC
+995,Consumer Cyclical,CPRI
+996,Consumer Cyclical,CPS
+997,Consumer Cyclical,CRI.PA
+998,Consumer Cyclical,CRI
+999,Consumer Cyclical,CRMT
+1000,Consumer Cyclical,CROX
+1001,Consumer Cyclical,CRWS
+1002,Consumer Cyclical,CSS
+1003,Consumer Cyclical,CSV
+1004,Consumer Cyclical,CTB
+1005,Consumer Cyclical,CTHR
+1006,Consumer Cyclical,CTIB
+1007,Consumer Cyclical,CTRC
+1008,Consumer Cyclical,CTRN
+1009,Consumer Cyclical,CUK
+1010,Consumer Cyclical,CULP
+1011,Consumer Cyclical,CVCO
+1012,Consumer Cyclical,CVGI
+1013,Consumer Cyclical,CVNA
+1014,Consumer Cyclical,CWH
+1015,Consumer Cyclical,CXDC
+1016,Consumer Cyclical,CZR
+1017,Consumer Cyclical,DADA
+1018,Consumer Cyclical,DAN
+1019,Consumer Cyclical,DBI
+1020,Consumer Cyclical,DDE
+1021,Consumer Cyclical,DDS
+1022,Consumer Cyclical,DDT
+1023,Consumer Cyclical,DECK
+1024,Consumer Cyclical,DENN
+1025,Consumer Cyclical,DESP
+1026,Consumer Cyclical,DEST
+1027,Consumer Cyclical,DFRG
+1028,Consumer Cyclical,DGSE
+1029,Consumer Cyclical,DHI
+1030,Consumer Cyclical,DIE.BR
+1031,Consumer Cyclical,DIN
+1032,Consumer Cyclical,DIS
+1033,Consumer Cyclical,DKNG
+1034,Consumer Cyclical,DKS
+1035,Consumer Cyclical,DLA
+1036,Consumer Cyclical,DLPH
+1037,Consumer Cyclical,DLTA.PA
+1038,Consumer Cyclical,DLTH
+1039,Consumer Cyclical,DNKN
+1040,Consumer Cyclical,DOO.TO
+1041,Consumer Cyclical,DOOO
+1042,Consumer Cyclical,DORM
+1043,Consumer Cyclical,DPT.PA
+1044,Consumer Cyclical,DPZ
+1045,Consumer Cyclical,DRI
+1046,Consumer Cyclical,DSWL
+1047,Consumer Cyclical,DS
+1048,Consumer Cyclical,DVD
+1049,Consumer Cyclical,DXLG
+1050,Consumer Cyclical,DXYN
+1051,Consumer Cyclical,EAT
+1052,Consumer Cyclical,EBAYL
+1053,Consumer Cyclical,EBAY
+1054,Consumer Cyclical,EDNT
+1055,Consumer Cyclical,EFOI
+1056,Consumer Cyclical,ELA
+1057,Consumer Cyclical,ELIOR.PA
+1058,Consumer Cyclical,ELY
+1059,Consumer Cyclical,EO.PA
+1060,Consumer Cyclical,ERI
+1061,Consumer Cyclical,ESCA
+1062,Consumer Cyclical,ESON.LS
+1063,Consumer Cyclical,ETH
+1064,Consumer Cyclical,ETSY
+1065,Consumer Cyclical,EVK
+1066,Consumer Cyclical,EVRI
+1067,Consumer Cyclical,EXPE
+1068,Consumer Cyclical,EXPR
+1069,Consumer Cyclical,EYE
+1070,Consumer Cyclical,FAST.AS
+1071,Consumer Cyclical,FAT
+1072,Consumer Cyclical,FBHS
+1073,Consumer Cyclical,FCAU
+1074,Consumer Cyclical,FCMC.PA
+1075,Consumer Cyclical,FCP.LS
+1076,Consumer Cyclical,FDJ.PA
+1077,Consumer Cyclical,FFHL
+1078,Consumer Cyclical,FGP
+1079,Consumer Cyclical,FINL
+1080,Consumer Cyclical,FIVE
+1081,Consumer Cyclical,FLL
+1082,Consumer Cyclical,FLO.PA
+1083,Consumer Cyclical,FLWS
+1084,Consumer Cyclical,FLXS
+1085,Consumer Cyclical,FL
+1086,Consumer Cyclical,FNAC.PA
+1087,Consumer Cyclical,FND
+1088,Consumer Cyclical,FNG.BR
+1089,Consumer Cyclical,FNKO
+1090,Consumer Cyclical,FOGO
+1091,Consumer Cyclical,FORD
+1092,Consumer Cyclical,FORK
+1093,Consumer Cyclical,FOSL
+1094,Consumer Cyclical,FOXF
+1095,Consumer Cyclical,FR.PA
+1096,Consumer Cyclical,FRAN
+1097,Consumer Cyclical,FRGI
+1098,Consumer Cyclical,FRG
+1099,Consumer Cyclical,FRSH
+1100,Consumer Cyclical,FTCH
+1101,Consumer Cyclical,FTDR
+1102,Consumer Cyclical,FUN
+1103,Consumer Cyclical,FUV
+1104,Consumer Cyclical,FWONA
+1105,Consumer Cyclical,F
+1106,Consumer Cyclical,GAN
+1107,Consumer Cyclical,GBT.TO
+1108,Consumer Cyclical,GC.TO
+1109,Consumer Cyclical,GCO
+1110,Consumer Cyclical,GDEN
+1111,Consumer Cyclical,GEF-B
+1112,Consumer Cyclical,GEF
+1113,Consumer Cyclical,GES
+1114,Consumer Cyclical,GH.TO
+1115,Consumer Cyclical,GHG
+1116,Consumer Cyclical,GIII
+1117,Consumer Cyclical,GIL.TO
+1118,Consumer Cyclical,GIL
+1119,Consumer Cyclical,GJAJ.PA
+1120,Consumer Cyclical,GMBL
+1121,Consumer Cyclical,GME
+1122,Consumer Cyclical,GM
+1123,Consumer Cyclical,GNTX
+1124,Consumer Cyclical,GOLF
+1125,Consumer Cyclical,GOOS
+1126,Consumer Cyclical,GPC
+1127,Consumer Cyclical,GPIC
+1128,Consumer Cyclical,GPI
+1129,Consumer Cyclical,GPK
+1130,Consumer Cyclical,GPS
+1131,Consumer Cyclical,GRBK
+1132,Consumer Cyclical,GRIL
+1133,Consumer Cyclical,GRWG
+1134,Consumer Cyclical,GTIM
+1135,Consumer Cyclical,GTX
+1136,Consumer Cyclical,GT
+1137,Consumer Cyclical,GVNV.AS
+1138,Consumer Cyclical,HABT
+1139,Consumer Cyclical,HAS
+1140,Consumer Cyclical,HBI
+1141,Consumer Cyclical,HDG.AS
+1142,Consumer Cyclical,HDP.PA
+1143,Consumer Cyclical,HD
+1144,Consumer Cyclical,HEXA.PA
+1145,Consumer Cyclical,HGV
+1146,Consumer Cyclical,HIBB
+1147,Consumer Cyclical,HLT
+1148,Consumer Cyclical,HMC
+1149,Consumer Cyclical,HOFT
+1150,Consumer Cyclical,HOG
+1151,Consumer Cyclical,HOME
+1152,Consumer Cyclical,HOVNP
+1153,Consumer Cyclical,HOV
+1154,Consumer Cyclical,HRB
+1155,Consumer Cyclical,HTHT
+1156,Consumer Cyclical,HUD
+1157,Consumer Cyclical,HVT
+1158,Consumer Cyclical,HZN
+1159,Consumer Cyclical,HZO
+1160,Consumer Cyclical,H
+1161,Consumer Cyclical,IBS.LS
+1162,Consumer Cyclical,ICE.TO
+1163,Consumer Cyclical,ICON
+1164,Consumer Cyclical,IDG.TO
+1165,Consumer Cyclical,IFA.TO
+1166,Consumer Cyclical,IGT
+1167,Consumer Cyclical,IHG
+1168,Consumer Cyclical,ILG
+1169,Consumer Cyclical,IMBI
+1170,Consumer Cyclical,INQ.TO
+1171,Consumer Cyclical,INSE
+1172,Consumer Cyclical,INTG
+1173,Consumer Cyclical,IP
+1174,Consumer Cyclical,ISCA
+1175,Consumer Cyclical,ITP.TO
+1176,Consumer Cyclical,ITXT.PA
+1177,Consumer Cyclical,JACK
+1178,Consumer Cyclical,JAKK
+1179,Consumer Cyclical,JAX
+1180,Consumer Cyclical,JCP
+1181,Consumer Cyclical,JD
+1182,Consumer Cyclical,JILL
+1183,Consumer Cyclical,JMBA
+1184,Consumer Cyclical,JMEI
+1185,Consumer Cyclical,JMIA
+1186,Consumer Cyclical,JMU
+1187,Consumer Cyclical,JOUT
+1188,Consumer Cyclical,JRSH
+1189,Consumer Cyclical,JWN
+1190,Consumer Cyclical,KAR
+1191,Consumer Cyclical,KAZI.PA
+1192,Consumer Cyclical,KBAL
+1193,Consumer Cyclical,KBH
+1194,Consumer Cyclical,KBSF
+1195,Consumer Cyclical,KENDR.AS
+1196,Consumer Cyclical,KEQU
+1197,Consumer Cyclical,KER.PA
+1198,Consumer Cyclical,KFS
+1199,Consumer Cyclical,KGJI
+1200,Consumer Cyclical,KIRK
+1201,Consumer Cyclical,KMX
+1202,Consumer Cyclical,KNDI
+1203,Consumer Cyclical,KOF.PA
+1204,Consumer Cyclical,KONA
+1205,Consumer Cyclical,KRUS
+1206,Consumer Cyclical,KSS
+1207,Consumer Cyclical,KTB
+1208,Consumer Cyclical,LAD
+1209,Consumer Cyclical,LAF.PA
+1210,Consumer Cyclical,LAKE
+1211,Consumer Cyclical,LAZY
+1212,Consumer Cyclical,LB
+1213,Consumer Cyclical,LCII
+1214,Consumer Cyclical,LCUT
+1215,Consumer Cyclical,LEA
+1216,Consumer Cyclical,LEBL.PA
+1217,Consumer Cyclical,LEGH
+1218,Consumer Cyclical,LEG
+1219,Consumer Cyclical,LEN
+1220,Consumer Cyclical,LEVI
+1221,Consumer Cyclical,LE
+1222,Consumer Cyclical,LGIH
+1223,Consumer Cyclical,LINDW
+1224,Consumer Cyclical,LIND
+1225,Consumer Cyclical,LITB
+1226,Consumer Cyclical,LIVE
+1227,Consumer Cyclical,LKQ
+1228,Consumer Cyclical,LL
+1229,Consumer Cyclical,LNF.TO
+1230,Consumer Cyclical,LNR.TO
+1231,Consumer Cyclical,LOCO
+1232,Consumer Cyclical,LOVE
+1233,Consumer Cyclical,LOW
+1234,Consumer Cyclical,LQDT
+1235,Consumer Cyclical,LUB
+1236,Consumer Cyclical,LULU
+1237,Consumer Cyclical,LVS
+1238,Consumer Cyclical,LZB
+1239,Consumer Cyclical,MANU
+1240,Consumer Cyclical,MAR
+1241,Consumer Cyclical,MAT
+1242,Consumer Cyclical,MBUU
+1243,Consumer Cyclical,MC.PA
+1244,Consumer Cyclical,MCD
+1245,Consumer Cyclical,MCFT
+1246,Consumer Cyclical,MCRI
+1247,Consumer Cyclical,MDC
+1248,Consumer Cyclical,MDM.PA
+1249,Consumer Cyclical,MED
+1250,Consumer Cyclical,MELI
+1251,Consumer Cyclical,MG.TO
+1252,Consumer Cyclical,MGA
+1253,Consumer Cyclical,MGM
+1254,Consumer Cyclical,MGNT.ME
+1255,Consumer Cyclical,MHK
+1256,Consumer Cyclical,MHO
+1257,Consumer Cyclical,MIK
+1258,Consumer Cyclical,MKGI
+1259,Consumer Cyclical,ML.PA
+1260,Consumer Cyclical,MLCMB.PA
+1261,Consumer Cyclical,MLCO
+1262,Consumer Cyclical,MLEAV.PA
+1263,Consumer Cyclical,MLEVE.PA
+1264,Consumer Cyclical,MLHOT.PA
+1265,Consumer Cyclical,MLMAI.PA
+1266,Consumer Cyclical,MLONE.PA
+1267,Consumer Cyclical,MLR
+1268,Consumer Cyclical,MLSIM.PA
+1269,Consumer Cyclical,MLSML.PA
+1270,Consumer Cyclical,MLSTR.PA
+1271,Consumer Cyclical,MLTBM.PA
+1272,Consumer Cyclical,MLTRO.PA
+1273,Consumer Cyclical,MMB.PA
+1274,Consumer Cyclical,MMYT
+1275,Consumer Cyclical,MNI
+1276,Consumer Cyclical,MNRO
+1277,Consumer Cyclical,MOD
+1278,Consumer Cyclical,MOGU
+1279,Consumer Cyclical,MOHO
+1280,Consumer Cyclical,MOV
+1281,Consumer Cyclical,MPAA
+1282,Consumer Cyclical,MPX
+1283,Consumer Cyclical,MRE.TO
+1284,Consumer Cyclical,MSC
+1285,Consumer Cyclical,MSG
+1286,Consumer Cyclical,MTH
+1287,Consumer Cyclical,MTN
+1288,Consumer Cyclical,MTOR
+1289,Consumer Cyclical,MTY.TO
+1290,Consumer Cyclical,MUSA
+1291,Consumer Cyclical,MYE
+1292,Consumer Cyclical,MYT
+1293,Consumer Cyclical,M
+1294,Consumer Cyclical,NAKD
+1295,Consumer Cyclical,NATH
+1296,Consumer Cyclical,NAVYA.PA
+1297,Consumer Cyclical,NCLH
+1298,Consumer Cyclical,NDLS
+1299,Consumer Cyclical,NFI.TO
+1300,Consumer Cyclical,NHTC
+1301,Consumer Cyclical,NIO
+1302,Consumer Cyclical,NIU
+1303,Consumer Cyclical,NKE
+1304,Consumer Cyclical,NKLA
+1305,Consumer Cyclical,NLS
+1306,Consumer Cyclical,NR21.PA
+1307,Consumer Cyclical,NTRI
+1308,Consumer Cyclical,NTZ
+1309,Consumer Cyclical,NVFY
+1310,Consumer Cyclical,NVR
+1311,Consumer Cyclical,NWGI
+1312,Consumer Cyclical,NWHM
+1313,Consumer Cyclical,NYNY
+1314,Consumer Cyclical,ODP
+1315,Consumer Cyclical,OI
+1316,Consumer Cyclical,OLG.PA
+1317,Consumer Cyclical,ONEW
+1318,Consumer Cyclical,ORLY
+1319,Consumer Cyclical,OSTK
+1320,Consumer Cyclical,OSW
+1321,Consumer Cyclical,OXM
+1322,Consumer Cyclical,PACK
+1323,Consumer Cyclical,PAG
+1324,Consumer Cyclical,PARP.PA
+1325,Consumer Cyclical,PBL.TO
+1326,Consumer Cyclical,PBPB
+1327,Consumer Cyclical,PCMI
+1328,Consumer Cyclical,PDD
+1329,Consumer Cyclical,PENN
+1330,Consumer Cyclical,PERY
+1331,Consumer Cyclical,PHM
+1332,Consumer Cyclical,PII
+1333,Consumer Cyclical,PIR
+1334,Consumer Cyclical,PKG
+1335,Consumer Cyclical,PLAY
+1336,Consumer Cyclical,PLC.TO
+1337,Consumer Cyclical,PLCE
+1338,Consumer Cyclical,PLNT
+1339,Consumer Cyclical,PLOW
+1340,Consumer Cyclical,PLYA
+1341,Consumer Cyclical,PNK
+1342,Consumer Cyclical,POM.PA
+1343,Consumer Cyclical,POOL
+1344,Consumer Cyclical,PRPL
+1345,Consumer Cyclical,PRTS
+1346,Consumer Cyclical,PRTY
+1347,Consumer Cyclical,PSAT.PA
+1348,Consumer Cyclical,PSB.PA
+1349,Consumer Cyclical,PTON
+1350,Consumer Cyclical,PVH
+1351,Consumer Cyclical,PVL.PA
+1352,Consumer Cyclical,PZA.TO
+1353,Consumer Cyclical,PZZA
+1354,Consumer Cyclical,P
+1355,Consumer Cyclical,QRTEA
+1356,Consumer Cyclical,QRTEB
+1357,Consumer Cyclical,QSR.TO
+1358,Consumer Cyclical,QSR
+1359,Consumer Cyclical,RACE
+1360,Consumer Cyclical,RAVE
+1361,Consumer Cyclical,RBO.PA
+1362,Consumer Cyclical,RBZ
+1363,Consumer Cyclical,RCH.TO
+1364,Consumer Cyclical,RCKY
+1365,Consumer Cyclical,RCL
+1366,Consumer Cyclical,REAL
+1367,Consumer Cyclical,RENN
+1368,Consumer Cyclical,RES.BR
+1369,Consumer Cyclical,RGS
+1370,Consumer Cyclical,RH
+1371,Consumer Cyclical,RICK
+1372,Consumer Cyclical,RLH
+1373,Consumer Cyclical,RL
+1374,Consumer Cyclical,RMBL
+1375,Consumer Cyclical,RMS.PA
+1376,Consumer Cyclical,RNO.PA
+1377,Consumer Cyclical,ROL
+1378,Consumer Cyclical,ROST
+1379,Consumer Cyclical,RRGB
+1380,Consumer Cyclical,RRR
+1381,Consumer Cyclical,RTW
+1382,Consumer Cyclical,RUHN
+1383,Consumer Cyclical,RUSHA
+1384,Consumer Cyclical,RUSHB
+1385,Consumer Cyclical,RUTH
+1386,Consumer Cyclical,RVLV
+1387,Consumer Cyclical,SAH
+1388,Consumer Cyclical,SAUC
+1389,Consumer Cyclical,SBH
+1390,Consumer Cyclical,SBUX
+1391,Consumer Cyclical,SCB.LS
+1392,Consumer Cyclical,SCI
+1393,Consumer Cyclical,SCP.LS
+1394,Consumer Cyclical,SCT.LS
+1395,Consumer Cyclical,SCU.TO
+1396,Consumer Cyclical,SCVL
+1397,Consumer Cyclical,SEAS
+1398,Consumer Cyclical,SECO
+1399,Consumer Cyclical,SEE
+1400,Consumer Cyclical,SERV
+1401,Consumer Cyclical,SFCA.PA
+1402,Consumer Cyclical,SFIX
+1403,Consumer Cyclical,SGC
+1404,Consumer Cyclical,SGMS
+1405,Consumer Cyclical,SHAK
+1406,Consumer Cyclical,SHLD
+1407,Consumer Cyclical,SHLO
+1408,Consumer Cyclical,SHOO
+1409,Consumer Cyclical,SHOS
+1410,Consumer Cyclical,SIC
+1411,Consumer Cyclical,SIG
+1412,Consumer Cyclical,SIOE.BR
+1413,Consumer Cyclical,SIX
+1414,Consumer Cyclical,SK.PA
+1415,Consumer Cyclical,SKIS
+1416,Consumer Cyclical,SKX
+1417,Consumer Cyclical,SKY
+1418,Consumer Cyclical,SLBEN.LS
+1419,Consumer Cyclical,SLGN
+1420,Consumer Cyclical,SMAR.BR
+1421,Consumer Cyclical,SMCP.PA
+1422,Consumer Cyclical,SMP
+1423,Consumer Cyclical,SMRT
+1424,Consumer Cyclical,SNBR
+1425,Consumer Cyclical,SNOW.AS
+1426,Consumer Cyclical,SO.PA
+1427,Consumer Cyclical,SOLO
+1428,Consumer Cyclical,SON.LS
+1429,Consumer Cyclical,SONC
+1430,Consumer Cyclical,SON
+1431,Consumer Cyclical,SORL
+1432,Consumer Cyclical,SPWH
+1433,Consumer Cyclical,SQBG
+1434,Consumer Cyclical,SRI
+1435,Consumer Cyclical,SRP.PA
+1436,Consumer Cyclical,SSI
+1437,Consumer Cyclical,STAY
+1438,Consumer Cyclical,STKS
+1439,Consumer Cyclical,STRN.AS
+1440,Consumer Cyclical,STRT
+1441,Consumer Cyclical,SUP
+1442,Consumer Cyclical,SXP.TO
+1443,Consumer Cyclical,SYPR
+1444,Consumer Cyclical,TACO
+1445,Consumer Cyclical,TAST
+1446,Consumer Cyclical,TAX
+1447,Consumer Cyclical,TA
+1448,Consumer Cyclical,TBIRD.AS
+1449,Consumer Cyclical,TBL.TO
+1450,Consumer Cyclical,TCOM
+1451,Consumer Cyclical,TCS
+1452,Consumer Cyclical,TEN
+1453,Consumer Cyclical,TFF.PA
+1454,Consumer Cyclical,THO
+1455,Consumer Cyclical,THRM
+1456,Consumer Cyclical,TIF
+1457,Consumer Cyclical,TILE
+1458,Consumer Cyclical,TJX
+1459,Consumer Cyclical,TKAT
+1460,Consumer Cyclical,TLF
+1461,Consumer Cyclical,TLRD
+1462,Consumer Cyclical,TLYS
+1463,Consumer Cyclical,TMHC
+1464,Consumer Cyclical,TM
+1465,Consumer Cyclical,TOL
+1466,Consumer Cyclical,TOUR
+1467,Consumer Cyclical,TOWR
+1468,Consumer Cyclical,TOY.TO
+1469,Consumer Cyclical,TPH
+1470,Consumer Cyclical,TPR
+1471,Consumer Cyclical,TPX
+1472,Consumer Cyclical,TRCO
+1473,Consumer Cyclical,TRI.PA
+1474,Consumer Cyclical,TRIP
+1475,Consumer Cyclical,TRK
+1476,Consumer Cyclical,TRWH
+1477,Consumer Cyclical,TRZ.TO
+1478,Consumer Cyclical,TSCO
+1479,Consumer Cyclical,TSG
+1480,Consumer Cyclical,TSLA
+1481,Consumer Cyclical,TTM
+1482,Consumer Cyclical,TTS
+1483,Consumer Cyclical,TUP
+1484,Consumer Cyclical,TVPT
+1485,Consumer Cyclical,TWC.TO
+1486,Consumer Cyclical,TWMC
+1487,Consumer Cyclical,TWX
+1488,Consumer Cyclical,TXRH
+1489,Consumer Cyclical,UAA
+1490,Consumer Cyclical,UA
+1491,Consumer Cyclical,UFAB
+1492,Consumer Cyclical,UFI
+1493,Consumer Cyclical,UFPT
+1494,Consumer Cyclical,ULTA
+1495,Consumer Cyclical,UNS.TO
+1496,Consumer Cyclical,UQM
+1497,Consumer Cyclical,URBN
+1498,Consumer Cyclical,UWN
+1499,Consumer Cyclical,VAC.PA
+1500,Consumer Cyclical,VAC
+1501,Consumer Cyclical,VAF.LS
+1502,Consumer Cyclical,VAN.BR
+1503,Consumer Cyclical,VC
+1504,Consumer Cyclical,VFC
+1505,Consumer Cyclical,VIAB
+1506,Consumer Cyclical,VIA
+1507,Consumer Cyclical,VIPS
+1508,Consumer Cyclical,VIRC
+1509,Consumer Cyclical,VNCE
+1510,Consumer Cyclical,VNE
+1511,Consumer Cyclical,VOXX
+1512,Consumer Cyclical,VRA
+1513,Consumer Cyclical,VRM
+1514,Consumer Cyclical,VSI
+1515,Consumer Cyclical,VSTO
+1516,Consumer Cyclical,WBAI
+1517,Consumer Cyclical,WBC
+1518,Consumer Cyclical,WEN
+1519,Consumer Cyclical,WEYS
+1520,Consumer Cyclical,WGO
+1521,Consumer Cyclical,WHR
+1522,Consumer Cyclical,WH
+1523,Consumer Cyclical,WINA
+1524,Consumer Cyclical,WING
+1525,Consumer Cyclical,WKHS
+1526,Consumer Cyclical,WLH
+1527,Consumer Cyclical,WPK.TO
+1528,Consumer Cyclical,WPRT.TO
+1529,Consumer Cyclical,WPRT
+1530,Consumer Cyclical,WRK
+1531,Consumer Cyclical,WSM
+1532,Consumer Cyclical,WWW
+1533,Consumer Cyclical,WW
+1534,Consumer Cyclical,WYND
+1535,Consumer Cyclical,WYNN
+1536,Consumer Cyclical,W
+1537,Consumer Cyclical,XELB
+1538,Consumer Cyclical,XOXO
+1539,Consumer Cyclical,XPEL
+1540,Consumer Cyclical,XTC.TO
+1541,Consumer Cyclical,YETI
+1542,Consumer Cyclical,YJ
+1543,Consumer Cyclical,YOGA
+1544,Consumer Cyclical,YTRA
+1545,Consumer Cyclical,YUMC
+1546,Consumer Cyclical,YUM
+1547,Consumer Cyclical,ZAGG
+1548,Consumer Cyclical,ZOES
+1549,Consumer Cyclical,ZUMZ
+1550,Consumer Cyclical,ZZZ.TO
+1551,Consumer Defensive,AACG
+1552,Consumer Defensive,ABCD
+1553,Consumer Defensive,ABEV
+1554,Consumer Defensive,ABI.BR
+1555,Consumer Defensive,ACOMO.AS
+1556,Consumer Defensive,ACU
+1557,Consumer Defensive,AD.AS
+1558,Consumer Defensive,ADM
+1559,Consumer Defensive,ADVI.PA
+1560,Consumer Defensive,AFYA
+1561,Consumer Defensive,AGFS
+1562,Consumer Defensive,AGRO
+1563,Consumer Defensive,AKO-B
+1564,Consumer Defensive,ALAGR.PA
+1565,Consumer Defensive,ALCO
+1566,Consumer Defensive,ALGEM.PA
+1567,Consumer Defensive,ALKKO.PA
+1568,Consumer Defensive,ALLAN.PA
+1569,Consumer Defensive,ALMAS.PA
+1570,Consumer Defensive,ALMER.PA
+1571,Consumer Defensive,ALPHY.PA
+1572,Consumer Defensive,ALPOU.PA
+1573,Consumer Defensive,AMBO
+1574,Consumer Defensive,ANDE
+1575,Consumer Defensive,APEI
+1576,Consumer Defensive,AQB
+1577,Consumer Defensive,ARCE
+1578,Consumer Defensive,ARYN.SW
+1579,Consumer Defensive,ASPU
+1580,Consumer Defensive,ATGE
+1581,Consumer Defensive,AVP
+1582,Consumer Defensive,BB.PA
+1583,Consumer Defensive,BCAM.PA
+1584,Consumer Defensive,BEDU
+1585,Consumer Defensive,BF-B
+1586,Consumer Defensive,BGS
+1587,Consumer Defensive,BG
+1588,Consumer Defensive,BIG
+1589,Consumer Defensive,BJ
+1590,Consumer Defensive,BN.PA
+1591,Consumer Defensive,BOLS.AS
+1592,Consumer Defensive,BON.PA
+1593,Consumer Defensive,BR.TO
+1594,Consumer Defensive,BRBR
+1595,Consumer Defensive,BREW
+1596,Consumer Defensive,BRFS
+1597,Consumer Defensive,BRID
+1598,Consumer Defensive,BSGR.AS
+1599,Consumer Defensive,BTI
+1600,Consumer Defensive,BUD
+1601,Consumer Defensive,BUFF
+1602,Consumer Defensive,BYND
+1603,Consumer Defensive,CA.PA
+1604,Consumer Defensive,CAG
+1605,Consumer Defensive,CALM
+1606,Consumer Defensive,CASY
+1607,Consumer Defensive,CCEP.AS
+1608,Consumer Defensive,CCEP
+1609,Consumer Defensive,CCU
+1610,Consumer Defensive,CECO
+1611,Consumer Defensive,CELH
+1612,Consumer Defensive,CENTA
+1613,Consumer Defensive,CENT
+1614,Consumer Defensive,CHD
+1615,Consumer Defensive,CHEF
+1616,Consumer Defensive,CHGG
+1617,Consumer Defensive,CHSCL
+1618,Consumer Defensive,CHSCM
+1619,Consumer Defensive,CHSCN
+1620,Consumer Defensive,CHSCO
+1621,Consumer Defensive,CHSCP
+1622,Consumer Defensive,CLR.TO
+1623,Consumer Defensive,CLXT
+1624,Consumer Defensive,CLX
+1625,Consumer Defensive,CL
+1626,Consumer Defensive,CO.PA
+1627,Consumer Defensive,COBH.BR
+1628,Consumer Defensive,COE
+1629,Consumer Defensive,COKE
+1630,Consumer Defensive,COLR.BR
+1631,Consumer Defensive,CORE
+1632,Consumer Defensive,COST
+1633,Consumer Defensive,COTY
+1634,Consumer Defensive,COT
+1635,Consumer Defensive,CPA.LS
+1636,Consumer Defensive,CPB
+1637,Consumer Defensive,CPLA
+1638,Consumer Defensive,CRESY
+1639,Consumer Defensive,CRVP
+1640,Consumer Defensive,CVGW
+1641,Consumer Defensive,CYAN
+1642,Consumer Defensive,DAR
+1643,Consumer Defensive,DEO
+1644,Consumer Defensive,DF
+1645,Consumer Defensive,DGE.PA
+1646,Consumer Defensive,DG
+1647,Consumer Defensive,DIT
+1648,Consumer Defensive,DLTR
+1649,Consumer Defensive,DL
+1650,Consumer Defensive,DOGZ
+1651,Consumer Defensive,DOL.TO
+1652,Consumer Defensive,DTEA
+1653,Consumer Defensive,EAST
+1654,Consumer Defensive,EDU
+1655,Consumer Defensive,ELF
+1656,Consumer Defensive,EL
+1657,Consumer Defensive,EPC
+1658,Consumer Defensive,FAMI
+1659,Consumer Defensive,FARM
+1660,Consumer Defensive,FBEL.PA
+1661,Consumer Defensive,FDP
+1662,Consumer Defensive,FEDU
+1663,Consumer Defensive,FFARM.AS
+1664,Consumer Defensive,FIZZ
+1665,Consumer Defensive,FLO
+1666,Consumer Defensive,FMX
+1667,Consumer Defensive,FNTS.PA
+1668,Consumer Defensive,FOU.BR
+1669,Consumer Defensive,FRED
+1670,Consumer Defensive,FRPT
+1671,Consumer Defensive,GCL.TO
+1672,Consumer Defensive,GHC
+1673,Consumer Defensive,GIS
+1674,Consumer Defensive,GLG.TO
+1675,Consumer Defensive,GO
+1676,Consumer Defensive,GPX
+1677,Consumer Defensive,GREEN.BR
+1678,Consumer Defensive,GSX
+1679,Consumer Defensive,HAIN
+1680,Consumer Defensive,HEIA.AS
+1681,Consumer Defensive,HEIO.AS
+1682,Consumer Defensive,HELE
+1683,Consumer Defensive,HFFG
+1684,Consumer Defensive,HLF.TO
+1685,Consumer Defensive,HLF
+1686,Consumer Defensive,HLG
+1687,Consumer Defensive,HMHC
+1688,Consumer Defensive,HRL
+1689,Consumer Defensive,HSY
+1690,Consumer Defensive,IBA
+1691,Consumer Defensive,IFMK
+1692,Consumer Defensive,IMKTA
+1693,Consumer Defensive,INGR
+1694,Consumer Defensive,IPAR
+1695,Consumer Defensive,ITP.PA
+1696,Consumer Defensive,JBOG.PA
+1697,Consumer Defensive,JBSS
+1698,Consumer Defensive,JJSF
+1699,Consumer Defensive,JMT.LS
+1700,Consumer Defensive,JVA
+1701,Consumer Defensive,KDP
+1702,Consumer Defensive,KHC
+1703,Consumer Defensive,KMB
+1704,Consumer Defensive,KOF
+1705,Consumer Defensive,KO
+1706,Consumer Defensive,KPT.TO
+1707,Consumer Defensive,KR
+1708,Consumer Defensive,K
+1709,Consumer Defensive,L.TO
+1710,Consumer Defensive,LAIX
+1711,Consumer Defensive,LANC
+1712,Consumer Defensive,LAUR
+1713,Consumer Defensive,LBY
+1714,Consumer Defensive,LFVN
+1715,Consumer Defensive,LINC
+1716,Consumer Defensive,LMNR
+1717,Consumer Defensive,LNCE
+1718,Consumer Defensive,LNDC
+1719,Consumer Defensive,LND
+1720,Consumer Defensive,LOPE
+1721,Consumer Defensive,LOTB.BR
+1722,Consumer Defensive,LOUP.PA
+1723,Consumer Defensive,LPE.PA
+1724,Consumer Defensive,LRN
+1725,Consumer Defensive,LWAY
+1726,Consumer Defensive,LW
+1727,Consumer Defensive,MALT.PA
+1728,Consumer Defensive,MBA.TO
+1729,Consumer Defensive,MBWS.PA
+1730,Consumer Defensive,MDLZ
+1731,Consumer Defensive,METX
+1732,Consumer Defensive,MFI.TO
+1733,Consumer Defensive,MGPI
+1734,Consumer Defensive,MIKO.BR
+1735,Consumer Defensive,MKC
+1736,Consumer Defensive,MLABO.PA
+1737,Consumer Defensive,MLCAC.PA
+1738,Consumer Defensive,MLSRP.PA
+1739,Consumer Defensive,MLTRC.PA
+1740,Consumer Defensive,MNST
+1741,Consumer Defensive,MO
+1742,Consumer Defensive,MRU.TO
+1743,Consumer Defensive,MTEX
+1744,Consumer Defensive,NAII
+1745,Consumer Defensive,NATR
+1746,Consumer Defensive,NAUH
+1747,Consumer Defensive,NBEV
+1748,Consumer Defensive,NEW
+1749,Consumer Defensive,NGVC
+1750,Consumer Defensive,NOMD
+1751,Consumer Defensive,NTCO
+1752,Consumer Defensive,NUS
+1753,Consumer Defensive,NWC.TO
+1754,Consumer Defensive,NWL
+1755,Consumer Defensive,OLLI
+1756,Consumer Defensive,ONE
+1757,Consumer Defensive,ONTEX.BR
+1758,Consumer Defensive,OR.PA
+1759,Consumer Defensive,PBH.TO
+1760,Consumer Defensive,PEP
+1761,Consumer Defensive,PETZ
+1762,Consumer Defensive,PFGC
+1763,Consumer Defensive,PF
+1764,Consumer Defensive,PG
+1765,Consumer Defensive,PLAG
+1766,Consumer Defensive,PLIN
+1767,Consumer Defensive,PME
+1768,Consumer Defensive,PM
+1769,Consumer Defensive,PORF.AS
+1770,Consumer Defensive,POST
+1771,Consumer Defensive,PPC
+1772,Consumer Defensive,PRDO
+1773,Consumer Defensive,PRMW
+1774,Consumer Defensive,PSMT
+1775,Consumer Defensive,PYX
+1776,Consumer Defensive,RAL.PA
+1777,Consumer Defensive,RCO.PA
+1778,Consumer Defensive,REDU
+1779,Consumer Defensive,REED
+1780,Consumer Defensive,RELV
+1781,Consumer Defensive,REV
+1782,Consumer Defensive,RI.PA
+1783,Consumer Defensive,RIBTW
+1784,Consumer Defensive,RIBT
+1785,Consumer Defensive,RIN.PA
+1786,Consumer Defensive,RMCF
+1787,Consumer Defensive,ROX
+1788,Consumer Defensive,RSI.TO
+1789,Consumer Defensive,RYB
+1790,Consumer Defensive,RYCE
+1791,Consumer Defensive,SABE.PA
+1792,Consumer Defensive,SAFM
+1793,Consumer Defensive,SAM
+1794,Consumer Defensive,SANW
+1795,Consumer Defensive,SAP.TO
+1796,Consumer Defensive,SAVE.PA
+1797,Consumer Defensive,SBT.PA
+1798,Consumer Defensive,SDI
+1799,Consumer Defensive,SENEA
+1800,Consumer Defensive,SENEB
+1801,Consumer Defensive,SFM
+1802,Consumer Defensive,SFS
+1803,Consumer Defensive,SIP.BR
+1804,Consumer Defensive,SJM
+1805,Consumer Defensive,SLIGR.AS
+1806,Consumer Defensive,SMPL
+1807,Consumer Defensive,SOY.TO
+1808,Consumer Defensive,SPA.BR
+1809,Consumer Defensive,SPB
+1810,Consumer Defensive,SPTN
+1811,Consumer Defensive,STG
+1812,Consumer Defensive,STKL
+1813,Consumer Defensive,STRA
+1814,Consumer Defensive,STZ
+1815,Consumer Defensive,SUCR.BR
+1816,Consumer Defensive,SUMR
+1817,Consumer Defensive,SVU
+1818,Consumer Defensive,SYY
+1819,Consumer Defensive,TAL
+1820,Consumer Defensive,TAP-A
+1821,Consumer Defensive,TAP
+1822,Consumer Defensive,TEDU
+1823,Consumer Defensive,TERB.BR
+1824,Consumer Defensive,TGT
+1825,Consumer Defensive,THST
+1826,Consumer Defensive,THS
+1827,Consumer Defensive,TIPI.PA
+1828,Consumer Defensive,TIS
+1829,Consumer Defensive,TPB
+1830,Consumer Defensive,TR
+1831,Consumer Defensive,TSN
+1832,Consumer Defensive,TUES
+1833,Consumer Defensive,TWNK
+1834,Consumer Defensive,TWOU
+1835,Consumer Defensive,UG
+1836,Consumer Defensive,UL
+1837,Consumer Defensive,UNA.AS
+1838,Consumer Defensive,UNBL.PA
+1839,Consumer Defensive,UNFI
+1840,Consumer Defensive,UN
+1841,Consumer Defensive,USFD
+1842,Consumer Defensive,USNA
+1843,Consumer Defensive,UTI
+1844,Consumer Defensive,UVV
+1845,Consumer Defensive,VFF.TO
+1846,Consumer Defensive,VGR
+1847,Consumer Defensive,VLGEA
+1848,Consumer Defensive,VRAP.PA
+1849,Consumer Defensive,WAFU
+1850,Consumer Defensive,WILC
+1851,Consumer Defensive,WMK
+1852,Consumer Defensive,WMT
+1853,Consumer Defensive,WN.TO
+1854,Consumer Defensive,WTER
+1855,Consumer Defensive,WVVIP
+1856,Consumer Defensive,WVVI
+1857,Consumer Defensive,YGYI
+1858,Consumer Defensive,ZVO
+1859,Energy,AAV.TO
+1860,Energy,AE
+1861,Energy,ALDIE.PA
+1862,Energy,ALTM
+1863,Energy,AMID
+1864,Energy,AMPY
+1865,Energy,AMTX
+1866,Energy,AM
+1867,Energy,AOI.TO
+1868,Energy,APC
+1869,Energy,APLP
+1870,Energy,APY
+1871,Energy,ARCH
+1872,Energy,AREC
+1873,Energy,AREX
+1874,Energy,ARLP
+1875,Energy,AROC
+1876,Energy,ARX.TO
+1877,Energy,AR
+1878,Energy,ATH.TO
+1879,Energy,AXAS
+1880,Energy,AZZ.TO
+1881,Energy,BAS
+1882,Energy,BATL
+1883,Energy,BCEI
+1884,Energy,BIR.TO
+1885,Energy,BKEPP
+1886,Energy,BKEP
+1887,Energy,BKR
+1888,Energy,BKX.TO
+1889,Energy,BNE.TO
+1890,Energy,BNG.TO
+1891,Energy,BNP.TO
+1892,Energy,BOOM
+1893,Energy,BORR
+1894,Energy,BPL
+1895,Energy,BPMP
+1896,Energy,BPT
+1897,Energy,BP
+1898,Energy,BRN
+1899,Energy,BROG
+1900,Energy,BRY.TO
+1901,Energy,BRY
+1902,Energy,BSM
+1903,Energy,BTE.TO
+1904,Energy,BTE
+1905,Energy,BTU
+1906,Energy,BWP
+1907,Energy,CAPL
+1908,Energy,CCJ
+1909,Energy,CCLP
+1910,Energy,CCO.TO
+1911,Energy,CCR
+1912,Energy,CDEV
+1913,Energy,CEIX
+1914,Energy,CEI
+1915,Energy,CELP
+1916,Energy,CEO
+1917,Energy,CEQP
+1918,Energy,CET.TO
+1919,Energy,CEU.TO
+1920,Energy,CFW.TO
+1921,Energy,CGG.PA
+1922,Energy,CHAP
+1923,Energy,CHKR
+1924,Energy,CHK
+1925,Energy,CHX
+1926,Energy,CJ.TO
+1927,Energy,CJ
+1928,Energy,CKH
+1929,Energy,CLB.AS
+1930,Energy,CLB
+1931,Energy,CLMT
+1932,Energy,CLNE
+1933,Energy,CLR
+1934,Energy,CNE.TO
+1935,Energy,CNQ.TO
+1936,Energy,CNQ
+1937,Energy,CNXM
+1938,Energy,CNX
+1939,Energy,COG
+1940,Energy,COP
+1941,Energy,CPE
+1942,Energy,CPG.TO
+1943,Energy,CPG
+1944,Energy,CPI.TO
+1945,Energy,CQE.TO
+1946,Energy,CQH
+1947,Energy,CQP
+1948,Energy,CR.TO
+1949,Energy,CRC
+1950,Energy,CRK
+1951,Energy,CRR
+1952,Energy,CRT
+1953,Energy,CRZO
+1954,Energy,CSM.TO
+1955,Energy,CTRA
+1956,Energy,CVE.TO
+1957,Energy,CVE
+1958,Energy,CVIA
+1959,Energy,CVI
+1960,Energy,CVRR
+1961,Energy,CVX
+1962,Energy,CXO
+1963,Energy,DCP
+1964,Energy,DKL
+1965,Energy,DK
+1966,Energy,DLNG
+1967,Energy,DML.TO
+1968,Energy,DMLP
+1969,Energy,DM
+1970,Energy,DNN
+1971,Energy,DNOW
+1972,Energy,DNR
+1973,Energy,DO
+1974,Energy,DPAM.PA
+1975,Energy,DRQ
+1976,Energy,DSSI
+1977,Energy,DVN
+1978,Energy,DWSN
+1979,Energy,DXI.TO
+1980,Energy,EC.PA
+1981,Energy,ECA
+1982,Energy,ECT
+1983,Energy,EEP
+1984,Energy,EEQ
+1985,Energy,EFR.TO
+1986,Energy,EFX.TO
+1987,Energy,EGN
+1988,Energy,EGY
+1989,Energy,EMES
+1990,Energy,ENB.TO
+1991,Energy,ENBL
+1992,Energy,ENB
+1993,Energy,ENLC
+1994,Energy,ENLK
+1995,Energy,ENSV
+1996,Energy,EOG
+1997,Energy,EPD
+1998,Energy,EPM
+1999,Energy,EPSN
+2000,Energy,EQGP
+2001,Energy,EQM
+2002,Energy,EQNR
+2003,Energy,EQT
+2004,Energy,ERF.TO
+2005,Energy,ERF
+2006,Energy,ERN
+2007,Energy,ES.PA
+2008,Energy,ESES
+2009,Energy,ESI.TO
+2010,Energy,ESN.TO
+2011,Energy,ESTE
+2012,Energy,ETP
+2013,Energy,ETRN
+2014,Energy,ET
+2015,Energy,EURN.BR
+2016,Energy,EURN
+2017,Energy,EVEP
+2018,Energy,EXM.BR
+2019,Energy,EXTN
+2020,Energy,E
+2021,Energy,FANG
+2022,Energy,FCU.TO
+2023,Energy,FET
+2024,Energy,FI
+2025,Energy,FLMN
+2026,Energy,FLUX.BR
+2027,Energy,FMSA
+2028,Energy,FP.PA
+2029,Energy,FRU.TO
+2030,Energy,FTI.PA
+2031,Energy,FTI
+2032,Energy,FTK
+2033,Energy,FTSI
+2034,Energy,FUR.AS
+2035,Energy,GALP.LS
+2036,Energy,GAZP.ME
+2037,Energy,GBR
+2038,Energy,GDP
+2039,Energy,GEI.TO
+2040,Energy,GEL
+2041,Energy,GEOS
+2042,Energy,GIFI
+2043,Energy,GLF
+2044,Energy,GLOG
+2045,Energy,GLOP
+2046,Energy,GLP
+2047,Energy,GNE
+2048,Energy,GPOR
+2049,Energy,GPP
+2050,Energy,GPRK
+2051,Energy,GTE.TO
+2052,Energy,GTE
+2053,Energy,GTT.PA
+2054,Energy,GXE.TO
+2055,Energy,HAL
+2056,Energy,HCR
+2057,Energy,HE.TO
+2058,Energy,HEP
+2059,Energy,HES
+2060,Energy,HFC
+2061,Energy,HLX
+2062,Energy,HMLP
+2063,Energy,HNRG
+2064,Energy,HOS
+2065,Energy,HPR
+2066,Energy,HP
+2067,Energy,HSE.TO
+2068,Energy,HUSA
+2069,Energy,HWO.TO
+2070,Energy,ICD
+2071,Energy,IMO.TO
+2072,Energy,IMO
+2073,Energy,INDO
+2074,Energy,INT
+2075,Energy,IO
+2076,Energy,IPL.TO
+2077,Energy,IPO.TO
+2078,Energy,ISRL
+2079,Energy,JAG
+2080,Energy,JONE
+2081,Energy,JOY.TO
+2082,Energy,KEG
+2083,Energy,KEL.TO
+2084,Energy,KEY.TO
+2085,Energy,KLXE
+2086,Energy,KMI
+2087,Energy,KOS
+2088,Energy,KRP
+2089,Energy,LBRT
+2090,Energy,LEU
+2091,Energy,LFDE.PA
+2092,Energy,LGCY
+2093,Energy,LKOH.ME
+2094,Energy,LLEX
+2095,Energy,LNG
+2096,Energy,LONE
+2097,Energy,LPG
+2098,Energy,LPI
+2099,Energy,MARPS
+2100,Energy,MAU.PA
+2101,Energy,MCB.TO
+2102,Energy,MCEP
+2103,Energy,MCF
+2104,Energy,MDR
+2105,Energy,MEG.TO
+2106,Energy,MGA.TO
+2107,Energy,MGY
+2108,Energy,MLSEQ.PA
+2109,Energy,MMLP
+2110,Energy,MMP
+2111,Energy,MNRL
+2112,Energy,MPC
+2113,Energy,MPLX
+2114,Energy,MRC
+2115,Energy,MRO
+2116,Energy,MR
+2117,Energy,MTDR
+2118,Energy,MTL.TO
+2119,Energy,MTRX
+2120,Energy,MTR
+2121,Energy,MUR
+2122,Energy,MVO
+2123,Energy,MXC
+2124,Energy,NBLX
+2125,Energy,NBL
+2126,Energy,NBR
+2127,Energy,NCSM
+2128,Energy,NC
+2129,Energy,NESR
+2130,Energy,NEXT
+2131,Energy,NEX
+2132,Energy,NE
+2133,Energy,NFG
+2134,Energy,NFX
+2135,Energy,NGL
+2136,Energy,NGS
+2137,Energy,NINE
+2138,Energy,NNA
+2139,Energy,NOA.TO
+2140,Energy,NOA
+2141,Energy,NOG
+2142,Energy,NOV
+2143,Energy,NRP
+2144,Energy,NRT
+2145,Energy,NR
+2146,Energy,NSH
+2147,Energy,NS
+2148,Energy,NVA.TO
+2149,Energy,NVGS
+2150,Energy,NXE.TO
+2151,Energy,NXE
+2152,Energy,OAS
+2153,Energy,OBE
+2154,Energy,OII
+2155,Energy,OIS
+2156,Energy,OKE
+2157,Energy,OMP
+2158,Energy,OSG
+2159,Energy,OXC.TO
+2160,Energy,OXY
+2161,Energy,PAA
+2162,Energy,PACD
+2163,Energy,PAGP
+2164,Energy,PARR
+2165,Energy,PBA
+2166,Energy,PBFX
+2167,Energy,PBF
+2168,Energy,PBR-A
+2169,Energy,PBR
+2170,Energy,PBT
+2171,Energy,PD.TO
+2172,Energy,PDCE
+2173,Energy,PDS
+2174,Energy,PED
+2175,Energy,PEIX
+2176,Energy,PER
+2177,Energy,PES
+2178,Energy,PEY.TO
+2179,Energy,PE
+2180,Energy,PFIE
+2181,Energy,PHX.TO
+2182,Energy,PHX
+2183,Energy,PKD
+2184,Energy,PKI.TO
+2185,Energy,PMT.TO
+2186,Energy,PNE.TO
+2187,Energy,PNRG
+2188,Energy,POU.TO
+2189,Energy,PPL.TO
+2190,Energy,PPR.TO
+2191,Energy,PRQ.TO
+2192,Energy,PRT
+2193,Energy,PSD.TO
+2194,Energy,PSI.TO
+2195,Energy,PSK.TO
+2196,Energy,PSXP
+2197,Energy,PSX
+2198,Energy,PTEN
+2199,Energy,PTR
+2200,Energy,PUMP
+2201,Energy,PVAC
+2202,Energy,PVL
+2203,Energy,PXD
+2204,Energy,PXT.TO
+2205,Energy,QEC.TO
+2206,Energy,QEP
+2207,Energy,QES
+2208,Energy,RCON
+2209,Energy,RDC
+2210,Energy,RDS-B
+2211,Energy,RDSA.AS
+2212,Energy,REGI
+2213,Energy,REI
+2214,Energy,REN
+2215,Energy,RES
+2216,Energy,REXX
+2217,Energy,REX
+2218,Energy,RIG
+2219,Energy,RMP
+2220,Energy,RNET
+2221,Energy,RNGR
+2222,Energy,ROSE
+2223,Energy,ROYT
+2224,Energy,RRC
+2225,Energy,RSPP
+2226,Energy,RTLR
+2227,Energy,SAEX
+2228,Energy,SBMO.AS
+2229,Energy,SBOW
+2230,Energy,SBR
+2231,Energy,SCL.TO
+2232,Energy,SDPI
+2233,Energy,SDRL
+2234,Energy,SD
+2235,Energy,SEMG
+2236,Energy,SEP
+2237,Energy,SES.TO
+2238,Energy,SFD.TO
+2239,Energy,SGQ.TO
+2240,Energy,SGU
+2241,Energy,SGY.TO
+2242,Energy,SGY
+2243,Energy,SHI
+2244,Energy,SHLX
+2245,Energy,SJT
+2246,Energy,SLB.PA
+2247,Energy,SLB
+2248,Energy,SLCA
+2249,Energy,SLNG
+2250,Energy,SMLP
+2251,Energy,SM
+2252,Energy,SND
+2253,Energy,SNMP
+2254,Energy,SNP
+2255,Energy,SOI
+2256,Energy,SPN
+2257,Energy,SRCI
+2258,Energy,SRLP
+2259,Energy,SSL
+2260,Energy,STNG
+2261,Energy,SU.TO
+2262,Energy,SUN
+2263,Energy,SU
+2264,Energy,SWN
+2265,Energy,TALO
+2266,Energy,TAT
+2267,Energy,TCP
+2268,Energy,TCW.TO
+2269,Energy,TDW
+2270,Energy,TEI.TO
+2271,Energy,TELL
+2272,Energy,TEP
+2273,Energy,TGA
+2274,Energy,TGC
+2275,Energy,TGE
+2276,Energy,TGL.TO
+2277,Energy,TGP
+2278,Energy,TH
+2279,Energy,TK
+2280,Energy,TLP
+2281,Energy,TNK
+2282,Energy,TNP.TO
+2283,Energy,TNP
+2284,Energy,TOG.TO
+2285,Energy,TOT.TO
+2286,Energy,TOT
+2287,Energy,TOU.TO
+2288,Energy,TPL
+2289,Energy,TRCH
+2290,Energy,TRGP
+2291,Energy,TRMD
+2292,Energy,TRNX
+2293,Energy,TRP.TO
+2294,Energy,TRP
+2295,Energy,TS
+2296,Energy,TTI
+2297,Energy,TUSK
+2298,Energy,TVE.TO
+2299,Energy,TVK.TO
+2300,Energy,TXP.TO
+2301,Energy,U.TO
+2302,Energy,UEC
+2303,Energy,UGP
+2304,Energy,UNT
+2305,Energy,URE.TO
+2306,Energy,URG
+2307,Energy,USAC
+2308,Energy,USEG
+2309,Energy,USWS
+2310,Energy,UUUU
+2311,Energy,VAL
+2312,Energy,VET.TO
+2313,Energy,VET
+2314,Energy,VII.TO
+2315,Energy,VLE.TO
+2316,Energy,VLO
+2317,Energy,VLP
+2318,Energy,VNOM
+2319,Energy,VOC
+2320,Energy,VPK.AS
+2321,Energy,VTNR
+2322,Energy,VVV
+2323,Energy,WCP.TO
+2324,Energy,WES
+2325,Energy,WHD
+2326,Energy,WLL
+2327,Energy,WMB
+2328,Energy,WPX
+2329,Energy,WPZ
+2330,Energy,WRG.TO
+2331,Energy,WTI
+2332,Energy,WTTR
+2333,Energy,XEC
+2334,Energy,XOG
+2335,Energy,XOM
+2336,Energy,YGR.TO
+2337,Energy,YPF
+2338,Energy,YUMA
+2339,Energy,ZAR.TO
+2340,Energy,ZN
+2341,Financial Services,AAB.TO
+2342,Financial Services,AABA
+2343,Financial Services,AAMC
+2344,Financial Services,AAME
+2345,Financial Services,ABCA.PA
+2346,Financial Services,ABCB
+2347,Financial Services,ABDC
+2348,Financial Services,ABN.AS
+2349,Financial Services,ABTX
+2350,Financial Services,AB
+2351,Financial Services,ACA.PA
+2352,Financial Services,ACAMU
+2353,Financial Services,ACAM
+2354,Financial Services,ACBI
+2355,Financial Services,ACCB.BR
+2356,Financial Services,ACD.TO
+2357,Financial Services,ACFC
+2358,Financial Services,ACGLO
+2359,Financial Services,ACGLP
+2360,Financial Services,ACGL
+2361,Financial Services,ACNB
+2362,Financial Services,ACTTU
+2363,Financial Services,ACV
+2364,Financial Services,AC
+2365,Financial Services,ADS
+2366,Financial Services,ADV.PA
+2367,Financial Services,ADX
+2368,Financial Services,AEF
+2369,Financial Services,AEG
+2370,Financial Services,AEL
+2371,Financial Services,AFB
+2372,Financial Services,AFC
+2373,Financial Services,AFG
+2374,Financial Services,AFH
+2375,Financial Services,AFL
+2376,Financial Services,AFSI
+2377,Financial Services,AGBAU
+2378,Financial Services,AGBA
+2379,Financial Services,AGM
+2380,Financial Services,AGN.AS
+2381,Financial Services,AGO
+2382,Financial Services,AGS.BR
+2383,Financial Services,AHL
+2384,Financial Services,AI.TO
+2385,Financial Services,AIG
+2386,Financial Services,AIHS
+2387,Financial Services,AINC
+2388,Financial Services,AINV
+2389,Financial Services,AIY
+2390,Financial Services,AIZP
+2391,Financial Services,AIZ
+2392,Financial Services,AJG
+2393,Financial Services,ALACU
+2394,Financial Services,ALAC
+2395,Financial Services,ALGRU
+2396,Financial Services,ALGR
+2397,Financial Services,ALIDS.PA
+2398,Financial Services,ALLY
+2399,Financial Services,ALL
+2400,Financial Services,ALRS
+2401,Financial Services,ALSIP.PA
+2402,Financial Services,ALTUR.PA
+2403,Financial Services,ALUS
+2404,Financial Services,AMAL
+2405,Financial Services,AMBCW
+2406,Financial Services,AMBC
+2407,Financial Services,AMCIU
+2408,Financial Services,AMCI
+2409,Financial Services,AMG
+2410,Financial Services,AMHCU
+2411,Financial Services,AMK
+2412,Financial Services,AMNB
+2413,Financial Services,AMP
+2414,Financial Services,AMRB
+2415,Financial Services,AMRK
+2416,Financial Services,AMSF
+2417,Financial Services,AMTBB
+2418,Financial Services,AMTB
+2419,Financial Services,AMTD
+2420,Financial Services,AMUN.PA
+2421,Financial Services,ANCB
+2422,Financial Services,ANCX
+2423,Financial Services,ANDAU
+2424,Financial Services,ANDA
+2425,Financial Services,AON
+2426,Financial Services,APAM
+2427,Financial Services,APO
+2428,Financial Services,APR.PA
+2429,Financial Services,APXT
+2430,Financial Services,ARCC
+2431,Financial Services,ARDC
+2432,Financial Services,ARES
+2433,Financial Services,ARGO
+2434,Financial Services,AROW
+2435,Financial Services,ARYAU
+2436,Financial Services,ARYA
+2437,Financial Services,ASA
+2438,Financial Services,ASB
+2439,Financial Services,ASFI
+2440,Financial Services,ASPS
+2441,Financial Services,ASRNL.AS
+2442,Financial Services,ASRVP
+2443,Financial Services,ASRV
+2444,Financial Services,ATAC
+2445,Financial Services,ATAX
+2446,Financial Services,ATCO
+2447,Financial Services,ATH
+2448,Financial Services,ATIF
+2449,Financial Services,ATLC
+2450,Financial Services,ATLO
+2451,Financial Services,ATRS.AS
+2452,Financial Services,AUBAP
+2453,Financial Services,AUBN
+2454,Financial Services,AUB
+2455,Financial Services,AVAL
+2456,Financial Services,AXP
+2457,Financial Services,AXS
+2458,Financial Services,AX
+2459,Financial Services,BAC
+2460,Financial Services,BAM
+2461,Financial Services,BANC
+2462,Financial Services,BANF
+2463,Financial Services,BANR
+2464,Financial Services,BANX
+2465,Financial Services,BAP
+2466,Financial Services,BBAR
+2467,Financial Services,BBDC
+2468,Financial Services,BBDO
+2469,Financial Services,BBD
+2470,Financial Services,BBK
+2471,Financial Services,BBN
+2472,Financial Services,BBVA
+2473,Financial Services,BCBP
+2474,Financial Services,BCH
+2475,Financial Services,BCML
+2476,Financial Services,BCOR
+2477,Financial Services,BCOW
+2478,Financial Services,BCP.LS
+2479,Financial Services,BCRH
+2480,Financial Services,BCSF
+2481,Financial Services,BCS
+2482,Financial Services,BCTF
+2483,Financial Services,BCV
+2484,Financial Services,BCX
+2485,Financial Services,BDGE
+2486,Financial Services,BELR.BR
+2487,Financial Services,BELU.BR
+2488,Financial Services,BEN
+2489,Financial Services,BFC
+2490,Financial Services,BFIN
+2491,Financial Services,BFK
+2492,Financial Services,BFST
+2493,Financial Services,BGB
+2494,Financial Services,BGCA
+2495,Financial Services,BGCP
+2496,Financial Services,BGHL.AS
+2497,Financial Services,BHBK
+2498,Financial Services,BHB
+2499,Financial Services,BHFAO
+2500,Financial Services,BHFAP
+2501,Financial Services,BHF
+2502,Financial Services,BHK
+2503,Financial Services,BHLB
+2504,Financial Services,BHV
+2505,Financial Services,BIPC
+2506,Financial Services,BKCC
+2507,Financial Services,BKJ
+2508,Financial Services,BKN
+2509,Financial Services,BKSC
+2510,Financial Services,BKT
+2511,Financial Services,BKU
+2512,Financial Services,BK
+2513,Financial Services,BLE
+2514,Financial Services,BLK
+2515,Financial Services,BLMT
+2516,Financial Services,BLW
+2517,Financial Services,BLX
+2518,Financial Services,BMA
+2519,Financial Services,BMO.TO
+2520,Financial Services,BMO
+2521,Financial Services,BMRC
+2522,Financial Services,BMTC
+2523,Financial Services,BNB.BR
+2524,Financial Services,BNP.PA
+2525,Financial Services,BNS.TO
+2526,Financial Services,BNS
+2527,Financial Services,BOCH
+2528,Financial Services,BOH
+2529,Financial Services,BOKF
+2530,Financial Services,BOTJ
+2531,Financial Services,BPFHP
+2532,Financial Services,BPFHW
+2533,Financial Services,BPFH
+2534,Financial Services,BPOPM
+2535,Financial Services,BPOPN
+2536,Financial Services,BPOP
+2537,Financial Services,BPRN
+2538,Financial Services,BRBS
+2539,Financial Services,BREB.BR
+2540,Financial Services,BRK-A
+2541,Financial Services,BRK-B
+2542,Financial Services,BRKL
+2543,Financial Services,BRO
+2544,Financial Services,BRPAU
+2545,Financial Services,BRPA
+2546,Financial Services,BRPM
+2547,Financial Services,BRP
+2548,Financial Services,BSAC
+2549,Financial Services,BSBK
+2550,Financial Services,BSBR
+2551,Financial Services,BSD.PA
+2552,Financial Services,BSF
+2553,Financial Services,BSIG
+2554,Financial Services,BSMX
+2555,Financial Services,BSRR
+2556,Financial Services,BST
+2557,Financial Services,BSVN
+2558,Financial Services,BTA
+2559,Financial Services,BTZ
+2560,Financial Services,BUSE
+2561,Financial Services,BWB
+2562,Financial Services,BWFG
+2563,Financial Services,BWG
+2564,Financial Services,BWMCU
+2565,Financial Services,BXS
+2566,Financial Services,BX
+2567,Financial Services,BYBK
+2568,Financial Services,BYFC
+2569,Financial Services,BYM
+2570,Financial Services,BY
+2571,Financial Services,CACC
+2572,Financial Services,CAC
+2573,Financial Services,CADE
+2574,Financial Services,CAF.PA
+2575,Financial Services,CALB
+2576,Financial Services,CAND.BR
+2577,Financial Services,CARE
+2578,Financial Services,CARO
+2579,Financial Services,CART
+2580,Financial Services,CARV
+2581,Financial Services,CASH
+2582,Financial Services,CAT31.PA
+2583,Financial Services,CATC
+2584,Financial Services,CATYW
+2585,Financial Services,CATY
+2586,Financial Services,CBAN
+2587,Financial Services,CBFV
+2588,Financial Services,CBMB
+2589,Financial Services,CBNK
+2590,Financial Services,CBOE
+2591,Financial Services,CBSHP
+2592,Financial Services,CBSH
+2593,Financial Services,CBTX
+2594,Financial Services,CBU
+2595,Financial Services,CB
+2596,Financial Services,CCAP
+2597,Financial Services,CCBG
+2598,Financial Services,CCB
+2599,Financial Services,CCD
+2600,Financial Services,CCH
+2601,Financial Services,CCN.PA
+2602,Financial Services,CCNE
+2603,Financial Services,CEM
+2604,Financial Services,CET
+2605,Financial Services,CF.TO
+2606,Financial Services,CFBI
+2607,Financial Services,CFBK
+2608,Financial Services,CFB
+2609,Financial Services,CFFAU
+2610,Financial Services,CFFA
+2611,Financial Services,CFFI
+2612,Financial Services,CFFN
+2613,Financial Services,CFG
+2614,Financial Services,CFR
+2615,Financial Services,CGBD
+2616,Financial Services,CGI.TO
+2617,Financial Services,CG
+2618,Financial Services,CHCO
+2619,Financial Services,CHFN
+2620,Financial Services,CHMG
+2621,Financial Services,CHN
+2622,Financial Services,CHW.TO
+2623,Financial Services,CHY
+2624,Financial Services,CIA
+2625,Financial Services,CIB
+2626,Financial Services,CIFS
+2627,Financial Services,CIICU
+2628,Financial Services,CIK
+2629,Financial Services,CINF
+2630,Financial Services,CIT
+2631,Financial Services,CIV.PA
+2632,Financial Services,CIVB
+2633,Financial Services,CIX.TO
+2634,Financial Services,CIZN
+2635,Financial Services,CKI.TO
+2636,Financial Services,CLBK
+2637,Financial Services,CLDB
+2638,Financial Services,CM.TO
+2639,Financial Services,CMA
+2640,Financial Services,CME
+2641,Financial Services,CMO.PA
+2642,Financial Services,CMU
+2643,Financial Services,CM
+2644,Financial Services,CNA
+2645,Financial Services,CNBKA
+2646,Financial Services,CNF.PA
+2647,Financial Services,CNFR
+2648,Financial Services,CNF
+2649,Financial Services,CNOB
+2650,Financial Services,CNO
+2651,Financial Services,CNP.PA
+2652,Financial Services,CNS
+2653,Financial Services,COBZ
+2654,Financial Services,COFA.PA
+2655,Financial Services,COFS
+2656,Financial Services,COF
+2657,Financial Services,COHN
+2658,Financial Services,COLB
+2659,Financial Services,COMB.BR
+2660,Financial Services,COOP
+2661,Financial Services,COWN
+2662,Financial Services,CPAAU
+2663,Financial Services,CPAA
+2664,Financial Services,CPF
+2665,Financial Services,CPSS
+2666,Financial Services,CPTA
+2667,Financial Services,CRAP.PA
+2668,Financial Services,CRAV.PA
+2669,Financial Services,CRBP2.PA
+2670,Financial Services,CRD-B
+2671,Financial Services,CRLA.PA
+2672,Financial Services,CRLO.PA
+2673,Financial Services,CRSAU
+2674,Financial Services,CRSA
+2675,Financial Services,CRSU.PA
+2676,Financial Services,CRTO.PA
+2677,Financial Services,CRVL
+2678,Financial Services,CS.PA
+2679,Financial Services,CSBK
+2680,Financial Services,CSFL
+2681,Financial Services,CSTR
+2682,Financial Services,CSWC
+2683,Financial Services,CS
+2684,Financial Services,CTACU
+2685,Financial Services,CTAC
+2686,Financial Services,CTBI
+2687,Financial Services,CUBI
+2688,Financial Services,CUBS
+2689,Financial Services,CURO
+2690,Financial Services,CVBF
+2691,Financial Services,CVCY
+2692,Financial Services,CVG.TO
+2693,Financial Services,CVLY
+2694,Financial Services,CWAY
+2695,Financial Services,CWB.TO
+2696,Financial Services,CWBC
+2697,Financial Services,CXE
+2698,Financial Services,CXI.TO
+2699,Financial Services,CYB.TO
+2700,Financial Services,CZFC
+2701,Financial Services,CZNC
+2702,Financial Services,CZWI
+2703,Financial Services,C
+2704,Financial Services,DBCP
+2705,Financial Services,DB
+2706,Financial Services,DCOMP
+2707,Financial Services,DCOM
+2708,Financial Services,DDMX
+2709,Financial Services,DEACU
+2710,Financial Services,DFIN
+2711,Financial Services,DFN.TO
+2712,Financial Services,DFNSU
+2713,Financial Services,DFNS
+2714,Financial Services,DFP
+2715,Financial Services,DFS
+2716,Financial Services,DGICA
+2717,Financial Services,DGICB
+2718,Financial Services,DHY
+2719,Financial Services,DMB
+2720,Financial Services,DMF
+2721,Financial Services,DNBF
+2722,Financial Services,DNJR
+2723,Financial Services,DNP
+2724,Financial Services,DPG
+2725,Financial Services,DPHCU
+2726,Financial Services,DPHC
+2727,Financial Services,DSE
+2728,Financial Services,DSL
+2729,Financial Services,DSM
+2730,Financial Services,DXF
+2731,Financial Services,DXR
+2732,Financial Services,EAD
+2733,Financial Services,EBMT
+2734,Financial Services,EBSB
+2735,Financial Services,EBTC
+2736,Financial Services,ECF
+2737,Financial Services,ECN.TO
+2738,Financial Services,ECPG
+2739,Financial Services,ECT.AS
+2740,Financial Services,EDD
+2741,Financial Services,EDEN.PA
+2742,Financial Services,EDF
+2743,Financial Services,EDTX
+2744,Financial Services,EEM.PA
+2745,Financial Services,EFBI
+2746,Financial Services,EFC
+2747,Financial Services,EFH.TO
+2748,Financial Services,EFSC
+2749,Financial Services,EGBN
+2750,Financial Services,EHTH
+2751,Financial Services,EIG
+2752,Financial Services,ELF.TO
+2753,Financial Services,ELVT
+2754,Financial Services,EMCF
+2755,Financial Services,EMCI
+2756,Financial Services,EMD
+2757,Financial Services,EMF
+2758,Financial Services,EMO
+2759,Financial Services,ENFC
+2760,Financial Services,ENVA
+2761,Financial Services,ENX.PA
+2762,Financial Services,EQBK
+2763,Financial Services,EQFN
+2764,Financial Services,EQH
+2765,Financial Services,EQS
+2766,Financial Services,ERIE
+2767,Financial Services,ESBK
+2768,Financial Services,ESGRO
+2769,Financial Services,ESGR
+2770,Financial Services,ESNT
+2771,Financial Services,ESQ
+2772,Financial Services,ESSA
+2773,Financial Services,ESSCU
+2774,Financial Services,ESSC
+2775,Financial Services,ESXB
+2776,Financial Services,ETFC
+2777,Financial Services,EVBN
+2778,Financial Services,EVR
+2779,Financial Services,EWBC
+2780,Financial Services,EXPCU
+2781,Financial Services,EXPC
+2782,Financial Services,EZPW
+2783,Financial Services,FAF
+2784,Financial Services,FANH
+2785,Financial Services,FBC
+2786,Financial Services,FBIZ
+2787,Financial Services,FBK
+2788,Financial Services,FBMS
+2789,Financial Services,FBNC
+2790,Financial Services,FBNK
+2791,Financial Services,FBP
+2792,Financial Services,FBSS
+2793,Financial Services,FC.TO
+2794,Financial Services,FCAP
+2795,Financial Services,FCBC
+2796,Financial Services,FCBP
+2797,Financial Services,FCB
+2798,Financial Services,FCCO
+2799,Financial Services,FCCY
+2800,Financial Services,FCFS
+2801,Financial Services,FCF
+2802,Financial Services,FCNCA
+2803,Financial Services,FDBC
+2804,Financial Services,FDEF
+2805,Financial Services,FDS
+2806,Financial Services,FDUS
+2807,Financial Services,FFBCW
+2808,Financial Services,FFBC
+2809,Financial Services,FFG
+2810,Financial Services,FFH.TO
+2811,Financial Services,FFIC
+2812,Financial Services,FFIN
+2813,Financial Services,FFKT
+2814,Financial Services,FFN.TO
+2815,Financial Services,FFNW
+2816,Financial Services,FFP.PA
+2817,Financial Services,FFWM
+2818,Financial Services,FGBI
+2819,Financial Services,FG
+2820,Financial Services,FHB
+2821,Financial Services,FHI
+2822,Financial Services,FHN
+2823,Financial Services,FIBK
+2824,Financial Services,FII
+2825,Financial Services,FINV
+2826,Financial Services,FISI
+2827,Financial Services,FITBI
+2828,Financial Services,FITBP
+2829,Financial Services,FITB
+2830,Financial Services,FLEXD.LS
+2831,Financial Services,FLIC
+2832,Financial Services,FLOW.AS
+2833,Financial Services,FMAO
+2834,Financial Services,FMBH
+2835,Financial Services,FMBIP
+2836,Financial Services,FMBI
+2837,Financial Services,FMCIU
+2838,Financial Services,FMCI
+2839,Financial Services,FMNB
+2840,Financial Services,FN.TO
+2841,Financial Services,FNB
+2842,Financial Services,FNCB
+2843,Financial Services,FNF
+2844,Financial Services,FNGN
+2845,Financial Services,FNHC
+2846,Financial Services,FNLC
+2847,Financial Services,FNWB
+2848,Financial Services,FOCS
+2849,Financial Services,FPAC
+2850,Financial Services,FPAY
+2851,Financial Services,FRAF
+2852,Financial Services,FRA
+2853,Financial Services,FRBA
+2854,Financial Services,FRBK
+2855,Financial Services,FRC
+2856,Financial Services,FRHC
+2857,Financial Services,FRME
+2858,Financial Services,FSBC
+2859,Financial Services,FSBW
+2860,Financial Services,FSB
+2861,Financial Services,FSEA
+2862,Financial Services,FSFG
+2863,Financial Services,FSK
+2864,Financial Services,FSZ.TO
+2865,Financial Services,FTACU
+2866,Financial Services,FTAC
+2867,Financial Services,FTF
+2868,Financial Services,FTN.TO
+2869,Financial Services,FTU.TO
+2870,Financial Services,FT
+2871,Financial Services,FULT
+2872,Financial Services,FUNC
+2873,Financial Services,FUND
+2874,Financial Services,FUSB
+2875,Financial Services,FUTU
+2876,Financial Services,FVCB
+2877,Financial Services,FXNC
+2878,Financial Services,GABC
+2879,Financial Services,GAINL
+2880,Financial Services,GAINM
+2881,Financial Services,GAIN
+2882,Financial Services,GARS
+2883,Financial Services,GBCI
+2884,Financial Services,GBDC
+2885,Financial Services,GBLB.BR
+2886,Financial Services,GBLI
+2887,Financial Services,GBL
+2888,Financial Services,GBNK
+2889,Financial Services,GCAP
+2890,Financial Services,GCBC
+2891,Financial Services,GDOT
+2892,Financial Services,GECC
+2893,Financial Services,GEC
+2894,Financial Services,GEK
+2895,Financial Services,GER
+2896,Financial Services,GFED
+2897,Financial Services,GGAL
+2898,Financial Services,GGZ
+2899,Financial Services,GHIVU
+2900,Financial Services,GHL
+2901,Financial Services,GHY
+2902,Financial Services,GIMB.BR
+2903,Financial Services,GIM
+2904,Financial Services,GLAD
+2905,Financial Services,GLBZ
+2906,Financial Services,GLE.PA
+2907,Financial Services,GLRE
+2908,Financial Services,GLU
+2909,Financial Services,GL
+2910,Financial Services,GMHIU
+2911,Financial Services,GMHI
+2912,Financial Services,GMP.TO
+2913,Financial Services,GMZ
+2914,Financial Services,GNBC
+2915,Financial Services,GNTY
+2916,Financial Services,GNW
+2917,Financial Services,GPAQU
+2918,Financial Services,GPAQ
+2919,Financial Services,GRAF
+2920,Financial Services,GRF
+2921,Financial Services,GRNV
+2922,Financial Services,GROW
+2923,Financial Services,GRSHU
+2924,Financial Services,GRSH
+2925,Financial Services,GSAH
+2926,Financial Services,GSBC
+2927,Financial Services,GSBD
+2928,Financial Services,GSHD
+2929,Financial Services,GSY.TO
+2930,Financial Services,GS
+2931,Financial Services,GWB
+2932,Financial Services,GWGH
+2933,Financial Services,GWO.TO
+2934,Financial Services,GXGXU
+2935,Financial Services,GXGX
+2936,Financial Services,HAFC
+2937,Financial Services,HAL.AS
+2938,Financial Services,HALL
+2939,Financial Services,HAWK
+2940,Financial Services,HBANO
+2941,Financial Services,HBAN
+2942,Financial Services,HBCP
+2943,Financial Services,HBK
+2944,Financial Services,HBMD
+2945,Financial Services,HBNC
+2946,Financial Services,HBT
+2947,Financial Services,HCACU
+2948,Financial Services,HCAP
+2949,Financial Services,HCCHU
+2950,Financial Services,HCCH
+2951,Financial Services,HCG.TO
+2952,Financial Services,HCI
+2953,Financial Services,HDB
+2954,Financial Services,HFBC
+2955,Financial Services,HFBL
+2956,Financial Services,HFWA
+2957,Financial Services,HIFS
+2958,Financial Services,HIG
+2959,Financial Services,HKIB
+2960,Financial Services,HLI
+2961,Financial Services,HLNE
+2962,Financial Services,HMNF
+2963,Financial Services,HMN
+2964,Financial Services,HMST
+2965,Financial Services,HNNA
+2966,Financial Services,HNW
+2967,Financial Services,HOMB
+2968,Financial Services,HONE
+2969,Financial Services,HOPE
+2970,Financial Services,HQH
+2971,Financial Services,HQL
+2972,Financial Services,HRTG
+2973,Financial Services,HRZN
+2974,Financial Services,HSB.PA
+2975,Financial Services,HSBC
+2976,Financial Services,HTBI
+2977,Financial Services,HTBK
+2978,Financial Services,HTGC
+2979,Financial Services,HTH
+2980,Financial Services,HTLF
+2981,Financial Services,HUIZ
+2982,Financial Services,HUSN
+2983,Financial Services,HVBC
+2984,Financial Services,HWBK
+2985,Financial Services,HWC
+2986,Financial Services,HX
+2987,Financial Services,HYACU
+2988,Financial Services,HYAC
+2989,Financial Services,HYB
+2990,Financial Services,HYI
+2991,Financial Services,IAG.TO
+2992,Financial Services,IBCP
+2993,Financial Services,IBKC
+2994,Financial Services,IBKR
+2995,Financial Services,IBN
+2996,Financial Services,IBOC
+2997,Financial Services,IBTX
+2998,Financial Services,ICBK
+2999,Financial Services,ICCH
+3000,Financial Services,ICE
+3001,Financial Services,ICMB
+3002,Financial Services,IDIP.PA
+3003,Financial Services,IEX.AS
+3004,Financial Services,IFC.TO
+3005,Financial Services,IFN
+3006,Financial Services,IFS
+3007,Financial Services,IGD
+3008,Financial Services,IGIC
+3009,Financial Services,IGM.TO
+3010,Financial Services,IHC
+3011,Financial Services,IID
+3012,Financial Services,IMH
+3013,Financial Services,INBK
+3014,Financial Services,INB
+3015,Financial Services,INDB
+3016,Financial Services,INGA.AS
+3017,Financial Services,INSUU
+3018,Financial Services,INSU
+3019,Financial Services,INTER.AS
+3020,Financial Services,INTL
+3021,Financial Services,IOR
+3022,Financial Services,IPCC
+3023,Financial Services,IPV
+3024,Financial Services,IRD.PA
+3025,Financial Services,IROQ
+3026,Financial Services,ISBC
+3027,Financial Services,ISG
+3028,Financial Services,ISTR
+3029,Financial Services,ITCB
+3030,Financial Services,ITG
+3031,Financial Services,ITIC
+3032,Financial Services,ITUB
+3033,Financial Services,IVH
+3034,Financial Services,IX
+3035,Financial Services,JEF
+3036,Financial Services,JFKKU
+3037,Financial Services,JFK
+3038,Financial Services,JMP
+3039,Financial Services,JPM
+3040,Financial Services,JP
+3041,Financial Services,JRJC
+3042,Financial Services,JRVR
+3043,Financial Services,JSM
+3044,Financial Services,JT
+3045,Financial Services,KBC.BR
+3046,Financial Services,KBCA.BR
+3047,Financial Services,KBLMU
+3048,Financial Services,KB
+3049,Financial Services,KEY
+3050,Financial Services,KFFB
+3051,Financial Services,KINS
+3052,Financial Services,KKR
+3053,Financial Services,KMPR
+3054,Financial Services,KN.PA
+3055,Financial Services,KNSL
+3056,Financial Services,KREF
+3057,Financial Services,KRNY
+3058,Financial Services,KTF
+3059,Financial Services,KXIN
+3060,Financial Services,KYN
+3061,Financial Services,LACQU
+3062,Financial Services,LACQ
+3063,Financial Services,LARK
+3064,Financial Services,LAZ
+3065,Financial Services,LB.TO
+3066,Financial Services,LBAI
+3067,Financial Services,LBC
+3068,Financial Services,LBON.PA
+3069,Financial Services,LBS.TO
+3070,Financial Services,LCAHU
+3071,Financial Services,LCNB
+3072,Financial Services,LC
+3073,Financial Services,LDP
+3074,Financial Services,LEO
+3075,Financial Services,LEVL
+3076,Financial Services,LFACU
+3077,Financial Services,LFAC
+3078,Financial Services,LFC
+3079,Financial Services,LGC
+3080,Financial Services,LHC
+3081,Financial Services,LION
+3082,Financial Services,LKFN
+3083,Financial Services,LMFA
+3084,Financial Services,LMST
+3085,Financial Services,LM
+3086,Financial Services,LNC
+3087,Financial Services,LOACU
+3088,Financial Services,LOAC
+3089,Financial Services,LOB
+3090,Financial Services,LPLA
+3091,Financial Services,LSACU
+3092,Financial Services,LSAC
+3093,Financial Services,LSBK
+3094,Financial Services,LTS
+3095,Financial Services,LVIDE.AS
+3096,Financial Services,LX
+3097,Financial Services,LYG
+3098,Financial Services,LYL
+3099,Financial Services,L
+3100,Financial Services,MAIN
+3101,Financial Services,MARA
+3102,Financial Services,MAV
+3103,Financial Services,MA
+3104,Financial Services,MBCN
+3105,Financial Services,MBFI
+3106,Financial Services,MBINO
+3107,Financial Services,MBINP
+3108,Financial Services,MBIN
+3109,Financial Services,MBI
+3110,Financial Services,MBN.TO
+3111,Financial Services,MBTF
+3112,Financial Services,MBWM
+3113,Financial Services,MCACU
+3114,Financial Services,MCBC
+3115,Financial Services,MCBS
+3116,Financial Services,MCB
+3117,Financial Services,MCC
+3118,Financial Services,MCN
+3119,Financial Services,MCO
+3120,Financial Services,MCV
+3121,Financial Services,MCY
+3122,Financial Services,MC
+3123,Financial Services,MDLY
+3124,Financial Services,MELR
+3125,Financial Services,MEN
+3126,Financial Services,MET
+3127,Financial Services,MF.PA
+3128,Financial Services,MFAC
+3129,Financial Services,MFC.TO
+3130,Financial Services,MFC
+3131,Financial Services,MFD
+3132,Financial Services,MFG
+3133,Financial Services,MFH
+3134,Financial Services,MFIN
+3135,Financial Services,MFM
+3136,Financial Services,MFNC
+3137,Financial Services,MFSF
+3138,Financial Services,MGI
+3139,Financial Services,MGYR
+3140,Financial Services,MHD
+3141,Financial Services,MHE
+3142,Financial Services,MHI
+3143,Financial Services,MHLD
+3144,Financial Services,MIC.TO
+3145,Financial Services,MKL
+3146,Financial Services,MKP.TO
+3147,Financial Services,MKTX
+3148,Financial Services,MLAEM.PA
+3149,Financial Services,MLCFM.PA
+3150,Financial Services,MLCOU.PA
+3151,Financial Services,MLCVG.PA
+3152,Financial Services,MLERO.PA
+3153,Financial Services,MLGRC.PA
+3154,Financial Services,MLMON.PA
+3155,Financial Services,MLNMA.PA
+3156,Financial Services,MLTRA.PA
+3157,Financial Services,MLVF
+3158,Financial Services,MMAC
+3159,Financial Services,MMC
+3160,Financial Services,MMD
+3161,Financial Services,MMU
+3162,Financial Services,MNCLU
+3163,Financial Services,MNCL
+3164,Financial Services,MNP
+3165,Financial Services,MNSB
+3166,Financial Services,MN
+3167,Financial Services,MOFG
+3168,Financial Services,MONC.PA
+3169,Financial Services,MOP.BR
+3170,Financial Services,MORN
+3171,Financial Services,MPB
+3172,Financial Services,MQT
+3173,Financial Services,MQY
+3174,Financial Services,MRBK
+3175,Financial Services,MRCC
+3176,Financial Services,MRLN
+3177,Financial Services,MSBF
+3178,Financial Services,MSBI
+3179,Financial Services,MSB
+3180,Financial Services,MSCI
+3181,Financial Services,MSFG
+3182,Financial Services,MSL
+3183,Financial Services,MSP
+3184,Financial Services,MSVB
+3185,Financial Services,MS
+3186,Financial Services,MTB
+3187,Financial Services,MTG
+3188,Financial Services,MUA
+3189,Financial Services,MUE
+3190,Financial Services,MUFG
+3191,Financial Services,MUI
+3192,Financial Services,MUS
+3193,Financial Services,MVBF
+3194,Financial Services,MVC
+3195,Financial Services,MVF
+3196,Financial Services,MVT
+3197,Financial Services,MYD
+3198,Financial Services,MYFW
+3199,Financial Services,MYF
+3200,Financial Services,NA.TO
+3201,Financial Services,NAVG
+3202,Financial Services,NAVI
+3203,Financial Services,NBAC
+3204,Financial Services,NBHC
+3205,Financial Services,NBN
+3206,Financial Services,NBTB
+3207,Financial Services,NCBS
+3208,Financial Services,NCOM
+3209,Financial Services,NCV
+3210,Financial Services,NCZ
+3211,Financial Services,NDAQ
+3212,Financial Services,NEWT
+3213,Financial Services,NEXTS.PA
+3214,Financial Services,NFBK
+3215,Financial Services,NFC
+3216,Financial Services,NFIN
+3217,Financial Services,NGHCP
+3218,Financial Services,NGHC
+3219,Financial Services,NHF
+3220,Financial Services,NHLD
+3221,Financial Services,NHS
+3222,Financial Services,NIBC.AS
+3223,Financial Services,NICK
+3224,Financial Services,NIE
+3225,Financial Services,NKSH
+3226,Financial Services,NMFC
+3227,Financial Services,NMIH
+3228,Financial Services,NML
+3229,Financial Services,NMR
+3230,Financial Services,NN.AS
+3231,Financial Services,NNI
+3232,Financial Services,NOAH
+3233,Financial Services,NODK
+3234,Financial Services,NPA
+3235,Financial Services,NRIM
+3236,Financial Services,NSEC
+3237,Financial Services,NSM
+3238,Financial Services,NTB
+3239,Financial Services,NTG
+3240,Financial Services,NTRSO
+3241,Financial Services,NTRSP
+3242,Financial Services,NTRS
+3243,Financial Services,NWBI
+3244,Financial Services,NWFL
+3245,Financial Services,NWLI
+3246,Financial Services,NYCB
+3247,Financial Services,OAC
+3248,Financial Services,OAK
+3249,Financial Services,OBNK
+3250,Financial Services,OCCI
+3251,Financial Services,OCFCP
+3252,Financial Services,OCFC
+3253,Financial Services,OCN
+3254,Financial Services,OCSI
+3255,Financial Services,OCSL
+3256,Financial Services,OFED
+3257,Financial Services,OFG
+3258,Financial Services,OFS
+3259,Financial Services,OLBK
+3260,Financial Services,OLY.TO
+3261,Financial Services,OMF
+3262,Financial Services,ONB
+3263,Financial Services,ONDK
+3264,Financial Services,ONEX.TO
+3265,Financial Services,OPBK
+3266,Financial Services,OPB
+3267,Financial Services,OPES
+3268,Financial Services,OPHC
+3269,Financial Services,OPOF
+3270,Financial Services,OPRT
+3271,Financial Services,OPY
+3272,Financial Services,ORCC
+3273,Financial Services,ORI
+3274,Financial Services,ORRF
+3275,Financial Services,ORSN
+3276,Financial Services,OSBCP
+3277,Financial Services,OSBC
+3278,Financial Services,OTTW
+3279,Financial Services,OVBC
+3280,Financial Services,OVLY
+3281,Financial Services,OXBR
+3282,Financial Services,OXLC
+3283,Financial Services,OXSQ
+3284,Financial Services,OZK
+3285,Financial Services,PAACU
+3286,Financial Services,PAAC
+3287,Financial Services,PACQU
+3288,Financial Services,PACQ
+3289,Financial Services,PACW
+3290,Financial Services,PBBI
+3291,Financial Services,PBCT
+3292,Financial Services,PBFS
+3293,Financial Services,PBHC
+3294,Financial Services,PBIP
+3295,Financial Services,PBSK
+3296,Financial Services,PB
+3297,Financial Services,PCB
+3298,Financial Services,PCI
+3299,Financial Services,PCM
+3300,Financial Services,PCN
+3301,Financial Services,PCSB
+3302,Financial Services,PDI
+3303,Financial Services,PDLB
+3304,Financial Services,PDV.TO
+3305,Financial Services,PEBK
+3306,Financial Services,PEBO
+3307,Financial Services,PEO
+3308,Financial Services,PFBC
+3309,Financial Services,PFBI
+3310,Financial Services,PFG
+3311,Financial Services,PFHD
+3312,Financial Services,PFH
+3313,Financial Services,PFIS
+3314,Financial Services,PFLT
+3315,Financial Services,PFN
+3316,Financial Services,PFSI
+3317,Financial Services,PFS
+3318,Financial Services,PGC
+3319,Financial Services,PGR
+3320,Financial Services,PHCF
+3321,Financial Services,PHH
+3322,Financial Services,PHT
+3323,Financial Services,PIC
+3324,Financial Services,PIHPP
+3325,Financial Services,PIH
+3326,Financial Services,PIM
+3327,Financial Services,PIPR
+3328,Financial Services,PIY
+3329,Financial Services,PJC
+3330,Financial Services,PJT
+3331,Financial Services,PKBK
+3332,Financial Services,PKO
+3333,Financial Services,PLBC
+3334,Financial Services,PLMR
+3335,Financial Services,PMBC
+3336,Financial Services,PMM
+3337,Financial Services,PMO
+3338,Financial Services,PMX
+3339,Financial Services,PNBK
+3340,Financial Services,PNC
+3341,Financial Services,PNFPP
+3342,Financial Services,PNFP
+3343,Financial Services,PNNT
+3344,Financial Services,PNP.TO
+3345,Financial Services,POW.TO
+3346,Financial Services,PPBI
+3347,Financial Services,PPHI
+3348,Financial Services,PRAA
+3349,Financial Services,PRA
+3350,Financial Services,PRI
+3351,Financial Services,PRK
+3352,Financial Services,PROS
+3353,Financial Services,PROV
+3354,Financial Services,PRU
+3355,Financial Services,PSEC
+3356,Financial Services,PSH.AS
+3357,Financial Services,PTVCA
+3358,Financial Services,PTVCB
+3359,Financial Services,PT
+3360,Financial Services,PUB
+3361,Financial Services,PVBC
+3362,Financial Services,PWOD
+3363,Financial Services,PYPL
+3364,Financial Services,PZC
+3365,Financial Services,PZN
+3366,Financial Services,QCRH
+3367,Financial Services,QD
+3368,Financial Services,QFG.BR
+3369,Financial Services,QFIN
+3370,Financial Services,QIWI
+3371,Financial Services,RAND
+3372,Financial Services,RA
+3373,Financial Services,RBB
+3374,Financial Services,RBCAA
+3375,Financial Services,RBKB
+3376,Financial Services,RBNC
+3377,Financial Services,RBS
+3378,Financial Services,RCG
+3379,Financial Services,RCS
+3380,Financial Services,RDN
+3381,Financial Services,REINA.AS
+3382,Financial Services,RE
+3383,Financial Services,RF.PA
+3384,Financial Services,RFI
+3385,Financial Services,RF
+3386,Financial Services,RGA
+3387,Financial Services,RGT
+3388,Financial Services,RILYP
+3389,Financial Services,RILY
+3390,Financial Services,RIVE
+3391,Financial Services,RIV
+3392,Financial Services,RJF
+3393,Financial Services,RLI
+3394,Financial Services,RMBI
+3395,Financial Services,RMG
+3396,Financial Services,RM
+3397,Financial Services,RNDB
+3398,Financial Services,RNR
+3399,Financial Services,RNST
+3400,Financial Services,ROTH.PA
+3401,Financial Services,RPLA
+3402,Financial Services,RRBI
+3403,Financial Services,RVSB
+3404,Financial Services,RVT
+3405,Financial Services,RY.TO
+3406,Financial Services,RY
+3407,Financial Services,RZA
+3408,Financial Services,SAFT
+3409,Financial Services,SAL
+3410,Financial Services,SAMAU
+3411,Financial Services,SAMA
+3412,Financial Services,SAMG
+3413,Financial Services,SAQNU
+3414,Financial Services,SAQN
+3415,Financial Services,SAR
+3416,Financial Services,SASR
+3417,Financial Services,SBBX
+3418,Financial Services,SBC.TO
+3419,Financial Services,SBCF
+3420,Financial Services,SBER.ME
+3421,Financial Services,SBE
+3422,Financial Services,SBFGP
+3423,Financial Services,SBFG
+3424,Financial Services,SBI
+3425,Financial Services,SBN.TO
+3426,Financial Services,SBNY
+3427,Financial Services,SBSI
+3428,Financial Services,SBT
+3429,Financial Services,SCD
+3430,Financial Services,SCHW
+3431,Financial Services,SCM
+3432,Financial Services,SCPE
+3433,Financial Services,SCR.PA
+3434,Financial Services,SCU
+3435,Financial Services,SC
+3436,Financial Services,SEC.TO
+3437,Financial Services,SEIC
+3438,Financial Services,SFBC
+3439,Financial Services,SFBS
+3440,Financial Services,SFE
+3441,Financial Services,SFNC
+3442,Financial Services,SFST
+3443,Financial Services,SFTW
+3444,Financial Services,SF
+3445,Financial Services,SGB
+3446,Financial Services,SGZA
+3447,Financial Services,SG
+3448,Financial Services,SHBI
+3449,Financial Services,SHG
+3450,Financial Services,SHLL
+3451,Financial Services,SIEB
+3452,Financial Services,SIFI
+3453,Financial Services,SIGI
+3454,Financial Services,SII.TO
+3455,Financial Services,SIVBP
+3456,Financial Services,SIVB
+3457,Financial Services,SI
+3458,Financial Services,SLCT
+3459,Financial Services,SLF.TO
+3460,Financial Services,SLF
+3461,Financial Services,SLMBP
+3462,Financial Services,SLM
+3463,Financial Services,SLRC
+3464,Financial Services,SMBC
+3465,Financial Services,SMBK
+3466,Financial Services,SMFG
+3467,Financial Services,SMMCU
+3468,Financial Services,SMMC
+3469,Financial Services,SMMF
+3470,Financial Services,SNFCA
+3471,Financial Services,SNV
+3472,Financial Services,SOF.BR
+3473,Financial Services,SOFR.PA
+3474,Financial Services,SONA
+3475,Financial Services,SOR
+3476,Financial Services,SPAQ
+3477,Financial Services,SPFI
+3478,Financial Services,SPGI
+3479,Financial Services,SRACU
+3480,Financial Services,SRCE
+3481,Financial Services,SRL
+3482,Financial Services,SRV
+3483,Financial Services,SSBI
+3484,Financial Services,SSB
+3485,Financial Services,SSFN
+3486,Financial Services,SSPKU
+3487,Financial Services,SSPK
+3488,Financial Services,SSSS
+3489,Financial Services,STBA
+3490,Financial Services,STBZ
+3491,Financial Services,STC
+3492,Financial Services,STFC
+3493,Financial Services,STI
+3494,Financial Services,STL
+3495,Financial Services,STND
+3496,Financial Services,STT
+3497,Financial Services,STXB
+3498,Financial Services,SUNS
+3499,Financial Services,SVBI
+3500,Financial Services,SVVC
+3501,Financial Services,SWH.TO
+3502,Financial Services,SWKH
+3503,Financial Services,SYBT
+3504,Financial Services,SYF
+3505,Financial Services,TBBK
+3506,Financial Services,TBK
+3507,Financial Services,TBNK
+3508,Financial Services,TCBIP
+3509,Financial Services,TCBIW
+3510,Financial Services,TCBI
+3511,Financial Services,TCBK
+3512,Financial Services,TCFC
+3513,Financial Services,TCF
+3514,Financial Services,TCPC
+3515,Financial Services,TCRD
+3516,Financial Services,TD.TO
+3517,Financial Services,TDACU
+3518,Financial Services,TDAC
+3519,Financial Services,TD
+3520,Financial Services,TEAF
+3521,Financial Services,TECTP
+3522,Financial Services,TEI
+3523,Financial Services,TF.TO
+3524,Financial Services,TFC
+3525,Financial Services,TFSL
+3526,Financial Services,THBR
+3527,Financial Services,THCAU
+3528,Financial Services,THCA
+3529,Financial Services,THCBU
+3530,Financial Services,THCB
+3531,Financial Services,THFF
+3532,Financial Services,THGA
+3533,Financial Services,THG
+3534,Financial Services,THQ
+3535,Financial Services,THW
+3536,Financial Services,TIBR
+3537,Financial Services,TIGR
+3538,Financial Services,TINC.BR
+3539,Financial Services,TIPT
+3540,Financial Services,TKKSU
+3541,Financial Services,TKKS
+3542,Financial Services,TKO.PA
+3543,Financial Services,TMP
+3544,Financial Services,TOTAU
+3545,Financial Services,TOTA
+3546,Financial Services,TOWN
+3547,Financial Services,TPRE
+3548,Financial Services,TPVG
+3549,Financial Services,TRCB
+3550,Financial Services,TREE
+3551,Financial Services,TRMK
+3552,Financial Services,TRST
+3553,Financial Services,TRUP
+3554,Financial Services,TRV
+3555,Financial Services,TSBK
+3556,Financial Services,TSC
+3557,Financial Services,TSLF
+3558,Financial Services,TSLX
+3559,Financial Services,TST
+3560,Financial Services,TURN
+3561,Financial Services,TW
+3562,Financial Services,TYG
+3563,Financial Services,TY
+3564,Financial Services,TZACU
+3565,Financial Services,TZAC
+3566,Financial Services,TZS.TO
+3567,Financial Services,UBCP
+3568,Financial Services,UBFO
+3569,Financial Services,UBNK
+3570,Financial Services,UBOH
+3571,Financial Services,UBSI
+3572,Financial Services,UBS
+3573,Financial Services,UCBA
+3574,Financial Services,UCBIO
+3575,Financial Services,UCBI
+3576,Financial Services,UCFC
+3577,Financial Services,UFCS
+3578,Financial Services,UFF.PA
+3579,Financial Services,UIHC
+3580,Financial Services,UMBF
+3581,Financial Services,UMPQ
+3582,Financial Services,UNAM
+3583,Financial Services,UNB
+3584,Financial Services,UNC.TO
+3585,Financial Services,UNM
+3586,Financial Services,UNTY
+3587,Financial Services,URB.TO
+3588,Financial Services,USB
+3589,Financial Services,UVE
+3590,Financial Services,UVSP
+3591,Financial Services,VALUE.AS
+3592,Financial Services,VALU
+3593,Financial Services,VB.TO
+3594,Financial Services,VBFC
+3595,Financial Services,VBTX
+3596,Financial Services,VCF
+3597,Financial Services,VCTR
+3598,Financial Services,VERY
+3599,Financial Services,VIL.PA
+3600,Financial Services,VIRT
+3601,Financial Services,VLK.AS
+3602,Financial Services,VLY
+3603,Financial Services,VOYA
+3604,Financial Services,VRNL.PA
+3605,Financial Services,VRTSP
+3606,Financial Services,VRTS
+3607,Financial Services,VR
+3608,Financial Services,VTA.AS
+3609,Financial Services,VTIQU
+3610,Financial Services,VTIQ
+3611,Financial Services,V
+3612,Financial Services,WABC
+3613,Financial Services,WAFDW
+3614,Financial Services,WAFD
+3615,Financial Services,WAL
+3616,Financial Services,WASH
+3617,Financial Services,WBK
+3618,Financial Services,WBS
+3619,Financial Services,WCFB
+3620,Financial Services,WDR
+3621,Financial Services,WD
+3622,Financial Services,WEBK
+3623,Financial Services,WETF
+3624,Financial Services,WFC
+3625,Financial Services,WF
+3626,Financial Services,WHFBL
+3627,Financial Services,WHF
+3628,Financial Services,WHG
+3629,Financial Services,WINS
+3630,Financial Services,WLTW
+3631,Financial Services,WNEB
+3632,Financial Services,WRB
+3633,Financial Services,WRLD
+3634,Financial Services,WSBC
+3635,Financial Services,WSBF
+3636,Financial Services,WSFS
+3637,Financial Services,WTBA
+3638,Financial Services,WTFCM
+3639,Financial Services,WTFCP
+3640,Financial Services,WTFCW
+3641,Financial Services,WTFC
+3642,Financial Services,WTM
+3643,Financial Services,WTREP
+3644,Financial Services,WTRE
+3645,Financial Services,WU
+3646,Financial Services,WVFC
+3647,Financial Services,X.TO
+3648,Financial Services,XAU.TO
+3649,Financial Services,XL
+3650,Financial Services,XP
+3651,Financial Services,XRF
+3652,Financial Services,XTD.TO
+3653,Financial Services,XYF
+3654,Financial Services,YATRA.AS
+3655,Financial Services,YIN
+3656,Financial Services,YRD
+3657,Financial Services,Y
+3658,Financial Services,ZAIS
+3659,Financial Services,ZBK
+3660,Financial Services,ZIONP
+3661,Financial Services,ZIONW
+3662,Financial Services,ZIONZ
+3663,Financial Services,ZION
+3664,Financial Services,ZTR
+3665,Healthcare,AB.PA
+3666,Healthcare,ABAX
+3667,Healthcare,ABBV
+3668,Healthcare,ABC
+3669,Healthcare,ABEO
+3670,Healthcare,ABIO
+3671,Healthcare,ABMD
+3672,Healthcare,ABNX.PA
+3673,Healthcare,ABT
+3674,Healthcare,ABUS
+3675,Healthcare,ABVX.PA
+3676,Healthcare,ACAD
+3677,Healthcare,ACB
+3678,Healthcare,ACER
+3679,Healthcare,ACHC
+3680,Healthcare,ACHN
+3681,Healthcare,ACHV
+3682,Healthcare,ACIU
+3683,Healthcare,ACOR
+3684,Healthcare,ACPH.BR
+3685,Healthcare,ACRS
+3686,Healthcare,ACRX
+3687,Healthcare,ACST
+3688,Healthcare,ADAP
+3689,Healthcare,ADCT
+3690,Healthcare,ADIL
+3691,Healthcare,ADMA
+3692,Healthcare,ADMP
+3693,Healthcare,ADMS
+3694,Healthcare,ADOC.PA
+3695,Healthcare,ADPT
+3696,Healthcare,ADRO
+3697,Healthcare,ADUS
+3698,Healthcare,ADVIC.PA
+3699,Healthcare,ADVM
+3700,Healthcare,ADXSW
+3701,Healthcare,ADXS
+3702,Healthcare,AEMD
+3703,Healthcare,AERI
+3704,Healthcare,AET
+3705,Healthcare,AEZS
+3706,Healthcare,AFAM
+3707,Healthcare,AFMD
+3708,Healthcare,AGEN
+3709,Healthcare,AGE
+3710,Healthcare,AGIO
+3711,Healthcare,AGLE
+3712,Healthcare,AGN
+3713,Healthcare,AGRX
+3714,Healthcare,AGTC
+3715,Healthcare,AHCO
+3716,Healthcare,AHPI
+3717,Healthcare,AIH
+3718,Healthcare,AIKI
+3719,Healthcare,AIMT
+3720,Healthcare,AIM
+3721,Healthcare,AKAO
+3722,Healthcare,AKBA
+3723,Healthcare,AKCA
+3724,Healthcare,AKER
+3725,Healthcare,AKRO
+3726,Healthcare,AKRX
+3727,Healthcare,AKTX
+3728,Healthcare,ALBIO.PA
+3729,Healthcare,ALBLU.PA
+3730,Healthcare,ALBO
+3731,Healthcare,ALBPS.PA
+3732,Healthcare,ALCAR.PA
+3733,Healthcare,ALCJ.PA
+3734,Healthcare,ALCLS.PA
+3735,Healthcare,ALC
+3736,Healthcare,ALDEI.PA
+3737,Healthcare,ALDR
+3738,Healthcare,ALDX
+3739,Healthcare,ALECR.PA
+3740,Healthcare,ALEC
+3741,Healthcare,ALERS.PA
+3742,Healthcare,ALGEN.PA
+3743,Healthcare,ALGN
+3744,Healthcare,ALHYG.PA
+3745,Healthcare,ALICR.PA
+3746,Healthcare,ALIMP.PA
+3747,Healthcare,ALIM
+3748,Healthcare,ALINS.PA
+3749,Healthcare,ALINT.PA
+3750,Healthcare,ALKS
+3751,Healthcare,ALLK
+3752,Healthcare,ALLO
+3753,Healthcare,ALMDT.PA
+3754,Healthcare,ALMED.PA
+3755,Healthcare,ALNA
+3756,Healthcare,ALNEV.PA
+3757,Healthcare,ALNOV.PA
+3758,Healthcare,ALNOX.PA
+3759,Healthcare,ALNY
+3760,Healthcare,ALOG
+3761,Healthcare,ALONC.PA
+3762,Healthcare,ALPAT.PA
+3763,Healthcare,ALPHA.PA
+3764,Healthcare,ALPN
+3765,Healthcare,ALPRE.PA
+3766,Healthcare,ALQA
+3767,Healthcare,ALQGC.PA
+3768,Healthcare,ALRN
+3769,Healthcare,ALSAF.PA
+3770,Healthcare,ALSEN.PA
+3771,Healthcare,ALSGD.PA
+3772,Healthcare,ALSPW.PA
+3773,Healthcare,ALTER.PA
+3774,Healthcare,ALTHE.PA
+3775,Healthcare,ALTHX.PA
+3776,Healthcare,ALT
+3777,Healthcare,ALVAL.PA
+3778,Healthcare,ALVMG.PA
+3779,Healthcare,ALXN
+3780,Healthcare,AMAG
+3781,Healthcare,AMED
+3782,Healthcare,AMEH
+3783,Healthcare,AMGN
+3784,Healthcare,AMN
+3785,Healthcare,AMPE
+3786,Healthcare,AMPH
+3787,Healthcare,AMPLI.PA
+3788,Healthcare,AMRN
+3789,Healthcare,AMRX
+3790,Healthcare,AMS
+3791,Healthcare,AMTI
+3792,Healthcare,ANAB
+3793,Healthcare,ANGO
+3794,Healthcare,ANIK
+3795,Healthcare,ANIP
+3796,Healthcare,ANIX
+3797,Healthcare,ANPC
+3798,Healthcare,ANTH
+3799,Healthcare,ANTM
+3800,Healthcare,APEN
+3801,Healthcare,APHA
+3802,Healthcare,APLS
+3803,Healthcare,APLT
+3804,Healthcare,APM
+3805,Healthcare,APOP
+3806,Healthcare,APRE
+3807,Healthcare,APS.TO
+3808,Healthcare,APTO
+3809,Healthcare,APTX
+3810,Healthcare,APVO
+3811,Healthcare,APYX
+3812,Healthcare,AQST
+3813,Healthcare,ARAV
+3814,Healthcare,ARAY
+3815,Healthcare,ARA
+3816,Healthcare,ARCT
+3817,Healthcare,ARDM
+3818,Healthcare,ARDS
+3819,Healthcare,ARDX
+3820,Healthcare,ARGS
+3821,Healthcare,ARGX.BR
+3822,Healthcare,ARMP
+3823,Healthcare,ARNA
+3824,Healthcare,ARPO
+3825,Healthcare,ARQL
+3826,Healthcare,ARRY
+3827,Healthcare,ARTL
+3828,Healthcare,ARVN
+3829,Healthcare,ARWR
+3830,Healthcare,ASIT.BR
+3831,Healthcare,ASLN
+3832,Healthcare,ASMB
+3833,Healthcare,ASND
+3834,Healthcare,ASP.TO
+3835,Healthcare,ATEC
+3836,Healthcare,ATHX
+3837,Healthcare,ATNM
+3838,Healthcare,ATNX
+3839,Healthcare,ATOS
+3840,Healthcare,ATRA
+3841,Healthcare,ATRC
+3842,Healthcare,ATRI
+3843,Healthcare,ATRS
+3844,Healthcare,ATXI
+3845,Healthcare,AUP.TO
+3846,Healthcare,AUPH
+3847,Healthcare,AUTL
+3848,Healthcare,AVCO
+3849,Healthcare,AVDL
+3850,Healthcare,AVEO
+3851,Healthcare,AVGR
+3852,Healthcare,AVNS
+3853,Healthcare,AVRO
+3854,Healthcare,AVXL
+3855,Healthcare,AXDX
+3856,Healthcare,AXGN
+3857,Healthcare,AXGT
+3858,Healthcare,AXLA
+3859,Healthcare,AXNX
+3860,Healthcare,AXSM
+3861,Healthcare,AYTU
+3862,Healthcare,AZN
+3863,Healthcare,AZRX
+3864,Healthcare,A
+3865,Healthcare,BBIO
+3866,Healthcare,BBI
+3867,Healthcare,BCEL
+3868,Healthcare,BCLI
+3869,Healthcare,BDSI
+3870,Healthcare,BDXB
+3871,Healthcare,BEAT
+3872,Healthcare,BFRA
+3873,Healthcare,BHVN
+3874,Healthcare,BIIB
+3875,Healthcare,BIM.PA
+3876,Healthcare,BIMI
+3877,Healthcare,BIO-B
+3878,Healthcare,BIOL
+3879,Healthcare,BIOS
+3880,Healthcare,BIO
+3881,Healthcare,BIVI
+3882,Healthcare,BKD
+3883,Healthcare,BLCM
+3884,Healthcare,BLFS
+3885,Healthcare,BLRX
+3886,Healthcare,BLUE
+3887,Healthcare,BMRA
+3888,Healthcare,BMRN
+3889,Healthcare,BMY
+3890,Healthcare,BNGO
+3891,Healthcare,BNKL
+3892,Healthcare,BNR
+3893,Healthcare,BNTC
+3894,Healthcare,BNTX
+3895,Healthcare,BOI.PA
+3896,Healthcare,BOLD
+3897,Healthcare,BOTHE.BR
+3898,Healthcare,BPMC
+3899,Healthcare,BPMX
+3900,Healthcare,BPTH
+3901,Healthcare,BRKR
+3902,Healthcare,BSGM
+3903,Healthcare,BSPM
+3904,Healthcare,BSTC
+3905,Healthcare,BSX
+3906,Healthcare,BTAI
+3907,Healthcare,BU.TO
+3908,Healthcare,BVXV
+3909,Healthcare,BWAY
+3910,Healthcare,BYSI
+3911,Healthcare,CABA
+3912,Healthcare,CAH
+3913,Healthcare,CALA
+3914,Healthcare,CANF
+3915,Healthcare,CAPR
+3916,Healthcare,CARA
+3917,Healthcare,CASI
+3918,Healthcare,CASM
+3919,Healthcare,CATB
+3920,Healthcare,CATS
+3921,Healthcare,CBAY
+3922,Healthcare,CBIO
+3923,Healthcare,CBLI
+3924,Healthcare,CBMG
+3925,Healthcare,CBM
+3926,Healthcare,CBPO
+3927,Healthcare,CCM
+3928,Healthcare,CCXI
+3929,Healthcare,CDMOP
+3930,Healthcare,CDMO
+3931,Healthcare,CDNA
+3932,Healthcare,CDTX
+3933,Healthcare,CDXC
+3934,Healthcare,CDXS
+3935,Healthcare,CELC
+3936,Healthcare,CELGZ
+3937,Healthcare,CELG
+3938,Healthcare,CEMI
+3939,Healthcare,CERC
+3940,Healthcare,CERN
+3941,Healthcare,CERS
+3942,Healthcare,CFMS
+3943,Healthcare,CFRX
+3944,Healthcare,CGEN
+3945,Healthcare,CGIX
+3946,Healthcare,CGM.PA
+3947,Healthcare,CGNT
+3948,Healthcare,CHEK
+3949,Healthcare,CHE
+3950,Healthcare,CHFS
+3951,Healthcare,CHMA
+3952,Healthcare,CHNG
+3953,Healthcare,CHRS
+3954,Healthcare,CIVI
+3955,Healthcare,CI
+3956,Healthcare,CJJD
+3957,Healthcare,CKPT
+3958,Healthcare,CLBS
+3959,Healthcare,CLDX
+3960,Healthcare,CLGN
+3961,Healthcare,CLLS
+3962,Healthcare,CLPT
+3963,Healthcare,CLRB
+3964,Healthcare,CLSD
+3965,Healthcare,CLSN
+3966,Healthcare,CLVS
+3967,Healthcare,CMD
+3968,Healthcare,CMRX
+3969,Healthcare,CNAT
+3970,Healthcare,CNCE
+3971,Healthcare,CNC
+3972,Healthcare,CNMD
+3973,Healthcare,CNSP
+3974,Healthcare,CNST
+3975,Healthcare,CNTG
+3976,Healthcare,COCP
+3977,Healthcare,CODX
+3978,Healthcare,COLL
+3979,Healthcare,COO
+3980,Healthcare,CORI
+3981,Healthcare,CORT
+3982,Healthcare,CORV
+3983,Healthcare,COX.PA
+3984,Healthcare,CO
+3985,Healthcare,CPH.TO
+3986,Healthcare,CPHI
+3987,Healthcare,CPIX
+3988,Healthcare,CPRX
+3989,Healthcare,CPSI
+3990,Healthcare,CRBP
+3991,Healthcare,CRDF
+3992,Healthcare,CRH.TO
+3993,Healthcare,CRHM
+3994,Healthcare,CRIS
+3995,Healthcare,CRL
+3996,Healthcare,CRMD
+3997,Healthcare,CRNX
+3998,Healthcare,CRSP
+3999,Healthcare,CRTX
+4000,Healthcare,CRVS
+4001,Healthcare,CRY
+4002,Healthcare,CSBR
+4003,Healthcare,CSII
+4004,Healthcare,CSLT
+4005,Healthcare,CSTL
+4006,Healthcare,CSU
+4007,Healthcare,CTIC
+4008,Healthcare,CTLT
+4009,Healthcare,CTMX
+4010,Healthcare,CTSO
+4011,Healthcare,CTX.TO
+4012,Healthcare,CTXR
+4013,Healthcare,CUE
+4014,Healthcare,CUTR
+4015,Healthcare,CVET
+4016,Healthcare,CVM
+4017,Healthcare,CVS
+4018,Healthcare,CWBR
+4019,Healthcare,CYAD.BR
+4020,Healthcare,CYAD
+4021,Healthcare,CYCCP
+4022,Healthcare,CYCC
+4023,Healthcare,CYCN
+4024,Healthcare,CYHHZ
+4025,Healthcare,CYH
+4026,Healthcare,CYTK
+4027,Healthcare,CYTR
+4028,Healthcare,DARE
+4029,Healthcare,DBV.PA
+4030,Healthcare,DBVT
+4031,Healthcare,DCPH
+4032,Healthcare,DCTH
+4033,Healthcare,DEDAL.PA
+4034,Healthcare,DERM
+4035,Healthcare,DFFN
+4036,Healthcare,DGM.PA
+4037,Healthcare,DGX
+4038,Healthcare,DHR
+4039,Healthcare,DIM.PA
+4040,Healthcare,DMAC
+4041,Healthcare,DMPI
+4042,Healthcare,DMTK
+4043,Healthcare,DNLI
+4044,Healthcare,DOVA
+4045,Healthcare,DPLO
+4046,Healthcare,DR.TO
+4047,Healthcare,DRADP
+4048,Healthcare,DRAD
+4049,Healthcare,DRIO
+4050,Healthcare,DRNA
+4051,Healthcare,DRRX
+4052,Healthcare,DTIL
+4053,Healthcare,DVAX
+4054,Healthcare,DVA
+4055,Healthcare,DVCR
+4056,Healthcare,DXCM
+4057,Healthcare,DYAI
+4058,Healthcare,DYNT
+4059,Healthcare,EARS
+4060,Healthcare,EBS
+4061,Healthcare,ECOR
+4062,Healthcare,ECYT
+4063,Healthcare,EDAP
+4064,Healthcare,EDGE
+4065,Healthcare,EDIT
+4066,Healthcare,EDSA
+4067,Healthcare,EDT.TO
+4068,Healthcare,EGRX
+4069,Healthcare,EHC
+4070,Healthcare,EIDX
+4071,Healthcare,EIGR
+4072,Healthcare,EKSO
+4073,Healthcare,EL.PA
+4074,Healthcare,ELAN
+4075,Healthcare,ELGX
+4076,Healthcare,ELMD
+4077,Healthcare,ELOX
+4078,Healthcare,EMG.PA
+4079,Healthcare,EMITF
+4080,Healthcare,EMMA
+4081,Healthcare,ENDP
+4082,Healthcare,ENLV
+4083,Healthcare,ENOB
+4084,Healthcare,ENSG
+4085,Healthcare,ENTA
+4086,Healthcare,ENTX
+4087,Healthcare,ENZ
+4088,Healthcare,EOLS
+4089,Healthcare,EOSI.PA
+4090,Healthcare,EPIX
+4091,Healthcare,EPZM
+4092,Healthcare,EQ
+4093,Healthcare,ERF.PA
+4094,Healthcare,ERYP.PA
+4095,Healthcare,ERYP
+4096,Healthcare,ESP.AS
+4097,Healthcare,ESPR
+4098,Healthcare,ESRX
+4099,Healthcare,ESTA
+4100,Healthcare,ETNB
+4101,Healthcare,ETON
+4102,Healthcare,ETTX
+4103,Healthcare,EVFM
+4104,Healthcare,EVGN
+4105,Healthcare,EVHC
+4106,Healthcare,EVH
+4107,Healthcare,EVLO
+4108,Healthcare,EVOK
+4109,Healthcare,EW
+4110,Healthcare,EXAS
+4111,Healthcare,EXE.TO
+4112,Healthcare,EXEL
+4113,Healthcare,EYEG
+4114,Healthcare,EYEN
+4115,Healthcare,EYES
+4116,Healthcare,EYPT
+4117,Healthcare,FAGR.BR
+4118,Healthcare,FALG.PA
+4119,Healthcare,FATE
+4120,Healthcare,FBIOP
+4121,Healthcare,FBIO
+4122,Healthcare,FCSC
+4123,Healthcare,FENC
+4124,Healthcare,FGEN
+4125,Healthcare,FIXX
+4126,Healthcare,FLDM
+4127,Healthcare,FLGT
+4128,Healthcare,FLXN
+4129,Healthcare,FMI
+4130,Healthcare,FMS
+4131,Healthcare,FOLD
+4132,Healthcare,FOMX
+4133,Healthcare,FONR
+4134,Healthcare,FPRX
+4135,Healthcare,FREQ
+4136,Healthcare,FRX.TO
+4137,Healthcare,FTSV
+4138,Healthcare,FULC
+4139,Healthcare,FVE
+4140,Healthcare,FWP
+4141,Healthcare,GALT
+4142,Healthcare,GBIO
+4143,Healthcare,GBT.PA
+4144,Healthcare,GBT
+4145,Healthcare,GDS.PA
+4146,Healthcare,GENE
+4147,Healthcare,GEN
+4148,Healthcare,GERN
+4149,Healthcare,GHDX
+4150,Healthcare,GHSI
+4151,Healthcare,GH
+4152,Healthcare,GILD
+4153,Healthcare,GKOS
+4154,Healthcare,GKTX.PA
+4155,Healthcare,GLMD
+4156,Healthcare,GLPG.AS
+4157,Healthcare,GLPG
+4158,Healthcare,GLYC
+4159,Healthcare,GMDA
+4160,Healthcare,GMED
+4161,Healthcare,GNCA
+4162,Healthcare,GNC
+4163,Healthcare,GNFT.PA
+4164,Healthcare,GNFT
+4165,Healthcare,GNLN
+4166,Healthcare,GNMK
+4167,Healthcare,GNMX
+4168,Healthcare,GNPX
+4169,Healthcare,GNRO.PA
+4170,Healthcare,GOSS
+4171,Healthcare,GRFS
+4172,Healthcare,GRTS
+4173,Healthcare,GRTX
+4174,Healthcare,GSK
+4175,Healthcare,GTBP.PA
+4176,Healthcare,GTHX
+4177,Healthcare,GTS
+4178,Healthcare,GTXI
+4179,Healthcare,GUD.TO
+4180,Healthcare,GV.PA
+4181,Healthcare,GWPH
+4182,Healthcare,HAE
+4183,Healthcare,HAIR
+4184,Healthcare,HALO
+4185,Healthcare,HAPP
+4186,Healthcare,HARP
+4187,Healthcare,HBIO
+4188,Healthcare,HBP.TO
+4189,Healthcare,HCAT
+4190,Healthcare,HCA
+4191,Healthcare,HCM
+4192,Healthcare,HCSG
+4193,Healthcare,HEPA
+4194,Healthcare,HEXO
+4195,Healthcare,HIIQ
+4196,Healthcare,HJLI
+4197,Healthcare,HMSY
+4198,Healthcare,HNGR
+4199,Healthcare,HOLX
+4200,Healthcare,HOOK
+4201,Healthcare,HOTH
+4202,Healthcare,HQY
+4203,Healthcare,HRC
+4204,Healthcare,HROW
+4205,Healthcare,HRTX
+4206,Healthcare,HSDT
+4207,Healthcare,HSIC
+4208,Healthcare,HSKA
+4209,Healthcare,HSTM
+4210,Healthcare,HSTO
+4211,Healthcare,HTBX
+4212,Healthcare,HTGM
+4213,Healthcare,HUGE
+4214,Healthcare,HUM
+4215,Healthcare,HZNP
+4216,Healthcare,IART
+4217,Healthcare,IBAB.BR
+4218,Healthcare,IBIO
+4219,Healthcare,ICAD
+4220,Healthcare,ICCC
+4221,Healthcare,ICLR
+4222,Healthcare,ICPT
+4223,Healthcare,ICUI
+4224,Healthcare,IDRA
+4225,Healthcare,IDXG
+4226,Healthcare,IDXX
+4227,Healthcare,IDYA
+4228,Healthcare,IFRX
+4229,Healthcare,IGMS
+4230,Healthcare,IIN
+4231,Healthcare,ILMN
+4232,Healthcare,IMAB
+4233,Healthcare,IMAC
+4234,Healthcare,IMDZ
+4235,Healthcare,IMGN
+4236,Healthcare,IMMP
+4237,Healthcare,IMMU
+4238,Healthcare,IMNP
+4239,Healthcare,IMUC
+4240,Healthcare,IMUX
+4241,Healthcare,IMV.TO
+4242,Healthcare,IMVT
+4243,Healthcare,IMV
+4244,Healthcare,INCY
+4245,Healthcare,INFI
+4246,Healthcare,INFU
+4247,Healthcare,INGN
+4248,Healthcare,INMB
+4249,Healthcare,INMD
+4250,Healthcare,INOV
+4251,Healthcare,INO
+4252,Healthcare,INSM
+4253,Healthcare,INSP
+4254,Healthcare,INSY
+4255,Healthcare,INVA
+4256,Healthcare,IONS
+4257,Healthcare,IOVA
+4258,Healthcare,IPH.PA
+4259,Healthcare,IPHA
+4260,Healthcare,IPN.PA
+4261,Healthcare,IPXL
+4262,Healthcare,IQV
+4263,Healthcare,IRIX
+4264,Healthcare,IRMD
+4265,Healthcare,IRTC
+4266,Healthcare,IRWD
+4267,Healthcare,ISEE
+4268,Healthcare,ISRG
+4269,Healthcare,ISR
+4270,Healthcare,ITCI
+4271,Healthcare,ITGR
+4272,Healthcare,ITMR
+4273,Healthcare,ITRM
+4274,Healthcare,IVA.PA
+4275,Healthcare,IVC
+4276,Healthcare,IVTY
+4277,Healthcare,JAGX
+4278,Healthcare,JAZZ
+4279,Healthcare,JNCE
+4280,Healthcare,JNJ
+4281,Healthcare,JNP
+4282,Healthcare,JYNT
+4283,Healthcare,KALA
+4284,Healthcare,KALV
+4285,Healthcare,KDMN
+4286,Healthcare,KDS.AS
+4287,Healthcare,KERN
+4288,Healthcare,KERX
+4289,Healthcare,KIDS
+4290,Healthcare,KIN
+4291,Healthcare,KLDO
+4292,Healthcare,KMDA
+4293,Healthcare,KMPH
+4294,Healthcare,KND
+4295,Healthcare,KNSA
+4296,Healthcare,KOD
+4297,Healthcare,KORI.PA
+4298,Healthcare,KPTI
+4299,Healthcare,KRMD
+4300,Healthcare,KRTX
+4301,Healthcare,KRYS
+4302,Healthcare,KTOV
+4303,Healthcare,KTWO
+4304,Healthcare,KURA
+4305,Healthcare,KZIA
+4306,Healthcare,KZR
+4307,Healthcare,LBIRD.PA
+4308,Healthcare,LCI
+4309,Healthcare,LCTX
+4310,Healthcare,LEGN
+4311,Healthcare,LGND
+4312,Healthcare,LHCG
+4313,Healthcare,LH
+4314,Healthcare,LIFE
+4315,Healthcare,LIVN
+4316,Healthcare,LJPC
+4317,Healthcare,LLIT
+4318,Healthcare,LLY
+4319,Healthcare,LMAT
+4320,Healthcare,LMNL
+4321,Healthcare,LMNX
+4322,Healthcare,LNA.PA
+4323,Healthcare,LNTH
+4324,Healthcare,LOGC
+4325,Healthcare,LOXO
+4326,Healthcare,LPCN
+4327,Healthcare,LPNT
+4328,Healthcare,LPTX
+4329,Healthcare,LQDA
+4330,Healthcare,LRMR
+4331,Healthcare,LTRN
+4332,Healthcare,LUMO
+4333,Healthcare,LVGO
+4334,Healthcare,LXRX
+4335,Healthcare,LYS.PA
+4336,Healthcare,MACK
+4337,Healthcare,MASI
+4338,Healthcare,MBIO
+4339,Healthcare,MBOT
+4340,Healthcare,MBRX
+4341,Healthcare,MBX.TO
+4342,Healthcare,MCK
+4343,Healthcare,MCRB
+4344,Healthcare,MDCO
+4345,Healthcare,MDGL
+4346,Healthcare,MDGS
+4347,Healthcare,MDRX
+4348,Healthcare,MDT
+4349,Healthcare,MDWD
+4350,Healthcare,MDXG
+4351,Healthcare,MDXH.BR
+4352,Healthcare,MD
+4353,Healthcare,MEDCL.PA
+4354,Healthcare,MEDP
+4355,Healthcare,MEDS
+4356,Healthcare,MEIP
+4357,Healthcare,MESO
+4358,Healthcare,MGEN
+4359,Healthcare,MGLN
+4360,Healthcare,MGNX
+4361,Healthcare,MGTA
+4362,Healthcare,MGTX
+4363,Healthcare,MICR
+4364,Healthcare,MIRM
+4365,Healthcare,MIST
+4366,Healthcare,MITO
+4367,Healthcare,MITRA.BR
+4368,Healthcare,MKEA.PA
+4369,Healthcare,MLND
+4370,Healthcare,MLNT
+4371,Healthcare,MLSBT.PA
+4372,Healthcare,MLSS
+4373,Healthcare,MMSI
+4374,Healthcare,MNKD
+4375,Healthcare,MNK
+4376,Healthcare,MNLO
+4377,Healthcare,MNOV
+4378,Healthcare,MNPR
+4379,Healthcare,MNTA
+4380,Healthcare,MOH
+4381,Healthcare,MORF
+4382,Healthcare,MOR
+4383,Healthcare,MOTS
+4384,Healthcare,MREO
+4385,Healthcare,MRIC
+4386,Healthcare,MRK.PA
+4387,Healthcare,MRKR
+4388,Healthcare,MRK
+4389,Healthcare,MRNA
+4390,Healthcare,MRNS
+4391,Healthcare,MRSN
+4392,Healthcare,MRTX
+4393,Healthcare,MSON
+4394,Healthcare,MTBCP
+4395,Healthcare,MTBC
+4396,Healthcare,MTD
+4397,Healthcare,MTEM
+4398,Healthcare,MTNB
+4399,Healthcare,MTP
+4400,Healthcare,MYGN
+4401,Healthcare,MYL
+4402,Healthcare,MYOK
+4403,Healthcare,MYOS
+4404,Healthcare,MYOV
+4405,Healthcare,MYO
+4406,Healthcare,NANO.PA
+4407,Healthcare,NAOV
+4408,Healthcare,NAVB
+4409,Healthcare,NBIX
+4410,Healthcare,NBRV
+4411,Healthcare,NBSE
+4412,Healthcare,NBY
+4413,Healthcare,NCNA
+4414,Healthcare,NDRA
+4415,Healthcare,NEOG
+4416,Healthcare,NEOS
+4417,Healthcare,NEO
+4418,Healthcare,NEPH
+4419,Healthcare,NEPT.TO
+4420,Healthcare,NEPT
+4421,Healthcare,NERV
+4422,Healthcare,NFH
+4423,Healthcare,NGM
+4424,Healthcare,NHC
+4425,Healthcare,NH
+4426,Healthcare,NKTR
+4427,Healthcare,NK
+4428,Healthcare,NLNK
+4429,Healthcare,NLTX
+4430,Healthcare,NMRD
+4431,Healthcare,NMTR
+4432,Healthcare,NNVC
+4433,Healthcare,NOVN
+4434,Healthcare,NRBO
+4435,Healthcare,NRC
+4436,Healthcare,NRI.TO
+4437,Healthcare,NSPR
+4438,Healthcare,NSTG
+4439,Healthcare,NTEC
+4440,Healthcare,NTGN
+4441,Healthcare,NTLA
+4442,Healthcare,NTRA
+4443,Healthcare,NTRP
+4444,Healthcare,NTUS
+4445,Healthcare,NURO
+4446,Healthcare,NUVA
+4447,Healthcare,NVAX
+4448,Healthcare,NVCN
+4449,Healthcare,NVCR
+4450,Healthcare,NVIV
+4451,Healthcare,NVO
+4452,Healthcare,NVRO
+4453,Healthcare,NVST
+4454,Healthcare,NVS
+4455,Healthcare,NVTA
+4456,Healthcare,NVUS
+4457,Healthcare,NXGN
+4458,Healthcare,NXTC
+4459,Healthcare,NXTM
+4460,Healthcare,NYMX
+4461,Healthcare,OBLN
+4462,Healthcare,OBSV
+4463,Healthcare,OCGN
+4464,Healthcare,OCUL
+4465,Healthcare,OCX
+4466,Healthcare,ODT
+4467,Healthcare,OFIX
+4468,Healthcare,OGEN
+4469,Healthcare,OGI
+4470,Healthcare,OMCL
+4471,Healthcare,OMED
+4472,Healthcare,OMER
+4473,Healthcare,OMI
+4474,Healthcare,ONC.TO
+4475,Healthcare,ONCE
+4476,Healthcare,ONCS
+4477,Healthcare,ONCT
+4478,Healthcare,ONCY
+4479,Healthcare,ONTX
+4480,Healthcare,ONVO
+4481,Healthcare,ONXEO.PA
+4482,Healthcare,OPCH
+4483,Healthcare,OPGN
+4484,Healthcare,OPK
+4485,Healthcare,OPNT
+4486,Healthcare,OPRX
+4487,Healthcare,OPTN
+4488,Healthcare,OREX
+4489,Healthcare,ORGO
+4490,Healthcare,ORGS
+4491,Healthcare,ORMP
+4492,Healthcare,ORP.PA
+4493,Healthcare,OSE.PA
+4494,Healthcare,OSMT
+4495,Healthcare,OSUR
+4496,Healthcare,OTIC
+4497,Healthcare,OTLK
+4498,Healthcare,OVID
+4499,Healthcare,OXFD
+4500,Healthcare,OXUR.BR
+4501,Healthcare,OYST
+4502,Healthcare,PACB
+4503,Healthcare,PAHC
+4504,Healthcare,PAVM
+4505,Healthcare,PBH
+4506,Healthcare,PBIO
+4507,Healthcare,PBYI
+4508,Healthcare,PCRX
+4509,Healthcare,PCVX
+4510,Healthcare,PDCO
+4511,Healthcare,PDEX
+4512,Healthcare,PDLI
+4513,Healthcare,PDSB
+4514,Healthcare,PEN
+4515,Healthcare,PETQ
+4516,Healthcare,PETS
+4517,Healthcare,PETX
+4518,Healthcare,PFE
+4519,Healthcare,PFNX
+4520,Healthcare,PGEN
+4521,Healthcare,PGNX
+4522,Healthcare,PGNY
+4523,Healthcare,PHA.PA
+4524,Healthcare,PHARM.AS
+4525,Healthcare,PHAS
+4526,Healthcare,PHAT
+4527,Healthcare,PHGE
+4528,Healthcare,PHG
+4529,Healthcare,PHIA.AS
+4530,Healthcare,PHIO
+4531,Healthcare,PHR
+4532,Healthcare,PINC
+4533,Healthcare,PIRS
+4534,Healthcare,PKI
+4535,Healthcare,PLRX
+4536,Healthcare,PLSE
+4537,Healthcare,PLXP
+4538,Healthcare,PLX
+4539,Healthcare,PMD
+4540,Healthcare,PMN.TO
+4541,Healthcare,PNTG
+4542,Healthcare,POAI
+4543,Healthcare,PODD
+4544,Healthcare,POXEL.PA
+4545,Healthcare,PRAH
+4546,Healthcare,PRGO
+4547,Healthcare,PRNB
+4548,Healthcare,PROF
+4549,Healthcare,PRPH
+4550,Healthcare,PRPO
+4551,Healthcare,PRQR
+4552,Healthcare,PRSC
+4553,Healthcare,PRTA
+4554,Healthcare,PRTK
+4555,Healthcare,PRTO
+4556,Healthcare,PRVB
+4557,Healthcare,PRVL
+4558,Healthcare,PSNL
+4559,Healthcare,PSTI
+4560,Healthcare,PSTV
+4561,Healthcare,PTCT
+4562,Healthcare,PTE
+4563,Healthcare,PTGX
+4564,Healthcare,PTIE
+4565,Healthcare,PTI
+4566,Healthcare,PTLA
+4567,Healthcare,PTN
+4568,Healthcare,PULM
+4569,Healthcare,QDEL
+4570,Healthcare,QGEN
+4571,Healthcare,QHC
+4572,Healthcare,QLGN
+4573,Healthcare,QTNT
+4574,Healthcare,QTRX
+4575,Healthcare,QURE
+4576,Healthcare,RAD
+4577,Healthcare,RAPT
+4578,Healthcare,RARE
+4579,Healthcare,RARX
+4580,Healthcare,RCEL
+4581,Healthcare,RCKT
+4582,Healthcare,RCM
+4583,Healthcare,RCUS
+4584,Healthcare,RDHL
+4585,Healthcare,RDNT
+4586,Healthcare,RDUS
+4587,Healthcare,RDY
+4588,Healthcare,REGN
+4589,Healthcare,REPH
+4590,Healthcare,REPL
+4591,Healthcare,RETA
+4592,Healthcare,REXN
+4593,Healthcare,RFL
+4594,Healthcare,RGEN
+4595,Healthcare,RGLS
+4596,Healthcare,RGNX
+4597,Healthcare,RHE
+4598,Healthcare,RIGL
+4599,Healthcare,RLMD
+4600,Healthcare,RMD
+4601,Healthcare,RMED
+4602,Healthcare,RMTI
+4603,Healthcare,RNA
+4604,Healthcare,RSLS
+4605,Healthcare,RTIX
+4606,Healthcare,RTRX
+4607,Healthcare,RTTR
+4608,Healthcare,RUBY
+4609,Healthcare,RVNC
+4610,Healthcare,RVP
+4611,Healthcare,RVX.TO
+4612,Healthcare,RWLK
+4613,Healthcare,RYTM
+4614,Healthcare,SAGE
+4615,Healthcare,SAN.PA
+4616,Healthcare,SAVA
+4617,Healthcare,SBBP
+4618,Healthcare,SBPH
+4619,Healthcare,SCPH
+4620,Healthcare,SCYX
+4621,Healthcare,SDC
+4622,Healthcare,SDT.PA
+4623,Healthcare,SEEL
+4624,Healthcare,SELB
+4625,Healthcare,SEM
+4626,Healthcare,SENS
+4627,Healthcare,SEQUA.BR
+4628,Healthcare,SESN
+4629,Healthcare,SGEN
+4630,Healthcare,SGMO
+4631,Healthcare,SGRY
+4632,Healthcare,SGYP
+4633,Healthcare,SHPG
+4634,Healthcare,SIA.TO
+4635,Healthcare,SIBN
+4636,Healthcare,SIEN
+4637,Healthcare,SIGA
+4638,Healthcare,SIGHT.PA
+4639,Healthcare,SILK
+4640,Healthcare,SINT
+4641,Healthcare,SLDB
+4642,Healthcare,SLGL
+4643,Healthcare,SLNO
+4644,Healthcare,SLRX
+4645,Healthcare,SLS
+4646,Healthcare,SMMT
+4647,Healthcare,SNCA
+4648,Healthcare,SNDL
+4649,Healthcare,SNDX
+4650,Healthcare,SNGX
+4651,Healthcare,SNNA
+4652,Healthcare,SNN
+4653,Healthcare,SNOA
+4654,Healthcare,SNSS
+4655,Healthcare,SNY
+4656,Healthcare,SOLY
+4657,Healthcare,SONN
+4658,Healthcare,SPHS
+4659,Healthcare,SPNE
+4660,Healthcare,SPPI
+4661,Healthcare,SPRO
+4662,Healthcare,SRDX
+4663,Healthcare,SRNE
+4664,Healthcare,SRPT
+4665,Healthcare,SRRA
+4666,Healthcare,SRRK
+4667,Healthcare,SRTS
+4668,Healthcare,SSI.PA
+4669,Healthcare,SSKN
+4670,Healthcare,SSY
+4671,Healthcare,STAA
+4672,Healthcare,STDY
+4673,Healthcare,STE
+4674,Healthcare,STIM
+4675,Healthcare,STML
+4676,Healthcare,STOK
+4677,Healthcare,STRM
+4678,Healthcare,STRO
+4679,Healthcare,STSA
+4680,Healthcare,STXS
+4681,Healthcare,SUPN
+4682,Healthcare,SURF
+4683,Healthcare,SVA
+4684,Healthcare,SVRA
+4685,Healthcare,SWAV
+4686,Healthcare,SWTX
+4687,Healthcare,SXTC
+4688,Healthcare,SYBX
+4689,Healthcare,SYK
+4690,Healthcare,SYNH
+4691,Healthcare,SYN
+4692,Healthcare,SYRS
+4693,Healthcare,SY
+4694,Healthcare,TAK
+4695,Healthcare,TARA
+4696,Healthcare,TARO
+4697,Healthcare,TBIO
+4698,Healthcare,TBPH
+4699,Healthcare,TCDA
+4700,Healthcare,TCMD
+4701,Healthcare,TCON
+4702,Healthcare,TCRR
+4703,Healthcare,TDOC
+4704,Healthcare,TECH
+4705,Healthcare,TELA
+4706,Healthcare,TENX
+4707,Healthcare,TEVA
+4708,Healthcare,TFFP
+4709,Healthcare,TFX
+4710,Healthcare,TGTX
+4711,Healthcare,TH.TO
+4712,Healthcare,THC
+4713,Healthcare,THMO
+4714,Healthcare,THTX
+4715,Healthcare,TIG
+4716,Healthcare,TLGT
+4717,Healthcare,TLRY
+4718,Healthcare,TMBR
+4719,Healthcare,TMD.TO
+4720,Healthcare,TMDI
+4721,Healthcare,TMDX
+4722,Healthcare,TMO
+4723,Healthcare,TNDM
+4724,Healthcare,TNG.PA
+4725,Healthcare,TNXP
+4726,Healthcare,TOCA
+4727,Healthcare,TORC
+4728,Healthcare,TPTX
+4729,Healthcare,TRHC
+4730,Healthcare,TRIB
+4731,Healthcare,TRIL
+4732,Healthcare,TROV
+4733,Healthcare,TRPX
+4734,Healthcare,TRVI
+4735,Healthcare,TRVN
+4736,Healthcare,TRXC
+4737,Healthcare,TSRO
+4738,Healthcare,TTNP
+4739,Healthcare,TTOO
+4740,Healthcare,TTPH
+4741,Healthcare,TUB.BR
+4742,Healthcare,TVTY
+4743,Healthcare,TWST
+4744,Healthcare,TXG
+4745,Healthcare,TXMD
+4746,Healthcare,TYHT
+4747,Healthcare,TYME
+4748,Healthcare,UBX
+4749,Healthcare,UCB.BR
+4750,Healthcare,UHS
+4751,Healthcare,UMRX
+4752,Healthcare,UNH
+4753,Healthcare,URGN
+4754,Healthcare,UROV
+4755,Healthcare,USPH
+4756,Healthcare,UTHR
+4757,Healthcare,UTMD
+4758,Healthcare,VAPO
+4759,Healthcare,VAR
+4760,Healthcare,VBIV
+4761,Healthcare,VBLT
+4762,Healthcare,VCEL
+4763,Healthcare,VCNX
+4764,Healthcare,VCYT
+4765,Healthcare,VEEV
+4766,Healthcare,VERO
+4767,Healthcare,VERU
+4768,Healthcare,VETO.PA
+4769,Healthcare,VIE
+4770,Healthcare,VIRP.PA
+4771,Healthcare,VIR
+4772,Healthcare,VIVE
+4773,Healthcare,VIVO
+4774,Healthcare,VKTX
+4775,Healthcare,VLA.PA
+4776,Healthcare,VLRX
+4777,Healthcare,VMD
+4778,Healthcare,VNDA
+4779,Healthcare,VNRX
+4780,Healthcare,VRAY
+4781,Healthcare,VRCA
+4782,Healthcare,VREX
+4783,Healthcare,VRML
+4784,Healthcare,VRNA
+4785,Healthcare,VRTX
+4786,Healthcare,VSAR
+4787,Healthcare,VSTM
+4788,Healthcare,VTGN
+4789,Healthcare,VTVT
+4790,Healthcare,VTX.PA
+4791,Healthcare,VVUS
+4792,Healthcare,VVY.AS
+4793,Healthcare,VXRT
+4794,Healthcare,VYGR
+4795,Healthcare,WAT
+4796,Healthcare,WBA
+4797,Healthcare,WCG
+4798,Healthcare,WINT
+4799,Healthcare,WMGI
+4800,Healthcare,WORX
+4801,Healthcare,WST
+4802,Healthcare,WVE
+4803,Healthcare,XBIO
+4804,Healthcare,XBIT
+4805,Healthcare,XCUR
+4806,Healthcare,XENE
+4807,Healthcare,XENT
+4808,Healthcare,XERS
+4809,Healthcare,XFOR
+4810,Healthcare,XGN
+4811,Healthcare,XLRN
+4812,Healthcare,XNCR
+4813,Healthcare,XOMA
+4814,Healthcare,XON
+4815,Healthcare,XRAY
+4816,Healthcare,XTLB
+4817,Healthcare,XTNT
+4818,Healthcare,XXII
+4819,Healthcare,YCBD
+4820,Healthcare,YI
+4821,Healthcare,YMAB
+4822,Healthcare,ZBH
+4823,Healthcare,ZCMD
+4824,Healthcare,ZEAL
+4825,Healthcare,ZFGN
+4826,Healthcare,ZGNX
+4827,Healthcare,ZIOP
+4828,Healthcare,ZLAB
+4829,Healthcare,ZOM
+4830,Healthcare,ZSAN
+4831,Healthcare,ZTS
+4832,Healthcare,ZYME
+4833,Healthcare,ZYNE
+4834,Healthcare,ZYXI
+4835,Industrials,AAA.AS
+4836,Industrials,AALB.AS
+4837,Industrials,AAL
+4838,Industrials,AAN
+4839,Industrials,AAON
+4840,Industrials,AAWW
+4841,Industrials,AAXN
+4842,Industrials,ABEOW
+4843,Industrials,ABM
+4844,Industrials,ABO.BR
+4845,Industrials,AC.TO
+4846,Industrials,ACAMW
+4847,Industrials,ACA
+4848,Industrials,ACCO
+4849,Industrials,ACKB.BR
+4850,Industrials,ACM
+4851,Industrials,ACTG
+4852,Industrials,ACTTW
+4853,Industrials,ACY
+4854,Industrials,AD.TO
+4855,Industrials,ADES
+4856,Industrials,ADILW
+4857,Industrials,ADP.PA
+4858,Industrials,ADP
+4859,Industrials,ADSW
+4860,Industrials,ADT
+4861,Industrials,AEGN
+4862,Industrials,AEIS
+4863,Industrials,AER
+4864,Industrials,AF.PA
+4865,Industrials,AFGB
+4866,Industrials,AFGE
+4867,Industrials,AFGH
+4868,Industrials,AFI
+4869,Industrials,AFLT.ME
+4870,Industrials,AFN.TO
+4871,Industrials,AGBAR
+4872,Industrials,AGBAW
+4873,Industrials,AGCO
+4874,Industrials,AGFB.BR
+4875,Industrials,AGTA.PA
+4876,Industrials,AGX
+4877,Industrials,AIM.TO
+4878,Industrials,AIMC
+4879,Industrials,AIR.PA
+4880,Industrials,AIRI
+4881,Industrials,AIRTW
+4882,Industrials,AIRT
+4883,Industrials,AIR
+4884,Industrials,AIT
+4885,Industrials,AJRD
+4886,Industrials,ALACR
+4887,Industrials,ALADA.PA
+4888,Industrials,ALAQU.PA
+4889,Industrials,ALC.TO
+4890,Industrials,ALCLA.PA
+4891,Industrials,ALCUR.PA
+4892,Industrials,ALD.PA
+4893,Industrials,ALDBT.PA
+4894,Industrials,ALDLS.PA
+4895,Industrials,ALDR.PA
+4896,Industrials,ALEAC.PA
+4897,Industrials,ALENE.PA
+4898,Industrials,ALESA.PA
+4899,Industrials,ALEUP.PA
+4900,Industrials,ALEVA.BR
+4901,Industrials,ALFEN.AS
+4902,Industrials,ALFRE.PA
+4903,Industrials,ALGRR
+4904,Industrials,ALGRW
+4905,Industrials,ALGT
+4906,Industrials,ALG
+4907,Industrials,ALHIO.PA
+4908,Industrials,ALI2S.PA
+4909,Industrials,ALIVA.PA
+4910,Industrials,ALJJ
+4911,Industrials,ALK
+4912,Industrials,ALLE
+4913,Industrials,ALMDG.PA
+4914,Industrials,ALMEC.PA
+4915,Industrials,ALMGI.PA
+4916,Industrials,ALMTH.PA
+4917,Industrials,ALNSC.PA
+4918,Industrials,ALO.PA
+4919,Industrials,ALOBR.PA
+4920,Industrials,ALPCV.PA
+4921,Industrials,ALPJT.PA
+4922,Industrials,ALRGR.PA
+4923,Industrials,ALRS.ME
+4924,Industrials,ALSER.PA
+4925,Industrials,ALTG
+4926,Industrials,ALTLX.PA
+4927,Industrials,ALTRI.PA
+4928,Industrials,ALTUV.PA
+4929,Industrials,ALUCI.PA
+4930,Industrials,ALUCR.PA
+4931,Industrials,ALUVI.PA
+4932,Industrials,ALWOO.PA
+4933,Industrials,AL
+4934,Industrials,AM.PA
+4935,Industrials,AMCIW
+4936,Industrials,AME
+4937,Industrials,AMHCW
+4938,Industrials,AMRC
+4939,Industrials,AMSC
+4940,Industrials,ANDAR
+4941,Industrials,AOBC
+4942,Industrials,AOS
+4943,Industrials,APDN
+4944,Industrials,APOG
+4945,Industrials,APT
+4946,Industrials,APWC
+4947,Industrials,APXTW
+4948,Industrials,AP
+4949,Industrials,AQMS
+4950,Industrials,AQUA
+4951,Industrials,ARCAD.AS
+4952,Industrials,ARCB
+4953,Industrials,ARCW
+4954,Industrials,ARC
+4955,Industrials,ARE.TO
+4956,Industrials,ARII
+4957,Industrials,ARLO
+4958,Industrials,ARNC
+4959,Industrials,ARTE.PA
+4960,Industrials,ARTLW
+4961,Industrials,ARTW
+4962,Industrials,ARTX
+4963,Industrials,ASCMA
+4964,Industrials,ASC
+4965,Industrials,ASGN
+4966,Industrials,ASPN
+4967,Industrials,ASR
+4968,Industrials,ASTC
+4969,Industrials,ASTE
+4970,Industrials,ASV
+4971,Industrials,ASY.PA
+4972,Industrials,ATA.TO
+4973,Industrials,ATCXW
+4974,Industrials,ATCX
+4975,Industrials,ATIS
+4976,Industrials,ATI
+4977,Industrials,ATKR
+4978,Industrials,ATRO
+4979,Industrials,ATSG
+4980,Industrials,ATTO
+4981,Industrials,AURE.PA
+4982,Industrials,AURS.PA
+4983,Industrials,AVAV
+4984,Industrials,AVCTW
+4985,Industrials,AVH
+4986,Industrials,AVP.TO
+4987,Industrials,AVY
+4988,Industrials,AWI
+4989,Industrials,AWX
+4990,Industrials,AXE
+4991,Industrials,AXO
+4992,Industrials,AYI
+4993,Industrials,AYR
+4994,Industrials,AZ.TO
+4995,Industrials,AZEK
+4996,Industrials,AZUL
+4997,Industrials,AZZ
+4998,Industrials,BAD.TO
+4999,Industrials,BAH
+5000,Industrials,BALYO.PA
+5001,Industrials,BAMNB.AS
+5002,Industrials,BA
+5003,Industrials,BBCP
+5004,Industrials,BCDAW
+5005,Industrials,BCO
+5006,Industrials,BCRA.PA
+5007,Industrials,BDI.TO
+5008,Industrials,BDT.TO
+5009,Industrials,BEKB.BR
+5010,Industrials,BEST
+5011,Industrials,BE
+5012,Industrials,BGG
+5013,Industrials,BHTG
+5014,Industrials,BKYI
+5015,Industrials,BLDP
+5016,Industrials,BLDR
+5017,Industrials,BLD
+5018,Industrials,BLUE.PA
+5019,Industrials,BMCH
+5020,Industrials,BMI
+5021,Industrials,BND.PA
+5022,Industrials,BOKA.AS
+5023,Industrials,BOSC
+5024,Industrials,BPOST.BR
+5025,Industrials,BPYUP
+5026,Industrials,BPYU
+5027,Industrials,BRC
+5028,Industrials,BRNL.AS
+5029,Industrials,BROGR
+5030,Industrials,BROGU
+5031,Industrials,BRSS
+5032,Industrials,BSA
+5033,Industrials,BUI.TO
+5034,Industrials,BVI.PA
+5035,Industrials,BV
+5036,Industrials,BWEN
+5037,Industrials,BWL-A
+5038,Industrials,BWXT
+5039,Industrials,BXC
+5040,Industrials,CAAP
+5041,Industrials,CAE.TO
+5042,Industrials,CAE
+5043,Industrials,CAI
+5044,Industrials,CAMB.BR
+5045,Industrials,CAR
+5046,Industrials,CASS
+5047,Industrials,CATM
+5048,Industrials,CATR.PA
+5049,Industrials,CAT
+5050,Industrials,CBAT
+5051,Industrials,CBDG.PA
+5052,Industrials,CBI
+5053,Industrials,CBLK
+5054,Industrials,CBZ
+5055,Industrials,CCCL
+5056,Industrials,CCNC
+5057,Industrials,CCRN
+5058,Industrials,CDU.LS
+5059,Industrials,CEA
+5060,Industrials,CECE
+5061,Industrials,CEN.PA
+5062,Industrials,CENER.BR
+5063,Industrials,CETX
+5064,Industrials,CFEB.BR
+5065,Industrials,CFFAW
+5066,Industrials,CFX
+5067,Industrials,CGY.TO
+5068,Industrials,CHNGU
+5069,Industrials,CHPMW
+5070,Industrials,CHR.TO
+5071,Industrials,CHRA
+5072,Industrials,CHRW
+5073,Industrials,CIR
+5074,Industrials,CIX
+5075,Industrials,CJT.TO
+5076,Industrials,CLCT
+5077,Industrials,CLH
+5078,Industrials,CLIR
+5079,Industrials,CLWT
+5080,Industrials,CMCO
+5081,Industrials,CMFNL
+5082,Industrials,CMI
+5083,Industrials,CMRE
+5084,Industrials,CMSD
+5085,Industrials,CNHI
+5086,Industrials,CNI
+5087,Industrials,CNR.TO
+5088,Industrials,CNR
+5089,Industrials,CODA
+5090,Industrials,CODI
+5091,Industrials,COL
+5092,Industrials,COM.PA
+5093,Industrials,COWNL
+5094,Industrials,CP.TO
+5095,Industrials,CPA
+5096,Industrials,CPLP
+5097,Industrials,CPRT
+5098,Industrials,CPST
+5099,Industrials,CP
+5100,Industrials,CRAI
+5101,Industrials,CRP.TO
+5102,Industrials,CRSAW
+5103,Industrials,CRS
+5104,Industrials,CR
+5105,Industrials,CSL
+5106,Industrials,CSWI
+5107,Industrials,CSX
+5108,Industrials,CTAS
+5109,Industrials,CTRG.PA
+5110,Industrials,CTRM
+5111,Industrials,CTT.LS
+5112,Industrials,CUB
+5113,Industrials,CUI
+5114,Industrials,CUO
+5115,Industrials,CUR.LS
+5116,Industrials,CVA
+5117,Industrials,CVEO
+5118,Industrials,CVG
+5119,Industrials,CVR
+5120,Industrials,CVTI
+5121,Industrials,CVU
+5122,Industrials,CVV
+5123,Industrials,CWL.TO
+5124,Industrials,CWST
+5125,Industrials,CW
+5126,Industrials,CYD
+5127,Industrials,CYRXW
+5128,Industrials,CYRX
+5129,Industrials,DAC
+5130,Industrials,DAL
+5131,Industrials,DBG.PA
+5132,Industrials,DCIX
+5133,Industrials,DCI
+5134,Industrials,DCM.TO
+5135,Industrials,DCO
+5136,Industrials,DECB.BR
+5137,Industrials,DE
+5138,Industrials,DFBH
+5139,Industrials,DG.PA
+5140,Industrials,DGLY
+5141,Industrials,DHCNL
+5142,Industrials,DHT
+5143,Industrials,DHX
+5144,Industrials,DIV.TO
+5145,Industrials,DKNGW
+5146,Industrials,DLHC
+5147,Industrials,DMTKW
+5148,Industrials,DNB
+5149,Industrials,DOOR
+5150,Industrials,DOV
+5151,Industrials,DPA.AS
+5152,Industrials,DPHCW
+5153,Industrials,DPW
+5154,Industrials,DRT.TO
+5155,Industrials,DRTT
+5156,Industrials,DRX.TO
+5157,Industrials,DSKE
+5158,Industrials,DSS
+5159,Industrials,DSX
+5160,Industrials,DTP
+5161,Industrials,DXPE
+5162,Industrials,DY
+5163,Industrials,EACQU
+5164,Industrials,EACQ
+5165,Industrials,EAF
+5166,Industrials,EBF
+5167,Industrials,ECASA.PA
+5168,Industrials,ECHO
+5169,Industrials,ECOLW
+5170,Industrials,ECOL
+5171,Industrials,EDI.PA
+5172,Industrials,EDRY
+5173,Industrials,EEI
+5174,Industrials,EFL.TO
+5175,Industrials,EFN.TO
+5176,Industrials,EFX
+5177,Industrials,EGL.LS
+5178,Industrials,EGLE
+5179,Industrials,EGL
+5180,Industrials,EH
+5181,Industrials,EIF.TO
+5182,Industrials,ELAT
+5183,Industrials,ELECU
+5184,Industrials,ELEC
+5185,Industrials,ELIS.PA
+5186,Industrials,EME
+5187,Industrials,EML
+5188,Industrials,EMR
+5189,Industrials,EN.PA
+5190,Industrials,ENBA
+5191,Industrials,ENG
+5192,Industrials,ENR
+5193,Industrials,ENS
+5194,Industrials,ENT.TO
+5195,Industrials,ENVI.AS
+5196,Industrials,EPAC
+5197,Industrials,EPS.PA
+5198,Industrials,ERA
+5199,Industrials,ERII
+5200,Industrials,ERJ
+5201,Industrials,ESEA
+5202,Industrials,ESLT
+5203,Industrials,ESL
+5204,Industrials,ESNC
+5205,Industrials,ESND
+5206,Industrials,ESP
+5207,Industrials,ESTR
+5208,Industrials,ETN
+5209,Industrials,EUCAR.PA
+5210,Industrials,EVI
+5211,Industrials,EVSIW
+5212,Industrials,EXE.PA
+5213,Industrials,EXPD
+5214,Industrials,EXPO
+5215,Industrials,FAST
+5216,Industrials,FAUV.PA
+5217,Industrials,FBM
+5218,Industrials,FCEL
+5219,Industrials,FCN
+5220,Industrials,FC
+5221,Industrials,FDC
+5222,Industrials,FDUSZ
+5223,Industrials,FDX
+5224,Industrials,FELE
+5225,Industrials,FGA.PA
+5226,Industrials,FGR.PA
+5227,Industrials,FII.PA
+5228,Industrials,FINM.PA
+5229,Industrials,FIX
+5230,Industrials,FLNG
+5231,Industrials,FLOB.BR
+5232,Industrials,FLOW
+5233,Industrials,FLR
+5234,Industrials,FLS
+5235,Industrials,FLUX
+5236,Industrials,FLY
+5237,Industrials,FMCIW
+5238,Industrials,FORE.PA
+5239,Industrials,FORR
+5240,Industrials,FRO
+5241,Industrials,FRTA
+5242,Industrials,FSRVW
+5243,Industrials,FSS
+5244,Industrials,FSTR
+5245,Industrials,FTACW
+5246,Industrials,FTAI
+5247,Industrials,FTEK
+5248,Industrials,FTG.TO
+5249,Industrials,FTT.TO
+5250,Industrials,FWRD
+5251,Industrials,GASS
+5252,Industrials,GATX
+5253,Industrials,GBX
+5254,Industrials,GDI.TO
+5255,Industrials,GDYNW
+5256,Industrials,GDYN
+5257,Industrials,GD
+5258,Industrials,GEA.PA
+5259,Industrials,GENC
+5260,Industrials,GET.PA
+5261,Industrials,GE
+5262,Industrials,GFF
+5263,Industrials,GFL
+5264,Industrials,GFNCP
+5265,Industrials,GFN
+5266,Industrials,GGG
+5267,Industrials,GHM
+5268,Industrials,GIG
+5269,Industrials,GIRO.PA
+5270,Industrials,GLADL
+5271,Industrials,GLBS
+5272,Industrials,GLDD
+5273,Industrials,GLNG
+5274,Industrials,GLO.PA
+5275,Industrials,GMHIW
+5276,Industrials,GMKN.ME
+5277,Industrials,GMLP
+5278,Industrials,GMS
+5279,Industrials,GNE.PA
+5280,Industrials,GNK
+5281,Industrials,GNRC
+5282,Industrials,GNRSW
+5283,Industrials,GNRT
+5284,Industrials,GOGL
+5285,Industrials,GOL
+5286,Industrials,GPA.LS
+5287,Industrials,GPE.PA
+5288,Industrials,GPN
+5289,Industrials,GRAM
+5290,Industrials,GRC
+5291,Industrials,GRIN
+5292,Industrials,GRNQ
+5293,Industrials,GRNVW
+5294,Industrials,GSH
+5295,Industrials,GSL
+5296,Industrials,GTEC
+5297,Industrials,GTES
+5298,Industrials,GTLS
+5299,Industrials,GTYHU
+5300,Industrials,GVA
+5301,Industrials,GV
+5302,Industrials,GWR
+5303,Industrials,GWW
+5304,Industrials,HAMO.BR
+5305,Industrials,HAYN
+5306,Industrials,HA
+5307,Industrials,HBP
+5308,Industrials,HCCHR
+5309,Industrials,HCCHW
+5310,Industrials,HCCI
+5311,Industrials,HCCOW
+5312,Industrials,HCXZ
+5313,Industrials,HDNG
+5314,Industrials,HDS
+5315,Industrials,HEBT
+5316,Industrials,HEES
+5317,Industrials,HEIJM.AS
+5318,Industrials,HEI
+5319,Industrials,HHHHR
+5320,Industrials,HHHHU
+5321,Industrials,HHR
+5322,Industrials,HIHO
+5323,Industrials,HII
+5324,Industrials,HIL
+5325,Industrials,HI
+5326,Industrials,HJLIW
+5327,Industrials,HLIO
+5328,Industrials,HNI
+5329,Industrials,HO.PA
+5330,Industrials,HOLI
+5331,Industrials,HON
+5332,Industrials,HQI
+5333,Industrials,HRI
+5334,Industrials,HRX.TO
+5335,Industrials,HSC
+5336,Industrials,HSII
+5337,Industrials,HSON
+5338,Industrials,HTLD
+5339,Industrials,HTZ
+5340,Industrials,HUBB
+5341,Industrials,HUBG
+5342,Industrials,HURC
+5343,Industrials,HURN
+5344,Industrials,HWCC
+5345,Industrials,HWM
+5346,Industrials,HXL
+5347,Industrials,HYDRA.AS
+5348,Industrials,HYRE
+5349,Industrials,HY
+5350,Industrials,IAA
+5351,Industrials,IBG.TO
+5352,Industrials,IBP
+5353,Industrials,ICFI
+5354,Industrials,IDL.PA
+5355,Industrials,IDSA
+5356,Industrials,IEAWW
+5357,Industrials,IEA
+5358,Industrials,IEP
+5359,Industrials,IESC
+5360,Industrials,IEX
+5361,Industrials,IFFT
+5362,Industrials,IGC
+5363,Industrials,IIIN
+5364,Industrials,III
+5365,Industrials,IMACW
+5366,Industrials,IMVTW
+5367,Industrials,INBKZ
+5368,Industrials,INFE.PA
+5369,Industrials,INFO
+5370,Industrials,INSUW
+5371,Industrials,INSW
+5372,Industrials,INTX
+5373,Industrials,IPDN
+5374,Industrials,IPWR
+5375,Industrials,IR
+5376,Industrials,ISSC
+5377,Industrials,ISV.TO
+5378,Industrials,ITT
+5379,Industrials,ITW
+5380,Industrials,IVAC
+5381,Industrials,JAN
+5382,Industrials,JASN
+5383,Industrials,JBHT
+5384,Industrials,JBLU
+5385,Industrials,JBT
+5386,Industrials,JCI
+5387,Industrials,JEC
+5388,Industrials,JELD
+5389,Industrials,JEN.BR
+5390,Industrials,JFKKR
+5391,Industrials,JFKKW
+5392,Industrials,JMPNZ
+5393,Industrials,JOBS
+5394,Industrials,JOB
+5395,Industrials,J
+5396,Industrials,KAI
+5397,Industrials,KAMN
+5398,Industrials,KBL.TO
+5399,Industrials,KBR
+5400,Industrials,KELYA
+5401,Industrials,KELYB
+5402,Industrials,KERNW
+5403,Industrials,KEX
+5404,Industrials,KE
+5405,Industrials,KFRC
+5406,Industrials,KFY
+5407,Industrials,KIQ
+5408,Industrials,KLS.TO
+5409,Industrials,KLXI
+5410,Industrials,KMT
+5411,Industrials,KNL
+5412,Industrials,KNOP
+5413,Industrials,KNX
+5414,Industrials,KODK
+5415,Industrials,KRNT
+5416,Industrials,KSU
+5417,Industrials,KTOS
+5418,Industrials,LABL
+5419,Industrials,LAT.PA
+5420,Industrials,LATNW
+5421,Industrials,LAWS
+5422,Industrials,LAYN
+5423,Industrials,LDL
+5424,Industrials,LECO
+5425,Industrials,LFACW
+5426,Industrials,LHX
+5427,Industrials,LIG.LS
+5428,Industrials,LIGHT.AS
+5429,Industrials,LII
+5430,Industrials,LIQT
+5431,Industrials,LIT.LS
+5432,Industrials,LIVKW
+5433,Industrials,LKSD
+5434,Industrials,LMB
+5435,Industrials,LMFAW
+5436,Industrials,LMT
+5437,Industrials,LNN
+5438,Industrials,LOACR
+5439,Industrials,LOACW
+5440,Industrials,LPX
+5441,Industrials,LR.PA
+5442,Industrials,LSTR
+5443,Industrials,LTA.PA
+5444,Industrials,LTBR
+5445,Industrials,LTM
+5446,Industrials,LUV
+5447,Industrials,LXFR
+5448,Industrials,MAGS
+5449,Industrials,MAL.TO
+5450,Industrials,MAN.PA
+5451,Industrials,MAN
+5452,Industrials,MAR.LS
+5453,Industrials,MAREL.AS
+5454,Industrials,MAS
+5455,Industrials,MATW
+5456,Industrials,MATX
+5457,Industrials,MCMJW
+5458,Industrials,MCMJ
+5459,Industrials,MCPHY.PA
+5460,Industrials,MCRN
+5461,Industrials,MDGSW
+5462,Industrials,MEC
+5463,Industrials,MESA
+5464,Industrials,MGRC
+5465,Industrials,MGR
+5466,Industrials,MG
+5467,Industrials,MHH
+5468,Industrials,MICTW
+5469,Industrials,MIC
+5470,Industrials,MIDD
+5471,Industrials,MINI
+5472,Industrials,MLAAE.PA
+5473,Industrials,MLAMY.PA
+5474,Industrials,MLAUD.PA
+5475,Industrials,MLCFD.PA
+5476,Industrials,MLCIO.PA
+5477,Industrials,MLECO.PA
+5478,Industrials,MLEDU.PA
+5479,Industrials,MLETA.PA
+5480,Industrials,MLFMV.LS
+5481,Industrials,MLFXO.PA
+5482,Industrials,MLGAI.PA
+5483,Industrials,MLHK.PA
+5484,Industrials,MLHR
+5485,Industrials,MLHYD.PA
+5486,Industrials,MLHYE.PA
+5487,Industrials,MLI
+5488,Industrials,MLLOI.PA
+5489,Industrials,MLMTD.PA
+5490,Industrials,MLNEI.PA
+5491,Industrials,MLPHW.PA
+5492,Industrials,MLPLC.PA
+5493,Industrials,MLPVG.PA
+5494,Industrials,MLROU.PA
+5495,Industrials,MLSTM.PA
+5496,Industrials,MLTEA.PA
+5497,Industrials,MLUMH.PA
+5498,Industrials,MLVER.PA
+5499,Industrials,MLVIS.PA
+5500,Industrials,MMDM
+5501,Industrials,MMM
+5502,Industrials,MMS
+5503,Industrials,MNCLW
+5504,Industrials,MNS.TO
+5505,Industrials,MNT.TO
+5506,Industrials,MNTX
+5507,Industrials,MOC
+5508,Industrials,MOG-A
+5509,Industrials,MOG-B
+5510,Industrials,MORE.AS
+5511,Industrials,MOSC
+5512,Industrials,MOUR.BR
+5513,Industrials,MRCCL
+5514,Industrials,MRCY
+5515,Industrials,MRN.PA
+5516,Industrials,MRTN
+5517,Industrials,MSA
+5518,Industrials,MSI.TO
+5519,Industrials,MSM
+5520,Industrials,MTU.PA
+5521,Industrials,MTW
+5522,Industrials,MTZ
+5523,Industrials,MUDSU
+5524,Industrials,MUDS
+5525,Industrials,MWA
+5526,Industrials,MYRG
+5527,Industrials,NAT
+5528,Industrials,NAV
+5529,Industrials,NBACW
+5530,Industrials,NCI
+5531,Industrials,NDSN
+5532,Industrials,NEBUU
+5533,Industrials,NEBU
+5534,Industrials,NES
+5535,Industrials,NEWA
+5536,Industrials,NEX.PA
+5537,Industrials,NFINW
+5538,Industrials,NGHCZ
+5539,Industrials,NLSN
+5540,Industrials,NL
+5541,Industrials,NMCI
+5542,Industrials,NMM
+5543,Industrials,NM
+5544,Industrials,NNBR
+5545,Industrials,NOC
+5546,Industrials,NPAWW
+5547,Industrials,NPK
+5548,Industrials,NPO
+5549,Industrials,NRCG
+5550,Industrials,NRUC
+5551,Industrials,NSCO
+5552,Industrials,NSC
+5553,Industrials,NSP
+5554,Industrials,NSSC
+5555,Industrials,NUROW
+5556,Industrials,NVEE
+5557,Industrials,NVT
+5558,Industrials,NWPX
+5559,Industrials,NXTDW
+5560,Industrials,NXTD
+5561,Industrials,NX
+5562,Industrials,OA
+5563,Industrials,OBCI
+5564,Industrials,OC
+5565,Industrials,ODET.PA
+5566,Industrials,ODFL
+5567,Industrials,OESX
+5568,Industrials,OFLX
+5569,Industrials,OFSSI
+5570,Industrials,OFSSZ
+5571,Industrials,OMAB
+5572,Industrials,OMEX
+5573,Industrials,OPESW
+5574,Industrials,OPGNW
+5575,Industrials,OPTT
+5576,Industrials,ORANW.AS
+5577,Industrials,ORE.LS
+5578,Industrials,OREGE.PA
+5579,Industrials,ORN
+5580,Industrials,ORSNR
+5581,Industrials,ORSNW
+5582,Industrials,OSK
+5583,Industrials,OTIV
+5584,Industrials,OTLKW
+5585,Industrials,PAACR
+5586,Industrials,PACQW
+5587,Industrials,PAC
+5588,Industrials,PAEWW
+5589,Industrials,PAE
+5590,Industrials,PANL
+5591,Industrials,PATI
+5592,Industrials,PATK
+5593,Industrials,PAVMZ
+5594,Industrials,PAYS
+5595,Industrials,PAYX
+5596,Industrials,PAY
+5597,Industrials,PBC
+5598,Industrials,PBI
+5599,Industrials,PBY
+5600,Industrials,PCAR
+5601,Industrials,PERR.PA
+5602,Industrials,PESI
+5603,Industrials,PFB.TO
+5604,Industrials,PFIN
+5605,Industrials,PFMT
+5606,Industrials,PFSW
+5607,Industrials,PGTI
+5608,Industrials,PHIIK
+5609,Industrials,PHII
+5610,Industrials,PHUNW
+5611,Industrials,PH
+5612,Industrials,PIC.BR
+5613,Industrials,PIG.PA
+5614,Industrials,PIXY
+5615,Industrials,PKE
+5616,Industrials,PKOH
+5617,Industrials,PLPC
+5618,Industrials,PLUG
+5619,Industrials,PMTS
+5620,Industrials,PNL.AS
+5621,Industrials,PNNTG
+5622,Industrials,PNR
+5623,Industrials,POLA
+5624,Industrials,POWL
+5625,Industrials,PPIH
+5626,Industrials,PPSI
+5627,Industrials,PREC.PA
+5628,Industrials,PRGX
+5629,Industrials,PRIM
+5630,Industrials,PRLB
+5631,Industrials,PRS
+5632,Industrials,PSHG
+5633,Industrials,PSN
+5634,Industrials,PSTVZ
+5635,Industrials,PSV
+5636,Industrials,PTACW
+5637,Industrials,PTMN
+5638,Industrials,PTSI
+5639,Industrials,PWG.PA
+5640,Industrials,PWR
+5641,Industrials,PXS
+5642,Industrials,QBAK
+5643,Industrials,QRHC
+5644,Industrials,QUAD
+5645,Industrials,QVCC
+5646,Industrials,QVCD
+5647,Industrials,RADA
+5648,Industrials,RAIL
+5649,Industrials,RAND.AS
+5650,Industrials,RAVN
+5651,Industrials,RBA.TO
+5652,Industrials,RBA
+5653,Industrials,RBC
+5654,Industrials,RCII
+5655,Industrials,RCMT
+5656,Industrials,RCP
+5657,Industrials,RE.PA
+5658,Industrials,RECN
+5659,Industrials,REIS
+5660,Industrials,REKR
+5661,Industrials,REVG
+5662,Industrials,REZI
+5663,Industrials,RFIL
+5664,Industrials,RGP
+5665,Industrials,RGR
+5666,Industrials,RHI
+5667,Industrials,RLGT
+5668,Industrials,RLJE
+5669,Industrials,RME.TO
+5670,Industrials,RMGN
+5671,Industrials,RMM
+5672,Industrials,ROAD
+5673,Industrials,ROCK
+5674,Industrials,ROK
+5675,Industrials,ROLL
+5676,Industrials,ROP
+5677,Industrials,RPXC
+5678,Industrials,RRD
+5679,Industrials,RRTS
+5680,Industrials,RSG
+5681,Industrials,RTN
+5682,Industrials,RTX
+5683,Industrials,RUS.TO
+5684,Industrials,RVLT
+5685,Industrials,RWGE
+5686,Industrials,RXL.PA
+5687,Industrials,RXN
+5688,Industrials,RYAAY
+5689,Industrials,RYI
+5690,Industrials,R
+5691,Industrials,SAB.BR
+5692,Industrials,SACI.PA
+5693,Industrials,SAF.PA
+5694,Industrials,SAF
+5695,Industrials,SAIA
+5696,Industrials,SALT
+5697,Industrials,SAMAW
+5698,Industrials,SAMS.PA
+5699,Industrials,SAQNW
+5700,Industrials,SAVE
+5701,Industrials,SBLK
+5702,Industrials,SB
+5703,Industrials,SCCB
+5704,Industrials,SCHP.PA
+5705,Industrials,SCS
+5706,Industrials,SCX
+5707,Industrials,SDG.PA
+5708,Industrials,SEB
+5709,Industrials,SEC.PA
+5710,Industrials,SEFER.PA
+5711,Industrials,SEII
+5712,Industrials,SFL
+5713,Industrials,SFPI.PA
+5714,Industrials,SGBX
+5715,Industrials,SGO.PA
+5716,Industrials,SGOC
+5717,Industrials,SGRP
+5718,Industrials,SHIP
+5719,Industrials,SHUR.BR
+5720,Industrials,SHYF
+5721,Industrials,SIFG.AS
+5722,Industrials,SIF
+5723,Industrials,SINO
+5724,Industrials,SIS.TO
+5725,Industrials,SITE
+5726,Industrials,SJ
+5727,Industrials,SKYW
+5728,Industrials,SMED
+5729,Industrials,SMHI
+5730,Industrials,SMMCW
+5731,Industrials,SMTPC.PA
+5732,Industrials,SNA
+5733,Industrials,SNC.TO
+5734,Industrials,SNDR
+5735,Industrials,SOG.PA
+5736,Industrials,SOLN
+5737,Industrials,SONC.LS
+5738,Industrials,SOX.TO
+5739,Industrials,SPAR
+5740,Industrials,SPCB
+5741,Industrials,SPCE
+5742,Industrials,SPEX
+5743,Industrials,SPIE.PA
+5744,Industrials,SPLP
+5745,Industrials,SPR
+5746,Industrials,SPXC
+5747,Industrials,SP
+5748,Industrials,SRACW
+5749,Industrials,SRCL
+5750,Industrials,SRT
+5751,Industrials,SSD
+5752,Industrials,SSPKW
+5753,Industrials,SSW
+5754,Industrials,STAF
+5755,Industrials,STCN
+5756,Industrials,STF.PA
+5757,Industrials,STN.TO
+5758,Industrials,STNLU
+5759,Industrials,STNL
+5760,Industrials,STN
+5761,Industrials,STRL
+5762,Industrials,SU.PA
+5763,Industrials,SVT
+5764,Industrials,SW.PA
+5765,Industrials,SWBI
+5766,Industrials,SWJ
+5767,Industrials,SWK
+5768,Industrials,SWT
+5769,Industrials,SX.PA
+5770,Industrials,SXI
+5771,Industrials,SYX
+5772,Industrials,TANNZ
+5773,Industrials,TATT
+5774,Industrials,TAYD
+5775,Industrials,TBC
+5776,Industrials,TBI
+5777,Industrials,TBLTW
+5778,Industrials,TBLT
+5779,Industrials,TCRW
+5780,Industrials,TDACW
+5781,Industrials,TDG
+5782,Industrials,TDSA.LS
+5783,Industrials,TEP.PA
+5784,Industrials,TEXF.BR
+5785,Industrials,TEX
+5786,Industrials,TFG.AS
+5787,Industrials,TFII
+5788,Industrials,TGEN
+5789,Industrials,TGH
+5790,Industrials,TGI
+5791,Industrials,TGLS
+5792,Industrials,THBRW
+5793,Industrials,THCAW
+5794,Industrials,THEP.PA
+5795,Industrials,THR
+5796,Industrials,THWWW
+5797,Industrials,TIBRU
+5798,Industrials,TIH.TO
+5799,Industrials,TIK
+5800,Industrials,TISI
+5801,Industrials,TITN
+5802,Industrials,TKKSR
+5803,Industrials,TKR
+5804,Industrials,TKTT.PA
+5805,Industrials,TMCXU
+5806,Industrials,TMCX
+5807,Industrials,TMSR
+5808,Industrials,TNC
+5809,Industrials,TNET
+5810,Industrials,TOPS
+5811,Industrials,TOTAR
+5812,Industrials,TOTAW
+5813,Industrials,TOUP.PA
+5814,Industrials,TPC
+5815,Industrials,TPGH
+5816,Industrials,TPIC
+5817,Industrials,TRC
+5818,Industrials,TREX
+5819,Industrials,TRI.TO
+5820,Industrials,TRI
+5821,Industrials,TRNS
+5822,Industrials,TRN
+5823,Industrials,TRS
+5824,Industrials,TRTN
+5825,Industrials,TRU
+5826,Industrials,TTC
+5827,Industrials,TTEK
+5828,Industrials,TT
+5829,Industrials,TVLY.PA
+5830,Industrials,TVRB.PA
+5831,Industrials,TWIN
+5832,Industrials,TWI
+5833,Industrials,TXT
+5834,Industrials,TZACW
+5835,Industrials,UAL
+5836,Industrials,UAVS
+5837,Industrials,UG.PA
+5838,Industrials,UHAL
+5839,Industrials,ULBI
+5840,Industrials,ULH
+5841,Industrials,UMI.BR
+5842,Industrials,UNF
+5843,Industrials,UNMA
+5844,Industrials,UNP
+5845,Industrials,UPS
+5846,Industrials,UPWK
+5847,Industrials,URI
+5848,Industrials,USAK
+5849,Industrials,USDP
+5850,Industrials,USWSW
+5851,Industrials,USX
+5852,Industrials,UTX
+5853,Industrials,UUU
+5854,Industrials,UZB
+5855,Industrials,VEC
+5856,Industrials,VERBW
+5857,Industrials,VIE.PA
+5858,Industrials,VLN.TO
+5859,Industrials,VLRS
+5860,Industrials,VMI
+5861,Industrials,VOLT
+5862,Industrials,VRRM
+5863,Industrials,VRSK
+5864,Industrials,VRTV
+5865,Industrials,VRT
+5866,Industrials,VSEC
+5867,Industrials,VTIQW
+5868,Industrials,VTSI
+5869,Industrials,VVI
+5870,Industrials,VVNT
+5871,Industrials,WAB
+5872,Industrials,WAGE
+5873,Industrials,WAIR
+5874,Industrials,WBT
+5875,Industrials,WCC
+5876,Industrials,WCN
+5877,Industrials,WERN
+5878,Industrials,WHLM
+5879,Industrials,WIRE
+5880,Industrials,WJX.TO
+5881,Industrials,WLDN
+5882,Industrials,WLFC
+5883,Industrials,WMS
+5884,Industrials,WM
+5885,Industrials,WNC
+5886,Industrials,WNS
+5887,Industrials,WRLSU
+5888,Industrials,WRLS
+5889,Industrials,WSCI
+5890,Industrials,WSCWW
+5891,Industrials,WSC
+5892,Industrials,WSO
+5893,Industrials,WSP.TO
+5894,Industrials,WTE.TO
+5895,Industrials,WTS
+5896,Industrials,WWD
+5897,Industrials,XBIOW
+5898,Industrials,XONE
+5899,Industrials,XPO.PA
+5900,Industrials,XPO
+5901,Industrials,XRM
+5902,Industrials,XYL
+5903,Industrials,YRCW
+5904,Industrials,ZGYHR
+5905,Industrials,ZGYHU
+5906,Industrials,ZGYH
+5907,Industrials,ZNH
+5908,Industrials,ZNWAA
+5909,Industrials,ZTO
+5910,Real Estate,AAT
+5911,Real Estate,ABR
+5912,Real Estate,ACAN.PA
+5913,Real Estate,ACC
+5914,Real Estate,ACRE
+5915,Real Estate,ADC
+5916,Real Estate,AED.BR
+5917,Real Estate,AFINP
+5918,Real Estate,AFIN
+5919,Real Estate,AGNCB
+5920,Real Estate,AGNCP
+5921,Real Estate,AGNC
+5922,Real Estate,AHH
+5923,Real Estate,AHT
+5924,Real Estate,AIF.TO
+5925,Real Estate,AIV
+5926,Real Estate,AI
+5927,Real Estate,AJX
+5928,Real Estate,AKR
+5929,Real Estate,ALADO.PA
+5930,Real Estate,ALDV.PA
+5931,Real Estate,ALEX
+5932,Real Estate,ALIMO.PA
+5933,Real Estate,ALREA.PA
+5934,Real Estate,ALSAS.PA
+5935,Real Estate,ALTA.PA
+5936,Real Estate,ALX
+5937,Real Estate,AMH
+5938,Real Estate,AMT
+5939,Real Estate,ANH
+5940,Real Estate,APLE
+5941,Real Estate,APTS
+5942,Real Estate,AREIT.PA
+5943,Real Estate,ARE
+5944,Real Estate,ARG.PA
+5945,Real Estate,ARI
+5946,Real Estate,ARL
+5947,Real Estate,ARR
+5948,Real Estate,ASC.BR
+5949,Real Estate,ATEB.BR
+5950,Real Estate,AVB
+5951,Real Estate,AXR
+5952,Real Estate,BANI.BR
+5953,Real Estate,BBU
+5954,Real Estate,BDN
+5955,Real Estate,BEFB.BR
+5956,Real Estate,BERR.PA
+5957,Real Estate,BEVER.AS
+5958,Real Estate,BFS
+5959,Real Estate,BHR
+5960,Real Estate,BLEE.PA
+5961,Real Estate,BPR
+5962,Real Estate,BPYPO
+5963,Real Estate,BPY
+5964,Real Estate,BRE.TO
+5965,Real Estate,BRG
+5966,Real Estate,BRMK
+5967,Real Estate,BRT
+5968,Real Estate,BRX
+5969,Real Estate,BXMT
+5970,Real Estate,BXP
+5971,Real Estate,CAPLI.PA
+5972,Real Estate,CARM.PA
+5973,Real Estate,CARP.PA
+5974,Real Estate,CBL
+5975,Real Estate,CBOT.PA
+5976,Real Estate,CBRE
+5977,Real Estate,CBSM.PA
+5978,Real Estate,CCI
+5979,Real Estate,CDOR
+5980,Real Estate,CDR
+5981,Real Estate,CFI.PA
+5982,Real Estate,CGR.PA
+5983,Real Estate,CHCI
+5984,Real Estate,CHCT
+5985,Real Estate,CHMI
+5986,Real Estate,CHSP
+5987,Real Estate,CIGI.TO
+5988,Real Estate,CIGI
+5989,Real Estate,CIM
+5990,Real Estate,CIO
+5991,Real Estate,CKX
+5992,Real Estate,CLDT
+5993,Real Estate,CLI
+5994,Real Estate,CLNC
+5995,Real Estate,CLNY
+5996,Real Estate,CLPR
+5997,Real Estate,CMCTP
+5998,Real Estate,CMCT
+5999,Real Estate,CMO
+6000,Real Estate,COFB.BR
+6001,Real Estate,COLD
+6002,Real Estate,CONE
+6003,Real Estate,CORR
+6004,Real Estate,COR
+6005,Real Estate,COUR.PA
+6006,Real Estate,COV.PA
+6007,Real Estate,COVH.PA
+6008,Real Estate,CPINV.BR
+6009,Real Estate,CPLG
+6010,Real Estate,CPT
+6011,Real Estate,CROS.PA
+6012,Real Estate,CSGP
+6013,Real Estate,CTO
+6014,Real Estate,CTRE
+6015,Real Estate,CTT
+6016,Real Estate,CUBE
+6017,Real Estate,CUZ
+6018,Real Estate,CWK
+6019,Real Estate,CXP
+6020,Real Estate,CXW
+6021,Real Estate,CYS
+6022,Real Estate,DCT
+6023,Real Estate,DEA
+6024,Real Estate,DEI
+6025,Real Estate,DHC
+6026,Real Estate,DLR
+6027,Real Estate,DNK
+6028,Real Estate,DOC
+6029,Real Estate,DRE
+6030,Real Estate,DRH
+6031,Real Estate,DRM.TO
+6032,Real Estate,DUO
+6033,Real Estate,DX
+6034,Real Estate,EARN
+6035,Real Estate,EDR
+6036,Real Estate,EFI.PA
+6037,Real Estate,EGP
+6038,Real Estate,EIFF.PA
+6039,Real Estate,ELS
+6040,Real Estate,EPRT
+6041,Real Estate,EPR
+6042,Real Estate,EQC
+6043,Real Estate,EQIX
+6044,Real Estate,EQR
+6045,Real Estate,ESRT
+6046,Real Estate,ESS
+6047,Real Estate,EURS.PA
+6048,Real Estate,EXPI
+6049,Real Estate,EXR
+6050,Real Estate,FATL.PA
+6051,Real Estate,FCPT
+6052,Real Estate,FEN.LS
+6053,Real Estate,FIPP.PA
+6054,Real Estate,FLY.PA
+6055,Real Estate,FOR
+6056,Real Estate,FPH
+6057,Real Estate,FPI
+6058,Real Estate,FPN.PA
+6059,Real Estate,FREY.PA
+6060,Real Estate,FRPH
+6061,Real Estate,FRT
+6062,Real Estate,FR
+6063,Real Estate,FSP
+6064,Real Estate,FSV.TO
+6065,Real Estate,FSV
+6066,Real Estate,GALIM.PA
+6067,Real Estate,GDC.TO
+6068,Real Estate,GEO
+6069,Real Estate,GFC.PA
+6070,Real Estate,GLPI
+6071,Real Estate,GMRE
+6072,Real Estate,GNL
+6073,Real Estate,GOODN
+6074,Real Estate,GOODO
+6075,Real Estate,GOODP
+6076,Real Estate,GOOD
+6077,Real Estate,GPMT
+6078,Real Estate,GPT
+6079,Real Estate,GRIF
+6080,Real Estate,GTY
+6081,Real Estate,GYRO
+6082,Real Estate,HASI
+6083,Real Estate,HCFT
+6084,Real Estate,HF
+6085,Real Estate,HGSH
+6086,Real Estate,HHC
+6087,Real Estate,HIFR
+6088,Real Estate,HIW
+6089,Real Estate,HMG
+6090,Real Estate,HOMI.BR
+6091,Real Estate,HPP
+6092,Real Estate,HR
+6093,Real Estate,HST
+6094,Real Estate,HTA
+6095,Real Estate,HTIA
+6096,Real Estate,HT
+6097,Real Estate,ICAD.PA
+6098,Real Estate,IEP.BR
+6099,Real Estate,IHT
+6100,Real Estate,IIPR
+6101,Real Estate,ILPT
+6102,Real Estate,IMDA.PA
+6103,Real Estate,IMMO.BR
+6104,Real Estate,IMMOU.BR
+6105,Real Estate,INEA.PA
+6106,Real Estate,INN
+6107,Real Estate,INTO.BR
+6108,Real Estate,INVH
+6109,Real Estate,IRCP
+6110,Real Estate,IRET
+6111,Real Estate,IRM
+6112,Real Estate,IRS
+6113,Real Estate,IRT
+6114,Real Estate,JBGS
+6115,Real Estate,JCAP
+6116,Real Estate,JLL
+6117,Real Estate,JOE
+6118,Real Estate,KARD.AS
+6119,Real Estate,KIM
+6120,Real Estate,KRC
+6121,Real Estate,KRG
+6122,Real Estate,KW
+6123,Real Estate,LADR
+6124,Real Estate,LAMR
+6125,Real Estate,LANDP
+6126,Real Estate,LAND
+6127,Real Estate,LEAS.BR
+6128,Real Estate,LEJU
+6129,Real Estate,LFVE.PA
+6130,Real Estate,LHO
+6131,Real Estate,LI.PA
+6132,Real Estate,LMRKP
+6133,Real Estate,LMRK
+6134,Real Estate,LOAN
+6135,Real Estate,LODE
+6136,Real Estate,LPT
+6137,Real Estate,LSI
+6138,Real Estate,LTC
+6139,Real Estate,LXP
+6140,Real Estate,MAA
+6141,Real Estate,MAC
+6142,Real Estate,MAYS
+6143,Real Estate,MDJH
+6144,Real Estate,MDRRP
+6145,Real Estate,MDRR
+6146,Real Estate,MEQ.TO
+6147,Real Estate,MERY.PA
+6148,Real Estate,MFA
+6149,Real Estate,MFO
+6150,Real Estate,MGP
+6151,Real Estate,MITT
+6152,Real Estate,MLFTI.PA
+6153,Real Estate,MLIPP.PA
+6154,Real Estate,MLPRI.PA
+6155,Real Estate,MLP
+6156,Real Estate,MMI
+6157,Real Estate,MNR
+6158,Real Estate,MONT.BR
+6159,Real Estate,MPC.TO
+6160,Real Estate,MPW
+6161,Real Estate,MRC.TO
+6162,Real Estate,MRD.TO
+6163,Real Estate,MRM.PA
+6164,Real Estate,MTGEP
+6165,Real Estate,MTGE
+6166,Real Estate,NEN
+6167,Real Estate,NEU.BR
+6168,Real Estate,NHI
+6169,Real Estate,NLY
+6170,Real Estate,NMRK
+6171,Real Estate,NNN
+6172,Real Estate,NRE
+6173,Real Estate,NRP.AS
+6174,Real Estate,NRZ
+6175,Real Estate,NSA
+6176,Real Estate,NSI.AS
+6177,Real Estate,NTP
+6178,Real Estate,NXI.PA
+6179,Real Estate,NXRT
+6180,Real Estate,NYMTM
+6181,Real Estate,NYMTO
+6182,Real Estate,NYMTP
+6183,Real Estate,NYMT
+6184,Real Estate,NYRT
+6185,Real Estate,OBAS
+6186,Real Estate,OFC
+6187,Real Estate,OHI
+6188,Real Estate,OLP
+6189,Real Estate,OPI
+6190,Real Estate,ORC
+6191,Real Estate,ORIA.PA
+6192,Real Estate,OUT
+6193,Real Estate,O
+6194,Real Estate,PAR.PA
+6195,Real Estate,PAT.PA
+6196,Real Estate,PCH
+6197,Real Estate,PDM
+6198,Real Estate,PEAK
+6199,Real Estate,PEB
+6200,Real Estate,PEI
+6201,Real Estate,PGRE
+6202,Real Estate,PK
+6203,Real Estate,PLD
+6204,Real Estate,PLYM
+6205,Real Estate,PMT
+6206,Real Estate,PSA
+6207,Real Estate,PSB
+6208,Real Estate,PSTL
+6209,Real Estate,PW
+6210,Real Estate,QK
+6211,Real Estate,QRF.BR
+6212,Real Estate,QTS
+6213,Real Estate,RC
+6214,Real Estate,RDFN
+6215,Real Estate,REG
+6216,Real Estate,RESI
+6217,Real Estate,RET.BR
+6218,Real Estate,REXR
+6219,Real Estate,RHP
+6220,Real Estate,RLGY
+6221,Real Estate,RLJ
+6222,Real Estate,RMAX
+6223,Real Estate,RMR
+6224,Real Estate,ROIC
+6225,Real Estate,RPAI
+6226,Real Estate,RPT
+6227,Real Estate,RSO
+6228,Real Estate,RVI
+6229,Real Estate,RWT
+6230,Real Estate,RYN
+6231,Real Estate,SACH
+6232,Real Estate,SAFE
+6233,Real Estate,SBAC
+6234,Real Estate,SBRAP
+6235,Real Estate,SBRA
+6236,Real Estate,SELER.PA
+6237,Real Estate,SELF
+6238,Real Estate,SFBS.PA
+6239,Real Estate,SHO
+6240,Real Estate,SIR
+6241,Real Estate,SITC
+6242,Real Estate,SKT
+6243,Real Estate,SLG
+6244,Real Estate,SMTA
+6245,Real Estate,SNG.LS
+6246,Real Estate,SNH
+6247,Real Estate,SNR
+6248,Real Estate,SOFT.BR
+6249,Real Estate,SOHO
+6250,Real Estate,SPEL.PA
+6251,Real Estate,SPG
+6252,Real Estate,SRC
+6253,Real Estate,SRG
+6254,Real Estate,STAG
+6255,Real Estate,STAR
+6256,Real Estate,STOR
+6257,Real Estate,STRS
+6258,Real Estate,STWD
+6259,Real Estate,SUI
+6260,Real Estate,SVC
+6261,Real Estate,TAYN.PA
+6262,Real Estate,TCI
+6263,Real Estate,TCN.TO
+6264,Real Estate,TCO
+6265,Real Estate,TIER
+6266,Real Estate,TPHS
+6267,Real Estate,TRMT
+6268,Real Estate,TRNO
+6269,Real Estate,TRTX
+6270,Real Estate,TWO
+6271,Real Estate,UBA
+6272,Real Estate,UBP
+6273,Real Estate,UDR
+6274,Real Estate,UE
+6275,Real Estate,UHT
+6276,Real Estate,UMH
+6277,Real Estate,UNIT
+6278,Real Estate,URW.AS
+6279,Real Estate,VASTB.BR
+6280,Real Estate,VASTN.AS
+6281,Real Estate,VER
+6282,Real Estate,VGP.BR
+6283,Real Estate,VICI
+6284,Real Estate,VNO
+6285,Real Estate,VTR
+6286,Real Estate,WDP.BR
+6287,Real Estate,WEB.BR
+6288,Real Estate,WEHB.BR
+6289,Real Estate,WELL
+6290,Real Estate,WFC.TO
+6291,Real Estate,WHA.AS
+6292,Real Estate,WHLRP
+6293,Real Estate,WHLR
+6294,Real Estate,WMC
+6295,Real Estate,WPC
+6296,Real Estate,WPG
+6297,Real Estate,WRE
+6298,Real Estate,WRI
+6299,Real Estate,WSR
+6300,Real Estate,WY
+6301,Real Estate,XAN
+6302,Real Estate,XHR
+6303,Real Estate,XIN
+6304,Real Estate,XIOR.BR
+6305,Real Estate,YRIV
+6306,Technology,2CRSI.PA
+6307,Technology,AAOI
+6308,Technology,AAPL
+6309,Technology,ABB
+6310,Technology,ABT.TO
+6311,Technology,ACIA
+6312,Technology,ACIW
+6313,Technology,ACLS
+6314,Technology,ACMR
+6315,Technology,ACN
+6316,Technology,ADBE
+6317,Technology,ADI
+6318,Technology,ADSK
+6319,Technology,ADTN
+6320,Technology,ADYEN.AS
+6321,Technology,AEHR
+6322,Technology,AEYE
+6323,Technology,AEY
+6324,Technology,AGMH
+6325,Technology,AGYS
+6326,Technology,AIRG
+6327,Technology,AJX.TO
+6328,Technology,AKA.PA
+6329,Technology,AKAM
+6330,Technology,AKOM.PA
+6331,Technology,AKTS
+6332,Technology,ALANV.PA
+6333,Technology,ALARF.PA
+6334,Technology,ALAVY.PA
+6335,Technology,ALBFR.PA
+6336,Technology,ALCOF.PA
+6337,Technology,ALDRV.PA
+6338,Technology,ALESK.PA
+6339,Technology,ALEZV.PA
+6340,Technology,ALGTR.PA
+6341,Technology,ALHIT.PA
+6342,Technology,ALHSW.PA
+6343,Technology,ALHVS.PA
+6344,Technology,ALIMR.PA
+6345,Technology,ALKAL.PA
+6346,Technology,ALKLK.PA
+6347,Technology,ALLIX.PA
+6348,Technology,ALLOG.PA
+6349,Technology,ALLT
+6350,Technology,ALM.PA
+6351,Technology,ALMIC.PA
+6352,Technology,ALMII.PA
+6353,Technology,ALNN6.PA
+6354,Technology,ALNSE.PA
+6355,Technology,ALODI.PA
+6356,Technology,ALORD.PA
+6357,Technology,ALOT
+6358,Technology,ALOXA.PA
+6359,Technology,ALPRO.PA
+6360,Technology,ALRM
+6361,Technology,ALROC.PA
+6362,Technology,ALS30.PA
+6363,Technology,ALSIM.PA
+6364,Technology,ALSTW.PA
+6365,Technology,ALTEV.PA
+6366,Technology,ALTRO.PA
+6367,Technology,ALTR
+6368,Technology,ALTTI.PA
+6369,Technology,ALTVO.PA
+6370,Technology,ALTXC.PA
+6371,Technology,ALUMS.PA
+6372,Technology,ALVGO.PA
+6373,Technology,ALVIV.PA
+6374,Technology,ALWEC.PA
+6375,Technology,ALWED.PA
+6376,Technology,ALYA
+6377,Technology,AMAT
+6378,Technology,AMBA
+6379,Technology,AMBR
+6380,Technology,AMD
+6381,Technology,AMKR
+6382,Technology,AMOT
+6383,Technology,AMRH
+6384,Technology,AMSWA
+6385,Technology,ANET
+6386,Technology,ANSS
+6387,Technology,ANY
+6388,Technology,AOSL
+6389,Technology,APH
+6390,Technology,APPF
+6391,Technology,APPN
+6392,Technology,APPS
+6393,Technology,AQ
+6394,Technology,ARRS
+6395,Technology,ARTO.PA
+6396,Technology,ARW
+6397,Technology,ASM.AS
+6398,Technology,ASML.AS
+6399,Technology,ASML
+6400,Technology,ASUR
+6401,Technology,ASX
+6402,Technology,ASYS
+6403,Technology,ATE.PA
+6404,Technology,ATEME.PA
+6405,Technology,ATEN
+6406,Technology,ATHN
+6407,Technology,ATO.PA
+6408,Technology,ATOM
+6409,Technology,AUB.PA
+6410,Technology,AUDC
+6411,Technology,AVCT
+6412,Technology,AVGOP
+6413,Technology,AVGO
+6414,Technology,AVLR
+6415,Technology,AVNW
+6416,Technology,AVT.PA
+6417,Technology,AVT
+6418,Technology,AVX
+6419,Technology,AVYA
+6420,Technology,AWOX.PA
+6421,Technology,AWRE
+6422,Technology,AWSM
+6423,Technology,AXTI
+6424,Technology,AXW.PA
+6425,Technology,AYX
+6426,Technology,AZPN
+6427,Technology,BAND
+6428,Technology,BAR.BR
+6429,Technology,BB.TO
+6430,Technology,BBOX
+6431,Technology,BCOV
+6432,Technology,BDR
+6433,Technology,BELFA
+6434,Technology,BELFB
+6435,Technology,BESI.AS
+6436,Technology,BGC
+6437,Technology,BHE
+6438,Technology,BIG.PA
+6439,Technology,BILL
+6440,Technology,BKI
+6441,Technology,BKTI
+6442,Technology,BLIN
+6443,Technology,BLKB
+6444,Technology,BL
+6445,Technology,BNFT
+6446,Technology,BNSO
+6447,Technology,BOXL
+6448,Technology,BOX
+6449,Technology,BRKS
+6450,Technology,BRQS
+6451,Technology,BR
+6452,Technology,BSQR
+6453,Technology,BVSN
+6454,Technology,BW
+6455,Technology,BYL.TO
+6456,Technology,CACI
+6457,Technology,CAJ
+6458,Technology,CALD
+6459,Technology,CALX
+6460,Technology,CAMP
+6461,Technology,CAMT
+6462,Technology,CAN
+6463,Technology,CAP.PA
+6464,Technology,CARB
+6465,Technology,CAS.PA
+6466,Technology,CASA
+6467,Technology,CAVM
+6468,Technology,CA
+6469,Technology,CCMP
+6470,Technology,CCRC
+6471,Technology,CCUR
+6472,Technology,CDAY
+6473,Technology,CDK
+6474,Technology,CDNS
+6475,Technology,CDW
+6476,Technology,CEVA
+6477,Technology,CGNX
+6478,Technology,CHKP
+6479,Technology,CIB.PA
+6480,Technology,CIEN
+6481,Technology,CIH
+6482,Technology,CISN
+6483,Technology,CLA.PA
+6484,Technology,CLDR
+6485,Technology,CLFD
+6486,Technology,CLGX
+6487,Technology,CLPS
+6488,Technology,CLRO
+6489,Technology,CLS.TO
+6490,Technology,CLSK
+6491,Technology,CLS
+6492,Technology,CMBM
+6493,Technology,CMCM
+6494,Technology,CMG.TO
+6495,Technology,CMTL
+6496,Technology,CNDT
+6497,Technology,CNXN
+6498,Technology,COGEC.PA
+6499,Technology,COH.PA
+6500,Technology,COHR
+6501,Technology,COHU
+6502,Technology,COMM
+6503,Technology,COUP
+6504,Technology,CPAH
+6505,Technology,CPSH
+6506,Technology,CRAY
+6507,Technology,CRCM
+6508,Technology,CREE
+6509,Technology,CREX
+6510,Technology,CRM
+6511,Technology,CRNC
+6512,Technology,CRNT
+6513,Technology,CRTO
+6514,Technology,CRUS
+6515,Technology,CRWD
+6516,Technology,CSCO
+6517,Technology,CSGS
+6518,Technology,CSIQ
+6519,Technology,CSOD
+6520,Technology,CSPI
+6521,Technology,CSRA
+6522,Technology,CSU.TO
+6523,Technology,CTAC.AS
+6524,Technology,CTEK
+6525,Technology,CTG
+6526,Technology,CTK
+6527,Technology,CTRL
+6528,Technology,CTSH
+6529,Technology,CTS
+6530,Technology,CTXS
+6531,Technology,CVLT
+6532,Technology,CYBE
+6533,Technology,CYBR
+6534,Technology,CYOU
+6535,Technology,CYRN
+6536,Technology,CY
+6537,Technology,DAIO
+6538,Technology,DAKT
+6539,Technology,DATA
+6540,Technology,DAVA
+6541,Technology,DBD
+6542,Technology,DBO.TO
+6543,Technology,DBX
+6544,Technology,DCAR
+6545,Technology,DDD
+6546,Technology,DDOG
+6547,Technology,DELL
+6548,Technology,DGB.AS
+6549,Technology,DGII
+6550,Technology,DIG.PA
+6551,Technology,DIOD
+6552,Technology,DLT.PA
+6553,Technology,DMRC
+6554,Technology,DOCU
+6555,Technology,DOMO
+6556,Technology,DOX
+6557,Technology,DQ
+6558,Technology,DSG.TO
+6559,Technology,DSGX
+6560,Technology,DSPG
+6561,Technology,DST
+6562,Technology,DSY.PA
+6563,Technology,DTRM
+6564,Technology,DTSS
+6565,Technology,DT
+6566,Technology,DUOT
+6567,Technology,DVT.PA
+6568,Technology,DWCH
+6569,Technology,DXC
+6570,Technology,DYSL
+6571,Technology,DZSI
+6572,Technology,EAS2P.AS
+6573,Technology,EBIX
+6574,Technology,EB
+6575,Technology,ECOM
+6576,Technology,ECONB.BR
+6577,Technology,EDGW
+6578,Technology,EEFT
+6579,Technology,EFII
+6580,Technology,EGAN
+6581,Technology,EGHT
+6582,Technology,EGOV
+6583,Technology,EIGI
+6584,Technology,EKI.PA
+6585,Technology,ELLI
+6586,Technology,ELON
+6587,Technology,ELSE
+6588,Technology,ELTK
+6589,Technology,EMAN
+6590,Technology,EMKR
+6591,Technology,ENGH.TO
+6592,Technology,ENPH
+6593,Technology,ENTG
+6594,Technology,ENV
+6595,Technology,EOS.PA
+6596,Technology,EPAM
+6597,Technology,EPAY
+6598,Technology,ERIC
+6599,Technology,ESE
+6600,Technology,ESI.PA
+6601,Technology,ESIO
+6602,Technology,ESTC
+6603,Technology,ET.TO
+6604,Technology,ETL.PA
+6605,Technology,EVBG
+6606,Technology,EVOL
+6607,Technology,EVOP
+6608,Technology,EVS.BR
+6609,Technology,EVSI
+6610,Technology,EVTC
+6611,Technology,EXF.TO
+6612,Technology,EXFO
+6613,Technology,EXLS
+6614,Technology,EXTR
+6615,Technology,FARO
+6616,Technology,FEIM
+6617,Technology,FEYE
+6618,Technology,FFIV
+6619,Technology,FICO
+6620,Technology,FISV
+6621,Technology,FIS
+6622,Technology,FIT
+6623,Technology,FIVN
+6624,Technology,FLEX
+6625,Technology,FLIR
+6626,Technology,FLT
+6627,Technology,FNJN
+6628,Technology,FNSR
+6629,Technology,FN
+6630,Technology,FORM
+6631,Technology,FORTY
+6632,Technology,FOUR
+6633,Technology,FPG.PA
+6634,Technology,FSCT
+6635,Technology,FSLR
+6636,Technology,FSLY
+6637,Technology,FTFT
+6638,Technology,FTNT
+6639,Technology,FTNW
+6640,Technology,FTV
+6641,Technology,GDDY
+6642,Technology,GDI
+6643,Technology,GDS
+6644,Technology,GECP.PA
+6645,Technology,GENX.PA
+6646,Technology,GIB
+6647,Technology,GID.PA
+6648,Technology,GILT
+6649,Technology,GLINT.LS
+6650,Technology,GLOB
+6651,Technology,GLOG.BR
+6652,Technology,GLW
+6653,Technology,GNSS
+6654,Technology,GOE.PA
+6655,Technology,GPRO
+6656,Technology,GRMN
+6657,Technology,GRPN
+6658,Technology,GSB
+6659,Technology,GSIT
+6660,Technology,GSKY
+6661,Technology,GSUM
+6662,Technology,GTYH
+6663,Technology,GUI.PA
+6664,Technology,GVP
+6665,Technology,GWRE
+6666,Technology,G
+6667,Technology,HBB
+6668,Technology,HCKT
+6669,Technology,HDP
+6670,Technology,HEAR
+6671,Technology,HF.PA
+6672,Technology,HIMX
+6673,Technology,HIPAY.PA
+6674,Technology,HIVE
+6675,Technology,HLIT
+6676,Technology,HMI
+6677,Technology,HMNY
+6678,Technology,HPE
+6679,Technology,HPJ
+6680,Technology,HPQ
+6681,Technology,HUBS
+6682,Technology,IBM
+6683,Technology,ICHR
+6684,Technology,ICT.AS
+6685,Technology,IDEX
+6686,Technology,IDN
+6687,Technology,IDSY
+6688,Technology,IDTI
+6689,Technology,IEC
+6690,Technology,IGE.PA
+6691,Technology,IIIV
+6692,Technology,IIVI
+6693,Technology,IMI
+6694,Technology,IMMR
+6695,Technology,IMOS
+6696,Technology,IMP.TO
+6697,Technology,IMPV
+6698,Technology,IMXI
+6699,Technology,INAP
+6700,Technology,INF.PA
+6701,Technology,INFN
+6702,Technology,INFY
+6703,Technology,ING.PA
+6704,Technology,INN.PA
+6705,Technology,INOD
+6706,Technology,INPX
+6707,Technology,INSG
+6708,Technology,INST
+6709,Technology,INS
+6710,Technology,INTC
+6711,Technology,INTT
+6712,Technology,INTU
+6713,Technology,INVE
+6714,Technology,INXN
+6715,Technology,IOTS
+6716,Technology,IPGP
+6717,Technology,IPHI
+6718,Technology,IRBT
+6719,Technology,ISDR
+6720,Technology,ISNS
+6721,Technology,ITE.PA
+6722,Technology,ITI
+6723,Technology,ITL.PA
+6724,Technology,ITRI
+6725,Technology,ITRN
+6726,Technology,IT
+6727,Technology,JBL
+6728,Technology,JCOM
+6729,Technology,JCS
+6730,Technology,JFU
+6731,Technology,JG
+6732,Technology,JKHY
+6733,Technology,JKS
+6734,Technology,JNPR
+6735,Technology,JTPY
+6736,Technology,JXR.PA
+6737,Technology,KC
+6738,Technology,KEM
+6739,Technology,KEY.PA
+6740,Technology,KEYS
+6741,Technology,KEYW.BR
+6742,Technology,KEYW
+6743,Technology,KLAC
+6744,Technology,KLIC
+6745,Technology,KN
+6746,Technology,KOPN
+6747,Technology,KOSS
+6748,Technology,KTCC
+6749,Technology,KVHI
+6750,Technology,KXS.TO
+6751,Technology,LACR.PA
+6752,Technology,LASR
+6753,Technology,LBCC
+6754,Technology,LDOS
+6755,Technology,LEDS
+6756,Technology,LFUS
+6757,Technology,LGL
+6758,Technology,LIN.PA
+6759,Technology,LINK
+6760,Technology,LINX
+6761,Technology,LITE
+6762,Technology,LLNW
+6763,Technology,LOGI
+6764,Technology,LOGM
+6765,Technology,LORL
+6766,Technology,LPL
+6767,Technology,LPSN
+6768,Technology,LPTH
+6769,Technology,LRCX
+6770,Technology,LSCC
+6771,Technology,LSS.PA
+6772,Technology,LTRX
+6773,Technology,LUNA
+6774,Technology,LYFT
+6775,Technology,LYTS
+6776,Technology,MAMS
+6777,Technology,MANH
+6778,Technology,MANT
+6779,Technology,MATR
+6780,Technology,MAXR
+6781,Technology,MB
+6782,Technology,MCHP
+6783,Technology,MDB
+6784,Technology,MDLA
+6785,Technology,MDSO
+6786,Technology,MEI
+6787,Technology,MELE.BR
+6788,Technology,MEMS.PA
+6789,Technology,MFGP
+6790,Technology,MGIC
+6791,Technology,MICT
+6792,Technology,MIME
+6793,Technology,MINDP
+6794,Technology,MIND
+6795,Technology,MITK
+6796,Technology,MITL
+6797,Technology,MJCO
+6798,Technology,MKSI
+6799,Technology,MLAB
+6800,Technology,MLARI.PA
+6801,Technology,MLCEC.PA
+6802,Technology,MLCHE.PA
+6803,Technology,MLCNT.PA
+6804,Technology,MLIDS.PA
+6805,Technology,MLMAD.PA
+6806,Technology,MLMGL.PA
+6807,Technology,MLNOV.PA
+6808,Technology,MLNX
+6809,Technology,MLPAC.PA
+6810,Technology,MNDO
+6811,Technology,MOBL
+6812,Technology,MODN
+6813,Technology,MOGO.TO
+6814,Technology,MOGO
+6815,Technology,MOSY
+6816,Technology,MPWR
+6817,Technology,MRAM
+6818,Technology,MRIN
+6819,Technology,MRVL
+6820,Technology,MSCC
+6821,Technology,MSFT
+6822,Technology,MSI
+6823,Technology,MSN
+6824,Technology,MSTR
+6825,Technology,MTC
+6826,Technology,MTLS
+6827,Technology,MTSC
+6828,Technology,MTSI
+6829,Technology,MUN.PA
+6830,Technology,MU
+6831,Technology,MVIS
+6832,Technology,MWK
+6833,Technology,MXIM
+6834,Technology,MXL
+6835,Technology,MXWL
+6836,Technology,MX
+6837,Technology,MYSZ
+6838,Technology,NATI
+6839,Technology,NBA.LS
+6840,Technology,NCR
+6841,Technology,NEDAP.AS
+6842,Technology,NEDSE.AS
+6843,Technology,NEON
+6844,Technology,NETE
+6845,Technology,NET
+6846,Technology,NEWAY.AS
+6847,Technology,NEWR
+6848,Technology,NICE
+6849,Technology,NLOK
+6850,Technology,NLST
+6851,Technology,NNDM
+6852,Technology,NOKIA.PA
+6853,Technology,NOK
+6854,Technology,NOVA
+6855,Technology,NOVI.AS
+6856,Technology,NOVT
+6857,Technology,NOW
+6858,Technology,NPTN
+6859,Technology,NRO.PA
+6860,Technology,NSIT
+6861,Technology,NSYS
+6862,Technology,NTAP
+6863,Technology,NTCT
+6864,Technology,NTG.PA
+6865,Technology,NTGR
+6866,Technology,NTIP
+6867,Technology,NTNX
+6868,Technology,NTWK
+6869,Technology,NUAN
+6870,Technology,NVDA
+6871,Technology,NVEC
+6872,Technology,NVMI
+6873,Technology,NXJ.TO
+6874,Technology,NXPI
+6875,Technology,OBLG
+6876,Technology,OCC
+6877,Technology,OCFT
+6878,Technology,OCLR
+6879,Technology,OHGI
+6880,Technology,OIIM
+6881,Technology,OKTA
+6882,Technology,OLED
+6883,Technology,ONTO
+6884,Technology,ON
+6885,Technology,OPN.PA
+6886,Technology,OPRA
+6887,Technology,OPTI.BR
+6888,Technology,ORCL
+6889,Technology,ORDI.AS
+6890,Technology,OSIS
+6891,Technology,OSPN
+6892,Technology,OSS
+6893,Technology,OTEX
+6894,Technology,PAGS
+6895,Technology,PANW
+6896,Technology,PARRO.PA
+6897,Technology,PAR
+6898,Technology,PATH.TO
+6899,Technology,PAY.BR
+6900,Technology,PAYC
+6901,Technology,PBTS
+6902,Technology,PCTI
+6903,Technology,PCTY
+6904,Technology,PCYG
+6905,Technology,PDFS
+6906,Technology,PD
+6907,Technology,PECK
+6908,Technology,PEER
+6909,Technology,PEGA
+6910,Technology,PFPT
+6911,Technology,PHUN
+6912,Technology,PID.PA
+6913,Technology,PING
+6914,Technology,PI
+6915,Technology,PLAB
+6916,Technology,PLAN
+6917,Technology,PLT
+6918,Technology,PLUS
+6919,Technology,PLXS
+6920,Technology,POWI
+6921,Technology,PRCP
+6922,Technology,PRFT
+6923,Technology,PRGS
+6924,Technology,PRKR
+6925,Technology,PROAC.PA
+6926,Technology,PROL.PA
+6927,Technology,PRO
+6928,Technology,PRSP
+6929,Technology,PRSS
+6930,Technology,PRTH
+6931,Technology,PSDO
+6932,Technology,PSTG
+6933,Technology,PS
+6934,Technology,PTC
+6935,Technology,PVTL
+6936,Technology,PWFL
+6937,Technology,PXLW
+6938,Technology,QADA
+6939,Technology,QADB
+6940,Technology,QCOM
+6941,Technology,QLYS
+6942,Technology,QMCO
+6943,Technology,QRVO
+6944,Technology,QTWO
+6945,Technology,QUIK
+6946,Technology,QUMU
+6947,Technology,RAMP
+6948,Technology,RBCN
+6949,Technology,RDCM
+6950,Technology,RDL.TO
+6951,Technology,RDVT
+6952,Technology,RDWR
+6953,Technology,RED.LS
+6954,Technology,REFR
+6955,Technology,RELL
+6956,Technology,RESN
+6957,Technology,RGSE
+6958,Technology,RHT
+6959,Technology,RIB.PA
+6960,Technology,RIOT
+6961,Technology,RMBS
+6962,Technology,RMNI
+6963,Technology,RNG
+6964,Technology,ROG
+6965,Technology,ROOD.AS
+6966,Technology,RPAY
+6967,Technology,RPD
+6968,Technology,RP
+6969,Technology,RSSS
+6970,Technology,RST
+6971,Technology,RSYS
+6972,Technology,RTEC
+6973,Technology,RUBI
+6974,Technology,RUN
+6975,Technology,SABR
+6976,Technology,SAIC
+6977,Technology,SAIL
+6978,Technology,SANM
+6979,Technology,SAP
+6980,Technology,SATS
+6981,Technology,SCKT
+6982,Technology,SCON
+6983,Technology,SCSC
+6984,Technology,SCWX
+6985,Technology,SEAC
+6986,Technology,SEDG
+6987,Technology,SESL.PA
+6988,Technology,SFLY
+6989,Technology,SFUN
+6990,Technology,SGH
+6991,Technology,SGLB
+6992,Technology,SGMA
+6993,Technology,SHOP.TO
+6994,Technology,SHOP
+6995,Technology,SHSP
+6996,Technology,SIGM
+6997,Technology,SII.PA
+6998,Technology,SILC
+6999,Technology,SIMO
+7000,Technology,SLAB
+7001,Technology,SLP
+7002,Technology,SMAR
+7003,Technology,SMCI
+7004,Technology,SMIT
+7005,Technology,SMSI
+7006,Technology,SMTC
+7007,Technology,SMTX
+7008,Technology,SNC.LS
+7009,Technology,SNCR
+7010,Technology,SNE
+7011,Technology,SNPS
+7012,Technology,SNX
+7013,Technology,SOA.PA
+7014,Technology,SOFO
+7015,Technology,SOI.PA
+7016,Technology,SOL
+7017,Technology,SONM
+7018,Technology,SONO
+7019,Technology,SOP.PA
+7020,Technology,SPA
+7021,Technology,SPI
+7022,Technology,SPLK
+7023,Technology,SPNS
+7024,Technology,SPRT
+7025,Technology,SPSC
+7026,Technology,SPWR
+7027,Technology,SQI.PA
+7028,Technology,SQNS
+7029,Technology,SQ
+7030,Technology,SREV
+7031,Technology,SSNC
+7032,Technology,SSNT
+7033,Technology,SSTI
+7034,Technology,SSYS
+7035,Technology,STM.PA
+7036,Technology,STMP
+7037,Technology,STM
+7038,Technology,STNE
+7039,Technology,STX
+7040,Technology,ST
+7041,Technology,SUNW
+7042,Technology,SVMK
+7043,Technology,SW.TO
+7044,Technology,SWCH
+7045,Technology,SWIR
+7046,Technology,SWI
+7047,Technology,SWKS
+7048,Technology,SWP.PA
+7049,Technology,SYKE
+7050,Technology,SYMC
+7051,Technology,SYNA
+7052,Technology,SYNC
+7053,Technology,SYNT
+7054,Technology,TACT
+7055,Technology,TAIT
+7056,Technology,TAOP
+7057,Technology,TC.TO
+7058,Technology,TCCO
+7059,Technology,TCS.TO
+7060,Technology,TCX
+7061,Technology,TDC
+7062,Technology,TDY
+7063,Technology,TEAM
+7064,Technology,TECD
+7065,Technology,TEL
+7066,Technology,TENB
+7067,Technology,TER
+7068,Technology,TES.PA
+7069,Technology,TESS
+7070,Technology,TIE.AS
+7071,Technology,TIVO
+7072,Technology,TLND
+7073,Technology,TLRA
+7074,Technology,TNAV
+7075,Technology,TOM2.AS
+7076,Technology,TRMB
+7077,Technology,TRT
+7078,Technology,TSEM
+7079,Technology,TSM
+7080,Technology,TSRI
+7081,Technology,TSS
+7082,Technology,TTD
+7083,Technology,TTEC
+7084,Technology,TTMI
+7085,Technology,TUFN
+7086,Technology,TWEKA.AS
+7087,Technology,TXN
+7088,Technology,TYL
+7089,Technology,TYPE
+7090,Technology,TZOO
+7091,Technology,UBER
+7092,Technology,UCTT
+7093,Technology,UEIC
+7094,Technology,UEPS
+7095,Technology,UIS
+7096,Technology,UI
+7097,Technology,ULTI
+7098,Technology,UMC
+7099,Technology,UPLD
+7100,Technology,UR.TO
+7101,Technology,USATP
+7102,Technology,USAT
+7103,Technology,USIO
+7104,Technology,UTSI
+7105,Technology,VCM.TO
+7106,Technology,VCRA
+7107,Technology,VDLO.PA
+7108,Technology,VECO
+7109,Technology,VERB
+7110,Technology,VERI
+7111,Technology,VHC
+7112,Technology,VIAV
+7113,Technology,VICR
+7114,Technology,VIOT
+7115,Technology,VISL
+7116,Technology,VJET
+7117,Technology,VMW
+7118,Technology,VMX.PA
+7119,Technology,VNET
+7120,Technology,VPG
+7121,Technology,VRNS
+7122,Technology,VRNT
+7123,Technology,VRSN
+7124,Technology,VRTU
+7125,Technology,VSAT
+7126,Technology,VSH
+7127,Technology,VSLR
+7128,Technology,VUZI
+7129,Technology,VVPR
+7130,Technology,WATT
+7131,Technology,WAVE.PA
+7132,Technology,WB
+7133,Technology,WDAY
+7134,Technology,WDC
+7135,Technology,WEB
+7136,Technology,WEI
+7137,Technology,WEX
+7138,Technology,WISA
+7139,Technology,WIT
+7140,Technology,WIX
+7141,Technology,WK
+7142,Technology,WLN.PA
+7143,Technology,WORK
+7144,Technology,WRTC
+7145,Technology,WSTG
+7146,Technology,WSTL
+7147,Technology,WTRH
+7148,Technology,WTT
+7149,Technology,WYY
+7150,Technology,XCRA
+7151,Technology,XCT.TO
+7152,Technology,XELA
+7153,Technology,XFAB.PA
+7154,Technology,XGTI
+7155,Technology,XLNX
+7156,Technology,XPLR
+7157,Technology,XRX
+7158,Technology,XSPA
+7159,Technology,YAYO
+7160,Technology,YEXT
+7161,Technology,ZAYO
+7162,Technology,ZBRA
+7163,Technology,ZDGE
+7164,Technology,ZENT.BR
+7165,Technology,ZEN
+7166,Technology,ZIXI
+7167,Technology,ZI
+7168,Technology,ZS
+7169,Technology,ZUO
+7170,Utilities,ABIO.PA
+7171,Utilities,AEE
+7172,Utilities,AEP
+7173,Utilities,AES
+7174,Utilities,AGR
+7175,Utilities,ALA.TO
+7176,Utilities,ALE
+7177,Utilities,ALGBE.PA
+7178,Utilities,ALGEP.PA
+7179,Utilities,ALHEO.PA
+7180,Utilities,ALMET.PA
+7181,Utilities,ALVER.PA
+7182,Utilities,APU
+7183,Utilities,AQN.TO
+7184,Utilities,AQN
+7185,Utilities,ARTNA
+7186,Utilities,ATO
+7187,Utilities,ATP.TO
+7188,Utilities,AT
+7189,Utilities,AVA
+7190,Utilities,AWK
+7191,Utilities,AWR
+7192,Utilities,AY
+7193,Utilities,AZRE
+7194,Utilities,BEP
+7195,Utilities,BIP
+7196,Utilities,BKH
+7197,Utilities,BLX.TO
+7198,Utilities,CAFD
+7199,Utilities,CDZI
+7200,Utilities,CEPU
+7201,Utilities,CIG
+7202,Utilities,CMS
+7203,Utilities,CNP
+7204,Utilities,CPK
+7205,Utilities,CPX.TO
+7206,Utilities,CREG
+7207,Utilities,CTWS
+7208,Utilities,CU.TO
+7209,Utilities,CWCO
+7210,Utilities,CWEN-A
+7211,Utilities,CWEN
+7212,Utilities,CWT
+7213,Utilities,CZZ
+7214,Utilities,DTE
+7215,Utilities,DTQ
+7216,Utilities,DTV
+7217,Utilities,DUKH
+7218,Utilities,DUK
+7219,Utilities,DYN
+7220,Utilities,D
+7221,Utilities,EAB
+7222,Utilities,EBR-B
+7223,Utilities,EBR
+7224,Utilities,EDF.PA
+7225,Utilities,EDN
+7226,Utilities,EDP.LS
+7227,Utilities,EDPR.LS
+7228,Utilities,ED
+7229,Utilities,EE
+7230,Utilities,EIX
+7231,Utilities,ELEC.PA
+7232,Utilities,ELI.BR
+7233,Utilities,ELJ
+7234,Utilities,ELLO
+7235,Utilities,EMA.TO
+7236,Utilities,ENGI.PA
+7237,Utilities,ENIA
+7238,Utilities,ENIC
+7239,Utilities,ENJ
+7240,Utilities,ES
+7241,Utilities,ETR
+7242,Utilities,ETX.TO
+7243,Utilities,EVRG
+7244,Utilities,EXC
+7245,Utilities,FE
+7246,Utilities,FTS.TO
+7247,Utilities,FTS
+7248,Utilities,GWRS
+7249,Utilities,GXP
+7250,Utilities,H.TO
+7251,Utilities,HE
+7252,Utilities,HNP
+7253,Utilities,IDA
+7254,Utilities,INE.TO
+7255,Utilities,IPLDP
+7256,Utilities,JE.TO
+7257,Utilities,JE
+7258,Utilities,KEN
+7259,Utilities,KEP
+7260,Utilities,LNT
+7261,Utilities,MGEE
+7262,Utilities,MLEDR.PA
+7263,Utilities,MSEX
+7264,Utilities,MXG.TO
+7265,Utilities,NEE
+7266,Utilities,NEOEN.PA
+7267,Utilities,NEP
+7268,Utilities,NFE
+7269,Utilities,NGG
+7270,Utilities,NI
+7271,Utilities,NJR
+7272,Utilities,NPI.TO
+7273,Utilities,NRG
+7274,Utilities,NSE.AS
+7275,Utilities,NWE
+7276,Utilities,NWN
+7277,Utilities,OEG
+7278,Utilities,OGE
+7279,Utilities,OGS
+7280,Utilities,ORA
+7281,Utilities,OTTR
+7282,Utilities,PAM
+7283,Utilities,PCG
+7284,Utilities,PCYO
+7285,Utilities,PEGI
+7286,Utilities,PEG
+7287,Utilities,PICO
+7288,Utilities,PIF.TO
+7289,Utilities,PNM
+7290,Utilities,PNW
+7291,Utilities,POR
+7292,Utilities,PPL
+7293,Utilities,RENE.LS
+7294,Utilities,RGCO
+7295,Utilities,RNW.TO
+7296,Utilities,RUI.PA
+7297,Utilities,SBS
+7298,Utilities,SEV.PA
+7299,Utilities,SJI
+7300,Utilities,SJW
+7301,Utilities,SKYS
+7302,Utilities,SO
+7303,Utilities,SPB.TO
+7304,Utilities,SPH
+7305,Utilities,SPKEP
+7306,Utilities,SPKE
+7307,Utilities,SRE
+7308,Utilities,SR
+7309,Utilities,SWX
+7310,Utilities,SXI.TO
+7311,Utilities,TA.TO
+7312,Utilities,TAC
+7313,Utilities,TERP
+7314,Utilities,TGS
+7315,Utilities,UGI
+7316,Utilities,UTL
+7317,Utilities,VLTSA.PA
+7318,Utilities,VST
+7319,Utilities,VVC
+7320,Utilities,WAAS
+7321,Utilities,WEC
+7322,Utilities,WGL
+7323,Utilities,WR
+7324,Utilities,WTRG
+7325,Utilities,WTR
+7326,Utilities,XEL
+7327,Utilities,YORW

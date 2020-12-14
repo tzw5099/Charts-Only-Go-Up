@@ -147,20 +147,20 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     quarters = round(len(sorted_metric)/4)
     bottom_25 = sorted_metric[len(sorted_metric)-1-quarters]
     top_25 = sorted_metric[quarters-1]
-    max_metric = sorted_metric.max()
-    min_metric = sorted_metric.min()
+    max_num = sorted_metric.max()
+    min_num = sorted_metric.min()
     mean = sorted_metric.mean()
     std_dev = sorted_metric.std()
     std_dev_str = "+/-{}{}%".format(currency_symbol,round(abs((std_dev-mean)/mean)*100,1))
     mean_str = magnitude_num(mean, currency_symbol)
-    max_str = magnitude_num(max_metric, currency_symbol)
-    min_str = magnitude_num(min_metric, currency_symbol)
+    max_str = magnitude_num(max_num, currency_symbol)
+    min_str = magnitude_num(min_num, currency_symbol)
     bottom_25_str = magnitude_num(bottom_25, currency_symbol)
     top_25_str = magnitude_num(top_25, currency_symbol)
 
     lifetime_sum_all_metric = df["{}".format(fin_metric_name)].sum()
     lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)
-
+    
     earliest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[0]    
     latest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[-1]    # average_abs_chg = latest_metric-earliest_metric
     earliest_metric = list(df["{}".format(fin_metric_name)])[0]
@@ -175,9 +175,10 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         pct_chg_str = "-{}%".format(historical_pct_chg)
     else:
         pct_chg_str = ""
+    # historical_pct_chg = str(round(pct_chg*100, 1))
     historical_pct_chg = pct_chg_str
-    max_min_pct_diff = ((max_metric-min_metric)/min_metric)
-
+    max_min_pct_diff = ((max_num-min_num)/min_num)
+    
     if max_min_pct_diff>=0:
         max_min_pct_diff_str = "+{}%".format(round(max_min_pct_diff)*100,1)
     elif max_min_pct_diff<0:
@@ -185,11 +186,19 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
     else:
         max_min_pct_diff_str = ""
     df_fin_statement['Quarter & Year'] =(df_fin_statement['date'].astype(str).str[0:4]).astype(int)
+    print("first_num {}, latest_num {}, earliest_metric {}, latest_metric {}".format(earliest_metric, latest_metric, earliest_metric, latest_metric)) 
     titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     for x in reversed(titles_bs):
         if x in titles_list:
             titles_bs.remove(x)
     df_fin_statement = df_fin_statement.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
+    # bug (?) - Symbol & Accepted Date not removed
+    # double_check = ['Symbol','Accepted Date']
+    # for x in titles_bs:
+    #     if x in double_check:
+    #         titles_bs.remove(x)    
+    # titles_bs.remove('Symbol')
+    # titles_bs.remove('Accepted Date')
     titles_bs.append('Quarter & Year') 
     df_fin_statement.columns = titles_bs
 
