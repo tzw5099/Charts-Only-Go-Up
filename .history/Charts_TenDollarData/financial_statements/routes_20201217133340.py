@@ -79,28 +79,18 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     url_symbol="aapl"
     titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     def magnitude_num(number, currency_symbol):
-        if len(str(number)) > 9 and number > 0:
+        if len(str(number)) > 9:
             magnitude = number/1000000000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
-        elif len(str(number)) > 6 and number > 0:
+        elif len(str(number)) > 6:
             magnitude = number/1000000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"M")
-        elif len(str(number)) > 3 and number > 0:
+        elif len(str(number)) > 3:
             magnitude = number/1000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
-
-        elif len(str(number)) > 9 and number < 0:
-            magnitude = abs(number/1000000000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"B")
-        elif len(str(number)) > 6 and number < 0:
-            magnitude = abs(number/1000000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"M")
-        elif len(str(number)) > 3 and number < 0:
-            magnitude = abs(number/1000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"K")
         else:
             magnitude = number
-            magnitude_str = "{}{}{}".format("",round(magnitude,1),"K")
+            magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
         return magnitude_str
     fin_statements_list = ["balance-sheet","income-statement","cash-flow-statement"]
     if "{}".format(statement_or_ratio) in fin_statements_list:
@@ -234,21 +224,14 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     mean = sorted_metric.mean()
     std_dev = sorted_metric.std()
     
-    std_dev_pct = abs((std_dev-mean)/mean)*100
-    
-    std_dev_abs = std_dev_pct * mean/100
-    std_dev_abs = magnitude_num(std_dev_abs, currency_symbol)
-    
-    std_dev_str = "+/-{}%".format(round(std_dev_pct,1))
-    std_dev_abs_str = "+/-{}".format(std_dev_abs)
-    
+    std_dev_str = "+/-{}{}%".format(currency_symbol,round(abs((std_dev-mean)/mean)*100,1))
     mean_str = magnitude_num(mean, currency_symbol)
     max_str = magnitude_num(max_metric, currency_symbol)
     min_str = magnitude_num(min_metric, currency_symbol)
     bottom_25_str = magnitude_num(bottom_25, currency_symbol)
     top_25_str = magnitude_num(top_25, currency_symbol)
     
-    num_years = len(sorted_metric)
+    
     earliest_year = list((df['date'].astype(str).str[0:4]))[0]    
     latest_year = list((df['date'].astype(str).str[0:4]))[-1]    # average_abs_chg = latest_metric-earliest_metric
     earliest_metric = list(df["{}".format(fin_metric_name)])[0]
@@ -256,19 +239,14 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     print("latest num", latest_metric)
     pct_chg = (latest_metric - earliest_metric)/earliest_metric
     historical_pct_chg = str(round(pct_chg*100, 1))
-    annual_pct_chg = str(round((10*(pct_chg*100)**(1/num_years)), 1))
 
     if pct_chg>=0:
-        hist_pct_chg_str = "+{}%".format(historical_pct_chg)
-        annual_pct_chg_str = "+{}%".format(annual_pct_chg)
+        pct_chg_str = "+{}%".format(historical_pct_chg)
     elif pct_chg<0:
-        hist_pct_chg_str = "-{}%".format(historical_pct_chg)
-        annual_pct_chg_str = "-{}%".format(annual_pct_chg)
+        pct_chg_str = "-{}%".format(historical_pct_chg)
     else:
-        hist_pct_chg_str = ""
-        annual_pct_chg_str = ""
-    historical_pct_chg = hist_pct_chg_str
-    annual_pct_chg = annual_pct_chg_str
+        pct_chg_str = ""
+    historical_pct_chg = pct_chg_str
     max_min_pct_diff = ((max_metric-min_metric)/min_metric)
 
     if max_min_pct_diff>=0:
@@ -424,7 +402,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     print("latest_num 2", df['date'].to_list(),"present_num 2", present_num)
     print("Nothing took {} seconds".format(time.time() - start_time))
     labels = list(df['date'])
-    print("df json", df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist())
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\
@@ -443,7 +420,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             max_str = max_str,\
                             min_str = min_str,\
                             std_dev_str = std_dev_str,\
-                            std_dev_abs_str = std_dev_abs_str,\
                             bottom_25_str = bottom_25_str,\
                             top_25_str = top_25_str,\
                             earliest_year = earliest_year,\
@@ -462,7 +438,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             place_name=url_symbol,\
                             max=17000,\
                             labels=labels,\
-                            annual_pct_chg = annual_pct_chg,\
                             # values=values
                             )
 

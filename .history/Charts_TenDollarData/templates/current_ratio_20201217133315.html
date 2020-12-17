@@ -166,17 +166,17 @@ div.sticky-top{
      // });
 
 
-    data = {{df_json}};
+    data = {{df_json}}
 
-    function mapData([x, y]) {
-        return {
-            name: x,
-            x: x,
-            y: Math.abs(y),
-            actualY: y,
-            color: y >= 0 ? '#7CB5EC': '#E6496F'//'#63CCA6' : '#E6496F'
-        }
-    }
+    // function mapData([x, y]) {
+    //     return {
+    //         name: x,
+    //     x: x,
+    //     y: Math.abs(y),
+    //     actualY: y,
+    //     color: y >= 0 ? '#63CCA6' : '#E6496F'
+    //     }
+    // }
         var myChart = Highcharts.stockChart('highbar', {
            // lang: {
            //     numericSymbols: [' thousands', ' millions', 'billions']
@@ -245,21 +245,21 @@ div.sticky-top{
                 }
     },
 
-                series: [{
-                    type: 'column',
-                    name: '{{company_symbol}}dd Stock Volume',
-
-                    data: data.map(mapData),
-
-                }]
                 // series: [{
                 //     type: 'column',
                 //     name: '{{company_symbol}}dd Stock Volume',
-                //     data:{{df_json}},
 
-                //         }]
-            });
-        });
+                //     data: data.map(mapData),
+
+                // }]
+        //         series: [{
+        //              type: 'column',
+        //              name: '{{company_symbol}}dd Stock Volume',
+        //              data:{{df_json}},
+ 
+        //          }]
+        //     });
+        // });
 </script>
 </head>
 
@@ -780,8 +780,7 @@ div.sticky-top{
                                     </tr>
                                     <tr>
                                         <td class="hist_measure">Std Dev. (σ)<br></td>
-                                        <td class="hist_stats">{{std_dev_abs_str}}</td>
-                                        <td class="hist_stats">({{std_dev_str}})</td>
+                                        <td class="hist_stats">{{std_dev_str}}</td>
                                     </tr>
                                     <tr>
                                         <td class="hist_measure">Top 25%</td>
@@ -799,18 +798,10 @@ div.sticky-top{
                                         <td class="hist_measure">Lowest</td>
                                         <td class="hist_stats">{{min_str}}</td>
                                     </tr>
-
-                                    <tr>
-                                        <td class="hist_measure">% Change (annually)</td>
-                                        <td class="hist_stats">{{annual_pct_chg}}</td>
-                                    </tr>
-
                                     <tr>
                                         <td class="hist_measure">% Change (since inception)</td>
                                         <td class="hist_stats">{{historical_pct_chg}}</td>
                                     </tr>
-
-
                                 </tbody>
                             </table>
                         </div>

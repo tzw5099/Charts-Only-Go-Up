@@ -164,48 +164,36 @@ div.sticky-top{
      //         numericSymbols: [' thousands', ' millions', 'billions']
      //     }
      // });
-
-
-    data = {{df_json}};
-
-    function mapData([x, y]) {
-        return {
-            name: x,
-            x: x,
-            y: Math.abs(y),
-            actualY: y,
-            color: y >= 0 ? '#7CB5EC': '#E6496F'//'#63CCA6' : '#E6496F'
-        }
-    }
-        var myChart = Highcharts.stockChart('highbar', {
+         var myChart = Highcharts.stockChart('highbar', {
            // lang: {
            //     numericSymbols: [' thousands', ' millions', 'billions']
            // },
-            chart: {
-                borderWidth: 2,
-                marginRight: 100
-            },
-                title: {
-                    text: '{{fin_metric_name}}'
-                },
-                rangeSelector: {
+           chart: {
+               borderWidth: 2,
+               marginRight: 100
+           },
+ 
+                 title: {
+                     text: '{{fin_metric_name}}'
+                 },
+                 rangeSelector: {
                      inputPosition: {                    // align: 'left',
-                        x: 0,                    y: 0                },
+                         x: 0,                    y: 0                },
                      buttonPosition: {                    // align: 'right',
-                        x: 0,                    y: 0                }
-                    ,
-                    buttons: [
-            {
-            type: 'year',        count: 3,        text: '3Y'    }, {
-            type: 'year',        count: 5,        text: '5Y'    }, {
-            type: 'year',        count: 10,        text: '10y'  }, {
-            type: 'all',        text: 'All'    }                   ]
-                },
-                xAxis:{
+                         x: 0,                    y: 0                }
+                     ,
+                     buttons: [
+             {
+             type: 'year',        count: 3,        text: '3Y'    }, {
+             type: 'year',        count: 5,        text: '5Y'    }, {
+             type: 'year',        count: 10,        text: '10y'  }, {
+             type: 'all',        text: 'All'    }                   ]
+                 },
+                 xAxis:{
                      tickInterval: 1 * 24 * 3600 * 1000 // interval of 1 day
-                },
-                yAxis:{
-                minPadding:100,
+                 },
+                 yAxis:{
+                   minPadding:100,
                            // lineColor:'#999',
                            // lineWidth:1,
                            // tickColor:'#666',
@@ -217,49 +205,44 @@ div.sticky-top{
                            //     rotation:0,
                            //     margin:50,
                            // },
-                            tooltip: {
-                            formatter: function (tooltip) {
-                            }
-                        },
-        labels:{
-                        align: 'right',
-                    x: 50,
-                    y: 0,
+                           tooltip: {
+                           formatter: function (tooltip) {
+                           }
+                       },
+         labels:{
+                         align: 'right',
+                   x: 50,
+                   y: 0,
                            // formatter:function(){
                            //     return ('$' + this.value / 1000000000) + 'B';
                            // }
-                            formatter:function(){
-                        if(this.value >= 1000000000){
-                            return ('$' + this.value / 1000000000) + 'B';
-                        }
-                        else if(this.value >= 1000000) {
-                            return ('$' + this.value / 1000000) + 'M';
-                        }
-                        else if(this.value >= 1000) {
-                            return ('$' + this.value / 1000) + 'K';
-                        }
-                        else {
-                            return '$' + this.value;
-                        }
-                    }
-                }
-    },
-
-                series: [{
-                    type: 'column',
-                    name: '{{company_symbol}}dd Stock Volume',
-
-                    data: data.map(mapData),
-
-                }]
-                // series: [{
-                //     type: 'column',
-                //     name: '{{company_symbol}}dd Stock Volume',
-                //     data:{{df_json}},
-
-                //         }]
-            });
-        });
+                           formatter:function(){
+                       if(this.value >= 1000000000){
+                           return ('$' + this.value / 1000000000) + 'B';
+                       }
+                       else if(this.value >= 1000000) {
+                           return ('$' + this.value / 1000000) + 'M';
+                       }
+                       else if(this.value >= 1000) {
+                           return ('$' + this.value / 1000) + 'K';
+                       }
+                       else {
+                           return '$' + this.value;
+                       }
+                   }
+         }
+     },
+ 
+ 
+                 series: [{
+                     type: 'column',
+                     name: '{{company_symbol}}dd Stock Volume',
+                     data:{{df_json}},
+ 
+                 }]
+ 
+             });
+         });
 </script>
 </head>
 
@@ -780,8 +763,7 @@ div.sticky-top{
                                     </tr>
                                     <tr>
                                         <td class="hist_measure">Std Dev. (σ)<br></td>
-                                        <td class="hist_stats">{{std_dev_abs_str}}</td>
-                                        <td class="hist_stats">({{std_dev_str}})</td>
+                                        <td class="hist_stats">{{std_dev_str}}</td>
                                     </tr>
                                     <tr>
                                         <td class="hist_measure">Top 25%</td>
@@ -799,18 +781,10 @@ div.sticky-top{
                                         <td class="hist_measure">Lowest</td>
                                         <td class="hist_stats">{{min_str}}</td>
                                     </tr>
-
-                                    <tr>
-                                        <td class="hist_measure">% Change (annually)</td>
-                                        <td class="hist_stats">{{annual_pct_chg}}</td>
-                                    </tr>
-
                                     <tr>
                                         <td class="hist_measure">% Change (since inception)</td>
                                         <td class="hist_stats">{{historical_pct_chg}}</td>
                                     </tr>
-
-
                                 </tbody>
                             </table>
                         </div>

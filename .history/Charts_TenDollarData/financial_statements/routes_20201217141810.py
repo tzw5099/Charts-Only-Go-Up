@@ -79,28 +79,18 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     url_symbol="aapl"
     titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     def magnitude_num(number, currency_symbol):
-        if len(str(number)) > 9 and number > 0:
+        if len(str(number)) > 9:
             magnitude = number/1000000000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
-        elif len(str(number)) > 6 and number > 0:
+        elif len(str(number)) > 6:
             magnitude = number/1000000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"M")
-        elif len(str(number)) > 3 and number > 0:
+        elif len(str(number)) > 3:
             magnitude = number/1000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
-
-        elif len(str(number)) > 9 and number < 0:
-            magnitude = abs(number/1000000000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"B")
-        elif len(str(number)) > 6 and number < 0:
-            magnitude = abs(number/1000000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"M")
-        elif len(str(number)) > 3 and number < 0:
-            magnitude = abs(number/1000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"K")
         else:
             magnitude = number
-            magnitude_str = "{}{}{}".format("",round(magnitude,1),"K")
+            magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
         return magnitude_str
     fin_statements_list = ["balance-sheet","income-statement","cash-flow-statement"]
     if "{}".format(statement_or_ratio) in fin_statements_list:
@@ -236,11 +226,11 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     
     std_dev_pct = abs((std_dev-mean)/mean)*100
     
-    std_dev_abs = std_dev_pct * mean/100
+    std_dev_abs = std_dev_pct * mean
     std_dev_abs = magnitude_num(std_dev_abs, currency_symbol)
     
-    std_dev_str = "+/-{}%".format(round(std_dev_pct,1))
-    std_dev_abs_str = "+/-{}".format(std_dev_abs)
+    std_dev_str = "+/-{}{}%".format(currency_symbol,round(std_dev_pct,1))
+    std_dev_pct_str = "+/-{}{}".format(std_dev_abs)
     
     mean_str = magnitude_num(mean, currency_symbol)
     max_str = magnitude_num(max_metric, currency_symbol)
@@ -443,7 +433,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             max_str = max_str,\
                             min_str = min_str,\
                             std_dev_str = std_dev_str,\
-                            std_dev_abs_str = std_dev_abs_str,\
                             bottom_25_str = bottom_25_str,\
                             top_25_str = top_25_str,\
                             earliest_year = earliest_year,\

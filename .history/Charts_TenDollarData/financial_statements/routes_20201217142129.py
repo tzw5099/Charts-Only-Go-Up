@@ -79,28 +79,18 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     url_symbol="aapl"
     titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     def magnitude_num(number, currency_symbol):
-        if len(str(number)) > 9 and number > 0:
+        if len(str(number)) > 9:
             magnitude = number/1000000000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
-        elif len(str(number)) > 6 and number > 0:
+        elif len(str(number)) > 6:
             magnitude = number/1000000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"M")
-        elif len(str(number)) > 3 and number > 0:
+        elif len(str(number)) > 3:
             magnitude = number/1000
             magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
-
-        elif len(str(number)) > 9 and number < 0:
-            magnitude = abs(number/1000000000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"B")
-        elif len(str(number)) > 6 and number < 0:
-            magnitude = abs(number/1000000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"M")
-        elif len(str(number)) > 3 and number < 0:
-            magnitude = abs(number/1000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"K")
         else:
             magnitude = number
-            magnitude_str = "{}{}{}".format("",round(magnitude,1),"K")
+            magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
         return magnitude_str
     fin_statements_list = ["balance-sheet","income-statement","cash-flow-statement"]
     if "{}".format(statement_or_ratio) in fin_statements_list:
