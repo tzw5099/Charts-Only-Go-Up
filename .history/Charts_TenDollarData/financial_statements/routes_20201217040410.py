@@ -401,7 +401,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     latest_metric = "${}".format(list(df["{}".format(fin_metric_title)])[0])
     print("latest_num 2", df['date'].to_list(),"present_num 2", present_num)
     print("Nothing took {} seconds".format(time.time() - start_time))
-    labels = list(df['date'])
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\
@@ -430,14 +429,14 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             max_min_pct_diff_str = max_min_pct_diff_str, df_bs_table_html = [df_table_html],df_html_tall = [df_html_tall],fin_metric_name = fin_metric_title,\
                             df_date = df['date'].to_list(),\
                             # df_rev = df["{}".format(fin_metric_name)].to_list(),\
-                            df_json  =df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist(),\
+                            df_json  =list(df["{}".format(fin_metric_title)]),\
                             table_pct = [df_pct],\
                             tables=[df_html],\
                             titles=df.columns.values,\
                             total_time=total_seconds,\
                             place_name=url_symbol,\
                             max=17000,\
-                            labels=labels,\
+                            # labels=labels,\
                             # values=values
                             )
 

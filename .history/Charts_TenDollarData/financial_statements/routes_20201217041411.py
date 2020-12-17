@@ -430,7 +430,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             max_min_pct_diff_str = max_min_pct_diff_str, df_bs_table_html = [df_table_html],df_html_tall = [df_html_tall],fin_metric_name = fin_metric_title,\
                             df_date = df['date'].to_list(),\
                             # df_rev = df["{}".format(fin_metric_name)].to_list(),\
-                            df_json  =df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist(),\
+                            df_json  =list(df[['date',"{}".format(fin_metric_title)]]),\
                             table_pct = [df_pct],\
                             tables=[df_html],\
                             titles=df.columns.values,\
