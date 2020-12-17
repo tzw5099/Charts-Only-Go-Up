@@ -97,10 +97,13 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
                             'sector',
                             'country',
                             'ipo date',
-                            'short name']
-    company_profiles = company_profiles[company_profiles_col]    
+                            'short name',
+                            'Industries',
+                            'Similar Companies']
+    company_profiles = company_profiles[company_profiles_col]
     profiles_dict = {}
     profiles_value = company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())].values.tolist()[0]
+    
 
     titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['Title'])
     titles_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
@@ -114,6 +117,14 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
         key = profiles_col
         value = profiles_value[n]
         profiles_dict[key] = value 
+
+
+
+    chars_to_remove = ["'","[","]"]
+
+    for character in chars_to_remove:
+        profiles_dict['Industries'] = profiles_dict['Industries'].replace(character, "")
+        profiles_dict['Similar Companies'] = profiles_dict['Similar Companies'].replace(character, "")        
 
     if "{}".format(url_fin_metric) in urls_is:
         fin_statement_dir = "Income Statement"
@@ -345,6 +356,8 @@ def current_ratio(url_fin_metric,url_name,url_symbol): # WORKS
                             company_country = profiles_dict['country'],\
                             company_ipo_date = profiles_dict['ipo date'],\
                             company_short_name = profiles_dict['short name'],\
+                            company_industries = profiles_dict['Industries'],\
+                            company_similar = profiles_dict['Similar Companies'],\
                             historical_pct_chg = historical_pct_chg,\
                             lifetime_sum_all_metric = lifetime_sum_all_metric,\
                             mean_str = mean_str,\

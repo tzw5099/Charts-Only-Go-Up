@@ -56,8 +56,15 @@
 <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
 
 <style>
+#df_myTable {
+    margin: 0 auto;
+}
 
-    
+.metric_table{
+    text-align:center;
+    margin: 0 auto !important;
+}
+
 div.card-body.hist_table {
   overflow:scroll;
 -ms-overflow-style: none;  /* IE and Edge */
@@ -391,24 +398,14 @@ div.sticky-top{
         <div class="row">
             <div class="col-md-8 col-lg-8 col-xl-8">
                 <div class="text-dark h1_info">
-                    <div class="card shadow mb-4">
-                        <div class="col mr-2">
-                            <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span><strong>
-                                {{fin_metric_name}} Definition and formula.</strong></span></div>
-                            <p>See:&nbsp;<br>Macrotrends &amp; Gurufocus definitions https://www.gurufocus.com/term/mktcap/{{company_symbol}}/Market-Cap/Apple<br></p>
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <div class="text-dark font-weight-bold h5 mb-0 mr-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right"><strong>{{company_long_name}} ({{company_symbol}}) {{fin_metric_name}} | 1984 - Present</strong><br></h1>
-                    <h2 class="text-primary mb-0">{{fin_metric_name}}: {{latest_metric}}<br></h2>
+
+                    <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right"><strong>{{company_long_name}} ({{company_symbol}}) {{fin_metric_name}} | {{earliest_year}} - {{latest_year}}</strong><br></h1>
+                    <h2 class="text-primary mb-0">{{latest_year}} {{fin_metric_name}}: {{present_num}}<br></h2>
                 </div>
                 <div class="pad-10-top pad-10-bottom pad-10-left pad-10-right">
                     <div>
-                        <div id="highbar" style="height: 400px; width:100%;"></div>
+                        <div id="highbar" style="height: 400px; width:100%;">
+                        </div>
                         <!-- <h2
                             class="text-primary historical">{{company_symbol}} Historical {{fin_metric_name}} Chart (by Fiscal Year)
                         </h2> -->
@@ -417,14 +414,10 @@ div.sticky-top{
                            
                     </div>
 
-                    
-<<<<<<< HEAD
                     <div id="content">
                         <!-- <div class="row">
-=======
-                    <!-- <div id="content">
+                     <div id="content">
                         <div class="row">
->>>>>>> f17041f6815b7bf2e2b971e589dec190d93c6ea0
                             <div class="col">
                                 <div class="card shadow border-left-info py-2">
                                     <div class="card-body hist_table" style="padding: 10px;">
@@ -442,7 +435,7 @@ div.sticky-top{
                         </div> -->
                         <div class="row flex-grow-1">
                             <div class="col-md-4 col-xl-6" style="padding: 10px;">
-                                <div class="card shadow border-left-primary py-2">
+                                <!-- <div class="card shadow border-left-primary py-2">
                                     <div class="card-body" style="padding: 10px;">
                                         <h6 class="text-primary mb-0" style="color: rgb(78,115,223);">{{fin_metric_name}} in {{earliest_year}} was 0.94<br>Today CR ({{latest_year}}): {{latest_metric}}<br></h6>
                                         <div class="row align-items-center no-gutters">
@@ -471,16 +464,30 @@ div.sticky-top{
                                         </div>
                                         <div class="text-dark font-weight-bold h5 mb-0"></div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
 
 
                         <div class="row flex-grow-1 justify-content-center">
                             <div class="col">
+
+                    <div class="card shadow mb-4">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span><strong>
+                                Definition & Formula | {{fin_metric_name}}</strong></span></div>
+                            <p>See:&nbsp;<br>Macrotrends &amp; Gurufocus definitions https://www.gurufocus.com/term/mktcap/{{company_symbol}}/Market-Cap/Apple<br></p>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="text-dark font-weight-bold h5 mb-0 mr-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                
                                 <div class="card shadow mb-4">
+                                    
                                     <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h6 class="text-primary font-weight-bold m-0">Apple Inc. ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
+                                        <h6 class="text-primary font-weight-bold m-0 metric_table">{{company_long_name}} ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
                                         <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
                                             <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
                                                 role="menu">
@@ -539,69 +546,7 @@ div.sticky-top{
 
                             </div>
                         </div>                        
-                        <div class="row flex-grow-1 justify-content-center">
-                            <div class="col">
-                                <div class="card shadow mb-4">
-                                    <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h6 class="text-primary font-weight-bold m-0">Apple Inc. ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
-                                        <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                            <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
-                                                role="menu">
-                                                <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
-                                                <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- {{df_bs_table_html}} -->
-                                        <!-- {% for table in df_html_tall %} -->
-                                        <!-- {{titles[loop.index]}} -->
-                                        <!-- asdas -->
-                                        <!-- {{ df_html_tall[0]|safe }} -->
-                                        <!-- {% endfor %} -->
 
-                                                        
-                                        <!-- <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>2014</th>
-                                                        <th>2015</th>
-                                                        <th>2016</th>
-                                                        <th>2017</th>
-                                                        <th>2018</th>
-                                                        <th>2019</th>
-                                                        <th>2020</th>
-                                                        <th>2021</th>
-                                                        <th>2022</th>
-                                                        <th>2023</th>
-                                                        <th>2024</th>
-                                                        <th>2025</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Cell 1</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                        <td>Cell 2</td>
-                                                    </tr>
-                                                    <tr></tr>
-                                                </tbody>
-                                            </table>
-                                        </div> -->
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                         <div class="container-fluid">
                             <div class="card shadow border-left-success py-2">
                                 <div class="card-body">
@@ -636,8 +581,7 @@ div.sticky-top{
                         </div>
                     </div>                    <div>
                         <h3>{{fin_metric_name}} Summary</h3>
-                        <p>{{company_short_name}}'s {{fin_metric_name}} is 0.7, and it's a great one. A {{fin_metric_name}} of 0.7 places it ahead of it's industry (Computer Hardware) average of 0.5 and sector (Technology) average. The industry includes the likes of GOOGL, FB,
-                            AMZN, NFLX. The highest and lowest {{fin_metric_name}} in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively.</p>
+                        <p>{{company_short_name}}'s {{fin_metric_name}} is 0.7, and it's a great one. A {{fin_metric_name}} of 0.7 places it ahead of it's industry ({{company_industry}}) average of 0.5 and sector ({{company_sector}}) average. The industry includes the likes of {{company_similar}}. The highest and lowest {{fin_metric_name}} in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively.</p>
                     </div>
                     <p>{{company_short_name}} celebrated it's 10th year anniversary with a {{fin_metric_name}} of 10. By the looks of it's history (see: the chart and stats above), you can expect {{company_short_name}} to maintain a positive {{fin_metric_name}}.</p><div class="container">
                         <div class="page-content">
@@ -774,10 +718,10 @@ div.sticky-top{
                 </p>
             </div>
             <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                <a class="card-title"> Comparables ({{fin_metric_name}} vs Competition e.g. AMZN, FB, NFLX) </a>
+                <a class="card-title"> Comparables ({{fin_metric_name}} vs Competition e.g. {{company_similar}}) </a>
             </div>
             <div id="collapseThree" class="collapse" data-parent="#accordion">
-                <div class="card-body">Apple, Inc's{{fin_metric_name}} is 0.7, and it's a great one. A {{fin_metric_name}} of 0.7 places it ahead of it's industry (Computer Hardware) average of 0.5 and sector (Technology) average. The industry includes the likes of GOOGL, FB, AMZN, NFLX. The highest and lowest {{fin_metric_name}} in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively. </div>
+                <div class="card-body">Apple, Inc's{{fin_metric_name}} is 0.7, and it's a great one. A {{fin_metric_name}} of 0.7 places it ahead of it's industry (Computer Hardware) average of 0.5 and sector (Technology) average. The industry includes the likes of {{company_similar}}. The highest and lowest {{fin_metric_name}} in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively. </div>
             </div>
         </div>
     </div>
@@ -786,7 +730,12 @@ div.sticky-top{
             <div class="col">
                 <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;">
                     <div class="card-body">
-                        <h2 class="text-primary mb-0 historical">Historical {{fin_metric_name}} Stats ({{earliest_year}} - {{latest_year}})</h2>
+                        <h2 class="text-primary mb-0 historical">
+                            Summary Statistics
+                            <br/>
+                            {{fin_metric_name}} 
+                            <br/>
+                            ({{earliest_year}} - {{latest_year}})</h2>
                         <div class="text-dark font-weight-bold h5 mb-0"></div>
                     </div>
                     <div class="card-body">
@@ -800,14 +749,14 @@ div.sticky-top{
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <!-- <tr>
                                         <td class="hist_measure">
                                             Present
                                         </td>
                                         <td class="hist_stats">
                                             {{present_num}}
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                     <tr>
                                         <td class="hist_measure">Mean (μ)</td>
                                         <td class="hist_stats">{{mean_str}}</td>
@@ -1119,7 +1068,69 @@ div.sticky-top{
             </div>
         </div>
     </section>
+    <div class="row flex-grow-1 justify-content-center">
+        <div class="col">
+            <div class="card shadow mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6 class="text-primary font-weight-bold m-0 metric_table">{{company_long_name}} ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
+                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                            role="menu">
+                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- {{df_bs_table_html}} -->
+                    <!-- {% for table in df_html_tall %} -->
+                    <!-- {{titles[loop.index]}} -->
+                    <!-- asdas -->
+                    <!-- {{ df_html_tall[0]|safe }} -->
+                    <!-- {% endfor %} -->
 
+                                    
+                    <!-- <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>2014</th>
+                                    <th>2015</th>
+                                    <th>2016</th>
+                                    <th>2017</th>
+                                    <th>2018</th>
+                                    <th>2019</th>
+                                    <th>2020</th>
+                                    <th>2021</th>
+                                    <th>2022</th>
+                                    <th>2023</th>
+                                    <th>2024</th>
+                                    <th>2025</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                </tr>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
