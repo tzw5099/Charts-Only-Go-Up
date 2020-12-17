@@ -139,12 +139,12 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['Title'])
             fin_metric_pos = urls_is.index("{}".format(url_fin_metric))
             fin_statement_dir = "Income Statement"
-        elif "{}".format(statement_or_ratio) == "balance-sheet":
+        elif "{}".format(url_fin_metric)) == "balance-sheet":
             titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['Title'])
             fin_metric_pos = urls_bs.index("{}".format(url_fin_metric))
             fin_statement_dir = "Balance Sheet"
 
-        elif "{}".format(statement_or_ratio) == "cash-flow-statement":
+        elif "{}".format(url_fin_metric) == ) == "cash-flow-statement":
             titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
             fin_metric_pos = urls_cf.index("{}".format(url_fin_metric))
 

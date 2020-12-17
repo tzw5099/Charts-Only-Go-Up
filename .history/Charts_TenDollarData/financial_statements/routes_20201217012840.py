@@ -77,7 +77,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     from route_imports.ratio_map import url_to_metric_map
     start_time = time.time()
     url_symbol="aapl"
-    titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     def magnitude_num(number, currency_symbol):
         if len(str(number)) > 9:
             magnitude = number/1000000000
@@ -115,6 +114,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
 
         # http://127.0.0.1:5000/aapl-stock/apple/balance-sheet/cash-and-cash-equivalents
 
+        titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['Title'])
         titles_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
         titles_is = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['Title'])
 
@@ -135,50 +135,33 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             profiles_dict['Industries'] = profiles_dict['Industries'].replace(character, "")
             profiles_dict['Similar Companies'] = profiles_dict['Similar Companies'].replace(character, "")        
 
-        if "{}".format(statement_or_ratio) == "income-statement":
-            titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['Title'])
-            fin_metric_pos = urls_is.index("{}".format(url_fin_metric))
+        if "{}".format(url_fin_metric) in urls_is:
             fin_statement_dir = "Income Statement"
-        elif "{}".format(statement_or_ratio) == "balance-sheet":
-            titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['Title'])
+        elif "{}".format(url_fin_metric) in urls_bs:
             fin_metric_pos = urls_bs.index("{}".format(url_fin_metric))
             fin_statement_dir = "Balance Sheet"
+            fin_statement_cols = titles_bs
+            cols = titles_bs
+            fin_metric_title = fin_statement_cols[fin_metric_pos]
 
-        elif "{}".format(statement_or_ratio) == "cash-flow-statement":
-            titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
-            fin_metric_pos = urls_cf.index("{}".format(url_fin_metric))
-
+        elif "{}".format(url_fin_metric) in urls_cf:
             fin_statement_dir = "Cash Flow Statement"
+
         else:
             pass
-        fin_statement_cols = titles_bs
-        cols = titles_bs
-        fin_metric_title = fin_statement_cols[fin_metric_pos]
-
         csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
 
         df = pd.read_csv(csv_file) #.format("NLOK"))[-1]
         # df = df[df['date'].notna()]#fillna(method='ffill')
         df = df[0:].iloc[::-1]#.dropna()
+        df_fin_statement = df
         #region Pandas data manipulation
-        df = df
         matching_row = fin_statements_matching[fin_statements_matching['URL']=="{}".format(url_fin_metric)]
         fin_metric_title = list(matching_row['Title'])[0]
         fin_metric_name = list(matching_row['Name'])[0]
-        print("fin_metric_name", fin_metric_name)
         print("fin metric name", fin_metric_name)
-        df = df.dropna(subset=["{}".format(fin_metric_name)]) #.fillna(0)#.fillna(method='bfill')
-        df = df[df["{}".format(fin_metric_name)] != 0]
-        print("goodwill")
-        print(df)
         sorted_metric = df["{}".format(fin_metric_name)].sort_values()
-        lifetime_sum_all_metric = df["{}".format(fin_metric_name)].sum()
-        lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)        
-        print("lifetime passed")
-
-
     else:
-        
         currency_symbol = ""
         fin_dir = ["Income Statement","Balance Sheet","Cash Flow Statement"]
         fin_df_list = []
@@ -191,7 +174,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # df_merge cols
         df_merge = pd.merge(df_merge_is_bs,fin_df_list[2],how="inner", on="date")
         df_merge = df_merge[fin_statement_raw_names]
-        
+
         df_merge.columns = fin_statement_renamed_cols
         df = df_merge
 
@@ -211,11 +194,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         metric_history = metric_to_formula_map(df,metric_name)
         sorted_metric = metric_history.sort_values(ascending=True)
         # sorted_metric(int(len(sorted_metric)*(n/100)))
-        lifetime_sum_all_metric = ""
-        lifetime_sum_all_metric = ""
-        df = df
-        df["{}".format(fin_metric_name)] = metric_history
-    
+        
     quarters = round(len(sorted_metric)/4)
     bottom_25 = sorted_metric[len(sorted_metric)-1-quarters]
     top_25 = sorted_metric[quarters-1]
@@ -230,10 +209,12 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     min_str = magnitude_num(min_metric, currency_symbol)
     bottom_25_str = magnitude_num(bottom_25, currency_symbol)
     top_25_str = magnitude_num(top_25, currency_symbol)
-    
-    
-    earliest_year = list((df['date'].astype(str).str[0:4]))[0]    
-    latest_year = list((df['date'].astype(str).str[0:4]))[-1]    # average_abs_chg = latest_metric-earliest_metric
+
+    lifetime_sum_all_metric = df["{}".format(fin_metric_name)].sum()
+    lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)
+
+    earliest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[0]    
+    latest_year = list((df_fin_statement['date'].astype(str).str[0:4]))[-1]    # average_abs_chg = latest_metric-earliest_metric
     earliest_metric = list(df["{}".format(fin_metric_name)])[0]
     latest_metric = list(df["{}".format(fin_metric_name)])[-1]
     print("latest num", latest_metric)
@@ -255,48 +236,39 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         max_min_pct_diff_str = "-{}%".format(round(max_min_pct_diff)*100,1)
     else:
         max_min_pct_diff_str = ""
-    
-    df = df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link'],axis=1, errors='ignore')
-
-    
-    print("list 5 ", df)
+    df_fin_statement['Quarter & Year'] =(df_fin_statement['date'].astype(str).str[0:4]).astype(int)
+    titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     for x in reversed(titles_bs):
         if x in titles_list:
-            titles_bs.remove(x)                
+            titles_bs.remove(x)
+    df_fin_statement = df_fin_statement.drop([ 'Unnamed: 0','date','symbol','fillingDate','acceptedDate','period','link'],axis=1)
     titles_bs.append('Quarter & Year') 
-    df['Quarter & Year'] =(df['date'].astype(str).str[0:4]).astype(int)
-    # df = df.drop(['date'],axis=1, errors='ignore')
-    print("titles_bs",titles_bs)
-    print("list_fin_statement",list(df))
-    titles_bs.insert(0,"date")
-    df.columns = titles_bs
-    df = df
+    df_fin_statement.columns = titles_bs
 
 
 
-    df = df[cols]
+    df_fin_statement = df_fin_statement[cols]
 
-    df.index = df['Quarter & Year']
-    print("1st title",fin_metric_title)
+    df_fin_statement.index = df_fin_statement['Quarter & Year']
+    
     million = 1000000
     billion = 1000000000
-    fin_metric_history = df['{}'.format(fin_metric_title)]
-    print("list 6 ", df)
+    fin_metric_history = df_fin_statement['{}'.format(fin_metric_title)]
     if list(fin_metric_history)[0]  > billion:
-        # df['{}'.format(fin_metric_title)] = (fin_metric_history/billion).round(decimals=2)
-        pass
+        df_fin_statement['{}'.format(fin_metric_title)] = (fin_metric_history/billion).round(decimals=2)
+        
+
     elif list(fin_metric_history)[0]  > million:
-        # df['{}'.format(fin_metric_title)] = (fin_metric_history/million).round(decimals=2)
+        df_fin_statement['{}'.format(fin_metric_title)] = (fin_metric_history/million).round(decimals=2)
 
         pass
     else:
-        # df['{}'.format(fin_metric_title)] = (fin_metric_history).round(decimals=2)
         pass
 
-    df_pct_chg = df
-    pct_chg_cols = (df.select_dtypes(include=['number']).pct_change(-1))
+    df_pct_chg = df_fin_statement
+    pct_chg_cols = (df_fin_statement.select_dtypes(include=['number']).pct_change(-1))
     df_pct_chg_str = df_pct_chg.drop(list(pct_chg_cols), axis=1)
-    df_pct_chg = df_pct_chg_str.join(pct_chg_cols)[list(df)]
+    df_pct_chg = df_pct_chg_str.join(pct_chg_cols)[list(df_fin_statement)]
 
     pd.set_option('display.float_format', '{:.2f}'.format)
     df_pct_chg_t = df_pct_chg.transpose()
@@ -314,8 +286,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     df_pct_chg_t = df_pct_chg_t[cols]
 
 
-    df_t = df.transpose()
-    df_t.columns = list(df['Quarter & Year'])
+    df_t = df_fin_statement.transpose()
+    df_t.columns = list(df_fin_statement['Quarter & Year'])
     df_t = df_t.iloc[1:]
     df_t['']=df_t.index
     df_t.index = range(len(df_t))
@@ -339,7 +311,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             return True
         except:
             return False
-    df_n = df[df.applymap(isnumber)]
+    df_n = df_fin_statement[df_fin_statement.applymap(isnumber)]
     df_n[df_n < 2] = np.nan
     df_n_sum = pd.DataFrame(df_n.sum())
     df_n_sum[df_n_sum == 0] = ""
@@ -368,37 +340,51 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # df_tall.index = df['Quarter & Year']
     # df_tall = df.index.shift(-1)
     # df_tall = df_tall.reset_index()
-    print("list 7 ", fin_metric_title)
-    df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title)]].to_html(index=False)
+    df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_name)]].to_html(index=False)
     df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="abc" id="df_myTable" border="1" class="dataframe">')#.replace("'","")
     # df_html_tall = df_html_tall.replace("\n","")
     df_html_tall = df_html_tall.replace("\n","")
     df_html_tall = df_html_tall.replace("{}".format("["),"")
     df_html_tall = df_html_tall #render_template_string(df_html_tall)
+    df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
+    df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
+    df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
     #  df_html_tall = df_html_tall.replace("\n","")
     # df_html_tall.replace("\n",'">')
     df_html_tall = df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall[0:]
-    print("list 8 ", fin_metric_title)
-    df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
-    df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
-    df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
     
-    # df = df[["{}".format(fin_metric_title)]].dropna() #.fillna(0)#.fillna(method='bfill')
+    df = df[['date',"{}".format(fin_metric_name)]].dropna() #.fillna(0)#.fillna(method='bfill')
     df['date'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
     full_path = csv_file.split(' ~ ')
     path = pathlib.PurePath(full_path[0])
     
     total_seconds = ((time.time() - start_time))
-    # print("list 9 ", df_tall)
-    print("9 title", fin_metric_title)
-    df_table_html = df_tall[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()#.replace("\n","")
+
+    labels = [
+        'JAN', 'FEB', 'MAR', 'APR',
+        'MAY', 'JUN', 'JUL', 'AUG',
+        'SEP', 'OCT', 'NOV', 'DEC'
+    ]
+    labels = list(df['date'])#[0:19]
+
+    values = [
+        967.67, 1190.89, 1079.75, 1349.19,
+        2328.91, 2504.28, 2873.83, 4764.87,
+        4349.29, 6458.30, 9907, 16297
+    ]
+
+    values = list(df["{}".format(fin_metric_name)])#[0:19]
+
+    colors = [
+        "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
+        "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
+        "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
+    df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()#.replace("\n","")
     present_num = magnitude_num(int(latest_metric),currency_symbol)
-    print("last title 2", fin_metric_title, "list now ",list(df))
-    print("last ", list(df["{}".format(fin_metric_title)])[-1])
-    latest_metric = "${}".format(list(df["{}".format(fin_metric_title)])[0])
+    latest_metric = "${}".format(df["{}".format(fin_metric_name)][0])
     print("latest_num 2", latest_metric,"present_num 2", present_num)
     print("Nothing took {} seconds".format(time.time() - start_time))
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\
@@ -427,18 +413,16 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             latest_metric = latest_metric,\
                             present_num = present_num,\
                             max_min_pct_diff_str = max_min_pct_diff_str, df_bs_table_html = [df_table_html],df_html_tall = [df_html_tall],fin_metric_name = fin_metric_title,\
-                            # df_date = df['date'].to_list(),\
-                            # df_rev = df["{}".format(fin_metric_name)].to_list(),\
-                            df_json  =list(df["{}".format(fin_metric_title)]),\
+                            df_date = df['date'].to_list(), df_rev = df["{}".format(fin_metric_name)].to_list(),\
+                            df_json  =df.to_numpy().tolist(),\
                             table_pct = [df_pct],\
                             tables=[df_html],\
                             titles=df.columns.values,\
                             total_time=total_seconds,\
                             place_name=url_symbol,\
                             max=17000,\
-                            # labels=labels,\
-                            # values=values
-                            )
+                            labels=labels,\
+                            values=values)
 
 
 @charts.route('/test/<url_symbol>', methods=['POST', 'GET'])
