@@ -221,9 +221,8 @@ div.sticky-top{
             type: 'all',        text: 'All', dataGrouping:{enable:false, approximation: groupings[4]}    }                   ]
                 },
                 xAxis:{
-                    //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
+                     tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
                     // format: '{value:%Y}'
-                    format: '{value:Q%q\'%y}'
                 },
                 plotOptions: {
                     series: {
@@ -310,9 +309,6 @@ div.sticky-top{
                 series: [{
                     type: 'column',
                     name: '{{company_symbol}}dd Stock Volume',
-                    pointInterval: 3,
-                    pointIntervalUnit: 'month',
-                    pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
 
                     data: data.map(mapData),
 

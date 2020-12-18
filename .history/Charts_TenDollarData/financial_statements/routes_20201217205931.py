@@ -165,7 +165,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         cols = titles_bs
         fin_metric_title = fin_statement_cols[fin_metric_pos]
 
-        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/quarter/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
+        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
 
         df = pd.read_csv(csv_file) #.format("NLOK"))[-1]
         # df = df[df['date'].notna()]#fillna(method='ffill')
@@ -277,18 +277,15 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     else:
         max_min_pct_diff_str = ""
     
-    df_quarter = df['period']
     df = df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link'],axis=1, errors='ignore')
-    
+
     
     print("list 5 ", df)
     for x in reversed(titles_bs):
         if x in titles_list:
-            titles_bs.remove(x)
-    titles_bs.append('Quarter & Year')
-    df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
-
-    #"{}-{}".format(df_quarter,(df['date'].astype(str).str[0:4]).astype(int)) #(df['date'].astype(str).str[0:4]).astype(int)
+            titles_bs.remove(x)                
+    titles_bs.append('Quarter & Year') 
+    df['Quarter & Year'] =(df['date'].astype(str).str[0:4]).astype(int)
     # df = df.drop(['date'],axis=1, errors='ignore')
     print("titles_bs",titles_bs)
     print("list_fin_statement",list(df))
@@ -442,13 +439,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     print("Nothing took {} seconds".format(time.time() - start_time))
     labels = list(df['date'])
     print("df json", df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist())
-    df['quarter avg'] = df["{}".format(fin_metric_title)].rolling(4).mean()
-    df_json  =df[['date',"{}".format("quarter avg")]].to_numpy().tolist()[4:]
-    # df_json  =df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist(),\
-    print("df json2", df_json)
-    print("qtr avg", df['quarter avg'])
-
-
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\
@@ -478,7 +468,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             max_min_pct_diff_str = max_min_pct_diff_str, df_bs_table_html = [df_table_html],df_html_tall = [df_html_tall],fin_metric_name = fin_metric_title,\
                             df_date = df['date'].to_list(),\
                             # df_rev = df["{}".format(fin_metric_name)].to_list(),\
-                            df_json  = df_json,\
+                            df_json  =df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist(),\
                             table_pct = [df_pct],\
                             tables=[df_html],\
                             titles=df.columns.values,\

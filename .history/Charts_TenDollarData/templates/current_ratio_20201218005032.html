@@ -161,11 +161,11 @@ div.sticky-top{
 <script>
 
     document.addEventListener('DOMContentLoaded', function (data) {
-     //     var myChart = Highcharts.setOptions({
-     //     lang: {
-     //         numericSymbols: [' thousands', ' millions', 'billions']
-     //     }
-     // });
+         var myChart = Highcharts.setOptions({
+         lang: {
+             numericSymbols: [' thousands', ' millions', 'billions']
+         }
+     });
     var startDate  = new Date("April 01, 2012 00:00:00");
     var today = new Date();
     
@@ -184,14 +184,7 @@ div.sticky-top{
         }
     }
     var groupings = ['sum', 'average', 'sum'];
-    Highcharts.dateFormats = {
-        q: function(timestamp) {
-            var date = new Date(timestamp),
-            quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
-            console.log(quarter);
-            return quarter;
-        }
-        };
+
         var myChart = Highcharts.stockChart('highbar', {
            // lang: {
            //     numericSymbols: [' thousands', ' millions', 'billions']
@@ -221,9 +214,7 @@ div.sticky-top{
             type: 'all',        text: 'All', dataGrouping:{enable:false, approximation: groupings[4]}    }                   ]
                 },
                 xAxis:{
-                    //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                    // format: '{value:%Y}'
-                    format: '{value:Q%q\'%y}'
+                     tickInterval: 1 * 24 * 3600 * 1000 // interval of 1 day
                 },
                 plotOptions: {
                     series: {
@@ -271,17 +262,8 @@ div.sticky-top{
                            //     margin:50,
                            // },
                             tooltip: {
-                                valuePrefix: "$",//"{{company_currency}}"
-                                // format: '{value:%Y}',
-                                xDateFormat: '%Y'//'%Y-%m-%d'
-                            // formatter: function (tooltip) {
-                            // }
-                            // formatter: function() {
-                            //     return  '<b>' + this.series.name +'</b><br/>' +
-                            //         Highcharts.dateFormat('%Y', //'%e - %b - %Y',
-                            //                             new Date(this.x))
-                            //     + ' date, ' + this.y + ' Kg.';
-                            // }
+                            formatter: function (tooltip) {
+                            }
                         },
         labels:{
                         align: 'right',
@@ -310,9 +292,6 @@ div.sticky-top{
                 series: [{
                     type: 'column',
                     name: '{{company_symbol}}dd Stock Volume',
-                    pointInterval: 3,
-                    pointIntervalUnit: 'month',
-                    pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
 
                     data: data.map(mapData),
 

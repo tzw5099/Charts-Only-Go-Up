@@ -183,15 +183,6 @@ div.sticky-top{
             color: y >= 0 ? '#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
         }
     }
-    var groupings = ['sum', 'average', 'sum'];
-    Highcharts.dateFormats = {
-        q: function(timestamp) {
-            var date = new Date(timestamp),
-            quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
-            console.log(quarter);
-            return quarter;
-        }
-        };
         var myChart = Highcharts.stockChart('highbar', {
            // lang: {
            //     numericSymbols: [' thousands', ' millions', 'billions']
@@ -204,7 +195,6 @@ div.sticky-top{
                     text: '{{fin_metric_name}}'
                 },
                 rangeSelector: {
-                    selected:2,
                      inputPosition: {                    // align: 'left',
                         x: 0,                    y: 0                },
                      buttonPosition: {                    // align: 'right',
@@ -212,52 +202,22 @@ div.sticky-top{
                     ,
                     buttons: [
             {
-            // type: 'ytd', count: 1, text: 'Calendar YTD'}, {
-            // type: 'day', count: count, text: 'Financial YTD'},{
-            // type: 'year',        count: 1,        text: '1Y'    }, {
-            type: 'year',        count: 3,        text: '3Y', dataGrouping:{enable:true}    }, {
-            type: 'year',        count: 5,        text: '5Y', dataGrouping:{enable:true}    }, {
-            type: 'year',        count: 10,        text: '10y', dataGrouping:{enable:false}  }, {
-            type: 'all',        text: 'All', dataGrouping:{enable:false, approximation: groupings[4]}    }                   ]
+            type: 'ytd', count: 1, text: 'Calendar YTD'}, {
+            type: 'day', count: count, text: 'Financial YTD'},{
+            type: 'year',        count: 3,        text: '3Y'    }, {
+            type: 'year',        count: 5,        text: '5Y'    }, {
+            type: 'year',        count: 10,        text: '10y'  }, {
+            type: 'all',        text: 'All'    }                   ]
                 },
                 xAxis:{
-                    //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                    // format: '{value:%Y}'
-                    format: '{value:Q%q\'%y}'
+                     tickInterval: 1 * 24 * 3600 * 1000 // interval of 1 day
                 },
                 plotOptions: {
                     series: {
-                        pointPadding: 0,
-                        dataGrouping: {
-                            enabled: false,
-                            // units: [
-                            //         [
-                            //             'millisecond', // unit name
-                            //         [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
-                            //         ],
-                            //         [
-                            //             'second', [1, 2, 5, 10, 15, 30]],
-                            //         [
-                            //             'minute', [1, 2, 5, 10, 15, 30]],
-                            //         [
-                            //             'hour', [1, 2, 3, 4, 6, 8, 12]],
-                            //         [
-                            //             'day', [1]],
-                            //         [
-                            //             'week', [1]],
-                            //         [
-                            //             'month', [1, 3, 6]],
-                            //         [
-                            //             'year',
-                            //         null]
-                            //         ]
-                            //     },
-                            // enable: true
-                            }
+                        pointPadding: 0
                         }
                     },
                 yAxis:{
-                    // type: 'logarithmic',
                 minPadding:100,
                            // lineColor:'#999',
                            // lineWidth:1,
@@ -271,17 +231,8 @@ div.sticky-top{
                            //     margin:50,
                            // },
                             tooltip: {
-                                valuePrefix: "$",//"{{company_currency}}"
-                                // format: '{value:%Y}',
-                                xDateFormat: '%Y'//'%Y-%m-%d'
-                            // formatter: function (tooltip) {
-                            // }
-                            // formatter: function() {
-                            //     return  '<b>' + this.series.name +'</b><br/>' +
-                            //         Highcharts.dateFormat('%Y', //'%e - %b - %Y',
-                            //                             new Date(this.x))
-                            //     + ' date, ' + this.y + ' Kg.';
-                            // }
+                            formatter: function (tooltip) {
+                            }
                         },
         labels:{
                         align: 'right',
@@ -310,9 +261,6 @@ div.sticky-top{
                 series: [{
                     type: 'column',
                     name: '{{company_symbol}}dd Stock Volume',
-                    pointInterval: 3,
-                    pointIntervalUnit: 'month',
-                    pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
 
                     data: data.map(mapData),
 

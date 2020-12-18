@@ -184,14 +184,7 @@ div.sticky-top{
         }
     }
     var groupings = ['sum', 'average', 'sum'];
-    Highcharts.dateFormats = {
-        q: function(timestamp) {
-            var date = new Date(timestamp),
-            quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
-            console.log(quarter);
-            return quarter;
-        }
-        };
+
         var myChart = Highcharts.stockChart('highbar', {
            // lang: {
            //     numericSymbols: [' thousands', ' millions', 'billions']
@@ -223,7 +216,6 @@ div.sticky-top{
                 xAxis:{
                     //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
                     // format: '{value:%Y}'
-                    format: '{value:Q%q\'%y}'
                 },
                 plotOptions: {
                     series: {
@@ -272,15 +264,7 @@ div.sticky-top{
                            // },
                             tooltip: {
                                 valuePrefix: "$",//"{{company_currency}}"
-                                // format: '{value:%Y}',
-                                xDateFormat: '%Y'//'%Y-%m-%d'
                             // formatter: function (tooltip) {
-                            // }
-                            // formatter: function() {
-                            //     return  '<b>' + this.series.name +'</b><br/>' +
-                            //         Highcharts.dateFormat('%Y', //'%e - %b - %Y',
-                            //                             new Date(this.x))
-                            //     + ' date, ' + this.y + ' Kg.';
                             // }
                         },
         labels:{
@@ -310,9 +294,6 @@ div.sticky-top{
                 series: [{
                     type: 'column',
                     name: '{{company_symbol}}dd Stock Volume',
-                    pointInterval: 3,
-                    pointIntervalUnit: 'month',
-                    pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
 
                     data: data.map(mapData),
 

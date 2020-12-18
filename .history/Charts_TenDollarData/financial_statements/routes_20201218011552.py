@@ -286,7 +286,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         if x in titles_list:
             titles_bs.remove(x)
     titles_bs.append('Quarter & Year')
-    df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
+    df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: x.astype(str).str[0:4]).astype(int))
 
     #"{}-{}".format(df_quarter,(df['date'].astype(str).str[0:4]).astype(int)) #(df['date'].astype(str).str[0:4]).astype(int)
     # df = df.drop(['date'],axis=1, errors='ignore')
