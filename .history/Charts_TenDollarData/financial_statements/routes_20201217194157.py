@@ -165,7 +165,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         cols = titles_bs
         fin_metric_title = fin_statement_cols[fin_metric_pos]
 
-        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/quarter/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
+        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
 
         df = pd.read_csv(csv_file) #.format("NLOK"))[-1]
         # df = df[df['date'].notna()]#fillna(method='ffill')
@@ -322,7 +322,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     pd.set_option('display.float_format', '{:.2f}'.format)
     df_pct_chg_t = df_pct_chg.transpose()
     df_pct_chg_t.columns = list(df_pct_chg['Quarter & Year'])
-    # df_pct_chg_t = df_pct_chg_t#.iloc[1:]
+    df_pct_chg_t = df_pct_chg_t#.iloc[1:]
     # print("list 69", len(list(df_t)))
     df_pct_chg_t = df_pct_chg.transpose()
     df_pct_chg_t.columns = list(df_pct_chg['Quarter & Year'])

@@ -13,6 +13,8 @@
 | \(\(?<=\#\)\.\*\|\#\|^$\n\|^\s\*$\n\|\[ \t\]\+$\|\(?<=print\\\(\)\.\*\|print\\\(\)^\(?\!\.\*QAZ\) |  |  |  |  |  |
 | ^(?!.\*QAZ) |  |  |  |  |  |
 | **find**<br>^(.\*) df\_html\_tall<br>**replace**<br>\# df\_html\_tall |  | comment out all lines containing word |  | need to test something | #\1 logging |
+| search NON html comments only |  |  |  | /\\/\\\*\[\s\S\]\*?\\\*\\/\|\(\[^\\\:\]\|^\)table\.\*\|\<\!\-\-table\*?\-\-\>$/ |  |
+| search ONLY non-comment (Python, JS, CSS) |  |  |  | https://stackoverflow.com/questions/11314366/exclude-comments-when-searching-in-visual-studio |  |
 
 autoflake --in-place --remove-unused-variables "Scripts\FMP\_Profile.py"
 

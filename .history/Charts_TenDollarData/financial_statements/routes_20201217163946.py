@@ -165,7 +165,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         cols = titles_bs
         fin_metric_title = fin_statement_cols[fin_metric_pos]
 
-        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/quarter/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
+        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/qduarter/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
 
         df = pd.read_csv(csv_file) #.format("NLOK"))[-1]
         # df = df[df['date'].notna()]#fillna(method='ffill')
@@ -322,43 +322,37 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     pd.set_option('display.float_format', '{:.2f}'.format)
     df_pct_chg_t = df_pct_chg.transpose()
     df_pct_chg_t.columns = list(df_pct_chg['Quarter & Year'])
-    # df_pct_chg_t = df_pct_chg_t#.iloc[1:]
-    # print("list 69", len(list(df_t)))
+    df_pct_chg_t = df_pct_chg_t.iloc[1:]
+
     df_pct_chg_t = df_pct_chg.transpose()
     df_pct_chg_t.columns = list(df_pct_chg['Quarter & Year'])
-    # df_pct_chg_t = df_pct_chg_t#.iloc[1:]
-    # print("list pc33cc rrr t chg", len(list(df_t)))
+    df_pct_chg_t = df_pct_chg_t.iloc[1:]
     df_pct_chg_t['']=df_pct_chg_t.index
     df_pct_chg_t.index = range(len(df_pct_chg_t))
 
     cols = list(df_pct_chg_t.columns)
     cols = [cols[-1]] + cols[:-1]
-    # df_pct_chg_t = df_pct_chg_t[cols]
-    
+    df_pct_chg_t = df_pct_chg_t[cols]
+
 
     df_t = df.transpose()
-    print("list pct ch33g", len(list(df_t)))
     df_t.columns = list(df['Quarter & Year'])
-    print("kk list pct chg", len(list(df_t)))
-    df_t = df_t#.iloc[1:]
+    df_t = df_t.iloc[1:]
     df_t['']=df_t.index
     df_t.index = range(len(df_t))
-    print("qlist pct chg", len(list(df_t)))
+
     cols = list(df_t.columns)
-    cols = [cols[-1]] + cols#[:-1]
-    # df_t = df_t[cols]
+    cols = [cols[-1]] + cols[:-1]
+    df_t = df_t[cols]
     #endregion
-    print("list pct chg", len(list(df_t)))
-    print(df_pct_chg_t)
+
     df_pct = df_pct_chg_t.to_html().replace('<table','<table class="df_tableBoot" id="df_myTable1"')# dt-responsive" id="df_myTable"')
-    print("kk 34d3", len(list(df_t)))
-    # df_t = df_t[df_t.columns]#[::-1]]
-    # cols = list(df_t.columns)
-    print("kk 34321111", len(list(df_t)))
-    cols = [cols[-1]] + cols#[:-1]
-    print("len ccccca8111", len(list(df_t)))
-    # df_t = df_t[cols]
-    print("kk 3433", len(list(df_t)))
+
+    df_t = df_t[df_t.columns[::-1]]
+    cols = list(df_t.columns)
+    cols = [cols[-1]] + cols[:-1]
+    df_t = df_t[cols]
+
 
     def isnumber(x):
         try:
@@ -367,27 +361,21 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         except:
             return False
     df_n = df[df.applymap(isnumber)]
-    print("kk 343", len(list(df_t)))
     df_n[df_n < 2] = np.nan
     df_n_sum = pd.DataFrame(df_n.sum())
     df_n_sum[df_n_sum == 0] = ""
-    print("len 111ccc", len(list(df_t)))
     new_header = df_n_sum.iloc[0] #grab the first row for the header
-    df_n_sum = df_n_sum#[1:] #take the data less the header row
+    df_n_sum = df_n_sum[1:] #take the data less the header row
     df_n_sum.columns = new_header #set the header row as the df header
     df_n_sum.index = range(len(df_n_sum))
-    print("len d111", len(list(df_t)))
     df_t = pd.merge(df_n_sum, df_t, left_index=True, right_index=True,suffixes=('Total: {} - {}'.format(latest_year,earliest_year), 'Line Items'))
-    print("len q111", len(list(df_t)))
-    df_t = df_t#[0:25]
+    df_t = df_t[0:25]
 
-    print("asdasd 22")
+
 
     col_list = []
     n=0
-    print("len 111", len(list(df_t)))
     while n<len(list(df_t))-0:
-        print("n 22", n)
         if n<6:
                 col_item = '<col id="col_item_{}" class="col_item_class first_7_col">'.format(n)
         else:
@@ -395,11 +383,9 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         col_list.append(col_item)
         n+=1
     col_list_str = ''.join(map(str, col_list))
-    print("asdasd 2233wq")
     df_html = df_t.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
-    print("11 asdasd 2 2")
     # df_table_html = df_fin_statement[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()#.replace("\n","")
-    df_tall = df#.iloc[::-1]
+    df_tall = df.iloc[::-1]
     # df_tall.index = df['Quarter & Year']
     # df_tall = df.index.shift(-1)
     # df_tall = df_tall.reset_index()

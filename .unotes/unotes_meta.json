@@ -52,6 +52,12 @@
       "isOrdered": true,
       "folders": {},
       "files": {}
+    },
+    "route_imports": {
+      "name": "route_imports",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
     }
   },
   "files": {}
