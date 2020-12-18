@@ -1,0 +1,1243 @@
+
+<!-- {{company_symbol}}
+{{company_currency}}
+{{company_exchange}}
+{{company_industry}}
+{{company_description}}
+[[company_sector]]
+[[company_country]]
+[[company_ipo_date]] -->
+
+<!-- https://jsfiddle.net/cakenite/f6b94evj/18/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/styles.min.css">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        table {border-spacing: 0;
+        border-collapse: collapse;
+        }
+        .cell { width: 20px; height: 20px; }
+        .odd { background-color: brown }
+        .even { background-color: pink }
+    </style>
+
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+
+<!-- enables CSV -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+<!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+
+<style>
+#df_myTable {
+    margin: 0 auto;
+}
+
+.metric_table{
+    text-align:center;
+    margin: 0 auto !important;
+}
+
+div.card-body.hist_table {
+  overflow:scroll;
+-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */  
+}
+
+
+div.card-body.hist_table::-webkit-scrollbar {
+  display: none;
+
+}
+div.sticky-top{
+  top:160px;
+}
+    .page-content {
+      max-width: 1200px;
+      margin: 32px auto;
+      padding: 32px;
+      background: #fff;
+    }
+    a {
+      color: #21D4FD;
+      transition: all 0.3s;
+    }
+    a:hover {
+      color: #B721FF;
+    }
+
+    .tabbed {
+      overflow-x: hidden; /* so we could easily hide the radio inputs */
+      margin: 32px 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .tabbed [type="radio"] {
+      /* hiding the inputs */
+      display: none;
+    }
+
+    .tabs {
+      display: flex;
+      align-items: stretch;
+      list-style: none;
+      padding: 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .tab > label {
+      display: block;
+      margin-bottom: -1px;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      background: #eee;
+      color: #666;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .tab:hover label {
+      border-top-color: #333;
+      color: #333;
+    }
+
+    .tab-content {
+      display: none;
+      color: #777;
+    }
+
+    /* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
+    .tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
+    .tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
+    .tabbed [type="radio"]:nth-of-type(3):checked ~ .tabs .tab:nth-of-type(3) label,
+    .tabbed [type="radio"]:nth-of-type(4):checked ~ .tabs .tab:nth-of-type(4) label,
+    .tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label {
+      border-bottom-color: #fff;
+      border-top-color: #B721FF;
+      background: #fff;
+      color: #222;
+    }
+
+    .tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
+    .tabbed [type="radio"]:nth-of-type(2):checked ~ .tab-content:nth-of-type(2),
+    .tabbed [type="radio"]:nth-of-type(3):checked ~ .tab-content:nth-of-type(3),
+    .tabbed [type="radio"]:nth-of-type(4):checked ~ .tab-content:nth-of-type(4) {
+      display: block;
+    }
+</style>
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function (data) {
+     //     var myChart = Highcharts.setOptions({
+     //     lang: {
+     //         numericSymbols: [' thousands', ' millions', 'billions']
+     //     }
+     // });
+    var startDate  = new Date("April 01, 2012 00:00:00");
+    var today = new Date();
+    
+    var count =  parseInt((today.getTime() - startDate)/(24*3600*1000)) -1;
+     
+
+    data = {{df_json}};
+
+    function mapData([x, y]) {
+        return {
+            name: x,
+            x: x,
+            y: Math.abs(y),
+            actualY: y,
+            color: y >= 0 ? '#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
+        }
+    }
+    var groupings = ['sum', 'average', 'sum'];
+    Highcharts.dateFormats = {
+        q: function(timestamp) {
+            var date = new Date(timestamp),
+            quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
+            console.log(quarter);
+            return quarter;
+        }
+        };
+        var myChart = Highcharts.stockChart('highbar', {
+           // lang: {
+           //     numericSymbols: [' thousands', ' millions', 'billions']
+           // },
+            chart: {
+                borderWidth: 2,
+                marginRight: 100
+            },
+                title: {
+                    text: '{{fin_metric_name}}'
+                },
+                rangeSelector: {
+                    selected:2,
+                     inputPosition: {                    // align: 'left',
+                        x: 0,                    y: 0                },
+                     buttonPosition: {                    // align: 'right',
+                        x: 0,                    y: 0                }
+                    ,
+                    buttons: [
+            {
+            // type: 'ytd', count: 1, text: 'Calendar YTD'}, {
+            // type: 'day', count: count, text: 'Financial YTD'},{
+            // type: 'year',        count: 1,        text: '1Y'    }, {
+            type: 'year',        count: 3,        text: '3Y', dataGrouping:{enable:true}    }, {
+            type: 'year',        count: 5,        text: '5Y', dataGrouping:{enable:true}    }, {
+            type: 'year',        count: 10,        text: '10y', dataGrouping:{enable:false}  }, {
+            type: 'all',        text: 'All', dataGrouping:{enable:false, approximation: groupings[4]}    }                   ]
+                },
+                xAxis:{
+                    //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
+                    // format: '{value:%Y}'
+                    format: '{value:Q%q\'%y}'
+                },
+                plotOptions: {
+                    series: {
+                        pointPadding: 0,
+                        dataGrouping: {
+                            enabled: false,
+                            // units: [
+                            //         [
+                            //             'millisecond', // unit name
+                            //         [1, 2, 5, 10, 20, 25, 50, 100, 200, 500] // allowed multiples
+                            //         ],
+                            //         [
+                            //             'second', [1, 2, 5, 10, 15, 30]],
+                            //         [
+                            //             'minute', [1, 2, 5, 10, 15, 30]],
+                            //         [
+                            //             'hour', [1, 2, 3, 4, 6, 8, 12]],
+                            //         [
+                            //             'day', [1]],
+                            //         [
+                            //             'week', [1]],
+                            //         [
+                            //             'month', [1, 3, 6]],
+                            //         [
+                            //             'year',
+                            //         null]
+                            //         ]
+                            //     },
+                            // enable: true
+                            }
+                        }
+                    },
+                yAxis:{
+                    // type: 'logarithmic',
+                minPadding:100,
+                           // lineColor:'#999',
+                           // lineWidth:1,
+                           // tickColor:'#666',
+                           // tickWidth:1,
+                           // tickLength:3,
+                           // gridLineColor:'#ddd',
+                           // title:{
+                           //     text:'Y Axis Title',
+                           //     rotation:0,
+                           //     margin:50,
+                           // },
+                            tooltip: {
+                                valuePrefix: "$",//"{{company_currency}}"
+                                // format: '{value:%Y}',
+                                xDateFormat: '%Y',//'%Y-%m-%d'
+                                formatter:function()
+                                    {
+                                    if(this.value >= 1000000000){
+                                        return ('$' + this.value / 1000000000) + 'B';
+                                        }
+                                    else if(this.value >= 1000000) {
+                                        return ('$' + this.value / 1000000) + 'M';
+                                        }
+                                    else if(this.value >= 1000) {
+                                        return ('$' + this.value / 1000) + 'K';
+                                        }
+                                    else {
+                                        return '$' + this.value;
+                                        }
+                                    }
+                            // formatter: function (tooltip) {
+                            // }
+                            // formatter: function() {
+                            //     return  '<b>' + this.series.name +'</b><br/>' +
+                            //         Highcharts.dateFormat('%Y', //'%e - %b - %Y',
+                            //                             new Date(this.x))
+                            //     + ' date, ' + this.y + ' Kg.';
+                            // }
+                        },
+        labels:{
+                        align: 'right',
+                    x: 50,
+                    y: 0,
+                           // formatter:function(){
+                           //     return ('$' + this.value / 1000000000) + 'B';
+                           // }
+                        formatter:function()
+                            {
+                            if(this.value >= 1000000000){
+                                return ('$' + this.value / 1000000000) + 'B';
+                                }
+                            else if(this.value >= 1000000) {
+                                return ('$' + this.value / 1000000) + 'M';
+                                }
+                            else if(this.value >= 1000) {
+                                return ('$' + this.value / 1000) + 'K';
+                                }
+                            else {
+                                return '$' + this.value;
+                                }
+                            }
+                }
+    },
+
+                series: [{
+                    type: 'column',
+                    name: '{{company_symbol}}dd Stock Volume',
+                    pointInterval: 3,
+                    pointIntervalUnit: 'month',
+                    pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
+
+                    data: data.map(mapData),
+
+                }]
+                // series: [{
+                //     type: 'column',
+                //     name: '{{company_symbol}}dd Stock Volume',
+                //     data:{{df_json}},
+
+                //         }]
+            });
+        });
+</script>
+</head>
+
+<body class="fixed_body">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="color: #212529;">
+        <div class="container">
+            <div class="squarelogo"><a class="navbar-brand dollar_data" href="#" style="color: #fec503;">10</a></div><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">First Item</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Third Item</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation">
+                        <form class="form-inline mr-auto" target="_self">
+                            <div class="form-group">
+                                <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                    <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                        <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Link 1</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Link 2</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Link 3</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                    </li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+
+    
+        <!-- <div class="tabbed">
+          <input type="radio" id="tab21" name="css-tabs2" checked>
+          <input type="radio" id="tab22" name="css-tabs2">
+          <input type="radio" id="tab23" name="css-tabs2">
+    
+          <ul class="tabs">
+            <li class="tab"><label for="tab21">Gangsta lipsum</label></li>
+            <li class="tab"><label for="tab22">Zombie lipsum</label></li>
+            <li class="tab"><label for="tab23">New age bullshit</label></li>
+          </ul>
+    
+          <div class="tab-content">
+            <h4>Gangsta lipsum</h4>
+            <p>De.</p>
+          </div>
+    
+          <div class="tab-content">
+            <h4>Zombie lipsum</h4>
+            <p>Zouris. </p>
+          </div>
+    
+          <div class="tab-content">
+            <h4>New age bullshit</h4>
+            <p>Ourtion.</p>
+            <p>Eoondage.</p>
+            <p>Generated by the <a href="http://sebpearce.com/bullshit/">New Age Bullshit Generator</a></p>
+          </div>
+        </div> -->
+    
+      </div>    
+    <div class="table_container">
+        <!-- {% for table in tables %} -->
+                    <!-- {{titles[loop.index]}} -->
+                    <!-- {{ table|safe }}
+        {% endfor %} -->
+        
+        </div>
+        <div id="chart"></div>
+        <script>
+        function checkForm() {
+            var rows = document.getElementsByClassName("item-row");
+            var arr = new Array();
+        
+            for (i = 0; i < rows.length; i++) {
+                var cols = rows[i].getElementsByTagName("td");
+        
+                for (j = 0; j < cols.length; j++) {
+                    arr.push(cols[j].textContent);
+                }
+            }
+        }
+        </script>
+        <script>
+        $(document).ready( function () {
+            // $('table.df_tableBoot').DataTable();
+            $('DISABLE#df_myTable').DataTable(
+              {
+        
+                 // "scrollX": true,
+        
+                columnDefs: [
+                  {
+                // "width": "100%" , "targets": [0,1,2,3,4,5,6],
+        
+                    "width": "1000","targets": "_all",
+                    render: function ( data, type, full, meta ) {
+                        if(type === 'display' && !isNaN(data*1) && data > 1000000000){
+                            return ('$'+(data/1000000000).toFixed(1) + 'B').toLocaleString();
+                        }
+        
+                        else if(type === 'display' && !isNaN(data*1) && (data > 1000000 && data < 999999999)){
+                            return ('$'+(data/1000000).toFixed(1) + 'M').toLocaleString();
+                        }
+                        else if(type === 'display' && !isNaN(data*1) && (data > 1000 && data < 999999)){
+                            return ('$'+(data/1000).toFixed(1) + 'K').toLocaleString();
+                        }
+                        else if(type === 'display' && !isNaN(data*1) && (data > .01 && data < 2) && data != 1){
+                            return ((data*100).toFixed(0) + '%').toLocaleString();
+                        }
+                        else{
+                            return data;
+                        }
+                    }
+                }
+                ,
+                // { "width": "1000" , targets: [0,1,2,3,4,5,6]},
+        
+        
+              ]
+                ,
+                dom: 'Bfrtip',
+        
+                paginate: false,
+                // fixedHeader: false,
+                // "sScrollX": "100%",
+                // "sScrollXInner": "110%",
+                // "bScrollCollapse": true,
+                colReorder: true,
+        
+        // scrollY: 300,
+        buttons: [
+          // 'csv'
+          // 'csvHtml5'
+            // 'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+                      // "order": [[ 3, "desc" ]]
+                  }
+        
+            );
+        } );
+        </script>
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div class="row">
+            <div class="col-md-8 col-lg-8 col-xl-8">
+                <div class="text-dark h1_info">
+
+                    <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right"><strong>{{company_long_name}} ({{company_symbol}}) {{fin_metric_name}} | {{earliest_year}} - {{latest_year}}</strong><br></h1>
+                    <h2 class="text-primary mb-0">{{latest_year}} {{fin_metric_name}}: {{present_num}}<br></h2>
+                </div>
+                <div class="pad-10-top pad-10-bottom pad-10-left pad-10-right">
+                    <div>
+                        <div id="highbar" style="height: 400px; width:100%;">
+                        </div>
+                        <!-- <h2
+                            class="text-primary historical">{{company_symbol}} Historical {{fin_metric_name}} Chart (by Fiscal Year)
+                        </h2> -->
+
+                            <br />
+                           
+                    </div>
+
+                    <div id="content">
+                        <!-- <div class="row">
+                     <div id="content">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card shadow border-left-info py-2">
+                                    <div class="card-body hist_table" style="padding: 10px;">
+                                    
+                                        {% for table in df_bs_table_html %}
+                                        {{titles[loop.index]}}
+                                        <br />
+                                        
+                                        {{ df_bs_table_html[0]|safe }}
+                                        {% endfor %}                                     
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="row flex-grow-1">
+                            <div class="col-md-4 col-xl-6" style="padding: 10px;">
+                                <!-- <div class="card shadow border-left-primary py-2">
+                                    <div class="card-body" style="padding: 10px;">
+                                        <h6 class="text-primary mb-0" style="color: rgb(78,115,223);">{{fin_metric_name}} in {{earliest_year}} was 0.94<br>Today CR ({{latest_year}}): {{latest_metric}}<br></h6>
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Overall change %</span></div>
+                                                <div class="text-dark font-weight-bold h5 mb-0"><span>{{historical_pct_chg}}</span></div>
+                                            </div>
+                                            <div class="col mr-2">
+                                                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>change % (annualized)</span></div>
+                                                <div class="text-dark font-weight-bold h5 mb-0"><span>2000%</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-dark font-weight-bold h5 mb-0"></div>
+                                    </div>
+                                    <div class="card-body" style="padding: 10px;">
+                                        <h6 class="text-primary mb-0" style="color: rgb(78,115,223);">Lowest CR (1996): 0.5<br>Highest CR (2013): 2<br></h6>
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Overall change %</span></div>
+                                                <div class="text-dark font-weight-bold h5 mb-0"><span>{{max_min_pct_diff_str}}</span></div>
+                                            </div>
+                                            <div class="col mr-2">
+                                                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>change % (annualized)</span></div>
+                                                <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-dark font-weight-bold h5 mb-0"></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+
+
+                        <div class="row flex-grow-1 justify-content-center">
+                            <div class="col">
+
+                    <div class="card shadow mb-4">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span><strong>
+                                Definition & Formula | {{fin_metric_name}}</strong></span></div>
+                            <p>See:&nbsp;<br>Macrotrends &amp; Gurufocus definitions https://www.gurufocus.com/term/mktcap/{{company_symbol}}/Market-Cap/Apple<br></p>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="text-dark font-weight-bold h5 mb-0 mr-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                
+                                <div class="card shadow mb-4">
+                                    
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary font-weight-bold m-0 metric_table">{{company_long_name}} ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
+                                        <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                            <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                                                role="menu">
+                                                <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                                                <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- {{df_bs_table_html}} -->
+                                        {% for table in df_html_tall %}
+                                        <!-- {{titles[loop.index]}} -->
+                                        <!-- asdas -->
+                                        {{ df_html_tall[0]|safe }}
+                                        {% endfor %}
+
+                                                        
+                                        <!-- <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>2014</th>
+                                                        <th>2015</th>
+                                                        <th>2016</th>
+                                                        <th>2017</th>
+                                                        <th>2018</th>
+                                                        <th>2019</th>
+                                                        <th>2020</th>
+                                                        <th>2021</th>
+                                                        <th>2022</th>
+                                                        <th>2023</th>
+                                                        <th>2024</th>
+                                                        <th>2025</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Cell 1</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                        <td>Cell 2</td>
+                                                    </tr>
+                                                    <tr></tr>
+                                                </tbody>
+                                            </table>
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>                        
+
+                        <div class="container-fluid">
+                            <div class="card shadow border-left-success py-2">
+                                <div class="card-body">
+                                    <h4 class="text-dark mb-0">Lifetime Metrics</h4>
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                                        </div>
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                                        </div>
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        </br>
+                        <div class="col">
+                            <div></div>
+                        </div>
+
+                        </div>
+                    </div>                    <div>
+                        <h3>{{fin_metric_name}} Summary</h3>
+                        <p>{{company_short_name}}'s {{fin_metric_name}} is 0.7, and it's a great one. A {{fin_metric_name}} of 0.7 places it ahead of it's industry ({{company_industry}}) average of 0.5 and sector ({{company_sector}}) average. The industry includes the likes of {{company_similar}}. The highest and lowest {{fin_metric_name}} in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively.</p>
+                    </div>
+                    <p>{{company_short_name}} celebrated it's 10th year anniversary with a {{fin_metric_name}} of 10. By the looks of it's history (see: the chart and stats above), you can expect {{company_short_name}} to maintain a positive {{fin_metric_name}}.</p><div class="container">
+                        <div class="page-content">
+                            <div class="tabbed">
+                              <input type="radio" id="tab1" name="css-tabs" checked>
+                              <input type="radio" id="tab2" name="css-tabs">
+                              <input type="radio" id="tab3" name="css-tabs">
+                      
+                              <ul class="tabs">
+                                <li class="tab"><label for="tab1">Financial Statements #h1</label></li>
+                                <li class="tab"><label for="tab2">Financial Ratios</label></li>
+                                <li class="tab"><label for="tab3">Financial Growth</label></li>
+                              </ul>
+                      
+                              <div class="tab-content">
+                                <h4>Financial Statements #h2</h4>
+                                <p>Da bomb ipsizzl</p>
+                                              <div class="tabbed">
+                                                <input type="radio" id="tab1" name="css-tabs" checked>
+                                                <input type="radio" id="tab2" name="css-tabs">
+                                                <input type="radio" id="tab3" name="css-tabs">
+                      
+                                                <ul class="tabs">
+                                                  <li class="tab"><label for="tab1">Gangsta lipsum</label></li>
+                                                  <li class="tab"><label for="tab2">Zombie lipsum</label></li>
+                                                  <li class="tab"><label for="tab3">New age bullshit</label></li>
+                                                </ul>
+                      
+                                                <div class="tab-content">
+                                                  <h4>Gangsta lipsum</h4>
+                                                  <p>Da bomb ipsizzl</p>
+                                                </div>
+                      
+                                                <div class="tab-content">
+                                                  <h4>Zombie lipsum</h4>
+                                                  <p>Zombie </p>
+                                                </div>
+                      
+                                                <div class="tab-content">
+                                                  <h4>New age bullshit</h4>
+                      
+                                                </div>
+                                              </div>
+                              </div>
+                      
+                              <div class="tab-content">
+                                <h4>Zombie lipsum</h4>
+                                <p>Zombie </p>
+                              </div>
+                      
+                              <div class="tab-content">
+                                <h4>New age bullshit</h4>
+                      
+                              </div>
+                            </div>
+                      
+                      
+                          </div>
+                      
+                      
+                      
+                      
+                          <div class="tabbed">
+                            <input type="radio" id="tab1" name="css-tabs" checked>
+                            <input type="radio" id="tab2" name="css-tabs">
+                            <input type="radio" id="tab3" name="css-tabs">
+                      
+                            <ul class="tabs">
+                              <li class="tab"><label for="tab1">Financial Statements #h1</label></li>
+                              <li class="tab"><label for="tab2">Zombie lipsum</label></li>
+                              <li class="tab"><label for="tab3">New age bullshit</label></li>
+                            </ul>
+                      
+                            <div class="tab-content">
+                              <h4>Financial Statements #h2</h4>
+                              <p>Da bomb ipsizzl</p>
+                                            <div class="tabbed">
+                                              <input type="radio" id="tab1" name="css-tabs" checked>
+                                              <input type="radio" id="tab2" name="css-tabs">
+                                              <input type="radio" id="tab3" name="css-tabs">
+                      
+                                              <ul class="tabs">
+                                                <li class="tab"><label for="tab1">Gangsta lipsum</label></li>
+                                                <li class="tab"><label for="tab2">Zombie lipsum</label></li>
+                                                <li class="tab"><label for="tab3">New age bullshit</label></li>
+                                              </ul>
+                      
+                                              <div class="tab-content">
+                                                <h4>Gangsta lipsum</h4>
+                                                <p>Da bomb ipsizzl</p>
+                                              </div>
+                      
+                                              <div class="tab-content">
+                                                <h4>Zombie lipsum</h4>
+                                                <p>Zombie </p>
+                                              </div>
+                      
+                                              <div class="tab-content">
+                                                <h4>New age bullshit</h4>
+                      
+                                              </div>
+                                            </div>
+                            </div>
+                      
+                            <div class="tab-content">
+                              <h4>Zombie lipsum</h4>
+                              <p>Zombie </p>
+                            </div>
+                      
+                            <div class="tab-content">
+                              <h4>New age bullshit</h4>
+                      
+                            </div>
+                          </div>                        
+    <div id="accordion" class="accordion">
+        <div class="card mb-0">
+            <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                <a class="card-title">{{fin_metric_name}}Definition and Formula (What is Current Ratio?)</a>
+            </div>
+            <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                <p> According to Investopedia...</p>
+                <p> See: 
+                    Macrotrends and Gurufocus definitions https://www.gurufocus.com/term/mktcap/AAPL/Market-Cap/Apple</p>
+            </div>
+            <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                <a class="card-title"> Additional Information (Company Profile) </a>
+            </div>
+            <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                <!-- <p>Website: <a href="https://apple.com">Apple, Inc.</a> -->
+                <p>{{company_description}}</p>
+                <p>{{company_long_name}} {{country_ipo_date}} on the {{company_exchange}} exchange and started trading with the ticker "{{company_symbol}}". </p>
+
+
+                </p>
+            </div>
+            <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <a class="card-title"> Comparables ({{fin_metric_name}} vs Competition e.g. {{company_similar}}) </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">Apple, Inc's{{fin_metric_name}} is 0.7, and it's a great one. A {{fin_metric_name}} of 0.7 places it ahead of it's industry (Computer Hardware) average of 0.5 and sector (Technology) average. The industry includes the likes of {{company_similar}}. The highest and lowest {{fin_metric_name}} in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively. </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+            </div>
+            <div class="col">
+                <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;">
+                    <div class="card-body">
+                        <h2 class="text-primary mb-0 historical">
+                            Summary Statistics (Annual)
+                            <br/>
+                            {{fin_metric_name}} 
+                            <br/>
+                            ({{earliest_year}} - {{latest_year}})</h2>
+                        <div class="text-dark font-weight-bold h5 mb-0"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-dark font-weight-bold h5 mb-0"></div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="fin_metric-stats">
+                                    <tr>
+                                        <th>Statistic</th>
+                                        <th>Ratio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <tr>
+                                        <td class="hist_measure">
+                                            Present
+                                        </td>
+                                        <td class="hist_stats">
+                                            {{present_num}}
+                                        </td>
+                                    </tr> -->
+                                    <tr>
+                                        <td class="hist_measure">Mean (μ)</td>
+                                        <td class="hist_stats">{{mean_str}}</td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td class="hist_measure">Std Dev. (σ)<br></td>
+                                        <td class="hist_stats">{{std_dev_abs_str}}</td>
+                                        <td class="hist_stats">({{std_dev_str}})</td>
+                                    </tr> -->
+                                    <tr>
+                                        <td class="hist_measure">Top 25%</td>
+                                        <td class="hist_stats">{{top_25_str}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hist_measure">Bottom 25%</td>
+                                        <td class="hist_stats">{{bottom_25_str}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hist_measure">Highest</td>
+                                        <td class="hist_stats">{{max_str}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hist_measure">Lowest</td>
+                                        <td class="hist_stats">{{min_str}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="hist_measure">% Change (annually)</td>
+                                        <td class="hist_stats">{{annual_pct_chg}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="hist_measure">% Change (since inception)</td>
+                                        <td class="hist_stats">{{historical_pct_chg}}</td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="button_div"><button class="btn btn-primary button_buy" type="button">Historical Financial Ratios Data for entire Industry $5, Sector $10</button></div>
+                        <p>We exist bc we want to provide affordable data. Ultimately, only high-level analysis in excel gives you the bigger picture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow border-left-info py-2">
+                        <div class="card-body" style="padding: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-grow-1 justify-content-center">
+                <div class="col">
+
+                    <div class="card shadow border-left-primary py-2" style="margin: 0px;padding: 10px;">
+                        <div class="card-body" style="padding: 10px;">
+                            <p>Popular Stats &amp; Analyses:<br>-&nbsp;<a href="#collapse-1"><span style="text-decoration: underline;">Company Info (CEO, IPO Date, HQ.</span></a>..)<br>-&nbsp;<a href="#collapse-1">[Past] "If I bought AAPL at ______."</a><br>-&nbsp;
+                                <a
+                                    href="#collapse-1">[Present] "Should I buy AAPL today?"</a><br><br></p>
+                            <div class="text-dark font-weight-bold h5 mb-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="card shadow border-left-success py-2">
+                    <div class="card-body">
+                        <h4 class="text-dark mb-0">Lifetime Metrics</h4>
+                        <div class="row align-items-center no-gutters">
+                            <div class="col mr-2">
+                                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                                <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                            </div>
+                            <div class="col mr-2">
+                                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                                <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center no-gutters">
+                            <div class="col mr-2">
+                                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                                <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                            </div>
+                            <div class="col mr-2">
+                                <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                                <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="background-color: rgba(0,0,0,0.48);margin: 10px;">
+                    <div class="card-body" style="padding: 2px;"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><strong><span style="text-decoration: underline;">Yearly Breakdown</span></strong></p>
+                    </div>
+                    <div class="col">
+                        <p>"If I bought AAPL&nbsp;at the top / bottom / beginning..."</p>
+                    </div>
+                    <div class="col">
+                        <p>Number of Up Days</p>
+                    </div>
+                    <div class="col">
+                        <p>Daily Volatility (+/-% Change)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div></div>
+                    <div class="card" style="background-color: rgba(0,0,0,0.48);margin: 10px;">
+                        <div class="card-body" style="padding: 2px;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">Annual Reports (10K)</a></li>
+                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-4">Quarterly Earnings Report (10Q)</a></li>
+                                <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-2">Financial Ratios</a></li>
+                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Key Metrics</a></li>
+                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Earnings Call Transcript</a></li>
+                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Press Releases</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane" role="tabpanel" id="tab-1">
+                                    <div class="col"></div>
+                                </div>
+                                <div class="tab-pane active" role="tabpanel" id="tab-2">
+                                    <div class="col">
+                                        <div>
+                                            <ul class="nav nav-tabs">
+                                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">Financial Statements</a></li>
+                                                <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-2">Financial Ratios</a></li>
+                                                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Tab 3</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane" role="tabpanel" id="tab-1">
+                                                    <div class="col"></div>
+                                                </div>
+                                                <div class="tab-pane active" role="tabpanel" id="tab-2">
+                                                    <div class="col">
+                                                        <nav class="navbar navbar-light navbar-expand-md">
+                                                            <div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                                                                <div
+                                                                    class="collapse navbar-collapse" id="navcol-1">
+                                                                    <ul class="nav navbar-nav">
+                                                                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#">First Item</a></li>
+                                                                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
+                                                                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Third Item</a></li>
+                                                                    </ul>
+                                                            </div>
+                                                    </div>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="tab-3">
+                                                <div class="col"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <nav class="navbar navbar-light navbar-expand-md">
+                                        <div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                                            <div
+                                                class="collapse navbar-collapse" id="navcol-1">
+                                                <ul class="nav navbar-nav">
+                                                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">First Item</a></li>
+                                                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
+                                                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Third Item</a></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-3">
+                            <div class="col"></div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-4">
+                            <p>Tab content.</p>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-5">
+                            <div class="col"></div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="tab-6">
+                            <div class="col">
+                                <div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">Financial Statements</a></li>
+                                        <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-2">Financial Ratios</a></li>
+                                        <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Tab 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane" role="tabpanel" id="tab-1">
+                                            <div class="col"></div>
+                                        </div>
+                                        <div class="tab-pane active" role="tabpanel" id="tab-2">
+                                            <div class="col">
+                                                <nav class="navbar navbar-light navbar-expand-md">
+                                                    <div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                                                        <div
+                                                            class="collapse navbar-collapse" id="navcol-1">
+                                                            <ul class="nav navbar-nav">
+                                                                <li class="nav-item" role="presentation"><a class="nav-link active" href="#">First Item</a></li>
+                                                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
+                                                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Third Item</a></li>
+                                                            </ul>
+                                                    </div>
+                                            </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="tab-3">
+                                        <div class="col"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="navbar navbar-light navbar-expand-md">
+                                <div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                                    <div
+                                        class="collapse navbar-collapse" id="navcol-1">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item" role="presentation"><a class="nav-link active" href="#">First Item</a></li>
+                                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
+                                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Third Item</a></li>
+                                        </ul>
+                                </div>
+                        </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-success py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Earnings (annual)</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>$215,000</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-info py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span>Tasks</span></div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="text-dark font-weight-bold h5 mb-0 mr-3"><span>50%</span></div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"><span class="sr-only">50%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-warning py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span>Pending Requests</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>18</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="../static/img/03.jpg"></div>
+                    
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Let there be rock!</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row flex-grow-1 justify-content-center">
+        <div class="col">
+            <div class="card shadow mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6 class="text-primary font-weight-bold m-0 metric_table">{{company_long_name}} ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
+                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                            role="menu">
+                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a class="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- {{df_bs_table_html}} -->
+                    <!-- {% for table in df_html_tall %} -->
+                    <!-- {{titles[loop.index]}} -->
+                    <!-- asdas -->
+                    <!-- {{ df_html_tall[0]|safe }} -->
+                    <!-- {% endfor %} -->
+
+                                    
+                    <!-- <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>2014</th>
+                                    <th>2015</th>
+                                    <th>2016</th>
+                                    <th>2017</th>
+                                    <th>2018</th>
+                                    <th>2019</th>
+                                    <th>2020</th>
+                                    <th>2021</th>
+                                    <th>2022</th>
+                                    <th>2023</th>
+                                    <th>2024</th>
+                                    <th>2025</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                </tr>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

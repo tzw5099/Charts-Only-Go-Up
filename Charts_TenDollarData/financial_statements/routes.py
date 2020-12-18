@@ -76,7 +76,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     from route_imports.ratio_map import metric_to_formula_map
     from route_imports.ratio_map import url_to_metric_map
     start_time = time.time()
-    url_symbol="aapl"
+    # url_symbol="aapl"
     titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     def magnitude_num(number, currency_symbol):
         if len(str(number)) > 9 and number > 0:
@@ -442,8 +442,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     print("Nothing took {} seconds".format(time.time() - start_time))
     labels = list(df['date'])
     print("df json", df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist())
-    df['quarter avg'] = df["{}".format(fin_metric_title)].rolling(4).mean()
-    df_json  =df[['date',"{}".format("quarter avg")]].to_numpy().tolist()[4:]
+    df['quarter avg'] = df["{}".format(fin_metric_title)].rolling(4,min_periods=1).mean()
+    df_json  =np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()#[4:]
     # df_json  =df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist(),\
     print("df json2", df_json)
     print("qtr avg", df['quarter avg'])

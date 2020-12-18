@@ -203,6 +203,39 @@ div.sticky-top{
                 title: {
                     text: '{{fin_metric_name}}'
                 },
+                tooltip: {
+                                enabled: true,
+                                valuePrefix:"$", 
+                                //"{{company_currency}}"
+                                // format: '{value:%Y}',
+                                // https://stackoverflow.com/questions/45033593/javascript-highcharts-math-operations-in-tooltip
+                                pointFormatter:function()
+                                    {
+                                    if(this.y >= 1000000000){
+                                        return ('<b>$' + this.y / 1000000000) + 'B</b>';
+                                        }
+                                    else if(this.y >= 1000000) {
+                                        return ('<b>$' + this.y / 1000000) + 'M</b>';
+                                        }
+                                    else if(this.y >= 1000) {
+                                        return ('<b>$' + this.y / 1000) + 'K</b>';
+                                        }
+                                    else {
+                                        return '<b>$' + this.y + '</b>';
+                                        }
+                                    },
+
+
+
+                            // formatter: function (tooltip) {
+                            // }
+                            // formatter: function() {
+                            //     return  '<b>' + this.series.name +'</b><br/>' +
+                            //         Highcharts.dateFormat('%Y', //'%e - %b - %Y',
+                            //                             new Date(this.x))
+                            //     + ' date, ' + this.y + ' Kg.';
+                            // }
+                },
                 rangeSelector: {
                     selected:2,
                      inputPosition: {                    // align: 'left',
@@ -223,7 +256,7 @@ div.sticky-top{
                 xAxis:{
                     //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
                     // format: '{value:%Y}'
-                    format: '{value:Q%q\'%y}'
+                    // format: '{value:Q%q\'%y}'
                 },
                 plotOptions: {
                     series: {
@@ -271,9 +304,26 @@ div.sticky-top{
                            //     margin:50,
                            // },
                             tooltip: {
-                                valuePrefix: "$",//"{{company_currency}}"
+                                enabled: true,
+                                // valuePrefix:"$", 
+                                //"{{company_currency}}"
                                 // format: '{value:%Y}',
-                                xDateFormat: '%Y'//'%Y-%m-%d'
+                                // xDateFormat: '%Y',//'%Y-%m-%d'
+                                // formatter:function()
+                                //     {
+                                //     if(this.value >= 1000000000){
+                                //         return ('$' + this.value / 1000000000) + 'B';
+                                //         }
+                                //     else if(this.value >= 1000000) {
+                                //         return ('$' + this.value / 1000000) + 'M';
+                                //         }
+                                //     else if(this.value >= 1000) {
+                                //         return ('$' + this.value / 1000) + 'K';
+                                //         }
+                                //     else {
+                                //         return '$' + this.value;
+                                //         }
+                                //     }
                             // formatter: function (tooltip) {
                             // }
                             // formatter: function() {
@@ -290,20 +340,21 @@ div.sticky-top{
                            // formatter:function(){
                            //     return ('$' + this.value / 1000000000) + 'B';
                            // }
-                            formatter:function(){
-                        if(this.value >= 1000000000){
-                            return ('$' + this.value / 1000000000) + 'B';
-                        }
-                        else if(this.value >= 1000000) {
-                            return ('$' + this.value / 1000000) + 'M';
-                        }
-                        else if(this.value >= 1000) {
-                            return ('$' + this.value / 1000) + 'K';
-                        }
-                        else {
-                            return '$' + this.value;
-                        }
-                    }
+                        formatter:function()
+                            {
+                            if(this.value >= 1000000000){
+                                return ('$' + this.value / 1000000000) + 'B';
+                                }
+                            else if(this.value >= 1000000) {
+                                return ('$' + this.value / 1000000) + 'M';
+                                }
+                            else if(this.value >= 1000) {
+                                return ('$' + this.value / 1000) + 'K';
+                                }
+                            else {
+                                return '$' + this.value;
+                                }
+                            }
                 }
     },
 
@@ -312,8 +363,25 @@ div.sticky-top{
                     name: '{{company_symbol}}dd Stock Volume',
                     pointInterval: 3,
                     pointIntervalUnit: 'month',
-                    pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
-
+                    // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
+                    tooltip: {
+                        xDateFormat:  'Q%q \'%Y'//'%b - %Y'
+                                    //                     formatter:function()
+                                    // {
+                                    // if(this.value >= 1000000000){
+                                    //     return ('$' + this.value / 1000000000) + 'B';
+                                    //     }
+                                    // else if(this.value >= 1000000) {
+                                    //     return ('$' + this.value / 1000000) + 'M';
+                                    //     }
+                                    // else if(this.value >= 1000) {
+                                    //     return ('$' + this.value / 1000) + 'K';
+                                    //     }
+                                    // else {
+                                    //     return '$' + this.value;
+                                    //     }
+                                    // },
+                    },
                     data: data.map(mapData),
 
                 }]
