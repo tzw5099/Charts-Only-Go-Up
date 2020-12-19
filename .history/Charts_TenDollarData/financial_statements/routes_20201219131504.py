@@ -335,10 +335,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         for x in reversed(titles_bs):
             if x in titles_list:
                 titles_bs.remove(x)
-        titles_bs.append('Year')
         titles_bs.append('Quarter & Year')
-        titles_bs.append('QQ-YYYY')
-
     except:
         pass
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
@@ -357,7 +354,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df = df[cols]
         print("xxfin metric name then title", fin_metric_name, fin_metric_title)
         # df['{}'.format(fin_metric_name)]
-        fin_metric_history = df['{}'.format(fin_metric_title)]
+        fin_metric_history = df['{}'.format(fin_metric_name)]
         
     except Exception as e:
         print("error exception qq ", e)

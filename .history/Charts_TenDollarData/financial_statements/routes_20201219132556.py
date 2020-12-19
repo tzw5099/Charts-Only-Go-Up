@@ -336,12 +336,13 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             if x in titles_list:
                 titles_bs.remove(x)
         titles_bs.append('Year')
-        titles_bs.append('Quarter & Year')
+        # titles_bs.append('Quarter & Year')
+        df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
         titles_bs.append('QQ-YYYY')
 
     except:
         pass
-    df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
+    # df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
 
     #"{}-{}".format(df_quarter,(df['date'].astype(str).str[0:4]).astype(int)) #(df['date'].astype(str).str[0:4]).astype(int)
     # df = df.drop(['date'],axis=1, errors='ignore')
@@ -357,7 +358,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df = df[cols]
         print("xxfin metric name then title", fin_metric_name, fin_metric_title)
         # df['{}'.format(fin_metric_name)]
-        fin_metric_history = df['{}'.format(fin_metric_title)]
+        fin_metric_history = df['{}'.format(fin_metric_name)]
         
     except Exception as e:
         print("error exception qq ", e)

@@ -183,11 +183,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # df = df[df['date'].notna()]#fillna(method='ffill')
         df = df[0:].iloc[::-1]#.dropna()
         #region Pandas data manipulation
-
-
-        df["Year"] = df["date"].apply(lambda x: x[0:4])
-        df["QQ-YYYY"] = df["period"]+"-"+df["date"].apply(lambda x: x[0:4])#["QQ-YYYY"]
-
+        df = df
         matching_row = fin_statements_matching[fin_statements_matching['URL']=="{}".format(url_fin_metric)]
         fin_metric_title = list(matching_row['Title'])[0]
         fin_metric_name = list(matching_row['Name'])[0]
@@ -203,12 +199,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         lifetime_sum_all_metric = df["{}".format(fin_metric_name)].sum()
         lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)
         print("lifetime passed")
-
-
-
-
-
-
 
 
     else:
@@ -230,6 +220,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         print("renamed cols", fin_statement_renamed_cols)
         df_merge.columns = fin_statement_renamed_cols
         df = df_merge.iloc[::-1]
+        df['year'] = df['filing_date'].apply(lambda x: str(x)[0:4])
+
         # print("www111 ", "df['current_ratio'][0:10]", df['period'])
         # print("AAwww111 ", "df['current_ratio'][0:10]", df['period_x'])
         df['ffo_math']=df['net_income'] + df['d_n_a'] + df['sales_maturities_of_investments'] + df['purchase_of_investments'] + df['investments_in_pp_n_e'] + df['acquisitions_net']
@@ -325,20 +317,17 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         max_min_pct_diff_str = "-{}%".format(round(max_min_pct_diff)*100,1)
     else:
         max_min_pct_diff_str = ""
-
+    
     df_quarter = df['period']
     df = df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link'],axis=1, errors='ignore')
     
     print("curr rat33io", "df['current_ratio'][0:10]", df_quarter)
-    try:
     # print("list 5 ", df)
+    try:
         for x in reversed(titles_bs):
             if x in titles_list:
                 titles_bs.remove(x)
-        titles_bs.append('Year')
         titles_bs.append('Quarter & Year')
-        titles_bs.append('QQ-YYYY')
-
     except:
         pass
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
@@ -349,23 +338,14 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     print("list_fin_statement",list(df))
     try:
         titles_bs.insert(0,"date")
-        
-        print("titles_bs",titles_bs)
-        print("fin metric name then title", fin_metric_name, fin_metric_title)
         df.columns = titles_bs
-        print("qqfin metric name then title", fin_metric_name, fin_metric_title)
         df = df[cols]
-        print("xxfin metric name then title", fin_metric_name, fin_metric_title)
-        # df['{}'.format(fin_metric_name)]
         fin_metric_history = df['{}'.format(fin_metric_title)]
-        
-    except Exception as e:
-        print("error exception qq ", e)
-        # fin_metric_history = metric_history
-
+    except:
+        fin_metric_history = metric_history
     df = df
 
-    # print("curr rfew22atio", "df['current_ratio'][0:10]")
+    print("curr rfew22atio", "df['current_ratio'][0:10]")
 
     # df = df[cols]
 
@@ -440,24 +420,24 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         except:
             return False
     df_n = df[df.applymap(isnumber)]
-    # print("curr ratio66", "df['current_ratio'][0:10]")
-    # print("kk 343", len(list(df_t)))
+    print("curr ratio66", "df['current_ratio'][0:10]")
+    print("kk 343", len(list(df_t)))
     # df_n[df_n < 2] = np.nan
-    # print("curr ratio6vvv6", "df['current_ratio'][0:10]")
+    print("curr ratio6vvv6", "df['current_ratio'][0:10]")
     df_n_sum = pd.DataFrame(df_n.sum())
     df_n_sum[df_n_sum == 0] = ""
-    # print("curr ratio616", "df['current_ratio'][0:10]")
-    # print("len 111ccc", len(list(df_t)))
+    print("curr ratio616", "df['current_ratio'][0:10]")
+    print("len 111ccc", len(list(df_t)))
     new_header = df_n_sum.iloc[0] #grab the first row for the header
     df_n_sum = df_n_sum#[1:] #take the data less the header row
     df_n_sum.columns = new_header #set the header row as the df header
     df_n_sum.index = range(len(df_n_sum))
-    # print("curr ratiobbj66", "df['current_ratio'][0:10]")
-    # print("len d111", len(list(df_t)))
+    print("curr ratiobbj66", "df['current_ratio'][0:10]")
+    print("len d111", len(list(df_t)))
     df_t = pd.merge(df_n_sum, df_t, left_index=True, right_index=True,suffixes=('Total: {} - {}'.format(latest_year,earliest_year), 'Line Items'))
-    # print("len q111", len(list(df_t)))
+    print("len q111", len(list(df_t)))
     df_t = df_t#[0:25]
-    # print("curr ratio33", "df['current_ratio'][0:10]")
+    print("curr ratio33", "df['current_ratio'][0:10]")
     # print("asdasd 22")
 
     col_list = []
@@ -472,10 +452,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         col_list.append(col_item)
         n+=1
     col_list_str = ''.join(map(str, col_list))
-    # print("curr ratio 4", "df['current_ratio'][0:10]")
+    print("curr ratio 4", "df['current_ratio'][0:10]")
     # print("asdasd 2233wq", df_t)
-    # print("list df t", list(df_t))
-    # print("vals df t", (df_t[0:10]))
+    print("list df t", list(df_t))
+    print("vals df t", (df_t[0:10]))
     # print("vals df current ratio", (df['current_ratio']))
     df_html = df_t.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
     # print("11 asdasd 2 2", df_html)
@@ -507,7 +487,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
     df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
-    # print("curr ratio2", "df['current_ratio'][0:10]")
+    print("curr ratio2", "df['current_ratio'][0:10]")
     # df = df[["{}".format(fin_metric_title)]].dropna() #.fillna(0)#.fillna(method='bfill')
     df['date'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
     
@@ -537,10 +517,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     
     df_json  =np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()#[4:]
     # df_json  =df[['date',"{}".format(fin_metric_title)]].to_numpy().tolist(),\
-    # print("df json2", df_json)
-    # print("qtr avg", df['quarter avg'][0:10])
-    # print("li7st",list(df))
-    # print("curr ratio", "df['current_ratio'][0:10]")
+    print("df json2", df_json)
+    print("qtr avg", df['quarter avg'][0:10])
+    print("li7st",list(df))
+    print("curr ratio", "df['current_ratio'][0:10]")
 
 
     return render_template('current_ratio.html', company_symbol = profiles_dict['symbol'],\

@@ -357,7 +357,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df = df[cols]
         print("xxfin metric name then title", fin_metric_name, fin_metric_title)
         # df['{}'.format(fin_metric_name)]
-        fin_metric_history = df['{}'.format(fin_metric_title)]
+        fin_metric_history = df['{}'.format(fin_metric_name)]
         
     except Exception as e:
         print("error exception qq ", e)
