@@ -296,24 +296,24 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     top_25_str = magnitude_num(top_25, currency_symbol)
     
     num_years = len(sorted_metric)
-    earliest_year = list((df['date'].astype(str).str[0:4]))[0]
+    earliest_year = list((df['date'].astype(str).str[0:4]))[0]    
     latest_year = list((df['date'].astype(str).str[0:4]))[-1]    # average_abs_chg = latest_metric-earliest_metric
     earliest_metric = list(df["{}".format(fin_metric_name)])[0]
     latest_metric = list(df["{}".format(fin_metric_name)])[-1]
-    print("latest num", earliest_metric,latest_metric)
-    pct_chg = (latest_metric/earliest_metric) #1+((latest_metric - earliest_metric)/earliest_metric)
+    print("latest num", latest_metric)
+    pct_chg = latest_metric/earliest_metric #1+((latest_metric - earliest_metric)/earliest_metric)
     print("complex pct chg and num years", pct_chg, num_years)
     historical_pct_chg = str(round(pct_chg, 1))
     print("date reeatio", "df['current_ratio'][0:10]", df['period'])
     # annual_pct_chg = str(round((10*(pct_chg*100)**(1/num_years)), 1))
-    annual_pct_chg  = (latest_metric/earliest_metric)/2# round(pct_chg**(1/num_years),2)
+    annual_pct_chg  = round(pct_chg**(1/num_years),2)
     print("pct_chg historical_pct_chg annual_pct_chg", pct_chg, historical_pct_chg, annual_pct_chg)
     if pct_chg>=0:
         hist_pct_chg_str = "{}x".format(historical_pct_chg)
-        annual_pct_chg_str = "{}%".format(annual_pct_chg)
+        annual_pct_chg_str = "{}x".format(annual_pct_chg)
     elif pct_chg<0:
         hist_pct_chg_str = "-{}x".format(historical_pct_chg)
-        annual_pct_chg_str = "-{}%".format(annual_pct_chg)
+        annual_pct_chg_str = "-{}x".format(annual_pct_chg)
     else:
         hist_pct_chg_str = ""
         annual_pct_chg_str = ""
@@ -338,36 +338,28 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             if x in titles_list:
                 titles_bs.remove(x)
         titles_bs.append('Year')
-        # titles_bs.append('Quarter & Year')
+        titles_bs.append('Quarter & Year')
         titles_bs.append('QQ-YYYY')
 
     except:
         pass
-    
+    df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
 
     #"{}-{}".format(df_quarter,(df['date'].astype(str).str[0:4]).astype(int)) #(df['date'].astype(str).str[0:4]).astype(int)
     # df = df.drop(['date'],axis=1, errors='ignore')
     # print("titles_bs",titles_bs)
     print("list_fin_statement",list(df))
     try:
-        
         titles_bs.insert(0,"date")
-        titles_bs.remove("Quarter & Year")
-        # titles_bs.insert(1,"Quarter & Year")
-        # titles_bs.append("Quarter & Year")
+        
         print("titles_bs",titles_bs)
         print("fin metric name then title", fin_metric_name, fin_metric_title)
-        print("now lets go titles_bs",titles_bs)
-        print("list_fin_statement",list(df))
-        print("cols ", cols)
         df.columns = titles_bs
-        print("  metric name then title", fin_metric_name, fin_metric_title)
+        print("qqfin metric name then title", fin_metric_name, fin_metric_title)
         df = df[cols]
         print("xxfin metric name then title", fin_metric_name, fin_metric_title)
-        
         # df['{}'.format(fin_metric_name)]
         fin_metric_history = df['{}'.format(fin_metric_title)]
-        print("passed fin_metric_history")
         
     except Exception as e:
         print("error exception qq ", e)
@@ -378,7 +370,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # print("curr rfew22atio", "df['current_ratio'][0:10]")
 
     # df = df[cols]
-    df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
+
     df.index = df['Quarter & Year']
     print("1st title",fin_metric_title)
     million = 1000000
@@ -495,20 +487,13 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # df_tall = df.index.shift(-1)
     # df_tall = df_tall.reset_index()
     # print("list 7 ", fin_metric_title)
-    
-    
-    # df_tall['pct_chg'] = df_tall.apply(lambda x: )
     if "{}".format(statement_or_ratio) in fin_statements_list:
-        df_tall['pct_chg'] = df_tall['{}'.format(fin_metric_title)].pct_change()
-        
-        df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title),'pct_chg']].to_html(index=False)
-        # df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title)]].to_html(index=False)
+        df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title)]].to_html(index=False)
         full_path = csv_file.split(' ~ ')
         path = pathlib.PurePath(full_path[0])
     else:
         df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_name)]].to_html(index=False)
     df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="abc" id="df_myTable" border="1" class="dataframe">')#.replace("'","")
-    df_html_tall = df_html_tall.replace('inf','class="abc" id="df_myTable" border="1" class="dataframe">')
     # df_html_tall = df_html_tall.replace("\n","")
     df_html_tall = df_html_tall.replace("\n","")
     df_html_tall = df_html_tall.replace("{}".format("["),"")

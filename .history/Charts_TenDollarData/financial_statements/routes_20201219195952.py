@@ -495,11 +495,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # df_tall = df.index.shift(-1)
     # df_tall = df_tall.reset_index()
     # print("list 7 ", fin_metric_title)
-    
-    
+    df_tall['pct_chg'] = df_tall['{}'.format(fin_metric_title)].pct_change()
     # df_tall['pct_chg'] = df_tall.apply(lambda x: )
     if "{}".format(statement_or_ratio) in fin_statements_list:
-        df_tall['pct_chg'] = df_tall['{}'.format(fin_metric_title)].pct_change()
+
         
         df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title),'pct_chg']].to_html(index=False)
         # df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title)]].to_html(index=False)

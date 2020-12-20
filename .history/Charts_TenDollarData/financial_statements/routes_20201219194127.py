@@ -350,23 +350,20 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # print("titles_bs",titles_bs)
     print("list_fin_statement",list(df))
     try:
-        
+        df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
         titles_bs.insert(0,"date")
-        titles_bs.remove("Quarter & Year")
-        # titles_bs.insert(1,"Quarter & Year")
-        # titles_bs.append("Quarter & Year")
+        titles_bs.insert(0,"'Quarter & Year'")
         print("titles_bs",titles_bs)
         print("fin metric name then title", fin_metric_name, fin_metric_title)
         print("now lets go titles_bs",titles_bs)
         print("list_fin_statement",list(df))
-        print("cols ", cols)
         df.columns = titles_bs
         print("  metric name then title", fin_metric_name, fin_metric_title)
         df = df[cols]
         print("xxfin metric name then title", fin_metric_name, fin_metric_title)
-        
+        print("cols ", cols)
         # df['{}'.format(fin_metric_name)]
-        fin_metric_history = df['{}'.format(fin_metric_title)]
+        fin_metric_history = df['{}'.format(fin_metric_name)]
         print("passed fin_metric_history")
         
     except Exception as e:
@@ -378,7 +375,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # print("curr rfew22atio", "df['current_ratio'][0:10]")
 
     # df = df[cols]
-    df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])#.astype(int)
+
     df.index = df['Quarter & Year']
     print("1st title",fin_metric_title)
     million = 1000000
@@ -495,11 +492,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # df_tall = df.index.shift(-1)
     # df_tall = df_tall.reset_index()
     # print("list 7 ", fin_metric_title)
-    
-    
+    df_tall['pct_chg'] = df_tall['{}'.format(fin_metric_title)].pct_change()
     # df_tall['pct_chg'] = df_tall.apply(lambda x: )
     if "{}".format(statement_or_ratio) in fin_statements_list:
-        df_tall['pct_chg'] = df_tall['{}'.format(fin_metric_title)].pct_change()
+
         
         df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title),'pct_chg']].to_html(index=False)
         # df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title)]].to_html(index=False)
