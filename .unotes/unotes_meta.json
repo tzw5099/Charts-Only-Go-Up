@@ -38,7 +38,14 @@
     "reference_data": {
       "name": "reference_data",
       "isOrdered": true,
-      "folders": {},
+      "folders": {
+        "financial_statements_list": {
+          "name": "financial_statements_list",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
       "files": {}
     },
     "venv": {
