@@ -394,8 +394,8 @@
                 type: 'datetime',
                 dateTimeLabelFormats:
                     {
-                        month: '%Y',//'Q%q - %y',
-                        year:'%Y',
+                        // month: '%Y',//'Q%q - %y',
+                        // year:'%Y',
                     },
                 // opposite: true,
                 // tickInterval: 8,
@@ -405,7 +405,7 @@
                 gridLineColor:'#E2E3E3', //'#000000',
                 alternateGridColor: '#FDFFD5', // '#FEF8E3'
                  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                // format: '{value:%Y}',
+                // format: '{value:%Y}'
                 // format: '{value:Q%q\'%y}'
                 minPadding:0,
             },
@@ -445,7 +445,7 @@
                 // gridLineColor:'#E2E3E3', //'#000000',
                 // alternateGridColor: '#FDFFD5', // '#FEF8E3'
                 //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                format: '{value:%Y}',
+                // format: '{value:%Y}'
                 // format: '{value:Q%q\'%y}'
                 minPadding:0,
             // title:
@@ -571,7 +571,23 @@
         yAxis:
         [
         {
-
+            plotLines: [{
+                value: minRate,
+                color: 'green',
+                dashStyle: 'shortdash',
+                width: 2,
+                label: {
+                    text: 'Last quarter minimum'
+                }
+            }, {
+                value: maxRate,
+                color: 'red',
+                dashStyle: 'shortdash',
+                width: 2,
+                label: {
+                    text: 'Last quarter maximum'
+                }
+            }],
             height: '100%',
             yAxis: 1,
             visible: false,
@@ -645,23 +661,6 @@
         },
         {
 height:'100%',
-            plotLines: [{
-                value: minRate,
-                color: 'green',
-                dashStyle: 'shortdash',
-                width: 2,
-                label: {
-                    text: 'Last quarter minimum'
-                }
-            }, {
-                value: maxRate,
-                color: 'red',
-                dashStyle: 'shortdash',
-                width: 2,
-                label: {
-                    text: 'Last quarter maximum'
-                }
-            }],
             yAxis: 0,
             // min: -1.5,
             visible: false,
@@ -745,15 +744,9 @@ height:'100%',
                 // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
                 tooltip:
                 {
-                    shared: false,
+                    shared: true,
                     xDateFormat:  'Q%q \'%Y',//'%b - %Y'
-                    // backgroundColor: '#1ebd1e',//'red'
-        positioner: function () {
-            return { x: 80, y: 50 };
-        },
-        shadow: true,
-        borderWidth: 0,
-        backgroundColor: 'rgba(255,255,255,0.8)',
+                    backgroundColor: '#1ebd1e',//'red'
                     // style:
                     // {
                     //     backgroundColor: '#1ebd1e',//'red'

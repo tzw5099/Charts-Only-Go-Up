@@ -11,12 +11,15 @@
 <!-- https://jsfiddle.net/cakenite/f6b94evj/18/ -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
+
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612+Mono">
@@ -27,7 +30,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="../static/bootstrap/css/styles.min.css">
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <style>
         table {border-spacing: 0;
         border-collapse: collapse;
@@ -36,32 +41,42 @@
         .odd { background-color: brown }
         .even { background-color: pink }
     </style>
+
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+
     <!-- enables CSV -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
     <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
     <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+
     <style>
     #df_myTable {
         margin: 0 auto;
     }
+
     .metric_table{
         text-align:center;
         margin: 0 auto !important;
     }
+
     div.card-body.hist_table {
     overflow:scroll;
     -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    scrollbar-width: none;  /* Firefox */  
     }
+
+
     div.card-body.hist_table::-webkit-scrollbar {
     display: none;
     color: #20c08d;
+
     }
     div.sticky-top{
     top:160px;
@@ -79,16 +94,19 @@
         a:hover {
         color: #B721FF;
         }
+
         .tabbed {
         overflow-x: hidden; /* so we could easily hide the radio inputs */
         margin: 32px 0;
         padding-bottom: 16px;
         border-bottom: 1px solid #ccc;
         }
+
         .tabbed [type="radio"] {
         /* hiding the inputs */
         display: none;
         }
+
         .tabs {
         display: flex;
         align-items: stretch;
@@ -114,10 +132,12 @@
         border-top-color: #333;
         color: #333;
         }
+
         .tab-content {
         display: none;
         color: #777;
         }
+
         /* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
         .tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
         .tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
@@ -129,6 +149,7 @@
         background: #fff;
         color: #222;
         }
+
         .tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
         .tabbed [type="radio"]:nth-of-type(2):checked ~ .tab-content:nth-of-type(2),
         .tabbed [type="radio"]:nth-of-type(3):checked ~ .tab-content:nth-of-type(3),
@@ -137,20 +158,23 @@
         color: #1ebd1e,
         }
     </style>
-<script>function centerLabels(chart)
-{
-    var $container = $(chart.target.highbar);
+<script>function centerLabels(chart) {        
+    var $container = $(chart.target.highbar); 
     var axes = chart.target.axes;
+
     var $labels = $highbar.find('.highcharts-axis-labels .timeline_label');
     var $thisLabel, $nextLabel, thisXPos, nextXPos, delta, newXPos;
+
     $labels.each(function () {
         $thisLabel = $(this).parent('span');
         thisXPos = parseInt($thisLabel.css('left'));
+
         $nextLabel = $thisLabel.next();
         // next position is either a label or the end of the axis
         nextXPos = $nextLabel.length ? parseInt($nextLabel.css('left')) : axes[0].left + axes[0].width;
         delta = (nextXPos - thisXPos) / 2.0;
         newXPos = thisXPos + delta;
+
         // remove the last label if it won't fit
         if ($nextLabel.length || $(this).width() + newXPos < nextXPos) {
             $thisLabel.css('left', newXPos + 'px');
@@ -158,12 +182,11 @@
             $thisLabel.remove();
         }
     });
-}
-</script>
-<script>
-    document.addEventListener
-    ('DOMContentLoaded', function (data)
-    {
+}</script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function (data) {
         //     var myChart = Highcharts.setOptions({
         //     lang: {
         //         numericSymbols: [' thousands', ' millions', 'billions']
@@ -171,80 +194,52 @@
         // });
         var startDate  = new Date("April 01, 2012 00:00:00");
         var today = new Date();
+
         var count =  parseInt((today.getTime() - startDate)/(24*3600*1000)) -1;
+
         data = {{df_json}};
-        year_data = {{year_df_json}};
-        function mapData([x, y])
-        {
+        year_data = {{year_df_json}}
+
+        function mapData([x, y]) {
             return {
-                    name: x,
-                    x: x,
-                    y: Math.abs(y),
-                    actualY: y,
-                    color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
-                    }
+                name: x,
+                x: x,
+                y: Math.abs(y),
+                actualY: y,
+                color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
+            }
         }
-    function splineData([x, y]) {
-        return {
-            name: x,
-            x: x,
-            y: Math.abs(y),
-            // actualY: y,
-            color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
-            tooltip:false,
-            // events: {mouseOver: function () {
-            //         return false;
-            //     }}
-        }
-    }
-    var groupings = ['sum', 'average', 'sum'];
-    Highcharts.dateFormats =
-    {
-        q: function(timestamp)
-        {
-            var date = new Date(timestamp),
-            quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
-            console.log(quarter);
-            return quarter;
-        }
-    };
 
-    var startDate = new Date(data[data.length - 1][0]), // Get year of last data point
-        minRate = 1,
-        maxRate = 0,
-        startPeriod,
-        date,
-        rate,
-        index;
-
-    startDate.setMonth(startDate.getMonth() - 3); // a quarter of a year before last data point
-    startPeriod = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
-
-    for (index = data.length - 1; index >= 0; index = index - 1) {
-        date = data[index][0]; // data[i][0] is date
-        rate = data[index][1]; // data[i][1] is exchange rate
-        if (date < startPeriod) {
-            break; // stop measuring highs and lows
+        function splineData([x, y]) {
+            return {
+                name: x,
+                x: x,
+                y: Math.abs(y),
+                // actualY: y,
+                color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
+                tooltip:false,
+                // events: {mouseOver: function () {
+                //         return false;
+                //     }}
+            }
         }
-        if (rate > maxRate) {
-            maxRate = rate;
-        }
-        if (rate < minRate) {
-            minRate = rate;
-        }
-    }
-
-    var myChart = Highcharts.stockChart
-    ('highbar',
-    {
-
-        // lang: {
-        //     numericSymbols: [' thousands', ' millions', 'billions']
-        // },
-        legend:
-            {
-            enabled: true,
-            },
+        var groupings = ['sum', 'average', 'sum'];
+        Highcharts.dateFormats = {
+            q: function(timestamp) {
+                var date = new Date(timestamp),
+                quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
+                console.log(quarter);
+                return quarter;
+            }
+            };
+            var myChart = Highcharts.stockChart('highbar', {
+            // lang: {
+            //     numericSymbols: [' thousands', ' millions', 'billions']
+            // },
+legend:{
+    enabled: true,
+    
+},
         responsive: {
             rules: [{
                 condition: {
@@ -253,6 +248,7 @@
                 chartOptions: {
                     chart: {
                         // height: 500,
+                        
                     },
                     subtitle: {
                         text: null
@@ -263,557 +259,318 @@
                 }
             }]
         },
-        chart:
-
-        {
-            borderWidth: 2,
-            marginRight:100,
-            // marginLeft: 0,
-            renderTo: 'highbar',
-            events: {
-                render() {
-                        var ticks = this.xAxis[0].ticks,
-                            ticksPositions = this.xAxis[0].tickPositions,
-                            tick0x,
-                        tick1x,
-                        getPosition = function (tick) {
-                            var axis = tick.axis;
-                            return Highcharts.Tick.prototype.getPosition.call(tick, axis.horiz, tick.pos, axis.tickmarkOffset);
-                        };
-                    tick0x = getPosition(ticks[ticksPositions[0]]).x;
-                    tick1x = getPosition(ticks[ticksPositions[1]]).x;
-                    this.xAxis[0].labelGroup.translate((tick1x - tick0x)/2)
+                chart: {
+                    borderWidth: 2,
+                    marginRight:100,
+                    // marginLeft: 0,
+                    renderTo: 'highbar',
+                    events: {
+                        render() {
+                                var ticks = this.xAxis[0].ticks,
+                                    ticksPositions = this.xAxis[0].tickPositions,
+                                    tick0x,
+                                tick1x,
+                                getPosition = function (tick) {
+                                    var axis = tick.axis;
+                                    return Highcharts.Tick.prototype.getPosition.call(tick, axis.horiz, tick.pos, axis.tickmarkOffset);
+                                };
+                                
+                            tick0x = getPosition(ticks[ticksPositions[0]]).x;
+                            tick1x = getPosition(ticks[ticksPositions[1]]).x;
+                            
+                            this.xAxis[0].labelGroup.translate((tick1x - tick0x)/2)
+                                }
                         }
-                }
-        },
-        title: {
-            text: '{{fin_metric_name}}'
-        },
-        // alignTicks: false,
-        tooltip:
-        {
-            backgroundColor: '#1ebd1e',//'red'
-            style:
-            {
-                // backgroundColor: '#1ebd1e',//'red'
-                color: '#FFFFFF',
-                fontSize: '14px',
-                fontWeight: 'bold',
-            },
-
-            enabled: true,
-            shared: true,
-            // crosshairs: [true, true],
-            valuePrefix:"$",
-            //"{{company_currency}}"
-            // format: '{value:%Y}',
-            // https://stackoverflow.com/questions/45033593/javascript-highcharts-math-operations-in-tooltip
-            // formatter: function () {
-            //     if (this.series.name == "Male") {
-            //         return "<b>" + this.series.name + "</b><br>" + this.x + " cm, " + this.y + " kg";
-            //     } else return " ";
-            // }
-
-            pointFormatter:function()
-            {
-                if(this.y >= 1000000000){
-                    billion = this.y / 1000000000;
-                    billion_rounded = Math.round((billion) * 100) / 100;
-                    return ('<b>$' + billion_rounded) + 'B</b>';
-                    }
-                else if(this.y >= 1000000) {
-                    million = this.y / 1000000
-                    million_rounded = Math.round((million) * 100) / 100;
-                    return ('<b>$' +million_rounded) + 'M</b>';
-                    }
-                else if(this.y >= 1000) {
-                    thousand = this.y / 1000000
-                    thousand_rounded = Math.round((thousand) * 100) / 100;
-                    return ('<b>$' + this.y / 1000) + 'K</b>';
-                    }
-                else {
-                    return '<b>$' + this.y + '</b>';
-                    }
                 },
-            },
-        rangeSelector:
-        {
-            selected:2,
-            inputPosition: {                    // align: 'left',
-                x: 0,                    y: 0                },
-            buttonPosition: {                    // align: 'right',
-                x: 0,                    y: 0                }
-            ,
-            buttons: [
-                        {
-                            type: 'year',        count: 2,        text: '2Y',
-                            dataGrouping:{enable:true
-                            }
-                        }, {
-                            type: 'year',        count: 5,        text: '5Y',
-                            dataGrouping:{enable:true}    },
-                            {
-                                type: 'year',        count: 10,        text: '10y',
-                                dataGrouping:{enable:false}  },
-                            {type: 'all',        text: 'All',
-                            dataGrouping:{
-                            //     units: [['year', [3]]],
-                                enable:false,
-                            //     groupAll:true,
-                                approximation: groupings[4],
-                            //     approximation: 'sum',
-                            //     forced: true,
+                    title: {
+                        text: '{{fin_metric_name}}'
+                    },
+                            tooltip: {
+                                            enabled: true,
+                                            shared: true,
+                                            // crosshairs: [true, true],
+                                            valuePrefix:"$", 
+                                            //"{{company_currency}}"
+                                            // format: '{value:%Y}',
+                                            // https://stackoverflow.com/questions/45033593/javascript-highcharts-math-operations-in-tooltip
+
+                                            // formatter: function () {
+                                            //     if (this.series.name == "Male") {
+                                            //         return "<b>" + this.series.name + "</b><br>" + this.x + " cm, " + this.y + " kg";
+                                            //     } else return " ";
+                                            // }
+                                        pointFormatter:function()
+                                            {
+                                            // if (this.series.name == "Quarterly Data") {
+
+                                            // var tooltip_value = Math.round((this + Number.EPSILON) * 100) / 100;
+                                            if(this.y >= 1000000000){
+                                                billion = this.y / 1000000000;
+                                                billion_rounded = Math.round((billion) * 100) / 100;
+                                                return ('<b>$' + billion_rounded) + 'B</b>';
+                                                }
+                                            else if(this.y >= 1000000) {
+                                                million = this.y / 1000000
+                                                million_rounded = Math.round((million) * 100) / 100;
+                                                return ('<b>$' +million_rounded) + 'M</b>';
+                                                }
+                                            else if(this.y >= 1000) {
+                                                thousand = this.y / 1000000
+                                                thousand_rounded = Math.round((thousand) * 100) / 100;
+                                                return ('<b>$' + this.y / 1000) + 'K</b>';
+                                                }
+                                            else {
+                                                return '<b>$' + this.y + '</b>';
+                                                }
+                                            },
+                                        // }
+                                        },
+                            rangeSelector: {
+                                selected:2,
+                                inputPosition: {                    // align: 'left',
+                                    x: 0,                    y: 0                },
+                                buttonPosition: {                    // align: 'right',
+                                    x: 0,                    y: 0                }
+                                ,
+                                buttons: [
+                                            {
+                                                type: 'year',        count: 3,        text: '3Y', 
+                                                dataGrouping:{enable:true
+                                                }    
+                                            }, {
+                                                type: 'year',        count: 5,        text: '5Y', 
+                                                dataGrouping:{enable:true}    },
+                                                {
+                                                    type: 'year',        count: 10,        text: '10y',
+                                                    dataGrouping:{enable:false}  },
+                                                {type: 'all',        text: 'All',
+                                                dataGrouping:{
+                                                //     units: [['year', [3]]],
+                                                    enable:false,
+                                                //     groupAll:true,
+                                                    approximation: groupings[4],
+                                                //     approximation: 'sum',
+                                                //     forced: true,
+                                                },
+                                            }
+                                        ]
                             },
-                        }
-                    ]
-        },
-        xAxis:
-        [
 
-            {
+                            xAxis:
+                            
+                            {
+                                
+                                labels: {
+                                    style: {
+                                        color: '#black',//'red'
+                                        fontSize: '14px'
+                                    }
+                                },
+                                crosshair:{
+                                    
+                                    width: 2,
+                                    color: '#1C9179',
+                                    snap: true,
+                                    className: "x_crosshair",
+                                    zIndex: 100,
+                                        },
 
-                labels:
-                {
-                    style:
-                    {
-                        color: '#black',//'red'
-                        fontSize: '14px'
-                    }
-                },
-                crosshair:
-                {
-                    width: 2,
-                    color: '#1C9179',
-                    snap: false,
-                    className: "x_crosshair",
-                    zIndex: 100,
-                },
-                // units: [['year',null]],
-                // zoomEnabled: false,
-                // tickmarkPlacement:'on',
-                type: 'datetime',
-                dateTimeLabelFormats:
-                    {
-                        month: '%Y',//'Q%q - %y',
-                        year:'%Y',
-                    },
-                // opposite: true,
-                // tickInterval: 8,
-                // tickAmount: 2,
-                gridLineWidth: 1,
-                // minorTickInterval: 1,
-                gridLineColor:'#E2E3E3', //'#000000',
-                alternateGridColor: '#FDFFD5', // '#FEF8E3'
-                 tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                // format: '{value:%Y}',
-                // format: '{value:Q%q\'%y}'
-                minPadding:0,
-            },
-        {
-                    labels: {
-            step: 1
-        },
-            // min: -1.5,
-                labels:
-                {
-                    style:
-                    {
-                        color: 'black',//'red'
-                        fontSize: '14px',
-                        fontWeight: 'bold',
-                    }
-                },
-                crosshair:
-                {
-                    width: 2,
-                    color: '#1C9179',
-                    snap: false,
-                    className: "x_crosshair",
-                    zIndex: 100,
-                },
-                // units: [['year',null]],
-                // zoomEnabled: false,
-                // tickmarkPlacement:'on',
-                type: 'datetime',
-                dateTimeLabelFormats:
-                    {
-                        // month: '%Y',//'Q%q - %y',
-                        // year:'%Y',
-                    },
-                // opposite: true,
-                // gridLineWidth: 1,
-                // gridLineColor:'#E2E3E3', //'#000000',
-                // alternateGridColor: '#FDFFD5', // '#FEF8E3'
-                //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                format: '{value:%Y}',
-                // format: '{value:Q%q\'%y}'
-                minPadding:0,
-            // title:
-            // {
-            //     text: 'USD',
-            //     // opposite: true,
-            // },
-            // min: 5000000000,
-            // offset: 100,
-            // opposite: true,
-        },
+                                // units: [['year',null]],
 
-        ],
-        plotOptions:
-        {
-        line: {
+                                // zoomEnabled: false,
+                                // tickmarkPlacement:'on',
+                                type: 'datetime',
+                                dateTimeLabelFormats:
+                                
+                                    { month: '%Y',//'Q%q - %y',
+                                        year:'%Y',},
+                                // opposite: true,
+                                gridLineWidth: 1,
+                                gridLineColor:'#E2E3E3', //'#000000',
+                                alternateGridColor: '#FDFFD5', // '#FEF8E3'
+                                //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
+                                // format: '{value:%Y}'
+                                // format: '{value:Q%q\'%y}'
+                                minPadding:0,
+                                    },
 
-            // dataLabels: {
-                // enabled: true,
-                // zIndex: 101,
-                // style:{
-                //     fontSize: '14px',
-                // },
+                                plotOptions: {
 
-                // formatter:function()
-                //     {
-                //     if(this.y >= 1000000000){
-                //         return ('$' + Math.round(this.y / 1000000000)) + 'B';
-                //         }
-                //     else if(this.y >= 1000000) {
-                //         return ('$' + Math.round(this.y / 1000000)) + 'M';
-                //         }
-                //     else if(this.y >= 1000) {
-                //         return ('$' + Math.round(this.y / 1000)) + 'K';
-                //         }
-                //     else {
-                //         return '$' + this.y;
-                //         }
-                //     }
-            // },
+                                pointPlacement: 'on',
+                                column: {
+                                    groupPadding: 0,
+                                    // pointPadding: 0,
+                                    // pointWidth: 0,
+                                },
+                                series: {
+                                    name: 'Quarterly Data',
+                                    pointInterval: 1,
+                                    // pointWidth: 1,
+                                    pointPadding: 0,
+                                    // groupPadding: 100,
+                                    dataGrouping: {
+                                        enabled: false,
+                                        },
+                                    // borderWidth: 1.5,
+                                    // borderColor: '#153350',
+                                    type: 'column',
+                                    xAxis: 1,
+                                    tooltip:{
+                                        
+                                    },
+                                    // pointWidth: 20,
 
-        },
-            pointPlacement: 'on',
-            column:
-            {
-                groupPadding: 0,
-                // pointPadding: 0.1,
-                // pointWidth: 0.1,
-            },
-            series:
-            {
-                name: 'Quarterly Data',
-                // pointInterval: 0.1,
-                // pointWidth: 0.1,
-                // pointPadding: 0,
-                groupPadding: 0,
-                dataGrouping: {
-                    enabled: false,
-                    },
-                // borderWidth: 1.5,
-                // borderColor: '#153350',
-                type: 'column',
-                xAxis: 1,
-                tooltip:{
-                    shared: true,
-                },
-                // pointWidth: 20,
-            },
-            series:
-            {
+                                    },
+                                series: {
+                                    // // pointPadding: 10,
+                                    // // groupPadding: 100,
+                                    
+                                    xAxis: 0,
+                                                name: "Line Trend",
+                                    dataGrouping: {
+                                        enabled: false,
+                                        },
+                                    // // borderWidth: 1.5,
+                                    // // borderColor: '#153350',
+                                    // type: 'spline',
 
-            type: 'line',
-            marker: {
-                radius: 4,
-                fillColor: '#1ebd1e',
-                enabled: true,
-                zIndex:100,
-            },
+                                    // // pointWidth: 20,
+                                    },
 
-                // // pointPadding: 10,
-                // // groupPadding: 100,
-                xAxis: 0,
-                            name: "Line Trend",
-                dataGrouping: {
-                    enabled: false,
-                    },
-                // // borderWidth: 1.5,
-                // // borderColor: '#153350',
-                // type: 'spline',
-                // // pointWidth: 20,
-            states:
-            {
-            //     hover: {
-            //         color: '#a4edba',
-            //         borderColor: 'gray'
-            //     },
-                inactive:
-                {
-                    opacity: 1
-                },
-            },
+                                    },
+                                // plotOptions: {
+                                //     rangeSelector: {
+                                //     series: {
+                                //         pointPadding: 10,
+                                //         groupPadding: 100,
+                                //         type: 'all',
+                                //         dataGrouping:{
+                                //             units: [['year',null]],//[['year', [1]]],//[['month', [6]]],
+                                //             enable:true,
+                                //             groupAll:true,
+                                //             // approximation: groupings[4],
+                                //             approximation: 'sum',
+                                //             forced: true,
+                                //         },
 
-            },
-        },
-            // plotOptions: {
-            //     rangeSelector: {
-            //     series: {
-            //         pointPadding: 10,
-            //         groupPadding: 100,
-            //         type: 'all',
-            //         dataGrouping:{
-            //             units: [['year',null]],//[['year', [1]]],//[['month', [6]]],
-            //             enable:true,
-            //             groupAll:true,
-            //             // approximation: groupings[4],
-            //             approximation: 'sum',
-            //             forced: true,
-            //         },
-            //                 pointWidth: 20,
-            //                 },
-            //             },
-            //     },
-        yAxis:
-        [
-        {
+                                //                 pointWidth: 20,
+                                //                 },
+                                                
+                                //             },
 
-            height: '100%',
-            yAxis: 1,
-            visible: false,
-            // max: 20000000000,
-            maxPadding: 0.5,
-            gridLineWidth: 1,
-            gridLineColor:'#E2E3E3', //'#000000',
+                                //     },
 
-            crosshair:{
-                width: 2,
-                color: '#1C9179',
-                snap: false,
-                className: "y_crosshair",
-                zIndex: 100,
-                },
-            opposite: true,
-            // type: 'logarithmic',
-            // minPadding:100,
-                // lineColor:'#999',
-                // lineWidth:1,
-                // tickColor:'#666',
-                // tickWidth:1,
-                // tickLength:3,
-                // gridLineColor:'#ddd',
-                // title:{
-                //     text:'Y Axis Title',
-                //     rotation:0,
-                //     margin:50,
-                // },
-                //     tooltip: {
-                //         enabled: true,
-                // },
-            labels:
-            {
-                style:
-                {
-                    color: 'black',//'red'
-                    fontSize: '14px',
-                    fontWeight: 'bold',
-                },
-                // x: 50,
 
-                // padding: 30,
-                // groupPadding: 30,
-                // pointPadding: 30,
-                // pointWidth: 30,
-                // AlignValue:'right',
-                align: 'right',
-                // x: 0,
-                // y: 0,
-                // formatter:function(){
-                //     return ('$' + this.value / 1000000000) + 'B';
-                // }
+                    
+                    
+                    
+                                yAxis:{
+                                gridLineWidth: 1,
+                                gridLineColor:'#E2E3E3', //'#000000',
+                        crosshair:{
+                            width: 2,
+                            color: '#1C9179',
+                            snap: true,
+                            className: "y_crosshair",
+                            zIndex: 100,
+                                },
 
-                // formatter:function()
-                //     {
-                //     if(this.value >= 1000000000){
-                //         return ('$' + this.value / 1000000000) + 'B';
-                //         }
-                //     else if(this.value >= 1000000) {
-                //         return ('$' + this.value / 1000000) + 'M';
-                //         }
-                //     else if(this.value >= 1000) {
-                //         return ('$' + this.value / 1000) + 'K';
-                //         }
-                //     else {
-                //         return '$' + this.value;
-                //         }
-                //     }
-            },
-        },
-        {
-height:'100%',
-            plotLines: [{
-                value: minRate,
-                color: 'green',
-                dashStyle: 'shortdash',
-                width: 2,
-                label: {
-                    text: 'Last quarter minimum'
-                }
-            }, {
-                value: maxRate,
-                color: 'red',
-                dashStyle: 'shortdash',
-                width: 2,
-                label: {
-                    text: 'Last quarter maximum'
-                }
-            }],
-            yAxis: 0,
-            // min: -1.5,
-            visible: false,
-
-            crosshair:{
-                width: 2,
-                color: '#1C9179',
-                snap: false,
-                className: "y_crosshair",
-                zIndex: 100,
-                },
-            opposite: false,
-            // gridLineWidth: 1,
-            // gridLineColor:'#E2E3E3', //'#000000',
                         // type: 'logarithmic',
-            minPadding:100,
-                // lineColor:'#999',
-                // lineWidth:1,
-                // tickColor:'#666',
-                // tickWidth:1,
-                // tickLength:3,
-                // gridLineColor:'#ddd',
-                // title:{
-                //     text:'Y Axis Title',
-                //     rotation:0,
-                //     margin:50,
-                // },
-                //     tooltip: {
-                //         enabled: true,
-                // },
-            labels:
-            {
-                // formatter: function () {
-                //     return (this.value > 0 ? ' + ' : '') + this.value + '%';
-                // },
-                style:
-                {
-                    color: 'black',//'red'
-                    fontSize: '14px'
-                },
-                x: 50,
-                opposite: false,
-                // padding: 30,
-                // groupPadding: 30,
-                // pointPadding: 30,
-                // pointWidth: 30,
-                // AlignValue:'right',
-                align: 'right',
-                // x: 0,
-                // y: 0,
+                    minPadding:100,
+                            // lineColor:'#999',
+                            // lineWidth:1,
+                            // tickColor:'#666',
+                            // tickWidth:1,
+                            // tickLength:3,
+                            // gridLineColor:'#ddd',
+                            // title:{
+                            //     text:'Y Axis Title',
+                            //     rotation:0,
+                            //     margin:50,
+                            // },
+                            //     tooltip: {
+                            //         enabled: true,
+                            // },
+                    labels:{
 
-                // formatter:function()
-                //     {
-                //     if(this.value >= 1000000000){
-                //         return ('$' + this.value / 1000000000) + 'B';
-                //         }
-                //     else if(this.value >= 1000000) {
-                //         return ('$' + this.value / 1000000) + 'M';
-                //         }
-                //     else if(this.value >= 1000) {
-                //         return ('$' + this.value / 1000) + 'K';
-                //         }
-                //     else {
-                //         return '$' + this.value;
-                //         }
-                //     }
-            },
-            // opposite: true,
-            // min: 5000000000,
-            // max: 60000000000,
-            // offset: 100,
-        }
-        ],
-        series:
-        [
-            {
-                type: 'column',
-                name: '{{company_symbol}}dd Stock Volume',
-                pointInterval: 1,
-                pointIntervalUnit: 'year',
-                // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
-                tooltip:
-                {
-                    shared: false,
-                    xDateFormat:  'Q%q \'%Y',//'%b - %Y'
-                    // backgroundColor: '#1ebd1e',//'red'
-        positioner: function () {
-            return { x: 80, y: 50 };
+                                    style: {
+                                        color: '#black',//'red'
+                                        fontSize: '14px'
+                                    },
+                        x: 50,
+                        // padding: 30,
+                            // groupPadding: 30,
+                            // pointPadding: 30,
+                            // pointWidth: 30,
+                        // AlignValue:'right',
+                            align: 'right',
+                            // x: 0,
+                            // y: 0,
+                            // formatter:function(){
+                            //     return ('$' + this.value / 1000000000) + 'B';
+                            // }
+                            formatter:function()
+                                {
+                                if(this.value >= 1000000000){
+                                    return ('$' + this.value / 1000000000) + 'B';
+                                    }
+                                else if(this.value >= 1000000) {
+                                    return ('$' + this.value / 1000000) + 'M';
+                                    }
+                                else if(this.value >= 1000) {
+                                    return ('$' + this.value / 1000) + 'K';
+                                    }
+                                else {
+                                    return '$' + this.value;
+                                    }
+                                }
+                            }
         },
-        shadow: true,
-        borderWidth: 0,
-        backgroundColor: 'rgba(255,255,255,0.8)',
-                    // style:
-                    // {
-                    //     backgroundColor: '#1ebd1e',//'red'
-                    //     color: '#FFFFFF',
-                    //     fontSize: '14px',
-                    //     fontWeight: 'bold',
-                    // },
-                },
-                // xAxis: 1,
-                data: data.map(mapData),
-                zIndex: 98,
-            },
-            {
-                type: 'line',
-                yAxis: 1,
-                zIndex: 100,
-                // opposite: true,
-                // name: '',
-                tooltip:
-                {
-                    shared: true,
-                    xDateFormat:  '%Y',//'%b - %Y'
-                    backgroundColor: '#1ebd1e',//'red'
-                },
-                pointInterval: 12,
-                pointIntervalUnit: 'month',
-                color: '#1ebd1e',//'#343A40', // '#1C9179',
-                lineWidth: 3,
-                xDateFormat:  '%Y',
-                findNearestPointBy:'xy',
-                // xAxis: 0,
-                // opposite:true,
-                // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
-                // tooltip: {
-                //     // xDateFormat:  'Q%q \'%Y'//'%b - %Y'
-                // },
-                data: year_data.map(splineData),
-            }
-        ],
-    }
-    );
-    }
-    );
-</script>
-<script>
-document.getElementById('button').addEventListener
-('click', () =>
-{
-    myChart.xAxis[0].setExtremes
-    (
-        Date.UTC(2014, 0, 1),
-        Date.UTC(2014, 11, 31)
-    );
-}
-);
 
-</script>
+                    series: [
+                        {
+                        type: 'column',
+                        name: '{{company_symbol}}dd Stock Volume',
+                        pointInterval: 1,
+                        pointIntervalUnit: 'year',
+                        // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
+                        tooltip: {
+                            xDateFormat:  'Q%q \'%Y'//'%b - %Y'
+                        },
+                        // xAxis: 1,
+                        data: data.map(mapData),
+                                        },
+                    {
+                        // type: 'spline',
+                        // name: '',
+                        pointInterval: 3,
+                        pointIntervalUnit: 'month',
+                        color: '#1C9179',
+                        lineWidth: 3,
+                        xDateFormat:  '%Y',
+                        findNearestPointBy:'xy',
+                        // xAxis: 0,
 
 
+                        // opposite:true,
+                        // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
+
+                        // tooltip: {
+                            
+                        //     // xDateFormat:  'Q%q \'%Y'//'%b - %Y'
+
+                        // },
+                        data: year_data.map(splineData),
+                        
+
+                    }
+                
+                ],
+                });
+            });
+    </script>
 </head>
+
 <body class="fixed_body">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="color: #212529;">
         <div class="container">
@@ -849,23 +606,29 @@ document.getElementById('button').addEventListener
         </div>
         </div>
     </nav>
+
+    
         <!-- <div class="tabbed">
           <input type="radio" id="tab21" name="css-tabs2" checked>
           <input type="radio" id="tab22" name="css-tabs2">
           <input type="radio" id="tab23" name="css-tabs2">
+    
           <ul class="tabs">
             <li class="tab"><label for="tab21">Gangsta lipsum</label></li>
             <li class="tab"><label for="tab22">Zombie lipsum</label></li>
             <li class="tab"><label for="tab23">New age bullshit</label></li>
           </ul>
+    
           <div class="tab-content">
             <h4>Gangsta lipsum</h4>
             <p>De.</p>
           </div>
+    
           <div class="tab-content">
             <h4>Zombie lipsum</h4>
             <p>Zouris. </p>
           </div>
+    
           <div class="tab-content">
             <h4>New age bullshit</h4>
             <p>Ourtion.</p>
@@ -873,20 +636,24 @@ document.getElementById('button').addEventListener
             <p>Generated by the <a href="http://sebpearce.com/bullshit/">New Age Bullshit Generator</a></p>
           </div>
         </div> -->
-      </div>
+    
+      </div>    
     <div class="table_container">
         <!-- {% for table in tables %} -->
                     <!-- {{titles[loop.index]}} -->
                     <!-- {{ table|safe }}
         {% endfor %} -->
+        
         </div>
         <div id="chart"></div>
         <script>
         function checkForm() {
             var rows = document.getElementsByClassName("item-row");
             var arr = new Array();
+        
             for (i = 0; i < rows.length; i++) {
                 var cols = rows[i].getElementsByTagName("td");
+        
                 for (j = 0; j < cols.length; j++) {
                     arr.push(cols[j].textContent);
                 }
@@ -898,15 +665,19 @@ document.getElementById('button').addEventListener
             // $('table.df_tableBoot').DataTable();
             $('DISABLE#df_myTable').DataTable(
               {
+        
                  // "scrollX": true,
+        
                 columnDefs: [
                   {
                 // "width": "100%" , "targets": [0,1,2,3,4,5,6],
+        
                     "width": "1000","targets": "_all",
                     render: function ( data, type, full, meta ) {
                         if(type === 'display' && !isNaN(data*1) && data > 1000000000){
                             return ('$'+(data/1000000000).toFixed(1) + 'B').toLocaleString();
                         }
+        
                         else if(type === 'display' && !isNaN(data*1) && (data > 1000000 && data < 999999999)){
                             return ('$'+(data/1000000).toFixed(1) + 'M').toLocaleString();
                         }
@@ -923,15 +694,19 @@ document.getElementById('button').addEventListener
                 }
                 ,
                 // { "width": "1000" , targets: [0,1,2,3,4,5,6]},
+        
+        
               ]
                 ,
                 dom: 'Bfrtip',
+        
                 paginate: false,
                 // fixedHeader: false,
                 // "sScrollX": "100%",
                 // "sScrollXInner": "110%",
                 // "bScrollCollapse": true,
                 colReorder: true,
+        
         // scrollY: 300,
         buttons: [
           // 'csv'
@@ -940,6 +715,7 @@ document.getElementById('button').addEventListener
         ]
                       // "order": [[ 3, "desc" ]]
                   }
+        
             );
         } );
         </script>
@@ -947,28 +723,32 @@ document.getElementById('button').addEventListener
         <div class="row">
             <div class="col-md-8 col-lg-8 col-xl-8">
                 <div class="text-dark h1_info">
+
                     <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right"><strong>{{company_long_name}} ({{company_symbol}}) {{fin_metric_name}} | {{earliest_year}} - {{latest_year}}</strong><br></h1>
                     <h2 class="text-primary mb-0">{{latest_year}} {{fin_metric_name}}: {{present_num}}<br></h2>
                 </div>
                 <div class="pad-10-top pad-10-bottom pad-10-left pad-10-right">
                     <div>
                         <div id="highbar" style="height: 500px; width:100%;"> <!-- <div id="highbar" style="height: 400px; width:100%;"> -->
-
                         </div>
-                        <button id="button" class="autocompare">Show 2014</button>
-
                         <!-- <h2
                             class="text-primary historical">{{company_symbol}} Historical {{fin_metric_name}} Chart (by Fiscal Year)
                         </h2> -->
+
                             <br />
+                           
                     </div>
+
                     <div id="content">
                         <div class="row flex-grow-1">
                             <div class="col-md-4 col-xl-6" style="padding: 10px;">
                             </div>
                         </div>
+
+
                         <div class="row flex-grow-1 justify-content-center">
                             <div class="col">
+
                     <div class="card shadow mb-4">
                         <div class="col mr-2">
                             <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span><strong>
@@ -980,8 +760,9 @@ document.getElementById('button').addEventListener
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                                
                                 <div class="card shadow mb-4">
+                                    
                                     <div class="card-header d-flex justify-content-between align-items-center">
                                         <h6 class="text-primary font-weight-bold m-0 metric_table">{{company_long_name}} ({{company_symbol}}) Historical {{fin_metric_name}} Table</h6>
                                         <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
@@ -997,8 +778,10 @@ document.getElementById('button').addEventListener
                                         {% endfor %}
                                     </div>
                                 </div>
+
                             </div>
-                        </div>
+                        </div>                        
+
                         <div class="container-fluid">
                             <div class="card shadow border-left-success py-2">
                                 <div class="card-body">
@@ -1029,6 +812,7 @@ document.getElementById('button').addEventListener
                         <div class="col">
                             <div></div>
                         </div>
+
                         </div>
                     </div>                    <div>
                         <h3>{{fin_metric_name}} Summary</h3>
@@ -1040,11 +824,13 @@ document.getElementById('button').addEventListener
                               <input type="radio" id="tab1" name="css-tabs" checked>
                               <input type="radio" id="tab2" name="css-tabs">
                               <input type="radio" id="tab3" name="css-tabs">
+                      
                               <ul class="tabs">
                                 <li class="tab"><label for="tab1">Financial Statements #h1</label></li>
                                 <li class="tab"><label for="tab2">Financial Ratios</label></li>
                                 <li class="tab"><label for="tab3">Financial Growth</label></li>
                               </ul>
+                      
                               <div class="tab-content">
                                 <h4>Financial Statements #h2</h4>
                                 <p>Da bomb ipsizzl</p>
@@ -1052,42 +838,58 @@ document.getElementById('button').addEventListener
                                                 <input type="radio" id="tab1" name="css-tabs" checked>
                                                 <input type="radio" id="tab2" name="css-tabs">
                                                 <input type="radio" id="tab3" name="css-tabs">
+                      
                                                 <ul class="tabs">
                                                   <li class="tab"><label for="tab1">Gangsta lipsum</label></li>
                                                   <li class="tab"><label for="tab2">Zombie lipsum</label></li>
                                                   <li class="tab"><label for="tab3">New age bullshit</label></li>
                                                 </ul>
+                      
                                                 <div class="tab-content">
                                                   <h4>Gangsta lipsum</h4>
                                                   <p>Da bomb ipsizzl</p>
                                                 </div>
+                      
                                                 <div class="tab-content">
                                                   <h4>Zombie lipsum</h4>
                                                   <p>Zombie </p>
                                                 </div>
+                      
                                                 <div class="tab-content">
                                                   <h4>New age bullshit</h4>
+                      
                                                 </div>
                                               </div>
                               </div>
+                      
                               <div class="tab-content">
                                 <h4>Zombie lipsum</h4>
                                 <p>Zombie </p>
                               </div>
+                      
                               <div class="tab-content">
                                 <h4>New age bullshit</h4>
+                      
                               </div>
                             </div>
+                      
+                      
                           </div>
+                      
+                      
+                      
+                      
                           <div class="tabbed">
                             <input type="radio" id="tab1" name="css-tabs" checked>
                             <input type="radio" id="tab2" name="css-tabs">
                             <input type="radio" id="tab3" name="css-tabs">
+                      
                             <ul class="tabs">
                               <li class="tab"><label for="tab1">Financial Statements #h1</label></li>
                               <li class="tab"><label for="tab2">Zombie lipsum</label></li>
                               <li class="tab"><label for="tab3">New age bullshit</label></li>
                             </ul>
+                      
                             <div class="tab-content">
                               <h4>Financial Statements #h2</h4>
                               <p>Da bomb ipsizzl</p>
@@ -1095,32 +897,40 @@ document.getElementById('button').addEventListener
                                               <input type="radio" id="tab1" name="css-tabs" checked>
                                               <input type="radio" id="tab2" name="css-tabs">
                                               <input type="radio" id="tab3" name="css-tabs">
+                      
                                               <ul class="tabs">
                                                 <li class="tab"><label for="tab1">Gangsta lipsum</label></li>
                                                 <li class="tab"><label for="tab2">Zombie lipsum</label></li>
                                                 <li class="tab"><label for="tab3">New age bullshit</label></li>
                                               </ul>
+                      
                                               <div class="tab-content">
                                                 <h4>Gangsta lipsum</h4>
                                                 <p>Da bomb ipsizzl</p>
                                               </div>
+                      
                                               <div class="tab-content">
                                                 <h4>Zombie lipsum</h4>
                                                 <p>Zombie </p>
                                               </div>
+                      
                                               <div class="tab-content">
                                                 <h4>New age bullshit</h4>
+                      
                                               </div>
                                             </div>
                             </div>
+                      
                             <div class="tab-content">
                               <h4>Zombie lipsum</h4>
                               <p>Zombie </p>
                             </div>
+                      
                             <div class="tab-content">
                               <h4>New age bullshit</h4>
+                      
                             </div>
-                          </div>
+                          </div>                        
     <div id="accordion" class="accordion">
         <div class="card mb-0">
             <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
@@ -1128,7 +938,7 @@ document.getElementById('button').addEventListener
             </div>
             <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
                 <p> According to Investopedia...</p>
-                <p> See:
+                <p> See: 
                     Macrotrends and Gurufocus definitions https://www.gurufocus.com/term/mktcap/AAPL/Market-Cap/Apple</p>
             </div>
             <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
@@ -1138,6 +948,8 @@ document.getElementById('button').addEventListener
                 <!-- <p>Website: <a href="https://apple.com">Apple, Inc.</a> -->
                 <p>{{company_description}}</p>
                 <p>{{company_long_name}} {{country_ipo_date}} on the {{company_exchange}} exchange and started trading with the ticker "{{company_symbol}}". </p>
+
+
                 </p>
             </div>
             <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
@@ -1149,7 +961,6 @@ document.getElementById('button').addEventListener
         </div>
     </div>
 </div></div>
-
             </div>
             <div class="col">
                 <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;">
@@ -1157,7 +968,7 @@ document.getElementById('button').addEventListener
                         <h2 class="text-primary mb-0 historical">
                             Summary Statistics (Annual)
                             <br/>
-                            {{fin_metric_name}}
+                            {{fin_metric_name}} 
                             <br/>
                             ({{earliest_year}} - {{latest_year}})</h2>
                             <br/>
@@ -1224,6 +1035,7 @@ document.getElementById('button').addEventListener
             </div>
             <div class="row flex-grow-1 justify-content-center">
                 <div class="col">
+
                     <div class="card shadow border-left-primary py-2" style="margin: 0px;padding: 10px;">
                         <div class="card-body" style="padding: 10px;">
                             <p>Popular Stats &amp; Analyses:<br>-&nbsp;<a href="#collapse-1"><span style="text-decoration: underline;">Company Info (CEO, IPO Date, HQ.</span></a>..)<br>-&nbsp;<a href="#collapse-1">[Past] "If I bought AAPL at ______."</a><br>-&nbsp;
@@ -1476,6 +1288,7 @@ document.getElementById('button').addEventListener
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5"><img class="rounded-circle img-fluid" src="../static/img/03.jpg"></div>
+                    
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -1501,12 +1314,9 @@ document.getElementById('button').addEventListener
                 <div class="card-body">
                 </div>
             </div>
+
         </div>
     </div>
-
-
-
-
-<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 </body>
+
 </html>

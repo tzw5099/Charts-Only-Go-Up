@@ -208,36 +208,9 @@
             return quarter;
         }
     };
-
-    var startDate = new Date(data[data.length - 1][0]), // Get year of last data point
-        minRate = 1,
-        maxRate = 0,
-        startPeriod,
-        date,
-        rate,
-        index;
-
-    startDate.setMonth(startDate.getMonth() - 3); // a quarter of a year before last data point
-    startPeriod = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
-
-    for (index = data.length - 1; index >= 0; index = index - 1) {
-        date = data[index][0]; // data[i][0] is date
-        rate = data[index][1]; // data[i][1] is exchange rate
-        if (date < startPeriod) {
-            break; // stop measuring highs and lows
-        }
-        if (rate > maxRate) {
-            maxRate = rate;
-        }
-        if (rate < minRate) {
-            minRate = rate;
-        }
-    }
-
     var myChart = Highcharts.stockChart
     ('highbar',
     {
-
         // lang: {
         //     numericSymbols: [' thousands', ' millions', 'billions']
         // },
@@ -314,27 +287,28 @@
             //     } else return " ";
             // }
 
-            pointFormatter:function()
-            {
-                if(this.y >= 1000000000){
-                    billion = this.y / 1000000000;
-                    billion_rounded = Math.round((billion) * 100) / 100;
-                    return ('<b>$' + billion_rounded) + 'B</b>';
-                    }
-                else if(this.y >= 1000000) {
-                    million = this.y / 1000000
-                    million_rounded = Math.round((million) * 100) / 100;
-                    return ('<b>$' +million_rounded) + 'M</b>';
-                    }
-                else if(this.y >= 1000) {
-                    thousand = this.y / 1000000
-                    thousand_rounded = Math.round((thousand) * 100) / 100;
-                    return ('<b>$' + this.y / 1000) + 'K</b>';
-                    }
-                else {
-                    return '<b>$' + this.y + '</b>';
-                    }
-                },
+            format: '{point.y} %',
+            // pointFormatter:function()
+            // {
+            //     if(this.y >= 1000000000){
+            //         billion = this.y / 1000000000;
+            //         billion_rounded = Math.round((billion) * 100) / 100;
+            //         return ('<b>$' + billion_rounded) + 'B</b>';
+            //         }
+            //     else if(this.y >= 1000000) {
+            //         million = this.y / 1000000
+            //         million_rounded = Math.round((million) * 100) / 100;
+            //         return ('<b>$' +million_rounded) + 'M</b>';
+            //         }
+            //     else if(this.y >= 1000) {
+            //         thousand = this.y / 1000000
+            //         thousand_rounded = Math.round((thousand) * 100) / 100;
+            //         return ('<b>$' + this.y / 1000) + 'K</b>';
+            //         }
+            //     else {
+            //         return '<b>$' + this.y + '</b>';
+            //         }
+            //     },
             },
         rangeSelector:
         {
@@ -394,8 +368,8 @@
                 type: 'datetime',
                 dateTimeLabelFormats:
                     {
-                        month: '%Y',//'Q%q - %y',
-                        year:'%Y',
+                        // month: '%Y',//'Q%q - %y',
+                        // year:'%Y',
                     },
                 // opposite: true,
                 // tickInterval: 8,
@@ -405,7 +379,7 @@
                 gridLineColor:'#E2E3E3', //'#000000',
                 alternateGridColor: '#FDFFD5', // '#FEF8E3'
                  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                // format: '{value:%Y}',
+                // format: '{value:%Y}'
                 // format: '{value:Q%q\'%y}'
                 minPadding:0,
             },
@@ -445,7 +419,7 @@
                 // gridLineColor:'#E2E3E3', //'#000000',
                 // alternateGridColor: '#FDFFD5', // '#FEF8E3'
                 //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                format: '{value:%Y}',
+                // format: '{value:%Y}'
                 // format: '{value:Q%q\'%y}'
                 minPadding:0,
             // title:
@@ -571,8 +545,6 @@
         yAxis:
         [
         {
-
-            height: '100%',
             yAxis: 1,
             visible: false,
             // max: 20000000000,
@@ -644,24 +616,7 @@
             },
         },
         {
-height:'100%',
-            plotLines: [{
-                value: minRate,
-                color: 'green',
-                dashStyle: 'shortdash',
-                width: 2,
-                label: {
-                    text: 'Last quarter minimum'
-                }
-            }, {
-                value: maxRate,
-                color: 'red',
-                dashStyle: 'shortdash',
-                width: 2,
-                label: {
-                    text: 'Last quarter maximum'
-                }
-            }],
+
             yAxis: 0,
             // min: -1.5,
             visible: false,
@@ -745,15 +700,9 @@ height:'100%',
                 // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
                 tooltip:
                 {
-                    shared: false,
+                    shared: true,
                     xDateFormat:  'Q%q \'%Y',//'%b - %Y'
-                    // backgroundColor: '#1ebd1e',//'red'
-        positioner: function () {
-            return { x: 80, y: 50 };
-        },
-        shadow: true,
-        borderWidth: 0,
-        backgroundColor: 'rgba(255,255,255,0.8)',
+                    backgroundColor: '#1ebd1e',//'red'
                     // style:
                     // {
                     //     backgroundColor: '#1ebd1e',//'red'
