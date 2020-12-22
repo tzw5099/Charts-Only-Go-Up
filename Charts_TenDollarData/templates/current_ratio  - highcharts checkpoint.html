@@ -9,6 +9,7 @@
 [[company_ipo_date]] -->
 <!-- {{df_json}} -->
 <!-- https://jsfiddle.net/cakenite/f6b94evj/18/ -->
+
 <!-- positioner: function() {
   return {
     x: this.chart.plotLeft,
@@ -63,8 +64,8 @@ shared: true, -->
     }
     div.card-body.hist_table {
     overflow:scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     }
     div.card-body.hist_table::-webkit-scrollbar {
     display: none;
@@ -87,12 +88,13 @@ shared: true, -->
         color: #B721FF;
         }
         .tabbed {
-        overflow-x: hidden;
+        overflow-x: hidden; /* so we could easily hide the radio inputs */
         margin: 32px 0;
         padding-bottom: 16px;
         border-bottom: 1px solid #ccc;
         }
         .tabbed [type="radio"] {
+        /* hiding the inputs */
         display: none;
         }
         .tabs {
@@ -124,6 +126,7 @@ shared: true, -->
         display: none;
         color: #777;
         }
+        /* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
         .tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
         .tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
         .tabbed [type="radio"]:nth-of-type(3):checked ~ .tabs .tab:nth-of-type(3) label,
@@ -152,9 +155,11 @@ shared: true, -->
         $thisLabel = $(this).parent('span');
         thisXPos = parseInt($thisLabel.css('left'));
         $nextLabel = $thisLabel.next();
+        // next position is either a label or the end of the axis
         nextXPos = $nextLabel.length ? parseInt($nextLabel.css('left')) : axes[0].left + axes[0].width;
         delta = (nextXPos - thisXPos) / 2.0;
         newXPos = thisXPos + delta;
+        // remove the last label if it won't fit
         if ($nextLabel.length || $(this).width() + newXPos < nextXPos) {
             $thisLabel.css('left', newXPos + 'px');
         } else {
@@ -167,6 +172,11 @@ shared: true, -->
     document.addEventListener
     ('DOMContentLoaded', function (data)
     {
+        //     var myChart = Highcharts.setOptions({
+        //     lang: {
+        //         numericSymbols: [' thousands', ' millions', 'billions']
+        //     }
+        // });
         var startDate  = new Date("April 01, 2012 00:00:00");
         var today = new Date();
         var count =  parseInt((today.getTime() - startDate)/(24*3600*1000)) -1;
@@ -187,7 +197,12 @@ shared: true, -->
             name: x,
             x: x,
             y: Math.abs(y),
+            // actualY: y,
             color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
+            // tooltip:{},
+            // events: {mouseOver: function () {
+            //         return false;
+            //     }}
         }
     }
     var groupings = ['sum', 'average', 'sum'];
@@ -201,6 +216,7 @@ shared: true, -->
             return quarter;
         }
     };
+
     var startDate = new Date(data[data.length - 1][0]), // Get year of last data point
         minRate = 1,
         maxRate = 0,
@@ -208,8 +224,10 @@ shared: true, -->
         date,
         rate,
         index;
+
     startDate.setMonth(startDate.getMonth() - 3); // a quarter of a year before last data point
     startPeriod = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+
     for (index = data.length - 1; index >= 0; index = index - 1) {
         date = data[index][0]; // data[i][0] is date
         rate = data[index][1]; // data[i][1] is exchange rate
@@ -222,10 +240,15 @@ shared: true, -->
         if (rate < minRate) {
             minRate = rate;
         }
-    };
+    }
+
     var myChart = Highcharts.stockChart
     ('highbar',
     {
+
+        // lang: {
+        //     numericSymbols: [' thousands', ' millions', 'billions']
+        // },
         legend:
             {
             enabled: true,
@@ -237,6 +260,7 @@ shared: true, -->
                 },
                 chartOptions: {
                     chart: {
+                        // height: 500,
                     },
                     subtitle: {
                         text: null
@@ -248,9 +272,11 @@ shared: true, -->
             }]
         },
         chart:
+
         {
             borderWidth: 2,
             marginRight:100,
+            // marginLeft: 0,
             renderTo: 'highbar',
             events: {
                 render() {
@@ -271,18 +297,32 @@ shared: true, -->
         title: {
             text: '{{fin_metric_name}}'
         },
+        // alignTicks: false,
         tooltip:
         {
             backgroundColor: '#1ebd1e',//'red'
             style:
             {
+                // backgroundColor: '#1ebd1e',//'red'
                 color: '#FFFFFF',
                 fontSize: '14px',
                 fontWeight: 'bold',
+
             },
+
             enabled: true,
             shared: true,
+            // crosshairs: [true, true],
             valuePrefix:"$",
+            //"{{company_currency}}"
+            // format: '{value:%Y}',
+            // https://stackoverflow.com/questions/45033593/javascript-highcharts-math-operations-in-tooltip
+            // formatter: function () {
+            //     if (this.series.name == "Male") {
+            //         return "<b>" + this.series.name + "</b><br>" + this.x + " cm, " + this.y + " kg";
+            //     } else return " ";
+            // }
+
             pointFormatter:function()
             {
                 if(this.y >= 1000000000){
@@ -301,10 +341,7 @@ shared: true, -->
                     return ('<b>$' + this.y / 1000) + 'K</b>';
                     }
                 else {
-                    // return '<b>$' + this.y + '</b>';
-                    ratio = this.y / 1
-                    million_rounded = Math.round((ratio) * 100) / 100;
-                    return ('<b>' +million_rounded) + '</b>';
+                    return '<b>$' + this.y + '</b>';
                     }
                 },
             },
@@ -318,7 +355,7 @@ shared: true, -->
             ,
             buttons: [
                         {
-                            type: 'year',        count: 3,        text: '3Y',
+                            type: 'year',        count: 2,        text: '2Y',
                             dataGrouping:{enable:true
                             }
                         }, {
@@ -329,14 +366,19 @@ shared: true, -->
                                 dataGrouping:{enable:false}  },
                             {type: 'all',        text: 'All',
                             dataGrouping:{
+                            //     units: [['year', [3]]],
                                 enable:false,
+                            //     groupAll:true,
                                 approximation: groupings[4],
+                            //     approximation: 'sum',
+                            //     forced: true,
                             },
                         }
                     ]
         },
         xAxis:
         [
+
             {
 
                 labels:
@@ -355,20 +397,32 @@ shared: true, -->
                     className: "x_crosshair",
                     zIndex: 100,
                 },
+                // units: [['year',null]],
+                // zoomEnabled: false,
+                // tickmarkPlacement:'on',
                 type: 'datetime',
                 dateTimeLabelFormats:
                     {
                         month: '%Y',//'Q%q - %y',
                         year:'%Y',
                     },
+                // opposite: true,
+                // tickInterval: 8,
+                // tickAmount: 2,
                 gridLineWidth: 1,
+                // minorTickInterval: 1,
                 gridLineColor:'#E2E3E3', //'#000000',
                 alternateGridColor: '#FDFFD5', // '#FEF8E3'
+                 tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
+                // format: '{value:%Y}',
+                // format: '{value:Q%q\'%y}'
                 minPadding:0,
             },
         {
-            // tickPositions: {{df_json_date_year}},
-
+                    labels: {
+            step: 1
+        },
+            // min: -1.5,
                 labels:
                 {
                     style:
@@ -386,39 +440,93 @@ shared: true, -->
                     className: "x_crosshair",
                     zIndex: 100,
                 },
+                // units: [['year',null]],
+                // zoomEnabled: false,
+                // tickmarkPlacement:'on',
                 type: 'datetime',
                 dateTimeLabelFormats:
                     {
+                        // month: '%Y',//'Q%q - %y',
+                        // year:'%Y',
                     },
+                // opposite: true,
+                // gridLineWidth: 1,
+                // gridLineColor:'#E2E3E3', //'#000000',
+                // alternateGridColor: '#FDFFD5', // '#FEF8E3'
+                //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
                 format: '{value:%Y}',
+                // format: '{value:Q%q\'%y}'
                 minPadding:0,
+            // title:
+            // {
+            //     text: 'USD',
+            //     // opposite: true,
+            // },
+            // min: 5000000000,
+            // offset: 100,
+            // opposite: true,
         },
+
         ],
         plotOptions:
         {
         line: {
+
+            // dataLabels: {
+                // enabled: true,
+                // zIndex: 101,
+                // style:{
+                //     fontSize: '14px',
+                // },
+
+                // formatter:function()
+                //     {
+                //     if(this.y >= 1000000000){
+                //         return ('$' + Math.round(this.y / 1000000000)) + 'B';
+                //         }
+                //     else if(this.y >= 1000000) {
+                //         return ('$' + Math.round(this.y / 1000000)) + 'M';
+                //         }
+                //     else if(this.y >= 1000) {
+                //         return ('$' + Math.round(this.y / 1000)) + 'K';
+                //         }
+                //     else {
+                //         return '$' + this.y;
+                //         }
+                //     }
+            // },
+
         },
             pointPlacement: 'on',
             column:
             {
                 groupPadding: 0,
+                // pointPadding: 0.1,
+                // pointWidth: 0.1,
             },
             series:
             {
                 name: 'Quarterly Data',
+                // pointInterval: 0.1,
+                // pointWidth: 0.1,
+                // pointPadding: 0,
                 groupPadding: 0,
-
                 dataGrouping: {
                     enabled: false,
                     },
+                // borderWidth: 1.5,
+                // borderColor: '#153350',
                 type: 'column',
                 xAxis: 1,
                 tooltip:{
                     shared: true,
+
                 },
+                // pointWidth: 20,
             },
             series:
             {
+
             type: 'line',
             marker: {
                 radius: 4,
@@ -426,27 +534,58 @@ shared: true, -->
                 enabled: true,
                 zIndex:100,
             },
+
+                // // pointPadding: 10,
+                // // groupPadding: 100,
                 xAxis: 0,
                             name: "Line Trend",
                 dataGrouping: {
                     enabled: false,
                     },
+                // // borderWidth: 1.5,
+                // // borderColor: '#153350',
+                // type: 'spline',
+                // // pointWidth: 20,
             states:
             {
+            //     hover: {
+            //         color: '#a4edba',
+            //         borderColor: 'gray'
+            //     },
                 inactive:
                 {
                     opacity: 1
                 },
             },
+
             },
         },
+            // plotOptions: {
+            //     rangeSelector: {
+            //     series: {
+            //         pointPadding: 10,
+            //         groupPadding: 100,
+            //         type: 'all',
+            //         dataGrouping:{
+            //             units: [['year',null]],//[['year', [1]]],//[['month', [6]]],
+            //             enable:true,
+            //             groupAll:true,
+            //             // approximation: groupings[4],
+            //             approximation: 'sum',
+            //             forced: true,
+            //         },
+            //                 pointWidth: 20,
+            //                 },
+            //             },
+            //     },
         yAxis:
         [
         {
+
             height: '100%',
-            // min: '50',
             yAxis: 1,
             visible: false,
+            // max: 20000000000,
             maxPadding: 0.5,
             gridLineWidth: 1,
             gridLineColor:'#E2E3E3', //'#000000',
@@ -459,6 +598,22 @@ shared: true, -->
                 zIndex: 100,
                 },
             opposite: true,
+            // type: 'logarithmic',
+            // minPadding:100,
+                // lineColor:'#999',
+                // lineWidth:1,
+                // tickColor:'#666',
+                // tickWidth:1,
+                // tickLength:3,
+                // gridLineColor:'#ddd',
+                // title:{
+                //     text:'Y Axis Title',
+                //     rotation:0,
+                //     margin:50,
+                // },
+                //     tooltip: {
+                //         enabled: true,
+                // },
             labels:
             {
                 style:
@@ -467,30 +622,60 @@ shared: true, -->
                     fontSize: '14px',
                     fontWeight: 'bold',
                 },
+                // x: 50,
+
+                // padding: 30,
+                // groupPadding: 30,
+                // pointPadding: 30,
+                // pointWidth: 30,
+                // AlignValue:'right',
                 align: 'right',
+                // x: 0,
+                // y: 0,
+                // formatter:function(){
+                //     return ('$' + this.value / 1000000000) + 'B';
+                // }
+
+                // formatter:function()
+                //     {
+                //     if(this.value >= 1000000000){
+                //         return ('$' + this.value / 1000000000) + 'B';
+                //         }
+                //     else if(this.value >= 1000000) {
+                //         return ('$' + this.value / 1000000) + 'M';
+                //         }
+                //     else if(this.value >= 1000) {
+                //         return ('$' + this.value / 1000) + 'K';
+                //         }
+                //     else {
+                //         return '$' + this.value;
+                //         }
+                //     }
             },
         },
         {
-            height:'100%',
-            // plotLines: [{
-            //     value: minRate,
-            //     color: 'green',
-            //     dashStyle: 'shortdash',
-            //     width: 2,
-            //     label: {
-            //         text: 'Last quarter minimum'
-            //     }
-            // }, {
-            //     value: maxRate,
-            //     color: 'red',
-            //     dashStyle: 'shortdash',
-            //     width: 2,
-            //     label: {
-            //         text: 'Last quarter maximum'
-            //     }
-            // }],
+height:'100%',
+            plotLines: [{
+                value: minRate,
+                color: 'green',
+                dashStyle: 'shortdash',
+                width: 2,
+                label: {
+                    text: 'Last quarter minimum'
+                }
+            }, {
+                value: maxRate,
+                color: 'red',
+                dashStyle: 'shortdash',
+                width: 2,
+                label: {
+                    text: 'Last quarter maximum'
+                }
+            }],
             yAxis: 0,
-            // visible: false,
+            // min: -1.5,
+            visible: false,
+
             crosshair:{
                 width: 2,
                 color: '#1C9179',
@@ -498,45 +683,66 @@ shared: true, -->
                 className: "y_crosshair",
                 zIndex: 100,
                 },
-            // opposite: false,
+            opposite: false,
+            // gridLineWidth: 1,
+            // gridLineColor:'#E2E3E3', //'#000000',
+                        // type: 'logarithmic',
             minPadding:100,
+                // lineColor:'#999',
+                // lineWidth:1,
+                // tickColor:'#666',
+                // tickWidth:1,
+                // tickLength:3,
+                // gridLineColor:'#ddd',
+                // title:{
+                //     text:'Y Axis Title',
+                //     rotation:0,
+                //     margin:50,
+                // },
+                //     tooltip: {
+                //         enabled: true,
+                // },
             labels:
             {
+                // formatter: function () {
+                //     return (this.value > 0 ? ' + ' : '') + this.value + '%';
+                // },
                 style:
                 {
                     color: 'black',//'red'
                     fontSize: '14px'
                 },
                 x: 50,
-                // opposite: false,
+                opposite: false,
+                // padding: 30,
+                // groupPadding: 30,
+                // pointPadding: 30,
+                // pointWidth: 30,
+                // AlignValue:'right',
                 align: 'right',
-            formatter:function()
-                {
+                // x: 0,
+                // y: 0,
 
-                if(this.value >= 1000000000){
-                    billion = this.value / 1000000000;
-                    billion_rounded = Math.round((billion) * 100) / 100;
-                    return ('<b>$' + billion_rounded) + 'B</b>';
-                    }
-                else if(this.value >= 1000000) {
-                    million = this.value / 1000000
-                    million_rounded = Math.round((million) * 100) / 100;
-                    return ('<b>$' +million_rounded) + 'M</b>';
-                    }
-                else if(this.value >= 1000) {
-                    thousand = this.value / 1000000
-                    thousand_rounded = Math.round((thousand) * 100) / 100;
-                    return ('<b>$' + this.value / 1000) + 'K</b>';
-                    }
-                else {
-                    // return '<b>$' + this.y + '</b>';
-                    ratio = this.value / 1
-                    million_rounded = Math.round((ratio) * 100) / 100;
-                    return ('<b>' +million_rounded) + '</b>';
-                    }
-                },
-
+                // formatter:function()
+                //     {
+                //     if(this.value >= 1000000000){
+                //         return ('$' + this.value / 1000000000) + 'B';
+                //         }
+                //     else if(this.value >= 1000000) {
+                //         return ('$' + this.value / 1000000) + 'M';
+                //         }
+                //     else if(this.value >= 1000) {
+                //         return ('$' + this.value / 1000) + 'K';
+                //         }
+                //     else {
+                //         return '$' + this.value;
+                //         }
+                //     }
             },
+            // opposite: true,
+            // min: 5000000000,
+            // max: 60000000000,
+            // offset: 100,
         }
         ],
         series:
@@ -546,22 +752,32 @@ shared: true, -->
                 name: '{{company_symbol}}dd Stock Volume',
                 pointInterval: 1,
                 pointIntervalUnit: 'year',
+                // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
                 tooltip:
                 {
                     split: true,
                     shared: false,
                     xDateFormat:  'Q%q \'%Y',//'%b - %Y'
-                positioner: function() {
-                return {
-                    x: this.chart.plotLeft,
-                    y: this.chart.plotTop
-                };
-                },
-        // shared: true,
+                    // backgroundColor: '#1ebd1e',//'red'
+positioner: function() {
+  return {
+    x: this.chart.plotLeft,
+    y: this.chart.plotTop
+  };
+},
+shared: true,
         shadow: true,
         borderWidth: 0,
         backgroundColor: 'rgba(255,255,255,0.8)',
+                    // style:
+                    // {
+                    //     backgroundColor: '#1ebd1e',//'red'
+                    //     color: '#FFFFFF',
+                    //     fontSize: '14px',
+                    //     fontWeight: 'bold',
+                    // },
                 },
+                // xAxis: 1,
                 data: data.map(mapData),
                 zIndex: 98,
             },
@@ -569,25 +785,33 @@ shared: true, -->
                 type: 'line',
                 yAxis: 1,
                 zIndex: 100,
+                // opposite: true,
+                // name: '',
                 tooltip:
                 {
                     shared: true,
-                    xDateFormat:  'FY %Y',//'%b - %Y'
+                    xDateFormat:  '%Y',//'%b - %Y'
                     backgroundColor: '#1ebd1e',//'red'
-                positioner: function() {
-                return {
-                    x: this.chart.plotLeft,
-                    y: this.chart.plotTop
-                };
+positioner: function() {
+  return {
+    x: this.chart.plotLeft,
+    y: this.chart.plotTop
+  };
+},
+shared: true,
                 },
-                shared: true,
-                },
-                pointInterval: 3,
+                pointInterval: 12,
                 pointIntervalUnit: 'month',
                 color: '#1ebd1e',//'#343A40', // '#1C9179',
                 lineWidth: 3,
                 xDateFormat:  '%Y',
                 findNearestPointBy:'xy',
+                // xAxis: 0,
+                // opposite:true,
+                // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
+                // tooltip: {
+                //     // xDateFormat:  'Q%q \'%Y'//'%b - %Y'
+                // },
                 data: year_data.map(splineData),
             }
         ],
@@ -607,7 +831,10 @@ document.getElementById('button').addEventListener
     );
 }
 );
+
 </script>
+
+
 </head>
 <body class="fixed_body">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="color: #212529;">
@@ -690,10 +917,13 @@ document.getElementById('button').addEventListener
         </script>
         <script>
         $(document).ready( function () {
+            // $('table.df_tableBoot').DataTable();
             $('DISABLE#df_myTable').DataTable(
               {
+                 // "scrollX": true,
                 columnDefs: [
                   {
+                // "width": "100%" , "targets": [0,1,2,3,4,5,6],
                     "width": "1000","targets": "_all",
                     render: function ( data, type, full, meta ) {
                         if(type === 'display' && !isNaN(data*1) && data > 1000000000){
@@ -714,13 +944,23 @@ document.getElementById('button').addEventListener
                     }
                 }
                 ,
+                // { "width": "1000" , targets: [0,1,2,3,4,5,6]},
               ]
                 ,
                 dom: 'Bfrtip',
                 paginate: false,
+                // fixedHeader: false,
+                // "sScrollX": "100%",
+                // "sScrollXInner": "110%",
+                // "bScrollCollapse": true,
                 colReorder: true,
+        // scrollY: 300,
         buttons: [
+          // 'csv'
+          // 'csvHtml5'
+            // 'copy', 'csv', 'excel', 'pdf', 'print'
         ]
+                      // "order": [[ 3, "desc" ]]
                   }
             );
         } );
@@ -735,8 +975,10 @@ document.getElementById('button').addEventListener
                 <div class="pad-10-top pad-10-bottom pad-10-left pad-10-right">
                     <div>
                         <div id="highbar" style="height: 500px; width:100%;"> <!-- <div id="highbar" style="height: 400px; width:100%;"> -->
+
                         </div>
                         <button id="button" class="autocompare">Show 2014</button>
+
                         <!-- <h2
                             class="text-primary historical">{{company_symbol}} Historical {{fin_metric_name}} Chart (by Fiscal Year)
                         </h2> -->
@@ -929,6 +1171,7 @@ document.getElementById('button').addEventListener
         </div>
     </div>
 </div></div>
+
             </div>
             <div class="col">
                 <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;">
@@ -940,6 +1183,7 @@ document.getElementById('button').addEventListener
                             <br/>
                             ({{earliest_year}} - {{latest_year}})</h2>
                             <br/>
+                            the chart data has been cleaned for the clearest analysis. We smooth seasonal spikes and fill in missing data with interpolated values. You can see the clearest historical trend this way. For the raw value, see the table below.
                         <div class="text-dark font-weight-bold h5 mb-0"></div>
                     </div>
                     <div class="card-body">
@@ -953,25 +1197,11 @@ document.getElementById('button').addEventListener
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% if statement_or_ratio != "ratio" %}
-                                    <tr>
-                                        <td class="hist_measure">Lifetime</td>
-                                        <td class="hist_stats">{{lifetime_sum_all_metric}}</td>
-                                    </tr>
-                                    {% endif %}
-                                    <tr>
-                                        <td class="hist_measure">ROI ({{earliest_year}} - {{latest_year}})</td>
-                                        <td class="hist_stats"><b>{{historical_pct_chg}}</b></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="hist_measure">% Change (annually)</td>
-                                        <td class="hist_stats">{{annual_pct_chg}}</td>
-                                    </tr>
                                     <tr>
                                         <td class="hist_measure">All-Time High</td>
                                         <td class="hist_stats">{{max_str}}</td>
                                     </tr>
-                                    <!-- <tr>
+                                    <tr>
                                         <td class="hist_measure">Top 25%</td>
                                         <td class="hist_stats">{{top_25_str}}</td>
                                     </tr>
@@ -982,34 +1212,26 @@ document.getElementById('button').addEventListener
                                     <tr>
                                         <td class="hist_measure">Bottom 25%</td>
                                         <td class="hist_stats">{{bottom_25_str}}</td>
-                                    </tr> -->
+                                    </tr>
                                     <tr>
                                         <td class="hist_measure">All-Time Low</td>
                                         <td class="hist_stats">{{min_str}}</td>
                                     </tr>
+                                    <tr>
+                                        <td class="hist_measure">% Change (annually)</td>
+                                        <td class="hist_stats">{{annual_pct_chg}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hist_measure">ROI ({{earliest_year}} - {{latest_year}})</td>
+                                        <td class="hist_stats">{{historical_pct_chg}}</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p>In Plain English (Highlights)</p>
-                        <p>
-                            {{company_short_name}} ({{company_symbol}}) had a {{fin_metric_name}} of {{latest_metric}} in {{latest_year}}.
-
-
-                            At it's peak, {{company_short_name}} ({{company_symbol}}) had a {{fin_metric_name.lower()}} of {{latest_metric_str}} in {{latest_year}}.
-                            At it's bottom, {{company_short_name}} ({{company_symbol}}) had a {{fin_metric_name}} of {{earliest_metric_str}} in {{earliest_year}}.
-
-
-                            Increased {{num_years_increased}} of {{num_years}}.
-                            If you add up all of {{company_short_name}}'s'
-
-
-
-                        </p>
                         <p>The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).</p>
                         <!-- <p>If you'd have invested in </p>> -->
                         <div class="button_div"><button class="btn btn-primary button_buy" type="button">Historical Financial Ratios Data for entire Industry $5, Sector $10</button></div>
                         <p>We exist bc we want to provide affordable data. Ultimately, only high-level analysis in excel gives you the bigger picture</p>
-                        <p>the chart data has been cleaned for the clearest analysis. We smooth seasonal spikes and fill in missing data with interpolated values. You can see the clearest historical trend this way. For the raw value, see the table below.</p>
                     </div>
                 </div>
             </div>
@@ -1303,6 +1525,10 @@ document.getElementById('button').addEventListener
             </div>
         </div>
     </div>
+
+
+
+
 <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 </body>
 </html>
