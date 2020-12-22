@@ -237,7 +237,6 @@
             }]
         },
         chart:
-
         {
             borderWidth: 2,
             marginRight:100,
@@ -262,18 +261,8 @@
         title: {
             text: '{{fin_metric_name}}'
         },
-        // alignTicks: false,
         tooltip:
         {
-            backgroundColor: '#1ebd1e',//'red'
-            style:
-            {
-                // backgroundColor: '#1ebd1e',//'red'
-                color: '#FFFFFF',
-                fontSize: '14px',
-                fontWeight: 'bold',
-            },
-
             enabled: true,
             shared: true,
             // crosshairs: [true, true],
@@ -318,7 +307,7 @@
             ,
             buttons: [
                         {
-                            type: 'year',        count: 2,        text: '2Y',
+                            type: 'year',        count: 3,        text: '3Y',
                             dataGrouping:{enable:true
                             }
                         }, {
@@ -340,138 +329,57 @@
                     ]
         },
         xAxis:
-        [
-
-            {
-
-                labels:
-                {
-                    style:
-                    {
-                        color: '#black',//'red'
-                        fontSize: '14px'
-                    }
-                },
-                crosshair:
-                {
-                    width: 2,
-                    color: '#1C9179',
-                    snap: false,
-                    className: "x_crosshair",
-                    zIndex: 100,
-                },
-                // units: [['year',null]],
-                // zoomEnabled: false,
-                // tickmarkPlacement:'on',
-                type: 'datetime',
-                dateTimeLabelFormats:
-                    {
-                        // month: '%Y',//'Q%q - %y',
-                        // year:'%Y',
-                    },
-                // opposite: true,
-                // tickInterval: 8,
-                // tickAmount: 2,
-                gridLineWidth: 1,
-                // minorTickInterval: 1,
-                gridLineColor:'#E2E3E3', //'#000000',
-                alternateGridColor: '#FDFFD5', // '#FEF8E3'
-                //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                // format: '{value:%Y}'
-                // format: '{value:Q%q\'%y}'
-                minPadding:0,
-            },
         {
-            // min: -1.5,
-                labels:
+            labels:
+            {
+                style:
                 {
-                    style:
-                    {
-                        color: 'black',//'red'
-                        fontSize: '14px',
-                        fontWeight: 'bold',
-                    }
-                },
-                crosshair:
+                    color: '#black',//'red'
+                    fontSize: '14px'
+                }
+            },
+            crosshair:
+            {
+                width: 2,
+                color: '#1C9179',
+                snap: true,
+                className: "x_crosshair",
+                zIndex: 100,
+            },
+            // units: [['year',null]],
+            // zoomEnabled: false,
+            // tickmarkPlacement:'on',
+            type: 'datetime',
+            dateTimeLabelFormats:
                 {
-                    width: 2,
-                    color: '#1C9179',
-                    snap: false,
-                    className: "x_crosshair",
-                    zIndex: 100,
+                    month: '%Y',//'Q%q - %y',
+                    year:'%Y',
                 },
-                // units: [['year',null]],
-                // zoomEnabled: false,
-                // tickmarkPlacement:'on',
-                type: 'datetime',
-                dateTimeLabelFormats:
-                    {
-                        // month: '%Y',//'Q%q - %y',
-                        // year:'%Y',
-                    },
-                // opposite: true,
-                // gridLineWidth: 1,
-                // gridLineColor:'#E2E3E3', //'#000000',
-                // alternateGridColor: '#FDFFD5', // '#FEF8E3'
-                //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
-                // format: '{value:%Y}'
-                // format: '{value:Q%q\'%y}'
-                minPadding:0,
-            // title:
-            // {
-            //     text: 'USD',
-            //     // opposite: true,
-            // },
-            // min: 5000000000,
-            // max: 60000000000,
-            // offset: 100,
             // opposite: true,
+            gridLineWidth: 1,
+            gridLineColor:'#E2E3E3', //'#000000',
+            alternateGridColor: '#FDFFD5', // '#FEF8E3'
+            //  tickInterval: 1 * 24 * 3600 * 1000, // interval of 1 day
+            // format: '{value:%Y}'
+            // format: '{value:Q%q\'%y}'
+            minPadding:0,
         },
-
-        ],
         plotOptions:
         {
-        line: {
-
-            // dataLabels: {
-                // enabled: true,
-                // zIndex: 101,
-                // style:{
-                //     fontSize: '14px',
-                // },
-
-                // formatter:function()
-                //     {
-                //     if(this.y >= 1000000000){
-                //         return ('$' + Math.round(this.y / 1000000000)) + 'B';
-                //         }
-                //     else if(this.y >= 1000000) {
-                //         return ('$' + Math.round(this.y / 1000000)) + 'M';
-                //         }
-                //     else if(this.y >= 1000) {
-                //         return ('$' + Math.round(this.y / 1000)) + 'K';
-                //         }
-                //     else {
-                //         return '$' + this.y;
-                //         }
-                //     }
-            // },
-
-        },
             pointPlacement: 'on',
             column:
             {
                 groupPadding: 0,
-                // pointPadding: 0.1,
-                // pointWidth: 0.1,
+                // pointPadding: 0,
+                // pointWidth: 0,
             },
             series:
             {
                 name: 'Quarterly Data',
-                // pointInterval: 0.1,
-                // pointWidth: 0.1,
-                // pointPadding: 0,
-                groupPadding: 0,
+                pointInterval: 1,
+                // pointWidth: 1,
+                pointPadding: 0,
+                // groupPadding: 100,
                 dataGrouping: {
                     enabled: false,
                     },
@@ -480,21 +388,11 @@
                 type: 'column',
                 xAxis: 1,
                 tooltip:{
-                    shared: true,
                 },
                 // pointWidth: 20,
             },
             series:
             {
-
-            type: 'line',
-            marker: {
-                radius: 4,
-                fillColor: '#1ebd1e',
-                enabled: true,
-                zIndex:100,
-            },
-
                 // // pointPadding: 10,
                 // // groupPadding: 100,
                 xAxis: 0,
@@ -506,18 +404,6 @@
                 // // borderColor: '#153350',
                 // type: 'spline',
                 // // pointWidth: 20,
-            states:
-            {
-            //     hover: {
-            //         color: '#a4edba',
-            //         borderColor: 'gray'
-            //     },
-                inactive:
-                {
-                    opacity: 1
-                },
-            },
-
             },
         },
             // plotOptions: {
@@ -539,93 +425,16 @@
             //             },
             //     },
         yAxis:
-        [
         {
-            yAxis: 1,
-            visible: false,
-            max: 20000000000,
-            maxPadding: 1,
             gridLineWidth: 1,
             gridLineColor:'#E2E3E3', //'#000000',
-
             crosshair:{
                 width: 2,
                 color: '#1C9179',
-                snap: false,
+                snap: true,
                 className: "y_crosshair",
                 zIndex: 100,
                 },
-            opposite: true,
-            // type: 'logarithmic',
-            // minPadding:100,
-                // lineColor:'#999',
-                // lineWidth:1,
-                // tickColor:'#666',
-                // tickWidth:1,
-                // tickLength:3,
-                // gridLineColor:'#ddd',
-                // title:{
-                //     text:'Y Axis Title',
-                //     rotation:0,
-                //     margin:50,
-                // },
-                //     tooltip: {
-                //         enabled: true,
-                // },
-            labels:
-            {
-                style:
-                {
-                    color: 'black',//'red'
-                    fontSize: '14px',
-                    fontWeight: 'bold',
-                },
-                // x: 50,
-
-                // padding: 30,
-                // groupPadding: 30,
-                // pointPadding: 30,
-                // pointWidth: 30,
-                // AlignValue:'right',
-                align: 'right',
-                // x: 0,
-                // y: 0,
-                // formatter:function(){
-                //     return ('$' + this.value / 1000000000) + 'B';
-                // }
-                formatter:function()
-                    {
-                    if(this.value >= 1000000000){
-                        return ('$' + this.value / 1000000000) + 'B';
-                        }
-                    else if(this.value >= 1000000) {
-                        return ('$' + this.value / 1000000) + 'M';
-                        }
-                    else if(this.value >= 1000) {
-                        return ('$' + this.value / 1000) + 'K';
-                        }
-                    else {
-                        return '$' + this.value;
-                        }
-                    }
-            },
-        },
-        {
-
-            yAxis: 0,
-            // min: -1.5,
-            // visible: false,
-
-            crosshair:{
-                width: 2,
-                color: '#1C9179',
-                snap: false,
-                className: "y_crosshair",
-                zIndex: 100,
-                },
-            opposite: false,
-            // gridLineWidth: 1,
-            // gridLineColor:'#E2E3E3', //'#000000',
                         // type: 'logarithmic',
             minPadding:100,
                 // lineColor:'#999',
@@ -642,48 +451,40 @@
                 //     tooltip: {
                 //         enabled: true,
                 // },
-            labels:
-            {
-                // formatter: function () {
-                //     return (this.value > 0 ? ' + ' : '') + this.value + '%';
-                // },
-                style:
-                {
-                    color: 'black',//'red'
-                    fontSize: '14px'
+            labels:{
+            style: {
+                color: '#black',//'red'
+                fontSize: '14px'
                 },
-                x: 50,
-                opposite: false,
-                // padding: 30,
-                // groupPadding: 30,
-                // pointPadding: 30,
-                // pointWidth: 30,
-                // AlignValue:'right',
-                align: 'right',
-                // x: 0,
-                // y: 0,
-                formatter:function()
-                    {
-                    if(this.value >= 1000000000){
-                        return ('$' + this.value / 1000000000) + 'B';
-                        }
-                    else if(this.value >= 1000000) {
-                        return ('$' + this.value / 1000000) + 'M';
-                        }
-                    else if(this.value >= 1000) {
-                        return ('$' + this.value / 1000) + 'K';
-                        }
-                    else {
-                        return '$' + this.value;
-                        }
+            x: 50,
+            // padding: 30,
+            // groupPadding: 30,
+            // pointPadding: 30,
+            // pointWidth: 30,
+            // AlignValue:'right',
+            align: 'right',
+            // x: 0,
+            // y: 0,
+            // formatter:function(){
+            //     return ('$' + this.value / 1000000000) + 'B';
+            // }
+            formatter:function()
+                {
+                if(this.value >= 1000000000){
+                    return ('$' + this.value / 1000000000) + 'B';
                     }
-            },
-            // opposite: true,
-            // min: 5000000000,
-            max: 60000000000,
-            // offset: 100,
-        }
-        ],
+                else if(this.value >= 1000000) {
+                    return ('$' + this.value / 1000000) + 'M';
+                    }
+                else if(this.value >= 1000) {
+                    return ('$' + this.value / 1000) + 'K';
+                    }
+                else {
+                    return '$' + this.value;
+                    }
+                }
+                }
+        },
         series:
         [
             {
@@ -694,36 +495,17 @@
                 // pointStart: Date.UTC(2013, 0, 1), // 2013-01-01
                 tooltip:
                 {
-                    shared: true,
-                    xDateFormat:  'Q%q \'%Y',//'%b - %Y'
-                    backgroundColor: '#1ebd1e',//'red'
-                    // style:
-                    // {
-                    //     backgroundColor: '#1ebd1e',//'red'
-                    //     color: '#FFFFFF',
-                    //     fontSize: '14px',
-                    //     fontWeight: 'bold',
-                    // },
+                    xDateFormat:  'Q%q \'%Y'//'%b - %Y'
                 },
                 // xAxis: 1,
                 data: data.map(mapData),
-                zIndex: 98,
             },
             {
-                type: 'line',
-                yAxis: 1,
-                zIndex: 100,
-                // opposite: true,
+                type: 'spline',
                 // name: '',
-                tooltip:
-                {
-                    shared: true,
-                    xDateFormat:  '%Y',//'%b - %Y'
-                    backgroundColor: '#1ebd1e',//'red'
-                },
-                pointInterval: 12,
+                pointInterval: 3,
                 pointIntervalUnit: 'month',
-                color: '#1ebd1e',//'#343A40', // '#1C9179',
+                color: '#1C9179',
                 lineWidth: 3,
                 xDateFormat:  '%Y',
                 findNearestPointBy:'xy',

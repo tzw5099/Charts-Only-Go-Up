@@ -342,9 +342,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
 
     except Exception as e:
-        year_df = groupby_agg(df)
-        year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
-        year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_name)]].to_numpy()).tolist()
         print("var excepted",e)
 
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])

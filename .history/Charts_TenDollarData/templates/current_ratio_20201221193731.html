@@ -341,9 +341,7 @@
         },
         xAxis:
         [
-
             {
-
                 labels:
                 {
                     style:
@@ -468,10 +466,10 @@
             series:
             {
                 name: 'Quarterly Data',
-                // pointInterval: 0.1,
-                // pointWidth: 0.1,
-                // pointPadding: 0,
-                groupPadding: 0,
+                pointInterval: 0.1,
+                // pointWidth: 1,
+                pointPadding: 0,
+                // groupPadding: 100,
                 dataGrouping: {
                     enabled: false,
                     },
@@ -644,9 +642,9 @@
                 // },
             labels:
             {
-                // formatter: function () {
-                //     return (this.value > 0 ? ' + ' : '') + this.value + '%';
-                // },
+                formatter: function () {
+                    return (this.value > 0 ? ' + ' : '') + this.value + '%';
+                },
                 style:
                 {
                     color: 'black',//'red'
@@ -662,21 +660,24 @@
                 align: 'right',
                 // x: 0,
                 // y: 0,
-                formatter:function()
-                    {
-                    if(this.value >= 1000000000){
-                        return ('$' + this.value / 1000000000) + 'B';
-                        }
-                    else if(this.value >= 1000000) {
-                        return ('$' + this.value / 1000000) + 'M';
-                        }
-                    else if(this.value >= 1000) {
-                        return ('$' + this.value / 1000) + 'K';
-                        }
-                    else {
-                        return '$' + this.value;
-                        }
-                    }
+                // formatter:function(){
+                //     return ('$' + this.value / 1000000000) + 'B';
+                // }
+                // formatter:function()
+                //     {
+                //     if(this.value >= 1000000000){
+                //         return ('$' + this.value / 1000000000) + 'B';
+                //         }
+                //     else if(this.value >= 1000000) {
+                //         return ('$' + this.value / 1000000) + 'M';
+                //         }
+                //     else if(this.value >= 1000) {
+                //         return ('$' + this.value / 1000) + 'K';
+                //         }
+                //     else {
+                //         return '$' + this.value;
+                //         }
+                //     }
             },
             // opposite: true,
             // min: 5000000000,

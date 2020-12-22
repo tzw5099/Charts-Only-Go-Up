@@ -336,17 +336,11 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
 
         print("111yeddar df", df.head())
         fin_metric_history = df['{}'.format(fin_metric_title)]
-        year_df = groupby_agg(df)
+        fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
         year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_title)]].to_numpy()).tolist()
-        fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
-
     except Exception as e:
-        year_df = groupby_agg(df)
-        year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
-        year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_name)]].to_numpy()).tolist()
         print("var excepted",e)
-
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])
     df.index = df['Quarter & Year']
     # print("111year df", list(df))
@@ -380,7 +374,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # df["{}".format(fin_metric_name)] = df.fillna(df_metric.rolling(4,center=True,min_periods=1).mean())
 
     # print("1cc11year df", list(df["{}".format("Net Revenue (Sales)")]))
-
+    year_df = groupby_agg(df)
     print("year df", (year_df))
     print("fin metric name", fin_metric_name)
     print("fin metric title", fin_metric_title)

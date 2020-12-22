@@ -237,7 +237,6 @@
             }]
         },
         chart:
-
         {
             borderWidth: 2,
             marginRight:100,
@@ -265,15 +264,6 @@
         // alignTicks: false,
         tooltip:
         {
-            backgroundColor: '#1ebd1e',//'red'
-            style:
-            {
-                // backgroundColor: '#1ebd1e',//'red'
-                color: '#FFFFFF',
-                fontSize: '14px',
-                fontWeight: 'bold',
-            },
-
             enabled: true,
             shared: true,
             // crosshairs: [true, true],
@@ -341,9 +331,7 @@
         },
         xAxis:
         [
-
             {
-
                 labels:
                 {
                     style:
@@ -462,16 +450,16 @@
             column:
             {
                 groupPadding: 0,
-                // pointPadding: 0.1,
-                // pointWidth: 0.1,
+                // pointPadding: 0,
+                // pointWidth: 0,
             },
             series:
             {
                 name: 'Quarterly Data',
-                // pointInterval: 0.1,
-                // pointWidth: 0.1,
-                // pointPadding: 0,
-                groupPadding: 0,
+                pointInterval: 1,
+                // pointWidth: 1,
+                pointPadding: 0,
+                // groupPadding: 100,
                 dataGrouping: {
                     enabled: false,
                     },
@@ -539,6 +527,7 @@
             //             },
             //     },
         yAxis:
+
         [
         {
             yAxis: 1,
@@ -611,10 +600,9 @@
             },
         },
         {
-
             yAxis: 0,
             // min: -1.5,
-            // visible: false,
+            visible: false,
 
             crosshair:{
                 width: 2,
@@ -644,9 +632,6 @@
                 // },
             labels:
             {
-                // formatter: function () {
-                //     return (this.value > 0 ? ' + ' : '') + this.value + '%';
-                // },
                 style:
                 {
                     color: 'black',//'red'
@@ -662,6 +647,9 @@
                 align: 'right',
                 // x: 0,
                 // y: 0,
+                // formatter:function(){
+                //     return ('$' + this.value / 1000000000) + 'B';
+                // }
                 formatter:function()
                     {
                     if(this.value >= 1000000000){
@@ -695,15 +683,7 @@
                 tooltip:
                 {
                     shared: true,
-                    xDateFormat:  'Q%q \'%Y',//'%b - %Y'
-                    backgroundColor: '#1ebd1e',//'red'
-                    // style:
-                    // {
-                    //     backgroundColor: '#1ebd1e',//'red'
-                    //     color: '#FFFFFF',
-                    //     fontSize: '14px',
-                    //     fontWeight: 'bold',
-                    // },
+                    xDateFormat:  'Q%q \'%Y'//'%b - %Y'
                 },
                 // xAxis: 1,
                 data: data.map(mapData),
@@ -718,8 +698,7 @@
                 tooltip:
                 {
                     shared: true,
-                    xDateFormat:  '%Y',//'%b - %Y'
-                    backgroundColor: '#1ebd1e',//'red'
+                    xDateFormat:  '%Y'//'%b - %Y'
                 },
                 pointInterval: 12,
                 pointIntervalUnit: 'month',
