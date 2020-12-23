@@ -1,0 +1,47 @@
+<html>
+    <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
+"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+
+
+    </head>
+<body>
+    <input type="text" id="tagsInput"></input>
+
+    <script>
+const suggestions = [{
+    value: 'string1'
+}, {
+    value: 'string2'
+}, {
+    value: 'string3'
+}, {
+    value: 'string4'
+}, {
+    value: 'string5'
+}]
+
+var bloodhoundSuggestions = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    sufficient: 3,
+    local: suggestions,
+    remote: {
+        url: 'https://www.mockaroo.com/api/generate.json?key=9c13bbb0&schema=typeahead',
+    }
+});
+
+const $tagsInput = $('#tagsInput')
+$tagsInput.typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+}, {
+    name: 'suggestions',
+    displayKey: 'value',
+    source: bloodhoundSuggestions
+});
+</script>
+</body>
+</html>

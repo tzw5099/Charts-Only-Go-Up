@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://fiddle.jshell.net/q4foxbka/show/light/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>lowdb example</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./dummy.js.download"></script>
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+      <script type="text/javascript" src="./lodash.min.js.download"></script>
+      <script type="text/javascript" src="./low.min.js.download"></script>
+      <script type="text/javascript" src="./LocalStorage.min.js.download"></script>
+
+  <style id="compiled-css" type="text/css">
+      
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+<style id="12610290-0477-4e48-a9b7-cd11a99bdcb0">.select-text-inside-a-link{ -moz-user-select: text!important; }</style><style id="155c482d-5a71-44cb-a452-29eac002e437">#smgm_bgdiv{ text-align: center;position:fixed;top:0px;left:0px;z-index:9991;width:100%;height:100%;background-color:black;opacity:0.7;display:block;visibility:visible;}</style><style id="88be748d-c8f4-4e91-a02d-ff0dd7e8749f">#smgm_dialogbox { vertical-align:middle;left:40px;top:15px;border:3px solid #000 !important;text-align:center !important;background-color:#fff !important;color:#000 !important;font-family:arial,verdana !important;z-Index:9999;position:fixed;width:18%;height:50%;margin-left:auto;margin-right:auto;display:block;visibility:visible;}</style><style id="f1ff9fd0-41e9-416d-be3f-a7b6e40200a0">.smgm_buttons { color:#000 !important;font: 90% 'arial','trebuchet ms',helvetica,sans-serif !important;background-color:#B2CCFF !important;border:2px solid !important;border-color: #E0EBFF #000 #000 #E0EBFF !important;vertical-align: top !important;}</style><style id="05ee045d-65f3-41b1-83e6-0a4a9036935f">.smgm_table { margin-bottom:10px !important;border:0px !important;border-collapse:collapse !important;margin-left:auto;margin-right:auto; }</style></head>
+<body class="vsc-initialized">
+    <button id="add">
+  Add
+</button>
+
+<button id="reset">
+  Reset
+</button>
+
+<p>
+  Data is automatically stored in localStorage. Try to reload this page.
+</p>
+
+<pre id="state">{
+  "items": [
+    {
+      "time": 1608750763650
+    },
+    {
+      "time": 1608750765338
+    },
+    {
+      "time": 1608750765826
+    },
+    {
+      "time": 1608750766026
+    }
+  ]
+}</pre>
+
+    <script type="text/javascript">//<![CDATA[
+
+
+//
+// Lowdb code example
+// See https://github.com/typicode/lowdb
+// 
+
+// LocalStorage is a lowdb adapter for saving to localStorage
+const adapter = new LocalStorage('db')
+
+// Create database instance
+const db = low(adapter)
+
+// Set default state
+db.defaults({ items: [] })
+  .write()
+
+function add() {
+  db.get('items')
+    .push({ time: Date.now() })
+    .write()
+}
+
+function reset() {
+  db.set('items', [])
+    .write()
+}
+
+//
+// UI code using vanilla JavaScript
+// You can use any other UI lib with lowdb
+//
+
+function render() {
+  const state = db.getState()
+  const str = JSON.stringify(state, null, 2)
+  document.getElementById('state').innerHTML = str
+}
+
+document.getElementById('reset').onclick = function() {
+  reset()
+  render()
+}
+
+document.getElementById('add').onclick = function() {
+  add()
+  render()
+}
+
+render()
+
+
+
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "q4foxbka"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+
+
+</body></html>

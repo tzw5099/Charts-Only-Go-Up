@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://fiddle.jshell.net/cakenite/0dcues62/show/light/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Typeahead with bloodhound remote suggestions</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./jquery-2.1.3.js.download"></script>
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+      <script type="text/javascript" src="./typeahead.bundle.min.js.download"></script>
+
+  <style id="compiled-css" type="text/css">
+      
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+<style id="73f280eb-8037-4ea6-ae45-53d0a80d9866">.select-text-inside-a-link{ -moz-user-select: text!important; }</style><style id="0b450822-7a11-4d08-bf1c-ce78ad6498f1">#smgm_bgdiv{ text-align: center;position:fixed;top:0px;left:0px;z-index:9991;width:100%;height:100%;background-color:black;opacity:0.7;display:block;visibility:visible;}</style><style id="30da3bf4-d2a2-4197-86fb-1415a2d410f2">#smgm_dialogbox { vertical-align:middle;left:40px;top:15px;border:3px solid #000 !important;text-align:center !important;background-color:#fff !important;color:#000 !important;font-family:arial,verdana !important;z-Index:9999;position:fixed;width:18%;height:50%;margin-left:auto;margin-right:auto;display:block;visibility:visible;}</style><style id="b90ab20a-35f7-4fbc-aea3-ae31514f3217">.smgm_buttons { color:#000 !important;font: 90% 'arial','trebuchet ms',helvetica,sans-serif !important;background-color:#B2CCFF !important;border:2px solid !important;border-color: #E0EBFF #000 #000 #E0EBFF !important;vertical-align: top !important;}</style><style id="fc6bf86b-d269-4f35-a61f-9917d28bace8">.smgm_table { margin-bottom:10px !important;border:0px !important;border-collapse:collapse !important;margin-left:auto;margin-right:auto; }</style></head>
+<body class="vsc-initialized">
+    <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="tt-hint" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: 
+parseable name: 
+section: _1-default
+field signature: 1318412689
+form signature: 5711691366996712945
+form renderer id: 4294967295
+field renderer id: 217" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: 
+parseable name: 
+section: _1-default
+field signature: 1318412689
+form signature: 5711691366996712945
+form renderer id: 4294967295
+field renderer id: 217" autofill-prediction="UNKNOWN_TYPE"><input type="text" id="tagsInput" class="tt-input" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" title="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: 
+parseable name: tagsInput
+section: _1-default
+field signature: 1137429070
+form signature: 5711691366996712945
+form renderer id: 4294967295
+field renderer id: 216" autofill-information="overall type: UNKNOWN_TYPE
+server type: NO_SERVER_DATA
+heuristic type: UNKNOWN_TYPE
+label: 
+parseable name: tagsInput
+section: _1-default
+field signature: 1137429070
+form signature: 5711691366996712945
+form renderer id: 4294967295
+field renderer id: 216" autofill-prediction="UNKNOWN_TYPE"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Arial; font-size: 13.3333px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;">d</pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-suggestions"><div class="tt-suggestion tt-selectable"><strong class="tt-highlight">d</strong>ata10</div><div class="tt-suggestion tt-selectable"><strong class="tt-highlight">d</strong>ata10</div><div class="tt-suggestion tt-selectable"><strong class="tt-highlight">d</strong>ata70</div><div class="tt-suggestion tt-selectable"><strong class="tt-highlight">d</strong>ata70</div><div class="tt-suggestion tt-selectable"><strong class="tt-highlight">d</strong>ata10</div></div></div></span>
+
+    <script type="text/javascript">//<![CDATA[
+
+
+const suggestions = [{
+    value: 'string1'
+}, {
+    value: 'string2'
+}, {
+    value: 'string3'
+}, {
+    value: 'string4'
+}, {
+    value: 'string5'
+}]
+
+var bloodhoundSuggestions = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    sufficient: 3,
+    local: suggestions,
+    remote: {
+        url: 'https://www.mockaroo.com/api/generate.json?key=9c13bbb0&schema=typeahead',
+    }
+});
+
+const $tagsInput = $('#tagsInput')
+$tagsInput.typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+}, {
+    name: 'suggestions',
+    displayKey: 'value',
+    source: bloodhoundSuggestions
+});
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "0dcues62"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+
+
+</body></html>
