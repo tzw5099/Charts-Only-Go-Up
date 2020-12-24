@@ -72,6 +72,12 @@
       "isOrdered": true,
       "folders": {},
       "files": {}
+    },
+    "test_jfiddle": {
+      "name": "test_jfiddle",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
     }
   },
   "files": {}
