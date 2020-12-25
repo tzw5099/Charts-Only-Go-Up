@@ -39,30 +39,38 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     vars_drop = ['date', 'quarter_n_year','symbol','filing_date','accepted_date','period','sec_filing_link']
     def magnitude_num(number, currency_symbol):
-        if len(str(number)) > 9 and number > 1000000000:
-            magnitude = number/1000000000
-            magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
-        elif len(str(number)) > 6 and number > 1000000:
-            magnitude = number/1000000
-            magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"M")
-        elif len(str(number)) > 3 and number > 1000:
-            magnitude = number/1000
-            magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
-        elif -1000 <= number <= 1000:
+        try:
+            print("magnitude!")
+            if len(str(number)) > 9 and number > 1000000000:
+                magnitude = number/1000000000
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
+            elif len(str(number)) > 6 and number > 1000000:
+                magnitude = number/1000000
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"M")
+            elif len(str(number)) > 3 and number > 1000:
+                magnitude = number/1000
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
+            elif -1000 <= number <= 1000:
+                magnitude = number
+                magnitude_str = "{}{}{}".format("",round(magnitude,2),"")
+            elif len(str(number)) > 9 and number < -1000000000:
+                magnitude = abs(number/1000000000)
+                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"B")
+            elif len(str(number)) > 6 and number < -1000000:
+                magnitude = abs(number/1000000)
+                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"M")
+            elif len(str(number)) > 3 and number < -1000:
+                magnitude = abs(number/1000)
+                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"K")
+            else:
+                magnitude = number
+                magnitude_str = "{}{}{}".format("",round(magnitude,2),"")
+
+        except Exception as e:
+
             magnitude = number
-            magnitude_str = "{}{}{}".format("",round(magnitude,2),"")
-        elif len(str(number)) > 9 and number < -1000000000:
-            magnitude = abs(number/1000000000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"B")
-        elif len(str(number)) > 6 and number < -1000000:
-            magnitude = abs(number/1000000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"M")
-        elif len(str(number)) > 3 and number < -1000:
-            magnitude = abs(number/1000)
-            magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"K")
-        else:
-            magnitude = number
-            magnitude_str = "{}{}{}".format("",round(magnitude,2),"")
+            magnitude_str = number
+
         return magnitude_str
     fin_statements_list = ["balance-sheet","income-statement","cash-flow-statement"]
     company_profiles = pd.read_csv("reference_data/Company_Profiles.csv")
@@ -87,9 +95,12 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         value = profiles_value[n]
         profiles_dict[key] = value
     chars_to_remove = ["'","[","]"]
-    for character in chars_to_remove:
-        profiles_dict['Industries'] = profiles_dict['Industries'].replace(character, "")
-        profiles_dict['Similar Companies'] = profiles_dict['Similar Companies'].replace(character, "")
+    try:
+        for character in chars_to_remove:
+            profiles_dict['Industries'] = profiles_dict['Industries'].replace(character, "")
+            profiles_dict['Similar Companies'] = profiles_dict['Similar Companies'].replace(character, "")
+    except:
+        pass
     fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")
     if "{}".format(statement_or_ratio) in fin_statements_list:
         titles_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
@@ -257,11 +268,9 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
 
         def groupby_agg(df):
             return df.groupby("Year").mean()
-        # year_df = df.groupby("Year").mean()
 
-    # filter_pos_neg = list(fin_statements_matching[fin_statements_matching['Name']=="{}".format(fin_metric_name)]['positive_negative'])
     df_quarter = df['period']
-    print("df lsit 11",  df.head())
+    print("df list 11",  df.head())
     df = df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link'],axis=1, errors='ignore')
     try:
         for x in reversed(titles_bs):
@@ -363,38 +372,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     df_json_date_year  = np.nan_to_num(year_df['year'].to_numpy()).tolist()#[::-1]
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])
     df.index = df['Quarter & Year']
-    # print("111year df", list(df))
-    # filter_pos_neg_list = ['positive','all', 'both', 'negative', 'zero_or_neg']
-
-    #     df['revenue'] = df['revenue'].fillna(df['revenue'].rolling(4,center=True,min_periods=1).mean())
-        # df
-
-    # df_metric = df["{}".format(fin_metric_name)]
-    # if "{}".format(filter_pos_neg) == "positive":
-    #     nan_rows = df[(df_metric<0)]
-    #     nan_rows['revenue'] = np.nan
-    #     df[(df['revenue']<0)] = nan_rows
-    # elif "{}".format(filter_pos_neg) == "neg":
-    #     nan_rows = df[(df_metric>=0)]
-    #     nan_rows["{}".format(fin_metric_name)] = np.nan
-    #     df[(df_metric>=0)] = nan_rows
-    # elif "{}".format(filter_pos_neg) == "zero_or_neg":
-    #     nan_rows = df[(df_metric>0)]
-    #     nan_rows["{}".format(fin_metric_name)] = np.nan
-    #     df[(df["{}".format(fin_metric_name)]>0)] = nan_rows
-    # elif "{}".format(filter_pos_neg) == "both":
-    #     nan_rows = df[(df_metric==0)]
-    #     nan_rows["{}".format(fin_metric_name)] = np.nan
-    #     df[(df_metric==0)] = nan_rows
-    # elif "{}".format(filter_pos_neg) == "all":
-    #     pass
-    # else:
-    #     pass
-
-    # df["{}".format(fin_metric_name)] = df.fillna(df_metric.rolling(4,center=True,min_periods=1).mean())
-
-    # print("1cc11year df", list(df["{}".format("Net Revenue (Sales)")]))
-
     print("year df", (year_df))
     print("fin metric name", fin_metric_name)
     print("fin metric title", fin_metric_title)
@@ -420,8 +397,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     bottom_25_str = magnitude_num(bottom_25, currency_symbol)
     top_25_str = magnitude_num(top_25, currency_symbol)
     num_years = len(sorted_metric)
-    earliest_year = list((df['date'].astype(str).str[0:4]))[0]
-    latest_year = list((df['date'].astype(str).str[0:4]))[-1]
+    earliest_year = list((year_df.index.astype(str).str[0:4]))[0]
+    latest_year = list((year_df.index.astype(str).str[0:4]))[-1]
     earliest_metric = list(sorted_metric)[0]
     latest_metric = list(sorted_metric)[-1]
     earliest_metric_str = magnitude_num(earliest_metric, currency_symbol)
@@ -485,7 +462,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     cols = [cols[-1]] + cols[:-1]
     df_t = df.transpose()
     df_t.columns = list(df['Quarter & Year'])
-    df_t = df_t
     df_t['']=df_t.index
     df_t.index = range(len(df_t))
     cols = list(df_t.columns)
@@ -502,11 +478,9 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     df_n_sum = pd.DataFrame(df_n.sum())
     df_n_sum[df_n_sum == 0] = ""
     new_header = df_n_sum.iloc[0]
-    df_n_sum = df_n_sum
     df_n_sum.columns = new_header
     df_n_sum.index = range(len(df_n_sum))
     df_t = pd.merge(df_n_sum, df_t, left_index=True, right_index=True,suffixes=('Total: {} - {}'.format(latest_year,earliest_year), 'Line Items'))
-    df_t = df_t
     col_list = []
     n=0
 
@@ -551,35 +525,44 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
 
     df_html_tall = df_html_tall.replace("\n","")
     df_html_tall = df_html_tall.replace("{}".format("["),"")
-    df_html_tall = df_html_tall
 
     df_html_tall = df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
-    # df_html_tall = df_html_tall[0:].replace(">nan</td>",">-</td>")
+    df_html_tall = df_html_tall[0:].replace(">nan</td>",">-</td>")
+    df_html_tall = df_html_tall[0:].replace(">nan%</td>",">-</td>")
     df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
     df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
     df['date'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
     df['date'] = df['date'].apply(lambda x: int(x))
-    total_seconds = ((time.time() - start_time))
-    present_num = magnitude_num(int(latest_metric),currency_symbol)
+    total_seconds = time.time() - start_time
+    # present_num = magnitude_num(int(latest_metric),currency_symbol)
+    present_num = magnitude_num((latest_metric),currency_symbol)
     labels = list(df['date'])
     if "{}".format(statement_or_ratio) in fin_statements_list:
         df_table_html = df_tall[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()
         df['quarter avg'] = df["{}".format(fin_metric_title)].rolling(window=8,min_periods=1).mean()
-        latest_metric = "${}".format(list(df["{}".format(fin_metric_title)])[0])
+        # latest_metric = "${}".format(list(df["{}".format(fin_metric_title)])[0])
     else:
         df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()
         df['quarter avg'] = df["{}".format(fin_metric_name)].rolling(window=8,min_periods=1).mean()
-        latest_metric = "${}".format(list(df["{}".format(fin_metric_name)])[0])
-    df_table_html = df_table_html
+        # latest_metric = "${}".format(list(df["{}".format(fin_metric_name)])[0])
 
     df_json  = np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()[::-1]
+
 
     print("year dfzz", list(year_df))
     print(year_df)
     print("sorted_metric", sorted_metric)
+    print("latest metric", latest_metric)
+    print("present num", present_num)
+    print("currency symbol", currency_symbol)
+    print("int(latest_metric)", int(latest_metric))
+    print("df", df)
+    # print("earliest date", (pd.to_datetime(df.date).values.astype(np.int64) // 10 ** 6)[-1])
+    print("earliest date", (pd.to_datetime(df.date).values.astype(np.int64))[-1])
+
     return render_template('current_ratio.html', \
                             company_symbol = profiles_dict['symbol'],\
                             company_long_name = profiles_dict['long name'],\
