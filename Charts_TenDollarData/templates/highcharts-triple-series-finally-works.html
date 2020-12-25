@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function (data) {
+
+                data = {{df_json}};
+                year_data = {{year_df_json}};
+                price_json = {{price_json}};
+                function mapData([x, y]) {
+                    return {
+                        name: x,
+                        x: x,
+                        y: Math.abs(y),
+                        actualY: y,
+                        color: y >= 0 ? '#7CB5EC' :
+                        '#E6496F', //'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
+                    }
+                }
+                function splineData([x, y]) {
+                    return {
+                        name: x,
+                        x: x,
+                        y: Math.abs(y),
+                        color: y >= 0 ? '#7CB5EC' :
+                        '#E6496F', //'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
+                    }
+                }
+                var groupings = ['sum', 'average', 'sum'];
+                var myChart = Highcharts.stockChart('highbar', {
+                    legend: {
+                        enabled: true,
+                    },
+                    chart: {
+                        borderWidth: 2,
+                        marginRight: 100,
+                        renderTo: 'highbar',
+                    },
+                    tooltip: {
+                        enabled: true,
+                        shared: true,
+                        valuePrefix: "$",
+                    },
+
+                    yAxis: [
+                        {
+                            // height: '100%',
+                            // // min: '50',
+                            yAxis: 1,
+                            // visible: false,
+                            // maxPadding: 0.5,
+                            // gridLineWidth: 1,
+                            // gridLineColor: '#E2E3E3', //'#000000',
+                            opposite: true,
+                        },
+                        {
+                            yAxis: 2,
+                            // height: '100%',
+                            // minPadding: 100,
+                            // labels: {
+                            //     style: {
+                            //         color: 'black', //'red'
+                            //         fontSize: '14px'
+                            //     },
+                            //     x: 50,
+
+                            //     align: 'right',
+                            // },
+                            // opposite: true,
+                        },
+                        {
+                            opposite: true,
+                        },
+                    ],
+                    tooltip: {
+                        enabled: true,
+                        shared: false,
+                    },
+                    plotOptions:{
+                        series:{connectNulls: true},
+                    }
+                    series: [{
+                            type: 'column',
+                            name: '{{company_symbol}}dd Stock Volume',
+                            // pointInterval: 1,
+                            // pointIntervalUnit: 'year',
+
+                            // data: data.map(mapData),
+                            data: {{df_json}},
+                            zIndex: 98,
+                            yAxis: 1,
+                        },
+                        {
+                            type: 'line',
+                            yAxis: 2,
+                            zIndex: 100,
+                            // pointInterval: 3,
+                            // pointIntervalUnit: 'month',
+                            color: '#1ebd1e', //'#343A40', // '#1C9179',
+                            lineWidth: 3,
+                            xDateFormat: '%Y',
+                            findNearestPointBy: 'xy',
+                            // data: year_data.map(splineData),
+                            data: {{year_df_json}},
+                        },
+                        {
+                            type: 'spline',
+                            name: '{{company_symbol}}dd zop Volume',
+                            // pointInterval: 1,
+                            // pointIntervalUnit: 'year',
+                            // data: price_json.map(mapData),
+                            data: {{price_json}},
+                            zIndex: 110,
+                            // yAxis: 0,
+                        },
+                    ],
+                });
+            });
+        </script>
+
+    </head>
+
+    <body class="fixed_body">
+        <div id="highbar" style="height: 500px; width:100%;">
+            <!-- <div id="highbar" style="height: 400px; width:100%;"> -->
+        </div>
+    </body>
+
+</html>

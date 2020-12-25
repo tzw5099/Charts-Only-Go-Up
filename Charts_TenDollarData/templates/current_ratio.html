@@ -16,242 +16,224 @@
   };
 },
 shared: true, -->
+<!-- {{price_json}} -->
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/styles.min.css">
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        table {border-spacing: 0;
-        border-collapse: collapse;
-        }
-        .cell { width: 20px; height: 20px; }
-        .odd { background-color: brown }
-        .even { background-color: pink }
-    </style>
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-    <!-- enables CSV -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
-    <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
-    <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <style>
-    #df_myTable {
-        margin: 0 auto;
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Home - Brand</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+        <link rel="stylesheet" href="../static/bootstrap/css/styles.min.css">
+        <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            table {
+                border-spacing: 0;
+                border-collapse: collapse;
+            }
+
+            .cell {
+                width: 20px;
+                height: 20px;
+            }
+
+            .odd {
+                background-color: brown
+            }
+
+            .even {
+                background-color: pink
+            }
+        </style>
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <!-- enables CSV -->
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js">
+        </script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+        <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+        <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+        <style>
+            #df_myTable {
+                margin: 0 auto;
+            }
+
+            .metric_table {
+                text-align: center;
+                margin: 0 auto !important;
+            }
+
+            div.card-body.hist_table {
+                overflow: scroll;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            div.card-body.hist_table::-webkit-scrollbar {
+                display: none;
+                color: #20c08d;
+            }
+
+            div.sticky-top {
+                top: 160px;
+            }
+
+            .page-content {
+                max-width: 1200px;
+                margin: 32px auto;
+                padding: 32px;
+                background: #fff;
+            }
+
+            a {
+                color: #21D4FD;
+                transition: all 0.3s;
+            }
+
+            a:hover {
+                color: #B721FF;
+            }
+
+            .tabbed {
+                overflow-x: hidden;
+                margin: 32px 0;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .tabbed [type="radio"] {
+                display: none;
+            }
+
+            .tabs {
+                display: flex;
+                align-items: stretch;
+                list-style: none;
+                padding: 0;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .tab>label {
+                display: block;
+                margin-bottom: -1px;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                background: #eee;
+                color: #666;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .tab:hover label {
+                border-top-color: #333;
+                color: #333;
+            }
+
+            .tab-content {
+                display: none;
+                color: #777;
+            }
+
+            .tabbed [type="radio"]:nth-of-type(1):checked~.tabs .tab:nth-of-type(1) label,
+            .tabbed [type="radio"]:nth-of-type(2):checked~.tabs .tab:nth-of-type(2) label,
+            .tabbed [type="radio"]:nth-of-type(3):checked~.tabs .tab:nth-of-type(3) label,
+            .tabbed [type="radio"]:nth-of-type(4):checked~.tabs .tab:nth-of-type(4) label,
+            .tabbed [type="radio"]:nth-of-type(5):checked~.tabs .tab:nth-of-type(5) label {
+                border-bottom-color: #fff;
+                border-top-color: #B721FF;
+                background: #fff;
+                color: #222;
+            }
+
+            .tabbed [type="radio"]:nth-of-type(1):checked~.tab-content:nth-of-type(1),
+            .tabbed [type="radio"]:nth-of-type(2):checked~.tab-content:nth-of-type(2),
+            .tabbed [type="radio"]:nth-of-type(3):checked~.tab-content:nth-of-type(3),
+            .tabbed [type="radio"]:nth-of-type(4):checked~.tab-content:nth-of-type(4) {
+                display: block;
+                color: #1ebd1e,
+            }
+        </style>
+<script>
+    function centerLabels(chart) {
+        var $container = $(chart.target.highbar);
+        var axes = chart.target.axes;
+        var $labels = $highbar.find('.highcharts-axis-labels .timeline_label');
+        var $thisLabel, $nextLabel, thisXPos, nextXPos, delta, newXPos;
+        $labels.each(function () {
+            $thisLabel = $(this).parent('span');
+            thisXPos = parseInt($thisLabel.css('left'));
+            $nextLabel = $thisLabel.next();
+            nextXPos = $nextLabel.length ? parseInt($nextLabel.css('left')) : axes[0].left + axes[0].width;
+            delta = (nextXPos - thisXPos) / 2.0;
+            newXPos = thisXPos + delta;
+            if ($nextLabel.length || $(this).width() + newXPos < nextXPos) {
+                $thisLabel.css('left', newXPos + 'px');
+            } else {
+                $thisLabel.remove();
+            }
+        });
     }
-    .metric_table{
-        text-align:center;
-        margin: 0 auto !important;
-    }
-    div.card-body.hist_table {
-    overflow:scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    }
-    div.card-body.hist_table::-webkit-scrollbar {
-    display: none;
-    color: #20c08d;
-    }
-    div.sticky-top{
-    top:160px;
-    }
-        .page-content {
-        max-width: 1200px;
-        margin: 32px auto;
-        padding: 32px;
-        background: #fff;
-        }
-        a {
-        color: #21D4FD;
-        transition: all 0.3s;
-        }
-        a:hover {
-        color: #B721FF;
-        }
-        .tabbed {
-        overflow-x: hidden;
-        margin: 32px 0;
-        padding-bottom: 16px;
-        border-bottom: 1px solid #ccc;
-        }
-        .tabbed [type="radio"] {
-        display: none;
-        }
-        .tabs {
-        display: flex;
-        align-items: stretch;
-        list-style: none;
-        padding: 0;
-        border-bottom: 1px solid #ccc;
-        }
-        .tab > label {
-        display: block;
-        margin-bottom: -1px;
-        padding: 12px 15px;
-        border: 1px solid #ccc;
-        background: #eee;
-        color: #666;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.3s;
-        }
-        .tab:hover label {
-        border-top-color: #333;
-        color: #333;
-        }
-        .tab-content {
-        display: none;
-        color: #777;
-        }
-        .tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
-        .tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
-        .tabbed [type="radio"]:nth-of-type(3):checked ~ .tabs .tab:nth-of-type(3) label,
-        .tabbed [type="radio"]:nth-of-type(4):checked ~ .tabs .tab:nth-of-type(4) label,
-        .tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label {
-        border-bottom-color: #fff;
-        border-top-color: #B721FF;
-        background: #fff;
-        color: #222;
-        }
-        .tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
-        .tabbed [type="radio"]:nth-of-type(2):checked ~ .tab-content:nth-of-type(2),
-        .tabbed [type="radio"]:nth-of-type(3):checked ~ .tab-content:nth-of-type(3),
-        .tabbed [type="radio"]:nth-of-type(4):checked ~ .tab-content:nth-of-type(4) {
-        display: block;
-        color: #1ebd1e,
-        }
-    </style>
-<script>function centerLabels(chart)
-{
-    var $container = $(chart.target.highbar);
-    var axes = chart.target.axes;
-    var $labels = $highbar.find('.highcharts-axis-labels .timeline_label');
-    var $thisLabel, $nextLabel, thisXPos, nextXPos, delta, newXPos;
-    $labels.each(function () {
-        $thisLabel = $(this).parent('span');
-        thisXPos = parseInt($thisLabel.css('left'));
-        $nextLabel = $thisLabel.next();
-        nextXPos = $nextLabel.length ? parseInt($nextLabel.css('left')) : axes[0].left + axes[0].width;
-        delta = (nextXPos - thisXPos) / 2.0;
-        newXPos = thisXPos + delta;
-        if ($nextLabel.length || $(this).width() + newXPos < nextXPos) {
-            $thisLabel.css('left', newXPos + 'px');
-        } else {
-            $thisLabel.remove();
-        }
-    });
-}
 </script>
 <script>
-    document.addEventListener
-    ('DOMContentLoaded', function (data)
-    {
-        var startDate  = new Date("April 01, 2012 00:00:00");
-        var today = new Date();
-        var count =  parseInt((today.getTime() - startDate)/(24*3600*1000)) -1;
-        data = {{df_json}};
-        year_data = {{year_df_json}};
+    document.addEventListener('DOMContentLoaded', function (data) {
+                var startDate = new Date("April 01, 2012 00:00:00");
+                var today = new Date();
+                var count = parseInt((today.getTime() - startDate) / (24 * 3600 * 1000)) - 1;
+    data = {{df_json}};
+    year_data = {{year_df_json}};
+    price_json = {{price_json}};
         function mapData([x, y])
         {
-            return {
-                    name: x,
-                    x: x,
-                    y: Math.abs(y),
-                    actualY: y,
-                    color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
-                    }
+        return {
+        name: x,
+        x: x,
+        y: Math.abs(y),
+        actualY: y,
+        color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'//
+        //7CB5EC, '#63CCA6' : '#E6496F'
+        }
         }
     function splineData([x, y]) {
-        return {
-            name: x,
-            x: x,
-            y: Math.abs(y),
-            color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC, '#63CCA6' : '#E6496F'
-        }
+    return {
+    name: x,
+    x: x,
+    y: Math.abs(y),
+    color: y >= 0 ? '#7CB5EC': '#E6496F',//'#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'// 7CB5EC,
+    //'#63CCA6' : '#E6496F'
+    }
     }
     var groupings = ['sum', 'average', 'sum'];
     Highcharts.dateFormats =
     {
-        q: function(timestamp)
-        {
-            var date = new Date(timestamp),
-            quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
-            console.log(quarter);
-            return quarter;
-        }
+    q: function(timestamp)
+    {
+    var date = new Date(timestamp),
+    quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
+    console.log(quarter);
+    return quarter;
+    }
     };
-    var startDate = new Date(data[data.length - 1][0]), // Get year of last data point
-        minRate = 1,
-        maxRate = 0,
-        startPeriod,
-        date,
-        rate,
-        index;
-    startDate.setMonth(startDate.getMonth() - 3); // a quarter of a year before last data point
-    startPeriod = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
-    for (index = data.length - 1; index >= 0; index = index - 1) {
-        date = data[index][0]; // data[i][0] is date
-        rate = data[index][1]; // data[i][1] is exchange rate
-        if (date < startPeriod) {
-            break; // stop measuring highs and lows
-        }
-        if (rate > maxRate) {
-            maxRate = rate;
-        }
-        if (rate < minRate) {
-            minRate = rate;
-        }
-    };
-
-
-// const step =   90 * 24 * 60 * 60 * 1; // 1000 * 60 * 60 * 1;
-// let ar = [];
-
-// (function(H) {
-//   Highcharts.Chart.prototype.callbacks.push(function(chart) {
-//     H.addEvent(chart.container, 'mousewheel', function(e) {
-//       var xAxis = chart.xAxis[0],
-//         extremes = xAxis.getExtremes(),
-//         newMin = extremes.min,
-//         output = [];
-
-//       if (e.deltaY < 0) {
-//         chart.series[0].points.forEach(p => {
-//           if (p.x >= newMin + step) {
-//             output.push(p.x)
-//           }
-//         })
-//         ar.push(newMin)
-//         xAxis.setExtremes(output[0], extremes.max, true);
-//       }
-//     //   else {
-//     //     xAxis.setExtremes(ar[ar.length - 1], extremes.max, true);
-//     //     ar.pop()
-//     //   }
-//     });
-//   });
-// }(Highcharts));
 
 
 (function(H) {
@@ -502,68 +484,63 @@ shared: true, -->
         ],
         plotOptions:
 
+
         {
+            series:{connectNulls: true,
+      dataLabels: {
+        enabled: true,
+        formatter: function () {
+          // if last point
+          if(this.point === this.series.data[this.series.data.length-1]) {
+            return this.series.name;
+          }
+        }
+      }
+},
         line: {
-        allowPointSelect: true,
-        dataLabels: {
-          enabled: true,
-          formatter: function() {
+            allowPointSelect: true,
+            dataLabels: {
+                enabled: true,
+                formatter: function() {
 
-                if(this.y >= 1000000000){
-                    billion = this.y / 1000000000;
-                    billion_rounded = Math.round((billion) * 10) / 10;
-                    max_min_num =  ('<b>$' + billion_rounded) + 'B</b>';
-                    }
-                else if(this.y >= 1000000) {
-                    million = this.y / 1000000
-                    million_rounded = Math.round((million) * 10) / 10;
-                    max_min_num = ('<b>$' +million_rounded) + 'M</b>';
-                    }
-                else if(this.y >= 1000) {
-                    thousand = this.y / 1000000
-                    thousand_rounded = Math.round((thousand) * 10) / 10;
-                    max_min_num = ('<b>$' + this.y / 1000) + 'K</b>';
-                    }
-                else {
-                    // return '<b>$' + this.y + '</b>';
-                    ratio = this.y / 1
-                    ratio_rounded = Math.round((ratio) * 10) / 10;
-                    max_min_num = ('<b>' +ratio_rounded) + '</b>';
-                    }
+                    if(this.y >= 1000000000){
+                        billion = this.y / 1000000000;
+                        billion_rounded = Math.round((billion) * 10) / 10;
+                        max_min_num =  ('<b>$' + billion_rounded) + 'B</b>';
+                        }
+                    else if(this.y >= 1000000) {
+                        million = this.y / 1000000
+                        million_rounded = Math.round((million) * 10) / 10;
+                        max_min_num = ('<b>$' +million_rounded) + 'M</b>';
+                        }
+                    else if(this.y >= 1000) {
+                        thousand = this.y / 1000000
+                        thousand_rounded = Math.round((thousand) * 10) / 10;
+                        max_min_num = ('<b>$' + this.y / 1000) + 'K</b>';
+                        }
+                    else {
+                        // return '<b>$' + this.y + '</b>';
+                        ratio = this.y / 1
+                        ratio_rounded = Math.round((ratio) * 10) / 10;
+                        max_min_num = ('<b>' +ratio_rounded) + '</b>';
+                        }
 
-            var dataMax = this.series.dataMax;
-            var dataMin = this.series.dataMin;
-            if (this.y === dataMax) {
-            return ('<b>Top ' +max_min_num) + '</b>';
-            //   return this.y;
-            }
-            if (this.y === dataMin) {
-            return ('<b>Bottom ' +max_min_num) + '</b>';
-            }
-            // if (this.y == this.series.index[0]){
-            if (this.series.index == 0){
-                return this.y;//[-1];
-            }
-            // if (this.isLast || this.isFirst) {
-            //     return this.y
-            // }
+                    var dataMax = this.series.dataMax;
+                    var dataMin = this.series.dataMin;
+                    if (this.y === dataMax) {
+                    return ('<b>Top ' +max_min_num) + '</b>';
+                    //   return this.y;
+                    }
+                    if (this.y === dataMin) {
+                    return ('<b>Bottom ' +max_min_num) + '</b>';
+                    }
+                    if (this.series.index == 0){
+                        return this.y;//[-1];
+                    }
+                    },
+                    },
+            pointPlacement: 'on',},
 
-                // else if(this.y >= 1000) {
-                //     thousand = this.y / 1000000
-                //     thousand_rounded = Math.round((thousand) * 100) / 100;
-                //     return ('<b>$' + this.y / 1000) + 'K</b>';
-                //     }
-                // else {
-                //     // return '<b>$' + this.y + '</b>';
-                //     ratio = this.y / 1
-                //     million_rounded = Math.round((ratio) * 100) / 100;
-                //     return ('<b>' +million_rounded) + '</b>';
-                //     }
-          },
-
-        },
-        },
-            pointPlacement: 'on',
             column:
             {
                 groupPadding: 0,
@@ -584,7 +561,6 @@ shared: true, -->
             },
             series:
             {
-
             type: 'line',
             marker: {
                 radius: 4,
@@ -592,39 +568,6 @@ shared: true, -->
                 enabled: true,
                 zIndex:100,
             },
-        // allowPointSelect: true,
-        // dataLabels: {
-        //   enabled: true,
-        //   formatter: function() {
-        //     var dataMax = this.series.dataMax;
-        //     var dataMin = this.series.dataMin;
-        //     if (this.y === dataMax) {
-        //       return this.y;
-        //     }
-        //     if (this.y === dataMin) {
-        //       return this.y;
-        //     }
-        //     // if (this.y == this.series[0]){
-        //     //     return this.y;//[-1];
-        //     // }
-        //     // if (this.isLast || this.isFirst) {
-        //     //     return this.y
-        //     // }
-
-        //         // else if(this.y >= 1000) {
-        //         //     thousand = this.y / 1000000
-        //         //     thousand_rounded = Math.round((thousand) * 100) / 100;
-        //         //     return ('<b>$' + this.y / 1000) + 'K</b>';
-        //         //     }
-        //         // else {
-        //         //     // return '<b>$' + this.y + '</b>';
-        //         //     ratio = this.y / 1
-        //         //     million_rounded = Math.round((ratio) * 100) / 100;
-        //         //     return ('<b>' +million_rounded) + '</b>';
-        //         //     }
-        //   },
-
-        // },
                 xAxis: 0,
                             name: "Line Trend",
                 dataGrouping: {
@@ -638,15 +581,17 @@ shared: true, -->
                 },
             },
             },
+
         },
         yAxis:
         [
+
         {
-            height: '100%',
+            // height: '100%',
             // min: '50',
             yAxis: 1,
             visible: false,
-            maxPadding: 0.5,
+            maxPadding: 0.1,
             gridLineWidth: 1,
             gridLineColor:'#E2E3E3', //'#000000',
 
@@ -669,27 +614,9 @@ shared: true, -->
                 align: 'right',
             },
         },
+
         {
             height:'100%',
-            // plotLines: [{
-            //     value: minRate,
-            //     color: 'green',
-            //     dashStyle: 'shortdash',
-            //     width: 2,
-            //     label: {
-            //         text: 'Last quarter minimum'
-            //     }
-            // }, {
-            //     value: maxRate,
-            //     color: 'red',
-            //     dashStyle: 'shortdash',
-            //     width: 2,
-            //     label: {
-            //         text: 'Last quarter maximum'
-            //     }
-            // }],
-            yAxis: 0,
-            // visible: false,
             crosshair:{
                 width: 2,
                 color: '#1C9179',
@@ -736,12 +663,22 @@ shared: true, -->
                 },
 
             },
-        }
+        },
+         {
+            opposite:false,
+            height:'100%',
+
+            crosshair:{
+                width: 2,
+                color: '#1C9179',
+                snap: false,
+                className: "y_crosshair",
+                zIndex: 100,
+                },
+            // opposite: false,
+            minPadding:100,
+         },
         ],
-
-
-
-
         tooltip: {
             backgroundColor: '#1ebd1e',//'red'
             style:
@@ -809,10 +746,6 @@ shared: true, -->
             },
         },
 
-
-
-
-
         series:
         [
             {
@@ -831,13 +764,14 @@ shared: true, -->
                 //     y: this.chart.plotTop
                 // };
                 // },
-        // shared: true,
-        shadow: true,
-        borderWidth: 0,
-        backgroundColor: 'rgba(255,255,255,0.8)',
+                // shared: true,
+                shadow: true,
+                borderWidth: 0,
+                backgroundColor: 'rgba(255,255,255,0.8)',
                 },
-                data: data.map(mapData),
+                data: {{df_json}},
                 zIndex: 98,
+                yAxis: 1,
             },
             {
                 type: 'line',
@@ -854,33 +788,33 @@ shared: true, -->
                 //     y: this.chart.plotTop
                 // };
                 // },
-            // positioner: function (width, height, point) {
-            //     var chart = this.chart,
-            //         position;
+                // positioner: function (width, height, point) {
+                //     var chart = this.chart,
+                //         position;
 
-            //     if (point.isHeader) {
-            //         position = {
-            //             x: Math.max(
-            //                 // Left side limit
-            //                 chart.plotLeft,
-            //                 Math.min(
-            //                     point.plotX + chart.plotLeft - width / 2,
-            //                     // Right side limit
-            //                     chart.chartWidth - width - chart.marginRight
-            //                 )
-            //             ),
-            //             y: point.plotY
-            //         };
-            //     } else {
-            //         position = {
-            //             x: point.series.chart.plotLeft,
-            //             y: point.series.yAxis.top - chart.plotTop
-            //         };
-            //     }
+                //     if (point.isHeader) {
+                //         position = {
+                //             x: Math.max(
+                //                 // Left side limit
+                //                 chart.plotLeft,
+                //                 Math.min(
+                //                     point.plotX + chart.plotLeft - width / 2,
+                //                     // Right side limit
+                //                     chart.chartWidth - width - chart.marginRight
+                //                 )
+                //             ),
+                //             y: point.plotY
+                //         };
+                //     } else {
+                //         position = {
+                //             x: point.series.chart.plotLeft,
+                //             y: point.series.yAxis.top - chart.plotTop
+                //         };
+                //     }
 
-            //     return position;
-            // },
-                shared: true,
+                //     return position;
+                // },
+                    shared: true,
                 },
                 pointInterval: 3,
                 pointIntervalUnit: 'month',
@@ -888,8 +822,27 @@ shared: true, -->
                 lineWidth: 3,
                 xDateFormat:  '%Y',
                 findNearestPointBy:'xy',
-                data: year_data.map(splineData),
-            }
+                data: {{year_df_json}},
+            },
+                        {
+                type: 'spline',
+                name: '{{company_symbol}}dd zop Volume',
+                // pointInterval: 1,
+                // pointIntervalUnit: 'year',
+                tooltip:
+                {
+                    split: true,
+                    shared: false,
+                    xDateFormat:  'Q%q \'%Y',//'%b - %Y'
+
+                shadow: true,
+                borderWidth: 0,
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                },
+                data: {{price_json}},
+                zIndex: 98,
+                // yAxis: 0,
+            },
         ],
     }
     );
