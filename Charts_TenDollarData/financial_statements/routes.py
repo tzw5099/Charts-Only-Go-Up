@@ -270,6 +270,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         def groupby_agg(df):
             return df.groupby("Year").mean()
 
+    df = df.drop_duplicates(subset=['date'])
     df_quarter = df['period']
     print("df list 11",  df.head())
     df = df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link'],axis=1, errors='ignore')
@@ -561,24 +562,32 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     print("currency symbol", currency_symbol)
     print("int(latest_metric)", int(latest_metric))
     print("df", df)
+    print(df)
     # print("earliest date", (pd.to_datetime(df.date).values.astype(np.int64) // 10 ** 6)[-1])
     print("earliest date", (pd.to_datetime(df.date).values.astype(np.int64))[-1])
     earliest_date = pd.to_datetime(df.date).values.astype(np.int64)[-1]
 
 
+
     # df['ts'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
-    market_cap_path = glob.glob("D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ\\[M*/M-*-{}.csv".format(url_symbol))[0]
-    market_cap_df = pd.read_csv(market_cap_path)
-    market_cap_df['timestamp'] = pd.to_datetime(market_cap_df.datetime).values.astype(np.int64)// 10 ** 6
-    closest_list = []
-    for k in df['date']:
-        closest_list.append(min(market_cap_df['timestamp'], key=lambda x:abs(x-k)))
-    df['price'] = list(market_cap_df[market_cap_df['timestamp'].isin(closest_list)][::-1]['adjClose'])
-    # market_cap_df = market_cap_df[market_cap_df['timestamp']>earliest_date]
-    price_json = np.nan_to_num(df[['date',"{}".format("price")]].to_numpy()).tolist()[::-1]
-    print("price_json", price_json[0],price_json[-1])
-    # price_json = ""
-    print("year df json", year_df_json[0],year_df_json[-1])
+    try:
+        market_cap_path = glob.glob("D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ\\[M*/M-*-{}.csv".format(url_symbol))[0]
+        market_cap_df = pd.read_csv(market_cap_path)
+        market_cap_df['timestamp'] = pd.to_datetime(market_cap_df.datetime).values.astype(np.int64)// 10 ** 6
+        closest_list = []
+        for k in df['date']:
+            closest_list.append(min(market_cap_df['timestamp'], key=lambda x:abs(x-k)))
+        print("year df json", year_df_json[0],year_df_json[-1])
+        print("len closest list", len(closest_list), "len df", len(df))
+
+        df['price'] = list(market_cap_df[market_cap_df['timestamp'].isin(closest_list)][::-1]['adjClose'])
+        # market_cap_df = market_cap_df[market_cap_df['timestamp']>earliest_date]
+        price_json = np.nan_to_num(df[['date',"{}".format("price")]].to_numpy()).tolist()[::-1]
+        print("price_json", price_json[0],price_json[-1])
+        # price_json = ""
+    except Exception as e:
+        print("price exception ", e)
+        price_json = []
 
 
     return render_template('current_ratio.html', \

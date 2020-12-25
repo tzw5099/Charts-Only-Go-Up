@@ -344,510 +344,507 @@ shared: true, -->
                 }
         },
         title: {
-            text: '{{fin_metric_name}}'
+        text: '{{fin_metric_name}}'
         },
         tooltip:
         {
-            backgroundColor: '#1ebd1e',//'red'
-            style:
-            {
-                color: '#FFFFFF',
-                fontSize: '14px',
-                fontWeight: 'bold',
-            },
-            enabled: true,
-            shared: true,
-            valuePrefix:"$",
-            pointFormatter:function()
-            {
-                if(this.y >= 1000000000){
-                    billion = this.y / 1000000000;
-                    billion_rounded = Math.round((billion) * 10) / 10;
-                    return ('<b>$' + billion_rounded) + 'B</b>';
-                    }
-                else if(this.y >= 1000000) {
-                    million = this.y / 1000000
-                    million_rounded = Math.round((million) * 10) / 10;
-                    return ('<b>$' +million_rounded) + 'M</b>';
-                    }
-                else if(this.y >= 1000) {
-                    thousand = this.y / 1000000
-                    thousand_rounded = Math.round((thousand) * 10) / 10;
-                    return ('<b>$' + this.y / 1000) + 'K</b>';
-                    }
-                else {
-                    // return '<b>$' + this.y + '</b>';
-                    ratio = this.y / 1
-                    ratio_rounded = Math.round((ratio) * 10) / 10;
-                    return ('<b>' +ratio_rounded) + '</b>';
-                    }
-                },
-            },
+        backgroundColor: '#1ebd1e',//'red'
+        style:
+        {
+        color: '#FFFFFF',
+        fontSize: '14px',
+        fontWeight: 'bold',
+        },
+        enabled: true,
+        shared: true,
+        valuePrefix:"$",
+        pointFormatter:function()
+        {
+        if(this.y >= 1000000000){
+        billion = this.y / 1000000000;
+        billion_rounded = Math.round((billion) * 10) / 10;
+        return ('<b>$' + billion_rounded) + 'B</b>';
+        }
+        else if(this.y >= 1000000) {
+        million = this.y / 1000000
+        million_rounded = Math.round((million) * 10) / 10;
+        return ('<b>$' +million_rounded) + 'M</b>';
+        }
+        else if(this.y >= 1000) {
+        thousand = this.y / 1000000
+        thousand_rounded = Math.round((thousand) * 10) / 10;
+        return ('<b>$' + this.y / 1000) + 'K</b>';
+        }
+        else {
+        // return '<b>$' + this.y + '</b>';
+        ratio = this.y / 1
+        ratio_rounded = Math.round((ratio) * 10) / 10;
+        return ('<b>' +ratio_rounded) + '</b>';
+        }
+        },
+        },
         rangeSelector:
         {
-            selected:2,
-            inputPosition: {                    // align: 'left',
-                x: 0,                    y: 0                },
-            buttonPosition: {                    // align: 'right',
-                x: 0,                    y: 0                }
-            ,
-            buttons: [
-                        {
-                            type: 'year',        count: 3,        text: '3Y',
-                            dataGrouping:{enable:true
-                            }
-                        }, {
-                            type: 'year',        count: 5,        text: '5Y',
-                            dataGrouping:{enable:true}    },
-                            {
-                                type: 'year',        count: 10,        text: '10y',
-                                dataGrouping:{enable:false}  },
-                            {type: 'all',        text: 'All',
-                            dataGrouping:{
-                                enable:false,
-                                approximation: groupings[4],
-                            },
-                        }
-                    ]
+        selected:2,
+        inputPosition: { // align: 'left',
+        x: 0, y: 0 },
+        buttonPosition: { // align: 'right',
+        x: 0, y: 0 }
+        ,
+        buttons: [
+        {
+        type: 'year', count: 3, text: '3Y',
+        dataGrouping:{enable:true
+        }
+        }, {
+        type: 'year', count: 5, text: '5Y',
+        dataGrouping:{enable:true} },
+        {
+        type: 'year', count: 10, text: '10y',
+        dataGrouping:{enable:false} },
+        {type: 'all', text: 'All',
+        dataGrouping:{
+        enable:false,
+        approximation: groupings[4],
+        },
+        }
+        ]
         },
         xAxis:
         [
-            {
-    events: {
-      afterSetExtremes: function() {
-        this.displayBtn ? $('.highcharts-scrollbar').show() : $('.highcharts-scrollbar').hide()
-      },
-    },
-  scrollbar: {
-    enabled: true
-  },
-      zoomType: 'x',
-    events: {
-      load: function() {
-        $('.highcharts-scrollbar').hide()
-      }
-    },
-                labels:
-                {
-                    style:
-                    {
-                        color: '#black',//'red'
-                        fontSize: '14px'
-                    }
-                },
-                crosshair:
-                {
-                    width: 2,
-                    color: '#1C9179',
-                    snap: false,
-                    className: "x_crosshair",
-                    zIndex: 100,
-                },
-                type: 'datetime',
-                dateTimeLabelFormats:
-                    {
-                        month: '%Y',//'Q%q - %y',
-                        year:'%Y',
-                    },
-                gridLineWidth: 1,
-                gridLineColor:'#E2E3E3', //'#000000',
-                alternateGridColor: '#FDFFD5', // '#FEF8E3'
-                minPadding:0,
-            },
         {
-            // tickPositions: {{df_json_date_year}},
+        events: {
+        afterSetExtremes: function() {
+        this.displayBtn ? $('.highcharts-scrollbar').show() : $('.highcharts-scrollbar').hide()
+        },
+        },
+        scrollbar: {
+        enabled: true
+        },
+        zoomType: 'x',
+        events: {
+        load: function() {
+        $('.highcharts-scrollbar').hide()
+        }
+        },
+        labels:
+        {
+        style:
+        {
+        color: '#black',//'red'
+        fontSize: '14px'
+        }
+        },
+        crosshair:
+        {
+        width: 2,
+        color: '#1C9179',
+        snap: false,
+        className: "x_crosshair",
+        zIndex: 100,
+        },
+        type: 'datetime',
+        dateTimeLabelFormats:
+        {
+        month: '%Y',//'Q%q - %y',
+        year:'%Y',
+        },
+        gridLineWidth: 1,
+        gridLineColor:'#E2E3E3', //'#000000',
+        alternateGridColor: '#FDFFD5', // '#FEF8E3'
+        minPadding:0,
+        },
+        {
+        // tickPositions: {{df_json_date_year}},
 
-                labels:
-                {
-                    style:
-                    {
-                        color: 'black',//'red'
-                        fontSize: '14px',
-                        fontWeight: 'bold',
-                    }
-                },
-                crosshair:
-                {
-                    width: 2,
-                    color: '#1C9179',
-                    snap: false,
-                    className: "x_crosshair",
-                    zIndex: 100,
-                },
-                type: 'datetime',
-                dateTimeLabelFormats:
-                    {
-                    },
-                format: '{value:%Y}',
-                minPadding:0,
+        labels:
+        {
+        style:
+        {
+        color: 'black',//'red'
+        fontSize: '14px',
+        fontWeight: 'bold',
+        }
+        },
+        crosshair:
+        {
+        width: 2,
+        color: '#1C9179',
+        snap: false,
+        className: "x_crosshair",
+        zIndex: 100,
+        },
+        type: 'datetime',
+        dateTimeLabelFormats:
+        {
+        },
+        format: '{value:%Y}',
+        minPadding:0,
         },
         ],
         plotOptions:
 
-
-        {
-            series:{connectNulls: true,
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          // if last point
-          if(this.point === this.series.data[this.series.data.length-1]) {
-            return this.series.name;
-          }
-        }
-      }
+{
+series:{connectNulls: true,
+dataLabels: {
+enabled: true,
+formatter: function () {
+// if last point
+if(this.point === this.series.data[this.series.data.length-1]) {
+return this.series.name;
+}
+}
+}
 },
-        line: {
-            allowPointSelect: true,
-            dataLabels: {
-                enabled: true,
-                formatter: function() {
+line: {
+allowPointSelect: true,
+dataLabels: {
+enabled: true,
+formatter: function() {
 
-                    if(this.y >= 1000000000){
-                        billion = this.y / 1000000000;
-                        billion_rounded = Math.round((billion) * 10) / 10;
-                        max_min_num =  ('<b>$' + billion_rounded) + 'B</b>';
-                        }
-                    else if(this.y >= 1000000) {
-                        million = this.y / 1000000
-                        million_rounded = Math.round((million) * 10) / 10;
-                        max_min_num = ('<b>$' +million_rounded) + 'M</b>';
-                        }
-                    else if(this.y >= 1000) {
-                        thousand = this.y / 1000000
-                        thousand_rounded = Math.round((thousand) * 10) / 10;
-                        max_min_num = ('<b>$' + this.y / 1000) + 'K</b>';
-                        }
-                    else {
-                        // return '<b>$' + this.y + '</b>';
-                        ratio = this.y / 1
-                        ratio_rounded = Math.round((ratio) * 10) / 10;
-                        max_min_num = ('<b>' +ratio_rounded) + '</b>';
-                        }
+if(this.y >= 1000000000){
+billion = this.y / 1000000000;
+billion_rounded = Math.round((billion) * 10) / 10;
+max_min_num = ('<b>$' + billion_rounded) + 'B</b>';
+}
+else if(this.y >= 1000000) {
+million = this.y / 1000000
+million_rounded = Math.round((million) * 10) / 10;
+max_min_num = ('<b>$' +million_rounded) + 'M</b>';
+}
+else if(this.y >= 1000) {
+thousand = this.y / 1000000
+thousand_rounded = Math.round((thousand) * 10) / 10;
+max_min_num = ('<b>$' + this.y / 1000) + 'K</b>';
+}
+else {
+// return '<b>$' + this.y + '</b>';
+ratio = this.y / 1
+ratio_rounded = Math.round((ratio) * 10) / 10;
+max_min_num = ('<b>' +ratio_rounded) + '</b>';
+}
 
-                    var dataMax = this.series.dataMax;
-                    var dataMin = this.series.dataMin;
-                    if (this.y === dataMax) {
-                    return ('<b>Top ' +max_min_num) + '</b>';
-                    //   return this.y;
-                    }
-                    if (this.y === dataMin) {
-                    return ('<b>Bottom ' +max_min_num) + '</b>';
-                    }
-                    if (this.series.index == 0){
-                        return this.y;//[-1];
-                    }
-                    },
-                    },
-            pointPlacement: 'on',},
+var dataMax = this.series.dataMax;
+var dataMin = this.series.dataMin;
+if (this.y === dataMax) {
+return ('<b>Top ' +max_min_num) + '</b>';
+// return this.y;
+}
+if (this.y === dataMin) {
+return ('<b>Bottom ' +max_min_num) + '</b>';
+}
+if (this.series.index == 0){
+return this.y;//[-1];
+}
+},
+},
+pointPlacement: 'on',},
 
-            column:
-            {
-                groupPadding: 0,
-            },
-            series:
-            {
-                name: 'Quarterly Data',
-                groupPadding: 0,
+column:
+{
+groupPadding: 0,
+},
+series:
+{
+name: 'Quarterly Data',
+groupPadding: 0,
 
-                dataGrouping: {
-                    enabled: false,
-                    },
-                type: 'column',
-                xAxis: 1,
-                tooltip:{
-                    shared: true,
-                },
-            },
-            series:
-            {
-            type: 'line',
-            marker: {
-                radius: 4,
-                fillColor: '#1ebd1e',
-                enabled: true,
-                zIndex:100,
-            },
-                xAxis: 0,
-                            name: "Line Trend",
-                dataGrouping: {
-                    enabled: false,
-                    },
-            states:
-            {
-                inactive:
-                {
-                    opacity: 1
-                },
-            },
-            },
+dataGrouping: {
+enabled: false,
+},
+type: 'column',
+xAxis: 1,
+tooltip:{
+shared: true,
+},
+},
+series:
+{
+type: 'line',
+marker: {
+radius: 4,
+fillColor: '#1ebd1e',
+enabled: true,
+zIndex:100,
+},
+xAxis: 0,
+name: "Line Trend",
+dataGrouping: {
+enabled: false,
+},
+states:
+{
+inactive:
+{
+opacity: 1
+},
+},
+},
+},
+yAxis:
+[
 
-        },
-        yAxis:
-        [
+{
+// height: '100%',
+// min: '50',
+yAxis: 1,
+visible: false,
+maxPadding: 0.1,
+gridLineWidth: 1,
+gridLineColor:'#E2E3E3', //'#000000',
 
-        {
-            // height: '100%',
-            // min: '50',
-            yAxis: 1,
-            visible: false,
-            maxPadding: 0.1,
-            gridLineWidth: 1,
-            gridLineColor:'#E2E3E3', //'#000000',
+crosshair:{
+width: 2,
+color: '#1C9179',
+snap: false,
+className: "y_crosshair",
+zIndex: 100,
+},
+opposite: true,
+labels:
+{
+style:
+{
+color: 'black',//'red'
+fontSize: '14px',
+fontWeight: 'bold',
+},
+align: 'right',
+},
+},
 
-            crosshair:{
-                width: 2,
-                color: '#1C9179',
-                snap: false,
-                className: "y_crosshair",
-                zIndex: 100,
-                },
-            opposite: true,
-            labels:
-            {
-                style:
-                {
-                    color: 'black',//'red'
-                    fontSize: '14px',
-                    fontWeight: 'bold',
-                },
-                align: 'right',
-            },
-        },
+{
+height:'100%',
+crosshair:{
+width: 2,
+color: '#1C9179',
+snap: false,
+className: "y_crosshair",
+zIndex: 100,
+},
+// opposite: false,
+minPadding:100,
+labels:
+{
+style:
+{
+color: 'black',//'red'
+fontSize: '14px'
+},
+x: 50,
+// opposite: false,
+align: 'right',
+formatter:function()
+{
 
-        {
-            height:'100%',
-            crosshair:{
-                width: 2,
-                color: '#1C9179',
-                snap: false,
-                className: "y_crosshair",
-                zIndex: 100,
-                },
-            // opposite: false,
-            minPadding:100,
-            labels:
-            {
-                style:
-                {
-                    color: 'black',//'red'
-                    fontSize: '14px'
-                },
-                x: 50,
-                // opposite: false,
-                align: 'right',
-            formatter:function()
-                {
+if(this.value >= 1000000000){
+billion = this.value / 1000000000;
+billion_rounded = Math.round((billion) * 100) / 100;
+return ('<b>$' + billion_rounded) + 'B</b>';
+}
+else if(this.value >= 1000000) {
+million = this.value / 1000000
+million_rounded = Math.round((million) * 100) / 100;
+return ('<b>$' +million_rounded) + 'M</b>';
+}
+else if(this.value >= 1000) {
+thousand = this.value / 1000000
+thousand_rounded = Math.round((thousand) * 100) / 100;
+return ('<b>$' + this.value / 1000) + 'K</b>';
+}
+else {
+// return '<b>$' + this.y + '</b>';
+ratio = this.value / 1
+million_rounded = Math.round((ratio) * 100) / 100;
+return ('<b>' +million_rounded) + '</b>';
+}
+},
 
-                if(this.value >= 1000000000){
-                    billion = this.value / 1000000000;
-                    billion_rounded = Math.round((billion) * 100) / 100;
-                    return ('<b>$' + billion_rounded) + 'B</b>';
-                    }
-                else if(this.value >= 1000000) {
-                    million = this.value / 1000000
-                    million_rounded = Math.round((million) * 100) / 100;
-                    return ('<b>$' +million_rounded) + 'M</b>';
-                    }
-                else if(this.value >= 1000) {
-                    thousand = this.value / 1000000
-                    thousand_rounded = Math.round((thousand) * 100) / 100;
-                    return ('<b>$' + this.value / 1000) + 'K</b>';
-                    }
-                else {
-                    // return '<b>$' + this.y + '</b>';
-                    ratio = this.value / 1
-                    million_rounded = Math.round((ratio) * 100) / 100;
-                    return ('<b>' +million_rounded) + '</b>';
-                    }
-                },
+},
+},
+{
+opposite:false,
+height:'100%',
 
-            },
-        },
-         {
-            opposite:false,
-            height:'100%',
+crosshair:{
+width: 2,
+color: '#1C9179',
+snap: false,
+className: "y_crosshair",
+zIndex: 100,
+},
+// opposite: false,
+minPadding:100,
+},
+],
+tooltip: {
+backgroundColor: '#1ebd1e',//'red'
+style:
+{
+color: '#FFFFFF',
+fontSize: '14px',
+fontWeight: 'bold',
+},
+enabled: true,
+shared: false,
+valuePrefix:"$",
+pointFormatter:function()
+{
+if(this.y >= 1000000000){
+billion = this.y / 1000000000;
+billion_rounded = Math.round((billion) * 10) / 10;
+return ('<b>$' + billion_rounded) + 'B</b>';
+}
+else if(this.y >= 1000000) {
+million = this.y / 1000000
+million_rounded = Math.round((million) * 10) / 10;
+return ('<b>$' +million_rounded) + 'M</b>';
+}
+else if(this.y >= 1000) {
+thousand = this.y / 1000000
+thousand_rounded = Math.round((thousand) * 10) / 10;
+return ('<b>$' + this.y / 1000) + 'K</b>';
+}
+else {
+// return '<b>$' + this.y + '</b>';
+ratio = this.y / 1
+million_rounded = Math.round((ratio) * 100) / 100;
+return ('<b>' +million_rounded) + '</b>';
+}
+},
+shape: 'square',
+headerShape: 'callout',
+borderWidth: 0,
+shadow: false,
+positioner: function (width, height, point) {
+var chart = this.chart,
+position;
 
-            crosshair:{
-                width: 2,
-                color: '#1C9179',
-                snap: false,
-                className: "y_crosshair",
-                zIndex: 100,
-                },
-            // opposite: false,
-            minPadding:100,
-         },
-        ],
-        tooltip: {
-            backgroundColor: '#1ebd1e',//'red'
-            style:
-            {
-                color: '#FFFFFF',
-                fontSize: '14px',
-                fontWeight: 'bold',
-            },
-            enabled: true,
-            shared: false,
-            valuePrefix:"$",
-            pointFormatter:function()
-            {
-                if(this.y >= 1000000000){
-                    billion = this.y / 1000000000;
-                    billion_rounded = Math.round((billion) * 10) / 10;
-                    return ('<b>$' + billion_rounded) + 'B</b>';
-                    }
-                else if(this.y >= 1000000) {
-                    million = this.y / 1000000
-                    million_rounded = Math.round((million) * 10) / 10;
-                    return ('<b>$' +million_rounded) + 'M</b>';
-                    }
-                else if(this.y >= 1000) {
-                    thousand = this.y / 1000000
-                    thousand_rounded = Math.round((thousand) * 10) / 10;
-                    return ('<b>$' + this.y / 1000) + 'K</b>';
-                    }
-                else {
-                    // return '<b>$' + this.y + '</b>';
-                    ratio = this.y / 1
-                    million_rounded = Math.round((ratio) * 100) / 100;
-                    return ('<b>' +million_rounded) + '</b>';
-                    }
-                },
-            shape: 'square',
-            headerShape: 'callout',
-            borderWidth: 0,
-            shadow: false,
-            positioner: function (width, height, point) {
-                var chart = this.chart,
-                    position;
+if (point.isHeader) {
+position = {
+x: Math.max(
+// Left side limit
+chart.plotLeft,
+Math.min(
+point.plotX + chart.plotLeft - width / 2,
+// Right side limit
+chart.chartWidth - width - chart.marginRight
+)
+),
+y: point.plotY
+};
+} else {
+position = {
+x: point.series.chart.plotLeft,
+y: point.series.yAxis.top - chart.plotTop
+};
+}
 
-                if (point.isHeader) {
-                    position = {
-                        x: Math.max(
-                            // Left side limit
-                            chart.plotLeft,
-                            Math.min(
-                                point.plotX + chart.plotLeft - width / 2,
-                                // Right side limit
-                                chart.chartWidth - width - chart.marginRight
-                            )
-                        ),
-                        y: point.plotY
-                    };
-                } else {
-                    position = {
-                        x: point.series.chart.plotLeft,
-                        y: point.series.yAxis.top - chart.plotTop
-                    };
-                }
+return position;
+},
+},
+series:
+[
+{
+type: 'column',
+name: '{{company_symbol}}dd Stock Volume',
+pointInterval: 1,
+pointIntervalUnit: 'year',
+tooltip:
+{
+split: true,
+shared: false,
+xDateFormat: 'Q%q \'%Y',//'%b - %Y'
+// positioner: function() {
+// return {
+// x: this.chart.plotLeft,
+// y: this.chart.plotTop
+// };
+// },
+// shared: true,
+shadow: true,
+borderWidth: 0,
+backgroundColor: 'rgba(255,255,255,0.8)',
+},
+data: {{df_json}},
+zIndex: 98,
+yAxis: 1,
+},
+{
+type: 'line',
+yAxis: 1,
+zIndex: 100,
+tooltip:
+{
+shared: true,
+xDateFormat: 'FY %Y',//'%b - %Y'
+backgroundColor: '#1ebd1e',//'red'
+// positioner: function() {
+// return {
+// x: this.chart.plotLeft,
+// y: this.chart.plotTop
+// };
+// },
+// positioner: function (width, height, point) {
+// var chart = this.chart,
+// position;
 
-                return position;
-            },
-        },
+// if (point.isHeader) {
+// position = {
+// x: Math.max(
+// // Left side limit
+// chart.plotLeft,
+// Math.min(
+// point.plotX + chart.plotLeft - width / 2,
+// // Right side limit
+// chart.chartWidth - width - chart.marginRight
+// )
+// ),
+// y: point.plotY
+// };
+// } else {
+// position = {
+// x: point.series.chart.plotLeft,
+// y: point.series.yAxis.top - chart.plotTop
+// };
+// }
 
-        series:
-        [
-            {
-                type: 'column',
-                name: '{{company_symbol}}dd Stock Volume',
-                pointInterval: 1,
-                pointIntervalUnit: 'year',
-                tooltip:
-                {
-                    split: true,
-                    shared: false,
-                    xDateFormat:  'Q%q \'%Y',//'%b - %Y'
-                // positioner: function() {
-                // return {
-                //     x: this.chart.plotLeft,
-                //     y: this.chart.plotTop
-                // };
-                // },
-                // shared: true,
-                shadow: true,
-                borderWidth: 0,
-                backgroundColor: 'rgba(255,255,255,0.8)',
-                },
-                data: {{df_json}},
-                zIndex: 98,
-                yAxis: 1,
-            },
-            {
-                type: 'line',
-                yAxis: 1,
-                zIndex: 100,
-                tooltip:
-                {
-                    shared: true,
-                    xDateFormat:  'FY %Y',//'%b - %Y'
-                    backgroundColor: '#1ebd1e',//'red'
-                // positioner: function() {
-                // return {
-                //     x: this.chart.plotLeft,
-                //     y: this.chart.plotTop
-                // };
-                // },
-                // positioner: function (width, height, point) {
-                //     var chart = this.chart,
-                //         position;
+// return position;
+// },
+shared: true,
+},
+pointInterval: 3,
+pointIntervalUnit: 'month',
+color: '#1ebd1e',//'#343A40', // '#1C9179',
+lineWidth: 3,
+xDateFormat: '%Y',
+findNearestPointBy:'xy',
+data: {{year_df_json}},
+},
+{
+type: 'spline',
+name: '{{company_symbol}}dd zop Volume',
+// pointInterval: 1,
+// pointIntervalUnit: 'year',
+tooltip:
+{
+split: true,
+shared: false,
+xDateFormat: 'Q%q \'%Y',//'%b - %Y'
 
-                //     if (point.isHeader) {
-                //         position = {
-                //             x: Math.max(
-                //                 // Left side limit
-                //                 chart.plotLeft,
-                //                 Math.min(
-                //                     point.plotX + chart.plotLeft - width / 2,
-                //                     // Right side limit
-                //                     chart.chartWidth - width - chart.marginRight
-                //                 )
-                //             ),
-                //             y: point.plotY
-                //         };
-                //     } else {
-                //         position = {
-                //             x: point.series.chart.plotLeft,
-                //             y: point.series.yAxis.top - chart.plotTop
-                //         };
-                //     }
-
-                //     return position;
-                // },
-                    shared: true,
-                },
-                pointInterval: 3,
-                pointIntervalUnit: 'month',
-                color: '#1ebd1e',//'#343A40', // '#1C9179',
-                lineWidth: 3,
-                xDateFormat:  '%Y',
-                findNearestPointBy:'xy',
-                data: {{year_df_json}},
-            },
-                        {
-                type: 'spline',
-                name: '{{company_symbol}}dd zop Volume',
-                // pointInterval: 1,
-                // pointIntervalUnit: 'year',
-                tooltip:
-                {
-                    split: true,
-                    shared: false,
-                    xDateFormat:  'Q%q \'%Y',//'%b - %Y'
-
-                shadow: true,
-                borderWidth: 0,
-                backgroundColor: 'rgba(255,255,255,0.8)',
-                },
-                data: {{price_json}},
-                zIndex: 98,
-                // yAxis: 0,
-            },
-        ],
-    }
-    );
-    }
-    );
+shadow: true,
+borderWidth: 0,
+backgroundColor: 'rgba(255,255,255,0.8)',
+},
+data: {{price_json}},
+zIndex: 98,
+// yAxis: 0,
+},
+],
+}
+);
+}
+);
 </script>
 <script>
 document.getElementById('button').addEventListener
