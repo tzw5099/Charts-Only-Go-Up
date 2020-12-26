@@ -42,7 +42,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     def magnitude_num(number, currency_symbol):
         try:
             print("magnitude!")
-            if len(str(number)) > 9 and number > 1000000000:
+            if len(str(number)) > 12 and number > 1000000000000:
+                magnitude = number/1000000000000
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"T")
+            elif len(str(number)) > 9 and number > 1000000000:
                 magnitude = number/1000000000
                 magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
             elif len(str(number)) > 6 and number > 1000000:
@@ -358,19 +361,42 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # year_df = year_df.groupby(pd.Grouper(freq='Y')).nth(0)
         # year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
         year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_title)]].to_numpy()).tolist()
+        # year_df_json = list(year_df["{}".format(fin_metric_title)])
 
 
-        year_df['YoY % Change'] = year_df['{}'.format(fin_metric_title)]/year_df['{}'.format(fin_metric_title)].shift(-4)
-        num_years_increased = len(year_df[year_df['YoY % Change']>0])
+        year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_title)]/year_df['{}'.format(fin_metric_title)].shift(-4)
+        num_years_increased = len(year_df[year_df['Y/Y % Change']>0])
         fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
 
     except Exception as e:
         year_df = groupby_agg(df)
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
         year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_name)]].to_numpy()).tolist()
-        year_df['YoY % Change'] = year_df['{}'.format(fin_metric_name)]/year_df['{}'.format(fin_metric_name)].shift(-4)
-        num_years_increased = len(year_df[year_df['YoY % Change']>0])
+
+        # year_df_json = list(year_df["{}".format(fin_metric_title)])
+        year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_name)]/year_df['{}'.format(fin_metric_name)].shift(-4)
+        num_years_increased = len(year_df[year_df['Y/Y % Change']>0])
         print("var excepted",e)
+    len_year_df = len(year_df)
+    year_df_json=year_df_json[0:len_year_df-1]
+    # year_df_json_list = []
+    # for n in year_df_json:
+    #     if len(year_df_json_list) < len(df):
+    #         year_df_json_list.append(n)
+    #     else:
+    #         pass
+    #     if len(year_df_json_list) < len(df):
+    #         year_df_json_list.append(n)
+    #     else:
+    #         pass
+    #     if len(year_df_json_list) < len(df):
+    #         year_df_json_list.append(n)
+    #     else:
+    #         pass
+    #     if len(year_df_json_list) < len(df):
+    #         year_df_json_list.append(n)
+    #     else:
+    #         pass
     df_json_date_year  = np.nan_to_num(year_df['year'].to_numpy()).tolist()#[::-1]
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])
     df.index = df['Quarter & Year']
@@ -552,6 +578,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # latest_metric = "${}".format(list(df["{}".format(fin_metric_name)])[0])
 
     df_json  = np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()[::-1]
+    last_4_quarters = np.sum(df["quarter avg"][0:4])
 
 
     print("year dfzz", list(year_df))
@@ -588,13 +615,23 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     except Exception as e:
         print("price exception ", e)
         price_json = []
+    print("last_4_quarters",last_4_quarters)
+    last_4_quarters_str = magnitude_num(last_4_quarters,currency_symbol)
+    print("last 0",  (df["quarter avg"][0]),(df["quarter avg"][1]),(df["quarter avg"][2]),(df["quarter avg"][3]))
+    print("last -1",  np.sum(df["quarter avg"][-1]))
+    # df['FY metric'] = year_df_json_list[::-1]
+    # year_df_json = np.nan_to_num(df[['date',"{}".format("FY metric")]].to_numpy()).tolist()
+    # print("year df json", year_df_json)
 
 
     return render_template('current_ratio.html', \
                             company_symbol = profiles_dict['symbol'],\
+                            last_4_quarters = last_4_quarters,\
+                            last_4_quarters_str = last_4_quarters_str,\
                             price_json = price_json,\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\
+                            currency_symbol = currency_symbol,\
                             company_exchange = profiles_dict['exchange'],\
                             company_industry = profiles_dict['industry'],\
                             company_description = profiles_dict['description'],\
