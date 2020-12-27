@@ -34,6 +34,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     from route_imports.ratio_map import fin_statement_renamed_cols
     from route_imports.ratio_map import metric_to_formula_map
     from route_imports.ratio_map import url_to_metric_map
+    from flask import Markup
     # from route_imports.ratio_map import metric_to_list_variables_map
 
     start_time = time.time()
@@ -438,6 +439,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     num_years = len(sorted_metric)
     earliest_year = list((year_df.index.astype(str).str[0:4]))[0]
     latest_year = list((year_df.index.astype(str).str[0:4]))[-1]
+    previous_year = int(latest_year)-1
     earliest_metric = list(sorted_metric)[0]
     latest_metric = list(sorted_metric)[-1]
     earliest_metric_str = magnitude_num(earliest_metric, currency_symbol)
@@ -445,6 +447,13 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     print("earliest metric", earliest_metric)
     print("latest metric", latest_metric)
     # if(lastyear>0,(thisyear/lastyear-1),((thisyear+abs(lastyear)/abs(lastyear))
+    # up_green = '<span class="up_green"><i class="fa fa-arrow-up up_green" aria-hidden="true"></i>'
+    up_green_prefix = '<span class="up_green">'
+    up_green_suffix = ' <i class="material-icons">arrow_upward</i></span>'
+    # <i class="material-icons">face</i>
+    # down_red_prefix = '<span class="down_red"><i class="fa fa-arrow-up down_red" aria-hidden="true"></i>'
+    down_red_prefix = '<span class="down_red">'
+    down_red_suffix = ' <i class="material-icons">arrow_downward</i></span>'
     try:
         if earliest_metric > 0:
             pct_chg = (latest_metric/earliest_metric) - 1
@@ -452,19 +461,24 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             pct_chg = (latest_metric+abs(earliest_metric)/abs(earliest_metric))
         # pct_chg = (latest_metric/earliest_metric)
         historical_pct_chg = str(round(pct_chg-1, 0))
-        annual_pct_chg  = "+"+str(round(100*(pct_chg**(1/len(sorted_metric))-1),1)) # round((latest_metric/earliest_metric)/2,2)
+        annual_pct_chg  = str(round(100*(pct_chg**(1/len(sorted_metric))-1),1)) # round((latest_metric/earliest_metric)/2,2)
         if pct_chg>=0:
-            hist_pct_chg_str = "+{}x".format(historical_pct_chg)
-            annual_pct_chg_str = "{}%".format(annual_pct_chg)
+
+
+            hist_pct_chg_str = Markup("{}+{}x{}".format(up_green_prefix, historical_pct_chg, up_green_suffix))
+            annual_pct_chg_str = Markup("{}+{}%{}".format(up_green_prefix, annual_pct_chg, up_green_suffix))
+
+
         elif pct_chg<0:
-            hist_pct_chg_str = "-{}x".format(historical_pct_chg)
-            annual_pct_chg_str = "{}%".format(annual_pct_chg)
+            hist_pct_chg_str = Markup("{}-{}x{}".format(down_red_prefix, historical_pct_chg, down_red_suffix))
+            annual_pct_chg_str = Markup("{}{}%{}".format(down_red_prefix, annual_pct_chg, down_red_suffix))
         else:
             hist_pct_chg_str = ""
             annual_pct_chg_str = ""
         historical_pct_chg = hist_pct_chg_str
         annual_pct_chg = annual_pct_chg_str
-    except:
+    except Exception as e:
+        print("markup! exception", e)
         pct_chg = "-"
         historical_pct_chg = "-"
         annual_pct_chg = "-"
@@ -534,37 +548,29 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     col_list_str = ''.join(map(str, col_list))
 
     df_html = df_t.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
-
-    df_tall = df
+    year_df['Year']=year_df.index
+    df_tall = year_df[::-1]
 
     if "{}".format(statement_or_ratio) in fin_statements_list:
         # fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
         fin_metric_title,fin_metric_name = fin_metric_name,fin_metric_title
         # df_tall['pct_chg'] = df_tall['{}'.format(fin_metric_title)].pct_change()
-
-        df_tall['YoY % Change'] = df_tall['{}'.format(fin_metric_title)]/df_tall['{}'.format(fin_metric_title)].shift(-4)
+        df_tall['YoY % Change'] = df_tall['{}'.format(fin_metric_title)]/df_tall['{}'.format(fin_metric_title)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
-
-
         print(list(df_tall['{}'.format(fin_metric_title)]))
-        df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_title),'YoY % Change']].to_html(index=False)
-
+        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title),'YoY % Change']].to_html(index=False)
         full_path = csv_file.split(' ~ ')
         path = pathlib.PurePath(full_path[0])
     else:
-        df_tall['YoY % Change'] = df_tall['{}'.format(fin_metric_name)]/df_tall['{}'.format(fin_metric_name)].shift(-4)
-
+        df_tall['YoY % Change'] = df_tall['{}'.format(fin_metric_name)]/df_tall['{}'.format(fin_metric_name)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
-
-        df_html_tall = df_tall[['{}'.format('Quarter & Year'),'{}'.format(fin_metric_name), 'YoY % Change']]
-        df_html_tall.columns = ["Quarter & Year", "{}".format(fin_metric_title),"YoY % Change"]
+        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_name), 'YoY % Change']]
+        df_html_tall.columns = ["Year", "{}".format(fin_metric_title),"YoY % Change"]
         df_html_tall = df_html_tall.to_html(index=False)
     df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="abc" id="df_myTable" border="1" class="dataframe">')
     # df_html_tall = df_html_tall.replace('inf','class="abc" id="df_myTable" border="1" class="dataframe">')
-
     df_html_tall = df_html_tall.replace("\n","")
     df_html_tall = df_html_tall.replace("{}".format("["),"")
-
     df_html_tall = df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
@@ -587,11 +593,22 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()
         df['quarter avg'] = df["{}".format(fin_metric_name)].rolling(window=8,min_periods=1).mean()
         # latest_metric = "${}".format(list(df["{}".format(fin_metric_name)])[0])
-
     df_json  = np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()[::-1]
-    last_4_quarters = np.sum(df["quarter avg"][0:4])
-    prev_4_quarters = np.sum(df["quarter avg"][5:9])
-    y_y_chg = str(np.round(((last_4_quarters/prev_4_quarters)-1)*100,2))+"%"
+
+    try:
+        last_4_quarters = np.sum(df["quarter avg"][0:4])
+        prev_4_quarters = np.sum(df["quarter avg"][5:9])
+        y_y = (last_4_quarters/prev_4_quarters)-1
+        y_y_chg = np.round(y_y*100,2)
+        if y_y>=0:
+            y_y_chg = Markup("{}+{}%{}".format(up_green_prefix, y_y_chg, up_green_suffix))
+        elif y_y<0:
+            y_y_chg = Markup("{}{}%{}".format(down_red_prefix, y_y_chg, down_red_suffix))
+        else:
+            y_y_chg = ""
+    except Exception as e:
+        print("markup! exception", e)
+        y_y_chg = ""
 
 
     print("year dfzz", list(year_df))
@@ -635,7 +652,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # df['FY metric'] = year_df_json_list[::-1]
     # year_df_json = np.nan_to_num(df[['date',"{}".format("FY metric")]].to_numpy()).tolist()
     # print("year df json", year_df_json)
-    from flask import Markup
+
     try:
         # url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric
         url_tag_prefix='<a class="similar_companies_urls" href="'
@@ -684,6 +701,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             top_25_str = top_25_str,\
                             earliest_year = earliest_year,\
                             latest_year = latest_year,\
+                            previous_year = previous_year,\
                             earliest_metric_str = earliest_metric_str,\
                             latest_metric_str = latest_metric_str,\
                             present_num = present_num,\

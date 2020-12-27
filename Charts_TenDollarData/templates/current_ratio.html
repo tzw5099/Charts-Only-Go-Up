@@ -31,6 +31,7 @@ shared: true, -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
@@ -67,17 +68,8 @@ shared: true, -->
                 margin:0 auto}
             .hist_stats{text-align:right}
             .dataframe{overflow:scroll;color:blue}
-
-            div.card-body.hist_table{overflow:scroll;-ms-overflow-style:none;/* IE and Edge */
-                scrollbar-width:none;/* Firefox */
-            }
-
-
-            div.card-body.hist_table::-webkit-scrollbar{display:none}
-
             div.card.shadow.border-left-primary.py-2{position:sticky;position:-webkit-sticky}
 
-            div.sticky-top{top:160px}
         </style>
         <style>
             #df_myTable{margin:0 auto}
@@ -88,7 +80,7 @@ shared: true, -->
 
             div.card-body.hist_table::-webkit-scrollbar{display:none;color:#20c08d}
 
-            div.sticky-top{top:160px}
+            /* div.sticky-top{top:160px} */
 
             .page-content{max-width:1200px;margin:32px auto;padding:32px;background:#fff}
 
@@ -747,9 +739,123 @@ shared: true, -->
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
         <style>
+            #page-tabs {
+                margin-top: 20px;
+                overflow: hidden;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+            }
+            #page-tabs, #page-tabs > ul {
+                margin: 0;
+                padding: 0;
+            }
+            #page-tabs #tabs {
+                clear: both;
+                overflow: auto;
+                width: 100%;
+            }
+            #page-tabs #tabs > li {
+                float: left;
+                list-style: none;
+                display: block;
+                cursor: pointer;
+                background-color: gray;
+            }
+            #page-tabs #tabs > li .tab-wrapper {
+                padding: 20px 0px;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                border-right: 1px solid #dedede;
+            }
+            #page-tabs #tabs > li.last .tab-wrapper {
+                border-right: none;
+            }
+            #page-tabs #tabs > li.xactive {
+                background-color: #EDEDED;
+            }
+            #page-tabs #tabs > li.xactive .tab-wrapper {
+                color: #aa5c09;
+            }
+            #page-tabs #tabs > li.first {
+            }
+            #page-tabs #tabs > li.last {
+            }
+            #page-tabs #panels {
+                clear: both;
+                position: relative;
+                list-style: none;
+            }
+            #page-tabs #panels > li {
+                margin: 0px;
+                padding: 0px;
+                height: 0px;
+                width: 100%;
+                list-style: none;
+            }
+            #page-tabs #panels > li ul {
+                margin: 10px 20px;
+            }
+            #page-tabs #panels > li ul li {
+                list-style: disc;
+            }
+            #page-tabs #panels .panel-wrapper {
+                display: none;
+                width: auto;
+                padding: 30px;
+                background-color: #EDEDED;
+                position: relative;
+            }
+            #page-tabs #panels > li.xactive {
+                height: auto;
+            }
+            #page-tabs #panels > li.xactive .panel-wrapper {
+                display: block;
+            }
+            #page-tabs #panels .accordion-tab {
+                display: none;
+                padding: 25px 30px;
+                background-color: #808080;
+                color: #FFF;
+                font-weight: bold;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            #page-tabs #panels .xactive .accordion-tab {
+                border-bottom: none;
+                background-color: #EDEDED;
+                color: #AA5C09;
+                padding-bottom: 0px;
+            }
+            /* */
+            @media only screen and (max-width: 700px) {
+                #page-tabs #tabs {
+                    display: none;
+                }
+                #page-tabs #panels > li {
+                    position: static;
+                    height: auto;
+                }
+                #page-tabs #panels .accordion-tab {
+                    display: block;
+                    border-bottom: 1px solid #595959;
+                }
+                #page-tabs #panels .panel-wrapper {
+                    width: auto;
+                    padding: 30px;
+                }
+                #page-tabs #panels .accordion-tab {
+                    font-size: 17px;
+                }
+            }
+        </style>
+
+        <style>
             .tt-menu{max-height:130px;overflow-y:auto;width:500px;background-color:#FFFFFF}
             .typeahead{width:100px;background-color:yellow}
         </style>
+
     </head>
     <body class="fixed_body">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="color: #212529;">
@@ -891,8 +997,6 @@ shared: true, -->
                             <p>Generated by the <a href="http://sebpearce.com/bullshit/">New Age Bullshit Generator</a></p>
                           </div>
                         </div> -->
-    </body>
-</html>
 </div>
 <div class="table_container"></div>
 <div id="chart"></div>
@@ -943,6 +1047,7 @@ $(document).ready(function () {
     });
 });
 </script>
+
 <div class="d-flex flex-column" id="content-wrapper">
     <div class="row">
         <div class="col-md-8 col-lg-8 col-xl-8">
@@ -963,11 +1068,12 @@ $(document).ready(function () {
                 </h1>
                 <h2 class="text-primary mb-0">
                     <!-- {{ latest_year }} -->
-                    12 Month
+                    Last 12 Months
                 {{ fin_metric_name }}
-                :
+                <span class="up_green"><i class="fa fa-arrow-up up_green" aria-hidden="true"></i></span> : <i class="fa fa-arrow-down down_red" aria-hidden="true"></i>
+                <!-- <br / > -->
                 {{ last_4_quarters_str }}
-                (Y/Y%
+                (YoY
                 {{ y_y_chg }}
                 )
                     <br>
@@ -979,40 +1085,67 @@ $(document).ready(function () {
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
                     <br>
                 </div>
-                <div id="content">
+<div id="page-tabs">
+    <ul id="tabs">
+        <li>Tab 1</li>
+        <li>Tab 2</li>
+        <li>Tab 3</li>
+        <li>Tab 4</li>
+    </ul>
+    <ul id="panels">
+        <li>Panel 1</li>
+        <li>Panel 2</li>
+        <li>Panel 3</li>
+        <li>Panel 4</li>
+    </ul>
+</div>
+<script>
+    var selectedTab = 0,
+        scrollDelay = 20,
+        scrollSpeed = 400,
+        scrolltopOffset = 35;
+
+    $("#tabs").children().each(function (i) {
+        i = i + 1;
+        $(this).attr('id', "tab-" + i).addClass("tab").wrapInner(
+            "<div class='tab-wrapper'></div>");
+    });
+    var count = $("#tabs").children().length;
+    var tab_width = (100 / count) + "%";
+    $("#tabs li").css("width", tab_width).eq(0).addClass('first').end().eq(-1).addClass(
+        'last').end();
+    $("#panels").children().each(function (i) {
+        i = i + 1;
+        $(this).attr('id', "panel-" + i).addClass("panel").wrapInner(
+            "<div class='panel-wrapper'></div>").prepend(
+            "<div class='accordion-tab'></div>");
+    });
+    $(".accordion-tab").each(function (i) {
+        i = i + 1;
+        var tab_name = $("#tab-" + i).html();
+        $(this).html(tab_name);
+    });
+    $("#tabs").children().eq(selectedTab).addClass("xactive");
+    $("#panels").children().eq(selectedTab).addClass("xactive");
+    $("#tabs > li").click(function () {
+        $("#tabs > li, #panels > li").removeClass("xactive");
+        $("#panels > li").eq($(this).index()).toggleClass("xactive");
+        $(this).toggleClass("xactive");
+    });
+    $(".accordion-tab").click(function () {
+        $("#tabs > li, #panels > li").removeClass("xactive");
+        $("#tabs > li").eq($(this).parent().index()).toggleClass("xactive");
+        $(this).parent().toggleClass("xactive");
+    });
+</script>
+                <div class="content">
                     <div class="row flex-grow-1">
                         <div class="col-md-4 col-xl-6" style="padding: 10px;"></div>
                     </div>
                     <div class="row flex-grow-1 justify-content-center">
                         <div class="col">
-                            <!--
-                                                <div class="card shadow mb-4">
-                                                    <div class="col mr-2">
-                                                        <div class="text-uppercase text-info font-weight-bold text-xs mb-1">
-                                                            <span>
-                                                                <strong>
-                                                                    Definition & Formula |
-                                                                    {{ fin_metric_name }}
-                                                                </strong>
-                                                            </span>
-                                                        </div>
-                                                        <p>
-                                                            See:&nbsp;
-                                                            <br>
-                                                            Macrotrends &amp; Gurufocus definitions https://www.gurufocus.com/term/mktcap/
-                                                            {{ company_symbol }}
-                                                            /Market-Cap/Apple
-                                                            <br>
-                                                        </p>
-                                                        <div class="row no-gutters align-items-center">
-                                                            <div class="col-auto">
-                                                                <div class="text-dark font-weight-bold h5 mb-0 mr-3"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                -->
                             <div class="card shadow mb-4">
+                                <!-- dropdown -->
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary font-weight-bold m-0 metric_table">
                                         {{ company_long_name }}
@@ -1022,31 +1155,8 @@ $(document).ready(function () {
                                     {{ fin_metric_name }}
                                     Table
                                     </h6>
-                                    <div class="dropdown no-arrow">
-                                        <button
-                                            class="btn btn-link btn-sm dropdown-toggle"
-                                            data-toggle="dropdown"
-                                            aria-expanded="false"
-                                            type="button"
-                                        >
-                                            <i class="fas fa-ellipsis-v text-gray-400"></i>
-                                        </button>
-                                        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
-                                            <p class="text-center dropdown-header">
-                                                dropdown header:
-                                            </p>
-                                            <a class="dropdown-item" role="presentation" href="#">
-                                                &nbsp;Action
-                                            </a>
-                                            <a class="dropdown-item" role="presentation" href="#">
-                                                &nbsp;Another action
-                                            </a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" role="presentation" href="#">
-                                                &nbsp;Something else here
-                                            </a>
-                                        </div>
-                                    </div>
+
+
                                 </div>
                                 <div class="card-body yoy_table">
                                     {% for table in df_html_tall %}
@@ -1146,13 +1256,13 @@ $(document).ready(function () {
             </div>
             <p>
                 {{ company_short_name }}
-            celebrated it's 10th year anniversary with a
-            {{ fin_metric_name }}
-            of 10. By the looks of it's history (see: the chart and stats above), you can expect
-            {{ company_short_name }}
-            to maintain a positive
-            {{ fin_metric_name }}
-            .
+                celebrated it's 10th year anniversary with a
+                {{ fin_metric_name }}
+                of 10. By the looks of it's history (see: the chart and stats above), you can expect
+                {{ company_short_name }}
+                to maintain a positive
+                {{ fin_metric_name }}
+                .
             </p>
             <div class="container">
                 <div class="page-content">
@@ -1214,6 +1324,11 @@ $(document).ready(function () {
                                             New age bullshit
                                         </label>
                                     </li>
+                                    <li class="tab">
+                                        <label for="tab3">
+                                            New age bullshit
+                                        </label>
+                                    </li>
                                 </ul>
                                 <div class="tab-content">
                                     <h4>
@@ -1233,7 +1348,7 @@ $(document).ready(function () {
                                 </div>
                                 <div class="tab-content">
                                     <h4>
-                                        New age bullshit
+                                        11New age bullshit
                                     </h4>
                                 </div>
                             </div>
@@ -1248,7 +1363,7 @@ $(document).ready(function () {
                         </div>
                         <div class="tab-content">
                             <h4>
-                                New age bullshit
+                                New age bulasdadlshit
                             </h4>
                         </div>
                     </div>
@@ -1275,7 +1390,12 @@ $(document).ready(function () {
                         </li>
                         <li class="tab">
                             <label for="tab3">
-                                New age bullshit
+                                qqNew age bullshit
+                            </label>
+                        </li>
+                        <li class="tab">
+                            <label for="tab3">
+                                aaqqNew age bullshit
                             </label>
                         </li>
                     </ul>
@@ -1308,7 +1428,7 @@ $(document).ready(function () {
                                 </li>
                                 <li class="tab">
                                     <label for="tab3">
-                                        New age bullshit
+                                        wwNew age bullshit
                                     </label>
                                 </li>
                             </ul>
@@ -1330,7 +1450,7 @@ $(document).ready(function () {
                             </div>
                             <div class="tab-content">
                                 <h4>
-                                    New age bullshit
+                                    eeNew age bullshit
                                 </h4>
                             </div>
                         </div>
@@ -1425,7 +1545,8 @@ $(document).ready(function () {
     </div>
 </div>
 <div class="col">
-    <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;">
+    <div class="card shadow border-left-primary py-2" style="margin: 10px;">
+        <!-- <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;"> -->
         <div class="card-body summary_header">
             <h2 class="text-primary mb-0 historical">
                 <!-- Summary Statistics (Annual)
@@ -1459,7 +1580,11 @@ $(document).ready(function () {
                         {% if statement_or_ratio != "ratio" %}
                         <tr>
                             <td class="hist_measure">
-                                Lifetime
+                                Lifetime, Total (
+                            {{ earliest_year }}
+                            -
+                            {{ latest_year }}
+                            )
                             </td>
                             <td class="hist_stats">
                                 {{ lifetime_sum_all_metric }}
@@ -1468,7 +1593,7 @@ $(document).ready(function () {
                         {% endif %}
                         <tr>
                             <td class="hist_measure">
-                                % Change (
+                                Change (
                             {{ earliest_year }}
                             -
                             {{ latest_year }}
@@ -1482,7 +1607,7 @@ $(document).ready(function () {
                         </tr>
                         <tr>
                             <td class="hist_measure">
-                                % Change (annually)
+                                Change (Annual)
                             </td>
                             <td class="hist_stats">
                                 {{ annual_pct_chg }}
@@ -1519,7 +1644,7 @@ $(document).ready(function () {
                     </tbody>
                 </table>
             </div>
-            <p>
+            <!-- <p>
                 In Plain English (Highlights)
             </p>
             <p>
@@ -1527,35 +1652,15 @@ $(document).ready(function () {
             (
             {{ company_symbol }}
             ) had a
-            {{ fin_metric_name }}
+            {{ fin_metric_name.lower() }}
             of
             {{ latest_metric }}
             in
             {{ latest_year }}
             .
 
-
-                                                    At it's peak,
-            {{ company_short_name }}
-            (
-            {{ company_symbol }}
-            ) had a
-            {{ fin_metric_name.lower() }}
-            of
-            {{ latest_metric_str }}
-            in
-            {{ latest_year }}
-            .
-                                                    At it's bottom,
-            {{ company_short_name }}
-            (
-            {{ company_symbol }}
-            ) had a
-            {{ fin_metric_name }}
-            of
-            {{ earliest_metric_str }}
-            in
-            {{ earliest_year }}
+                                                    At it's peak, that number was {{max_str}}.<br />
+                                                    At it's bottom, that number was {{min_str}}.
             .
 
 
@@ -1567,7 +1672,7 @@ $(document).ready(function () {
                                                     If you add up all of
             {{ company_short_name }}
             's'
-            </p>
+            </p> -->
             <!-- <p>
                 The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).
             </p> -->
@@ -1588,7 +1693,143 @@ $(document).ready(function () {
     </div>
 </div>
 </div>
-<!-- <div id="content">
+<!-- <div class="content">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow border-left-info py-2">
+                <div class="card-body" style="padding: 10px;">
+                sdssd
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+                <div class="content">
+                    <div class="row flex-grow-1">
+                        <div class="col-md-4 col-xl-6" style="padding: 10px;"></div>
+                    </div>
+                    <div class="row flex-grow-1 justify-content-center">
+                        <div class="col">
+                            <!--
+                                                <div class="card shadow mb-4">
+                                                    <div class="col mr-2">
+                                                        <div class="text-uppercase text-info font-weight-bold text-xs mb-1">
+                                                            <span>
+                                                                <strong>
+                                                                    Definition & Formula |
+                                                                    {{ fin_metric_name }}
+                                                                </strong>
+                                                            </span>
+                                                        </div>
+                                                        <p>
+                                                            See:&nbsp;
+                                                            <br>
+                                                            Macrotrends &amp; Gurufocus definitions https://www.gurufocus.com/term/mktcap/
+                                                            {{ company_symbol }}
+                                                            /Market-Cap/Apple
+                                                            <br>
+                                                        </p>
+                                                        <div class="row no-gutters align-items-center">
+                                                            <div class="col-auto">
+                                                                <div class="text-dark font-weight-bold h5 mb-0 mr-3"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                -->
+                            <div class="card shadow mb-4">
+                                <!-- dropdown -->
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0 metric_table">
+                                        {{ company_long_name }}
+                                    (
+                                    {{ company_symbol }}
+                                    ) Historical
+                                    {{ fin_metric_name }}
+                                    Table
+                                    </h6>
+
+
+                                </div>
+                                <div class="card-body yoy_table">
+                                    {% for table in df_html_tall %}
+                                    {{ df_html_tall[0]|safe }}
+                                {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <!-- <div class="card shadow border-left-success py-2">
+                                                <div class="card-body">
+                                                    <h4 class="text-dark mb-0">
+                                                        Lifetime Metrics
+                                                    </h4>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                                                <span>
+                                                                    Earnings (annual)
+                                                                </span>
+                                                            </div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0">
+                                                                <span>
+                                                                    $215,000
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                                                <span>
+                                                                    Earnings (annual)
+                                                                </span>
+                                                            </div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0">
+                                                                <span>
+                                                                    $215,000
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center no-gutters">
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                                                <span>
+                                                                    Earnings (annual)
+                                                                </span>
+                                                            </div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0">
+                                                                <span>
+                                                                    $215,000
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col mr-2">
+                                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                                                <span>
+                                                                    Earnings (annual)
+                                                                </span>
+                                                            </div>
+                                                            <div class="text-dark font-weight-bold h5 mb-0">
+                                                                <span>
+                                                                    $215,000
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                    </br>
+                    <div class="col">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- <div class="content">
     <div class="row">
         <div class="col">
             <div class="card shadow border-left-info py-2">
@@ -2126,31 +2367,6 @@ $(document).ready(function () {
         {{ fin_metric_name }}
         Table
                 </h6>
-                <div class="dropdown no-arrow">
-                    <button
-                        class="btn btn-link btn-sm dropdown-toggle"
-                        data-toggle="dropdown"
-                        aria-expanded="false"
-                        type="button"
-                    >
-                        <i class="fas fa-ellipsis-v text-gray-400"></i>
-                    </button>
-                    <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
-                        <p class="text-center dropdown-header">
-                            dropdown header:
-                        </p>
-                        <a class="dropdown-item" role="presentation" href="#">
-                            &nbsp;Action
-                        </a>
-                        <a class="dropdown-item" role="presentation" href="#">
-                            &nbsp;Another action
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" role="presentation" href="#">
-                            &nbsp;Something else here
-                        </a>
-                    </div>
-                </div>
             </div>
             <div class="card-body"></div>
         </div>
