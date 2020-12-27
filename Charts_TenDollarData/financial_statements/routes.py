@@ -44,28 +44,39 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             print("magnitude!")
             if len(str(number)) > 12 and number > 1000000000000:
                 magnitude = number/1000000000000
-                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"T")
+                # magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"T")
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1)," Trillion")
+
             elif len(str(number)) > 9 and number > 1000000000:
                 magnitude = number/1000000000
-                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
+                # magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1)," Billion")
+
             elif len(str(number)) > 6 and number > 1000000:
                 magnitude = number/1000000
-                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"M")
+                # magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"M")
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1)," Million")
+
             elif len(str(number)) > 3 and number > 1000:
                 magnitude = number/1000
-                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
+                # magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1)," Thousand")
+
             elif -1000 <= number <= 1000:
                 magnitude = number
                 magnitude_str = "{}{}{}".format("",round(magnitude,2),"")
             elif len(str(number)) > 9 and number < -1000000000:
                 magnitude = abs(number/1000000000)
-                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"B")
+                # magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"B")
+                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1)," Billion")
             elif len(str(number)) > 6 and number < -1000000:
                 magnitude = abs(number/1000000)
-                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"M")
+                # magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"M")
+                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1)," Million")
             elif len(str(number)) > 3 and number < -1000:
                 magnitude = abs(number/1000)
-                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"K")
+                # magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),"K")
+                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1)," Thousand")
             else:
                 magnitude = number
                 magnitude_str = "{}{}{}".format("",round(magnitude,2),"")
@@ -378,7 +389,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         num_years_increased = len(year_df[year_df['Y/Y % Change']>0])
         print("var excepted",e)
     len_year_df = len(year_df)
-    year_df_json=year_df_json[0:len_year_df-1]
+    year_df_json=year_df_json # [0:len_year_df-1]
     # year_df_json_list = []
     # for n in year_df_json:
     #     if len(year_df_json_list) < len(df):
@@ -441,12 +452,12 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             pct_chg = (latest_metric+abs(earliest_metric)/abs(earliest_metric))
         # pct_chg = (latest_metric/earliest_metric)
         historical_pct_chg = str(round(pct_chg-1, 0))
-        annual_pct_chg  = str(round(100*(pct_chg**(1/len(sorted_metric))-1),1)) # round((latest_metric/earliest_metric)/2,2)
+        annual_pct_chg  = "+"+str(round(100*(pct_chg**(1/len(sorted_metric))-1),1)) # round((latest_metric/earliest_metric)/2,2)
         if pct_chg>=0:
-            hist_pct_chg_str = "{}x".format(historical_pct_chg)
+            hist_pct_chg_str = "+{}x".format(historical_pct_chg)
             annual_pct_chg_str = "{}%".format(annual_pct_chg)
         elif pct_chg<0:
-            hist_pct_chg_str = "{}x".format(historical_pct_chg)
+            hist_pct_chg_str = "-{}x".format(historical_pct_chg)
             annual_pct_chg_str = "{}%".format(annual_pct_chg)
         else:
             hist_pct_chg_str = ""
@@ -579,6 +590,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
 
     df_json  = np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()[::-1]
     last_4_quarters = np.sum(df["quarter avg"][0:4])
+    prev_4_quarters = np.sum(df["quarter avg"][5:9])
+    y_y_chg = str(np.round(((last_4_quarters/prev_4_quarters)-1)*100,2))+"%"
 
 
     print("year dfzz", list(year_df))
@@ -622,12 +635,31 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # df['FY metric'] = year_df_json_list[::-1]
     # year_df_json = np.nan_to_num(df[['date',"{}".format("FY metric")]].to_numpy()).tolist()
     # print("year df json", year_df_json)
+    from flask import Markup
+    try:
+        # url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric
+        url_tag_prefix='<a class="similar_companies_urls" href="'
+        subdomain = "https://charts.tendollardata.com"
+        company_similar = profiles_dict['Similar Companies'].split(",")
+        company_similar_list = []
+        n = 0
+        while n < len(company_similar):
+            x = company_similar[n]
+            company_similar_x = ('<a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a>, '.format(subdomain,x,stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
+            company_similar_list.append(company_similar_x)
+            n+=1
+        company_similar_paragraph = Markup(''.join(company_similar_list)[:-1])
+        print(company_similar_paragraph)
+    except Exception as e:
+        company_similar_paragraph = ''
+        print(e)
 
 
     return render_template('current_ratio.html', \
                             company_symbol = profiles_dict['symbol'],\
                             last_4_quarters = last_4_quarters,\
                             last_4_quarters_str = last_4_quarters_str,\
+                            y_y_chg=y_y_chg,\
                             price_json = price_json,\
                             company_long_name = profiles_dict['long name'],\
                             company_currency = profiles_dict['currency'],\
@@ -640,7 +672,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             company_ipo_date = profiles_dict['ipo date'],\
                             company_short_name = profiles_dict['short name'],\
                             company_industries = profiles_dict['Industries'],\
-                            company_similar = profiles_dict['Similar Companies'],\
+                            company_similar = company_similar_paragraph,#profiles_dict['Similar Companies'],\
                             historical_pct_chg = historical_pct_chg,\
                             lifetime_sum_all_metric = lifetime_sum_all_metric,\
                             mean_str = mean_str,\
