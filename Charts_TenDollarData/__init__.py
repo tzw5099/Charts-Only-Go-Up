@@ -8,13 +8,24 @@ from flask_sqlalchemy import SQLAlchemy
 import financial_statements.routes
 from config import Config
 # import flask
-from flask import Flask
+from flask import Flask, Response
+# from gevent.pywsgi import WSGIServer
+# from gevent import monkey
+
+# monkey.patch_all()
+
 # app = Flask(__name__)
 # app = Flask(name)
+from flask_compress import Compress
+# https://github.com/colour-science/flask-compress
+compress = Compress()
 
 def create_app(config_class=Config):
     app = Flask(__name__, template_folder='templates')
     app.config.from_object(Config)
+
+    compress.init_app(app)
+
 
     # db.init_app(app)
     # bcrypt.init_app(app)
