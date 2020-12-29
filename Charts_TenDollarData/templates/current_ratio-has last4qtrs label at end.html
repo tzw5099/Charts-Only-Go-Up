@@ -1,0 +1,2309 @@
+<!-- =IFERROR(IF(AC2="","",VLOOKUP(B2,$AB$1:$AC$489,2,FALSE)),"") -->
+<!-- {{company_symbol}}
+{{company_currency}}
+{{company_exchange}}
+{{company_industry}}
+{{company_description}}
+[[company_sector]]
+[[company_country]]
+[[company_ipo_date]] -->
+<!-- {{df_json}} -->
+<!-- https://jsfiddle.net/cakenite/f6b94evj/18/ -->
+<!-- positioner: function() {
+  return {
+    x: this.chart.plotLeft,
+    y: this.chart.plotTop
+  };
+},
+shared: true, -->
+<!-- {{price_json}} -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>
+            Home - Brand
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            table {
+                border-spacing: 0;
+                border-collapse: collapse;
+            }
+
+            .cell {
+                width: 20px;
+                height: 20px;
+            }
+
+            .odd {
+                background-color: brown
+            }
+
+            .even {
+                background-color: pink
+            }
+        </style>
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <!-- enables CSV -->
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+        <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+        <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+        <style>
+            highcharts-xaxis-labels{
+            color: #000000 !important;
+            font-size: 30px !important;
+            }
+
+            highcharts-yaxis-labels{
+
+            padding-left: 30px !important;
+            }
+            highcharts-label-box{
+            display:none;
+            }
+            .td_fin_statement_class {
+            text-align:right;
+            }
+            /* .fixed_body{
+            width:1000px;
+            } */
+            #content-wrapper{
+            max-width:1400px;
+            /* text-align:center; */
+            margin: 0 auto;
+            }
+            .hist_stats{
+            text-align:right;
+            }
+            .dataframe{
+            overflow:scroll;
+            color:blue;
+            }
+
+            div.card-body.hist_table {
+            overflow:scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            }
+
+
+            div.card-body.hist_table::-webkit-scrollbar {
+            display: none;
+
+            }
+
+            div.card.shadow.border-left-primary.py-2 {
+            position: sticky;
+            position: -webkit-sticky;
+            }
+
+            div.sticky-top{
+            top:160px;
+            }
+        </style>
+        <style>
+            #df_myTable {
+                margin: 0 auto;
+            }
+
+            .metric_table {
+                text-align: center;
+                margin: 0 auto !important;
+            }
+
+            div.card-body.hist_table {
+                overflow: scroll;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            div.card-body.hist_table::-webkit-scrollbar {
+                display: none;
+                color: #20c08d;
+            }
+
+            div.sticky-top {
+                top: 160px;
+            }
+
+            .page-content {
+                max-width: 1200px;
+                margin: 32px auto;
+                padding: 32px;
+                background: #fff;
+            }
+
+            a {
+                color: #21D4FD;
+                transition: all 0.3s;
+            }
+
+            a:hover {
+                color: #B721FF;
+            }
+
+            .tabbed {
+                overflow-x: hidden;
+                margin: 32px 0;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .tabbed [type="radio"] {
+                display: none;
+            }
+
+            .tabs {
+                display: flex;
+                align-items: stretch;
+                list-style: none;
+                padding: 0;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .tab > label {
+                display: block;
+                margin-bottom: -1px;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                background: #eee;
+                color: #666;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .tab:hover label {
+                border-top-color: #333;
+                color: #333;
+            }
+
+            .tab-content {
+                display: none;
+                color: #777;
+            }
+
+            .tabbed [type="radio"]:nth-of-type(1):checked~.tabs .tab:nth-of-type(1) label,
+            .tabbed [type="radio"]:nth-of-type(2):checked~.tabs .tab:nth-of-type(2) label,
+            .tabbed [type="radio"]:nth-of-type(3):checked~.tabs .tab:nth-of-type(3) label,
+            .tabbed [type="radio"]:nth-of-type(4):checked~.tabs .tab:nth-of-type(4) label,
+            .tabbed [type="radio"]:nth-of-type(5):checked~.tabs .tab:nth-of-type(5) label {
+                border-bottom-color: #fff;
+                border-top-color: #B721FF;
+                background: #fff;
+                color: #222;
+            }
+
+            .tabbed [type="radio"]:nth-of-type(1):checked~.tab-content:nth-of-type(1),
+            .tabbed [type="radio"]:nth-of-type(2):checked~.tab-content:nth-of-type(2),
+            .tabbed [type="radio"]:nth-of-type(3):checked~.tab-content:nth-of-type(3),
+            .tabbed [type="radio"]:nth-of-type(4):checked~.tab-content:nth-of-type(4) {
+                display: block;
+                color: #1ebd1e, }
+        </style>
+        <script>
+            function centerLabels(chart) {
+                var $container = $(chart.target.highbar);
+                var axes = chart.target.axes;
+                var $labels = $highbar.find('.highcharts-axis-labels .timeline_label');
+                var $thisLabel,
+                    $nextLabel,
+                    thisXPos,
+                    nextXPos,
+                    delta,
+                    newXPos;
+                $labels.each(function () {
+                    $thisLabel = $(this).parent('span');
+                    thisXPos = parseInt($thisLabel.css('left'));
+                    $nextLabel = $thisLabel.next();
+                    nextXPos = $nextLabel.length ? parseInt($nextLabel.css('left')) : axes[0].left + axes[0].width;
+                    delta = (nextXPos - thisXPos) / 2.0;
+                    newXPos = thisXPos + delta;
+                    if ($nextLabel.length || $(this).width() + newXPos < nextXPos) {
+                        $thisLabel.css('left', newXPos + 'px');
+                    } else {
+                        $thisLabel.remove();
+                    }
+                });
+            }
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function (data) {
+
+                df_json = {{ df_json }};
+                year_df_json = {{ year_df_json }};
+                price_json = {{ price_json }};
+                function mapData([x, y]) {
+                    return {
+                        name: x,
+                        x: x,
+                        y: Math.abs(y),
+                        actualY: y,
+                        color: y >= 0 ? '#7CB5EC' : '#E6496F',
+                        // '#20c08d': '#E6496F' //'#add6a6': '#E6496F' //'#19A419': '#E6496F'//
+                        // 7CB5EC, '#63CCA6' : '#E6496F'
+                    }
+                }
+                var groupings = ['sum', 'average', 'sum'];
+                Highcharts.dateFormats = {
+                    q: function (timestamp) {
+                        var date = new Date(timestamp),
+                            quarter = (Math.floor(date.getUTCMonth() / 3) + 1);
+                        console.log(quarter);
+                        return quarter;
+                    }
+                };
+
+
+                (function (H) { // internal functions
+                    function stopEvent(e) {
+                        if (e) {
+                            if (e.preventDefault) {
+                                e.preventDefault();
+                            }
+                            if (e.stopPropagation) {
+                                e.stopPropagation();
+                            }
+                            e.cancelBubble = true;
+                        }
+                    }
+
+                    // the wrap
+                    H.wrap(H.Chart.prototype, 'render', function (proceed) {
+                        var chart = this,
+                            mapNavigation = chart.options.mapNavigation;
+                        proceed.call(chart);
+                        // Add the mousewheel event
+                        H.addEvent(chart.container, document.onmousewheel === undefined ? 'DOMMouseScroll' : 'mousewheel', function (event) {
+                            var delta,
+                                extr,
+                                step,
+                                newMin,
+                                newMax,
+                                axis = chart.xAxis[0];
+                            var dataMax = chart.xAxis[0].dataMax,
+                                dataMin = chart.xAxis[0].dataMin,
+                                stepDivisor = 5,
+                                newExtrMin,
+                                newExtrMax;
+                            e = chart.pointer.normalize(event);
+                            // Firefox uses e.detail, WebKit and IE uses wheelDelta
+                            delta = e.detail || -(e.wheelDelta / 120);
+                            delta = delta < 0 ? 1 : -1;
+                            if (chart.isInsidePlot(e.chartX - chart.plotLeft, e.chartY - chart.plotTop)) {
+                                extr = axis.getExtremes();
+                                step = (extr.max - extr.min) / stepDivisor * delta;
+                                if ((extr.min + step) <= dataMin) {
+                                    newExtrMin = dataMin;
+                                    newExtrMax = extr.max;
+                                } else if ((extr.max + step) >= dataMax) {
+                                    newExtrMin = extr.min;
+                                    newExtrMax = dataMax;
+                                } else {
+                                    newExtrMin = extr.min + step;
+                                    newExtrMax = extr.max + step;
+                                } axis.setExtremes(newExtrMin, newExtrMax, true, false);
+                            }
+                            stopEvent(event); // Issue #5011, returning false from non-jQuery event does not prevent default
+                            return false;
+                        });
+                    });
+                }(Highcharts));
+
+                var myChart = Highcharts.stockChart('highbar', { // SECTION - Highcharts - top
+                    legend: {
+                        enabled: true
+                    },
+                    responsive: {
+                        rules: [
+                            {
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    chart: {},
+                                    subtitle: {
+                                        text: null
+                                    },
+                                    navigator: {
+                                        enabled: false
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    chart: {
+                        style: {
+                            fontFamily: "'Nunito Sans', Verdana, Arial, Helvetica, sans-serif",
+                            textOutline: false,
+                            fontSize:"14px"
+                        },
+                        borderWidth: 2,
+                        marginRight: 100,
+                        renderTo: 'highbar',
+                        events: {
+                            render() {
+                                var ticks          = this.xAxis[0].ticks,
+                                    ticksPositions = this.xAxis[0].tickPositions,
+                                    tick0x,
+                                    tick1x,
+                                    getPosition    = function (tick) {
+                                        var axis   = tick.axis;
+                                        return Highcharts.Tick.prototype.getPosition.call(tick, axis.horiz, tick.pos, axis.tickmarkOffset);
+                                    };
+                                tick0x = getPosition(ticks[ticksPositions[0]]).x;
+                                tick1x = getPosition(ticks[ticksPositions[1]]).x;
+                                this.xAxis[0].labelGroup.translate((tick1x - tick0x) / 2)
+                            }
+                        }
+                    },
+                    title: {
+                        text: '{{ fin_metric_name }}'
+                    },
+                    // tooltip: {
+                    //     backgroundColor: '#FFFFFF', //'#1ebd1e', // 'red'
+                    //     style: {
+                    //         color: '#FFFFFF',
+                    //         fontSize: '14px',
+                    //         fontWeight: 'bold'
+                    //     },
+                    //     enabled: true,
+                    //     shared: true,
+                    //     valuePrefix: "{{currency_symbol}}",
+                    //     pointFormatter: function () {
+                    //         if (this.y >= 1000000000) {
+                    //             billion = this.y / 1000000000;
+                    //             billion_rounded = Math.round((billion) * 10) / 10;
+                    //             return('<b>{{currency_symbol}}' + billion_rounded) + 'B</b>';
+                    //         } else if (this.y >= 1000000) {
+                    //             million = this.y / 1000000
+                    //             million_rounded = Math.round((million) * 10) / 10;
+                    //             return('<b>{{currency_symbol}}' + million_rounded) + 'M</b>';
+                    //         } else if (this.y >= 10000) {
+                    //             thousand = this.y / 1000
+                    //             thousand_rounded = Math.round((thousand) * 10) / 10;
+                    //             return('<b>{{currency_symbol}}' + this.y / 1000) + 'K</b>';
+                    //         } else {
+                    //             ratio = this.y / 1
+                    //             ratio_rounded = Math.round((ratio) * 10) / 10;
+                    //             return('<b>' + ratio_rounded) + '</b>';
+                    //         }
+                    //     }
+                    // },
+                    rangeSelector: { // SECTION - Highcharts - range selector
+                        selected: 2,
+                        inputPosition: { // align: 'left',
+                            x: 0,
+                            y: 0
+                        },
+                        buttonPosition: { // align: 'right',
+                            x: 0,
+                            y: 0
+                        },
+                        buttons: [
+                            {
+                                type: 'year',
+                                count: 3,
+                                text: '3Y',
+                                dataGrouping: {
+                                    enable: true
+                                }
+                            }, {
+                                type: 'year',
+                                count: 5,
+                                text: '5Y',
+                                dataGrouping: {
+                                    enable: true
+                                }
+                            }, {
+                                type: 'year',
+                                count: 10,
+                                text: '10y',
+                                dataGrouping: {
+                                    enable: false
+                                }
+                            }, {
+                                type: 'all',
+                                text: 'All',
+                                dataGrouping: {
+                                    enable: false,
+                                    approximation: groupings[4]
+                                }
+                            }
+                        ]
+                    },
+                    xAxis: [ // SECTION - Highcharts - xAxis = top
+                        {
+                            events: {
+                                afterSetExtremes: function () {
+                                    this.displayBtn ? $('.highcharts-scrollbar').show() : $('.highcharts-scrollbar').hide()
+                                }
+                            },
+                            scrollbar: {
+                                enabled: true
+                            },
+                            zoomType: 'x',
+                            events: {
+                                load: function () {
+                                    $('.highcharts-scrollbar').hide()
+                                }
+                            },
+                            labels: {
+                                style: {
+                                    color: '#black', // 'red'
+                                    fontSize: '14px'
+                                }
+                            },
+                            crosshair: {
+                                width: 2,
+                                color: '#1C9179',
+                                snap: false,
+                                className: "x_crosshair",
+                                zIndex: 100
+                            },
+                            type: 'datetime',
+                            dateTimeLabelFormats: {
+                                month: '%Y', // 'Q%q - %y',
+                                year: '%Y'
+                            },
+
+                            alternateGridColor: '#FDFFD5', // '#FEF8E3'
+                            minPadding: 0
+                        }, {
+
+                            labels: {
+                                style: {
+                                    color: 'black', // 'red'
+                                    fontSize: '14px',
+                                    fontWeight: 'bold'
+                                }
+                            },
+                            crosshair: {
+                                width: 2,
+                                color: '#1C9179',
+                                snap: false,
+                                className: "x_crosshair",
+                                zIndex: 100
+                            },
+                            type: 'datetime',
+                            dateTimeLabelFormats: {},
+                            format: '{value:%Y}',
+                            minPadding: 0
+                        },
+                    ],
+                    plotOptions: { // SECTION - Highcharts - plotOptions
+                        series: {  // SECTION - Highcharts - plotOptions - series - all
+                            connectNulls: true,
+                            dataLabels: {
+                                enabled: true,
+                                formatter: function () { // if last point
+                                    if (this.point === this.series.data[this.series.data.length - 1]) {
+                                        return this.series.name;
+                                    }
+                                }
+                            }
+                        },
+                        line: {  // SECTION - Highcharts - plotOptions - line
+                            allowPointSelect: true,
+                            dataLabels: {
+                                enabled: true,
+                                format: "FY {point.x:%Y}",//"{point.x:%b %e}",
+                            },
+
+                            // dataLabels: {
+                            //     className: 'chart_fy_metric',
+                            //     fontWeight: 'bold',
+                            //     padding: 5,
+                            //     enabled: true,
+                            //     // useHTML: true,
+                            //     borderRadius: 5,
+                            //     backgroundColor: '#FFFFFF',
+                            //     opacity: .7,
+                            //     borderWidth: 1,
+                            //     borderColor: '#AAA',
+                            //     zIndex:180,
+                            //     crop: false,
+                            //     overflow: 'visible',
+                            //     y: -10,
+                            //     x: 40,
+                            //     style: {
+                            //         color: '#000000', // 'red'
+                            //         fontSize: '14px',
+                            //         backgroundColor: 'black',
+                            //         textOutline: false,
+                            //         textAlign: 'center',
+                            //         align: 'left',
+                            //     },
+                            //     formatter: function () {
+                            //         if (this.point == this.series.data[this.series.data.length - 1]) {
+                            //         if (this.y >= 1000000000) {
+                            //             billion = this.y / 1000000000;
+                            //             billion_rounded = Math.round((billion) * 10) / 10;
+                            //             return "<div class=\"chart_current_metric\">FY{{latest_year}}: "  + "{{currency_symbol}}" + billion_rounded + 'B</div>'
+                            //         } else if (this.y >= 1000000) {
+                            //             million = this.y / 1000000
+                            //             million_rounded = Math.round((million) * 10) / 10;
+                            //             return "<div class=\"chart_current_metric\">FY{{latest_year}}: " + "{{currency_symbol}}" + million_rounded + 'M</div>'
+                            //         } else if (this.y >= 10000) {
+                            //             thousand = this.y / 1000
+                            //             thousand_rounded = Math.round((thousand) * 10) / 10;
+                            //             return "<div class=\"chart_current_metric\">FY{{latest_year}}: " + "{{currency_symbol}}" + thousand_rounded + 'K</div>'
+                            //         } else { // return '<b>$' + this.y + '</b>';
+                            //             ratio = this.y / 1
+                            //             ratio_rounded = Math.round((ratio) * 100) / 100;
+                            //             return "<div class=\"chart_current_metric\">FY{{latest_year}}: " + ratio_rounded + '</div>';
+                            //         }
+                            //             };
+                            //         // if (this.y >= 1000000000) {
+                            //         //     billion = this.y / 1000000000;
+                            //         //     billion_rounded = Math.round((billion) * 10) / 10;
+                            //         //     max_min_num = ('<b>$' + billion_rounded) + 'B</b>';
+                            //         // } else if (this.y >= 1000000) {
+                            //         //     million = this.y / 1000000
+                            //         //     million_rounded = Math.round((million) * 10) / 10;
+                            //         //     max_min_num = ('<b>$' + million_rounded) + 'M</b>';
+                            //         // } else if (this.y >= 1000) {
+                            //         //     thousand = this.y / 1000000
+                            //         //     thousand_rounded = Math.round((thousand) * 10) / 10;
+                            //         //     max_min_num = ('<b>$' + this.y / 1000) + 'K</b>';
+                            //         // } else { // return '<b>$' + this.y + '</b>';
+                            //         //     ratio = this.y / 1
+                            //         //     ratio_rounded = Math.round((ratio) * 100) / 100;
+                            //         //     max_min_num = ('<b>' + ratio_rounded) + '</b>';
+                            //         // }
+
+                            //         // var dataMax = this.series.dataMax;
+                            //         // var dataMin = this.series.dataMin;
+                            //         // if (this.y === dataMax) {
+                            //         //     return('<b>Top<br />' + max_min_num) + '</b>';
+                            //         //     // return this.y;
+                            //         // }
+                            //         // if (this.y === dataMin) {
+                            //         //     return('<b>Bottom<br />' + max_min_num) + '</b>';
+                            //         // }
+                            //         // if (this.series.index == 0) {
+                            //         //     return this.y; // [-1];
+                            //         // }
+                            //     }
+                            // },
+                            pointPlacement: 'on'
+                        },
+                        area: {  // SECTION - Highcharts - plotOptions - area
+                            allowPointSelect: true,
+
+                            dataLabels: {
+                                enabled: true,
+                                // useHTML: true,
+                                borderRadius: 5,
+                                backgroundColor: '#FFFFFF',
+                                opacity: .7,
+                                borderWidth: 1,
+                                borderColor: '#AAA',
+                                // zIndex:80,
+                                crop: false,
+                                overflow: 'visible',
+                                y: -10,
+                                x: 20,
+                                style: {
+                                    color: '#000000', // 'red'
+                                    fontSize: '14px',
+                                    backgroundColor: 'black',
+                                    textOutline: false,
+                                    textAlign: 'center',
+                                    align: 'right',
+                                },
+                                formatter: function () {
+                                    if (this.point == this.series.data[this.series.data.length - 1]) {
+                                        return "<div class=\"chart_current_price\">" + "Stock Price<br/>"+ "{{currency_symbol}}" + Math.round(this.y*100)/100;} +""; + '</div>'
+
+                                    },
+                            },
+                            pointPlacement: 'on'
+                        },
+                        column: {  // SECTION - Highcharts - plotOptions- column
+                            groupPadding: 0,
+                            dataLabels: {
+                                className: 'chart_fy_metric',
+                                fontWeight: 'bold',
+                                padding: 5,
+                                enabled: true,
+
+                                // useHTML: true,
+                                borderRadius: 5,
+                                backgroundColor: '#FFFFFF',
+                                opacity: .7,
+                                borderWidth: 1,
+                                borderColor: '#AAA',
+                                zIndex:180,
+                                crop: false,
+                                overflow: 'visible',
+                                y: -10,
+                                x: 40,
+                                style: {
+                                    color: '#000000', // 'red'
+                                    fontSize: '14px',
+                                    backgroundColor: 'black',
+                                    textOutline: false,
+                                    textAlign: 'center',
+                                    align: 'left',
+                                },
+                                formatter: function () {
+
+                                    var point1 = this.series.data[this.series.data.length - 1];
+                                    if (this.point == point1) {
+                                    if ({{last_4_quarters}} >= 1000000000) {
+                                        billion = {{last_4_quarters}}/ 1000000000;
+                                        billion_rounded = Math.round((billion) * 10) / 10;
+                                        return "<div class=\"chart_current_metric\">Last 4 Qtrs<br/>"  + "{{currency_symbol}}" + billion_rounded + 'B</div>'
+                                    } else if ({{last_4_quarters}} >= 1000000) {
+                                        million = {{last_4_quarters}} / 1000000
+                                        million_rounded = Math.round((million) * 10) / 10;
+                                        return "<div class=\"chart_current_metric\">Last 4 Qtrs<br/>" + "{{currency_symbol}}" + million_rounded + 'M</div>'
+                                    } else if ({{last_4_quarters}} >= 10000) {
+                                        thousand = {{last_4_quarters}} / 1000
+                                        thousand_rounded = Math.round((thousand) * 10) / 10;
+                                        return "<div class=\"chart_current_metric\">Last 4 Qtrs<br/>" + "{{currency_symbol}}" + thousand_rounded + 'K</div>'
+                                    } else { // return '<b>$' + this.y + '</b>';
+                                        ratio = this.y / 1
+                                        ratio_rounded = Math.round((ratio) * 100) / 100;
+                                        return "<div class=\"chart_current_metric\">Last 4 Qtrs<br/>" + ratio_rounded + '</div>';
+                                    }
+                                        };
+
+
+
+
+                                    // if (this.y >= 1000000000) {
+                                    //     billion = this.y / 1000000000;
+                                    //     billion_rounded = Math.round((billion) * 10) / 10;
+                                    //     max_min_num = ('<b>$' + billion_rounded) + 'B</b>';
+                                    // } else if (this.y >= 1000000) {
+                                    //     million = this.y / 1000000
+                                    //     million_rounded = Math.round((million) * 10) / 10;
+                                    //     max_min_num = ('<b>$' + million_rounded) + 'M</b>';
+                                    // } else if (this.y >= 1000) {
+                                    //     thousand = this.y / 1000000
+                                    //     thousand_rounded = Math.round((thousand) * 10) / 10;
+                                    //     max_min_num = ('<b>$' + this.y / 1000) + 'K</b>';
+                                    // } else { // return '<b>$' + this.y + '</b>';
+                                    //     ratio = this.y / 1
+                                    //     ratio_rounded = Math.round((ratio) * 100) / 100;
+                                    //     max_min_num = ('<b>' + ratio_rounded) + '</b>';
+                                    // }
+
+                                    // var dataMax = this.series.dataMax;
+                                    // var dataMin = this.series.dataMin;
+                                    // if (this.y === dataMax) {
+                                    //     return('<b>Top<br />' + max_min_num) + '</b>';
+                                    //     // return this.y;
+                                    // }
+                                    // if (this.y === dataMin) {
+                                    //     return('<b>Bottom<br />' + max_min_num) + '</b>';
+                                    // }
+                                    // if (this.series.index == 0) {
+                                    //     return this.y; // [-1];
+                                    // }
+                                }
+                            },
+                        },
+                        series: {
+                            name: 'Quarterly Data',
+                            groupPadding: 0,
+                            dataGrouping: {
+                                enabled: false
+                            },
+                            type: 'column',
+                            xAxis: 1,
+                        },
+                        series: {
+                            type: 'area',
+
+                            marker: {
+                                radius: 4,
+                                // fillColor: '#1ebd1e',
+                                enabled: true,
+                                zIndex: 100
+                            },
+                            xAxis: 0,
+                            name: "Full-Year (FY) {{ fin_metric_name }}",
+                            dataGrouping: {
+                                enabled: false
+                            },
+                            states: {
+                                inactive: {
+                                    opacity: 1
+                                }
+                            }
+                        }
+                    },
+                    yAxis: [ // SECTION - Highcharts - yAxis
+                        {
+                            // height: '100%',
+                            // min: '50',
+                            yAxis: 1,
+                            visible: false,
+                            maxPadding: 0.1,
+                            // gridLineWidth: 1,
+                            // gridLineColor: '#E2E3E3', // '#000000',
+
+                            crosshair: {
+                                // width: 2,
+                                // color: '#1C9179',
+                                // snap: false,
+                                // className: "y_crosshair",
+                                // zIndex: 100
+                            },
+                            opposite: true,
+                            labels: {
+                                style: {
+                                    color: 'black', // 'red'
+                                    fontSize: '14px',
+                                    fontWeight: 'bold'
+                                },
+                                align: 'right'
+                            }
+                        }, {
+
+                            maxPadding: 0.1,
+                            height: '100%',
+                            crosshair: {
+                            },
+                            // opposite: false,
+                            // minPadding: 100,
+                            labels: { // SECTION - Highcharts - yAxis - labels
+                                style: {
+                                    color: 'black', // 'red'
+                                    fontSize: '14px'
+                                },
+                                x: 50,
+                                // opposite: false,
+                                align: 'right',
+                                formatter: function () {
+                                    if (this.value >= 1000000000) {
+                                        billion = this.value / 1000000000;
+                                        billion_rounded = Math.round((billion) * 100) / 100;
+                                        return('<b>{{currency_symbol}}' + billion_rounded) + 'B</b>';
+                                    } else if (this.value >= 1000000) {
+                                        million = this.value / 1000000
+                                        million_rounded = Math.round((million) * 100) / 100;
+                                        return('<b>{{currency_symbol}}' + million_rounded) + 'M</b>';
+                                    } else if (this.value >= 10000) {
+                                        thousand = this.value / 1000
+                                        thousand_rounded = Math.round((thousand) * 100) / 100;
+                                        return('<b>{{currency_symbol}}' + this.value / 1000) + 'K</b>';
+                                    } else { // return '<b>$' + this.y + '</b>';
+                                        ratio = this.value / 1
+                                        million_rounded = Math.round((ratio) * 100) / 100;
+                                        return('<b>' + million_rounded) + '</b>';
+                                    }
+                                }
+
+                            }
+                        },
+                        {
+
+                        },
+                        // {maxPadding: 0.1,
+                        //     opposite: false,
+                        //     height: '100%',
+
+                        //     crosshair: {
+                        //         width: 2,
+                        //         color: '#1C9179',
+                        //         snap: false,
+                        //         className: "y_crosshair",
+                        //         zIndex: 100
+                        //     },
+                        //     // opposite: false,
+                        //     minPadding: 100
+                        // },
+                    ],
+                     // SECTION - Highcharts - yAxis - tooltip (formatter)
+                    tooltip: { // TODO make the datapoint markers better
+                        backgroundColor: '#FFFFFF',//'#1ebd1e', // 'red'
+                        opacity: .7,
+                        style: {
+                            color: '#000000',
+                            fontSize: '14px',
+                            fontWeight: 'bold'
+                        },
+                        enabled: true,
+                        shared: false,
+                        valuePrefix: "{{currency_symbol}}",
+                        pointFormatter: function () {
+                            if (this.y >= 1000000000) {
+                                billion = this.y / 1000000000;
+                                billion_rounded = Math.round((billion) * 10) / 10;
+                                return('<b>{{currency_symbol}}' + billion_rounded) + 'B</b>';
+                            } else if (this.y >= 1000000) {
+                                million = this.y / 1000000
+                                million_rounded = Math.round((million) * 10) / 10;
+                                return('<b>{{currency_symbol}}' + million_rounded) + 'M</b>';
+                            } else if (this.y >= 10000) {
+                                thousand = this.y / 1000
+                                thousand_rounded = Math.round((thousand) * 10) / 10;
+                                return('<b>{{currency_symbol}}' + this.y / 1000) + 'K</b>';
+                            } else { // return '<b>$' + this.y + '</b>';
+                                ratio = this.y / 1
+                                million_rounded = Math.round((ratio) * 100) / 100;
+                                return('<b>' + million_rounded) + '</b>';
+                            }
+                        },
+
+                        shape: 'square',
+                        headerShape: 'callout',
+                        borderWidth: 1,
+                        borderColor: '#AAA',
+                        shadow: false,
+                        // positioner: function (width, height, point) {
+                        //     var chart = this.chart,
+                        //         position;
+                        //     if (point.isHeader) {
+                        //         position = {
+                        //             x: Math.max(
+                        //                 // Left side limit
+                        //                 chart.plotLeft,
+                        //                 Math.min(point.plotX + chart.plotLeft - width / 2,
+                        //                 // Right side limit
+                        //                 chart.chartWidth - width - chart.marginRight)
+                        //             ),
+                        //             y: point.plotY
+                        //         };
+                        //     } else {
+                        //         position = {
+                        //             x: point.series.chart.plotLeft,
+                        //             y: point.series.yAxis.top - chart.plotTop
+                        //         };
+                        //     }
+
+                        //     return position;
+                        // }
+                    },
+                    series: [  // SECTION - Highcharts - series - all
+                        {
+                            type: 'column',
+                            name: 'Quarterly (Q) {{ fin_metric_name }}',
+                            pointInterval: 1,
+                            pointIntervalUnit: 'year',
+                            tooltip: {
+                                split: true,
+                                shared: false,
+                                xDateFormat: 'Q%q \'%Y',
+                                shadow: true,
+                                borderWidth: 1,
+                                borderColor: '#AAA',
+                                backgroundColor: 'rgba(255,255,255,0.8)'
+                            },
+                            data: df_json,
+                            zIndex: 98,
+                            yAxis: 1
+                        }, {
+                            type: 'line',
+                            yAxis: 1,
+                            zIndex: 100,
+                            tooltip: {
+                                shared: true,
+                                xDateFormat: 'FY %Y', // '%b - %Y'
+                                // backgroundColor: '#1ebd1e',
+
+                            },
+                            pointInterval: 3,
+                            pointIntervalUnit: 'month',
+                            color: '#1ebd1e', // '#343A40', // '#1C9179',
+                            lineWidth: 3,
+                            xDateFormat: '%Y',
+                            findNearestPointBy: 'xy',
+                            data: year_df_json
+                        }, {
+                            type: 'spline',
+                            name: '{{ company_symbol }} Stock Price',
+                            // pointInterval: 1,
+                            // pointIntervalUnit: 'year',
+
+
+                            data: price_json,
+                            zIndex: 98,
+                            // yAxis: 0,
+                        },
+                    ]
+                });
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
+        <style>
+            .tt-menu {
+                max-height: 130px;
+                overflow-y: auto;
+                width: 500px;
+                background-color: #FFFFFF;
+            }
+            .typeahead {
+                width: 100px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    d
+    <body class="fixed_body">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="color: #212529;">
+            <div class="container">
+                <div class="squarelogo">
+                    <a class="navbar-brand dollar_data" href="#" style="color: #fec503;">
+                        10
+                    </a>
+                </div>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">
+                        Toggle navigation
+                    </span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="#">
+                                First Item
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Second Item
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Third Item
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation">
+                            <form class="form-inline mr-auto" target="_self">
+                                <div class="form-group">
+                                    <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                        <div class="input-group">
+                                            <input class="bg-light form-control border-0 small typeahead" type="text" placeholder="TSLA, AAPL, SPY...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary py-0" type="button">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="#">
+                                BUY DATA
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Link 2
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Link 3
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="#">
+                                    First Item
+                                </a>
+                                <a class="dropdown-item" role="presentation" href="#">
+                                    Second Item
+                                </a>
+                                <a class="dropdown-item" role="presentation" href="#">
+                                    Third Item
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script>
+
+            var bestPictures = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.nonword('value'), // Bloodhound.tokenizers.obj.whitespace('tokens'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                prefetch: "{{ url_for('static', filename='../static/json/company_urls_records_remote.json') }}"
+            });
+            bestPictures.initialize();
+
+            $('.typeahead').typeahead(null, {
+                minLength: 1,
+                name: 'ticker',
+                display: 'value',
+                source: bestPictures,
+                highlight: true,
+                hint: false,
+                templates: {
+                    empty: ['<div class="empty-message">', 'Try <p><a href=\"https://charts.tendollardata.com/TSLA>TSLA</a>, <a href=\"https://charts.tendollardata.com/AAPL>AAPL</a>, <a href=\"https://charts.tendollardata.com/SPY>SPY</a>...', '</div>'].join('\n'),
+                    suggestion: function (data) {
+                        return "<p><a href=\"https://charts.tendollardata.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>"
+                    }
+                }
+
+            });
+        </script>
+        <!-- <div class="tabbed">
+                  <input type="radio" id="tab21" name="css-tabs2" checked>
+                  <input type="radio" id="tab22" name="css-tabs2">
+                  <input type="radio" id="tab23" name="css-tabs2">
+                  <ul class="tabs">
+                    <li class="tab"><label for="tab21">Gangsta lipsum</label></li>
+                    <li class="tab"><label for="tab22">Zombie lipsum</label></li>
+                    <li class="tab"><label for="tab23">New age bullshit</label></li>
+                  </ul>
+                  <div class="tab-content">
+                    <h4>Gangsta lipsum</h4>
+                    <p>De.</p>
+                  </div>
+                  <div class="tab-content">
+                    <h4>Zombie lipsum</h4>
+                    <p>Zouris. </p>
+                  </div>
+                  <div class="tab-content">
+                    <h4>New age bullshit</h4>
+                    <p>Ourtion.</p>
+                    <p>Eoondage.</p>
+                    <p>Generated by the <a href="http://sebpearce.com/bullshit/">New Age Bullshit Generator</a></p>
+                  </div>
+                </div> -->
+    </body>
+</html></div><div class="table_container"></div><div id="chart"></div><script>
+function checkForm() {
+    var rows = document.getElementsByClassName("item-row");
+    var arr = new Array();
+    for (i = 0; i < rows.length; i ++) {
+        var cols = rows[i].getElementsByTagName("td");
+        for (j = 0; j < cols.length; j ++) {
+            arr.push(cols[j].textContent);
+        }
+    }
+}</script><script>
+$(document).ready(function () {
+    $('DISABLE#df_myTable').DataTable({
+        columnDefs: [
+            {
+                "width": "1000",
+                "targets": "_all",
+                render: function (data, type, full, meta) {
+                    if (type === 'display' && !isNaN(data * 1) && data > 1000000000) {
+                        return('$' + (
+                            data / 1000000000
+                        ).toFixed(1) + 'B').toLocaleString();
+                    } else if (type === 'display' && !isNaN(data * 1) && (data > 1000000 && data < 999999999)) {
+                        return('$' + (
+                            data / 1000000
+                        ).toFixed(1) + 'M').toLocaleString();
+                    } else if (type === 'display' && !isNaN(data * 1) && (data > 1000 && data < 999999)) {
+                        return('$' + (
+                            data / 1000
+                        ).toFixed(1) + 'K').toLocaleString();
+                    } else if (type === 'display' && !isNaN(data * 1) && (data > .01 && data < 2) && data != 1) {
+                        return((data * 100).toFixed(0) + '%').toLocaleString();
+                    } else {
+                        return data;
+                    }
+                }
+            },
+        ],
+        dom: 'Bfrtip',
+        paginate: false,
+        colReorder: true,
+        buttons: []
+    });
+});</script><div class="d-flex flex-column" id="content-wrapper">
+<div class="row">
+    <div class="col-md-8 col-lg-8 col-xl-8">
+        <div class="text-dark h1_info">
+            <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right">
+                <strong>
+                    {{ company_long_name }}
+                    (
+                    {{ company_symbol }}
+                    )
+                    {{ fin_metric_name }}
+                    |
+                    {{ earliest_year }}
+                    -
+                    {{ latest_year }}
+                </strong>
+                <br>
+            </h1>
+            <h2 class="text-primary mb-0">
+                <!-- {{ latest_year }} -->
+                12 Month
+                {{ fin_metric_name }}
+                :
+                {{ last_4_quarters_str}}
+                 (Y/Y%)
+                <br>
+            </h2>
+        </div>
+        <div class="pad-10-top pad-10-bottom pad-10-left pad-10-right">
+            <div>
+                <div
+                    id="highbar" style="height: 500px; width:100%;"><!-- <div id="highbar" style="height: 400px; width:100%;"> -->
+                </div>
+                <br>
+            </div>
+            <div id="content">
+                <div class="row flex-grow-1">
+                    <div class="col-md-4 col-xl-6" style="padding: 10px;"></div>
+                </div>
+                <div class="row flex-grow-1 justify-content-center">
+                    <div class="col">
+                        <div class="card shadow mb-4">
+                            <div class="col mr-2">
+                                <div class="text-uppercase text-info font-weight-bold text-xs mb-1">
+                                    <span>
+                                        <strong>
+                                            Definition & Formula |
+                                            {{ fin_metric_name }}
+                                        </strong>
+                                    </span>
+                                </div>
+                                <p>
+                                    See:&nbsp;
+                                    <br>
+                                    Macrotrends &amp; Gurufocus definitions https://www.gurufocus.com/term/mktcap/
+                                    {{ company_symbol }}
+                                    /Market-Cap/Apple
+                                    <br>
+                                </p>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="text-dark font-weight-bold h5 mb-0 mr-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow mb-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="text-primary font-weight-bold m-0 metric_table">
+                                    {{ company_long_name }}
+                                    (
+                                    {{ company_symbol }}
+                                    ) Historical
+                                    {{ fin_metric_name }}
+                                    Table
+                                </h6>
+                                <div class="dropdown no-arrow">
+                                    <button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">
+                                        <i class="fas fa-ellipsis-v text-gray-400"></i>
+                                    </button>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
+                                        <p class="text-center dropdown-header">
+                                            dropdown header:
+                                        </p>
+                                        <a class="dropdown-item" role="presentation" href="#">
+                                            &nbsp;Action
+                                        </a>
+                                        <a class="dropdown-item" role="presentation" href="#">
+                                            &nbsp;Another action
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" role="presentation" href="#">
+                                            &nbsp;Something else here
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body yoy_table">
+                                {% for table in df_html_tall %}
+                                    {{ df_html_tall[0]|safe }}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="card shadow border-left-success py-2">
+                        <div class="card-body">
+                            <h4 class="text-dark mb-0">
+                                Lifetime Metrics
+                            </h4>
+                            <div class="row align-items-center no-gutters">
+                                <div class="col mr-2">
+                                    <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                        <span>
+                                            Earnings (annual)
+                                        </span>
+                                    </div>
+                                    <div class="text-dark font-weight-bold h5 mb-0">
+                                        <span>
+                                            $215,000
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col mr-2">
+                                    <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                        <span>
+                                            Earnings (annual)
+                                        </span>
+                                    </div>
+                                    <div class="text-dark font-weight-bold h5 mb-0">
+                                        <span>
+                                            $215,000
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center no-gutters">
+                                <div class="col mr-2">
+                                    <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                        <span>
+                                            Earnings (annual)
+                                        </span>
+                                    </div>
+                                    <div class="text-dark font-weight-bold h5 mb-0">
+                                        <span>
+                                            $215,000
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col mr-2">
+                                    <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                                        <span>
+                                            Earnings (annual)
+                                        </span>
+                                    </div>
+                                    <div class="text-dark font-weight-bold h5 mb-0">
+                                        <span>
+                                            $215,000
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </br>
+                <div class="col">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>
+                {{ fin_metric_name }}
+                Summary
+            </h3>
+            <p>
+                {{ company_short_name }}
+                's
+                {{ fin_metric_name }}
+                is 0.7, and it's a great one. A
+                {{ fin_metric_name }}
+                of 0.7 places it ahead of it's industry (
+                {{ company_industry }}
+                ) average of 0.5 and sector (
+                {{ company_sector }}
+                ) average. The industry includes the likes of
+                {{ company_similar }}
+                . The highest and lowest
+                {{ fin_metric_name }}
+                in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively.
+            </p>
+        </div>
+        <p>
+            {{ company_short_name }}
+            celebrated it's 10th year anniversary with a
+            {{ fin_metric_name }}
+            of 10. By the looks of it's history (see: the chart and stats above), you can expect
+            {{ company_short_name }}
+            to maintain a positive
+            {{ fin_metric_name }}
+            .
+        </p>
+        <div class="container">
+            <div class="page-content">
+                <div class="tabbed">
+                    <input type="radio" id="tab1" name="css-tabs" checked>
+                    <input type="radio" id="tab2" name="css-tabs">
+                    <input type="radio" id="tab3" name="css-tabs">
+                    <ul class="tabs">
+                        <li class="tab">
+                            <label for="tab1">
+                                Financial Statements #h1
+                            </label>
+                        </li>
+                        <li class="tab">
+                            <label for="tab2">
+                                Financial Ratios
+                            </label>
+                        </li>
+                        <li class="tab">
+                            <label for="tab3">
+                                Financial Growth
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <h4>
+                            Financial Statements #h2
+                        </h4>
+                        <p>
+                            Da bomb ipsizzl
+                        </p>
+                        <div class="tabbed">
+                            <input type="radio" id="tab1" name="css-tabs" checked>
+                            <input type="radio" id="tab2" name="css-tabs">
+                            <input type="radio" id="tab3" name="css-tabs">
+                            <ul class="tabs">
+                                <li class="tab">
+                                    <label for="tab1">
+                                        Gangsta lipsum
+                                    </label>
+                                </li>
+                                <li class="tab">
+                                    <label for="tab2">
+                                        Zombie lipsum
+                                    </label>
+                                </li>
+                                <li class="tab">
+                                    <label for="tab3">
+                                        New age bullshit
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <h4>
+                                    Gangsta lipsum
+                                </h4>
+                                <p>
+                                    Da bomb ipsizzl
+                                </p>
+                            </div>
+                            <div class="tab-content">
+                                <h4>
+                                    Zombie lipsum
+                                </h4>
+                                <p>
+                                    Zombie
+                                </p>
+                            </div>
+                            <div class="tab-content">
+                                <h4>
+                                    New age bullshit
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <h4>
+                            Zombie lipsum
+                        </h4>
+                        <p>
+                            Zombie
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <h4>
+                            New age bullshit
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="tabbed">
+                <input type="radio" id="tab1" name="css-tabs" checked>
+                <input type="radio" id="tab2" name="css-tabs">
+                <input type="radio" id="tab3" name="css-tabs">
+                <ul class="tabs">
+                    <li class="tab">
+                        <label for="tab1">
+                            Financial Statements #h1
+                        </label>
+                    </li>
+                    <li class="tab">
+                        <label for="tab2">
+                            Zombie lipsum
+                        </label>
+                    </li>
+                    <li class="tab">
+                        <label for="tab3">
+                            New age bullshit
+                        </label>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <h4>
+                        Financial Statements #h2
+                    </h4>
+                    <p>
+                        Da bomb ipsizzl
+                    </p>
+                    <div class="tabbed">
+                        <input type="radio" id="tab1" name="css-tabs" checked>
+                        <input type="radio" id="tab2" name="css-tabs">
+                        <input type="radio" id="tab3" name="css-tabs">
+                        <ul class="tabs">
+                            <li class="tab">
+                                <label for="tab1">
+                                    Gangsta lipsum
+                                </label>
+                            </li>
+                            <li class="tab">
+                                <label for="tab2">
+                                    Zombie lipsum
+                                </label>
+                            </li>
+                            <li class="tab">
+                                <label for="tab3">
+                                    New age bullshit
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <h4>
+                                Gangsta lipsum
+                            </h4>
+                            <p>
+                                Da bomb ipsizzl
+                            </p>
+                        </div>
+                        <div class="tab-content">
+                            <h4>
+                                Zombie lipsum
+                            </h4>
+                            <p>
+                                Zombie
+                            </p>
+                        </div>
+                        <div class="tab-content">
+                            <h4>
+                                New age bullshit
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <h4>
+                        Zombie lipsum
+                    </h4>
+                    <p>
+                        Zombie
+                    </p>
+                </div>
+                <div class="tab-content">
+                    <h4>
+                        New age bullshit
+                    </h4>
+                </div>
+            </div>
+            <div id="accordion" class="accordion">
+                <div class="card mb-0">
+                    <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                        <a class="card-title">
+                            {{ fin_metric_name }}
+                            Definition and Formula (What is Current Ratio?)
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                        <p>
+                            According to Investopedia...
+                        </p>
+                        <p>
+                            See:
+                                                Macrotrends and Gurufocus definitions https://www.gurufocus.com/term/mktcap/AAPL/Market-Cap/Apple
+                        </p>
+                    </div>
+                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        <a class="card-title">
+                            Additional Information (Company Profile)
+                        </a>
+                    </div>
+                    <div
+                        id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                        <!-- <p>Website: <a href="https://apple.com">Apple, Inc.</a> -->
+                        <p>
+                            {{ company_description }}
+                        </p>
+                        <p>
+                            {{ company_long_name }}
+                            {{ country_ipo_date }}
+                            on the
+                            {{ company_exchange }}
+                            exchange and started trading with the ticker "
+                            {{ company_symbol }}
+                            ".
+                        </p>
+                    </p>
+                </div>
+                <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    <a class="card-title">
+                        Comparables (
+                        {{ fin_metric_name }}
+                        vs Competition e.g.
+                        {{ company_similar }}
+                        )
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        Apple, Inc's
+                        {{ fin_metric_name }}
+                        is 0.7, and it's a great one. A
+                        {{ fin_metric_name }}
+                        of 0.7 places it ahead of it's industry (Computer Hardware) average of 0.5 and sector (Technology) average. The industry includes the likes of
+                        {{ company_similar }}
+                        . The highest and lowest
+                        {{ fin_metric_name }}
+                        in the industry are 0.9 (NFLX) and 0.3 (GOOGL), respectively.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div><div class="col">
+<div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;">
+    <div class="card-body">
+        <h2 class="text-primary mb-0 historical">
+            Summary Statistics (Annual)
+            <br>
+            {{ fin_metric_name }}
+            <br>
+            (
+            {{ earliest_year }}
+            -
+            {{ latest_year }}
+            )
+        </h2>
+        <br>
+        <div class="text-dark font-weight-bold h5 mb-0"></div>
+    </div>
+    <div class="card-body">
+        <div class="text-dark font-weight-bold h5 mb-0"></div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="fin_metric-stats">
+                    <tr>
+                        <th>
+                            Statistic
+                        </th>
+                        <th>
+                            Ratio
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if statement_or_ratio != "ratio" %}
+                        <tr>
+                            <td class="hist_measure">
+                                Lifetime
+                            </td>
+                            <td class="hist_stats">
+                                {{ lifetime_sum_all_metric }}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    <tr>
+                        <td class="hist_measure">
+                            ROI (
+                            {{ earliest_year }}
+                            -
+                            {{ latest_year }}
+                            )
+                        </td>
+                        <td class="hist_stats">
+                            <b>
+                                {{ historical_pct_chg }}
+                            </b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hist_measure">
+                            % Change (annually)
+                        </td>
+                        <td class="hist_stats">
+                            {{ annual_pct_chg }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hist_measure">
+                            All-Time High
+                        </td>
+                        <td class="hist_stats">
+                            {{ max_str }}
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                                                            <td class="hist_measure">Top 25%</td>
+                                                            <td class="hist_stats">{{top_25_str}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="hist_measure">Average (μ)</td>
+                                                            <td class="hist_stats">{{mean_str}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="hist_measure">Bottom 25%</td>
+                                                            <td class="hist_stats">{{bottom_25_str}}</td>
+                                                        </tr> -->
+                    <tr>
+                        <td class="hist_measure">
+                            All-Time Low
+                        </td>
+                        <td class="hist_stats">
+                            {{ min_str }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            In Plain English (Highlights)
+        </p>
+        <p>
+            {{ company_short_name }}
+            (
+            {{ company_symbol }}
+            ) had a
+            {{ fin_metric_name }}
+            of
+            {{ latest_metric }}
+            in
+            {{ latest_year }}
+            .
+
+
+                                        At it's peak,
+            {{ company_short_name }}
+            (
+            {{ company_symbol }}
+            ) had a
+            {{ fin_metric_name.lower() }}
+            of
+            {{ latest_metric_str }}
+            in
+            {{ latest_year }}
+            .
+                                        At it's bottom,
+            {{ company_short_name }}
+            (
+            {{ company_symbol }}
+            ) had a
+            {{ fin_metric_name }}
+            of
+            {{ earliest_metric_str }}
+            in
+            {{ earliest_year }}
+            .
+
+
+                                        Increased
+            {{ num_years_increased }}
+            of
+            {{ num_years }}
+            .
+                                        If you add up all of
+            {{ company_short_name }}
+            's'
+        </p>
+        <p>
+            The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).
+        </p>
+        <!-- <p>If you'd have invested in </p>> -->
+        <div class="button_div">
+            <button class="btn btn-primary button_buy" type="button">
+                Historical Financial Ratios Data for entire Industry $5, Sector $10
+            </button>
+        </div>
+        <p>
+            We exist bc we want to provide affordable data. Ultimately, only high-level analysis in excel gives you the bigger picture
+        </p>
+        <p>
+            the chart data has been cleaned for the clearest analysis. We smooth seasonal spikes and fill in missing data with interpolated values. You can see the clearest historical trend this way. For the raw value, see the table below.
+        </p>
+    </div>
+</div></div></div><div id="content"><div class="row">
+<div class="col">
+    <div class="card shadow border-left-info py-2">
+        <div class="card-body" style="padding: 10px;"></div>
+    </div>
+</div></div><div class="row flex-grow-1 justify-content-center">
+<div class="col">
+    <div class="card shadow border-left-primary py-2" style="margin: 0px;padding: 10px;">
+        <div class="card-body" style="padding: 10px;">
+            <p>
+                Popular Stats &amp; Analyses:
+                <br>
+                -&nbsp;
+                <a href="#collapse-1">
+                    <span style="text-decoration: underline;">
+                        Company Info (CEO, IPO Date, HQ.
+                    </span>
+                </a>
+                ..)
+                <br>
+                -&nbsp;
+                <a href="#collapse-1">
+                    [Past] "If I bought AAPL at ______."
+                </a>
+                <br>
+                -&nbsp;
+                <a href="#collapse-1">
+                    [Present] "Should I buy AAPL today?"
+                </a>
+                <br>
+                <br>
+            </p>
+            <div class="text-dark font-weight-bold h5 mb-0"></div>
+        </div>
+    </div>
+</div></div><div class="container-fluid">
+<div class="card shadow border-left-success py-2">
+    <div class="card-body">
+        <h4 class="text-dark mb-0">
+            Lifetime Metrics
+        </h4>
+        <div class="row align-items-center no-gutters">
+            <div class="col mr-2">
+                <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                    <span>
+                        Earnings (annual)
+                    </span>
+                </div>
+                <div class="text-dark font-weight-bold h5 mb-0">
+                    <span>
+                        $215,000
+                    </span>
+                </div>
+            </div>
+            <div class="col mr-2">
+                <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                    <span>
+                        Earnings (annual)
+                    </span>
+                </div>
+                <div class="text-dark font-weight-bold h5 mb-0">
+                    <span>
+                        $215,000
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center no-gutters">
+            <div class="col mr-2">
+                <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                    <span>
+                        Earnings (annual)
+                    </span>
+                </div>
+                <div class="text-dark font-weight-bold h5 mb-0">
+                    <span>
+                        $215,000
+                    </span>
+                </div>
+            </div>
+            <div class="col mr-2">
+                <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                    <span>
+                        Earnings (annual)
+                    </span>
+                </div>
+                <div class="text-dark font-weight-bold h5 mb-0">
+                    <span>
+                        $215,000
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card" style="background-color: rgba(0,0,0,0.48);margin: 10px;">
+    <div class="card-body" style="padding: 2px;"></div>
+</div>
+<div class="row">
+    <div class="col">
+        <p>
+            <strong>
+                <span style="text-decoration: underline;">
+                    Yearly Breakdown
+                </span>
+            </strong>
+        </p>
+    </div>
+    <div class="col">
+        <p>
+            "If I bought AAPL&nbsp;at the top / bottom / beginning..."
+        </p>
+    </div>
+    <div class="col">
+        <p>
+            Number of Up Days
+        </p>
+    </div>
+    <div class="col">
+        <p>
+            Daily Volatility (+/-% Change)
+        </p>
+    </div>
+</div>
+<div class="col">
+    <div></div>
+    <div class="card" style="background-color: rgba(0,0,0,0.48);margin: 10px;">
+        <div class="card-body" style="padding: 2px;"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">
+                        Annual Reports (10K)
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-4">
+                        Quarterly Earnings Report (10Q)
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" role="tab" data-toggle="tab" href="#tab-2">
+                        Financial Ratios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">
+                        Key Metrics
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">
+                        Earnings Call Transcript
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">
+                        Press Releases
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" role="tabpanel" id="tab-1">
+                    <div class="col"></div>
+                </div>
+                <div class="tab-pane active" role="tabpanel" id="tab-2">
+                    <div class="col">
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">
+                                        Financial Statements
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" role="tab" data-toggle="tab" href="#tab-2">
+                                        Financial Ratios
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">
+                                        Tab 3
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane" role="tabpanel" id="tab-1">
+                                    <div class="col"></div>
+                                </div>
+                                <div class="tab-pane active" role="tabpanel" id="tab-2">
+                                    <div class="col">
+                                        <nav class="navbar navbar-light navbar-expand-md">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">
+                                                    Brand
+                                                </a>
+                                                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                                                    <span class="sr-only">
+                                                        Toggle navigation
+                                                    </span>
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navcol-1">
+                                                    <ul class="nav navbar-nav">
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link active" href="#">
+                                                                First Item
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" href="#">
+                                                                Second Item
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" href="#">
+                                                                Third Item
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" role="tabpanel" id="tab-3">
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="navbar navbar-light navbar-expand-md">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">
+                                    Brand
+                                </a>
+                                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                                    <span class="sr-only">
+                                        Toggle navigation
+                                    </span>
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navcol-1">
+                                    <ul class="nav navbar-nav">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" href="#">
+                                                First Item
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" href="#">
+                                                Second Item
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" href="#">
+                                                Third Item
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab-3">
+                    <div class="col"></div>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab-4">
+                    <p>
+                        Tab content.
+                    </p>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab-5">
+                    <div class="col"></div>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="tab-6">
+                    <div class="col">
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">
+                                        Financial Statements
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" role="tab" data-toggle="tab" href="#tab-2">
+                                        Financial Ratios
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">
+                                        Tab 3
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane" role="tabpanel" id="tab-1">
+                                    <div class="col"></div>
+                                </div>
+                                <div class="tab-pane active" role="tabpanel" id="tab-2">
+                                    <div class="col">
+                                        <nav class="navbar navbar-light navbar-expand-md">
+                                            <div class="container-fluid">
+                                                <a class="navbar-brand" href="#">
+                                                    Brand
+                                                </a>
+                                                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                                                    <span class="sr-only">
+                                                        Toggle navigation
+                                                    </span>
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="navcol-1">
+                                                    <ul class="nav navbar-nav">
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link active" href="#">
+                                                                First Item
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" href="#">
+                                                                Second Item
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" href="#">
+                                                                Third Item
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" role="tabpanel" id="tab-3">
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="navbar navbar-light navbar-expand-md">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">
+                                    Brand
+                                </a>
+                                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                                    <span class="sr-only">
+                                        Toggle navigation
+                                    </span>
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navcol-1">
+                                    <ul class="nav navbar-nav">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" href="#">
+                                                First Item
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" href="#">
+                                                Second Item
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" href="#">
+                                                Third Item
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card shadow border-left-primary py-2">
+            <div class="card-body">
+                <div class="row align-items-center no-gutters">
+                    <div class="col mr-2">
+                        <div class="text-uppercase text-primary font-weight-bold text-xs mb-1">
+                            <span>
+                                Earnings (monthly)
+                            </span>
+                            <span>
+                                Earnings (monthly)
+                            </span>
+                        </div>
+                        <div class="text-dark font-weight-bold h5 mb-0">
+                            <span>
+                                $40,000
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card shadow border-left-success py-2">
+            <div class="card-body">
+                <div class="row align-items-center no-gutters">
+                    <div class="col mr-2">
+                        <div class="text-uppercase text-success font-weight-bold text-xs mb-1">
+                            <span>
+                                Earnings (annual)
+                            </span>
+                        </div>
+                        <div class="text-dark font-weight-bold h5 mb-0">
+                            <span>
+                                $215,000
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card shadow border-left-info py-2">
+            <div class="card-body">
+                <div class="row align-items-center no-gutters">
+                    <div class="col mr-2">
+                        <div class="text-uppercase text-info font-weight-bold text-xs mb-1">
+                            <span>
+                                Tasks
+                            </span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <div class="text-dark font-weight-bold h5 mb-0 mr-3">
+                                    <span>
+                                        50%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                        <span class="sr-only">
+                                            50%
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card shadow border-left-warning py-2">
+            <div class="card-body">
+                <div class="row align-items-center no-gutters">
+                    <div class="col mr-2">
+                        <div class="text-uppercase text-warning font-weight-bold text-xs mb-1">
+                            <span>
+                                Pending Requests
+                            </span>
+                        </div>
+                        <div class="text-dark font-weight-bold h5 mb-0">
+                            <span>
+                                18
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div></div></div><section><div class="container"><div class="row align-items-center">
+<div class="col-lg-6 order-lg-2">
+    <div class="p-5">
+        <img class="rounded-circle img-fluid" src="../static/img/03.jpg">
+    </div>
+</div>
+<div class="col-lg-6 order-lg-1">
+    <div class="p-5">
+        <h2 class="display-4">
+            Let there be rock!
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.
+        </p>
+    </div>
+</div></div></div></section><div class="row flex-grow-1 justify-content-center"><div class="col"><div class="card shadow mb-4">
+<div class="card-header d-flex justify-content-between align-items-center">
+    <h6 class="text-primary font-weight-bold m-0 metric_table">
+        {{ company_long_name }}
+        (
+        {{ company_symbol }}
+        ) Historical
+        {{ fin_metric_name }}
+        Table
+    </h6>
+    <div class="dropdown no-arrow">
+        <button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">
+            <i class="fas fa-ellipsis-v text-gray-400"></i>
+        </button>
+        <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
+            <p class="text-center dropdown-header">
+                dropdown header:
+            </p>
+            <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Action
+            </a>
+            <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Another action
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Something else here
+            </a>
+        </div>
+    </div>
+</div>
+<div class="card-body"></div></div></div></div><script src="https://code.highcharts.com/stock/modules/exporting.js"></script><script type="text/javascript">$.typeahead({
+    input: '.js-typeahead',
+    minLength: 1,
+    filter: false, // Disables typahead filter to just show everything in the results from the database
+    debug: true,
+    highlight: true,
+    maxItem: 10,
+    dynamic: true,
+    delay: 200,
+    searchOnFocus: true,
+    backdrop: {
+        "background-color": "#fff"
+    },
+    href: "{{ url }}",
+    emptyTemplate: "no result for  {{ query }}",
+    display: ["name"],
+    // source: {
+    // users: {
+    // ajax: {
+    // url: '/assets/php/all_pages_query.php',
+    // data: {
+    // q: '{{query}}'
+    // }
+    // }
+    // }
+    // }
+});</script></body></html>

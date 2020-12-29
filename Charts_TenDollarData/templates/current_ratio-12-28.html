@@ -20,11 +20,6 @@ shared: true, -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script>
-            // global variables
-            // var point1
-            var latest_stock_price;
-        </script>
         <!-- <script data-ad-client="ca-pub-8622650495968210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -232,9 +227,6 @@ document.addEventListener('DOMContentLoaded', function (data) {
         legend: {
             enabled: true
         },
-    navigator: {
-        // enabled: false
-    },
         responsive: {
             rules: [
                 {
@@ -408,100 +400,40 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 },
                 pointPlacement: 'on'
             },
-            spline: { // SECTION - Highcharts - plotOptions - area
-
-                dataLabels:{
-                                className: 'chart_fy_metric',
-                                fontWeight: 'bold',
-                                padding: 5,
-                                enabled: true,
-
-                                // useHTML: true,
-                                borderRadius: 5,
-                                backgroundColor: '#FFFFFF',
-                                opacity: .7,
-                                zIndex:180,
-                                crop: false,
-                                overflow: 'visible',
-                                y: -10,
-                                x: 40,
-                                formatter: function () {
-                                    // var point1 = this.series.data[this.series.data.length - 1];
-                                    var point1 = this.series.data[this.series.data.length - 5];
-                                    // return point1
-                                    if (this.point == point1) {
-                                        var latest_stock_price = this.y;
-                                        return "<div class=\"chart_current_metric\">Last 4 Qtrs<br/>"  + "{{currency_symbol}}" + this.y + 'B</div>'
-                                        };}
+            area: { // SECTION - Highcharts - plotOptions - area
+                allowPointSelect: true,
+                dataLabels: {
+                    enabled: true,
+                    // useHTML: true,
+                    borderRadius: 5,
+                    backgroundColor: '#FFFFFF',
+                    opacity: .7,
+                    borderWidth: 1,
+                    borderColor: '#AAA',
+                    // zIndex:80,
+                    crop: false,
+                    overflow: 'visible',
+                    y: -10,
+                    x: 20,
+                    style: {
+                        color: '#000000', // 'red'
+                        fontSize: '14px',
+                        backgroundColor: 'black',
+                        textOutline: false,
+                        textAlign: 'center',
+                        align: 'right'
+                    },
+                    formatter: function () {
+                        if (this.point == this.series.data[this.series.data.length - 1]) {
+                            return "<div class=\"chart_current_price\">" + "Stock Price<br/>" + "{{ currency_symbol }}" + Math.round(this.y * 100) / 100;
+                        } + "";
+                        +'</div>'
+                    }
                 },
-                // allowPointSelect: true,
-                // dataLabels: {
-                //     enabled: true,
-                //     // useHTML: true,
-                //     borderRadius: 5,
-                //     backgroundColor: '#FFFFFF',
-                //     opacity: .7,
-                //     borderWidth: 1,
-                //     borderColor: '#AAA',
-                //     // zIndex:80,
-                //     crop: false,
-                //     overflow: 'visible',
-                //     y: -10,
-                //     x: 20,
-                //     style: {
-                //         color: '#000000', // 'red'
-                //         fontSize: '14px',
-                //         backgroundColor: 'black',
-                //         textOutline: false,
-                //         textAlign: 'center',
-                //         align: 'right'
-                //     },
-                //     formatter: function () {
-                //         if (this.point == this.series.data[this.series.data.length - 1]) {
-                //             return "<div class=\"chart_current_price\">" + "Stock Price<br/>" + "{{ currency_symbol }}" + Math.round(this.y * 100) / 100;
-                //         } + "";
-                //         +'</div>'
-                //     }
-                // },
-                // pointPlacement: 'on'
+                pointPlacement: 'on'
             },
             column: { // SECTION - Highcharts - plotOptions- column
-                groupPadding: 0,
-                // dataLabels:{
-                //     formatter: function () {
-                //                     var dataMax = this.series.dataMax;
-                //                     var dataMin = this.series.dataMin;
-                //                     if (this.y === dataMax) {
-                //                         return('<b>Top<br />' + max_min_num) + '</b>';
-                //                         // return this.y;
-                //                     }
-                //                     if (this.y === dataMin) {
-                //                         return('<b>Bottom<br />' + max_min_num) + '</b>';
-                //                     }
-                //                 }
-                // },
-                // dataLabels:{
-                //                 className: 'chart_fy_metric',
-                //                 fontWeight: 'bold',
-                //                 padding: 5,
-                //                 enabled: true,
-
-                //                 // useHTML: true,
-                //                 borderRadius: 5,
-                //                 backgroundColor: '#FFFFFF',
-                //                 opacity: .7,
-                //                 zIndex:180,
-                //                 crop: false,
-                //                 overflow: 'visible',
-                //                 y: -10,
-                //                 x: 40,
-                //                 formatter: function () {
-                //                     var point1 = this.series.data[this.series.data.length - 1];
-                //                     // return point1
-                //                     if (this.point == point1) {
-                //                         return "<div class=\"chart_current_metric\">Last 4 Qtrs<br/>"  + "{{currency_symbol}}" + this.y + 'B</div>'
-                //                         };}
-                // },
+                groupPadding: 0
             },
             series: {
                 name: 'Quarterly Data',
@@ -535,10 +467,10 @@ document.addEventListener('DOMContentLoaded', function (data) {
         yAxis: [
             {
                 // SECTION - Highcharts - yAxis
-                // height: '100%',
-                // min: '50',
+                height: '100%',
+                min: '50',
                 yAxis: 1,
-                // visible: false,
+                visible: false,
                 maxPadding: 0.1,
                 crosshair: {
                     width: 2,
@@ -548,87 +480,27 @@ document.addEventListener('DOMContentLoaded', function (data) {
                     zIndex: 100
                 },
                 opposite: true,
-tickPositioner() {
-    let tickPositions = this.tickPositions;
-    tickPositions[0] = Math.round(this.dataMin);
-    tickPositions[tickPositions.length - 1] = this.dataMax;
-    return tickPositions;
-},
-    // startOnTick: true,
-    // endOnTick: true,
                 labels: {
                     style: {
                         color: 'black', // 'red'
                         fontSize: '14px',
                         fontWeight: 'bold'
                     },
-                    formatter: function(){
-                        zoom_values_stock_price = $(this.axis.tickPositions)
-                        // zoom_values[zoom_values.length-1] = 150 = last
-                        // zoom_values[1]; = 25 = after 0
-                        // zoom_values[0] = current value!!!
-                        // this.series.data[this.series.data.length - 1] = last point value precise
-                        // point1;
-                        // latest_stock_price
-                        price_percent = Math.round(100 * this.value / zoom_values_stock_price[0])-100
-
-                        return '' + this.value + '' + price_percent + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
-                        // zoom_values[zoom_values.length-3];//.last()[0] + '%'; // $(this.axis.tickPositions).last()[0] = 150
-                    //   return Math.round(100 * this.value / $(this.axis.tickPositions).last()[0]) + '%';
-                    },
                     align: 'right'
                 }
+                // labels: {
+                //     formatter: function(){
+                //     return Math.round(100 * this.value / $(this.axis.tickPositions).last()[0],0) + '%';
+                //     },
+                // },
+                //     opposite:true,
             }, {
                 opposite:false,
-                yAxis: 1,
                 maxPadding: 0.1,
                 height: '100%',
                 crosshair: {},
                 // opposite: false,
                 // minPadding: 100,
-
-
-tickPositioner() {
-    let tickPositions = Math.round(this.tickPositions);
-    tickPositions[0] = Math.round(this.dataMin);
-    tickPositions[tickPositions.length - 1] = Math.round(this.dataMax);
-    return tickPositions;
-},
-
-    // startOnTick: true,
-    // endOnTick: true,
-                // labels: {
-                //     style: {
-                //         color: 'black', // 'red'
-                //         fontSize: '14px',
-                //         fontWeight: 'bold'
-                //     },
-                //     formatter: function(){
-                //         zoom_values = $(this.axis.tickPositions)
-                //         // zoom_values[zoom_values.length-1] = 150 = last
-                //         // zoom_values[1]; = 25 = after 0
-                //         // zoom_values[0] = current value!!!
-                //         // this.series.data[this.series.data.length - 1] = last point value precise
-                //         // point1;
-                //         // latest_stock_price
-
-                //         return Math.round(100 * this.value / zoom_values[0])-100 + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
-                //         // zoom_values[zoom_values.length-3];//.last()[0] + '%'; // $(this.axis.tickPositions).last()[0] = 150
-                //     //   return Math.round(100 * this.value / $(this.axis.tickPositions).last()[0]) + '%';
-                //     },
-                //     align: 'right'
-                // },
-
-    tickPositioner: function () {
-        var positions = [],
-            tick = Math.floor(this.dataMin),
-            increment = Math.ceil((this.dataMax - this.dataMin) / 6);
-
-        for (; tick - increment <= this.dataMax; tick += increment) {
-            positions.push(tick);
-        }
-        return positions;
-    },
                 labels: { // SECTION - Highcharts - yAxis - labels
                     style: {
                         color: 'black', // 'red'
@@ -638,28 +510,17 @@ tickPositioner() {
                     // opposite: false,
                     align: 'right',
                     formatter: function () {
-                        zoom_values_fy_metric = $(this.axis.tickPositions)
-                        // zoom_values[zoom_values.length-1] = 150 = last
-                        // zoom_values[1]; = 25 = after 0
-                        // zoom_values[0] = current value!!!
-                        // this.series.data[this.series.data.length - 1] = last point value precise
-                        // point1;
-                        // latest_stock_price
-
-                        // return Math.round(100 * this.value / zoom_values_fy_metric[0])-100 + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
-
                         if (this.value >= 1000000000) {
                             billion = this.value / 1000000000;
-                            billion_rounded = Math.round((billion) * 1) / 1;
-                            metric_percent = (Math.round(100 * this.value / zoom_values_fy_metric[0]))-100;
-                            return('<b>  {{ currency_symbol }}' + billion_rounded + 'B</b>' + metric_percent + '%' );
+                            billion_rounded = Math.round((billion) * 100) / 100;
+                            return('<b>  {{ currency_symbol }}' + billion_rounded) + 'B</b>';
                         } else if (this.value >= 1000000) {
                             million = this.value / 1000000
-                            million_rounded = Math.round((million) * 1) / 1;
+                            million_rounded = Math.round((million) * 100) / 100;
                             return('<b>  {{ currency_symbol }}' + million_rounded) + 'M</b>';
                         } else if (this.value >= 10000) {
                             thousand = this.value / 1000
-                            thousand_rounded = Math.round((thousand) * 1) / 1;
+                            thousand_rounded = Math.round((thousand) * 100) / 100;
                             return('<b>  {{ currency_symbol }}' + this.value / 1000) + 'K</b>';
                         } else { // return '<b>$' + this.y + '</b>';
                             ratio = this.value / 1
@@ -668,12 +529,18 @@ tickPositioner() {
                         }
                     }
                 }
-            }
+            },
 
-            , {},
+            , {
+                labels: {
+                    formatter: function(){
+                    return 100 * this.value / $(this.axis.tickPositions).last()[0] + '%';
+                    },
+                    opposite:false,
+
+}
+},
         ],
-
-
         // SECTION - Highcharts - yAxis - tooltip (formatter)
         series: [
             {
@@ -821,6 +688,11 @@ tickPositioner() {
                 data: price_json,
                 zIndex: 98,
                 // yAxis: 0,
+            }, {
+                type: 'area',
+                // visible: false,
+                yAxis: 0,
+                data: year_df_json
             },
         ]
     });

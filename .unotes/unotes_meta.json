@@ -58,7 +58,14 @@
     "Web_Design": {
       "name": "Web_Design",
       "isOrdered": true,
-      "folders": {},
+      "folders": {
+        "assets": {
+          "name": "assets",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
       "files": {}
     },
     "route_imports": {
@@ -75,6 +82,30 @@
     },
     "test_jfiddle": {
       "name": "test_jfiddle",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "lambda": {
+      "name": "lambda",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "others": {
+      "name": "others",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "serverless": {
+      "name": "serverless",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "lambda-package": {
+      "name": "lambda-package",
       "isOrdered": true,
       "folders": {},
       "files": {}

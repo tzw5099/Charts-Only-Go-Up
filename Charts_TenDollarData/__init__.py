@@ -3,7 +3,7 @@ import os
 # print("ABC PRINTED", os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.append(os.path.join(os.path.dirname(__file__)))
 
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 # from charts.tendollardata.com import routes#, app
 import financial_statements.routes
 from config import Config

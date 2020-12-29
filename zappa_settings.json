@@ -1,0 +1,21 @@
+{
+	"dev": {
+		"app_function": "routes.app",
+		"profile_name": "default",
+		"project_name": "lambda",
+		"runtime": "python3.7",
+		"s3_bucket": "zappa-11aa22b33", //"bucketless-test",
+		"aws_region": "us-east-1",
+        "exclude": [
+            "node_modules","*.xlsx","*.map","*.jpg", "*.jpeg", "*.ipynb", "*.mov", "*.gif", "*.mp4",
+            "secrets.json", "*.csv"//, "*.pickle", "*.ann","venv"
+        ],
+		"regex_excludes": [
+		    "jupyter","butterfly","test_jsfiddle","pandas", "scipy", "numpy", "PIL", "statsmodels", "matplotlib","Market Cap","old Historical", "Financial Growth", "daily_price", "Historical Financial Statements", "test data","crunch_base", "annual_returns", ".history",".git"
+		],
+		"callbacks": {
+		    "zip": "zappa_package_cleaner.main"
+		},
+		"slim_handler": true // don't need slim handler anymore...
+			}
+}

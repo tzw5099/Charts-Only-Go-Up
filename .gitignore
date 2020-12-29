@@ -1,1 +1,9 @@
 node_modules
+zappa_env
+.history
+serverless
+others
+.aws
+lambda
+lambda-package
+.github
