@@ -380,10 +380,13 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         fin_metric_history = df['{}'.format(fin_metric_title)]
         year_df = groupby_agg(df)
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
-        year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_title)]].to_numpy()).tolist()
+
+
+        # year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_title)]].to_numpy()).tolist()
         year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_title)]/year_df['{}'.format(fin_metric_title)].shift(-4)
         num_years_increased = len(year_df[year_df['Y/Y % Change']>0])
         fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
+        print("no errors yeet")
     except Exception as e:
         year_df = groupby_agg(df)
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
@@ -391,8 +394,32 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_name)]/year_df['{}'.format(fin_metric_name)].shift(-4)
         num_years_increased = len(year_df[year_df['Y/Y % Change']>0])
         print("var excepted",e)
+
+    repeated_list = []
+    for n in year_df['{}'.format(fin_metric_name)]:
+        if len(repeated_list) >= len(df):
+            pass
+        else:
+            repeated_list.append(n)
+        if len(repeated_list) >= len(df):
+            pass
+        else:
+            repeated_list.append('')
+        if len(repeated_list) >= len(df):
+            pass
+        else:
+            repeated_list.append('')
+        if len(repeated_list) >= len(df):
+            pass
+        else:
+            repeated_list.append('')
+    df['repeater'] = repeated_list[::-1]
+    print("df repeater",df['repeater'], "len", len(df['repeater']))
+    print("versus df",len(df))
+    year_df_json = np.nan_to_num(df[['date',"{}".format("repeater")]].to_numpy()).tolist()[::-1]
+    print("versus year_df_json",len(year_df_json), year_df_json)
+
     len_year_df = len(year_df)
-    year_df_json=year_df_json # [0:len_year_df-1]
     df_json_date_year  = np.nan_to_num(year_df['year'].to_numpy()).tolist()#[::-1]
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])
     df.index = df['Quarter & Year']
@@ -600,9 +627,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # latest_metric = "${}".format(list(df["{}".format(fin_metric_name)])[0])
         last_4_quarters = np.mean(df["quarter avg"][0:4])
         prev_4_quarters = np.mean(df["quarter avg"][5:9])
-    last_year_timestamp = year_df_json[-1][0]
-    year_df_json = year_df_json[0:len(year_df_json)-1]
-    year_df_json.append([last_year_timestamp,last_4_quarters])
+
+
     y_y = ((last_4_quarters/prev_4_quarters)-1)*100
     df_json  = np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()[::-1]
     # try:
@@ -634,6 +660,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     max_min_range = np.round(((max_metric - min_metric)/min_metric),2)
     max_min_range_str = change_markup(max_min_range,"x")
     print("max min", max_metric, min_metric)
+
     try:
         market_cap_path = glob.glob("D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ\\[M*/M-*-{}.csv".format(url_symbol))[0]
         market_cap_df = pd.read_csv(market_cap_path)
@@ -676,6 +703,26 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         company_similar_paragraph = ''
         print(e)
     print("pct chzz", pct_chg, "annual", annual_pct_chg)
+    print("df repeater",df['repeater'], "len", len(df['repeater']))
+    print("versus df",len(df))
+    year_df_json = np.nan_to_num(df[['date',"{}".format("repeater")]].to_numpy()).tolist()[::-1]
+
+    position_last_value = next(x[0] for x in enumerate(list(df['repeater'])) if  type(x[1]) == float) #type(x[1]) == float)
+    last_year_timestamp = year_df_json[(-position_last_value-1)][0]
+    year_df_json = year_df_json[0:len(year_df_json)-position_last_value-1]
+    year_df_json.append([last_year_timestamp,last_4_quarters])
+
+    year_df_json = str(year_df_json).replace("''","null")
+
+
+    print("versus year_df_json",len(year_df_json), year_df_json)
+    print("yeaf", last_4_quarters,len(df_json), df_json)
+
+
+    print("versus year_df_json",len(year_df_json), year_df_json)
+    print("pos last val", position_last_value)
+    print(list(df['repeater']))
+    print("price json", price_json)
     return render_template('current_ratio.html', \
                             company_symbol = profiles_dict['symbol'],\
                             pct_chg = str(pct_chg),\

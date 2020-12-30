@@ -20,6 +20,7 @@ shared: true, -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="canonical" href="https://charts.tendollardata.com/aapl-stock/apple/income-statement/revenue-sales/history" />
         <script>
             // global variables
             // var point1
@@ -31,13 +32,36 @@ shared: true, -->
         <title>
             Home - Brand
         </title>
-
+        <!-- https://stackoverflow.com/questions/26192897/should-i-use-bootstrap-from-cdn-or-make-a-copy-on-my-server -->
         <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"> -->
-        <link rel="preconnect" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
-        <link rel="preconnect" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+        <!-- DNS preconnect -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/Performance/dns-prefetch -->
+        <!-- https://gist.github.com/angelside/ec56ece1deae4edea505 -->
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel='preconnect' href='//stackpath.bootstrapcdn.com' crossorigin>
+        <link rel="preconnect" href="//ajax.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+        <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
+        <link rel="dns-prefetch" href="https://use.fontawesome.com">
+        <link rel="preconnect" href="//cdnjs.cloudflare.com">
+        <link rel="preconnect" href="//www.googletagmanager.com">
+        <link rel="preconnect" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//s3.amazonaws.com">
+        <link rel="dns-prefetch" href="//ajax.googleapis.com">
+        <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+        <link rel="dns-prefetch" href="//www.googletagmanager.com">
+        <link rel="dns-prefetch" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"> -->
+
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"> -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -54,7 +78,8 @@ shared: true, -->
         <script src="{{ url_for('static', filename='../static/js/highstock.js') }}"></script>
         <!-- https://code.highcharts.com/stock/highstock.js -->
         <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+        <script type="text/javascript" src="{{ url_for('static', filename='../static/js/jquery-3.5.1.js') }}"></script>
         <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
         <!-- enables CSV -->
         <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
@@ -254,6 +279,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
             ]
         },
         chart: {
+            alignTicks: true,
             style: {
                 fontFamily: "'Nunito Sans', Verdana, Arial, Helvetica, sans-serif",
                 textOutline: false,
@@ -283,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
         },
         rangeSelector: { // SECTION - Highcharts - range selector
             selected: 2,
-            inputPosition: { // align: 'left',
+            inputPosition: { align: 'center',
                 x: 0,
                 y: 0
             },
@@ -402,6 +428,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
             },
             line: { // SECTION - Highcharts - plotOptions - line
                 allowPointSelect: true,
+                connectNulls: true,
                 dataLabels: {
                     enabled: true,
                     format: "FY {point.x:%Y}", // "{point.x:%b %e}",
@@ -466,7 +493,9 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 // pointPlacement: 'on'
             },
             column: { // SECTION - Highcharts - plotOptions- column
-                groupPadding: 0,
+                groupPadding: 0.1,
+                 color: '#D6D9BF',
+
                 // dataLabels:{
                 //     formatter: function () {
                 //                     var dataMax = this.series.dataMax;
@@ -509,8 +538,9 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 dataGrouping: {
                     enabled: false
                 },
-                type: 'column',
-                xAxis: 1
+                type: 'line',
+                xAxis: 1,
+
             },
             series: {
                 type: 'area',
@@ -535,9 +565,13 @@ document.addEventListener('DOMContentLoaded', function (data) {
         yAxis: [
             {
                 // SECTION - Highcharts - yAxis
+                title: "% Change",
                 // height: '100%',
                 // min: '50',
                 yAxis: 1,
+                tickAmount: 5,
+
+                offset: 0,
                 // visible: false,
                 maxPadding: 0.1,
                 crosshair: {
@@ -548,14 +582,19 @@ document.addEventListener('DOMContentLoaded', function (data) {
                     zIndex: 100
                 },
                 opposite: true,
-tickPositioner() {
-    let tickPositions = this.tickPositions;
-    tickPositions[0] = Math.round(this.dataMin);
-    tickPositions[tickPositions.length - 1] = this.dataMax;
-    return tickPositions;
-},
-    // startOnTick: true,
-    // endOnTick: true,
+                showFirstLabel: false,
+                showLastLabel: false,
+                gridLineColor: 'transparent',
+
+                // tickInterval: 10,
+                tickPositioner() {
+                    let tickPositions = this.tickPositions;
+                    tickPositions[0] = this.dataMin; // Math.round(this.dataMin);
+                    tickPositions[tickPositions.length - 1] = this.dataMax;
+                    return tickPositions;
+                },
+                    // startOnTick: true,
+                    // endOnTick: true,
                 labels: {
                     style: {
                         color: 'black', // 'red'
@@ -572,31 +611,36 @@ tickPositioner() {
                         // latest_stock_price
                         price_percent = Math.round(100 * this.value / zoom_values_stock_price[0])-100
 
-                        return '' + this.value + '' + price_percent + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
+                        return '' + price_percent + '' + '' + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
                         // zoom_values[zoom_values.length-3];//.last()[0] + '%'; // $(this.axis.tickPositions).last()[0] = 150
                     //   return Math.round(100 * this.value / $(this.axis.tickPositions).last()[0]) + '%';
                     },
                     align: 'right'
                 }
-            }, {
+            },
+            {
                 opposite:false,
                 yAxis: 1,
                 maxPadding: 0.1,
                 height: '100%',
                 crosshair: {},
+                showFirstLabel: false,
+                showLastLabel: false,
+                // linkedTo: 1,
+                gridLineColor: 'transparent',
                 // opposite: false,
                 // minPadding: 100,
 
 
-tickPositioner() {
-    let tickPositions = Math.round(this.tickPositions);
-    tickPositions[0] = Math.round(this.dataMin);
-    tickPositions[tickPositions.length - 1] = Math.round(this.dataMax);
-    return tickPositions;
-},
+                // tickPositioner() {
+                //     let tickPositions = Math.round(this.tickPositions);
+                //     tickPositions[0] = Math.round(this.dataMin);
+                //     tickPositions[tickPositions.length - 1] = Math.round(this.dataMax);
+                //     return tickPositions;
+                // },
 
-    // startOnTick: true,
-    // endOnTick: true,
+                // startOnTick: true,
+                // endOnTick: true,
                 // labels: {
                 //     style: {
                 //         color: 'black', // 'red'
@@ -618,17 +662,17 @@ tickPositioner() {
                 //     },
                 //     align: 'right'
                 // },
+                tickAmount: 5,
+                tickPositioner: function () {
+                    var positions = [],
+                        tick = Math.floor(this.dataMin),
+                        increment = Math.ceil((this.dataMax - this.dataMin) / 6);
 
-    tickPositioner: function () {
-        var positions = [],
-            tick = Math.floor(this.dataMin),
-            increment = Math.ceil((this.dataMax - this.dataMin) / 6);
-
-        for (; tick - increment <= this.dataMax; tick += increment) {
-            positions.push(tick);
-        }
-        return positions;
-    },
+                    for (; tick - increment <= this.dataMax; tick += increment) {
+                        positions.push(tick);
+                    }
+                    return positions;
+                },
                 labels: { // SECTION - Highcharts - yAxis - labels
                     style: {
                         color: 'black', // 'red'
@@ -652,7 +696,7 @@ tickPositioner() {
                             billion = this.value / 1000000000;
                             billion_rounded = Math.round((billion) * 1) / 1;
                             metric_percent = (Math.round(100 * this.value / zoom_values_fy_metric[0]))-100;
-                            return('<b>  {{ currency_symbol }}' + billion_rounded + 'B</b>' + metric_percent + '%' );
+                            return('<b>  {{ currency_symbol }}' + billion_rounded + 'B</b>' + '' + '%' );
                         } else if (this.value >= 1000000) {
                             million = this.value / 1000000
                             million_rounded = Math.round((million) * 1) / 1;
@@ -668,7 +712,47 @@ tickPositioner() {
                         }
                     }
                 }
-            }
+            },
+            {
+                // SECTION - Highcharts - yAxis
+                // height: '100%',
+                // min: '50',
+                yAxis: 1,
+                linkedTo: 0, // stock price
+                // visible: false,
+                maxPadding: 0.1,
+                // showFirstLabel: false,
+                // showLastLabel: false,
+                crosshair: {
+                    width: 2,
+                    color: '#1C9179',
+                    snap: false,
+                    className: "y_crosshair",
+                    zIndex: 100
+                },
+                gridLineColor: 'transparent',
+
+                opposite: true,
+
+
+                offset: -100,
+                    // startOnTick: true,
+                    // endOnTick: true,
+                labels: {
+
+                    style: {
+                        color: 'black', // 'red'
+                        fontSize: '14px',
+                        fontWeight: 'bold',
+
+                    },
+                    formatter: function(){
+
+                        return '{{ currency_symbol }}' + this.value; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
+                    },
+                    align: 'right'
+                }
+            },
 
             , {},
         ],
@@ -678,7 +762,17 @@ tickPositioner() {
         series: [
             {
                 // SECTION - Highcharts - series - all
-                type: 'column',
+                type: 'scatter',
+                marker: {
+                    // symbol: 'triangle',
+                    radius: 5,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                    }
+                },
                 name: 'Quarterly (Q)   {{ fin_metric_name }}',
                 pointInterval: 1,
                 pointIntervalUnit: 'year',
@@ -797,6 +891,7 @@ tickPositioner() {
             }, {
                 type: 'spline',
                 name: 'Stock Price',
+                color:'#40D644', // robinhood green
                 // pointInterval: 1,
                 // pointIntervalUnit: 'year',
                 tooltip: {
@@ -1085,7 +1180,8 @@ function checkForm() {
 </script>
 <div class="d-flex flex-column" id="content-wrapper">
     <div class="row">
-        <div class="col-md-8 col-lg-8 col-xl-8">
+        <!-- <div class="col-md-9 col-lg-9 col-xl-9">  -->
+            <div class="col-md-8 col-lg-8 col-xl-8">
             <div class="text-dark h1_info">
                 <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right">
                     <strong>
@@ -1120,7 +1216,7 @@ function checkForm() {
             </div>
             <div class="pad-10-top pad-10-bottom pad-10-left pad-10-right">
                 <div>
-                    <div id="highbar" style="height: 500px; width:100%;">
+                    <div id="highbar" style="height: 600px; width:100%;">
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
                     <br>
                     Checkout the
