@@ -75,7 +75,7 @@ shared: true, -->
             .even{background-color:pink
             }
         </style>
-        <script src="{{ url_for('static', filename='../static/js/highstock.js') }}"></script>
+        <script src="{{ url_for('static', filename='../static/js/chart.js') }}"></script>
         <!-- https://code.highcharts.com/stock/highstock.js -->
         <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> -->
         <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
@@ -147,6 +147,12 @@ a:hover{color:#B721FF
 .tabbed [type="radio"]:nth-of-type(2):checked~.tab-content:nth-of-type(2),
 .tabbed [type="radio"]:nth-of-type(3):checked~.tab-content:nth-of-type(3),
 .tabbed [type="radio"]:nth-of-type(4):checked~.tab-content:nth-of-type(4){display:block;color:#1ebd1e,}
+h2,h3,h4,h5,h6{
+    font-family: Lato;
+    /* Catamaran; */
+    font-weight:800 !important;
+    /* font-size: 18px !important; */
+}
         </style>
         <script>
 function centerLabels(chart) {
@@ -251,6 +257,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 return false;
             });
         });
+
     }(Highcharts));
     var myChart = Highcharts.stockChart('highbar', {
         // SECTION - Highcharts - top
@@ -260,6 +267,11 @@ document.addEventListener('DOMContentLoaded', function (data) {
     navigator: {
         // enabled: false
     },
+    tooltip: {
+        shared: true,
+        crosshairs: true
+    },
+
         responsive: {
             rules: [
                 {
@@ -269,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                     chartOptions: {
                         chart: {},
                         subtitle: {
-                            text: null
+                            // text: null
                         },
                         navigator: {
                             enabled: false
@@ -279,7 +291,11 @@ document.addEventListener('DOMContentLoaded', function (data) {
             ]
         },
         chart: {
+            // margin: [0, 70, 0, 70],
             alignTicks: true,
+            credits: {
+                enabled: false
+            },
             style: {
                 fontFamily: "'Nunito Sans', Verdana, Arial, Helvetica, sans-serif",
                 textOutline: false,
@@ -287,6 +303,8 @@ document.addEventListener('DOMContentLoaded', function (data) {
             },
             borderWidth: 2,
             marginRight: 70,
+            marginLeft: 70,
+            marginTop: 10,
             renderTo: 'highbar',
             events: {
                 render() {
@@ -352,6 +370,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
         xAxis: [
             {
                 // SECTION - Highcharts - xAxis = top
+                // height:1,
                 events: {
                     afterSetExtremes: function () {
                         this.displayBtn ? $('.highcharts-scrollbar').show() : $('.highcharts-scrollbar').hide()
@@ -373,6 +392,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                         fontSize: '14px'
                     }
                 },
+                // visible: false,
                 crosshair: {
                     width: 2,
                     color: '#1C9179',
@@ -388,10 +408,10 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 // alternateGridColor: '#FDFFD5', // '#FEF8E3'
                 minPadding: 0,
                 // pointInterval: 1,//1000 * 3600 * 24 * 91.
-        labels: {
-            enabled: false,
-            // step: 1
-        }
+                // labels: {
+                //     enabled: false,
+                //     // step: 1
+                // }
             }, {
                 labels: {
                     style: {
@@ -565,7 +585,18 @@ document.addEventListener('DOMContentLoaded', function (data) {
         yAxis: [
             {
                 // SECTION - Highcharts - yAxis
-                title: "% Change",
+                title: {
+                    // align: 'high',
+                    offset: 0,
+                    text:  "Stock Price",
+                    fontSize: '140000px',
+                    rotation: 0,
+                    y: -10,
+                    enabled: true,
+              useHTML: true,
+                style: {
+                  visibility: 'visible'},
+                },
                 // height: '100%',
                 // min: '50',
                 yAxis: 1,
@@ -586,7 +617,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 showLastLabel: false,
                 gridLineColor: 'transparent',
 
-                // tickInterval: 10,
+                // tickInterval: 5,
                 tickPositioner() {
                     let tickPositions = this.tickPositions;
                     tickPositions[0] = this.dataMin; // Math.round(this.dataMin);
@@ -599,7 +630,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                     style: {
                         color: 'black', // 'red'
                         fontSize: '14px',
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
                     },
                     formatter: function(){
                         zoom_values_stock_price = $(this.axis.tickPositions)
@@ -611,7 +642,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                         // latest_stock_price
                         price_percent = Math.round(100 * this.value / zoom_values_stock_price[0])-100
 
-                        return '' + price_percent + '' + '' + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
+                        return '<span style="fill: red;height: 30px; width: 30px; background-color: #000000;">' + price_percent + '</span>' + '' + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
                         // zoom_values[zoom_values.length-3];//.last()[0] + '%'; // $(this.axis.tickPositions).last()[0] = 150
                     //   return Math.round(100 * this.value / $(this.axis.tickPositions).last()[0]) + '%';
                     },
@@ -691,25 +722,9 @@ document.addEventListener('DOMContentLoaded', function (data) {
                         // latest_stock_price
 
                         // return Math.round(100 * this.value / zoom_values_fy_metric[0])-100 + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
+                        metric_percent = (Math.round(100 * this.value / zoom_values_fy_metric[0]))-100;
+                        return('<b>' + metric_percent + '</b>' + '' + '%' );
 
-                        if (this.value >= 1000000000) {
-                            billion = this.value / 1000000000;
-                            billion_rounded = Math.round((billion) * 1) / 1;
-                            metric_percent = (Math.round(100 * this.value / zoom_values_fy_metric[0]))-100;
-                            return('<b>  {{ currency_symbol }}' + billion_rounded + 'B</b>' + '' + '%' );
-                        } else if (this.value >= 1000000) {
-                            million = this.value / 1000000
-                            million_rounded = Math.round((million) * 1) / 1;
-                            return('<b>  {{ currency_symbol }}' + million_rounded) + 'M</b>';
-                        } else if (this.value >= 10000) {
-                            thousand = this.value / 1000
-                            thousand_rounded = Math.round((thousand) * 1) / 1;
-                            return('<b>  {{ currency_symbol }}' + this.value / 1000) + 'K</b>';
-                        } else { // return '<b>$' + this.y + '</b>';
-                            ratio = this.value / 1
-                            million_rounded = Math.round((ratio) * 100) / 100;
-                            return('<b>' + million_rounded) + '</b>';
-                        }
                     }
                 }
             },
@@ -753,7 +768,73 @@ document.addEventListener('DOMContentLoaded', function (data) {
                     align: 'right'
                 }
             },
+            {
+                // SECTION - Highcharts - yAxis
+                // height: '100%',
+                // min: '50',
+                yAxis: 1,
+                  linkedTo: 1, // metric eg current ratio axis
+                // visible: false,
+                maxPadding: 0.1,
+                showFirstLabel: false,
+                showLastLabel: false,
+                crosshair: {
+                    width: 2,
+                    color: '#1C9179',
+                    snap: false,
+                    className: "y_crosshair",
+                    zIndex: 100
+                },
+                gridLineColor: 'transparent',
 
+                opposite: true,
+
+
+                offset: -400,
+                    // startOnTick: true,
+                    // endOnTick: true,
+                tickAmount: 5,
+
+                labels: { // SECTION - Highcharts - yAxis - labels
+                    style: {
+                        color: 'black', // 'red'
+                        fontSize: '14px'
+                    },
+                    x: 50,
+                    // opposite: false,
+                    align: 'right',
+                    formatter: function () {
+                        zoom_values_fy_metric = $(this.axis.tickPositions)
+                        // zoom_values[zoom_values.length-1] = 150 = last
+                        // zoom_values[1]; = 25 = after 0
+                        // zoom_values[0] = current value!!!
+                        // this.series.data[this.series.data.length - 1] = last point value precise
+                        // point1;
+                        // latest_stock_price
+
+                        // return Math.round(100 * this.value / zoom_values_fy_metric[0])-100 + '%'; // zoom_values[0];// zoom_values[1];//.last()[0]// Math.round(100 * this.value / zoom_values.last()[0]) + '%';
+
+                        if (this.value >= 1000000000) {
+                            billion = this.value / 1000000000;
+                            billion_rounded = Math.round((billion) * 1) / 1;
+                            metric_percent = (Math.round(100 * this.value / zoom_values_fy_metric[0]))-100;
+                            return('<b>  {{ currency_symbol }}' + billion_rounded + 'B</b>' );
+                        } else if (this.value >= 1000000) {
+                            million = this.value / 1000000
+                            million_rounded = Math.round((million) * 1) / 1;
+                            return('<b>  {{ currency_symbol }}' + million_rounded) + 'M</b>';
+                        } else if (this.value >= 10000) {
+                            thousand = this.value / 1000
+                            thousand_rounded = Math.round((thousand) * 1) / 1;
+                            return('<b>  {{ currency_symbol }}' + this.value / 1000) + 'K</b>';
+                        } else { // return '<b>$' + this.y + '</b>';
+                            ratio = this.value / 1
+                            million_rounded = Math.round((ratio) * 100) / 100;
+                            return('<b>' + million_rounded) + '</b>';
+                        }
+                    }
+                }
+            }
             , {},
         ],
 
@@ -762,7 +843,10 @@ document.addEventListener('DOMContentLoaded', function (data) {
         series: [
             {
                 // SECTION - Highcharts - series - all
-                type: 'scatter',
+                type: 'area',
+                lineWidth: 0,
+                fillOpacity: .1,
+                // color: "#000000",
                 marker: {
                     // symbol: 'triangle',
                     radius: 5,
@@ -918,6 +1002,12 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 // yAxis: 0,
             },
         ]
+    });
+});
+
+document.getElementById('set-y-title').addEventListener('click', () => {
+    chart.yAxis[0].setTitle({
+        text: 'New Y axis title'
     });
 });
         </script>
@@ -1183,7 +1273,8 @@ function checkForm() {
         <!-- <div class="col-md-9 col-lg-9 col-xl-9">  -->
             <div class="col-md-8 col-lg-8 col-xl-8">
             <div class="text-dark h1_info">
-                <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right">
+                <!-- <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right"> -->
+                <h1 class="text-primary mb-0 pad-10-top pad-10-bottom"></h1>
                     <strong>
                         {{ company_long_name }}
                     (
