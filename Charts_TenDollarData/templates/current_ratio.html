@@ -17,6 +17,7 @@
 },
 shared: true, -->
 <!-- {{price_json}} -->
+{{yoy_price_chg}}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -260,11 +261,12 @@ document.addEventListener('DOMContentLoaded', function (data) {
         // SECTION - Highcharts - top
         legend: {
             enabled: true,
-            verticalAlign: 'top',
+            // verticalAlign: 'top',
             backgroundColor:'#FFFFFF',
             borderColor:'#E9E9E9',
             borderWidth:2,
         },
+        // animation: false,
         navigator: {
             // enabled: false
         },
@@ -285,7 +287,17 @@ document.addEventListener('DOMContentLoaded', function (data) {
                         },
                         navigator: {
                             enabled: false
-                        }
+                        },
+        plotOptions: { line:{
+            dataLabels:{
+                // enabled:false,
+                format: "FY {point.x:%y}",
+            }
+        }},
+        legend: {
+            enabled: true,
+            verticalAlign: 'bottom',
+        },
                     }
                 }
             ]
@@ -301,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 textOutline: false,
                 fontSize: "14px"
             },
-            borderWidth: 2,
+            // borderWidth: 2,
             // marginRight: 100,
             // marginLeft: 100,
             marginTop: 10,
@@ -323,7 +335,17 @@ document.addEventListener('DOMContentLoaded', function (data) {
             }
         },
         title: {
-            text: '{{ fin_metric_name }}',
+            // text: '{{company_symbol}} Stock Price & {{ fin_metric_name }}',
+            // borderRadius: 5,
+            // backgroundColor: 'rgba(252, 255, 197, 0.7)',
+            // borderWidth: 1,
+            // borderColor: '#AAA',
+        useHTML: true,
+        style: {
+            color: '#000000',
+            'background-color': '#FFFFFF',
+            fontWeight: 'bold'
+        },
             // verticalAlign: 'bottom',
         },
         rangeSelector: { // SECTION - Highcharts - range selector
@@ -403,7 +425,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 },
                 type: 'datetime',
                 dateTimeLabelFormats: {
-                    month: 'Q%q', //'%Y', // 'Q%q - %y',
+                    month: 'Q%q %Y', //'%Y', // 'Q%q - %y',
                     year: '%Y'
                 },
                 // alternateGridColor: '#FDFFD5', // '#FEF8E3'
@@ -436,50 +458,74 @@ document.addEventListener('DOMContentLoaded', function (data) {
         ],
         plotOptions: {
             // SECTION - Highcharts - plotOptions
-            series: { // SECTION - Highcharts - plotOptions - series - all
-                connectNulls: true,
-                dataLabels: {
-                    enabled: true,
-                    formatter: function () { // if last point
-                        if (this.point === this.series.data[this.series.data.length - 1]) {
-                            return this.series.name;
-                        }
-                    }
-                }
-            },
+            // series: { // SECTION - Highcharts - plotOptions - series - all
+            //     connectNulls: true,
+            //     dataLabels: {
+            //         enabled: true,
+            //         formatter: function () { // if last point
+            //             if (this.point === this.series.data[this.series.data.length - 1]) {
+            //                 return this.series.name;
+            //             }
+            //         }
+            //     }
+            // },
             line: { // SECTION - Highcharts - plotOptions - line
                 allowPointSelect: true,
                 connectNulls: true,
                 dataLabels: {
                     enabled: true,
-                    format: "FY {point.x:%Y}", // "{point.x:%b %e}",
+                    // format: "FY {point.x:%Y}", // "{point.x:%b %e}",
+                    borderRadius: 5,
+                    formatter: function() {
+
+                        var point1 = this.series.data[this.series.data.length - 1];
+
+                        if(((Highcharts.dateFormat('%y', this.x)) % 2 == 0) && (this.point != point1)) {
+                            return '<span style="color:black; opacity:1;">FY ' + Highcharts.dateFormat('%Y', this.x) +'</span>';
+                        }
+                        else if ((Highcharts.dateFormat('%y', this.x)) % 2 != 0){
+                        return '';} //'%b/%e/%Y'
+                        else if (this.point == point1){
+                            var latest_stock_price = this.y;
+                        // return Highcharts.dateFormat('%Y', this.x);}
+                        // return '';}
+                        return '<span style="color:black; opacity:1;">FY ' + Highcharts.dateFormat('%Y', this.x) +'</span>';}
+                        // return '<span style="color:black; opacity:1;">Last 12 Months' + '</span>' +'<br /><span style="color: #177737;font-size: 17px;">{{ last_4_quarters_str }}' + '</span><br>'+'Stock Price<br>';}
+                    },
+                    backgroundColor: "#FFFFFF", //'rgba(252, 255, 197, 0.7)',
+                    // backgroundColor: 'rgba(252, 255, 197, 0.7)',
+                    borderWidth: 1,
+                    borderColor: '#AAA',
+                    // x:10,
+                    // y: 50,
+                    opacity: 1,
                 },
                 pointPlacement: 'on'
             },
             spline: { // SECTION - Highcharts - plotOptions - area
-                dataLabels:{
-                                className: 'chart_fy_metric',
-                                fontWeight: 'bold',
-                                padding: 5,
-                                enabled: false, //true,
-                                // useHTML: true,
-                                borderRadius: 5,
-                                backgroundColor: '#FFFFFF',
-                                opacity: .7,
-                                zIndex:180,
-                                crop: false,
-                                overflow: 'visible',
-                                y: -10,
-                                x: -40,
-                                formatter: function () {
-                                    // var point1 = this.series.data[this.series.data.length - 1];
-                                    var point1 = this.series.data[this.series.data.length - 5];
-                                    // return point1
-                                    if (this.point == point1) {
-                                        var latest_stock_price = this.y;
-                                        return "<div class=\"chart_current_metric\">Last 4 Qtrs<br/>"  + "{{currency_symbol}}" + this.y + 'B</div>'
-                                        };}
-                },
+                // dataLabels:{
+                //                 className: 'chart_fy_metric',
+                //                 fontWeight: 'bold',
+                //                 padding: 5,
+                //                 enabled: true, //false, //true,
+                //                 // useHTML: true,
+                //                 borderRadius: 5,
+                //                 backgroundColor: '#FFFFFF',
+                //                 opacity: .7,
+                //                 zIndex:180,
+                //                 crop: false,
+                //                 overflow: 'visible',
+                //                 y: -10,
+                //                 x: -40,
+                //                 formatter: function () {
+                //                     // var point1 = this.series.data[this.series.data.length - 1];
+                //                     var point1 = this.series.data[this.series.data.length - 5];
+                //                     // return point1
+                //                     if (this.point == point1) {
+                //                         var latest_stock_price = this.y;
+                //                         return "<div class=\"chart_current_metric\">Last 4 Qtrs<br/>"  + "{{currency_symbol}}" + this.y + 'B</div>'
+                //                         };}
+                // },
             },
             column: { // SECTION - Highcharts - plotOptions- column
                 groupPadding: 0.1,
@@ -551,26 +597,21 @@ document.addEventListener('DOMContentLoaded', function (data) {
         yAxis: [ // SECTION - Highcharts - yAxis
             {
                 // SECTION - Highcharts - yAxis - stock price - percent
-                title: {
-                    // align: 'high',
-                    offset: 0,
-                    text:  "Stock Price",
-                    fontSize: '140000px',
-                    rotation: 0,
-                    y: -10,
-                    enabled: true,
-                // useHTML: true,
-                style: {
-                    visibility: 'visible'},
-                },
-                // height: '100%',
-                // min: '50',
+                // min:1,
+                // title: {
+                //     // align: 'high',
+                //     offset: 0,
+                //     text:  "Stock Price",
+                //     fontSize: '140000px',
+                //     rotation: 0,
+                //     y: -10,
+                //     enabled: true,
+                // style: {
+                //     visibility: 'visible'},
+                // },
+                // showFirstLabel: false,
+                // showLastLabel: false,
                 yAxis: 1,
-                // tickAmount: 5,
-                // offset: 50,
-
-                // left: 85,
-                // top:10,
                 maxPadding: 0.1,
                 crosshair: {
                     width: 2,
@@ -579,85 +620,158 @@ document.addEventListener('DOMContentLoaded', function (data) {
                     className: "y_crosshair",
                     zIndex: 100
                 },
-                opposite: true,
+                // tickAmount: 6,
+                opposite: false,
                 gridLineColor: 'transparent',
-                // tickInterval: 5,
-                tickPositioner() {
-                    let tickPositions = this.tickPositions;
-                    tickPositions[0] = this.dataMin; // Math.round(this.dataMin);
-                    tickPositions[tickPositions.length - 1] = this.dataMax;
-                    return tickPositions;
-                },
-                // top:10,
-                labels: {
-                    style: {
-                        color: '#4285F4', // 'red'
-                        fontSize: '14px',
-                        fontWeight: 'bold',
-                    },
-
-                    formatter: function(){
-                        zoom_values_stock_price = $(this.axis.tickPositions)
-                        price_percent = Math.round(100 * this.value / zoom_values_stock_price[0])-100
-                        price_percent = price_percent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                        return '<span style="">' + '{{ currency_symbol }}' + Math.round(this.value*100)/100 +'<br>' + price_percent + '' + '%' + '</span>'; // zoom_values[0];//
-                    },
-                    align: 'left'
-                }
-            },
-            {// SECTION - Highcharts - yAxis - metric - percent
-                opposite:false,
-                yAxis: 1,
-                maxPadding: 0.1,
-                gridLineColor: 'transparent',
-                // top: 10,
-                offset: 0,
+                // height:'90%',
+                // tickPixelInterval: 70,
                 tickPositioner: function () {
                     var positions = [],
-                        tick = Math.floor(this.dataMin),
-                        increment = Math.ceil((this.dataMax - this.dataMin) / 6);
+                        tick = this.dataMin, // Math.floor(this.dataMin),
+                        // https://stackoverflow.com/questions/31925204/highcharts-line-charts-out-of-memory
+                        // increment = Math.ceil((this.dataMax - this.dataMin) / 6);
+                        increment = Math.max(1,Math.ceil((this.dataMax - this.dataMin) / 6));
                     for (; tick - increment <= this.dataMax; tick += increment) {
                         positions.push(tick);
                     }
                     return positions;
                 },
+                // tickPositioner() {
+                //     let tickPositions = this.tickPositions;
+                //     tickPositions[0] = this.dataMin; // Math.round(this.dataMin);
+                //     tickPositions[tickPositions.length - 1] = this.dataMax;
+                //     return tickPositions;
+                // },
+                // top:10,
+                labels: {
+                    style: {
+                        color: '#4285F4', // 'red'
+                        fontSize: '14px',
+                        // fontWeight: 'bold',
+                    },
+                    overflow: 'justify',
+                    formatter: function(){
+                        zoom_values_stock_price = $(this.axis.tickPositions)
+                        price_percent = Math.round(100 * this.value / zoom_values_stock_price[0])-100
+                        price_percent = price_percent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                        return '<span style="">' + '<b>{{ currency_symbol }}' + Math.round(this.value*100)/100 +'</b><br>' + price_percent + '' + '%' + '</span>'; // zoom_values[0];//
+                    },
+                    align: 'right'
+                },
+                // tickPixelInterval: 70,
+            },
+            {// SECTION - Highcharts - yAxis - metric - percent
+                opposite:true,
+                yAxis: 1,
+                title:'metric',
+                // height: '80%',
+                // min: 1,
+                // tickPixelInterval: 70,
+                // showFirstLabel: false,
+                // showLastLabel: false,
+                // tickInterval: 10,
+                // tickAmount: 6,
+                // maxPadding: 0.1,
+                // gridLineColor: 'transparent',
+                // top: 10,
+                // offset: 0,
+
+
+                {% if statement_or_ratio != "sratios" %}
+                tickPositioner: function () {
+                    // var positions = [],
+                    //     tick = (this.dataMin),
+                    //     increment = ((this.dataMax - this.dataMin) / 6);
+                    // for (; tick - increment <= this.dataMax; tick += increment) {
+                    //     positions.push(tick);
+                    // }
+                    var positions = [],
+                        tick = Math.floor(this.dataMin*100),
+                        // increment = Math.ceil((this.dataMax*100 - this.dataMin*100) / 6);
+                        increment = Math.max(1,Math.ceil((this.dataMax*100 - this.dataMin*100) / 6));
+                    for (; tick - increment <= this.dataMax*100; tick += increment) {
+                        positions.push(tick/100);
+                    }
+                    return positions;
+                },
+                {% endif %}
+                // {% if statement_or_ratio == "sratios" %}
+                // tickPositioner() {
+                //     let tickPositions = this.tickPositions;
+                //     tickPositions[0] = this.dataMin; // Math.round(this.dataMin);
+                //     tickPositions[tickPositions.length - 1] = this.dataMax;
+                //     return tickPositions;
+                // },
+                // {% endif %}
+
+
                 labels: { // SECTION - Highcharts - yAxis - labels
                     style: {
                         color: '#177737', // 'red'
                         fontSize: '14px'
                     },
+                    overflow: 'justify',
                     // x: 50,
-                    align: 'right',
+                    align: 'left',
                     formatter: function () {
                         zoom_values_fy_metric = $(this.axis.tickPositions)
                         metric_percent = (Math.round(100 * this.value / zoom_values_fy_metric[0]))-100;
                         metric_percent = metric_percent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                         if (this.value >= 1000000000) {
                             billion_rounded = Math.round((this.value / 1000000000) * 1) / 1;
-
                             return('<b>  {{ currency_symbol }}' + billion_rounded + 'B</b>' + '<br>' + metric_percent + '%');
                         } else if (this.value >= 1000000) {
                             million_rounded = Math.round((this.value / 1000000) * 1) / 1;
-                            return('<b>  {{ currency_symbol }}' + million_rounded) + 'M</b>';
+                            return('<b>  {{ currency_symbol }}' + million_rounded) + 'M</b>' + '<br>' + metric_percent + '%';
                         } else if (this.value >= 10000) {
                             thousand_rounded = Math.round((this.value / 1000) * 1) / 1;
-                            return('<b>  {{ currency_symbol }}' + this.value / 1000) + 'K</b>';
+                            return('<b>  {{ currency_symbol }}' + this.value / 1000) + 'K</b>' + '<br>' + metric_percent + '%';
                         } else { // return '<b>$' + this.y + '</b>';
                             million_rounded = Math.round((this.value / 1) * 100) / 100;
-                            return('<b>' + million_rounded) + '</b>';
+                            return('<b>' + million_rounded) + '</b>' + '<br>' + metric_percent + '%';
                         }
                     }
-                }
+                },
+                // tickPixelInterval: 70,
             },
         ],
         // SECTION - Highcharts - yAxis - tooltip (formatter)
         series: [
+             {
+                type: 'spline',
+                name: 'Stock Price',
+                color: '#4285F4', // robinhood green
+                // pointInterval: 1,
+                // pointIntervalUnit: 'year',
+                tooltip: {
+                    // TODO make the datapoint markers better
+                    backgroundColor: '#FFFFFF', // '#1ebd1e', // 'red'
+                    opacity: .7,
+                    style: {
+                        color: '#000000',
+                        fontSize: '14px',
+                        fontWeight: 'bold'
+                    },
+                    enabled: true,
+                    shared: true,
+                    valuePrefix: "{{ currency_symbol }}",
+                    pointFormatter: function () {
+                        // https://stackoverflow.com/questions/25973920/how-to-display-highchart-series-line-marker-symbol-from-tooltip-formatter
+                        // ●♦■▲▼
+                        stock_price = Math.round((this.y) * 100) / 100;
+                        return '♦ ' + this.series.name + ' <b>  {{ currency_symbol }}' + stock_price + '</b>';
+                    }
+                },
+                data: price_json,
+                zIndex: 98,
+                yAxis: 0,
+            },
             {
                 // SECTION - Highcharts - series - all
                 type: 'area',
                 lineWidth: 0,
                 fillOpacity: .1,
-                // color: "#000000",
+                // color: "#177737",
                 marker: {
                     // symbol: 'triangle',
                     radius: 5,
@@ -783,43 +897,12 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 xDateFormat: '%Y',
                 findNearestPointBy: 'xy',
                 data: year_df_json
-            }, {
-                type: 'spline',
-                name: 'Stock Price',
-                color: '#4285F4', // robinhood green
-                // pointInterval: 1,
-                // pointIntervalUnit: 'year',
-                tooltip: {
-                    // TODO make the datapoint markers better
-                    backgroundColor: '#FFFFFF', // '#1ebd1e', // 'red'
-                    opacity: .7,
-                    style: {
-                        color: '#000000',
-                        fontSize: '14px',
-                        fontWeight: 'bold'
-                    },
-                    enabled: true,
-                    shared: true,
-                    valuePrefix: "{{ currency_symbol }}",
-                    pointFormatter: function () {
-                        // https://stackoverflow.com/questions/25973920/how-to-display-highchart-series-line-marker-symbol-from-tooltip-formatter
-                        // ●♦■▲▼
-                        stock_price = Math.round((this.y) * 100) / 100;
-                        return '♦ ' + this.series.name + ' <b>  {{ currency_symbol }}' + stock_price + '</b>';
-                    }
-                },
-                data: price_json,
-                zIndex: 98,
-                // yAxis: 0,
             },
         ]
     });
 });
-document.getElementById('set-y-title').addEventListener('click', () => {
-    chart.yAxis[0].setTitle({
-        text: 'New Y axis title'
-    });
-});
+
+
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
         <style>
@@ -865,6 +948,7 @@ document.getElementById('set-y-title').addEventListener('click', () => {
             .up_green{color:#177737;/* color: #137333; */
                 font-size:20px}
             .down_red{color:#d93025;/* color: #137333; */
+            font-size:20px;
             }
             .typeahead_icon{font-size:25px !important;margin:0 auto !important;text-align:center;display:in-line;vertical-align:middle}
             .pct_chg_summary{text-align:center}
@@ -1079,39 +1163,58 @@ function checkForm() {
             <div class="col-md-8 col-lg-8 col-xl-8">
             <div class="text-dark h1_info">
                 <!-- <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right"> -->
-                <h1 class="text-primary mb-0 pad-10-top pad-10-bottom"></h1>
+                <h1 class="text-primary mb-0 pad-10-top pad-10-bottom">
                     <strong>
                         {{ company_long_name }}
                     (
                     {{ company_symbol }}
                     )
-                    {{ fin_metric_name }}
+                    <!-- {{ fin_metric_name }} -->
                     |
                     {{ earliest_year }}
                     -
                     {{ latest_year }}
                     </strong>
-                    <br>
                 </h1>
+                <span class="daily_pct_chg">
+                    <!-- Stock Price: -->
+            {% if last_price >= 0 %}
+                 {{currency_symbol}}{{last_price}}
+                 </span>
+                 {{last_pct_change_str}}
+            {% elif pct_chg_num < 0 %}
+            <!-- nothing -->
+            {% else %}
+            <!-- nothing -->
+            {% endif %}
+
+
+                <br>
                 <h2 class="text-primary mb-0">
                     <!-- {{ latest_year }} -->
                     Last 12 Months
                 {{ fin_metric_name }}
-                    <span class="up_green">
+                    <!-- <span class="up_green">
                         <i class="fa fa-arrow-up up_green" aria-hidden="true"></i>
-                    </span>
+                    </span> -->
                     :
-                    <i class="fa fa-arrow-down down_red" aria-hidden="true"></i>
+                    <!-- <i class="fa fa-arrow-down down_red" aria-hidden="true"></i> -->
                     <!-- <br / > -->
                     {{ last_4_quarters_str }}
                 (YoY
                 {{ y_y_chg }}
+
                 )
                     <br>
                 </h2>
             </div>
             <div class="pad-10-top pad-10-bottom pad-10-left pad-10-right">
-                <div>
+                <div class="highbar_container">
+                    {{company_symbol}}
+                    <span class="highbar_title_stock">
+                    Stock Price</span> &
+                    <span class="highbar_title_metric">
+                    {{ fin_metric_name }}</span>
                     <div id="highbar" style="height: 600px; width:100%;">
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
                     <br>
@@ -1273,7 +1376,7 @@ function checkForm() {
                             <br> -->
                 <!-- {{ fin_metric_name }} -->
                 <!-- <br> -->
-                Stats
+                Stats for {{fin_metric_name}}
                 <!-- (
             {{ earliest_year }}
             -
@@ -1287,6 +1390,7 @@ function checkForm() {
             <div class="text-dark font-weight-bold h5 mb-0"></div>
             <div class="table-responsive">
                 <table class="table">
+
                     <!-- <thead class="fin_metric-stats">
                                         <tr>
                                             <th>
@@ -1297,11 +1401,12 @@ function checkForm() {
                                             </th>
                                         </tr>
                                     </thead> -->
-                    <tbody>
+
                         {% if statement_or_ratio != "ratios" %}
+                        <tbody class="lifetime">
                         <tr>
                             <td class="hist_measure">
-                                Lifetime, Total (
+                                Lifetime, Total <br />(
                                 {{ earliest_year }}
                                 -
                                 {{ latest_year }}
@@ -1312,7 +1417,9 @@ function checkForm() {
                             </td>
                             <td rowspan="2" class="subtd pct_chg_summary">
                             </td>
+                            <td class="stock_price_rows">Stock Price</td>
                         </tr>
+                        </tbody>
                         {% endif %}
                         <!-- <tr>
                             <td class="hist_measure">
@@ -1328,13 +1435,14 @@ function checkForm() {
                                 </b>
                             </td>
                         </tr> -->
-                        <tr>
-                            <!-- <td class="hist_measure">
+                        <tbody class="historical_metric_change">
+                        <!-- <tr>
+                            <td class="hist_measure">
                                                         Change (Annual)
                                                     </td>
                                                     <td class="hist_stats">
                                                         {{ annual_pct_chg_str }}
-                                                    </td> --></tr>
+                                                    </td></tr> -->
                         <tr>
                             <td class="subtd_header">
                                 {{ latest_year }}
@@ -1352,6 +1460,7 @@ function checkForm() {
                                 <!-- annual average) -->
                                 </span>
                             </td>
+                            <td class="stock_price_rows">asdsa</td>
                             <!-- <td class="subtd">{{ annual_pct_chg_str }}</td> -->
                         </tr>
                         <tr>
@@ -1364,6 +1473,7 @@ function checkForm() {
                         </tr>
                     </tbody>
                 </tr>
+                <tbody class="peakbottom">
                 <tr>
                     <td class="hist_measure">
                         Peak
@@ -1383,6 +1493,7 @@ function checkForm() {
                         {{ min_str }}
                     </td>
                 </tr>
+            </tbody>
                 <!-- <tr>
                                                                                             <td class="hist_measure">Top 25%</td>
                                                                                             <td class="hist_stats">{{top_25_str}}</td>
@@ -1416,22 +1527,63 @@ function checkForm() {
             </tbody>
         </table>
     </div>
-    <!-- <p>
-                In Plain English (Highlights)
-            </p>
-            <p>
-                {{ company_short_name }}
+            <h2><span class="key_points">Key Points</span></h2>
+            <span class="key_body">
+                <ul>
+                    <li>
             (
             {{ company_symbol }}
             ) had a
             {{ fin_metric_name.lower() }}
-            of
+            that's
+            {% if pct_chg_num >= 0 %}
+            increased
+            {% elif pct_chg_num < 0 %}
+            decreased
+            {% else %}
+            <!-- nothing -->
+            {% endif %}
+            {{ hist_pct_chg_str }}
+            (or {{all_time_metric_chg}})
+            since the beginning.
+            </li>
+            <li>
+            During the same period, {{ company_symbol }} stock price has
+
+            {% if pct_chg_num >= 0 %}
+            increased
+            {% elif pct_chg_num < 0 %}
+            decreased
+            {% else %}
+            <!-- nothing -->
+            {% endif %}
+            {{all_time_price_chg_x}} (or {{all_time_price_chg}})
+                </li>
+            <li>If {{company_short_name}} continues to
+            {% if pct_chg_num >= 0 %}
+            increase
+            {% elif pct_chg_num < 0 %}
+            decrease
+            {% else %}
+            change
+            {% endif %}
+            its {{ fin_metric_name.lower() }} at
+
+                {{ annual_pct_chg_str }}/year for the next 10 years
+            </li>
+            <ul><li>This the magic of compounding.</li></ul>
+
+
+                <li>{{ company_short_name }} has increased its</li>
+
+
+                Based on history - std dev - increase or dec. next 5 years inc dec.
+
+
+
             {{ latest_metric }}
             in
             {{ latest_year }}
-            .
-                                                    At it's peak, that number was {{max_str}}.<br />
-                                                    At it's bottom, that number was {{min_str}}.
             .
                                                     Increased
             {{ num_years_increased }}
@@ -1441,7 +1593,17 @@ function checkForm() {
                                                     If you add up all of
             {{ company_short_name }}
             's'
-            </p> -->
+            </li>
+
+            </ul>
+            </span>
+            <h2><span class="key_points">Should You Buy</span></h2>
+            <span class="key_body">
+
+
+
+
+            </span>
     <!-- <p>
                 The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).
             </p> -->
