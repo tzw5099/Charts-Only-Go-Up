@@ -474,9 +474,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
                     // format: "FY {point.x:%Y}", // "{point.x:%b %e}",
                     borderRadius: 5,
                     formatter: function() {
-
                         var point1 = this.series.data[this.series.data.length - 1];
-
                         if(((Highcharts.dateFormat('%y', this.x)) % 2 == 0) && (this.point != point1)) {
                             return '<span style="color:black; opacity:1;">FY ' + Highcharts.dateFormat('%Y', this.x) +'</span>';
                         }
@@ -672,8 +670,6 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 // gridLineColor: 'transparent',
                 // top: 10,
                 // offset: 0,
-
-
                 {% if statement_or_ratio != "sratios" %}
                 tickPositioner: function () {
                     // var positions = [],
@@ -700,8 +696,6 @@ document.addEventListener('DOMContentLoaded', function (data) {
                 //     return tickPositions;
                 // },
                 // {% endif %}
-
-
                 labels: { // SECTION - Highcharts - yAxis - labels
                     style: {
                         color: '#177737', // 'red'
@@ -898,8 +892,6 @@ document.addEventListener('DOMContentLoaded', function (data) {
         ]
     });
 });
-
-
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
         <style>
@@ -941,7 +933,7 @@ document.addEventListener('DOMContentLoaded', function (data) {
             .yoy_table{max-height:400px;overflow-y:auto}
             .summary_header,
             .summary_body{padding:10px}
-            .material-icons{font-size:20px}
+            /* .material-icons{font-size:20px} */
             .up_green{color:#177737;/* color: #137333; */
                 /* font-size:20px */
                 }
@@ -1171,22 +1163,20 @@ function checkForm() {
                     |
                     {{ earliest_year }}
                     -
-                    {{ latest_year }}
+                    {{ latest_year }} ({{ num_years }} years)
                     </strong>
                 </h1>
                 <span class="daily_pct_chg">
                     <!-- Stock Price: -->
-            {% if last_price >= 0 %}
                  {{currency_symbol}}{{last_price}}
                  </span>
+            {% if last_pct_change_str != "0%" %}
                  {{last_pct_change_str}}
             {% elif pct_chg_num < 0 %}
             <!-- nothing -->
             {% else %}
             <!-- nothing -->
             {% endif %}
-
-
                 <br>
                 <h2 class="text-primary mb-0">
                     <!-- {{ latest_year }} -->
@@ -1201,7 +1191,6 @@ function checkForm() {
                     {{ last_4_quarters_str }}
                 (YoY
                 {{ y_y_chg }}
-
                 )
                     <br>
                 </h2>
@@ -1365,8 +1354,8 @@ function checkForm() {
         </div>
     </div>
 </div>
-<div class="col">
-    <div class="card shadow border-left-primary py-2" style="margin: 10px;">
+<div class="col rightside">
+    <div class="card shadow border-left-primary py-2 rightside" style="margin: 5px;">
         <!-- <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;"> -->
         <div class="card-body summary_header">
             <h2 class="text-primary mb-0 historical">
@@ -1374,7 +1363,7 @@ function checkForm() {
                             <br> -->
                 <!-- {{ fin_metric_name }} -->
                 <!-- <br> -->
-                Stats for {{fin_metric_name}}
+                Stats for <span class="greenish">{{fin_metric_name}}</span>
                 <!-- (
             {{ earliest_year }}
             -
@@ -1388,7 +1377,6 @@ function checkForm() {
             <div class="text-dark font-weight-bold h5 mb-0"></div>
             <div class="table-responsive">
                 <table class="table">
-
                     <!-- <thead class="fin_metric-stats">
                                         <tr>
                                             <th>
@@ -1399,7 +1387,6 @@ function checkForm() {
                                             </th>
                                         </tr>
                                     </thead> -->
-
                         {% if statement_or_ratio != "ratios" %}
                         <tbody class="lifetime">
                         <tr>
@@ -1415,7 +1402,7 @@ function checkForm() {
                             </td>
                             <td rowspan="2" class="subtd pct_chg_summary">
                             </td>
-                            <td class="stock_price_rows">Stock Price</td>
+                            <!-- <td class="stock_price_rows">Stock Price</td> -->
                         </tr>
                         </tbody>
                         {% endif %}
@@ -1448,7 +1435,7 @@ function checkForm() {
                             <td class="subtd_body">
                                 {{ latest_metric_str }}
                             </td>
-                            <td rowspan="2" class="subtd pct_chg_summary">
+                            <td rowspan="2" class="subtd pct_chg_summary big_cell">
                                 {{ hist_pct_chg_str }}
                                 <br>
                                 <span class="over_x_years">
@@ -1476,10 +1463,10 @@ function checkForm() {
                     <td class="hist_measure subtd_header">
                         Peak
                     </td>
-                    <td class="hist_stats ">
+                    <td class="hist_stats middle">
                         {{ max_str }}
                     </td>
-                    <td rowspan="2" class="subtd max_min_summary">
+                    <td rowspan="2" class="subtd max_min_summary big_cell ">
                         {{ max_min_range_str }}
                     </td>
                 </tr>
@@ -1487,8 +1474,30 @@ function checkForm() {
                     <td class="hist_measure subtd_header">
                         Bottom
                     </td>
-                    <td class="hist_stats">
+                    <td class="hist_stats middle">
                         {{ min_str }}
+                    </td>
+                </tr>
+            </tbody>
+            <tbody class="updownyears">
+                <tr>
+                    <td class="hist_measure subtd_header">
+                        # of Up Years <br>
+                        <span class="font12">Positive YoY change (0%+)</span>
+                    </td>
+                    <td class="hist_stats middle">
+                        {{ num_years_increased }}
+                    </td>
+                    <td rowspan="2" class="subtd big_cell big_up_year">
+                        {{num_years_increased}} of {{num_years}} <br>years up.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="hist_measure subtd_header">
+                        # of Down Years <br><span class="font12">Negative YoY change</span>
+                    </td>
+                    <td class="hist_stats middle">
+                        {{ num_years_bad }}
                     </td>
                 </tr>
             </tbody>
@@ -1522,69 +1531,69 @@ function checkForm() {
             <td class="subtd">{{ max_str }}</td>
             <td class="subtd">{{ max_min_range_str }}</td>
             </tr> -->
-            </tbody>
         </table>
-    </div>
-            <h2><span class="key_points">Key Points</span></h2>
+    </div><br>
+            <h2 class="key_points">Key Points <span class="key_subtitle">(Stock Price Comparison)</span></h2>
+            <!-- <br> -->
+            <!-- <h4><span class="key_subtitle">Stock Price Comparison</span></h4> -->
             <span class="key_body">
-                <ul>
+                <ul class="key_bullets">
             <li>
-
-
-            {{ company_symbol }}
-            stock price
-
-            {% if pct_chg_num >= 0 %}
-            increased
-            {% elif pct_chg_num < 0 %}
-            decreased
-            {% else %}
-            <!-- nothing -->
-            {% endif %}
-
-            from {{currency_symbol}}{{first_price}} to {{currency_symbol}}{{last_price}}
-
-
-            ({{all_time_price_chg}}),
-            during the same period
-            it's {{ fin_metric_name.lower() }}
-
-            {% if pct_chg_num >= 0 %}
-            grew
-            {% elif pct_chg_num < 0 %}
-            shrunk
-            {% else %}
-            <!-- nothing -->
-            {% endif %}
-
-            {{ hist_pct_chg_str_no_arrow }}.
-                </li>
-            <li>If {{company_short_name}}
-
-            {% if pct_chg_num >= 0 %}
+                <h3 class="bigif">
+                If {{ company_symbol }}
+            {% if pct_chg_num >= 1 %}
             grows
-            {% elif pct_chg_num < 0 %}
+            {% elif pct_chg_num < 1 %}
             shrinks
             {% else %}
             <!-- nothing -->
             {% endif %}
-
-            it's stock at the same rate as it's  {{ fin_metric_name.lower() }}  ({{ annual_pct_chg_str }}/year) , it's share price will hit X over the next 10 years.
-
-
-
-
+            it's stock at the same rate as it's  {{ fin_metric_name.lower() }}  ({{ annual_pct_chg_str }}/year) , it's stock price will
+            {% if pct_chg_num >= 1 %}
+            grow
+            {% elif pct_chg_num < 1 %}
+            shrink
+            {% else %}
+            <!-- nothing -->
+            {% endif %}
+            {{growth_10_years_str}} and
+            hit {{currency_symbol}}{{stock_price_10_years}} over the next 10 years.</h3>
             </li>
-            <ul><li>This the magic of compounding.</li></ul>
+            <li>
+            {{ company_symbol }}'s
+            stock price has
+            {% if all_time_price_chg_num >= 1 %}
+            increased
+            {% elif all_time_price_chg_num < 1 %}
+            decreased
+            {% else %}
+            <!-- nothing -->
+            {% endif %}
+            {{all_time_price_chg}}
+            from {{currency_symbol}}{{first_price}} in {{ earliest_year }}
+            <!-- from {{currency_symbol}}{{first_price}} to {{currency_symbol}}{{last_price}} -->
+            ,
+or             <!-- {{ hist_pct_chg_str_no_arrow }} -->
+             {{price_metric_rate_change_str}}
+<!-- {d% if statement_or_ratio != "ratios" %d} -->
+             {% if price_metric_rate_change|abs > 1 %}
+             faster than it's {{ fin_metric_name.lower() }}
+             {% else %}
+             the rate relative to it's {{ fin_metric_name.lower() }}
+             {% endif %}
 
-
-                <li>{{ company_short_name }} has increased its</li>
-
-
+             over the same period.
+                </li>
+            <!-- <ul><li>This the magic of compounding.</li></ul> -->
+             <li>
+                 {{ company_symbol }}'s stock price has gone up {{price_increased_on_metric_up_years}} of the {{num_years_increased}} years ({{percent_correlation_str}}) it's {{ fin_metric_name.lower() }} were also up.
+                 <!-- <li>
+                     {% if percent_correlation > 0.5 %}
+             {% else %}
+             the rate relative to it's {{ fin_metric_name.lower() }}
+             {% endif %}
+                 </li>
                 Based on history - std dev - increase or dec. next 5 years inc dec.
-
-
-
             {{ latest_metric }}
             in
             {{ latest_year }}
@@ -1593,20 +1602,16 @@ function checkForm() {
             {{ num_years_increased }}
             of
             {{ num_years }}
-            .
+            . The stock gained {{num_years_increased_price}} of those {{num_years_increased}} years.
                                                     If you add up all of
             {{ company_short_name }}
             's'
-            </li>
+            </li> -->
 
             </ul>
             </span>
             <h2><span class="key_points">Should You Buy</span></h2>
             <span class="key_body">
-
-
-
-
             </span>
     <!-- <p>
                 The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).
@@ -1624,6 +1629,12 @@ stacks up to all its competitors.
         Sector for $10
         </button>
     </div>
+    <div>{{company_industry}}
+<!-- {{company_description}} -->
+{{company_sector}}
+{{company_country}}
+{{company_ipo_date}}
+</div>
     <!-- <p>
                 To buy the RAW DATA for financial ratios . Ultimately, only high-level analysis in excel gives you the bigger picture
             </p> -->
