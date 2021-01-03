@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+
+<style type="text/css">
+        /* ul li.tab.tab-wrapper:hover{
+            color: blue !important;
+        } */
+        /* div.tab-wrapper:hover{
+            color: blue !important;
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+        } */
+
+        #qaz_page-qaz_tabs {
+            margin-top: 20px;
+            overflow: hidden;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+        #qaz_page-qaz_tabs, #qaz_page-qaz_tabs > ul {
+            margin: 0;
+            padding: 0;
+        }
+        #qaz_page-qaz_tabs #qaz_tabs {
+            clear: both;
+            overflow: auto;
+            width: 100%;
+        }
+        #qaz_page-qaz_tabs #qaz_tabs > li {
+            float: left;
+            list-style: none;
+            display: block;
+            cursor: pointer;
+            /* background-color: gray; */
+        }
+        #qaz_page-qaz_tabs #qaz_tabs > li .tab-wrapper {
+            /* padding: 20px 0px; */
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: #000000;
+             /* white; */
+            border-right: 1px solid #dedede;
+        }
+        #qaz_page-qaz_tabs #qaz_tabs > li.last .tab-wrapper {
+            border-right: none;
+        }
+        #qaz_page-qaz_tabs #qaz_tabs > li.xactive {
+            /* background-color: #EDEDED; */
+        }
+        #qaz_page-qaz_tabs #qaz_tabs > li.xactive .tab-wrapper {
+            color: #aa5c09;
+        }
+        #qaz_page-qaz_tabs #qaz_tabs > li.first {
+        }
+        #qaz_page-qaz_tabs #qaz_tabs > li.last {
+        }
+        #qaz_page-qaz_tabs #qaz_panels {
+            clear: both;
+            position: relative;
+            list-style: none;
+        }
+        #qaz_page-qaz_tabs #qaz_panels > li {
+            margin: 0px;
+            padding: 0px;
+            height: 0px;
+            width: 100%;
+            list-style: none;
+        }
+        #qaz_page-qaz_tabs #qaz_panels > li ul {
+            margin: 10px 20px;
+        }
+        #qaz_page-qaz_tabs #qaz_panels > li ul li {
+            list-style: disc;
+        }
+        #qaz_page-qaz_tabs #qaz_panels .panel-wrapper {
+            display: none;
+            width: auto;
+            padding: 30px;
+            background-color: #EDEDED;
+            position: relative;
+        }
+        #qaz_page-qaz_tabs #qaz_panels > li.xactive {
+            height: auto;
+        }
+        #qaz_page-qaz_tabs #qaz_panels > li.xactive .panel-wrapper {
+            display: block;
+        }
+        #qaz_page-qaz_tabs #qaz_panels .accordion-tab {
+            display: none;
+            padding: 25px 30px;
+            /* background-color: #808080; */
+            color: #FFF;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #qaz_page-qaz_tabs #qaz_panels .xactive .accordion-tab {
+            border-bottom: none;
+            background-color: #EDEDED;
+            color: #AA5C09;
+            padding-bottom: 0px;
+        }
+        /* */
+        @media only screen and (max-width: 700px) {
+            #qaz_page-qaz_tabs #qaz_tabs {
+                display: none;
+            }
+            #qaz_page-qaz_tabs #qaz_panels > li {
+                position: static;
+                height: auto;
+            }
+            #qaz_page-qaz_tabs #qaz_panels .accordion-tab {
+                display: block;
+                border-bottom: 1px solid #595959;
+            }
+            #qaz_page-qaz_tabs #qaz_panels .panel-wrapper {
+                width: auto;
+                padding: 30px;
+            }
+            #qaz_page-qaz_tabs #qaz_panels .accordion-tab {
+                font-size: 17px;
+            }
+        }
+        hr {
+            height: .25rem;
+            width: 25%;
+            margin: 0;
+            background: tomato;
+            border: none;
+            transition: .3s ease-in-out;
+        }
+        a.tabs_title_links {
+            /* display:block; */
+            /* display: inline-block; */
+            display: inline-table;
+            width: 25%;
+            /* padding: .75rem 0; */
+            margin: 0;
+            text-decoration: none;
+            color: #333;
+            height: 100%;
+            /* margin: 0 auto; */
+        }
+
+
+        .hr_two:hover ~ hr {
+        margin-left: 25%;
+        }
+
+        .hr_three:hover ~ hr {
+        margin-left: 50%;
+        }
+
+        .hr_four:hover ~ hr {
+        margin-left: 75%;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="qaz_page-qaz_tabs" class="qaz_page-qaz_tabs-css">
+        <ul id="qaz_tabs" class="qaz_tabs-css">
+            <li class="hr_one"><a href="#" class="tabs_title_links"><div class="innerhref">Historical Table</div></a></li>
+            <li class="hr_two"><a href="#" class="tabs_title_links"><div class="innerhref">About the Company</div></a></li>
+            <li class="hr_three"><a href="#" class="tabs_title_links"><div class="innerhref">Definition / Formula</div></a></li>
+            <li class="hr_four"><a href="#" class="tabs_title_links"><div class="innerhref">Our Data (free) anasdasdd Datasets ($10)</div></a></li>
+            <hr />
+        </ul>
+        <ul id="qaz_panels" class="qaz_panels-css">
+            <li>Panel 1</li>
+            <li>Panel 2</li>
+            <li>Panel 3</li>
+            <li>Panel 4</li>
+
+        </ul>
+    </div>
+
+
+
+
+<script>
+    // jQuery Responsive qaz_page qaz_tabs 1.0
+
+    var selectedTab = 0,
+        scrollDelay = 20,
+        scrollSpeed = 400,
+        scrolltopOffset = 35;
+
+    $("#qaz_tabs").children().each(function (i) {
+        i = i + 1;
+        $(this).attr('id', "tab-" + i).addClass("tab").wrapInner(
+            "<div class='tab-wrapper'></div>");
+    });
+    var count = $("#qaz_tabs").children().length-1;
+    var tab_width = (100 / count) + "%";
+    $("#qaz_tabs li").css("width", tab_width).eq(0).addClass('first').end().eq(-1).addClass(
+        'last').end();
+    $("#qaz_panels").children().each(function (i) {
+        i = i + 1;
+        $(this).attr('id', "panel-" + i).addClass("panel").wrapInner(
+            "<div class='panel-wrapper'></div>").prepend(
+            "<div class='accordion-tab'></div>");
+    });
+    $(".accordion-tab").each(function (i) {
+        i = i + 1;
+        var tab_name = $("#tab-" + i).html();
+        $(this).html(tab_name);
+    });
+    $("#qaz_tabs").children().eq(selectedTab).addClass("xactive");
+    $("#qaz_panels").children().eq(selectedTab).addClass("xactive");
+    $("#qaz_tabs > li").click(function () {
+        $("#qaz_tabs > li, #qaz_panels > li").removeClass("xactive");
+        $("#qaz_panels > li").eq($(this).index()).toggleClass("xactive");
+        $(this).toggleClass("xactive");
+    });
+    $(".accordion-tab").click(function () {
+        $("#qaz_tabs > li, #qaz_panels > li").removeClass("xactive");
+        $("#qaz_tabs > li").eq($(this).parent().index()).toggleClass("xactive");
+        $(this).parent().toggleClass("xactive");
+    });
+
+</script>
+
+
+
+</body>
+
+</html>

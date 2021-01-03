@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+
+    <style type="text/css">
+        /* ul li.tab.tab-wrapper:hover{
+            color: blue !important;
+        } */
+        /* div.tab-wrapper:hover{
+            color: blue !important;
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+        } */
+
+        #edcpage-edctabs {
+            margin-top: 20px;
+            overflow: hidden;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+        #edcpage-edctabs, #edcpage-edctabs > ul {
+            margin: 0;
+            padding: 0;
+        }
+        #edcpage-edctabs #edctabs {
+            clear: both;
+            overflow: auto;
+            width: 100%;
+        }
+        #edcpage-edctabs #edctabs > li {
+            float: left;
+            list-style: none;
+            display: block;
+            cursor: pointer;
+            /* background-color: gray; */
+        }
+        #edcpage-edctabs #edctabs > li .tab-wrapper {
+            padding: 20px 0px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: #000000;
+            border-right: 1px solid #dedede;
+        }
+        #edcpage-edctabs #edctabs > li.last .tab-wrapper {
+            border-right: none;
+        }
+        #edcpage-edctabs #edctabs > li.xactive {
+            /* background-color: #EDEDED; */
+        }
+        #edcpage-edctabs #edctabs > li.xactive .tab-wrapper {
+            color: #aa5c09;
+        }
+        #edcpage-edctabs #edctabs > li.first {
+        }
+        #edcpage-edctabs #edctabs > li.last {
+        }
+        #edcpage-edctabs #edcpanels {
+            clear: both;
+            position: relative;
+            list-style: none;
+        }
+        #edcpage-edctabs #edcpanels > li {
+            margin: 0px;
+            padding: 0px;
+            height: 0px;
+            width: 100%;
+            list-style: none;
+        }
+        #edcpage-edctabs #edcpanels > li ul {
+            margin: 10px 20px;
+        }
+        #edcpage-edctabs #edcpanels > li ul li {
+            list-style: disc;
+        }
+        #edcpage-edctabs #edcpanels .panel-wrapper {
+            display: none;
+            width: auto;
+            padding: 30px;
+            background-color: #EDEDED;
+            position: relative;
+        }
+        #edcpage-edctabs #edcpanels > li.xactive {
+            height: auto;
+        }
+        #edcpage-edctabs #edcpanels > li.xactive .panel-wrapper {
+            display: block;
+        }
+        #edcpage-edctabs #edcpanels .accordion-tab {
+            display: none;
+            padding: 25px 30px;
+            /* background-color: #808080; */
+            color: #FFF;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #edcpage-edctabs #edcpanels .xactive .accordion-tab {
+            border-bottom: none;
+            background-color: #EDEDED;
+            color: #AA5C09;
+            padding-bottom: 0px;
+        }
+        /* */
+        @media only screen and (max-width: 700px) {
+            #edcpage-edctabs #edctabs {
+                display: none;
+            }
+            #edcpage-edctabs #edcpanels > li {
+                position: static;
+                height: auto;
+            }
+            #edcpage-edctabs #edcpanels .accordion-tab {
+                display: block;
+                border-bottom: 1px solid #595959;
+            }
+            #edcpage-edctabs #edcpanels .panel-wrapper {
+                width: auto;
+                padding: 30px;
+            }
+            #edcpage-edctabs #edcpanels .accordion-tab {
+                font-size: 17px;
+            }
+        }
+        hr {
+            height: .25rem;
+            width: 25%;
+            margin: 0;
+            background: tomato;
+            border: none;
+            transition: .3s ease-in-out;
+        }
+        a.tabs_title_links {
+            /* display: inline-block; */
+            width: 25%;
+            padding: .75rem 0;
+            margin: 0;
+            /* text-decoration: none;
+            color: #333; */
+        }
+
+
+        /* .hr_two:hover ~ hr.movinghr {
+        margin-left: 25%;
+        }
+
+        .hr_three:hover ~ hr.movinghr {
+        margin-left: 50%;
+        }
+
+        .hr_four:hover ~ hr.movinghr {
+        margin-left: 75%;
+        } */
+        hr.stickyhr {
+            /* position: absolute; */
+            /* display:none; */
+        }
+
+        /* .hr_two:target ~ hr {
+        margin-left: 25%;
+        } */
+
+        /* .hr_three:active {
+        margin-left: 50%;
+          border: 2px solid #D4D4D4;
+  background-color: #e5eecc;
+        }
+
+        .hr_four:target ~ hr {
+
+        margin-left: 75%;
+            height: .25rem;
+            width: 25%;
+            margin: 0;
+            background: tomato;
+            border: none;
+            transition: .3s ease-in-out;
+        } */
+
+/* #panel-2 > div.accordion-tab > div > a > div */
+/* #panel-2.xactive > div.accordion-tab > div > a > div{ */
+
+
+/* .xactive.hr_three{
+    margin-left: 50%; */
+    /* font-size:30px !important;
+    transition: .3s ease-in-out;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    border: 2px solid tomato; */
+/* }
+.xactive.hr_four{
+    margin-left: 75%; */
+    /* font-size:30px !important;
+    transition: .3s ease-in-out;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    border: 2px solid tomato; */
+/* } */
+
+.hr_one:hover ~ hr.stickyhr{
+margin-left: 0% !important;
+}
+
+.hr_two:hover ~ hr.stickyhr{
+margin-left: 25% !important;
+}
+.hr_three:hover ~ hr.stickyhr{
+margin-left: 50% !important;
+}
+.hr_four:hover ~ hr.stickyhr{
+margin-left: 75% !important;
+}
+
+.xactive.hr_one ~ hr.stickyhr{
+margin-left: 0%;
+}
+
+.xactive.hr_two ~ hr.stickyhr{
+margin-left: 25%;
+}
+.xactive.hr_three ~ hr.stickyhr{
+margin-left: 50%;
+}
+.xactive.hr_four ~ hr.stickyhr{
+margin-left: 75%;
+}
+
+.panel-wrapper{
+    font-size:16px;
+}
+    </style>
+
+
+</head>
+
+<body>
+asdasd
+    <div id="edcpage-edctabs" class="edcpage-edctabs-css">
+        <ul id="edctabs" class="edctabs-css">
+            <li class="hr_one" id="hr1"><a href="#" class="tabs_title_links"><div class="innerhref tab1">Popular Ratios</div></a></li>
+            <li class="hr_two"><a href="#" class="tabs_title_links"><div class="innerhref tab2">Profit & Sales Ratios (36)</div></a></li>
+            <li class="hr_three"><a href="#" class="tabs_title_links"><div class="innerhref tab3">Debt-Related Ratios (25)</div></a></li>
+            <li class="hr_four"><a href="#" class="tabs_title_links"><div class="innerhref tab4">Other Ratios (10)</div></a></li>
+            <!-- <hr class="movinghr" /> -->
+            <hr class="stickyhr" />
+
+        </ul>
+        <ul id="edcpanels" class="edcpanels-css">
+            <li>Panel 1</li>
+            <li>Panel 2</li>
+            <li>Panel 3</li>
+            <li>Panel 4</li>
+
+        </ul>
+    </div>
+<script>
+    // jQuery Responsive edcpage edctabs 1.0
+    var selectedTab = 0,
+        scrollDelay = 20,
+        scrollSpeed = 400,
+        scrolltopOffset = 35;
+
+    $("#edctabs").children().each(function (i) {
+        i = i + 1;
+        $(this).attr('id', "tab-" + i).addClass("tab").wrapInner(
+            "<div class='tab-wrapper'></div>");
+    });
+    var count = $("#edctabs").children().length-1;
+    var tab_width = (100 / count) + "%";
+    $("#edctabs li").css("width", tab_width).eq(0).addClass('first').end().eq(-1).addClass(
+        'last').end();
+    $("#edcpanels").children().each(function (i) {
+        i = i + 1;
+        $(this).attr('id', "panel-" + i).addClass("panel").wrapInner(
+            "<div class='panel-wrapper'></div>").prepend(
+            "<div class='accordion-tab'></div>");
+    });
+    $(".accordion-tab").each(function (i) {
+        i = i + 1;
+        var tab_name = $("#tab-" + i).html();
+        $(this).html(tab_name);
+    });
+    $("#edctabs").children().eq(selectedTab).addClass("xactive");
+    $("#edcpanels").children().eq(selectedTab).addClass("xactive");
+    $("#edctabs > li").click(function () {
+        $("#edctabs > li, #edcpanels > li").removeClass("xactive");
+        $("#edcpanels > li").eq($(this).index()).toggleClass("xactive");
+        $(this).toggleClass("xactive");
+    });
+    $(".accordion-tab").click(function () {
+        $("#edctabs > li, #edcpanels > li").removeClass("xactive");
+        $("#edctabs > li").eq($(this).parent().index()).toggleClass("xactive");
+        $(this).parent().toggleClass("xactive");
+    });
+
+</script>
+
+
+
+</body>
+
+</html>

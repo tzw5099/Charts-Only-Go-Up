@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://fiddle.jshell.net/2e7rokqj/show/light/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>jQuery Responsive Page Tabs</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./jquery-compat-git.js.download"></script>
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+         body {
+       font-family: Arial;
+       padding: 20px;
+       font-size: 13px;
+   }
+   #page-tabs {
+       margin-top: 20px;
+       overflow: hidden;
+       -webkit-border-radius: 3px;
+       border-radius: 3px;
+   }
+   #page-tabs, #page-tabs > ul {
+       margin: 0;
+       padding: 0;
+   }
+   #page-tabs #tabs {
+       clear: both;
+       overflow: auto;
+       width: 100%;
+   }
+   #page-tabs #tabs > li {
+       float: left;
+       list-style: none;
+       display: block;
+       cursor: pointer;
+       background-color: gray;
+   }
+   #page-tabs #tabs > li .tab-wrapper {
+       padding: 20px 0px;
+       font-size: 16px;
+       font-weight: bold;
+       text-align: center;
+       color: white;
+       border-right: 1px solid #dedede;
+   }
+   #page-tabs #tabs > li.last .tab-wrapper {
+       border-right: none;
+   }
+   #page-tabs #tabs > li.xactive {
+       background-color: #EDEDED;
+   }
+   #page-tabs #tabs > li.xactive .tab-wrapper {
+       color: #aa5c09;
+   }
+   #page-tabs #tabs > li.first {
+   }
+   #page-tabs #tabs > li.last {
+   }
+   #page-tabs #panels {
+       clear: both;
+       position: relative;
+       list-style: none;
+   }
+   #page-tabs #panels > li {
+       margin: 0px;
+       padding: 0px;
+       height: 0px;
+       width: 100%;
+       list-style: none;
+   }
+   #page-tabs #panels > li ul {
+       margin: 10px 20px;
+   }
+   #page-tabs #panels > li ul li {
+       list-style: disc;
+   }
+   #page-tabs #panels .panel-wrapper {
+       display: none;
+       width: auto;
+       padding: 30px;
+       background-color: #EDEDED;
+       position: relative;
+   }
+   #page-tabs #panels > li.xactive {
+       height: auto;
+   }
+   #page-tabs #panels > li.xactive .panel-wrapper {
+       display: block;
+   }
+   #page-tabs #panels .accordion-tab {
+       display: none;
+       padding: 25px 30px;
+       background-color: #808080;
+       color: #FFF;
+       font-weight: bold;
+       cursor: pointer;
+       font-size: 20px;
+   }
+   #page-tabs #panels .xactive .accordion-tab {
+       border-bottom: none;
+       background-color: #EDEDED;
+       color: #AA5C09;
+       padding-bottom: 0px;
+   }
+   /* */
+   @media only screen and (max-width: 700px) {
+       #page-tabs #tabs {
+           display: none;
+       }
+       #page-tabs #panels > li {
+           position: static;
+           height: auto;
+       }
+       #page-tabs #panels .accordion-tab {
+           display: block;
+           border-bottom: 1px solid #595959;
+       }
+       #page-tabs #panels .panel-wrapper {
+           width: auto;
+           padding: 30px;
+       }
+       #page-tabs #panels .accordion-tab {
+           font-size: 17px;
+       }
+   }
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+<style id="c163a504-77d4-432f-9ba2-4d026d95cc69">.select-text-inside-a-link{ -moz-user-select: text!important; }</style><style id="0ae77809-89d9-4128-9ef2-d0545e34c580">#smgm_bgdiv{ text-align: center;position:fixed;top:0px;left:0px;z-index:9991;width:100%;height:100%;background-color:black;opacity:0.7;display:block;visibility:visible;}</style><style id="828fe534-166f-4cdf-8dcd-0f5b9a4c1c05">#smgm_dialogbox { vertical-align:middle;left:40px;top:15px;border:3px solid #000 !important;text-align:center !important;background-color:#fff !important;color:#000 !important;font-family:arial,verdana !important;z-Index:9999;position:fixed;width:18%;height:50%;margin-left:auto;margin-right:auto;display:block;visibility:visible;}</style><style id="bb84dd9d-8935-445b-b6f6-c56d914ec873">.smgm_buttons { color:#000 !important;font: 90% 'arial','trebuchet ms',helvetica,sans-serif !important;background-color:#B2CCFF !important;border:2px solid !important;border-color: #E0EBFF #000 #000 #E0EBFF !important;vertical-align: top !important;}</style><style id="efa2fb58-0874-4942-8479-c7d21331970f">.smgm_table { margin-bottom:10px !important;border:0px !important;border-collapse:collapse !important;margin-left:auto;margin-right:auto; }</style></head>
+<body class="vsc-initialized">
+    <h1>jQuery Responsive Page Tabs</h1>
+This plugin allows for ultra-simple HTML. Just fast, clean code to help you create a tab/panel interface on the web. Use your own styles. Responsive at a breakpoint you specify. Minimal HTML, CSS &amp; JS. Bonus: Widths for tabs are calculated with JS depending on the number of tabs. AND clicking a tab will automatically scroll that area into focus.
+<br>
+<br>For questions, contact <a href="mailto:RyanBrackett@gmail.com">RyanBrackett@gmail.com</a>
+
+<br>
+<br>
+<br>
+<br>
+<div id="page-tabs">
+    <ul id="tabs">
+        <li id="tab-1" class="tab first xactive" style="width: 25%;"><div class="tab-wrapper">Tab 1</div></li>
+        <li id="tab-2" class="tab" style="width: 25%;"><div class="tab-wrapper">Tab 2</div></li>
+        <li id="tab-3" class="tab" style="width: 25%;"><div class="tab-wrapper">Tab 3</div></li>
+        <li id="tab-4" class="tab last" style="width: 25%;"><div class="tab-wrapper">Tab 4</div></li>
+    </ul>
+    <ul id="panels">
+        <li id="panel-1" class="panel xactive"><div class="accordion-tab"><div class="tab-wrapper">Tab 1</div></div><div class="panel-wrapper">Panel 1</div></li>
+        <li id="panel-2" class="panel"><div class="accordion-tab"><div class="tab-wrapper">Tab 2</div></div><div class="panel-wrapper">Panel 2</div></li>
+        <li id="panel-3" class="panel"><div class="accordion-tab"><div class="tab-wrapper">Tab 3</div></div><div class="panel-wrapper">Panel 3</div></li>
+        <li id="panel-4" class="panel"><div class="accordion-tab"><div class="tab-wrapper">Tab 4</div></div><div class="panel-wrapper">Panel 4</div></li>
+    </ul>
+</div>
+<br>
+
+    <script type="text/javascript">//<![CDATA[
+
+
+// jQuery Responsive Page Tabs 1.0
+
+var selectedTab = 0,
+    scrollDelay = 20,
+    scrollSpeed = 400,
+    scrolltopOffset = 35;
+
+$("#tabs").children().each(function (i) {
+    i = i + 1;
+    $(this).attr('id', "tab-" + i).addClass("tab").wrapInner(
+        "<div class='tab-wrapper'></div>");
+});
+var count = $("#tabs").children().length;
+var tab_width = (100 / count) + "%";
+$("#tabs li").css("width", tab_width).eq(0).addClass('first').end().eq(-1).addClass(
+    'last').end();
+$("#panels").children().each(function (i) {
+    i = i + 1;
+    $(this).attr('id', "panel-" + i).addClass("panel").wrapInner(
+        "<div class='panel-wrapper'></div>").prepend(
+        "<div class='accordion-tab'></div>");
+});
+$(".accordion-tab").each(function (i) {
+    i = i + 1;
+    var tab_name = $("#tab-" + i).html();
+    $(this).html(tab_name);
+});
+$("#tabs").children().eq(selectedTab).addClass("xactive");
+$("#panels").children().eq(selectedTab).addClass("xactive");
+$("#tabs > li").click(function () {
+    $("#tabs > li, #panels > li").removeClass("xactive");
+    $("#panels > li").eq($(this).index()).toggleClass("xactive");
+    $(this).toggleClass("xactive");
+});
+$(".accordion-tab").click(function () {
+    $("#tabs > li, #panels > li").removeClass("xactive");
+    $("#tabs > li").eq($(this).parent().index()).toggleClass("xactive");
+    $(this).parent().toggleClass("xactive");
+});
+/* $(".tab, .accordion-tab").click(function () {
+    $('html,body').delay(scrollDelay).animate({
+        scrollTop: $(this).offset().top - scrolltopOffset
+    }, scrollSpeed);
+}); */
+/* $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup',
+
+function (e) {
+    if (e.which > 0 || e.type == "mousedown" || e.type == "mousewheel") {
+        $("html,body").stop();
+    }
+}) */
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "2e7rokqj"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+
+
+</body></html>
