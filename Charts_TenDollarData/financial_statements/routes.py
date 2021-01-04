@@ -117,7 +117,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             magnitude = number
             magnitude_str = number
         return magnitude_str
-
     def change_markup(change,percent_or_x,arrow_no_arrow = "arrow", css_class = "change_markup"):
         # change_markup(growth_10_years,"%","noarrow","growth_10_years_str")
         try:
@@ -131,7 +130,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                 up_green_suffix = '</span>'
                 down_red_prefix = '<span class="down_red" {}>'.format(css_class)
                 down_red_suffix = '</span>'
-
             if change > 100:
                 change = int(change)
             elif change > 10:
@@ -143,7 +141,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             elif change <= -100:
                 change = int(change)
             print("growthd 10", change)
-
             change_comma =  "{:,}".format(change)
             if percent_or_x == "percent":
                 if change==0:
@@ -191,7 +188,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     company_profiles = company_profiles[company_profiles_col]
     profiles_dict = {}
     profiles_value = company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())].values.tolist()[0]
-
     for n, profiles_col in enumerate(company_profiles_col):
         key = profiles_col
         value = profiles_value[n]
@@ -233,9 +229,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/quarter/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
         year_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
         year_df_file = (pd.read_csv(year_file))
-
         df = pd.read_csv(csv_file)
-
         if len(year_df_file) > len(df):
             # print("len y q", len(year_df_file),len(df_grouped))
             # year_df_file["Year"] = year_df_file["date"].apply(lambda x: x[0:4])
@@ -250,8 +244,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             list_years = list(df["date"].apply(lambda j: j[0:4]))
             if len(list_years) > len(list(set(list_years))):
                 list_years = np.arange(list_years.min(),list_years.max()+2)
-
-
             new_df_list = []
             for n,y in enumerate(list_years):
                 for x in ["12-31","03-31","06-30","09-30"]:#["09-30","06-30","12-31","03-31",]:
@@ -261,7 +253,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                     new_df_list.append(new_df)
             df = pd.concat(new_df_list).sort_values(by="date",ascending = True).reset_index()
             df['date'] = df['date'].apply(lambda x: str(x)[0:10])
-
             # q1_df = df
             # q2_df = df
             # q3_df = df
@@ -292,7 +283,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         def groupby_agg(df):
             df_grouped = df.groupby("Year").sum()
             # print("these are the titlesq", list(df_grouped))
-
             # print("these are the ztitlesq", list(year_df_file))
             # if len(year_df_file) > len(df_grouped):
             #     # print("len y q", len(year_df_file),len(df_grouped))
@@ -388,8 +378,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             fin_file_year = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(x, url_symbol.upper()))[-1]
             fin_df = pd.read_csv(fin_file)
             fin_year_df = pd.read_csv(fin_file_year)
-
-
             if len(fin_year_df) > len(fin_df):
                 # print("len y q", len(year_df_file),len(df_grouped))
                 # year_df_file["Year"] = year_df_file["date"].apply(lambda x: x[0:4])
@@ -404,8 +392,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                 list_years = list(df["date"].apply(lambda j: j[0:4]))
                 if len(list_years) > len(list(set(list_years))):
                     list_years = np.arange(list_years.min(),list_years.max()+2)
-
-
                 new_df_list = []
                 for n,y in enumerate(list_years):
                     for x in ["12-31","03-31","06-30","09-30"]:#["09-30","06-30","12-31","03-31",]:
@@ -416,7 +402,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                 df = pd.concat(new_df_list).sort_values(by="date",ascending = False).reset_index()
                 df['date'] = df['date'].apply(lambda x: str(x)[0:10])
                 fin_df = df
-
             fin_df["Year"] = fin_df["date"].apply(lambda x: x[0:4])
             fin_df["QQ-YYYY"] = fin_df["period"]+"-"+fin_df["date"].apply(lambda x: x[0:4])
             fin_df_list.append(fin_df)
@@ -424,14 +409,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df_merge = pd.merge(df_merge_is_bs,fin_df_list[2],how="inner", on="QQ-YYYY")
         df_merge = df_merge[fin_statement_raw_names]
         df_merge.columns = fin_statement_renamed_cols
-
         df = df_merge.iloc[::-1]
         df = df.sort_values(by="date",ascending = True)
-
-
-
-
-
         df['ffo_math']=df['net_income'] + df['d_n_a'] + df['sales_maturities_of_investments'] + df['purchase_of_investments'] + df['investments_in_pp_n_e'] + df['acquisitions_net']
         df['book_value_math']=df['total_assets'].dropna()-df['total_liabilities'].dropna()
         df['ebit_math']=df['ebitda_non'] - df['d_n_a']
@@ -455,19 +434,15 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             # if len(df_grouped)<= len(year_df_file):
             return df_grouped
     print("dfq", df)
-
     # year_df = groupby_agg(df)
     df = df.drop_duplicates(subset=['date']).sort_values(by=["date"], ascending=False)
     # year_df = year_df.drop_duplicates(subset=['date'])
-
-
     # print("df list 1", df)
     # year_df = groupby_agg(df)
     df_quarter = df['period']
     print("df list 11",  df.head())
     df = df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link'],axis=1, errors='ignore')
     # year_df = year_df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link'],axis=1, errors='ignore')
-
     try:
         for x in reversed(titles_bs):
             if x in titles_list:
@@ -495,7 +470,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         print("list df", df.head())
         df.columns = var_list
         # year_df.columns = var_list
-
         for n,x in enumerate(fin_metric_vars):
             print("fin_metric_vars", fin_metric_vars)
             print("list fin var", list(fin_statements_matching['Python Variable Name']))
@@ -541,7 +515,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
         # year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_title)]].to_numpy()).tolist()
         # year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_title)]/year_df['{}'.format(fin_metric_title)].shift(4)
-
         fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
         print("no errors yeet")
     except Exception as e:
@@ -549,10 +522,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
         year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_name)]].to_numpy()).tolist()
         # year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_name)]/year_df['{}'.format(fin_metric_name)].shift(4)
-
         print("var excepted",e)
     repeated_list = []
-
     for a,n in enumerate(year_df['{}'.format(fin_metric_name)]):
         print("first a", a,n,list(year_df[a:a+1]['year'])[0])
         if len(repeated_list) >= len(df):
@@ -571,7 +542,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             pass
         else:
             repeated_list.append('')
-
     last_row = list(year_df['{}'.format(fin_metric_name)])[-1]
     if last_row in repeated_list:
         pass
@@ -580,8 +550,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         repeated_list = repeated_list[0:len(repeated_list)-1]
         repeated_list.append(last_row)
         print("repeated list w/ append",len(repeated_list), repeated_list)
-
-
     df['repeater'] = repeated_list[::-1]
     print("df repeater",df['repeater'], "len", len(df['repeater']))
     print("versus df",len(df))
@@ -642,8 +610,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # pct_chg = (latest_metric/earliest_metric)
         historical_pct_chg = (round(pct_chg-1, 1))
         annual_pct_chg  = (round(100*(pct_chg**(1/len(sorted_metric))-1),1)) # round((latest_metric/earliest_metric)/2,2)
-
-
         print("pct tqtq", pct_chg, "annual", annual_pct_chg," latest", latest_metric, "earliest", earliest_metric, "histzq", historical_pct_chg)
         hist_pct_chg_str = change_markup(historical_pct_chg,"x","arrow","hist_pct_chg_str")
         annual_pct_chg_str = change_markup(annual_pct_chg,"percent","noarrow","annual_percent")
@@ -724,8 +690,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         year_dates_price = df[df['repeater'] != '']['date']
         # df.to_csv("1reg_df_{}.csv".format(url_symbol))
         # df[df['repeater'] != ''].to_csv("1reg_df_repeater_{}.csv".format(url_symbol))
-
-
         print("len repssz", len(year_dates_price))
         print("OK NOW",year_dates_price)
         for k in year_dates_price:#df['date']:
@@ -740,7 +704,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             print(n,"~",k,"~",closest_time)
         print("here are the dups", closest_list_dups)
         print("xdf index", year_df.index)
-
         print("year df json", year_df_json[0],year_df_json[-1])
         print("len klosest list", len(closest_list), "len df", len(df), closest_list)
         year_dates_price = list(market_cap_df[market_cap_df['timestamp'].isin(closest_list_year)][::-1]['adjClose'])
@@ -748,8 +711,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         dates_price_list = []
         for n,x in enumerate(closest_list):
             dates_price_list.append(list(market_cap_df[market_cap_df['timestamp'].isin([x])][::-1]['adjClose'])[0])
-
-
         year_dates_price_list = []
         for n,x in enumerate(closest_list_year):
             year_dates_price_list.append(list(market_cap_df[market_cap_df['timestamp'].isin([x])][::-1]['adjClose'])[0])
@@ -764,12 +725,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         print("dates price list", year_dates_price_list[::-1])
         print("ydf index", year_df.index)
         print("df index", df.index)
-
-
         df['Price'] = dates_price_list#[0:len(dates_price)-1]
-
         print("error hered", len(df['Year']), len(year_dates_price))
-
         # len_diff = len(year_dates_price_list) - len(year_df)
         # print("len diff", len_diff)
         # year_dates_price_list = year_dates_price_list[0:len(year_dates_price_list)+len_diff]
@@ -784,14 +741,12 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         print("price exception ", e)
         price_json = []
     import json
-
     from urllib.request import urlopen
     # import timeit
     try:
         fmp_url = "https://financialmodelingprep.com/api/v3/quote/{}?apikey=4b5cd112b74ca86811fd1ccddd4ad9c1".format(url_symbol.upper())
         print("tsla",fmp_url)
         # aapl_fmp = requests.get("https://financialmodelingprep.com/api/v3/quote/AAPL?apikey=4b5cd112b74ca86811fd1ccddd4ad9c1")
-
         fmp_json = json.loads(urlopen(fmp_url, timeout=0.001).read().decode('utf-8'))
         last_price = np.round(fmp_json[0]['price'],2)
         print("tsla",fmp_url)
@@ -824,12 +779,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             pct_shares_tradable = np.round(fmp_json[0]['sharesOutstanding'],2)*last_price/market_cap
         except:
             pct_shares_tradable = '-'
-
     except Exception as e:
         print("whats the exception",e)
         last_price = price_json[-1][1]
         last_pct_change = 0
-
     last_price_json_timestamp  = price_json[-1][0]
     print("whats the hlen",price_json)
     price_json = price_json[0:(len(price_json)-1)]
@@ -851,16 +804,18 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         full_path = csv_file.split(' ~ ')
         path = pathlib.PurePath(full_path[0])
     else:
+
         df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_name)]/df_tall['{}'.format(fin_metric_name)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
         df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
         df_tall['YoY Price % Change'] = df_tall['YoY Price % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
-        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_name), 'YoY % Change',"Price", 'YoY Price % Change']]
+        df_tall["{}".format(fin_metric_title)] = df_tall["{}".format(fin_metric_name)]
+        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title), 'YoY % Change',"Price", 'YoY Price % Change']]
         # df_html_tall.columns = ["Year", "{}".format(fin_metric_title),"YoY % Change","Price",'YoY Price % Change']
         df_html_tall = df_html_tall.to_html(index=False)
-    df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="abc" id="df_myTable" border="1" class="dataframe">')
+    df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="yoy_chrono_table" id="df_myTable" border="1" class="dataframe">')
     # df_html_tall = df_html_tall.replace('inf','class="abc" id="df_myTable" border="1" class="dataframe">')
-    df_html_tall = df_html_tall.replace("\n","")
+    df_html_tall = df_html_tall.replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
     df_html_tall = df_html_tall.replace("{}".format("["),"")
     df_html_tall = df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
@@ -891,7 +846,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     y_y = ((last_4_quarters/prev_4_quarters)-1)*100
     df_json  = np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()[::-1]
     y_y_chg = change_markup(y_y,"percent","arrow")
-
     print("year dfzz", list(year_df))
     print(year_df)
     print("sorted_metric", sorted_metric)
@@ -908,23 +862,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     max_min_range = np.round(((max_metric - min_metric)/min_metric),2)
     max_min_range_str = change_markup(max_min_range,"x","arrow","max_min_range_str")
     print("max min", max_metric, min_metric)
-    # try:
-    #     market_cap_path = glob.glob("D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*\\[M*/M-*-{}.csv".format(url_symbol))[0]
-    #     market_cap_df = pd.read_csv(market_cap_path)
-    #     market_cap_df['timestamp'] = pd.to_datetime(market_cap_df.datetime).values.astype(np.int64)// 10 ** 6
-    #     closest_list = []
-    #     for k in df['date']:
-    #         closest_list.append(min(market_cap_df['timestamp'], key=lambda x:abs(x-k)))
-    #     print("year df json", year_df_json[0],year_df_json[-1])
-    #     print("len closest list", len(closest_list), "len df", len(df))
-    #     df['Price'] = list(market_cap_df[market_cap_df['timestamp'].isin(closest_list)][::-1]['adjClose'])
-    #     # market_cap_df = market_cap_df[market_cap_df['timestamp']>earliest_date]
-    #     price_json = np.nan_to_num(df[['date',"{}".format("price")]].to_numpy()).tolist()[::-1]
-    #     print("price_json", price_json[0],price_json[-1])
-    #     # price_json = ""
-    # except Exception as e:
-    #     print("price exception ", e)
-    #     price_json = []
     print("last_4_quarters",last_4_quarters)
     last_4_quarters_str = magnitude_num(last_4_quarters,currency_symbol)
     print("qtr avg", df["quarter avg"])
@@ -936,7 +873,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     try:
         # url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric
         # url_tag_prefix='<a class="similar_companies_urls" href="'
-
         subdomain = "https://charts.tendollardata.com"
         subdomain = "http://127.0.0.1:5000"
         company_similar = profiles_dict['Similar Companies'].split(",")
@@ -948,8 +884,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             company_similar_x = ('<a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a>, '.format(subdomain,x.lower().strip(),stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
             company_similar_list.append(company_similar_x)
             n+=1
-
-
         company_similar_paragraph = Markup(''.join(company_similar_list)[:-2])
         print(company_similar_paragraph)
     except Exception as e:
@@ -973,10 +907,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     print("pos last val", position_last_value)
     print(list(df['repeater']))
     print("price json", price_json)
-    # import fuckit
-    # https://stackoverflow.com/questions/17322208/multiple-try-codes-in-one-block
-    # @fuckit
-    # def func():
     try:
         prev_price = price_json[-5][1]
     except:
@@ -993,20 +923,14 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         price_5_years_ago = price_json[-17][1]
     except:
         price_5_years_ago = 1
-
     all_time_price_chg_num = (last_price - first_price)/first_price
     all_time_price_chg = change_markup(100*(last_price - first_price)/first_price,"percent","noarrow","all_time_price_chg")
     all_time_price_chg_x = change_markup(-1+((last_price - first_price)/first_price),"x","arrow","all_time_price_chg")
-
     price_metric_rate_change = (-1+((last_price - first_price)/first_price))/historical_pct_chg
     price_metric_rate_change_str = change_markup(price_metric_rate_change,"x","noarrow","price_metric_rate_change")
     print("price_metric_rate_change_str", price_metric_rate_change_str, historical_pct_chg)
-
-
-
     yoy_price_chg = 100*(last_price - prev_price)/prev_price
     # print("pct_chgzs",pct_chg)
-
     yoy_price_chg = change_markup(yoy_price_chg,"percent","noarrow")
     all_time_metric_chg =change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg")
     hist_pct_chg_str_no_arrow = change_markup(historical_pct_chg,"x","noarrow","hist_pct_chg_str_no_arrow")
@@ -1015,7 +939,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # print(df)
     # print('last_pct_change',last_pct_change)
     last_pct_change_str  = change_markup(last_pct_change,"x","arrow","last_pct_change")
-
     annual_pct_chg_10yrs_in_pct = (100*(pct_chg**(1/len(sorted_metric)))**10)-1
     annual_pct_chg_10yrs_in_abs = annual_pct_chg_10yrs_in_pct * latest_metric
     annual_pct_chg_10yrs_in_stock = annual_pct_chg_10yrs_in_pct * last_price
@@ -1023,15 +946,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     growth_10_years_str = change_markup(growth_10_years*100,"percent","noarrow","growth_10_years_str")
     stock_price_10_years = np.round(last_price*growth_10_years,2)
     first_price = np.round(first_price,2)
-
-
-
     last_price = np.round(last_price,2)
     currency_symbol = currency_symbol_original
     # print("this is growth", growth_10_years, type(growth_10_years) ,growth_10_years_str)
     # year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_title)]/year_df['{}'.format(fin_metric_title)].shift(4)
-
-
     pos_or_neg = (df_tall['YoY % Change float']-1) * (df_tall['YoY Price % Change float']-1)
     # print("df_tall['YoY % Change float']",  df_tall['YoY % Change float'])
     # print("df_tall['YoY Price % Change float']", df_tall['YoY Price % Change float'])
@@ -1039,26 +957,19 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     metric_increased_years = df_tall[df_tall['YoY % Change float'] >= 1]
     price_increased_years = df_tall[df_tall['YoY Price % Change float'] >= 1]
     price_increased_years_num = len(price_increased_years)
-
-
     metric_increased_years_price_increased = df_tall[df_tall['YoY Price % Change float'] > 1]
     # print(len(only_up),len(df_tall))
-
     # metric_increased_years = year_df[year_df['Y/Y % Change']>0] # WRONG, DON'T USE - - LITERALLY JUST COUNTS SHIFTS, which is 4
     # price_increased_years = year_df[year_df['YoY Price % Change']>0]
     num_years_increased = len(metric_increased_years)+1
     num_years_bad = num_years - num_years_increased #len(df_tall[df_tall['YoY % Change float'] < 1])
     num_years_increased_price = len(metric_increased_years_price_increased)#len(price_increased_years)
     # print(year_df['Y/Y % Change'])
-
     difference = num_years_increased - price_increased_years_num
     # print("num_years_increased - price_increased_years_num",num_years_increased, price_increased_years_num)
     price_increased_on_metric_up_years = len(metric_increased_years[metric_increased_years['YoY Price % Change float']>1])
     percent_correlation = price_increased_on_metric_up_years*100/num_years_increased
     percent_correlation_str = ("{}%".format(int(percent_correlation)))
-
-
-
     return render_template('current_ratio.html', \
                             # market_cap_str = market_cap_str,\
                             # avg_volume = avg_volume,\

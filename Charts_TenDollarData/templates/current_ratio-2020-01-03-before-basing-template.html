@@ -1,13 +1,80 @@
-{% extends "base.html" %}
-{% block charts_quarter_head %}
+<!-- {{company_symbol}}
+{{company_currency}}
+{{company_exchange}}
+{{company_industry}}
+{{company_description}}
+[[company_sector]]
+[[company_country]]
+[[company_ipo_date]] -->
+<!-- https://jsfiddle.net/cakenite/f6b94evj/18/ -->
+<!-- positioner: function() {
+  return {
+    x: this.chart.plotLeft,
+    y: this.chart.plotTop
+  };
+},
+shared: true, -->
+<!-- {{price_json}} -->
 
-<link rel="stylesheet" href="{{ url_for('static', filename='../static/css/sliding_tabs.css') }}">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="canonical" href="https://charts.tendollardata.com/aapl-stock/apple/income-statement/revenue-sales/history" />
+        <script>
+            // global variables
+            // var point1
+            var latest_stock_price;
+        </script>
+        <!-- <script data-ad-client="ca-pub-8622650495968210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>
+            Home - Brand
+        </title>
+        <!-- https://stackoverflow.com/questions/26192897/should-i-use-bootstrap-from-cdn-or-make-a-copy-on-my-server -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/primary.min.css') }}">
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel='preconnect' href='//stackpath.bootstrapcdn.com' crossorigin>
+        <link rel="preconnect" href="//ajax.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+        <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
+        <link rel="dns-prefetch" href="https://use.fontawesome.com">
+        <link rel="preconnect" href="//cdnjs.cloudflare.com">
+        <link rel="preconnect" href="//www.googletagmanager.com">
+        <link rel="preconnect" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//s3.amazonaws.com">
+        <link rel="dns-prefetch" href="//ajax.googleapis.com">
+        <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+        <link rel="dns-prefetch" href="//www.googletagmanager.com">
+        <link rel="dns-prefetch" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"> -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="{{ url_for('static', filename='../static/js/chart.js') }}"></script>
+
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> -->
+        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+        <script type="text/javascript" src="{{ url_for('static', filename='../static/js/jquery-3.5.1.js') }}"></script>
+        <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+        <!-- enables CSV -->
+        <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+        <!-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script> -->
+        <!-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script> -->
+        <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+        <!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
 
         <script>
             document.addEventListener('DOMContentLoaded', function (data) {
-                // df_json = {{ df_json }};
-                // year_df_json = {{ year_df_json }};
-                // price_json = {{ price_json }};
+                df_json = {{ df_json }};
+                year_df_json = {{ year_df_json }};
+                price_json = {{ price_json }};
                 var groupings = ['sum', 'average', 'sum'];
                 Highcharts.dateFormats = {
                     q: function (timestamp) {
@@ -601,14 +668,180 @@
         <script src="{{ url_for('static', filename='../static/js/quarterly.js') }}"></script>
 
 
-{% endblock %}
-
-        {% block quarterly_body %}
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
+    </head>
+    <body class="fixed_body">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="color: #212529;">
+            <div class="container">
+                <div class="squarelogo">
+                    <a class="navbar-brand dollar_data" href="#" style="color: #fec503;">
+                        10
+                    </a>
+                </div>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">
+                        Toggle navigation
+                    </span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="#">
+                                First Item
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Second Item
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Third Item
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation">
+                            <form class="form-inline mr-auto" target="_self">
+                                <div class="form-group">
+                                    <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                        <div class="input-group">
+                                            <div class="lazytype">
+                                                <input class="bg-light form-control border-0 small typeahead" type="text" placeholder="TSLA, AAPL, SPY...">
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary py-0" type="button">
+                                                    <!-- <i class="fas fa-search"></i> -->
+                                                    <i class="material-icons typeahead_icon">
+                                                        search
+                                                    </i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="#">
+                                BUY DATA
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Link 2
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Link 3
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="dropdown-toggle nav-link"
+                                data-toggle="dropdown"
+                                aria-expanded="false"
+                                href="#"
+                            >
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="#">
+                                    First Item
+                                </a>
+                                <a class="dropdown-item" role="presentation" href="#">
+                                    Second Item
+                                </a>
+                                <a class="dropdown-item" role="presentation" href="#">
+                                    Third Item
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script>
+            $(".lazytype").one("click", function () {
+                var bestPictures = new Bloodhound({
+                    datumTokenizer: Bloodhound.tokenizers.obj.nonword('value'), // Bloodhound.tokenizers.obj.whitespace('tokens'),
+                    queryTokenizer: Bloodhound.tokenizers.whitespace,
+                    prefetch: "{{ url_for('static', filename='../static/json/company_urls_records_remote.json') }}"
+                });
+                bestPictures.initialize();
+                $('.typeahead').typeahead(null, {
+                    minLength: 1,
+                    name: 'ticker',
+                    display: 'value',
+                    source: bestPictures,
+                    highlight: true,
+                    hint: false,
+                    templates: {
+                        empty: ['<div class="empty-message">', 'Try <p><a href=\"https://charts.tendollardata.com/TSLA>TSLA</a>, <a href=\"https://charts.tendollardata.com/AAPL>AAPL</a>, <a href=\"https://charts.tendollardata.com/SPY>SPY</a>...', '</div>'].join('\n'),
+                        suggestion: function (data) {
+                            return "<p><a href=\"https://charts.tendollardata.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>"
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
 </div>
 <div class="table_container"></div>
 <div id="chart"></div>
+<script>
+function checkForm() {
+    var rows = document.getElementsByClassName("item-row");
+    var arr = new Array();
+    for (i = 0; i < rows.length; i ++) {
+        var cols = rows[i].getElementsByTagName("td");
+        for (j = 0; j < cols.length; j ++) {
+            arr.push(cols[j].textContent);
+        }
+    }
+}
+</script>
+<script>
+// $(document).ready(function () {
+//     $('DISABLE#df_myTable').DataTable({
+//         columnDefs: [
+//             {
+//                 "width": "1000",
+//                 "targets": "_all",
+//                 render: function (data, type, full, meta) {
+//                     if (type === 'display' && !isNaN(data * 1) && data > 1000000000) {
+//                         return('$' + (
+//                             data / 1000000000
+//                         ).toFixed(1) + 'B').toLocaleString();
+//                     } else if (type === 'display' && !isNaN(data * 1) && (data > 1000000 && data < 999999999)) {
+//                         return('$' + (
+//                             data / 1000000
+//                         ).toFixed(1) + 'M').toLocaleString();
+//                     } else if (type === 'display' && !isNaN(data * 1) && (data > 1000 && data < 999999)) {
+//                         return('$' + (
+//                             data / 1000
+//                         ).toFixed(1) + 'K').toLocaleString();
+//                     } else if (type === 'display' && !isNaN(data * 1) && (data > .01 && data < 2) && data != 1) {
+//                         return((data * 100).toFixed(0) + '%').toLocaleString();
+//                     } else {
+//                         return data;
+//                     }
+//                 }
+//             },
+//         ],
+//         dom: 'Bfrtip',
+//         paginate: false,
+//         colReorder: true,
+//         buttons: []
+//     });
+// });
+</script>
 <div class="d-flex flex-column" id="content-wrapper">
     <div class="row">
         <!-- <div class="col-md-9 col-lg-9 col-xl-9">  -->
@@ -681,69 +914,15 @@
 
 
 
-
-    <div id="qaz_page-qaz_tabs" class="qaz_page-qaz_tabs-css rfv-parent">
-        <ul id="qaz_tabs" class="qaz_tabs-css rfv-tabs">
-            <li class="hr_one"><a href="#/" class="tabs_title_links"><div class="innerhref">Historical Table</div></a></li>
-            <li class="hr_two"><a href="#/" class="tabs_title_links"><div class="innerhref">About the Company</div></a></li>
-            <li class="hr_three"><a href="#/" class="tabs_title_links"><div class="innerhref">Definition / Formula</div></a></li>
-            <li class="hr_four"><a href="#/" class="tabs_title_links"><div class="innerhref">Our Data (free) and Datasets ($10)</div></a></li>
-            <hr class="stickyhr" />
+<!--
+    <div id="xpage-xtabs">
+        <ul id="xtabs">
+            <li>Historical Table</li>
+            <li>About the Company</li>
+            <li>About our Datasets</li>
+            <li>Tab 4</li>
         </ul>
-        <ul id="qaz_panels" class="qaz_panels-css rfv-panels">
-            <li>Panel 1
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h6 class="text-primary font-weight-bold m-0 metric_table">
-                        {{ company_long_name }}
-                    (
-                    {{ company_symbol }}
-                    ) Historical
-                    {{ fin_metric_name }}
-                    Table
-                    </h6>
-                </div>
-                <div class="card-body yoy_table">
-                    {% for table in df_html_tall %}
-                    {{ df_html_tall[0]|safe }}
-                    {% endfor %}
-                </div>
-
-            </li>
-            <li>Panel 2
-                <span class="key_points">About {{company_name}}</span>
-                    <span class="key_body">
-                {{company_description}}
-                <br>
-                Industry: {{company_industry}}
-                <br>
-                Sector: {{company_sector}}
-                <br>
-                Country: {{company_country}}
-                <br>
-                IPO Date {{company_ipo_date}}
-                <br>
-                Stock Exchange: {{company_exchange}}
-
-
-        </span>
-            </li>
-            <li>Panel 3</li>
-            <li>Panel 4</li>
-
-        </ul>
-    </div>
-
-
-
-    <div id="wsx_page-wsx_tabs" class="wsx_page-wsx_tabs-css rfv-parent">
-        <ul id="wsx_tabs" class="wsx_tabs-css rfv-tabs">
-            <li class="hr_one"><a href="#/" class="tabs_title_links"><div class="innerhref">Financial Statements</div></a></li>
-            <li class="hr_two"><a href="#/" class="tabs_title_links"><div class="innerhref">Balance Sheet</div></a></li>
-            <li class="hr_three"><a href="#/" class="tabs_title_links"><div class="innerhref">Income Statement</div></a></li>
-            <li class="hr_four"><a href="#/" class="tabs_title_links"><div class="innerhref">Cash Flow Statement</div></a></li>
-            <hr class="stickyhr" />
-        </ul>
-        <ul id="wsx_panels" class="wsx_panels-css rfv-panels">
+        <ul id="xpanels">
             <li>Panel 1</li>
             <li>Panel 2</li>
             <li>Panel 3</li>
@@ -751,26 +930,140 @@
         </ul>
     </div>
 
-    <div id="edcpage-edctabs" class="edcpage-edctabs-css rfv-parent">
-        <ul id="edctabs" class="edctabs-css rfv-tabs">
-            <li class="hr_one"><a href="#/" class="tabs_title_links"><div class="innerhref">Popular Ratios</div></a></li>
-            <li class="hr_two"><a href="#/" class="tabs_title_links"><div class="innerhref">Profit & Sales Ratios (36)</div></a></li>
-            <li class="hr_three"><a href="#/" class="tabs_title_links"><div class="innerhref">Debt-Related Ratios (25)</div></a></li>
-            <li class="hr_four"><a href="#/" class="tabs_title_links"><div class="innerhref">Other Ratios (10)</div></a></li>
-            <hr class="stickyhr" />
-        </ul>
-        <ul id="edcpanels" class="edcpanels-css rfv-panels">
-            <li>Panel 1</li>
-            <li>Panel 2</li>
-            <li>Panel 3</li>
-            <li>Panel 4</li>
+<script>
+    // jQuery Responsive xpage xtabs 1.0
 
-        </ul>
-    </div>
+    var selectedTab = 0,
+        scrollDelay = 20,
+        scrollSpeed = 400,
+        scrolltopOffset = 35;
+
+    $("#xtabs").children().each(function (i) {
+        i = i + 1;
+        $(this).attr('id', "tab-" + i).addClass("tab").wrapInner(
+            "<div class='tab-wrapper'></div>");
+    });
+    var count = $("#xtabs").children().length;
+    var tab_width = (100 / count) + "%";
+    $("#xtabs li").css("width", tab_width).eq(0).addClass('first').end().eq(-1).addClass(
+        'last').end();
+    $("#xpanels").children().each(function (i) {
+        i = i + 1;
+        $(this).attr('id', "panel-" + i).addClass("panel").wrapInner(
+            "<div class='panel-wrapper'></div>").prepend(
+            "<div class='accordion-tab'></div>");
+    });
+    $(".accordion-tab").each(function (i) {
+        i = i + 1;
+        var tab_name = $("#tab-" + i).html();
+        $(this).html(tab_name);
+    });
+    $("#xtabs").children().eq(selectedTab).addClass("xactive");
+    $("#xpanels").children().eq(selectedTab).addClass("xactive");
+    $("#xtabs > li").click(function () {
+        $("#xtabs > li, #xpanels > li").removeClass("xactive");
+        $("#xpanels > li").eq($(this).index()).toggleClass("xactive");
+        $(this).toggleClass("xactive");
+    });
+    $(".accordion-tab").click(function () {
+        $("#xtabs > li, #xpanels > li").removeClass("xactive");
+        $("#xtabs > li").eq($(this).parent().index()).toggleClass("xactive");
+        $(this).parent().toggleClass("xactive");
+    });
+
+
+</script>
+                <div class="page-tabs">
+                    <ul class="tabs">
+                        <li>
+                            Financial Ratios
+                        </li>
+                        <li>
+                            Profit & Revenue Ratios (36)
+                        </li>
+                        <li>
+                            Debt-Related Ratios (25)
+                        </li>
+                        <li>
+                            Other Ratios (10)
+                        </li>
+                    </ul>
+                    <ul class="panels">
+                        <li>
+                            Panel 0
+                        </li>
+                        <li>
+                            Panel 1
+                        </li>
+                        <li>
+                            Panel 2
+                        </li>
+                        <li>
+                            Panel 3
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    var selectedTab = 0;
+                    $(".tabs").children().each(function (i) {
+                        i = i + 1;
+                        $(this).attr('id', "tab-" + i).addClass("tab").wrapInner("<div class='tab-wrapper'></div>");
+                    });
+                    var count = $(".tabs").children().length;
+                    var tab_width = (100 / count) + "%";
+                    $(".tabs li").css("width", tab_width).eq(0).addClass('first').end().eq(-1).addClass('last').end();
+                    $(".panels").children().each(function (i) {
+                        i = i + 1;
+                        $(this).attr('id', "panel-" + i).addClass("panel").wrapInner("<div class='panel-wrapper'></div>").prepend("<div class='accordion-tab'></div>");
+                    });
+                    $(".accordion-tab").each(function (i) {
+                        i = i + 1;
+                        var tab_name = $("#tab-" + i).html();
+                        $(this).html(tab_name);
+                    });
+                    $(".tabs").children().eq(selectedTab).addClass("xactive");
+                    $(".panels").children().eq(selectedTab).addClass("xactive");
+                    $(".tabs > li").click(function () {
+                        $(".tabs > li, .panels > li").removeClass("xactive");
+                        $(".panels > li").eq($(this).index()).toggleClass("xactive");
+                        $(this).toggleClass("xactive");
+                    });
+                    $(".accordion-tab").click(function () {
+                        $(".tabs > li, .panels > li").removeClass("xactive");
+                        $(".tabs > li").eq($(this).parent().index()).toggleClass("xactive");
+                        $(this).parent().toggleClass("xactive");
+                    });
+                </script>
+ -->
 
 
 
                 <div class="content">
+                    <div class="row flex-grow-1">
+                        <div class="col-md-4 col-xl-6" style="padding: 10px;"></div>
+                    </div>
+                    <div class="row flex-grow-1 justify-content-center">
+                        <div class="col">
+                            <div class="card shadow mb-4">
+                                <!-- dropdown -->
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0 metric_table">
+                                        {{ company_long_name }}
+                                    (
+                                    {{ company_symbol }}
+                                    ) Historical
+                                    {{ fin_metric_name }}
+                                    Table
+                                    </h6>
+                                </div>
+                                <div class="card-body yoy_table">
+                                    {% for table in df_html_tall %}
+                                    {{ df_html_tall[0]|safe }}
+                                {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="container-fluid">
                     </br>
                     <div class="col">
@@ -801,7 +1094,7 @@
                             {{ company_symbol }}
                             ".
                             </p>
-
+                        </p>
                         <p>
                             {{ company_short_name }}
                         celebrated it's 10th year anniversary with a
@@ -852,13 +1145,7 @@
         </div>
         <div class="card-body summary_body">
             <div class="text-dark font-weight-bold h5 mb-0"></div>
-
-
-            <!-- <hr class="stats_hr"> -->
-
-                        {% if statement_or_ratio != "ratios" %}
-
-            <div class="table-responsive tstat0">
+            <div class="table-responsive">
                 <table class="table">
                     <!-- <thead class="fin_metric-stats">
                                         <tr>
@@ -870,6 +1157,7 @@
                                             </th>
                                         </tr>
                                     </thead> -->
+                        {% if statement_or_ratio != "ratios" %}
                         <tbody class="lifetime">
                         <tr>
                             <td class="hist_measure">
@@ -887,15 +1175,7 @@
                             <!-- <td class="stock_price_rows">Stock Price</td> -->
                         </tr>
                         </tbody>
-
-                </table>
-                </div>
-                {% endif %}
-
-                <!-- <hr class="stats_hr"> -->
-                <!-- <br> -->
-                <div class="table-responsive tstat1">
-                    <table class="table">
+                        {% endif %}
                         <!-- <tr>
                             <td class="hist_measure">
                                 Change (
@@ -947,12 +1227,7 @@
                             </td>
                         </tr>
                     </tbody>
-                </table>
-                </div>
-                <!-- <hr class="stats_hr"> -->
-                <!-- <br> -->
-                <div class="table-responsive tstat2">
-                    <table class="table">
+                </tr>
                 <tbody class="peakbottom">
                 <tr>
                     <td class="hist_measure subtd_header">
@@ -974,13 +1249,6 @@
                     </td>
                 </tr>
             </tbody>
-
-                </table>
-                </div>
-                <!-- <hr class="stats_hr"> -->
-                <!-- <br> -->
-                <div class="table-responsive tstat3">
-                    <table class="table">
             <tbody class="updownyears">
                 <tr>
                     <td class="hist_measure subtd_header">
@@ -1003,12 +1271,38 @@
                     </td>
                 </tr>
             </tbody>
-                </table>
-                </div>
-                <!-- <hr class="stats_hr"> -->
-
-
-    <br>
+                <!-- <tr>
+                                                                                            <td class="hist_measure">Top 25%</td>
+                                                                                            <td class="hist_stats">{{top_25_str}}</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td class="hist_measure">Average (μ)</td>
+                                                                                            <td class="hist_stats">{{mean_str}}</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td class="hist_measure">Bottom 25%</td>
+                                                                                            <td class="hist_stats">{{bottom_25_str}}</td>
+                                                                                        </tr> -->
+                <!-- <tr>
+                                    <td class="hist_measure">
+                                        All-Time Low
+                                    </td>
+                                    <td class="hist_stats">
+                                        {{ min_str }}
+                                    </td>
+                                </tr> -->
+                <!-- <tr>
+            <td class="subtd_header">Bottom</td>
+            <td class="subtd_header">Peak</td>
+            <td class="subtd"></td>
+            </tr>
+            <tr>
+            <td class="subtd">{{ min_str }}</td>
+            <td class="subtd">{{ max_str }}</td>
+            <td class="subtd">{{ max_min_range_str }}</td>
+            </tr> -->
+        </table>
+    </div><br>
             <h2 class="key_points">Key Points <span class="key_subtitle">(Stock Price Comparison)</span></h2>
             <!-- <br> -->
             <!-- <h4><span class="key_subtitle">Stock Price Comparison</span></h4> -->
@@ -1120,9 +1414,47 @@ stacks up to all its competitors."ratio"
 [[company_sector]]
 [[company_country]]
 [[company_ipo_date]] -->
+<hr class="rounded">
+            <span class="key_points">About {{company_name}}</span>
+            <span class="key_body">
+{{company_description}}
+<br>
+Industry: {{company_industry}}
+<br>
+Sector: {{company_sector}}
+<br>
+Country: {{company_country}}
+<br>
+IPO Date {{company_ipo_date}}
+<br>
+Stock Exchange: {{company_exchange}}
 
 
 
+
+
+    <!-- <p>
+                The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).
+            </p> -->
+    <!-- <p>If you'd have invested in </p> -->
+    <p>
+        Save time and invest smart. Understand how
+    {{ company_symbol }}
+stacks up to all its competitors."ratio"
+    </p>
+    {% if statement_or_ratio != "sratios" %}
+    <a href="https://tendollardata.com/financial-statements">
+    <div class="button_div">
+        <button class="btn btn-primary button_buy" type="button">
+            Historical Financial Statements Data for entire
+        {{ company_sector }}
+        Sector for $10
+        </button>
+    </div>
+    </a>
+    {% else %}
+    {% endif %}
+</span>
 
     <!-- <p>
                 To buy the RAW DATA for financial ratios . Ultimately, only high-level analysis in excel gives you the bigger picture
@@ -1135,30 +1467,31 @@ stacks up to all its competitors."ratio"
 </div>
 </div>
 <div class="content">
-    <!-- <div class="row flex-grow-1">
+    <div class="row flex-grow-1">
         <div class="col-md-4 col-xl-6" style="padding: 10px;"></div>
     </div>
     <div class="row flex-grow-1 justify-content-center">
         <div class="col">
             <div class="card shadow mb-4">
+                <!-- dropdown -->
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h6 class="text-primary font-weight-bold m-0 metric_table">
                         {{ company_long_name }}
-                    (
-                    {{ company_symbol }}
-                    ) Historical
-                    {{ fin_metric_name }}
-                    Table
+        (
+        {{ company_symbol }}
+        ) Historical
+        {{ fin_metric_name }}
+        Table
                     </h6>
                 </div>
                 <div class="card-body yoy_table">
                     {% for table in df_html_tall %}
-                    {{ df_html_tall[0]|safe }}
-                    {% endfor %}
+        {{ df_html_tall[0]|safe }}
+    {% endfor %}
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="container-fluid">
     </br>
     <div class="col">
@@ -1168,5 +1501,23 @@ stacks up to all its competitors."ratio"
 </div>
 </div>
 <!-- <script src="https://code.highcharts.com/stock/modules/exporting.js"></script> -->
-<script src="{{ url_for('static', filename='../static/js/sliding_tabs.js') }}"></script>
-{% endblock %}
+<script type="text/javascript">$.typeahead({
+    input: '.js-typeahead',
+    minLength: 1,
+    filter: false, // Disables typahead filter to just show everything in the results from the database
+    debug: true,
+    highlight: true,
+    maxItem: 10,
+    dynamic: true,
+    delay: 200,
+    searchOnFocus: true,
+    backdrop: {
+        "background-color": "#fff"
+    },
+    href: "{{ url }}",
+    emptyTemplate: "no result for    {{ query }}",
+    display: ["name"]
+});
+</script>
+</body>
+</html>

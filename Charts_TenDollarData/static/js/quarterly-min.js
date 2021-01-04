@@ -1,0 +1,1 @@
+function mapData([a,t]){return{name:a,x:a,y:Math.abs(t),actualY:t,color:t>=0?"#7CB5EC":"#E6496F"}}

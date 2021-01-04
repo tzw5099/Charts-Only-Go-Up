@@ -1,5 +1,5 @@
 /* probably redundant tabs css - delete */
-.page-tabs {
+/* .page-tabs {
 	margin-top: 20px;
 	overflow: hidden;
 	-webkit-border-radius: 3px;
@@ -88,9 +88,9 @@
 	background-color: #ededed;
 	color: #aa5c09;
 	padding-bottom: 0;
-}
+} */
 /* */
-@media only screen and(max-width: 700px) {
+/* @media only screen and(max-width: 700px) {
 	.page-tabs .tabs {
 		display: none;
 	}
@@ -109,11 +109,11 @@
 	.page-tabs .panels .accordion-tab {
 		font-size: 17px;
 	}
-}
+} */
 /* probably redundant tabs css - delete */
 
 /* probably redundant tabs PART 2 css - delete */
-#xpage-xtabs {
+/* #xpage-xtabs {
 	margin-top: 20px;
 	overflow: hidden;
 	-webkit-border-radius: 3px;
@@ -135,9 +135,8 @@
 	display: block;
 	cursor: pointer;
 	background-color: gray;
-}
-#xpage-xtabs #xtabs > li .tab-wrapper {
-	/* padding: 20px 0px; */
+} */
+/* #xpage-xtabs #xtabs > li .tab-wrapper {
 	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
@@ -202,9 +201,9 @@
 	background-color: #ededed;
 	color: #aa5c09;
 	padding-bottom: 0px;
-}
+} */
 /* */
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
 	#xpage-xtabs #xtabs {
 		display: none;
 	}
@@ -223,7 +222,7 @@
 	#xpage-xtabs #xpanels .accordion-tab {
 		font-size: 17px;
 	}
-}
+} */
 /* probably redundant tabs PART 2 css - delete */
 
 .annual_percent {
@@ -610,4 +609,25 @@ h6 {
 	/* Catamaran; */
 	font-weight: 800 !important;
 	/* font-size: 18px !important; */
+}
+
+.rfv-parent,
+.panel-wrapper {
+	border: 2px solid #ededed;
+}
+
+table thead tr {
+	height: 60px;
+	background: #ffed86;
+	font-size: 16px;
+}
+
+table {
+	background: white;
+	border-radius: 6px;
+	overflow: hidden;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
 }
