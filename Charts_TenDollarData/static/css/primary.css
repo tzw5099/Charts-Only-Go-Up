@@ -224,7 +224,9 @@
 	}
 } */
 /* probably redundant tabs PART 2 css - delete */
-
+.pitch {
+	text-align: center;
+}
 .annual_percent {
 	font-size: 16px !important;
 }
@@ -241,8 +243,8 @@ tspan.chart_current_price {
 	color: yellow !important;
 }
 .yoy_table {
-	max-height: 400px;
-	overflow-y: auto;
+	/* max-height: 400px; */
+	/* overflow-y: auto; */
 }
 .summary_header,
 .summary_body {
@@ -313,7 +315,9 @@ span.key_subtitle {
 	text-align: center;
 	font-weight: bold;
 	/* font-size: 18px; */
-	color: #4285f4 !important;
+	color: #4285f4;
+	/* #3d7198; */
+	/* #4285f4 !important; */
 
 	/* display: block; */
 }
@@ -354,7 +358,7 @@ span.key_subtitle {
 .daily_pct_chg {
 	font-size: 20px;
 	font-weight: bold;
-	/* color: #4285F4; */
+	color: #4285f4;
 }
 .last_pct_change {
 	/* font-weight:bold; */
@@ -371,6 +375,8 @@ a.similar_companies_urls {
 }
 .highbar_title_stock {
 	color: #4285f4;
+	/* #3d7198; */
+	/* #4285f4; */
 	font-weight: 600;
 }
 .highbar_title_metric {
@@ -613,16 +619,29 @@ h6 {
 
 .rfv-parent,
 .panel-wrapper {
-	border: 2px solid #ededed;
+	/* border: 2px solid #ededed; */
+
+	border-top: 2px solid #ededed;
+	border-bottom: 2px solid #ededed;
 }
 
-table thead tr {
+.rfv-panels {
+	border: 2px solid #ededed;
+
+	/* border-top: 2px solid #ededed; */
+	/* border-bottom: 2px solid #ededed; */
+}
+.rfv-tabs {
+	border-left: 2px solid #ededed;
+	border-right: 2px solid #ededed;
+}
+.table thead tr {
 	height: 60px;
 	background: #ffed86;
 	font-size: 16px;
 }
 
-table {
+.table {
 	background: white;
 	border-radius: 6px;
 	overflow: hidden;
