@@ -1,3 +1,5 @@
+# pyright: reportUnusedVariable=false, reportUnusedImport=false
+# https://github.com/microsoft/pylance-release/blob/main/DIAGNOSTIC_SEVERITY_RULES.md
 import os
 import sqlite3
 import pandas as pd
@@ -5,6 +7,8 @@ import glob
 import pathlib
 import time
 import sys
+
+
 # https://stackoverflow.com/questions/30165475/how-to-compress-minimize-size-of-json-jsonify-with-flask-in-python/30165707
 # TODO compress JSON
 # from flask import Flask, Response
@@ -71,6 +75,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     from route_imports.ratio_map import fin_statement_renamed_cols
     from route_imports.ratio_map import metric_to_formula_map
     from route_imports.ratio_map import url_to_metric_map
+    from route_imports.ratio_map import url_to_equation_map
+    from route_imports.ratio_map import url_to_definition_map
     from flask import Markup
     # from route_imports.ratio_map import metric_to_list_variables_map
     start_time = time.time()
@@ -184,7 +190,9 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             'ipo date',
                             'short name',
                             'Industries',
-                            'Similar Companies']
+                            'Similar Companies',
+                            'shortest name',
+                            'url name']
     company_profiles = company_profiles[company_profiles_col]
     profiles_dict = {}
     profiles_value = company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())].values.tolist()[0]
@@ -201,26 +209,18 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         pass
     fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")
     if "{}".format(statement_or_ratio) in fin_statements_list:
-        titles_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
-        titles_is = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['Title'])
-        urls_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['URL'])
-        urls_cf = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['URL'])
-        urls_is = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['URL'])
-        if "{}".format(statement_or_ratio) == "income-statement":
-            titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['Title'])
-            var_list = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Income Statement"]['Python Variable Name'])
-            fin_metric_pos = urls_is.index("{}".format(url_fin_metric))
-            fin_statement_dir = "Income Statement"
-        elif "{}".format(statement_or_ratio) == "balance-sheet":
-            titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['Title'])
-            var_list = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Balance Sheet"]['Python Variable Name'])
-            fin_metric_pos = urls_bs.index("{}".format(url_fin_metric))
-            fin_statement_dir = "Balance Sheet"
-        elif "{}".format(statement_or_ratio) == "cash-flow-statement":
-            titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Title'])
-            var_list = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="Cash Flow Statement"]['Python Variable Name'])
-            fin_metric_pos = urls_cf.index("{}".format(url_fin_metric))
-            fin_statement_dir = "Cash Flow Statement"
+        if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "balance-sheet" or "{}".format(statement_or_ratio) == "cash-flow-statement":
+            if "{}".format(statement_or_ratio) == "income-statement":
+                fin_statement_dir = "Income Statement"
+            elif "{}".format(statement_or_ratio) == "balance-sheet":
+                fin_statement_dir = "Balance Sheet"
+            elif "{}".format(statement_or_ratio) == "cash-flow-statement":
+                fin_statement_dir = "Cash Flow Statement"
+            urls_fs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="{}".format(fin_statement_dir)]['URL'])
+            titles_bs = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="{}".format(fin_statement_dir)]['Title'])
+            var_list = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="{}".format(fin_statement_dir)]['Python Variable Name'])
+            fin_metric_pos = urls_fs.index("{}".format(url_fin_metric))
+
         else:
             pass
         fin_statement_cols = titles_bs
@@ -270,6 +270,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         fin_metric_title = list(matching_row['Title'])[0]
         fin_metric_vars = list(matching_row['Python Variable Name'])
         fin_metric_name = list(matching_row['Name'])[0]
+
+        fin_metric_definition_link = "<br>Source: Investopedia"# "Reference: " + list(matching_row['Definitions Link'])[0]
+        fin_metric_definition = list(matching_row['Definition / Formula'])[0]
+        fin_metric_definition_formula = Markup("{}<br>{}".format(fin_metric_definition, fin_metric_definition_link))
         # ignore_periods = df["{}".format(fin_metric_name)].values.searchsorted(0, side='right')
         # df = df[0:ignore_periods]
         # df = df.iloc[::-1]
@@ -291,6 +295,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             #     df_grouped = year_df_file
             return df_grouped
     else:
+        fin_metric_definition_formula = ""
         metric_to_list_variables_map = {
                 'net_working_capital_ratio':['working_capital_math','total_assets',],
                 'book_value_per_share':['total_se','shares_outstanding_non',],
@@ -418,6 +423,12 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df['quick_assets_math']=df['cash_non']+df['short_term_investments']+df['accounts_receivable']
         df['quick_ratio_math']=(df['total_current_assets'] - df['inventory'])/df['total_current_liabilities']
         metric_name = url_to_metric_map["{}".format(url_fin_metric)]
+
+        fin_metric_equation = url_to_equation_map["{}".format(url_fin_metric)]
+        fin_metric_definition_link = "<br>Source: Investopedia"# "Reference: " + list(matching_row['Definitions Link'])[0]
+        fin_metric_definition = url_to_definition_map["{}".format(url_fin_metric)]
+        fin_metric_definition_formula = Markup("{}<br>{}<br>{}".format(fin_metric_equation, fin_metric_definition, fin_metric_definition_link))
+
         fin_metric_title = url_to_name_map[url_fin_metric]
         fin_metric_name = url_to_var_name_map[url_fin_metric]
         fin_metric_vars = metric_to_list_variables_map[fin_metric_name]
@@ -454,7 +465,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         titles_bs.append('QQ-YYYY')
         var_list.append('Year')
         var_list.append('QQ-YYYY')
-    except:
+    except Exception as e:
         pass
     try:
         print("cols",cols)
@@ -789,34 +800,59 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     price_json.append([last_price_json_timestamp,last_price])
     first_price = price_json[0][1]
     df_tall = year_df[::-1]
+    df_tall['Year'] = "4/1/" + df_tall['Year']
+    df_tall['Stock Price'] = df_tall['Price'].apply(lambda x: "${:,}".format(np.round(x,2)))
+    df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
+    df_tall['YoY % Change (Stock Price)'] = df_tall['YoY Price % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
+
+    # should refactor the if statement - v easy. But also, waste of time.
+    # if "{}".format(statement_or_ratio) in fin_statements_list:
+    #     df_tall['{}'.format(fin_metric_name)] = df_tall['{}'.format(fin_metric_title)]
+    # else:
+    #     pass
+
     if "{}".format(statement_or_ratio) in fin_statements_list:
-        # fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
-        fin_metric_title,fin_metric_name = fin_metric_name,fin_metric_title
+        # fin_metric_title,fin_metric_name = fin_metric_name,fin_metric_title
         # df_tall['pct_chg'] = df_tall['{}'.format(fin_metric_title)].pct_change()
-        df_tall['Year'] = "April 1, " + df_tall['Year']
+        df_tall['{}'.format(fin_metric_title)] = df_tall['{}'.format(fin_metric_name)]
         df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_title)]/df_tall['{}'.format(fin_metric_title)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
         print(list(df_tall['{}'.format(fin_metric_title)]))
-        df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
-        df_tall['YoY Price % Change'] = df_tall['YoY Price % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
         print(list(df_tall['{}'.format(fin_metric_title)]))
-        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title),'YoY % Change',"Price", 'YoY Price % Change']].to_html(index=False)
+
+
+        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
+        # df_html_tall['Stock Price'] = df_html_tall['Price'].apply(lambda x: "${:,}".format(np.round(x,2)))
+        df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)]/1000000
+        df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)].apply(lambda x: "${:,}".format(x))
+
+
+        df_html_tall = df_html_tall.to_html(index=False)
+        # df_html_tall = df_html_tall.replace('{}'.format(fin_metric_title),'{}<br><span class="in_mm">in $ million<span>'.format(fin_metric_title))
         full_path = csv_file.split(' ~ ')
         path = pathlib.PurePath(full_path[0])
     else:
 
+
         df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_name)]/df_tall['{}'.format(fin_metric_name)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
-        df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
-        df_tall['YoY Price % Change'] = df_tall['YoY Price % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
+        # df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
+        # df_tall['YoY % Change (Stock Price)'] = df_tall['YoY Price % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
         df_tall["{}".format(fin_metric_title)] = df_tall["{}".format(fin_metric_name)]
-        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title), 'YoY % Change',"Price", 'YoY Price % Change']]
+        # df_tall['Stock Price'] = df_tall['Price'].apply(lambda x: "${:,}".format(np.round(x,2)))
+        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title), 'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
         # df_html_tall.columns = ["Year", "{}".format(fin_metric_title),"YoY % Change","Price",'YoY Price % Change']
         df_html_tall = df_html_tall.to_html(index=False)
+    # df_html_price = df_tall[['Year',"Stock Price", 'YoY % Change (Stock Price)']].to_html(index=False)
     df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="yoy_chrono_table" id="df_myTable" border="1" class="dataframe">')
     # df_html_tall = df_html_tall.replace('inf','class="abc" id="df_myTable" border="1" class="dataframe">')
     df_html_tall = df_html_tall.replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
     df_html_tall = df_html_tall.replace("{}".format("["),"")
+    # df_html_tall = df_html_tall.replace('{}'.format(fin_metric_title),'Value')
+    df_html_tall = df_html_tall.replace('.00','')
+    df_html_tall = df_html_tall.replace('.0','')
+
+
     df_html_tall = df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
     df_html_tall = df_html_tall.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
@@ -831,18 +867,12 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # present_num = magnitude_num(int(latest_metric),currency_symbol)
     present_num = magnitude_num((latest_metric),currency_symbol)
     labels = list(df['date'])
-    if "{}".format(statement_or_ratio) in fin_statements_list:
-        df_table_html = df_tall[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()
-        df['quarter avg'] = df["{}".format(fin_metric_title)].rolling(window=8,min_periods=1).mean()
-        # latest_metric = "${}".format(list(df["{}".format(fin_metric_title)])[0])
-        last_4_quarters = np.sum(df["quarter avg"][0:4])
-        prev_4_quarters = np.sum(df["quarter avg"][5:9])
-    else:
-        df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()
-        df['quarter avg'] = df["{}".format(fin_metric_name)].rolling(window=8,min_periods=1).mean()
-        # latest_metric = "${}".format(list(df["{}".format(fin_metric_name)])[0])
-        last_4_quarters = np.mean(df["quarter avg"][0:4])
-        prev_4_quarters = np.mean(df["quarter avg"][5:9])
+
+    df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()
+    df['quarter avg'] = df["{}".format(fin_metric_name)].rolling(window=8,min_periods=1).mean()
+    # latest_metric = "${}".format(list(df["{}".format(fin_metric_title)])[0])
+    last_4_quarters = np.sum(df["quarter avg"][0:4])
+    prev_4_quarters = np.sum(df["quarter avg"][5:9])
     y_y = ((last_4_quarters/prev_4_quarters)-1)*100
     df_json  = np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()[::-1]
     y_y_chg = change_markup(y_y,"percent","arrow")
@@ -977,6 +1007,9 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             # avg_dolvol_pct_mcap = avg_dolvol_pct_mcap, # = 0.46 \
                             # avg_vol_vs_pct_outstanding = avg_vol_vs_pct_outstanding, #  = 0.46 \
                             # pct_shares_tradable = pct_shares_tradable, # = 1 \
+                            url_symbol = url_symbol,\
+                            domain = "http://127.0.0.1:5000",\
+                            fin_metric_definition_formula = fin_metric_definition_formula,\
                             company_symbol = profiles_dict['symbol'],\
                             difference = difference,\
                             percent_correlation = percent_correlation,\
@@ -1015,8 +1048,9 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                             company_sector = profiles_dict['sector'],\
                             company_country = profiles_dict['country'],\
                             company_ipo_date = profiles_dict['ipo date'],\
-                            company_short_name = profiles_dict['short name'],\
+                            company_short_name = profiles_dict['shortest name'], #profiles_dict['short name'],\
                             company_industries = profiles_dict['Industries'],\
+                            company_url_name = profiles_dict['url name'],\
                             company_similar = company_similar_paragraph,#profiles_dict['Similar Companies'],\
                             historical_pct_chg = historical_pct_chg,\
                             hist_pct_chg_str = hist_pct_chg_str,\

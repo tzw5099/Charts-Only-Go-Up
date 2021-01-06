@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block charts_quarter_head %}
-
 <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/sliding_tabs.css') }}">
-
         <script>
             document.addEventListener('DOMContentLoaded', function (data) {
                 // df_json = {{ df_json }};
@@ -70,7 +68,6 @@
                         });
                     });
                 }(Highcharts));
-
                 var myChart = Highcharts.stockChart('highbar', {
                     // SECTION - Highcharts - top
                     legend: {
@@ -96,7 +93,6 @@
                                 },
                                 // width: '1000',
                                 chartOptions: {
-
                                     chart: {},
                                     subtitle: {
                                         // text: null
@@ -105,35 +101,44 @@
                                         // enabled: false
                                     },
                                     rangeSelector: {inputEnabled: false},
-
-                    plotOptions: { line:{
-                        dataLabels:{
-                            enabled:false,
-                            // format: "FY {point.x:%y}",
-                        }
-                    }},
-                    legend: {
-                        enabled: true,
-                        verticalAlign: 'bottom',
-                    },
-                    yAxis: {
-                        // labels:{
-                        //     enabled: false,
-                        // },
-                    },
-
-                    xAxis: {
-                        labels:{
-                            enabled: false,
-                        },
-                            scrollbar: {
-                                enabled: false
-                            },
-                    },
-                                }
-                            }
-                        ]
-                    },
+                                    plotOptions: { line:{
+                                        dataLabels:{
+                                            enabled:false,
+                                            // format: "FY {point.x:%y}",
+                                        }
+                                    }},
+                                    legend: {
+                                        enabled: true,
+                                        verticalAlign: 'bottom',
+                                    },
+                                    yAxis: [
+                                        {
+                                            yAxis: 1,
+                                            opposite: false,
+                                            labels:{
+                                                enabled: false,
+                                            },
+                                        },
+                                        {
+                                            yAxis: 1,
+                                            opposite: true,
+                                            labels:{
+                                                // enabled: false,
+                                            },
+                                        },
+                                    ],
+                                    xAxis: {
+                                        labels:{
+                                            enabled: false,
+                                        },
+                                            scrollbar: {
+                                                enabled: false
+                                            },
+                                    },
+                                                }
+                                            }
+                                        ]
+                                    },
                     chart: {
                         // margin: [0, 70, 0, 70],
                         alignTicks: true,
@@ -180,7 +185,6 @@
                         // font: 'bold 10pt "Arial Narrow"',
                         // wordWrap:'break-word',
                         // width : "100px"
-
                     },
                         // verticalAlign: 'bottom',
                     },
@@ -272,7 +276,6 @@
                             // alternateGridColor: '#FDFFD5', // '#FEF8E3'
                             minPadding: 0,
                         }, {
-
                             labels: {
                                 style: {
                                     color: 'black', // 'red'
@@ -299,7 +302,6 @@
                                 // overflow: "allow",
                                 // crop: "false",
                             }
-
                         },
                         line: { // SECTION - Highcharts - plotOptions - line
                             allowPointSelect: true,
@@ -395,7 +397,6 @@
                                 }
                                 return positions;
                             },
-
                             labels: {
                                 style: {
                                     color: '#4285F4', // '#3D7198', // '#4285F4', // 'red'
@@ -417,10 +418,8 @@
                             opposite:true,
                             yAxis: 1,
                             title:'metric',
-
                             {% if statement_or_ratio != "sratios" %}
                             tickPositioner: function () {
-
                                 var positions = [],
                                     tick = Math.floor(this.dataMin*100),
                                     // increment = Math.ceil((this.dataMax*100 - this.dataMin*100) / 6);
@@ -431,7 +430,6 @@
                                 return positions;
                             },
                             {% endif %}
-
                             labels: { // SECTION - Highcharts - yAxis - labels
                                 style: {
                                     color: '#177737', // 'red'
@@ -631,9 +629,7 @@
                 if (screen_size < 768)
                 // var x = window.matchMedia("(max-width: 700px)")
                 // if (x.matches)
-
                 {
-
                 // document.getElementsByClassName("highbar_mobile")[0].style.marginLeft = (-.1*screen_size)+"px";
                 // myChart.setSize(screen_size*1.1);
                 }
@@ -648,16 +644,10 @@
                 var year_df_json = {{ year_df_json }};
                 var price_json = {{ price_json }};
                 var currency_symbol = {{currency_symbol}}
-
         </script>
         <script src="{{ url_for('static', filename='../static/js/quarterly.js') }}"></script>
-
-
 {% endblock %}
-
         {% block quarterly_body %}
-
-
 </div>
 <!-- <div class="table_container"></div> -->
 <!-- <div id="chart"></div> -->
@@ -667,7 +657,9 @@
             <div class="col-md-8 col-lg-8 col-xl-8">
             <div class="text-dark h1_info left_side">
                 <!-- <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right"> -->
-                <h1 class="text-primary mb-0 pad-10-top pad-10-bottom">
+                <h1>What is {{company_symbol}}'s {{fin_metric_name}}?</h1>
+                    <br>
+                    <h3 class="text-primary mb-0 pad-10-top pad-10-bottom">
                     <strong>
                         {{ company_long_name }}
                     (
@@ -679,7 +671,7 @@
                     -
                     {{ latest_year }} ({{ num_years }} years)
                     </strong>
-                </h1>
+                </h3>
                 <!--
                 <span class="daily_pct_chg">
                  Stock Price: {{currency_symbol}}{{last_price}}
@@ -689,7 +681,6 @@
                 {% elif pct_chg_num < 0 %}
                 {% else %}
                 {% endif %} -->
-
                 <!-- <br> -->
                 <h2 class="text-primary mb-0">
                     <span class="last12months">
@@ -719,31 +710,19 @@
                     <span class="highbar_title_metric">
                     {{ fin_metric_name }}</span>
                     </div>
-                    <div id="highbar" class="highbar_mobile" style="height: 600px; width:100%;">
+                    <div id="highbar" class="highbar_mobile">
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
                     <br>
                     Checkout the
                 {{ fin_metric_name }}
                 for
                 {{ company_symbol }}
-                competitors:
+                competitors<br>
                 {{ company_similar }}
                 .
                 </span>
-
-
-
-
-
-
-
-
     </div>
 </div>
-
-
-
-
 </div>
 <div class="col rightside">
     <div class="card shadow border-left-primary py-2 rightside" style="margin: 5px;">
@@ -755,7 +734,6 @@
                 <!-- {{ fin_metric_name }} -->
                 <!-- <br> -->
                 Historical Stats for <span class="greenish">{{fin_metric_name}}</span>
-
                 <!-- (
             {{ earliest_year }}
             -
@@ -785,7 +763,6 @@
             scrollDelay = 20,
             scrollSpeed = 400,
             scrolltopOffset = 0;
-
         $("#tgb_tabs").children().each(function (i) {
             i = i + 1;
             $(this).attr('id', "tab-" + i).addClass("tab").wrapInner(
@@ -818,12 +795,10 @@
             $("#tgb_tabs > li").eq($(this).parent().index()).toggleClass("xactive");
             $(this).parent().toggleClass("xactive");
         });
-
     </script>
              -->
 <!--
                         {% if statement_or_ratio != "ratios" %}
-
             <div class="table-responsive tstat0">
                 <table class="table">
                         <tbody class="lifetime">
@@ -842,11 +817,9 @@
                             </td>
                         </tr>
                         </tbody>
-
                 </table>
                 </div>
                 {% endif %} -->
-
                 <!-- <hr class="stats_hr"> -->
                 <!-- <br> -->
                 <div class="table-responsive tstat1">
@@ -912,8 +885,6 @@
                     <!-- </tbody> -->
                 <!-- </table>
                 </div> -->
-
-
                 <!-- <div class="table-responsive tstat11">
                     <table class="table">
                         <tbody class="historical_metric_change">
@@ -945,10 +916,6 @@
                     </tbody>
                 </table>
                 </div> -->
-
-
-
-
                 <!-- <hr class="stats_hr"> -->
                 <!-- <br> -->
                 <!-- <div class="table-responsive tstat2">
@@ -974,7 +941,6 @@
                     </td>
                 </tr>
             <!-- </tbody> -->
-
                 <!-- </table>
                 </div> -->
                 <!-- <hr class="stats_hr"> -->
@@ -1015,11 +981,9 @@
                 </table>
                 </div>
                 <!-- <hr class="stats_hr"> -->
-
-
                 <!-- <br> -->
-                <span class="font12"># of Up Years = Positive (0%+) YoY change</span><br>
-                <span class="font12"># of Down Years = Negative (less than 0%) YoY change </span>
+                <span class="font12">Up Years = Positive (0%+) YoY change</span><br>
+                <span class="font12">Down Years = Negative (less than 0%) YoY change </span>
                 <br><br>
                 <h2 class="key_points">Key Points <span class="key_subtitle">(Stock Price Comparison)</span></h2>
                 <!-- <br> -->
@@ -1048,7 +1012,6 @@
                 {% else %}
                 the rate relative to it's {{ fin_metric_name.lower() }}
                 {% endif %}
-
                 over the same period.
                     </li>
                 <li>
@@ -1096,14 +1059,11 @@
                 {{ company_short_name }}
                 's'
                 </li> -->
-
                 </ul>
                 <!-- </span> -->
-
                 <aside>
                 <span class="aside_points">Buy the Dataset</span>
                 <span class="aside_body">
-
                 <!-- <p>
                             The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).
                         </p> -->
@@ -1114,16 +1074,14 @@
                 stacks up to all its competitors."ratio"
                 </p> -->
                 {% if statement_or_ratio != "sratios" %}
-                        <span class="pitch">Historical Financial Statements
+                        <span class="pitch">Historical Financial Statements (1994 - Present)
                             <!-- for the  -->
                             <br>
                             Entire
                     {{ company_sector }}
                     Sector (1000+ stocks)
-                    <br>
-                    1994 - Present</span>
+                    </span>
                 <a href="https://tendollardata.com/financial-statements">
-
                 <div class="button_div">
                     <button class="btn btn-primary button_buy" type="button">
                         Buy for $10
@@ -1142,32 +1100,18 @@
                 [[company_sector]]
                 [[company_country]]
                 [[company_ipo_date]] -->
-
-
-
-
                 <!-- <p>
-                            To buy the RAW DATA for financial ratios . Ultimately, only high-level analysis in excel gives you the bigger picture
+                            to buy the RAW DATA for financial ratios . Ultimately, only high-level analysis in excel gives you the bigger picture
                         </p> -->
                 <!-- <p>
                 the chart data has been cleaned for the clearest analysis. We smooth seasonal spikes and fill in missing data with interpolated values. You can see the clearest historical trend this way. For the raw value, see the table below.
                 </p> -->
 </div>
 </div>
-
-
-
-
-
 </div>
-
-
 </div>
-
-
 <div class="all_tabs_container">
 <div class="content all_tabs">
-
     <div id="qaz_page-qaz_tabs" class="qaz_page-qaz_tabs-css rfv-parent">
         <ul id="qaz_tabs" class="qaz_tabs-css rfv-tabs">
             <li class="hr_one"><a href="#/" class="tabs_title_links"><div class="innerhref">Historical Table</div></a></li>
@@ -1186,25 +1130,26 @@
                 <!-- <div class="card-header d-flex justify-content-between align-items-center"> -->
                     <h6 class="text-primary font-weight-bold m-0 metric_table">
                         <!-- {{ company_long_name }} -->
-
                     {{ company_symbol }}
-
                     Historical
                     {{ fin_metric_name }}
                     Table
                     </h6>
+                    {% if statement_or_ratio != "ratios" %}
+                    <!-- Value -->
+                    <div class="center_it">in {{currency_symbol}} million</div>
+                    {% else %}
+                    {% endif %}
                 <!-- </div> -->
                 <div class="card-body yoy_table">
                     {% for table in df_html_tall %}
                     {{ df_html_tall[0]|safe }}
                     {% endfor %}
                 </div>
-
             </li>
             <li>Panel 2
                 <span class="key_points">About {{company_name}}</span>
                     <span class="key_body">
-                {{company_description}}
                 <br>
                 Industry: {{company_industry}}
                 <br>
@@ -1215,20 +1160,15 @@
                 IPO Date {{company_ipo_date}}
                 <br>
                 Stock Exchange: {{company_exchange}}
-
-
+                <br>
+                {{company_description}}
         </span>
             </li>
-            <li>Panel 3</li>
+            <li>{{fin_metric_definition_formula}}</li>
             <li>Panel 4</li>
-
         </ul>
     </div>
-
     <br>
-
-
-
     <div id="wsx_page-wsx_tabs" class="wsx_page-wsx_tabs-css rfv-parent">
         <ul id="wsx_tabs" class="wsx_tabs-css rfv-tabs">
             <li class="hr_one"><a href="#/" class="tabs_title_links"><div class="innerhref">Financial Statements</div></a></li>
@@ -1238,34 +1178,306 @@
             <hr class="stickyhr" />
         </ul>
         <ul id="wsx_panels" class="wsx_panels-css rfv-panels">
-            <li>Panel 1</li>
-            <li>Panel 2</li>
-            <li>Panel 3</li>
-            <li>Panel 4</li>
+            <li>
+
+
+                <ol>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/cash-and-cash-equivalents">Cash and Cash Equivalents</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/short-term-investments">Short Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/cash-and-short-term-investments">Cash and Short-Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-receivables">Accounts Receivables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/inventory">Inventory</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-current-assets">Other Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-current-assets">Total Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/pp-and-e">PP&E</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/goodwill">Goodwill</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/intangible-assets">Intangible Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/goodwill-and-intangible-assets">Goodwill and Intangible Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/long-term-investments">Long-Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/tax-assets">Tax Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-non-current-assets">Other Non-Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-non-current-assets">Total Non-Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-assets">Other Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-assets">Total Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/accounts-payables">Accounts Payables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/short-term-debt">Short-Term Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/tax-payables">Income Tax Payables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/deferred-revenue">Deferred Revenue</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-current-liabilities">Other Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-current-liabilities">Total Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/long-term-debt">Long-Term Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/deferred-revenue-non-current">Deferred Revenue Non-Current</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/deferred-tax-liabilities-non-current">Deferred Tax Liabilities Non-Current</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-non-current-liabilities">Other Non-Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-non-current-liabilities">Total Non-Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-liabilities">Other Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-liabilities">Total Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/common-stock">Common Stock</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/retained-earnings">Retained Earnings</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/accumulated-other-comprehensive-income-loss',">Accumulated Other Comprehensive Income Loss</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-total-stockholders-equity">Other Shareholders Equity</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-stockholders-equity">Total Shareholders Equity</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-liabilities-and-stockholders-equity">Total Liabilities & Stockholders Equity</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-investments">Total Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-debt">Total Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-debt">Net Debt</a></span></li>
+                </ol>
+
+            </li>
+            <li>
+                Assets
+                <ol>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/cash-and-cash-equivalents">Cash and Cash Equivalents</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/short-term-investments">Short Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/cash-and-short-term-investments">Cash and Short-Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-receivables">Accounts Receivables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/inventory">Inventory</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-current-assets">Other Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-current-assets">Total Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/pp-and-e">PP&E</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/goodwill">Goodwill</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/intangible-assets">Intangible Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/goodwill-and-intangible-assets">Goodwill and Intangible Assets</a></span></li>
+                </ol>
+                <ol>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/long-term-investments">Long-Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/tax-assets">Tax Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-non-current-assets">Other Non-Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-non-current-assets">Total Non-Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-assets">Other Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-assets">Total Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/accounts-payables">Accounts Payables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/short-term-debt">Short-Term Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/tax-payables">Income Tax Payables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/deferred-revenue">Deferred Revenue</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-current-liabilities">Other Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-current-liabilities">Total Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/long-term-debt">Long-Term Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/deferred-revenue-non-current">Deferred Revenue Non-Current</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/deferred-tax-liabilities-non-current">Deferred Tax Liabilities Non-Current</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-non-current-liabilities">Other Non-Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-non-current-liabilities">Total Non-Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-liabilities">Other Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-liabilities">Total Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/common-stock">Common Stock</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/retained-earnings">Retained Earnings</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/accumulated-other-comprehensive-income-loss',">Accumulated Other Comprehensive Income Loss</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-total-stockholders-equity">Other Shareholders Equity</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-stockholders-equity">Total Shareholders Equity</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-liabilities-and-stockholders-equity">Total Liabilities & Stockholders Equity</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-investments">Total Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/total-debt">Total Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-debt">Net Debt</a></span></li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/revenue-sales">Net Revenue (Sales)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/cost-of-sales-cost-of-revenue-cost-of-goods-sold">Cost of Revenue (Sales)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/gross-profit-gross-income">Gross Profit Margin</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/gross-income-ratio-gross-profit-ratio">Gross Profit Margin Ratio</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/research-and-development-expenses">Research and Development (R&D)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/general-and-administrative-expenses">General and Administrative (G&A)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/sales-general-and-administrative-expenses">Selling, General and Administrative (Sg&A)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/s-and-m-selling-and-marketing-expenses">Selling & Marketing Expenses (S&M)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-expenses">Other Income/Expenses, Net</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/operating-expenses">Total Operating Expenses</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/cost-and-expenses">Cost & Expenses</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/interest-expense">Interest Expense/Income, Net</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/depreciation-and-amortization">Depreciation & Amortization (D&A)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/ebitda">EBITDA</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/ebitda-ratio">EBITDA Margin</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/operating-income">Operating Income</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/operating-income-ratio">Operating Margin</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-income-other-expenses-net">Total Other Income/Expenses</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/income-before-tax-provisions">Pretax Income (Earnings)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/income-before-tax-ratio">Pretax Income (Earnings) Margin</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/income-tax-expense-provisions">Provision For Income Taxes</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-income">Net Income (Earnings)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-income-ratio">Profit Margin</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/eps-earnings-per-share">Earnings Per Share (Eps)</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/eps-earnings-per-share-diluted">Earnings Per Share (Eps) Diluted</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/shares-outstanding">Shares Outstanding</a></span></li>
+                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/shares-outstanding-weighted-diluted">Shares Outstanding (Diluted)</a></span></li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/stock-based-compensation">Stock-Based Compensation (SBC)</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/change-in-working-capital">Change in Working Capital</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/accounts-receivable">Accounts Receivables</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/inventory">Inventory</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/accounts-payables">Accounts Payables</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-working-capital">Other Working Capital</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-non-cash-items">Other Non-Cash Items</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-cash-provided-by-operating-activities">Net Cash Provided By Operating Activities</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/investments-in-property-plant-and-equipment">Investments in PP&E</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/acquisitions-net">Acquisitions (Net)</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/purchases-of-investments">Purchase of Investments</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/sales-maturities-of-investments">Sales/Maturities of Investments</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-investing-activities">Other Investing Activities</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-cash-used-for-investing-activities">Net Cash used for Investing Activities</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/debt-repayment">Debt Repayment</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/common-stock-issued">Common Stock Issued</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/common-stock-repurchased">Common Stock Repurchased</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/dividends-paid">Dividends Paid</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/other-financing-activities">Other Financing Activities</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-cash-used-provided-by-financing-activities">Net Cash used Provided By Financing Activities</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/effect-of-forex-changes-on-cash">Effect of Exchange Rate Changes On Cash</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/net-change-in-cash">Net Change in Cash</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/cash-at-end-of-period">Cash at End of Period</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/cash-at-beginning-of-period">Cash at Beginning of Period</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/operating-cash-flow">Operating Cash Flow</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/capital-expenditure">Capital Expenditure (Capex)</a></span></li>
+                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/{{statement_or_ratio}}/free-cash-flow">Free Cash Flow</a></span></li>
+
+                </ol>
+            </li>
         </ul>
     </div>
-
     <br>
-
     <div id="edcpage-edctabs" class="edcpage-edctabs-css rfv-parent">
         <ul id="edctabs" class="edctabs-css rfv-tabs">
-            <li class="hr_one"><a href="#/" class="tabs_title_links"><div class="innerhref">Popular Ratios</div></a></li>
+            <li class="hr_one"><a href="#/" class="tabs_title_links"><div class="innerhref">Most Important Ratios</div></a></li>
             <li class="hr_two"><a href="#/" class="tabs_title_links"><div class="innerhref">Profit & Sales Ratios (36)</div></a></li>
             <li class="hr_three"><a href="#/" class="tabs_title_links"><div class="innerhref">Debt-Related Ratios (25)</div></a></li>
             <li class="hr_four"><a href="#/" class="tabs_title_links"><div class="innerhref">Other Ratios (10)</div></a></li>
             <hr class="stickyhr" />
         </ul>
         <ul id="edcpanels" class="edcpanels-css rfv-panels">
-            <li>Panel 1</li>
-            <li>Panel 2</li>
-            <li>Panel 3</li>
-            <li>Panel 4</li>
-
+            <li>
+                <ol>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-from-operations-ratio">Cash Flow From Operations Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-margin-ratio-formula">Cash Flow Margin Ratio Formula</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-per-share">Cash Flow per Share</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="roa-cash-flow">Cash Flow ROA Cash Flow</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-to-revenue">Cash Flow to Revenue</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-return-on-assets">Cash Return on Assets</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-return-on-equity">Cash Return on Equity</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-to-income-ratio">Cash to Income</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="debt-coverage">Debt Coverage</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="debt-payment">Debt Payment</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-to-debt">Discretionary Cash Flow-To-Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="discretionary-cash-flow-to-debt">Discretionary Cash Flow-To-Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="dividend-payout-ratio">Dividend Pay Out Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="dividends-per-share">Dividends per Share</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="earnings-per-share">Earnings per Share </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="ebitda-per-share">EBITDA per Share</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="ebitda-margin">EBITDA Margin</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="ffo-funds-from-operations-to-debt">FFO (Funds From Operations) to Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="free-operating-cash-flow-to-debt">Free Operating Cash Flow-To-Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="gross-profit-margin">Gross Profit Margin</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="inventory-pct-of-revenue">Inventory % of Revenue</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="net-cash-flow-to-capital-expenditures">Net Cash Flow-To-Capital Expenditures</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="net-margin-profit-margin">Net Margin (Profit Margin)</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="income-to-net-worth-ratio">Net Profit to Net Worth Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-cost-ratio">Operating Cost Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-margin">Operating Margin</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-profit-margin">Operating Profit Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-roa">Operating ROA</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pre-tax-income-to-sales">Pre-Tax Income to Sales</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pre-tax-return-on-assets">Pre-Tax Return on Assets</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pre-tax-return-on-common-equity">Pre-Tax Return on Common Equity</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pretax-margin">Pretax Margin</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="profit-margin">Profit Margin </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-assets-roa">Return on Assets </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-capital">Return on Capital</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-capital-employed-ratio">Return on Capital Employed Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-investment">Return on Investment</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-equity-roe">Return on Owner's Equity</a></span></li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-from-operations-ratio">Cash Flow From Operations Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-margin-ratio-formula">Cash Flow Margin Ratio Formula</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-per-share">Cash Flow per Share</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="roa-cash-flow">Cash Flow ROA Cash Flow</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-to-revenue">Cash Flow to Revenue</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-return-on-assets">Cash Return on Assets</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-return-on-equity">Cash Return on Equity</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-to-income-ratio">Cash to Income</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="debt-coverage">Debt Coverage</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="debt-payment">Debt Payment</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-flow-to-debt">Discretionary Cash Flow-To-Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="discretionary-cash-flow-to-debt">Discretionary Cash Flow-To-Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="dividend-payout-ratio">Dividend Pay Out Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="dividends-per-share">Dividends per Share</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="earnings-per-share">Earnings per Share </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="ebitda-per-share">EBITDA per Share</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="ebitda-margin">EBITDA Margin</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="ffo-funds-from-operations-to-debt">FFO (Funds From Operations) to Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="free-operating-cash-flow-to-debt">Free Operating Cash Flow-To-Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="gross-profit-margin">Gross Profit Margin</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="inventory-pct-of-revenue">Inventory % of Revenue</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="net-cash-flow-to-capital-expenditures">Net Cash Flow-To-Capital Expenditures</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="net-margin-profit-margin">Net Margin (Profit Margin)</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="income-to-net-worth-ratio">Net Profit to Net Worth Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-cost-ratio">Operating Cost Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-margin">Operating Margin</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-profit-margin">Operating Profit Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-roa">Operating ROA</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pre-tax-income-to-sales">Pre-Tax Income to Sales</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pre-tax-return-on-assets">Pre-Tax Return on Assets</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pre-tax-return-on-common-equity">Pre-Tax Return on Common Equity</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pretax-margin">Pretax Margin</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="profit-margin">Profit Margin </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-assets-roa">Return on Assets </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-capital">Return on Capital</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-capital-employed-ratio">Return on Capital Employed Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-investment">Return on Investment</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="return-on-equity-roe">Return on Owner's Equity</a></span></li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="acid-test-ratio">Acid Test Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-coverage-ratio">Cash Coverage</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-debt-coverage">Cash Debt Coverage</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="cash-ratio">Cash Ratio </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-cash-flow-to-debt">CFO to Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-cash-flow-to-debt">CFO to Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="operating-cash-flow-to-interest">CFO to Interest</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="https://charts.tendollardata.com/{{url_symbol}}-stock/{{company_url_name}}/ratios/current-cash-debt-coverage">Current Cash Debt Coverage</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="current-ratio">Current Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="debt-service-ratio">Debt Service Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="debt-to-assets-ratio">Debt-To-Assets Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="debt-to-equity-ratio">Debt-To-Equity Ratio </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="dividend-yield">Dividend Yield</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="ebitda-interest-coverage">EBITDA Interest Coverage</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="equity-multiplier">Equity Multiplier</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="long-term-debt-to-equity-ratio">Long Term Debt/Equity Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="long-term-debt-ratio">Long-Term Debt Ratio </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="lt-debt-as-pct-of-total-debt">Long-Term Debt as % of Total Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="quick-ratio">Quick Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="short-term-debt-to-equity-ratio">Short-Term Debt/Equity Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="st-debt-as-pct-of-total-debt">Short-Term Debt as % of Total Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="total-equity-to-total-assets">Total Equity to Total Assets</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="total-liabilities-pct-of-total-assets">Total Liabilities % of Total Assets</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="working-capital">Working Capital</a></span></li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="assets-turnover-ratio">Accounts Receivable Turnover Ratio </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="accounts-receivables-turnover">Accounts Receivables Turnover</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="book-value-per-share">Book Value per Share</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="capital-intensity">Capital Intensity</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="capital-turnover-ratio">Capital Turnover Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="days-sales-in-payables">Days Sales in Payables</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="inventory-ratio">Days Sales in Inventory</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="average-collection-period">Days Sales in Receivables</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="intangibles-pct-of-book-value">Intangibles % of Book Value</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="inventory-turnover">Inventory Turnover</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="average-days-payables-outstanding">Inventory Turnover</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="net-working-capital-ratio">Net Working Capital</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="number-of-days-of-receivables">Number of Days of Receivables</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="pct-debt-to-asset-formula">Percentage of Debt to Asset Formula</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="receivables-turnover">Receivables Turnover</a></span></li>
+                </ol>
+            </li>
         </ul>
     </div>
-
-
-
                 <div class="content">
                     <div class="container-fluid">
                     </br>
@@ -1297,13 +1509,12 @@
                             {{ company_symbol }}
                             ".
                             </p>
-
                         <p>
-                            {{ company_short_name }}
+                            {{ company_url_name }}
                         celebrated it's 10th year anniversary with a
                         {{ fin_metric_name }}
                         of 10. By the looks of it's history (see: the chart and stats above), you can expect
-                        {{ company_short_name }}
+                        {{ company_url_name }}
                         to maintain a positive
                         {{ fin_metric_name }}
                         .
@@ -1325,13 +1536,13 @@
                 </div>
             </div>
         </div>
-
-
-
-
 </div>
 </div>
-
+    <script>
+        $('ol').filter(function(){
+            return this.childNodes.length > 10
+        }).addClass('twoColumns');
+    </script>
 <div class="content">
     <!-- <div class="row flex-grow-1">
         <div class="col-md-4 col-xl-6" style="padding: 10px;"></div>
@@ -1364,8 +1575,6 @@
     </div>
 </div>
 </div>
-
-
 <!-- <script src="https://code.highcharts.com/stock/modules/exporting.js"></script> -->
 <script src="{{ url_for('static', filename='../static/js/sliding_tabs.js') }}"></script>
 {% endblock %}
