@@ -1,3 +1,17 @@
 {
-    "python.pythonPath": "C:\\Users\\Tom\\Anaconda3\\python.exe"
+  "python.pythonPath": "C:\\Users\\Tom\\Anaconda3\\python.exe",
+  "files.exclude": {
+    "__pycache__": true,
+    "Charts_TenDollarData\\__pycache__": true,
+    "Charts_TenDollarData\\financial_statements\\d__init__.py": true,
+    "Charts_TenDollarData\\financial_statements\\routes -12-20 - aapl revenue 10y shows.py": true,
+    "Charts_TenDollarData\\financial_statements\\Procfile": true,
+    "Charts_TenDollarData\\financial_statements\\palletauth.py": true,
+    "Charts_TenDollarData\\financial_statements\\old app.py .py": true,
+    "Charts_TenDollarData\\financial_statements\\get-pip.py": true,
+    "Charts_TenDollarData\\financial_statements\\app.py.filterline.py": true,
+    "Charts_TenDollarData\\financial_statements\\requirements.txt": true,
+    "Charts_TenDollarData\\financial_statements\\routes -12-20.py": true,
+    "Charts_TenDollarData\\financial_statements\\.pytest_cache": true
+  }
 }

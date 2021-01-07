@@ -4,6 +4,17 @@ sys.path.append(os.path.join(os.path.dirname(__file__)))
 from Charts_TenDollarData import create_app
 # from flask_compress import Compress
 
+
+import sentry_sdk
+from flask import Flask
+from sentry_sdk.integrations.flask import FlaskIntegration
+
+sentry_sdk.init(
+    dsn="https://ef2188dd9d284bb295241f1e22ad9b2d@o497156.ingest.sentry.io/5582464",
+    integrations=[FlaskIntegration()],
+    traces_sample_rate=1.0
+)
+
 app = create_app()
 # flask sometimes gets stuck
 # https://stackoverflow.com/questions/13333684/flask-app-occasionally-hanging
@@ -11,7 +22,7 @@ app = create_app()
 
 # use gevent WSGI server instead of the Flask
 # instead of 5000, you can define whatever port you want.
-# http = WSGIServer(('', 5001), app.wsgi_app) 
+# http = WSGIServer(('', 5001), app.wsgi_app)
 
 
 

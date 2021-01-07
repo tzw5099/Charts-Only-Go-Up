@@ -5,6 +5,12 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "C:\\Users\\Tom\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
+		"python.pythonPath": "C:\\Users\\Tom\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+		"favorites.resources": [
+			"Charts_TenDollarData\\financial_statements\\routes.py",
+			"Charts_TenDollarData\\financial_statements\\static",
+			"Charts_TenDollarData\\templates\\base.html",
+			"Charts_TenDollarData\\templates\\current_ratio.html"
+		]
 	}
 }

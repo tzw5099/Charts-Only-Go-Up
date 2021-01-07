@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block charts_quarter_head %}
+{% endblock %}
+{% block quarterly_body %}
+    <div>
+        <p>{{ message }}</p>
+
+        <p>{{ contacts }}</p>
+        <p>My Contacts:</p>
+        <ul>
+            {% for contact in contacts %}
+            <li>{{ contact }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

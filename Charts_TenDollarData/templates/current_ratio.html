@@ -6,7 +6,7 @@
                 // df_json = {{ df_json }};
                 // year_df_json = {{ year_df_json }};
                 // price_json = {{ price_json }};
-                var groupings = ['sum', 'average', 'sum'];
+                var groupings = ['sum', 'average', 'sum'];  // NOTE: FSDF
                 Highcharts.dateFormats = {
                     q: function (timestamp) {
                         var date = new Date(timestamp),
@@ -759,7 +759,7 @@
         </ul>
     </div>
     <script>
-        var selectedTab = 0,
+        var selectedTab = 0, // NOTE: FSDF
             scrollDelay = 20,
             scrollSpeed = 400,
             scrolltopOffset = 0;
@@ -1227,17 +1227,17 @@
             <li>
                 Assets
                 <ol>
-                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/cash-and-cash-equivalents">Cash and Cash Equivalents</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/cash-and-cash-equivalents">Cash And Cash Equivalents</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/short-term-investments">Short Term Investments</a></span></li>
-                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/cash-and-short-term-investments">Cash and Short-Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/cash-and-short-term-investments">Cash And Short-Term Investments</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/net-receivables">Accounts Receivables</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/inventory">Inventory</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-current-assets">Other Current Assets</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-current-assets">Total Current Assets</a></span></li>
-                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/pp-and-e">PP&E</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/pp-and-e">Pp&E</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/goodwill">Goodwill</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/intangible-assets">Intangible Assets</a></span></li>
-                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/goodwill-and-intangible-assets">Goodwill and Intangible Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/goodwill-and-intangible-assets">Goodwill And Intangible Assets</a></span></li>
                 </ol>
                 <ol>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/long-term-investments">Long-Term Investments</a></span></li>
@@ -1245,7 +1245,7 @@
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-non-current-assets">Other Non-Current Assets</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-non-current-assets">Total Non-Current Assets</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-assets">Other Assets</a></span></li>
-                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-assets">Total Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-assets">Total Assets (Liabilities + Stockholder'S Equity)</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/accounts-payables">Accounts Payables</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/short-term-debt">Short-Term Debt</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/tax-payables">Income Tax Payables</a></span></li>
@@ -1272,64 +1272,67 @@
             </li>
             <li>
                 <ol>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/revenue-sales">Net Revenue (Sales)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/cost-of-sales-cost-of-revenue-cost-of-goods-sold">Cost of Revenue (Sales)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/gross-profit-gross-income">Gross Profit Margin</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/gross-income-ratio-gross-profit-ratio">Gross Profit Margin Ratio</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/research-and-development-expenses">Research and Development (R&D)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/general-and-administrative-expenses">General and Administrative (G&A)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/sales-general-and-administrative-expenses">Selling, General and Administrative (Sg&A)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/s-and-m-selling-and-marketing-expenses">Selling & Marketing Expenses (S&M)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/other-expenses">Other Income/Expenses, Net</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/operating-expenses">Total Operating Expenses</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/cost-and-expenses">Cost & Expenses</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/interest-expense">Interest Expense/Income, Net</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/depreciation-and-amortization">Depreciation & Amortization (D&A)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/ebitda">EBITDA</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/ebitda-ratio">EBITDA Margin</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/operating-income">Operating Income</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/operating-income-ratio">Operating Margin</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/other-income-other-expenses-net">Total Other Income/Expenses</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-before-tax-provisions">Pretax Income (Earnings)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-before-tax-ratio">Pretax Income (Earnings) Margin</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-tax-expense-provisions">Provision For Income Taxes</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/net-income">Net Income (Earnings)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/net-income-ratio">Profit Margin</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/eps-earnings-per-share">Earnings Per Share (Eps)</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/eps-earnings-per-share-diluted">Earnings Per Share (Eps) Diluted</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/shares-outstanding">Shares Outstanding</a></span></li>
-                    <li><span class="statements income_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/shares-outstanding-weighted-diluted">Shares Outstanding (Diluted)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/revenue-sales">Net Revenue (Sales)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/cost-of-sales-cost-of-revenue-cost-of-goods-sold">Cost Of Revenue (Sales)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/gross-profit-gross-income">Gross Profit Margin</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/gross-income-ratio-gross-profit-ratio">Gross Profit Margin Ratio</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/research-and-development-expenses">Research And Development (R&D)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/general-and-administrative-expenses">General And Administrative (G&A)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/sales-general-and-administrative-expenses">Selling, General And Administrative (Sg&A)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/s-and-m-selling-and-marketing-expenses">Selling & Marketing Expenses (S&M)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/other-expenses">Other Income/Expenses, Net</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/operating-expenses">Total Operating Expenses</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/cost-and-expenses">Cost & Expenses</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/interest-expense">Interest Expense/Income, Net</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/depreciation-and-amortization">Depreciation & Amortization (D&A)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/ebitda">Ebitda</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/ebitda-ratio">Ebitda Margin</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/operating-income">Operating Income</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/operating-income-ratio">Operating Margin</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/other-income-other-expenses-net">Total Other Income/Expenses</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-before-tax-provisions">Pretax Income (Earnings)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-before-tax-ratio">Pretax Income (Earnings) Margin</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-tax-expense-provisions">Provision For Income Taxes</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/net-income">Net Income (Earnings)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/net-income-ratio">Profit Margin</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/eps-earnings-per-share">Earnings Per Share (Eps)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/eps-earnings-per-share-diluted">Earnings Per Share (Eps) Diluted</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/shares-outstanding">Shares Outstanding</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/shares-outstanding-weighted-diluted">Shares Outstanding (Diluted)</a></span></li>
                 </ol>
             </li>
             <li>
                 <ol>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/stock-based-compensation">Stock-Based Compensation (SBC)</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/change-in-working-capital">Change in Working Capital</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/accounts-receivable">Accounts Receivables</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/inventory">Inventory</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/accounts-payables">Accounts Payables</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-working-capital">Other Working Capital</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-non-cash-items">Other Non-Cash Items</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-cash-provided-by-operating-activities">Net Cash Provided By Operating Activities</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/investments-in-property-plant-and-equipment">Investments in PP&E</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/acquisitions-net">Acquisitions (Net)</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/purchases-of-investments">Purchase of Investments</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/sales-maturities-of-investments">Sales/Maturities of Investments</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-investing-activities">Other Investing Activities</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-cash-used-for-investing-activities">Net Cash used for Investing Activities</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/debt-repayment">Debt Repayment</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/common-stock-issued">Common Stock Issued</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/common-stock-repurchased">Common Stock Repurchased</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/dividends-paid">Dividends Paid</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-financing-activities">Other Financing Activities</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-cash-used-provided-by-financing-activities">Net Cash used Provided By Financing Activities</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/effect-of-forex-changes-on-cash">Effect of Exchange Rate Changes On Cash</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-change-in-cash">Net Change in Cash</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/cash-at-end-of-period">Cash at End of Period</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/cash-at-beginning-of-period">Cash at Beginning of Period</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/operating-cash-flow">Operating Cash Flow</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/capital-expenditure">Capital Expenditure (Capex)</a></span></li>
-                    <li><span class="statements cash_flow_statement tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/free-cash-flow">Free Cash Flow</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-income">Net Income (Earnings)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/depreciation-and-amortization">Depreciation & Amortization (D&A)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/deferred-income-tax">Deferred Income Tax</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/stock-based-compensation">Stock-Based Compensation (Sbc)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/change-in-working-capital">Change In Working Capital</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/accounts-receivable">Accounts Receivables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/inventory">Inventory</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/accounts-payables">Accounts Payables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-working-capital">Other Working Capital</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-non-cash-items">Other Non-Cash Items</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-cash-provided-by-operating-activities">Net Cash Provided By Operating Activities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/investments-in-property-plant-and-equipment">Investments In Pp&E</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/acquisitions-net">Acquisitions (Net)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/purchases-of-investments">Purchase Of Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/sales-maturities-of-investments">Sales/Maturities Of Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-investing-activities">Other Investing Activities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-cash-used-for-investing-activities">Net Cash Used For Investing Activities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/debt-repayment">Debt Repayment</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/common-stock-issued">Common Stock Issued</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/common-stock-repurchased">Common Stock Repurchased</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/dividends-paid">Dividends Paid</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-financing-activities">Other Financing Activities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-cash-used-provided-by-financing-activities">Net Cash Used Provided By Financing Activities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/effect-of-forex-changes-on-cash">Effect Of Exchange Rate Changes On Cash</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-change-in-cash">Net Change In Cash</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/cash-at-end-of-period">Cash At End Of Period</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/cash-at-beginning-of-period">Cash At Beginning Of Period</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/operating-cash-flow">Operating Cash Flow</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/capital-expenditure">Capital Expenditure (Capex)</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/free-cash-flow">Free Cash Flow</a></span></li>
 
                 </ol>
             </li>
