@@ -297,6 +297,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             return df_grouped
     else:
         fin_metric_definition_formula = ""
+        # metric_to_list_variables_map - Note - Oddly, can't import. Otherwise, error. Must be in this file. Maybe look into. Non-priority right now.
         metric_to_list_variables_map = {
                 'net_working_capital_ratio':['working_capital_math','total_assets',],
                 'book_value_per_share':['total_se','shares_outstanding_non',],
@@ -436,8 +437,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         fin_metric_vars = metric_to_list_variables_map[fin_metric_name]
         metric_history = metric_to_formula_map(df,metric_name)
         fin_metric_history = metric_history
-        df["{}".format(fin_metric_name)] = metric_history
-        early_missing_periods = df["{}".format(fin_metric_name)].ne(0).idxmax()
+        df["{}".format(fin_metric_title)] = metric_history # !!!
+        early_missing_periods = df["{}".format(fin_metric_title)].ne(0).idxmax() # !!!
         df = df[0:early_missing_periods+1][::-1]
         # print("!!!,", df['{}'.format(fin_metric_name)])
         def groupby_agg(df):
@@ -468,13 +469,15 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         titles_bs.append('QQ-YYYY')
         var_list.append('Year')
         var_list.append('QQ-YYYY')
+        titles_bs.insert(0,"date")
+        var_list.insert(0,"date")
+        df.columns = var_list
     except Exception as e:
         pass
     try:
-        print("cols",cols)
+        # print("cols",cols)
         print("df", df.head())
-        titles_bs.insert(0,"date")
-        var_list.insert(0,"date")
+
         print(get_linenumber(), fin_metric_name)
         try:
             titles_bs.remove("Quarter & Year")
@@ -483,7 +486,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             pass
         # print("var list", var_list)
         # print("list df", df.head())
-        df.columns = var_list
+
         # year_df.columns = var_list
         for n,x in enumerate(fin_metric_vars):
             # print("fin_metric_vars", fin_metric_vars)
@@ -531,17 +534,17 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
         # year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_title)]].to_numpy()).tolist()
         # year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_title)]/year_df['{}'.format(fin_metric_title)].shift(4)
-        fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
+        # fin_metric_name,fin_metric_title = fin_metric_title,fin_metric_name
         # print("no errors yeet")
     except Exception as e:
         year_df = groupby_agg(df)
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
-        year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_name)]].to_numpy()).tolist()
+        year_df_json = np.nan_to_num(year_df[['year', "{}".format(fin_metric_title)]].to_numpy()).tolist()
         # year_df['Y/Y % Change'] = year_df['{}'.format(fin_metric_name)]/year_df['{}'.format(fin_metric_name)].shift(4)
         print("var excepted",e)
     repeated_list = []
     print(get_linenumber(), fin_metric_name)
-    for a,n in enumerate(year_df['{}'.format(fin_metric_name)]):
+    for a,n in enumerate(year_df['{}'.format(fin_metric_title)]):
         # print("first a", a,n,list(year_df[a:a+1]['year'])[0])
         if len(repeated_list) >= len(df):
             pass
@@ -559,7 +562,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             pass
         else:
             repeated_list.append('')
-    last_row = list(year_df['{}'.format(fin_metric_name)])[-1]
+    last_row = list(year_df['{}'.format(fin_metric_title)])[-1] # !!!
     if last_row in repeated_list:
         pass
     else:
@@ -580,8 +583,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # print("cdf index", year_df.index)
     # print("fin metric name", fin_metric_name)
     # print("fin metric title", fin_metric_title)
-    sorted_metric = year_df["{}".format(fin_metric_name)]#.sort_values()
-    lifetime_sum_all_metric = year_df["{}".format(fin_metric_name)].sum()
+    sorted_metric = year_df["{}".format(fin_metric_title)]#.sort_values()
+    lifetime_sum_all_metric = year_df["{}".format(fin_metric_title)].sum()
     lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)
     quarters = round(len(sorted_metric)/4)
     bottom_25 =  np.percentile(sorted_metric, 25)
@@ -820,7 +823,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     if "{}".format(statement_or_ratio) in fin_statements_list:
         # fin_metric_title,fin_metric_name = fin_metric_name,fin_metric_title
         # df_tall['pct_chg'] = df_tall['{}'.format(fin_metric_title)].pct_change()
-        df_tall['{}'.format(fin_metric_title)] = df_tall['{}'.format(fin_metric_name)]
+        # df_tall['{}'.format(fin_metric_title)] = df_tall['{}'.format(fin_metric_name)] #!!!!
         df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_title)]/df_tall['{}'.format(fin_metric_title)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
         # print(list(df_tall['{}'.format(fin_metric_title)]))
@@ -834,11 +837,11 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         full_path = csv_file.split(' ~ ')
         path = pathlib.PurePath(full_path[0])
     else:
-        df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_name)]/df_tall['{}'.format(fin_metric_name)].shift(-1)
+        df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_title)]/df_tall['{}'.format(fin_metric_title)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
         # df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
         # df_tall['YoY % Change (Stock Price)'] = df_tall['YoY Price % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
-        df_tall["{}".format(fin_metric_title)] = df_tall["{}".format(fin_metric_name)]
+        df_tall["{}".format(fin_metric_title)] = df_tall["{}".format(fin_metric_title)]
         # df_tall['Stock Price'] = df_tall['Price'].apply(lambda x: "${:,}".format(np.round(x,2)))
         df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title), 'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
         # df_html_tall.columns = ["Year", "{}".format(fin_metric_title),"YoY % Change","Price",'YoY Price % Change']
@@ -865,8 +868,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # present_num = magnitude_num(int(latest_metric),currency_symbol)
     present_num = magnitude_num((latest_metric),currency_symbol)
     labels = list(df['date'])
-    df_table_html = df_tall[['{}'.format(fin_metric_name)]].iloc[::-1].transpose().to_html()
-    df['quarter avg'] = df["{}".format(fin_metric_name)].rolling(window=8,min_periods=1).mean()
+    df_table_html = df_tall[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()
+    df['quarter avg'] = df["{}".format(fin_metric_title)].rolling(window=8,min_periods=1).mean()
     # latest_metric = "${}".format(list(df["{}".format(fin_metric_title)])[0])
     last_4_quarters = np.sum(df["quarter avg"][0:4])
     prev_4_quarters = np.sum(df["quarter avg"][5:9])
