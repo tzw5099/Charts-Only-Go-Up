@@ -103,12 +103,6 @@
       "isOrdered": true,
       "folders": {},
       "files": {}
-    },
-    "lambda-package": {
-      "name": "lambda-package",
-      "isOrdered": true,
-      "folders": {},
-      "files": {}
     }
   },
   "files": {}
