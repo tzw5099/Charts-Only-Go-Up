@@ -11,6 +11,8 @@ from config import Config
 from flask import Flask, Response
 # from gevent.pywsgi import WSGIServer
 # from gevent import monkey
+import flask_profiler
+
 
 # monkey.patch_all()
 
@@ -23,6 +25,9 @@ compress = Compress()
 def create_app(config_class=Config):
     app = Flask(__name__, template_folder='templates')
     app.config.from_object(Config)
+
+
+
 
     compress.init_app(app)
 

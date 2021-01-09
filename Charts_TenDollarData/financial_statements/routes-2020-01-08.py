@@ -239,7 +239,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         len_not_na_df = len(df[df['{}'.format(fin_metric_name)]==0]) #df['{}'.format(fin_metric_name)].notna().sum()
         len_not_na_year_df =  len(year_df_file[year_df_file['{}'.format(fin_metric_name)]==0]) #year_df_file['{}'.format(fin_metric_name)].notna().sum()
 
-
         print("len df", len(df), "len year df", len(year_df_file), "len_not_na_df", len_not_na_df, "len_not_na_year_df", len_not_na_year_df)
 
         if len(year_df_file) > len(df):
@@ -260,26 +259,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                     new_df_list.append(new_df)
             df = pd.concat(new_df_list).sort_values(by="date",ascending = True).reset_index()
             df['date'] = df['date'].apply(lambda x: str(x)[0:10])
+            
         df["Year"] = df["date"].apply(lambda x: x[0:4])
         # print("sup1")
         df["QQ-YYYY"] = df["period"]+"-"+df["date"].apply(lambda x: x[0:4])
-        # else:
-            # pass
-
-        # xxx   if len_not_na_year_df + 2 > len(year_df_file):
-        #         smart_data_warning = "*"
-        #         smart_data_disclaimer = Markup('<span class="ruhroh disclaimer_zero">** The data has been enhanced for easier insights</span>')
-
-        if len(df[df['{}'.format(fin_metric_name)]<0]) > len(df[df['{}'.format(fin_metric_name)]>0]):
-            # pass
-            print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
-
-            df['{}'.format(fin_metric_name)] = df['{}'.format(fin_metric_name)]*-1 #.apply(lambda x: -1*x)
-            print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
-        else:
-            pass
-
-
 
         fin_metric_definition_link = "<br>Source: Investopedia"
         fin_metric_definition = list(matching_row['Definition / Formula'])[0]
@@ -289,17 +272,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df = df[0:early_missing_periods+1]
         # print("sup2")
         def groupby_agg(df):
-
-
-            if "{}".format(statement_or_ratio) == "income-statement":
-                df_grouped = df.groupby("Year").sum()
-            elif "{}".format(statement_or_ratio) == "balance-sheet":
-                df_grouped = df.groupby("Year").mean()
-            elif "{}".format(statement_or_ratio) == "cash-flow-statement":
-                df_grouped = df.groupby("Year").sum()
-            else:
-                df_grouped = df.groupby("Year").sum()
-
+            df_grouped = df.groupby("Year").sum()
             return df_grouped
     else:
         fin_metric_definition_formula = ""
@@ -493,95 +466,58 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             print("before", len(df["{}".format(x)]),"filtered now",len(df[(df["{}".format(x)]<=0)]["{}".format(x)]))
             print("other",len(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30)))
             print(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30))
-            # filter_pos_neg = list(fin_statements_matching[fin_statements_matching['Python Variable Name']=="{}".format(x)]['positive_negative'])[0]
-            # if "{}".format(filter_pos_neg) == "positive":
-            #     # print("nan rows", x, list(df))
-            #     # print("df")
-            #     # print(df.head(30))
-            #     # df = df[~df.index.duplicated()]
-            #     # df = df.reset_index(drop=True)
-            #     nan_rows = df[(df["{}".format(x)]<=0)]
-            #     # print("nanny", nan_rows)
-            #     nan_rows['{}'.format(x)] = np.nan
+            filter_pos_neg = list(fin_statements_matching[fin_statements_matching['Python Variable Name']=="{}".format(x)]['positive_negative'])[0]
+            if "{}".format(filter_pos_neg) == "positive":
+                # print("nan rows", x, list(df))
+                # print("df")
+                # print(df.head(30))
+                # df = df[~df.index.duplicated()]
+                # df = df.reset_index(drop=True)
+                nan_rows = df[(df["{}".format(x)]<=0)]
+                # print("nanny", nan_rows)
+                nan_rows['{}'.format(x)] = np.nan
 
 
-            #     df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0))
+                df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0))
 
-            # elif "{}".format(filter_pos_neg) == "neg":
-            #     nan_rows = df[(df['{}'.format(x)]>=0)]
-            #     nan_rows['{}'.format(x)] = np.nan
-            #     # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(0, np.inf))
-            #     df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0))
-            # elif "{}".format(filter_pos_neg) == "zero_or_neg":
-            #     nan_rows = df[(df['{}'.format(x)]>0)]
-            #     nan_rows['{}'.format(x)] = np.nan
-            #     # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(0.00000000001, np.inf))
-            #     df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0))
-            # elif "{}".format(filter_pos_neg) == "both":
-            #     nan_rows = df[(df['{}'.format(x)]==0)]
-            #     nan_rows['{}'.format(x)] = np.nan
-            #     df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(0, 0))
-            # elif "{}".format(filter_pos_neg) == "all":
-            #     # pass
-            #     df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(0, 0))
-            # else:
-            #     pass
+            elif "{}".format(filter_pos_neg) == "neg":
+                nan_rows = df[(df['{}'.format(x)]>=0)]
+                nan_rows['{}'.format(x)] = np.nan
+                df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(0, np.inf))
+            elif "{}".format(filter_pos_neg) == "zero_or_neg":
+                nan_rows = df[(df['{}'.format(x)]>0)]
+                nan_rows['{}'.format(x)] = np.nan
+                df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(0.00000000001, np.inf))
+            elif "{}".format(filter_pos_neg) == "both":
+                nan_rows = df[(df['{}'.format(x)]==0)]
+                nan_rows['{}'.format(x)] = np.nan
+                df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(0, 0))
+            elif "{}".format(filter_pos_neg) == "all":
+                # pass
+                df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(0, 0))
+            else:
+                pass
 
-        # print("yopo", filter_pos_neg)
-        df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
-        print("zqtype",type(list(df['{}'.format(x)].head(1))[0]))
-
-
+        print("yopo", filter_pos_neg)
 
         # print(df["{}".format(x)].head(30))
         # print(df[df!=0].rolling(window=8, center=True, min_periods=1).mean())
         n = 0
-        print("x title list",x, fin_metric_title, list(df))
         # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
-        df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
         while n <= df['{}'.format(x)].isna().sum()+2: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
             # print("shape len", df[df['{}'.format(x)] == 0].shape[0])
-
             print(df['{}'.format(x)].isna().sum())
-            print("asd", df['{}'.format(x)].head(50),2)
-            # df = df[df['{}'.format(x)].notnull()].ewm(alpha = 0.5, ignore_na=True).mean()
-
-
-            # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
-            # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
-            df['{}'.format(x)] = df['{}'.format(x)].rolling(window=8,min_periods=1).mean()
-            # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=2).mean())
+            print("asd", df['{}'.format(x)].head(50))
+            df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=2).mean())
             n+=1
 
-
-        if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
-            print("not number", list(df['{}'.format(x)].head(1))[0])
-            df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
-        else:
-            print("iznum", list(df['{}'.format(x)].head(1))[0])
-        # print("zfheads")
         # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=16,center=True,min_periods=1).mean())
         # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=32,center=True,min_periods=1).mean())
+        # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
 
         # df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x:  int(x))
-        # df = df.fillna(0)
-        # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=4,center=True,min_periods=1).mean())
-        # df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
-        # non_zero_list = list(df['{}'.format(x)])#.remove("nan")
-        # non_zero_list=  [ x for x in non_zero_list if x.isnumeric()  ]
-        # print("nonzerolist",non_zero_min)
-        def closest(lst, K):
-            return lst[min(range(len(lst)), key = lambda i: abs(lst[i]-K))]
-        # df['{}'.format(x)] = df['{}'.format(x)].replace(np.nan, non_zero_min)
-        # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=4).mean()
-        # df['{}'.format(x)]  = df['{}'.format(x)].replace(to_replace=0, method='ffill')
-        # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=2).mean()
-        # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=4).mean()
-        # df['{}'.format(x)] = df['{}'.format(x)].clip_lower(0))
-        print("sicko mode")
+        print("sicko mode", filter_pos_neg)
         print(df["{}".format(x)].head(30))
-        print("tail")
-        print(df["{}".format(x)].tail(30))
 
 
         df.columns = titles_bs
@@ -596,15 +532,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # print("wtf")
         # print(year_df[['year', "{}".format(fin_metric_title)]].head(30))
         df['quarter avg'] = df["{}".format(fin_metric_title)].rolling(window=8,min_periods=1).mean()
-        # last_4_quarters = np.sum(df["quarter avg"][0:4])
-        # prev_4_quarters = np.sum(df["quarter avg"][5:9])
-        if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "cash-flow-statement":
-            last_4_quarters = np.sum(df["quarter avg"][0:4])
-            prev_4_quarters = np.sum(df["quarter avg"][5:9])
-        else:
-            last_4_quarters = np.mean(df["quarter avg"][0:4])
-            prev_4_quarters = np.mean(df["quarter avg"][5:9])
-        # df["quarter avg"] = df["quarter avg"]
+        last_4_quarters = np.sum(df["quarter avg"][0:4])
+        prev_4_quarters = np.sum(df["quarter avg"][5:9])
     except Exception as e:
         print("boohoo",e)
         year_df = groupby_agg(df)
@@ -642,7 +571,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         repeated_list.append(last_row)
     df['repeater'] = repeated_list[::-1]
     year_df_json = np.nan_to_num(df[['date',"{}".format("repeater")]].to_numpy()).tolist()[::-1]
-    print("year_df_json", year_df_json)
     len_year_df = len(year_df)
     df_json_date_year  = np.nan_to_num(year_df['year'].to_numpy()).tolist()
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])
@@ -689,13 +617,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     down_red_prefix = '<span class="down_red">'
     down_red_suffix = ' <i class="material-icons">arrow_downward</i></span>'
     try:
-
-        print("zx2")
         if latest_metric > earliest_metric:
             pct_chg = (latest_metric/earliest_metric)
         else:
             pct_chg = (latest_metric/earliest_metric)
-        print("zx3")
         if (earliest_metric <0 and latest_metric>0) or (earliest_metric>0 and latest_metric<0):
             earliest_latest_warning = "*"
             earliest_latest_disclaimer =  Markup('<span class="ruhroh disclaimer_one">** A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate change, since the bottom/peak contains a negative number.</span>')
@@ -703,11 +628,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             earliest_latest_warning = ""
             earliest_latest_disclaimer = ""
         historical_pct_chg = (round(pct_chg-1, 1))
-        print("zx4")
-        pct_chg = abs(pct_chg)
         annual_pct_chg  = (round(100*(pct_chg**(1/len(sorted_metric))-1),1))
         hist_pct_chg_str = change_markup(historical_pct_chg,"x","arrow","hist_pct_chg_str")
-        print("zx6")
         annual_pct_chg_str = change_markup(annual_pct_chg,"percent","noarrow","annual_percent")
     except Exception as e:
         pct_chg = "-"
@@ -847,9 +769,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df_tall['YoY % Change'] = df_tall['YoY % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
         df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
         print("df_html_tall", df_html_tall.head(30))
-        # df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)].fillna(0)
-        df_html_tall = df_html_tall.fillna(0)
-        print(df_html_tall.head(30))
         if df_html_tall['{}'.format(fin_metric_title)].max()>abs(1000000):
             df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)]/1000000
             if_in_mil = "in {} million".format(currency_symbol)
@@ -922,8 +841,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     year_df_json = year_df_json[0:len(year_df_json)-position_last_value-1]
     year_df_json.append([last_year_timestamp,last_4_quarters])
     year_df_json = str(year_df_json).replace("''","null")
-    year_df_json = str(year_df_json).replace("nan","null")
-    df_json = str(df_json).replace("nan","null")
     try:
         prev_price = price_json[-5][1]
     except:
@@ -982,32 +899,22 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             return n / d if d else 0
         else:
             return 0
-    def type_num_check(test_string):
-        if isinstance(test_string, (int, float, complex)):
-            return test_string
-        else:
-            return 0
-    pct_chg_original = pct_chg
-    pct_chg = type_num_check(pct_chg)
 
     price_metric_rate_change = if_error_value(weird_division((-1+((last_price - first_price)/first_price)),historical_pct_chg),0,pct_chg)
-    # all_time_metric_chg = if_error_value(change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg"),0,pct_chg)
-    print("pct_chg", pct_chg)
-    # all_time_metric_chg = (change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg"))
-    all_time_metric_chg = if_error_value(change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg"),0,pct_chg_original)
-    historical_pct_chg = if_error_value((round(pct_chg-1, 1)),0,pct_chg_original)
-    annual_pct_chg  = if_error_value((round(100*(pct_chg**(1/len(sorted_metric))-1),1)),0,pct_chg_original)
-    hist_pct_chg_str = if_error_value(change_markup(historical_pct_chg,"x","arrow","hist_pct_chg_str"),0,pct_chg_original)
-    annual_pct_chg_str = if_error_value(change_markup(annual_pct_chg,"percent","noarrow","annual_percent"),0,pct_chg_original)
+    all_time_metric_chg = if_error_value(change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg"),0,pct_chg)
+    historical_pct_chg = if_error_value((round(pct_chg-1, 1)),0,pct_chg)
+    annual_pct_chg  = if_error_value((round(100*(pct_chg**(1/len(sorted_metric))-1),1)),0,pct_chg)
+    hist_pct_chg_str = if_error_value(change_markup(historical_pct_chg,"x","arrow","hist_pct_chg_str"),0,pct_chg)
+    annual_pct_chg_str = if_error_value(change_markup(annual_pct_chg,"percent","noarrow","annual_percent"),0,pct_chg)
 
-    annual_pct_chg_10yrs_in_pct = if_error_value((100*(pct_chg**(1/len(sorted_metric)))**10)-1,0,pct_chg_original)
-    annual_pct_chg_10yrs_in_abs = if_error_value(annual_pct_chg_10yrs_in_pct * latest_metric,0,pct_chg_original)
-    annual_pct_chg_10yrs_in_stock = if_error_value(annual_pct_chg_10yrs_in_pct * last_price,0,pct_chg_original)
-    growth_10_years = if_error_value(((annual_pct_chg+100)/100)**10,0,pct_chg_original)
-    growth_10_years_str = if_error_value(change_markup(growth_10_years*100,"percent","noarrow","growth_10_years_str"),0,pct_chg_original)
-    stock_price_10_years = if_error_value(np.round(last_price*growth_10_years,2),0,pct_chg_original)
-    hist_pct_chg_str_no_arrow = if_error_value(change_markup(historical_pct_chg,"x","noarrow","hist_pct_chg_str_no_arrow"),0,pct_chg_original)
-    last_pct_change_str  = if_error_value(change_markup(last_pct_change,"x","arrow","last_pct_change"),0,pct_chg_original)
+    annual_pct_chg_10yrs_in_pct = if_error_value((100*(pct_chg**(1/len(sorted_metric)))**10)-1,0,pct_chg)
+    annual_pct_chg_10yrs_in_abs = if_error_value(annual_pct_chg_10yrs_in_pct * latest_metric,0,pct_chg)
+    annual_pct_chg_10yrs_in_stock = if_error_value(annual_pct_chg_10yrs_in_pct * last_price,0,pct_chg)
+    growth_10_years = if_error_value(((annual_pct_chg+100)/100)**10,0,pct_chg)
+    growth_10_years_str = if_error_value(change_markup(growth_10_years*100,"percent","noarrow","growth_10_years_str"),0,pct_chg)
+    stock_price_10_years = if_error_value(np.round(last_price*growth_10_years,2),0,pct_chg)
+    hist_pct_chg_str_no_arrow = if_error_value(change_markup(historical_pct_chg,"x","noarrow","hist_pct_chg_str_no_arrow"),0,pct_chg)
+    last_pct_change_str  = if_error_value(change_markup(last_pct_change,"x","arrow","last_pct_change"),0,pct_chg)
     # if isinstance(pct_chg, (int, float, complex)):
     #     price_metric_rate_change = (-1+((last_price - first_price)/first_price))/historical_pct_chg
     #     all_time_metric_chg =change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg")

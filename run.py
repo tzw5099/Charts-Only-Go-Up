@@ -8,14 +8,15 @@ from Charts_TenDollarData import create_app
 import sentry_sdk
 from flask import Flask
 from sentry_sdk.integrations.flask import FlaskIntegration
-
+from werkzeug.contrib.profiler import ProfilerMiddleware
 sentry_sdk.init(
     dsn="https://ef2188dd9d284bb295241f1e22ad9b2d@o497156.ingest.sentry.io/5582464",
     integrations=[FlaskIntegration()],
     traces_sample_rate=1.0
 )
-
 app = create_app()
+# app.wsgi_app = ProfilerMiddleware(app.wsgi_app, restrictions=[30])
+
 # flask sometimes gets stuck
 # https://stackoverflow.com/questions/13333684/flask-app-occasionally-hanging
 # https://stackoverflow.com/questions/11150343/slow-requests-on-local-flask-server
