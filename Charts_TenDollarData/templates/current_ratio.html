@@ -92,7 +92,7 @@
                     },
                     mapNavigation: {
                         enabled: true,
-                        enableButtons: false
+                        enableButtons: true,//false
                     },
                     responsive: {
                         rules: [
@@ -466,7 +466,7 @@
                                     zoom_values_fy_metric = $(this.axis.tickPositions)
                                     var old = this.axis.defaultLabelFormatter.call(this)
                                     metric_percent = (Math.round(100 * this.value / zoom_values_fy_metric[0]))-100;
-                                    metric_percent = metric_percent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",").replace("","").replace("NaN","")
+                                    metric_percent = metric_percent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",").replace("-","").replace("NaN","")
                                     if (this.value >= 1000000000 || this.value <= -1000000000) {
 
                                         billion_rounded = Math.round((this.value / 1000000000) * 1) / 1;
@@ -474,10 +474,15 @@
                                     } else if (this.value >= 1000000 || this.value <= -1000000) {
                                         million_rounded = Math.round((this.value / 1000000) * 1) / 1;
                                         return('<b>  {{ currency_symbol }}' + million_rounded) + 'M</b>' + '<br>' + metric_percent + '%';
-                                    } else if (this.value >= 10000 ||  this.value <= -10000) {
+                                    } else if (this.value >= 1000 ||  this.value <= -1000) {
                                         thousand_rounded = Math.round((this.value / 1000) * 1) / 1;
                                         return('<b>  {{ currency_symbol }}' + this.value / 1000) + 'K</b>' + '<br>' + metric_percent + '%';
                                     }
+
+                                    // else if (this.value <= 10000 &&  this.value => -10000) {
+                                    //     million_rounded = Math.round((this.value / 1) * 100) / 100;
+                                    //     return('<b>' + million_rounded) + '</b>' + '<br>' + metric_percent + '%';
+                                    // }
                                     else { // return '<b>$' + this.y + '</b>';
                                         million_rounded = Math.round((this.value / 1) * 100) / 100;
                                         return('<b>' + million_rounded) + '</b>' + '<br>' + metric_percent + '%';
@@ -527,7 +532,7 @@
                             color: "#19a419", //"#177737",
                             marker: {
                                 // symbol: 'triangle',
-                                radius: 5,
+                                radius: 1,
                                 states: {
                                     hover: {
                                         enabled: true,

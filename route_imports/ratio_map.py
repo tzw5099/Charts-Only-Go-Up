@@ -281,11 +281,11 @@ metric_to_url_map = {
 
 url_to_metric_map = {
     'net-working-capital-ratio': "net_working_capital_ratio",
+    'roa-cash-flow': "roa_cash_flow",
     'book-value-per-share': "book_value_per_share",
     'total-equity-to-total-assets': "total_equity_to_total_assets",
     'operating-cost-ratio': "operating_cost_ratio",
     'perc​entage-of-debt-to-asset-formula': "perc​entage_of_debt_to_asset_formula",
-
     'total-liabilities-pct-of-total-assets': "total_liabilities_pct_of_total_assets",
     'debt-to-assets-ratio': "debt_to_assets_ratio",
     'debt-to-equity-ratio': "debt_to_equity_ratio",
@@ -325,7 +325,6 @@ url_to_metric_map = {
     'operating-cash-flow-to-debt': "operating_cash_flow_to_debt",
     'inventory-ratio': "inventory_ratio",
     'return-on-investment': "return_on_investment",
-
     'pretax-margin': "pretax_margin",
     'income-to-net-worth-ratio': "income_to_net_worth_ratio",
     'return-on-assets-roa': "return_on_assets_roa",
@@ -688,11 +687,13 @@ url_to_name_map = {
 
 def metric_to_formula_map(df,metric):
 	metric_to_formula_map = {
+        'roa_cash_flow':df['operating_cash_flow']/df['total_assets'],
 	    'net_working_capital_ratio':df['working_capital_math']/df['total_assets'],
 	    'book_value_per_share':df['total_se']/df['shares_outstanding_non'],
 	    'total_equity_to_total_assets':df['total_se']/df['total_assets'],
 	    'operating_cost_ratio':df['total_opex'] - df['d_n_a']/df['net_revenue'],
 	    'perc​entage_of_debt_to_asset_formula':df['total_non_current_liabilities']/df['total_assets'],
+
 
 	    'total_liabilities_pct_of_total_assets':df['total_liabilities']/df['total_assets'],
 	    'debt_to_assets_ratio':df['total_debt']/df['total_assets'],
@@ -775,6 +776,7 @@ def metric_to_formula_map(df,metric):
 
 url_to_var_name_map = {
             'net-working-capital-ratio': "net_working_capital_ratio",
+            'roa-cash-flow': "roa_cash_flow",
             'book-value-per-share': "book_value_per_share",
             'total-equity-to-total-assets': "total_equity_to_total_assets",
             'operating-cost-ratio': "operating_cost_ratio",
