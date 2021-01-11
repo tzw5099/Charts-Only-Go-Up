@@ -262,7 +262,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         if len(df[df['{}'.format(fin_metric_name)]<0]) > len(df[df['{}'.format(fin_metric_name)]>0]):
             # pass
             print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
-            df['{}'.format(fin_metric_name)] = df['{}'.format(fin_metric_name)]*-1 #.apply(lambda x: -1*x)
+            # df['{}'.format(fin_metric_name)] = df['{}'.format(fin_metric_name)]*-1 #.apply(lambda x: -1*x)
             print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
         else:
             pass
@@ -427,6 +427,54 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         #     print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
         # else:
         #     pass
+        df = df.interpolate()
+        for x in fin_metric_vars_old:
+
+            print("x title list",x, fin_metric_title, list(df))
+            # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+            df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+            df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+            # if len(df[df['{}'.format(x)]<0]) > len(df[df['{}'.format(x)]>0]):
+            #     df['{}'.format(x)] = df['{}'.format(x)]*-1 #.apply(lambda x: -1*x)
+            # else:
+            #     pass
+            n = 0
+            # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
+
+            # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+            df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+            df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+            print("qaz ", df['{}'.format(x)].head(50),2)
+            len_rows_ratios = df['{}'.format(x)].isna().sum()
+            len_duplicates = len(df) - df['{}'.format(x)].nunique()
+
+            print(len(df),"len_duplicates", len_duplicates)
+            while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
+            #     # print("shape len", df[df['{}'.format(x)] == 0].shape[0])
+                df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+
+                df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+            #     print(df['{}'.format(x)].isna().sum())
+            #     # print("asd", df['{}'.format(x)].head(50),2)
+            #     # df = df[df['{}'.format(x)].notnull()].ewm(alpha = 0.5, ignore_na=True).mean()
+            #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+            #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+            #     # df['{}'.format(x)] = df['{}'.format(x)].rolling(window=8,min_periods=1).mean()
+            #     # df['{}'.format(x)] = df['{}'.format(x)].isna().ewm(alpha = 0.5).mean()
+            #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+            #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+            #     # df['{}'.format(x)] = df['{}'.format(x)].loc[df['{}'.format(x)].shift(-1) != df['{}'.format(x)]]
+            #     n+=1
+
+
+            print("listenman", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
+            print("listendudeagain", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
+            # if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
+            #     print("not number", list(df['{}'.format(x)].head(1))[0])
+            #     df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
+            # else:
+            #     print("iznum", list(df['{}'.format(x)].head(1))[0])
+        # df.to_csv("letssee.csv")
 
 
         metric_history = metric_to_formula_map(df,metric_name)
@@ -483,7 +531,9 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             # var_list.remove("Quarter & Year")
         except:
             pass
+        # if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "cash-flow-statement":
         for n,x in enumerate(fin_metric_vars):
+
             print("fin_metric_vars", fin_metric_vars)
             print("nx",n,x)
             print("positive_negative",list(df))
@@ -501,16 +551,18 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
         df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
         df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
-        print("qaz", df['{}'.format(x)].head(50),2)
-        while n <= df['{}'.format(x)].isna().sum()+2: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
-            # print("shape len", df[df['{}'.format(x)] == 0].shape[0])
-            print(df['{}'.format(x)].isna().sum())
-            # print("asd", df['{}'.format(x)].head(50),2)
-            # df = df[df['{}'.format(x)].notnull()].ewm(alpha = 0.5, ignore_na=True).mean()
-            # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
-            # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
-            df['{}'.format(x)] = df['{}'.format(x)].rolling(window=8,min_periods=1).mean()
-            # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=2).mean())
+        print("qxaz", fin_statement_dir, df['{}'.format(x)].head(50),2)
+        len_rows_ratios = df['{}'.format(x)].isna().sum()
+        df = df.interpolate()
+        while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
+        #     # print("shape len", df[df['{}'.format(x)] == 0].shape[0])
+        #     print(df['{}'.format(x)].isna().sum())
+        #     # print("asd", df['{}'.format(x)].head(50),2)
+        #     # df = df[df['{}'.format(x)].notnull()].ewm(alpha = 0.5, ignore_na=True).mean()
+        #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+        #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+        #     df['{}'.format(x)] = df['{}'.format(x)].rolling(window=8,min_periods=1).mean()
+            df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=2).mean())
             n+=1
         if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
             print("not number", list(df['{}'.format(x)].head(1))[0])
@@ -856,7 +908,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             if_in_mil = ""
             df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)].apply(lambda x: "{:,}".format(np.round(x,2)))
             df_tall["{}".format(fin_metric_title)] = df_tall["{}".format(fin_metric_title)].apply(lambda x: np.round(x,2))
-        df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title), 'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
+        # df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title), 'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
         df_html_tall = df_html_tall.to_html(index=False)
     df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="yoy_chrono_table" id="df_myTable" border="1" class="dataframe">')
     df_html_tall = df_html_tall.replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
