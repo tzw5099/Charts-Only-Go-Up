@@ -754,7 +754,7 @@ def metric_to_formula_map(df,metric):
 	    'ebitda_per_share':df['ebitda_non']/df['shares_outstanding_non'],
 	    'ebitda_interest_coverage':df['ebitda_non']/df['interest_expense'],
 	    'ebitda_margin':df['ebitda_non']/df['net_revenue'],
-	    'net_margin_profit_margin':df['ebitda_margin']/df['net_revenue'],
+	    'net_margin_profit_margin':df['net_income']/df['net_revenue'],
 	    'return_on_capital_employed_ratio':df['ebit_math']/df['total_assets'] - df['total_current_liabilities'],
 	    'debt_service_ratio':df['ebit_math']/df['interest_expense'],
 	    'return_on_capital':df['ebit_math']/df['total_assets'],

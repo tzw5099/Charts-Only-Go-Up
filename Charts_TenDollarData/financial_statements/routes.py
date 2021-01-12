@@ -276,6 +276,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                 df_grouped = df.groupby("Year").sum()
             elif "{}".format(statement_or_ratio) == "balance-sheet":
                 df_grouped = df.groupby("Year").mean()
+
             elif "{}".format(statement_or_ratio) == "cash-flow-statement":
                 df_grouped = df.groupby("Year").sum()
             else:
@@ -348,7 +349,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                 'ebitda_per_share':['ebitda_non','shares_outstanding_non',],
                 'ebitda_interest_coverage':['ebitda_non','interest_expense',],
                 'ebitda_margin':['ebitda_non','net_revenue',],
-                'net_margin_profit_margin':['ebitda_margin','net_revenue',],
+                'net_margin_profit_margin':['net_income','net_revenue',],
                 'return_on_capital_employed_ratio':['ebit_math','total_assets','total_current_liabilities',],
                 'debt_service_ratio':['ebit_math','interest_expense',],
                 'return_on_capital':['ebit_math','total_assets',],
@@ -445,25 +446,26 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
             df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
             print("qaz ", df['{}'.format(x)].head(50),2)
-            len_rows_ratios = df['{}'.format(x)].isna().sum()
-            len_duplicates = len(df) - df['{}'.format(x)].nunique()
+            df = df.interpolate()
+            # len_rows_ratios = df['{}'.format(x)].isna().sum()
+            # len_duplicates = len(df) - df['{}'.format(x)].nunique()
 
-            print(len(df),"len_duplicates", len_duplicates)
-            while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
-            #     # print("shape len", df[df['{}'.format(x)] == 0].shape[0])
-                df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+            # print(len(df),"len_duplicates", len_duplicates)
+            # while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
+            # #     # print("shape len", df[df['{}'.format(x)] == 0].shape[0])
+            #     df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
 
-                df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
-            #     print(df['{}'.format(x)].isna().sum())
-            #     # print("asd", df['{}'.format(x)].head(50),2)
-            #     # df = df[df['{}'.format(x)].notnull()].ewm(alpha = 0.5, ignore_na=True).mean()
-            #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
-            #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
-            #     # df['{}'.format(x)] = df['{}'.format(x)].rolling(window=8,min_periods=1).mean()
-            #     # df['{}'.format(x)] = df['{}'.format(x)].isna().ewm(alpha = 0.5).mean()
+            #     df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+            # #     print(df['{}'.format(x)].isna().sum())
+            # #     # print("asd", df['{}'.format(x)].head(50),2)
+            # #     # df = df[df['{}'.format(x)].notnull()].ewm(alpha = 0.5, ignore_na=True).mean()
+            # #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+            # #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+            # #     # df['{}'.format(x)] = df['{}'.format(x)].rolling(window=8,min_periods=1).mean()
+            # #     # df['{}'.format(x)] = df['{}'.format(x)].isna().ewm(alpha = 0.5).mean()
+            # #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
             #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
-            #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
-            #     # df['{}'.format(x)] = df['{}'.format(x)].loc[df['{}'.format(x)].shift(-1) != df['{}'.format(x)]]
+            # #     # df['{}'.format(x)] = df['{}'.format(x)].loc[df['{}'.format(x)].shift(-1) != df['{}'.format(x)]]
             #     n+=1
 
 
@@ -542,7 +544,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             print("other",len(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30)))
             print(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30))
         # print("yopo", filter_pos_neg)
-        df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
+        # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
+        df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x: abs(x))
         print("zqtype",type(list(df['{}'.format(x)].head(1))[0]))
         # print(df["{}".format(x)].head(30))
         # print(df[df!=0].rolling(window=8, center=True, min_periods=1).mean())
@@ -569,6 +572,12 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
         else:
             print("iznum", list(df['{}'.format(x)].head(1))[0])
+        print("len_row_ratios",len_rows_ratios, len(df))
+        if len(df) == len_rows_ratios:
+            df['{}'.format(x)] = df['{}'.format(x)].replace(np.nan, 0)
+            earliest_latest_warning = ""
+            earliest_latest_disclaimer = ""
+            # return render_template('404.html'), 404
         print("dxzhead", x, fin_metric_title, list(df['{}'.format(x)]))
         # print("dxghead",list(df['{}'.format(fin_metric_title)]))
         # df['{}'.format(fin_metric_title)] = df['{}'.format(x)]
@@ -881,21 +890,32 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df_html_tall = df_html_tall.to_html(index=False)
         full_path = csv_file.split(' ~ ')
         path = pathlib.PurePath(full_path[0])
+        df_html_formula = ""
     else:
         df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_title)]/df_tall['{}'.format(fin_metric_title)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
 
+        original_list = ["Year",'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']
         new_list = ["Year",'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']
+        # fin_metric_vars_old = ""
         for x in fin_metric_vars_old:
-            print("fin_metric_vars_old", fin_metric_vars_old)
+            print("xfin_metric_vars_old", fin_metric_vars_old)
+
+            # df_tall[x] = df_tall[x].apply(lambda x: x/1000000)
+            # original_list.append(x)
             new_list.append(x)
         # flat_list = [item for sublist in new_list for item in sublist]
 
         # df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
         print("jq", list(df_tall))
         print("nq", new_list)
-        df_html_tall = df_tall[new_list]
-
+        df_html_tall = df_tall[original_list]
+        df_html_formula = df_tall[new_list].to_html(index=False).replace('border="1" class="dataframe">','class="yoy_chrono_table" id="df_myTable" border="1" class="dataframe">').replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
+        df_html_formula = df_html_formula.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
+        df_html_formula = df_html_formula.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
+        df_html_formula = df_html_formula.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
+        for x in fin_metric_vars_old:
+            df_html_formula = df_html_formula.replace(x,x.replace("_"," "))
         print("df_html_tall", df_html_tall.head(30))
         # df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)].fillna(0)
         df_html_tall = df_html_tall.fillna(0)
@@ -910,11 +930,13 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             df_tall["{}".format(fin_metric_title)] = df_tall["{}".format(fin_metric_title)].apply(lambda x: np.round(x,2))
         # df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title), 'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
         df_html_tall = df_html_tall.to_html(index=False)
+
     df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="yoy_chrono_table" id="df_myTable" border="1" class="dataframe">')
     df_html_tall = df_html_tall.replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
-    df_html_tall = df_html_tall.replace("{}".format("-inf%"),"-")
-    df_html_tall = df_html_tall.replace("{}".format("inf%"),"-")
-    df_html_tall = df_html_tall.replace("{}".format("["),"")
+    df_html_tall = df_html_tall.replace("-inf%","-")
+    df_html_tall = df_html_tall.replace("inf%","-")
+    df_html_tall = df_html_tall.replace("[","")
+    # df_html_tall = df_html_tall.replace("_"," ")
     # df_html_tall = df_html_tall.replace('.00','')
     # df_html_tall = df_html_tall.replace('.0','')
     df_html_tall = df_html_tall.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
@@ -1109,6 +1131,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     return render_template('current_ratio.html', \
                             earliest_latest_warning = earliest_latest_warning,\
                             earliest_latest_disclaimer = earliest_latest_disclaimer,\
+                            df_html_formula = [df_html_formula],\
                             url_symbol = url_symbol,\
                             min_max_warning = min_max_warning,\
                             min_max_disclaimer = min_max_disclaimer,\
