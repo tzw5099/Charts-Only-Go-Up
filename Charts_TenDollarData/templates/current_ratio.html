@@ -1130,7 +1130,7 @@
                     {{ company_sector }}
                     Sector (1000+ stocks)
                     </span>
-                <a href="https://tendollardata.com/financial-statements">
+                <a href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">
                 <div class="button_div">
                     <button class="btn btn-primary button_buy" type="button">
                         Buy for $10
@@ -1168,7 +1168,7 @@
             <li class="hr_two"><a href="#/" class="tabs_title_links"><div class="innerhref">About the Company</div></a></li>
             <li class="hr_three"><a href="#/" class="tabs_title_links"><div class="innerhref">Definition / Formula</div></a></li>
             <li class="hr_four"><a href="#/" class="tabs_title_links"><div class="innerhref">
-                Our ($10) Data
+                Large Datasets
                 <!-- Our Data (free) -->
                 <!-- and Datasets ($10) -->
             </div></a></li>
@@ -1220,7 +1220,10 @@
                 <br>
                 <strong>Stock Exchange:</strong> {{company_exchange}}
                 <br>
-                {{company_description}}
+                <ul>
+                {{html_sentence_list}}
+                </ul>
+                <!-- {{company_description}} -->
         </span>
             </li>
             <li>{{fin_metric_definition_formula}}
@@ -1231,7 +1234,10 @@
                     {{ df_html_formula[0]|safe }}
                     {% endfor %}
             </li>
-            <li>Panel 4</li>
+            <li>
+
+
+            </li>
         </ul>
     </div>
     <br>

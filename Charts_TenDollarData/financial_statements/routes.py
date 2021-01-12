@@ -232,7 +232,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         fin_metric_definition = list(matching_row['Definition / Formula'])[0]
         len_not_na_df = len(df[df['{}'.format(fin_metric_name)]==0]) #df['{}'.format(fin_metric_name)].notna().sum()
         len_not_na_year_df =  len(year_df_file[year_df_file['{}'.format(fin_metric_name)]==0]) #year_df_file['{}'.format(fin_metric_name)].notna().sum()
-        print("len df", len(df), "len year df", len(year_df_file), "len_not_na_df", len_not_na_df, "len_not_na_year_df", len_not_na_year_df)
+        # print("len df", len(df), "len year df", len(year_df_file), "len_not_na_df", len_not_na_df, "len_not_na_year_df", len_not_na_year_df)
         if len(year_df_file)*3 > len(df):
             df = year_df_file
             all_titles = list(df)
@@ -260,10 +260,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         #         smart_data_warning = "*"
         #         smart_data_disclaimer = Markup('<span class="ruhroh disclaimer_zero">** The data has been enhanced for easier insights</span>')
         if len(df[df['{}'.format(fin_metric_name)]<0]) > len(df[df['{}'.format(fin_metric_name)]>0]):
-            # pass
-            print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
+            pass
+            # print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
             # df['{}'.format(fin_metric_name)] = df['{}'.format(fin_metric_name)]*-1 #.apply(lambda x: -1*x)
-            print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
+            # print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
         else:
             pass
         fin_metric_equation = ""
@@ -431,7 +431,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df = df.interpolate()
         for x in fin_metric_vars_old:
 
-            print("x title list",x, fin_metric_title, list(df))
+            # print("x title list",x, fin_metric_title, list(df))
             # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
             df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
             df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
@@ -445,7 +445,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
             df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
             df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
-            print("qaz ", df['{}'.format(x)].head(50),2)
+            # print("qaz ", df['{}'.format(x)].head(50),2)
             df = df.interpolate()
             # len_rows_ratios = df['{}'.format(x)].isna().sum()
             # len_duplicates = len(df) - df['{}'.format(x)].nunique()
@@ -469,8 +469,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             #     n+=1
 
 
-            print("listenman", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
-            print("listendudeagain", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
+            # print("listenman", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
+            # print("listendudeagain", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
             # if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
             #     print("not number", list(df['{}'.format(x)].head(1))[0])
             #     df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
@@ -534,27 +534,27 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         except:
             pass
         # if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "cash-flow-statement":
-        for n,x in enumerate(fin_metric_vars):
+        # for n,x in enumerate(fin_metric_vars):
 
-            print("fin_metric_vars", fin_metric_vars)
-            print("nx",n,x)
-            print("positive_negative",list(df))
-            print(df["{}".format(x)].head(30))
-            print("before", len(df["{}".format(x)]),"filtered now",len(df[(df["{}".format(x)]<=0)]["{}".format(x)]))
-            print("other",len(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30)))
-            print(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30))
+            # print("fin_metric_vars", fin_metric_vars)
+            # print("nx",n,x)
+            # print("positive_negative",list(df))
+            # print(df["{}".format(x)].head(30))
+            # print("before", len(df["{}".format(x)]),"filtered now",len(df[(df["{}".format(x)]<=0)]["{}".format(x)]))
+            # print("other",len(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30)))
+            # print(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30))
         # print("yopo", filter_pos_neg)
         # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
         df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x: abs(x))
-        print("zqtype",type(list(df['{}'.format(x)].head(1))[0]))
+        # print("zqtype",type(list(df['{}'.format(x)].head(1))[0]))
         # print(df["{}".format(x)].head(30))
         # print(df[df!=0].rolling(window=8, center=True, min_periods=1).mean())
         n = 0
-        print("x title list",x, fin_metric_title, list(df))
+        # print("x title list",x, fin_metric_title, list(df))
         # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
         df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
         df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
-        print("qxaz", fin_statement_dir, df['{}'.format(x)].head(50),2)
+        # print("qxaz", fin_statement_dir, df['{}'.format(x)].head(50),2)
         len_rows_ratios = df['{}'.format(x)].isna().sum()
         df = df.interpolate()
         while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
@@ -568,22 +568,23 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=2).mean())
             n+=1
         if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
-            print("not number", list(df['{}'.format(x)].head(1))[0])
+            # print("not number", list(df['{}'.format(x)].head(1))[0])
             df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
         else:
-            print("iznum", list(df['{}'.format(x)].head(1))[0])
-        print("len_row_ratios",len_rows_ratios, len(df))
+            pass
+            # print("iznum", list(df['{}'.format(x)].head(1))[0])
+        # print("len_row_ratios",len_rows_ratios, len(df))
         if len(df) == len_rows_ratios:
             df['{}'.format(x)] = df['{}'.format(x)].replace(np.nan, 0)
             earliest_latest_warning = ""
             earliest_latest_disclaimer = ""
             # return render_template('404.html'), 404
-        print("dxzhead", x, fin_metric_title, list(df['{}'.format(x)]))
+        # print("dxzhead", x, fin_metric_title, list(df['{}'.format(x)]))
         # print("dxghead",list(df['{}'.format(fin_metric_title)]))
         # df['{}'.format(fin_metric_title)] = df['{}'.format(x)]
         # print("zfheads")
-        print("wsx", df['{}'.format(x)].head(50),2)
-        print("final total len entire df", len(df), x, "len na", df['{}'.format(x)].isna().sum())
+        # print("wsx", df['{}'.format(x)].head(50),2)
+        # print("final total len entire df", len(df), x, "len na", df['{}'.format(x)].isna().sum())
         # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=16,center=True,min_periods=1).mean())
         # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=32,center=True,min_periods=1).mean())
         # df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x:  int(x))
@@ -601,10 +602,10 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=2).mean()
         # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=4).mean()
         # df['{}'.format(x)] = df['{}'.format(x)].clip_lower(0))
-        print("sicko mode")
-        print(df["{}".format(x)].head(30))
-        print("tail")
-        print(df["{}".format(x)].tail(30))
+        # print("sicko mode")
+        # print(df["{}".format(x)].head(30))
+        # print("tail")
+        # print(df["{}".format(x)].tail(30))
         df.columns = titles_bs
         df = df[cols]
         # print("yo")
@@ -627,7 +628,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             prev_4_quarters = np.mean(df["quarter avg"][5:9])
         # df["quarter avg"] = df["quarter avg"]
     except Exception as e:
-        print("boohoo",e)
+        # print("boohoo",e)
         year_df = groupby_agg(df)
 
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
@@ -639,8 +640,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         last_4_quarters = np.mean(df["quarter avg"][0:4])
         prev_4_quarters = np.mean(df["quarter avg"][5:9])
     repeated_list = []
-    print("awfyes",year_df["{}".format(fin_metric_title)])
-    print("awfdf",df["{}".format(fin_metric_title)])
+    # print("awfyes",year_df["{}".format(fin_metric_title)])
+    # print("awfdf",df["{}".format(fin_metric_title)])
     df.to_csv("awfdf.csv")
     for a,n in enumerate(year_df['{}'.format(fin_metric_title)]):
         if len(repeated_list) >= len(df):
@@ -667,13 +668,13 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         repeated_list.append(last_row)
     df['repeater'] = repeated_list[::-1]
     year_df_json = np.nan_to_num(df[['date',"{}".format("repeater")]].to_numpy()).tolist()[::-1]
-    print("year_df_json", year_df_json)
+    # print("year_df_json", year_df_json)
     len_year_df = len(year_df)
     df_json_date_year  = np.nan_to_num(year_df['year'].to_numpy()).tolist()
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])
     df.index = df['Quarter & Year']
     sorted_metric = year_df["{}".format(fin_metric_title)]
-    print("sorted_metricz", sorted_metric)
+    # print("sorted_metricz", sorted_metric)
     lifetime_sum_all_metric = year_df["{}".format(fin_metric_title)].sum()
     lifetime_sum_all_metric = magnitude_num(lifetime_sum_all_metric,currency_symbol)
     quarters = round(len(sorted_metric)/4)
@@ -691,7 +692,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     mean_str = magnitude_num(mean, currency_symbol)
     max_str = magnitude_num(max_metric, currency_symbol)
     min_str = magnitude_num(min_metric, currency_symbol)
-    print("min_metric", min_metric, "max_metric",max_metric)
+    # print("min_metric", min_metric, "max_metric",max_metric)
     if min_metric <0 and max_metric>0:
         min_max_warning = "*"
         min_max_disclaimer = Markup('<span class="ruhroh disclaimer_one">* A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate changes that involve negative numbers.</span>')
@@ -712,15 +713,15 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     up_green_suffix = ' <i class="material-icons">arrow_upward</i></span>'
     down_red_prefix = '<span class="down_red">'
     down_red_suffix = ' <i class="material-icons">arrow_downward</i></span>'
-    print("max_metricz", max_metric)
-    print("min_metricz", min_metric)
+    # print("max_metricz", max_metric)
+    # print("min_metricz", min_metric)
     try:
-        print("zx2")
+        # print("zx2")
         if latest_metric > earliest_metric:
             pct_chg = (latest_metric/earliest_metric)
         else:
             pct_chg = (latest_metric/earliest_metric)
-        print("zx3")
+        # print("zx3")
         if (earliest_metric <0 and latest_metric>0) or (earliest_metric>0 and latest_metric<0):
             earliest_latest_warning = "*"
             earliest_latest_disclaimer =  Markup('<span class="ruhroh disclaimer_one">** A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate change, since the bottom/peak contains a negative number.</span>')
@@ -728,11 +729,11 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             earliest_latest_warning = ""
             earliest_latest_disclaimer = ""
         historical_pct_chg = (round(pct_chg-1, 1))
-        print("zx4")
+        # print("zx4")
         pct_chg = abs(pct_chg)
         annual_pct_chg  = (round(100*(pct_chg**(1/len(sorted_metric))-1),1))
         hist_pct_chg_str = change_markup(historical_pct_chg,"x","arrow","hist_pct_chg_str")
-        print("zx6")
+        # print("zx6")
         annual_pct_chg_str = change_markup(annual_pct_chg,"percent","noarrow","annual_percent")
     except Exception as e:
         pct_chg = "-"
@@ -863,22 +864,22 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     price_json.append([last_price_json_timestamp,last_price])
     first_price = price_json[0][1]
     df_tall = year_df[::-1]
-    print("kk2")
+    # print("kk2")
     df_tall['Year'] = "4/1/" + df_tall['Year']
     df_tall['Stock Price'] = df_tall['Price'].apply(lambda x: "${:,}".format(np.round(x,2)))
     df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
-    print("kk4")
+    # print("kk4")
     df_tall['YoY % Change (Stock Price)'] = df_tall['YoY Price % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
-    print("fin_statements_list", fin_statements_list, "xsazxd", statement_or_ratio)
+    # print("fin_statements_list", fin_statements_list, "xsazxd", statement_or_ratio)
     if "{}".format(statement_or_ratio) in fin_statements_list:
         df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_title)]/df_tall['{}'.format(fin_metric_title)].shift(-1)
         df_tall['YoY % Change'] = df_tall['YoY % Change float'].apply(lambda x: "{}%".format(round((x-1)*100,1)))
-        print("kk3")
+        # print("kk3")
         df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
-        print("df_html_tall", df_html_tall.head(30))
+        # print("df_html_tall", df_html_tall.head(30))
         # df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)].fillna(0)
         df_html_tall = df_html_tall.fillna(0)
-        print(df_html_tall.head(30))
+        # print(df_html_tall.head(30))
         if df_html_tall['{}'.format(fin_metric_title)].max()>abs(1000000):
             df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)]/1000000
             if_in_mil = "in {} million".format(currency_symbol)
@@ -899,7 +900,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         new_list = ["Year",'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']
         # fin_metric_vars_old = ""
         for x in fin_metric_vars_old:
-            print("xfin_metric_vars_old", fin_metric_vars_old)
+            # print("xfin_metric_vars_old", fin_metric_vars_old)
 
             # df_tall[x] = df_tall[x].apply(lambda x: x/1000000)
             # original_list.append(x)
@@ -907,8 +908,8 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # flat_list = [item for sublist in new_list for item in sublist]
 
         # df_html_tall = df_tall[['{}'.format('Year'),'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']]
-        print("jq", list(df_tall))
-        print("nq", new_list)
+        # print("jq", list(df_tall))
+        # print("nq", new_list)
         df_html_tall = df_tall[original_list]
         df_html_formula = df_tall[new_list].to_html(index=False).replace('border="1" class="dataframe">','class="yoy_chrono_table" id="df_myTable" border="1" class="dataframe">').replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
         df_html_formula = df_html_formula.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
@@ -916,7 +917,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         df_html_formula = df_html_formula.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
         for x in fin_metric_vars_old:
             df_html_formula = df_html_formula.replace(x,x.replace("_"," "))
-        print("df_html_tall", df_html_tall.head(30))
+        # print("df_html_tall", df_html_tall.head(30))
         # df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)].fillna(0)
         df_html_tall = df_html_tall.fillna(0)
         if df_html_tall['{}'.format(fin_metric_title)].max()>abs(1000000):
@@ -1041,7 +1042,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     pct_chg = type_num_check(pct_chg)
     price_metric_rate_change = if_error_value(weird_division((-1+((last_price - first_price)/first_price)),historical_pct_chg),0,pct_chg)
     # all_time_metric_chg = if_error_value(change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg"),0,pct_chg)
-    print("pct_chg", pct_chg)
+    # print("pct_chg", pct_chg)
     # all_time_metric_chg = (change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg"))
     all_time_metric_chg = if_error_value(change_markup((round((pct_chg*100)-1, 1)),"percent","noarrow","all_time_metric_chg"),0,pct_chg_original)
     historical_pct_chg = if_error_value((round(pct_chg-1, 1)),0,pct_chg_original)
@@ -1117,7 +1118,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         return test_number
     num_years_increased = len(metric_increased_years)+1 # if_error_value(len(metric_increased_years)+1,0, metric_increased_years)
     num_years_increased = if_error_value(len(metric_increased_years)+1,0, len(metric_increased_years))
-    print("len(metric_increased_years)",len(metric_increased_years))
+    # print("len(metric_increased_years)",len(metric_increased_years))
     num_years_bad = if_error_value(len(metric_decreased_years),0, len(metric_decreased_years))
     price_increased_on_metric_up_years = if_error_value(len(metric_increased_years[metric_increased_years['YoY Price % Change float']>1]),0, len(metric_increased_years))
     percent_correlation = weird_division(price_increased_on_metric_up_years*100,num_years_increased)
@@ -1128,9 +1129,36 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     # print("df_json ", df_json)
     # pd.DataFrame({"df_json":df_json}).to_csv("df_json.csv")
     # Markup('** A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate change, since the bottom/peak contains a negative number.')
+    split_input = profiles_dict['description'].split(".")
+    pass_index = -100
+    sentence_list = []
+    for n,x in enumerate(split_input):
+        print(pass_index)
+        if pass_index == n+1:
+            pass
+        else:
+            if (len(x))<30:
+                try:
+                    sentence = x+split_input[n+1]+"."
+                except:
+                    sentence = x+"."
+                pass_index = n+1
+                sentence = ("<li span='description_list'>{}</li>".format(sentence))
+                sentence_list.append(sentence)
+            else:
+                sentence = x+"."
+                sentence = ("<li span='description_list'>{}</li>".format(sentence))
+                sentence_list.append(sentence)
+        print(n,sentence)
+    sentences_list_joined = Markup("".join(sentence_list[:-1]))
+    html_sentence_list = sentences_list_joined #Markup("<ul>"+sentences_list_joined+"</ul>")
+    # print("this", html_sentence_list)
+
     return render_template('current_ratio.html', \
+
                             earliest_latest_warning = earliest_latest_warning,\
                             earliest_latest_disclaimer = earliest_latest_disclaimer,\
+                            html_sentence_list = html_sentence_list,\
                             df_html_formula = [df_html_formula],\
                             url_symbol = url_symbol,\
                             min_max_warning = min_max_warning,\

@@ -1,3 +1,20 @@
+.dropdown_menu {
+	/* white-space: normal */
+	/* width:200px !important; */
+}
+.dropdown-item {
+	white-space: pre-wrap;
+	width: 400px;
+}
+
+.ruhroh a {
+	color: #154ee2;
+}
+
+.ruhroh {
+	font-size: 12px;
+}
+
 .ratios_links,
 .statement_links {
 	color: #154ee2;
