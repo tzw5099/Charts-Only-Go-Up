@@ -1,3 +1,13 @@
+.tt-suggestion a {
+	/* color: #3508ff !important; */
+	color: #000000 !important;
+}
+
+.tt-suggestion strong {
+	font-weight: normal;
+	color: red;
+}
+
 .dropdown_menu {
 	/* white-space: normal */
 	/* width:200px !important; */

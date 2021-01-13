@@ -28,13 +28,12 @@ buyupside.com
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
 
   <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
-  
-  <script src="https://code.highcharts.com/stock/highstock.js"></script>
 
-  <!-- <script src="{{ url_for('stock.static', filename='scripts/highstock.js') }}"></script> -->
-  <script src="{{ url_for('stock.static', filename='scripts/modules/data.js') }}"></script>
-  <script src="{{ url_for('stock.static', filename='scripts/modules/export-data.js') }}"></script>
-  <script src="{{ url_for('stock.static', filename='scripts/modules/exporting.js') }}"></script>
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  <script src="{{ url_for('static', filename='../static/js/chart.js') }}"></script>
+  <script src="{{ url_for('static', filename='../static/modules/data.js') }}"></script>
+  <script src="{{ url_for('static', filename='../static/modules/export-data.js') }}"></script>
+  <script src="{{ url_for('static', filename='../static/modules/exporting.js') }}"></script>
 
 
 <!-- https://datatables.net/examples/basic_init/table_sorting.html -->

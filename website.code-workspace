@@ -12,7 +12,8 @@
 			"Charts_TenDollarData\\templates\\current_ratio.html",
 			"Charts_TenDollarData\\__init__.py",
 			"route_imports\\ratio_map.py",
-			"Charts_TenDollarData\\static"
+			"Charts_TenDollarData\\static",
+			"Charts_TenDollarData\\templates"
 		]
 	}
 }

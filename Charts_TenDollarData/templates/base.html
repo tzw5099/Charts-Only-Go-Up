@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-
         <!-- https://stackoverflow.com/questions/26192897/should-i-use-bootstrap-from-cdn-or-make-a-copy-on-my-server -->
         <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
-
         <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/primary.min.css') }}">
         <meta http-equiv="x-dns-prefetch-control" content="on">
@@ -31,23 +28,16 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <script src="{{ url_for('static', filename='../static/js/chart.js') }}"></script>
-
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> -->
-        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+
         <!-- <script type="text/javascript" src="{{ url_for('static', filename='../static/js/jquery-3.5.1.js') }}"></script> -->
         <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
         <!-- enables CSV -->
@@ -59,17 +49,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
         {% block charts_quarter_head %}
         {% endblock %}
-
-
         </head>
-
         <body class="fixed_body">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="color: #212529;">
             <div class="container">
                 <div class="squarelogo">
-                    <a class="navbar-brand dollar_data" href="#" style="color: #fec503;">
+                    <a href="https://charts.tendollardata.com">
+
+
+
+                    <span class="navbar-brand dollar_data charts_left" href="#" style="color: #4285f4 !important; margin-right:0px">
+                        <!-- 10 -->
+                        charts.
+                    </span>
+                    <!-- . -->
+
+                    <span class="navbar-brand dollar_data" href="#" style="color: #19a419 !important;">
                         <!-- 10 -->
                         tendollardata
+                    </span>
                     </a>
                 </div>
                 <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
@@ -81,21 +79,51 @@
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#">
-                                First Item
+                            <a class="nav-link active" href="https://tendollardata.com">
+                                Home
                             </a>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <!-- <li class="nav-item" role="presentation">
                             <a class="nav-link" href="#">
                                 Second Item
                             </a>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                            <a
+                                class="dropdown-toggle nav-link"
+                                data-toggle="dropdown"
+                                aria-expanded="false"
+                                href="#"
+                            >
+                                Datasets for $10
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                                <!-- <a class="dropdown-item" role="presentation" href="#">
+                                    First Item
+                                </a> -->
+                                <!-- <a class="dropdown-item" role="presentation" href="#">
+                                    Second Item
+                                </a> -->
+                                <!-- <a class="dropdown-item" role="presentation" href="#">
+                                    Third Item
+                                </a> -->
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-minute-data-historical-intraday-data-dataset-all-us-equities-etfs-sp-500-tech-stocks/">⭐ Intraday Price Data  (1991 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-market-cap-dataset-historical-daily-price-price-dataset-all-us-equities-sp-500-tech-stocks/">⭐ Daily Price &amp; Market Cap (1970 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">⭐ Financial Statements   (1994 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-earnings-dataset-all-us-equities-sp-500-tech-stocks/">Earnings Data (2002 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-dividends-data-dataset-all-us-equities-etfs-funds-mutual-index-sp-500-tech-stocks/">Dividends Data (1990 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-ipos-data-dataset-all-us-stocks-etfs-and-other-funds-2004-present/">IPOs Data (2004 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-13f-data-dataset-all-quarterly-portfolio-filings-by-hedge-funds-2013-present/">13Fs (hedge fund holdings) (2013 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-options-data-dataset-all-us-equities-sp-500-tech-stocks/">Options Volume (2018 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-analyst-grades-ratings-data-dataset-all-us-equities-sp-500-tech-stocks/">Analyst Grades (1990 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-stock-splits-data-dataset-all-us-equities-1990-present/">Stock Splits Data (1990 – Present)</a>
+                            </div>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <!-- <li class="nav-item" role="presentation">
                             <a class="nav-link" href="#">
                                 Third Item
                             </a>
-                        </li>
-
+                        </li> -->
                     </ul>
                     <ul class="nav navbar-nav">
                         <li class="nav-item" role="presentation">
@@ -124,35 +152,8 @@
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" href="#">
                                 BUY DATA
-
-
-
-
-
-
                             </a>
                         </li>
-    <!-- <nav class="dropdown_nav"> -->
-    <!-- <ul class="cf dropdown_nav">
-        <li><a href="#">Menu Item 1</a></li>
-        <li><a class="dropdown_products" href="#">BUY DATA</a>
-            <ul>
-                <li><a href="#">Sub-menu Item 1</a></li>
-                <li><a href="#">Sub-menu Item 2</a></li>
-                <li><a href="#">Sub-menu Item 3</a></li>
-                <li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-minute-data-historical-intraday-data-dataset-all-us-equities-etfs-sp-500-tech-stocks/">⭐ Intraday Price (Minute) Data</a></li>
-                <li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-market-cap-dataset-historical-daily-price-price-dataset-all-us-equities-sp-500-tech-stocks/">⭐ Daily Price &amp; Market Cap</a></li>
-                <li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">⭐ Financial Statements</a></li><li class="    " id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-earnings-dataset-all-us-equities-sp-500-tech-stocks/">Historical Earnings Data</a></li>
-                <li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-dividends-data-dataset-all-us-equities-etfs-funds-mutual-index-sp-500-tech-stocks/">Historical Dividends Data</a></li><li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-stock-splits-data-dataset-all-us-equities-1990-present/">Historical Stock Splits Data</a></li>
-                <li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-ipos-data-dataset-all-us-stocks-etfs-and-other-funds-2004-present/">Historical IPOs Data</a></li>
-                <li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-13f-data-dataset-all-quarterly-portfolio-filings-by-hedge-funds-2013-present/">Historical 13F Filings</a></li>
-                <li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-options-data-dataset-all-us-equities-sp-500-tech-stocks/">Historical Options Data</a></li>
-                <li class="nav_products_list" id=""><a class="nav_products_list_links" href="https://tendollardata.com/product/historical-analyst-grades-ratings-data-dataset-all-us-equities-sp-500-tech-stocks/">Historical Analyst Grades</a></li>
-            </ul>
-            </li>
-        <li><a href="#">Menu Item 3</a></li>
-    </ul> -->
-    <!-- </nav> -->
                         <!-- <li class="nav-item" role="presentation">
                             <a class="nav-link" href="#">
                                 Link 2
@@ -163,37 +164,7 @@
                                 Link 3
                             </a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a
-                                class="dropdown-toggle nav-link"
-                                data-toggle="dropdown"
-                                aria-expanded="false"
-                                href="#"
-                            >
-                                Dropdown
-                            </a>
-                            <div class="dropdown-menu" role="menu">
-                                <!-- <a class="dropdown-item" role="presentation" href="#">
-                                    First Item
-                                </a> -->
-                                <!-- <a class="dropdown-item" role="presentation" href="#">
-                                    Second Item
-                                </a> -->
-                                <!-- <a class="dropdown-item" role="presentation" href="#">
-                                    Third Item
-                                </a> -->
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-minute-data-historical-intraday-data-dataset-all-us-equities-etfs-sp-500-tech-stocks/">⭐ Intraday Price Data  (1991 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-market-cap-dataset-historical-daily-price-price-dataset-all-us-equities-sp-500-tech-stocks/">⭐ Daily Price &amp; Market Cap (1970 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">⭐ Financial Statements   (1994 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-earnings-dataset-all-us-equities-sp-500-tech-stocks/">Earnings Data (2002 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-dividends-data-dataset-all-us-equities-etfs-funds-mutual-index-sp-500-tech-stocks/">Dividends Data (1990 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-ipos-data-dataset-all-us-stocks-etfs-and-other-funds-2004-present/">IPOs Data (2004 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-13f-data-dataset-all-quarterly-portfolio-filings-by-hedge-funds-2013-present/">13Fs (hedge fund holdings) (2013 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-options-data-dataset-all-us-equities-sp-500-tech-stocks/">Options Volume (2018 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-analyst-grades-ratings-data-dataset-all-us-equities-sp-500-tech-stocks/">Analyst Grades (1990 – Present)</a>
-<a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-stock-splits-data-dataset-all-us-equities-1990-present/">Stock Splits Data (1990 – Present)</a>
-                            </div>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -212,7 +183,7 @@
                     display: 'value',
                     source: bestPictures,
                     highlight: true,
-                    hint: false,
+                    hint: true,
                     templates: {
                         empty: ['<div class="empty-message">', 'Try <a href=\"https://charts.tendollardata.com/TSLA>TSLA</a>, <a href=\"https://charts.tendollardata.com/AAPL>AAPL</a>, <a href=\"https://charts.tendollardata.com/SPY>SPY</a>...', '</div>'].join('\n'),
                         suggestion: function (data) {
@@ -224,7 +195,6 @@
         </script>
             {% block quarterly_body %}
             {% endblock %}
-
 <script type="text/javascript">$.typeahead({
     input: '.js-typeahead',
     minLength: 1,
@@ -232,6 +202,7 @@
     debug: true,
     highlight: true,
     maxItem: 10,
+    hint: true,
     dynamic: true,
     delay: 200,
     searchOnFocus: true,
@@ -244,5 +215,4 @@
 });
 </script>
         </body>
-
 </html>

@@ -73,6 +73,8 @@ charts = Blueprint('charts', __name__)
 def index():
     return render_template('index.html')
 @charts.route('/<url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
+@charts.route('/<url_symbol>-<stock_or_etf>/nice/<url_name>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
+
 def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_symbol):
     from route_imports.ratio_map import metric_to_url_map
     from route_imports.ratio_map import url_to_var_name_map
@@ -1258,10 +1260,36 @@ def page_not_found(e):
 # @route("hello_world")
 # def render():
 #     return "Hello World"
-@charts.route('/test/<url_symbol>', methods=['POST', 'GET'])
-def fin_test(url_symbol):
+# @charts.route('/test/<url_symbol>', methods=['POST', 'GET'])
+# def fin_test(url_symbol):
+#     return render_template('financial_statements.html',
+#      df_html=FS("IS","AAPL"),#.df_html(),
+#      tables=FS("IS","AAPL").df_values()['df_table'],
+#      table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
+#      df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
+#      df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
+#      df_json = FS("IS","AAPL").df_values()['df_json'],
+#      titles=FS("IS","AAPL").df_values()['df_titles'],
+#      labels = FS("IS","AAPL").df_labels(),
+#      values=FS("IS","AAPL").df_price(),
+#      place_name=url_symbol, max=17000,
+#      )
+
+@charts.route('/test/<some_place>', methods=['POST', 'GET'])
+# @cache.cached(timeout=5)
+def fin_test(some_place):
+    # values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
+
+
     return render_template('financial_statements.html',
-     df_html=FS("IS","AAPL").df_html(),
+    # return render_template('fin_statements_bootstrapped.html',
+    # return render_template('fin_statements_bootstrapped_w_comments.html',
+    # FS("IS","AAPL").df_values()['df_table']
+    # FS("IS","AAPL").df_values()['df_table_pct']
+    # FS("IS","AAPL").df_values()['chart_x_dates']
+    # FS("IS","AAPL").df_values()['chart_y_revenue']
+    # FS("IS","AAPL").df_values()['df_json']
+    # FS("IS","AAPL").df_values()['df_titles']
      tables=FS("IS","AAPL").df_values()['df_table'],
      table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
      df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
@@ -1270,8 +1298,12 @@ def fin_test(url_symbol):
      titles=FS("IS","AAPL").df_values()['df_titles'],
      labels = FS("IS","AAPL").df_labels(),
      values=FS("IS","AAPL").df_price(),
-     place_name=url_symbol, max=17000,
+     place_name=some_place, max=17000,
      )
+
+
+
+
 # https://github.com/nvdv/vprof/blob/master/examples/guestbook.py
 # http://pramodkumbhar.com/2019/05/summary-of-python-profiling-tools-part-i/
 # @charts.route('/<url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
