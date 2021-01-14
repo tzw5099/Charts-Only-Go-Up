@@ -85,6 +85,138 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     from route_imports.ratio_map import url_to_metric_map
     from route_imports.ratio_map import url_to_equation_map
     from route_imports.ratio_map import url_to_definition_map
+    # from route_imports.ratio_map import income_statement_dict
+    # from route_imports.ratio_map import balance_sheet_dict
+    # from route_imports.ratio_map import cash_flow_dict
+    # metric to url mapping
+    income_statement_dict = [
+        # 'index',
+        'Unnamed: 0',
+                            'date',
+                            'symbol',
+                            'filing_date',
+                            'accepted_date',
+                            'period',
+'net_revenue',
+'cost_of_sales',
+'gross_profit_margin_non',
+'gross_profit_margin_ratio',
+'r_n_d',
+'g_n_a',
+'s_n_m',
+'other_income',
+'total_opex',
+'cost_expenses',
+'interest_expense',
+'d_n_a',
+'ebitda_non',
+'ebitda_margin',
+'operating_income',
+'operating_margin',
+'total_other_income',
+'pretax_income_non',
+'pretax_income_margin',
+'income_tax_expense',
+'net_income',
+'profit_margin',
+'eps_non',
+'eps_diluted',
+'shares_outstanding_non',
+'shares_outstanding_diluted',
+'sec_filing_link',
+'sec_statement_link',
+                            ]
+
+    balance_sheet_dict = [
+        # 'index',
+        'Unnamed: 0',
+                        'date',
+                        'symbol',
+                        'filing_date',
+                        'accepted_date',
+                        'period',
+'cash_non',
+'short_term_investments',
+'cash_n_short_term_investments',
+'accounts_receivable',
+'inventory',
+'other_current_assets',
+'total_current_assets',
+'pp_n_e',
+'goodwill',
+'intangible_assets',
+'goodwill_n_intangible_assets',
+'long_term_investments',
+'tax_assets',
+'other_non_current_assets',
+'tol_non_current_assets',
+'other_assets',
+'total_assets',
+'accounts_payable',
+'short_term_debt',
+'income_tax_payables',
+'deferred_revenue',
+'other_current_liabilities',
+'total_current_liabilities',
+'long_term_debt',
+'deferred_revenue_non_current',
+'deferred_tax_liabilities_non_current',
+'other_non_current_liabilities',
+'total_non_current_liabilities',
+'other_liabilities',
+'total_liabilities',
+'common_stock',
+'retained_earnings',
+'accumulated_other_comprehensive_income',
+'other_se',
+'total_se',
+'total-liabilities-and-stockholders-equity',
+'total_investments',
+'total_debt',
+'net_debt',
+'sec_filing_link',
+'sec_statement_link',]
+
+    cash_flow_dict = [
+        # 'index',
+        'Unnamed: 0',
+                    'date',
+                    'symbol',
+                    'filing_date',
+                    'accepted_date',
+                    'period',
+'net_income',
+'d_n_a',
+'deferred_income_tax',
+'sbc',
+'change_in_working_capital',
+'accounts_receivable',
+'inventory',
+'accounts_payable',
+'other_working_capital',
+'other_non_cash_items',
+'net_cash_by_operating_activities',
+'investments_in_pp_n_e',
+'acquisitions_net',
+'purchase_of_investments',
+'sales_maturities_of_investments',
+'other_investing_activities',
+'net_cash_used_for_investing_activities',
+'debt_repayment',
+'common_stock_issued',
+'common_stock_repurchased',
+'dividends_paid',
+'other_financing_activities',
+'net_cash_used_provided_by_financing_activities',
+'effect_of_fx_rate_changes_on_cash',
+'net_change_in_cash',
+'cash_at_end_of_period',
+'cash_at_beginning_of_period',
+'operating_cash_flow',
+'capex',
+'free_cash_flow',
+'sec_filing_link',
+'sec_statement_link',]
     from flask import Markup
     start_time = time.time()
     # titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
@@ -92,9 +224,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     vars_drop = ['quarter_n_year',  's_g_n_a', "ebitda_margin", "operating_margin","profit_margin"]
     def weird_division(n, d):
         return n / d if d else 0
-    def replace(group, stds):
-        group[np.abs(group - group.mean()) > stds * group.std()] = np.nan
-        return group
     def magnitude_num(number, currency_symbol):
         try:
             if len(str(number)) > 12 and number > 1000000000000:
@@ -174,7 +303,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         except Exception as e:
             change_html = '-'
         return change_html
-    fin_statements_list = ["balance-sheet","income-statement","cash-flow-statement"]
+    fin_statements_list = ["income-statement","balance-sheet","cash-flow-statement"]
     company_profiles = pd.read_csv("reference_data/Company_Profiles.csv")
     currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())]['currency symbol'])[0]
     currency_symbol_original = currency_symbol
@@ -256,7 +385,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                     new_df_list.append(new_df)
             df = pd.concat(new_df_list).sort_values(by="date",ascending = True).reset_index()
             df['date'] = df['date'].apply(lambda x: str(x)[0:10])
-
         df["Year"] = df["date"].apply(lambda x: x[0:4])
         # print("sup1")
         df["QQ-YYYY"] = df["period"]+"-"+df["date"].apply(lambda x: x[0:4])
@@ -371,47 +499,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
                 'days_sales_in_payables':['accounts_payable','total_opex',],
             }
         currency_symbol = ""
-        fin_dir = ["Income Statement","Balance Sheet","Cash Flow Statement"]
-        fin_df_list = []
-        for x in fin_dir:
-            # csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/quarter/{}/*~{}~*".format(x, url_symbol.upper()))[-1]
-            fin_file_year = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(x, url_symbol.upper()))[-1]
-            # fin_df = pd.read_csv(csv_file)
-            df = pd.read_csv(fin_file_year)
-            # if len(year_df_file) > len(fin_df):
-            #     df = year_df_file
-            all_titles = list(df)
-            all_numbers_df = df[list(df.select_dtypes(include=['float','int64']))].div(4, axis=0)
-            all_objects_df = df[list(df.select_dtypes(include=['object']))]
-            concat_df = pd.concat([all_numbers_df, all_objects_df], axis=1)
-            df = concat_df[all_titles]
-            list_years = list(df["date"].apply(lambda j: j[0:4]))
-            if len(list_years) > len(list(set(list_years))):
-                list_years = np.arange(list_years.min(),list_years.max()+2)
-            new_df_list = []
-            for n,y in enumerate(list_years):
-                for x in ["12-31","03-31","06-30","09-30"]:
-                    new_df = df[n:n+1]
-                    new_df['date'] = pd.to_datetime("{}-{}".format(y,x))
-                    new_df_list.append(new_df)
-            df = pd.concat(new_df_list).sort_values(by="date",ascending = False).reset_index()
-            df['date'] = df['date'].apply(lambda x: str(x)[0:10])
-            fin_df = df
-            fin_df["Year"] = fin_df["date"].apply(lambda x: x[0:4])
-            fin_df["QQ-YYYY"] = fin_df["period"]+"-"+fin_df["date"].apply(lambda x: x[0:4])
-            fin_df_list.append(fin_df)
-        df_merge_is_bs = pd.merge(fin_df_list[0],fin_df_list[1],how="inner", on="QQ-YYYY")
-        df_merge = pd.merge(df_merge_is_bs,fin_df_list[2],how="inner", on="QQ-YYYY")
-        df_merge = df_merge[fin_statement_raw_names]
-        df_merge.columns = fin_statement_renamed_cols
-        df = df_merge.iloc[::-1]
-        df = df.sort_values(by="date",ascending = True)
-        df['ffo_math']=df['net_income'] + df['d_n_a'] + df['sales_maturities_of_investments'] + df['purchase_of_investments'] + df['investments_in_pp_n_e'] + df['acquisitions_net']
-        df['book_value_math']=df['total_assets'].dropna()-df['total_liabilities'].dropna()
-        df['ebit_math']=df['ebitda_non'] - df['d_n_a']
-        df['working_capital_math']= df['total_current_assets'] - df['total_current_liabilities']
-        df['quick_assets_math']=df['cash_non']+df['short_term_investments']+df['accounts_receivable']
-        df['quick_ratio_math']=(df['total_current_assets'] - df['inventory'])/df['total_current_liabilities']
         metric_name = url_to_metric_map["{}".format(url_fin_metric)]
         fin_metric_equation = url_to_equation_map["{}".format(url_fin_metric)]
         fin_metric_definition = url_to_definition_map["{}".format(url_fin_metric)]
@@ -421,6 +508,211 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # fin_metric_vars = metric_to_list_variables_map[fin_metric_name] # NOTE: sdfsdf
         fin_metric_vars_old = metric_to_list_variables_map[fin_metric_name] # NOTE: sdfsdf
         fin_metric_vars = [fin_metric_title]
+        fin_dir = ["Income Statement","Balance Sheet","Cash Flow Statement"]
+        fin_df_list = []
+
+        for the_statement in fin_dir:
+
+            # csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/quarter/{}/*~{}~*".format(x, url_symbol.upper()))[-1]
+            fin_file_year = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(the_statement, url_symbol.upper()))[-1]
+            # fin_df = pd.read_csv(csv_file)
+            df = pd.read_csv(fin_file_year)
+            print("list df",list(df))
+            # if len(year_df_file) > len(fin_df):
+            #     df = year_df_file
+
+            df = df.interpolate()
+            print("yowza", list(df))
+
+
+            if "{}".format(the_statement) == "Income Statement":
+                df.columns = income_statement_dict
+
+                for x in fin_metric_vars_old:
+                    try:
+                        print("gonna try")
+                        df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-1)
+                        # print(list(df['pct_chg_temp']))
+
+                        df['pct_chg_temp'].values[df['pct_chg_temp'] > 10] = np.nan
+                        # print("df['pct_chg_temp']")
+                        # print(list(df['pct_chg_temp']))
+                        # # df.loc[df['foo'].isnull(),'foo'] = df['bar']
+                        # df.loc[df['pct_chg_temp'],np.nan] = df['{}'.format(x)]
+
+
+                        df['{}'.format(x)][df['pct_chg_temp'] == np.nan] = np.nan
+
+
+                        df.to_csv("tisktisk20.csv")
+                        df = df.drop(['pct_chg_temp'],axis=1)
+                        # print("x title list",x, fin_metric_title, list(df))
+                        # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+                        # if len(df[df['{}'.format(x)]<0]) > len(df[df['{}'.format(x)]>0]):
+                        #     df['{}'.format(x)] = df['{}'.format(x)]*-1 #.apply(lambda x: -1*x)
+                        # else:
+                        #     pass
+                        n = 0
+                        # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
+
+                        # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+                        # print("qaz ", df['{}'.format(x)].head(50),2)
+                        print("nsada")
+
+
+                        df = df.interpolate()
+                    except Exception as e:
+                        print("e x", e)
+            elif "{}".format(the_statement) == "Balance Sheet":
+                df.columns = balance_sheet_dict
+                for x in fin_metric_vars_old:
+                    try:
+                        print("gonna try")
+                        df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-1)
+                        # print(list(df['pct_chg_temp']))
+
+                        df['pct_chg_temp'].values[df['pct_chg_temp'] > 10] = np.nan
+                        # print("df['pct_chg_temp']")
+                        # print(list(df['pct_chg_temp']))
+                        # # df.loc[df['foo'].isnull(),'foo'] = df['bar']
+                        # df.loc[df['pct_chg_temp'],np.nan] = df['{}'.format(x)]
+
+
+                        df['{}'.format(x)][df['pct_chg_temp'] == np.nan] = np.nan
+
+
+                        df.to_csv("tisktisk20.csv")
+                        df = df.drop(['pct_chg_temp'],axis=1)
+                        # print("x title list",x, fin_metric_title, list(df))
+                        # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+                        # if len(df[df['{}'.format(x)]<0]) > len(df[df['{}'.format(x)]>0]):
+                        #     df['{}'.format(x)] = df['{}'.format(x)]*-1 #.apply(lambda x: -1*x)
+                        # else:
+                        #     pass
+                        n = 0
+                        # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
+
+                        # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+                        # print("qaz ", df['{}'.format(x)].head(50),2)
+                        print("nsada")
+
+
+                        df = df.interpolate()
+                    except Exception as e:
+                        print("e x", e)
+            elif "{}".format(the_statement) == "Cash Flow Statement":
+                df.columns = cash_flow_dict
+                for x in fin_metric_vars_old:
+                    try:
+                        print("gonna try")
+                        df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-1)
+                        # print(list(df['pct_chg_temp']))
+
+                        df['pct_chg_temp'].values[df['pct_chg_temp'] > 10] = np.nan
+                        # print("df['pct_chg_temp']")
+                        # print(list(df['pct_chg_temp']))
+                        # # df.loc[df['foo'].isnull(),'foo'] = df['bar']
+                        # df.loc[df['pct_chg_temp'],np.nan] = df['{}'.format(x)]
+
+
+                        df['{}'.format(x)][df['pct_chg_temp'] == np.nan] = np.nan
+
+
+                        df.to_csv("tisktisk20.csv")
+                        df = df.drop(['pct_chg_temp'],axis=1)
+                        # print("x title list",x, fin_metric_title, list(df))
+                        # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+                        # if len(df[df['{}'.format(x)]<0]) > len(df[df['{}'.format(x)]>0]):
+                        #     df['{}'.format(x)] = df['{}'.format(x)]*-1 #.apply(lambda x: -1*x)
+                        # else:
+                        #     pass
+                        n = 0
+                        # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
+
+                        # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+                        df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+                        # print("qaz ", df['{}'.format(x)].head(50),2)
+                        print("nsada")
+
+
+                        df = df.interpolate()
+                    except Exception as e:
+                        print("e x", e)
+
+            all_titles = list(df)
+            # all_numbers_df = df[list(df.select_dtypes(include=['float','int64']))].div(4, axis=0)
+            for t in fin_metric_vars_old:
+                try:
+                    print("sick", t, x)
+                    all_numbers_df = df[t].div(4, axis=0)
+                    all_objects_df = df[list(df.select_dtypes(include=['object']))]
+                    concat_df = pd.concat([all_numbers_df, all_objects_df], axis=1)
+                    df = concat_df[all_titles]
+                    print("mmm", t, x)
+                except Exception as e:
+                    # list_df = list(df)
+                    # length = len(a_list)
+                    # middle_index = length/2
+                    # first_half = a_list[:middle_index]
+                    # second_half = a_list[middle_index:]
+                    # all_numbers_df = df[first_half]
+                    # all_objects_df = df[second_half]
+                    # concat_df = pd.concat([all_numbers_df, all_objects_df], axis=1)
+                    # concat_df = df
+                    print("donk,", t, x, e, list(df))
+                # df = concat_df[all_titles]
+                list_years = list(df["date"].apply(lambda j: int(j[0:4])))
+                print("list_yearsx", list_years)
+                if len(list_years) > len(list(set(list_years))):
+                    # list_years = np.arange(list_years.min(),list_years.max()+2)
+                    list_years = np.arange(min(list_years),max(list_years)+2)
+                new_df_list = []
+                for n,y in enumerate(list_years):
+                    for f in ["12-31","03-31","06-30","09-30"]:
+                        new_df = df[n:n+1]
+                        new_df['date'] = pd.to_datetime("{}-{}".format(y,f))
+                        new_df_list.append(new_df)
+                print("heck yes", t, x)
+                df = pd.concat(new_df_list).sort_values(by="date",ascending = False).reset_index()
+                df['date'] = df['date'].apply(lambda h: str(h)[0:10])
+                # df = df.drop_duplicates(subset=['date','QQ-YYYY', '{}'.format(x)], keep='first')
+
+
+                fin_df = df
+                fin_df["Year"] = fin_df["date"].apply(lambda m: m[0:4])
+                print("xxx",list(fin_df))
+                print(fin_df[['index', 'Unnamed: 0', 'date', 'symbol', 'filing_date', 'accepted_date']].head(20))
+                fin_df["QQ-YYYY"] = fin_df["period"]+"-"+fin_df["date"].apply(lambda m: m[0:4])
+
+                fin_df_list.append(fin_df)
+
+        df_merge_is_bs = pd.merge(fin_df_list[0],fin_df_list[1],how="inner", on="QQ-YYYY")
+        df_merge = pd.merge(df_merge_is_bs,fin_df_list[2],how="inner", on="QQ-YYYY")
+        # df_merge = df_merge[fin_statement_raw_names]
+        print("chump", list(df))
+        print("df_smerge",list(df_merge))
+        df_merge.columns = fin_statement_renamed_cols
+        df = df_merge.iloc[::-1]
+        df = df.sort_values(by="date",ascending = True)
+        print("qaz", list(df))
+        df['ffo_math']=df['net_income'] + df['d_n_a'] + df['sales_maturities_of_investments'] + df['purchase_of_investments'] + df['investments_in_pp_n_e'] + df['acquisitions_net']
+        df['book_value_math']=df['total_assets'].dropna()-df['total_liabilities'].dropna()
+        df['ebit_math']=df['ebitda_non'] - df['d_n_a']
+        df['working_capital_math']= df['total_current_assets'] - df['total_current_liabilities']
+        df['quick_assets_math']=df['cash_non']+df['short_term_investments']+df['accounts_receivable']
+        df['quick_ratio_math']=(df['total_current_assets'] - df['inventory'])/df['total_current_liabilities']
+
         # XXXXX
         # for n,x in enumerate(fin_metric_vars):
         # print("len df", len(df), "len year df", len(year_df_file), "len_not_na_df", len_not_na_df, "len_not_na_year_df", len_not_na_year_df)
@@ -435,98 +727,106 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
         # else:
         #     pass
         df = df.interpolate()
-        df = df.drop_duplicates(subset=['date']).sort_values(by=["date"])
-        for x in fin_metric_vars_old:
+        # for x in fin_metric_vars_old:
 
-            # print("x title list",x, fin_metric_title, list(df))
-            # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
-            df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
-            df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
-            # if len(df[df['{}'.format(x)]<0]) > len(df[df['{}'.format(x)]>0]):
-            #     df['{}'.format(x)] = df['{}'.format(x)]*-1 #.apply(lambda x: -1*x)
-            # else:
-            #     pass
-            n = 0
-            # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
+        #     # print("x title list",x, fin_metric_title, list(df))
+        #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+        #     df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+        #     df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+        #     # if len(df[df['{}'.format(x)]<0]) > len(df[df['{}'.format(x)]>0]):
+        #     #     df['{}'.format(x)] = df['{}'.format(x)]*-1 #.apply(lambda x: -1*x)
+        #     # else:
+        #     #     pass
+        #     n = 0
+        #     # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
+
+        #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+        #     df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+        #     df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+        #     # print("qaz ", df['{}'.format(x)].head(50),2)
 
 
-            # print("qaz ", df['{}'.format(x)].head(50),2)
-
-            df['pct_chg_temp'] = df['{}'.format(x)].shift(-4)/df['{}'.format(x)]
-            df.loc[df['pct_chg_temp'] > 5, x] = np.nan
-            # df.to_csv("whatev2.csv")
-            print("vast new df",x)
-            print(df[['date','pct_chg_temp',x]].head(40))
-            df.drop(['pct_chg_temp'], axis=1)
-            df = df.interpolate()
-            # df.to_csv("whatev3.csv")
-
-            # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].sub(df['{}'.format(x)].mean()).div(df['{}'.format(x)].std()).abs().gt(2))
+        #     df = df.interpolate()
+        #     # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].sub(df['{}'.format(x)].mean()).div(df['{}'.format(x)].std()).abs().gt(2))
 
 
 
-            # df_smallest_2 = df['{}'.format(x)].nsmallest(2)
+        #     # df_smallest_2 = df['{}'.format(x)].nsmallest(2)
 
-            # def percentage_diff(q):
-            #     per = (abs((q[0] - q[1]))/q[1] *100)
-            #     if (per > 30):
-            #         return min(q[0], q[1])
-            #     else:
-            #         return q[0]
-            # df['{}'.format(x)] = df['{}'.format(x)].apply(percentage_diff)
-            # df['{}'.format(x)] = pd.rolling_apply(df['{}'.format(x)], 2, percentage_diff)
+        #     # def percentage_diff(q):
+        #     #     per = (abs((q[0] - q[1]))/q[1] *100)
+        #     #     if (per > 30):
+        #     #         return min(q[0], q[1])
+        #     #     else:
+        #     #         return q[0]
+        #     # df['{}'.format(x)] = df['{}'.format(x)].apply(percentage_diff)
+        #     # df['{}'.format(x)] = pd.rolling_apply(df['{}'.format(x)], 2, percentage_diff)
 
-            # df = df.drop_duplicates(subset=['date','QQ-YYYY', '{}'.format(x)], keep='first')
-            # df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-1)
-            # # print(list(df['pct_chg_temp']))
+        #     # df = df.drop_duplicates(subset=['date','QQ-YYYY', '{}'.format(x)], keep='first')
+        #     # df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-1)
+        #     # # print(list(df['pct_chg_temp']))
 
-            # df['pct_chg_temp'].values[df['pct_chg_temp'] > 10] = np.nan
-            # # print("df['pct_chg_temp']")
-            # # print(list(df['pct_chg_temp']))
-            # # # df.loc[df['foo'].isnull(),'foo'] = df['bar']
-            # # df.loc[df['pct_chg_temp'],np.nan] = df['{}'.format(x)]
+        #     # df['pct_chg_temp'].values[df['pct_chg_temp'] > 10] = np.nan
+        #     # # print("df['pct_chg_temp']")
+        #     # # print(list(df['pct_chg_temp']))
+        #     # # # df.loc[df['foo'].isnull(),'foo'] = df['bar']
+        #     # # df.loc[df['pct_chg_temp'],np.nan] = df['{}'.format(x)]
 
-            # df['{}'.format(x)][df['pct_chg_temp'] == np.nan] = np.nan
+        #     # df['{}'.format(x)][df['pct_chg_temp'] == np.nan] = np.nan
 
 
-            # df.to_csv("tisktisk9.csv")
-            # # df = df.drop(['pct_chg_temp'], axis=1)
+        #     # df.to_csv("tisktisk9.csv")
+        #     # df = df.drop(['pct_chg_temp'], axis=1)
 
 
 
 
 
-            # df is your DataFrame
-            # df.loc[:, df.columns != '{}'.format(x)] = df.groupby('{}'.format(x)).transform(lambda g: replace(g, 3))
+        #     # df is your DataFrame
+        #     # df.loc[:, df.columns != '{}'.format(x)] = df.groupby('{}'.format(x)).transform(lambda g: replace(g, 3))
 
-            df = df.interpolate()
+        #     df = df.interpolate()
+        #     # len_rows_ratios = df['{}'.format(x)].isna().sum()
+        #     # len_duplicates = len(df) - df['{}'.format(x)].nunique()
+
+        #     # print(len(df),"len_duplicates", len_duplicates)
+        #     # while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
+        #     # #     # print("shape len", df[df['{}'.format(x)] == 0].shape[0])
+        #     #     df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
+
+        #     #     df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
+        #     # #     print(df['{}'.format(x)].isna().sum())
+        #     # #     # print("asd", df['{}'.format(x)].head(50),2)
+        #     # #     # df = df[df['{}'.format(x)].notnull()].ewm(alpha = 0.5, ignore_na=True).mean()
+        #     # #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+        #     # #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+        #     # #     # df['{}'.format(x)] = df['{}'.format(x)].rolling(window=8,min_periods=1).mean()
+        #     # #     # df['{}'.format(x)] = df['{}'.format(x)].isna().ewm(alpha = 0.5).mean()
+        #     # #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+        #     #     # df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
+        #     # #     # df['{}'.format(x)] = df['{}'.format(x)].loc[df['{}'.format(x)].shift(-1) != df['{}'.format(x)]]
+        #     #     n+=1
 
 
-
-            # print("listenman", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
-            # print("listendudeagain", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
-            # if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
-            #     print("not number", list(df['{}'.format(x)].head(1))[0])
-            #     df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
-            # else:
-            #     print("iznum", list(df['{}'.format(x)].head(1))[0])
+        #     # print("listenman", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
+        #     # print("listendudeagain", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
+        #     # if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
+        #     #     print("not number", list(df['{}'.format(x)].head(1))[0])
+        #     #     df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
+        #     # else:
+        #     #     print("iznum", list(df['{}'.format(x)].head(1))[0])
         # df.to_csv("letssee.csv")
 
 
         metric_history = metric_to_formula_map(df,metric_name)
-        print("bango")
-        # print(df[['date','pct_chg_temp',x]].tail(50))
+
         fin_metric_history = metric_history
         df["{}".format(fin_metric_title)] = metric_history
         # df.to_csv("xgitest2.csv")
-        print("bongo")
-        # print(df[['date','pct_chg_temp',fin_metric_title]].tail(50))
         df = df.sort_values(by="date",ascending = False)
         early_missing_periods = df[::-1]["{}".format(fin_metric_title)].ne(0).idxmax()
 
         df = df[0:early_missing_periods+1]#[::-1]
-        print("bingo")
-        # print(df[['date','pct_chg_temp',fin_metric_title]].tail(50))
         def groupby_agg(df):
             df_grouped = df.groupby("Year").mean()
             return df_grouped
@@ -538,7 +838,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     df_quarter = df['period']
     # df = df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link',],axis=1, errors='ignore')
     df = df.drop(['Quarter & Year', 'Unnamed: 0','symbol','fillingDate','acceptedDate','period','link','ebitdaratio','operatingIncomeRatio','netIncomeRatio'],axis=1, errors='ignore')
-    print("bingox")
     try:
         # for x in reversed(titles_bs):
         #     if x in titles_list:
@@ -565,33 +864,46 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     except Exception as e:
         pass
     try:
-
+        # print("yopo!", titles_bs)
+        # print("yopo2!", var_list)
         try:
             pass
             # titles_bs.remove("Quarter & Year")
             # var_list.remove("Quarter & Year")
         except:
             pass
+        # if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "cash-flow-statement":
+        # for n,x in enumerate(fin_metric_vars):
 
+            # print("fin_metric_vars", fin_metric_vars)
+            # print("nx",n,x)
+            # print("positive_negative",list(df))
+            # print(df["{}".format(x)].head(30))
+            # print("before", len(df["{}".format(x)]),"filtered now",len(df[(df["{}".format(x)]<=0)]["{}".format(x)]))
+            # print("other",len(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30)))
+            # print(df[(df["{}".format(x)]>0)]["{}".format(x)].head(30))
+        # print("yopo", filter_pos_neg)
+        # df['{}'.format(x)] = df['{}'.format(x)].mask(df['{}'.format(x)].between(-np.inf, 0.000000001))
         df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x: abs(x))
-
+        # print("zqtype",type(list(df['{}'.format(x)].head(1))[0]))
+        # print(df["{}".format(x)].head(30))
+        # print(df[df!=0].rolling(window=8, center=True, min_periods=1).mean())
         n = 0
+        # print("x title list",x, fin_metric_title, list(df))
+        # df['{}'.format(x)] = df['{}'.format(x)].fillna(dzf['{}'.format(x)].rolling(window=8,center=True,min_periods=1).mean())
         df['{}'.format(x)] = df['{}'.format(x)].replace(0, np.nan)
         df['{}'.format(x)] = df['{}'.format(x)].replace(np.inf, np.nan)
-
-
-
-        df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-1)
-        df.loc[df['pct_chg_temp'] > 10, x] = np.nan
-        # df.to_csv("whatev2.csv")
-        # print("vast new df",x)
-        # print(df[['date','pct_chg_temp',x]].head(40))
-        df = df.drop(['pct_chg_temp'], axis=1)
-
         # print("qxaz", fin_statement_dir, df['{}'.format(x)].head(50),2)
         len_rows_ratios = df['{}'.format(x)].isna().sum()
         df = df.interpolate()
         while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
+        #     # print("shape len", df[df['{}'.format(x)] == 0].shape[0])
+        #     print(df['{}'.format(x)].isna().sum())
+        #     # print("asd", df['{}'.format(x)].head(50),2)
+        #     # df = df[df['{}'.format(x)].notnull()].ewm(alpha = 0.5, ignore_na=True).mean()
+        #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+        #     # df['{}'.format(x)] = df['{}'.format(x)].ewm(span=8).mean()
+        #     df['{}'.format(x)] = df['{}'.format(x)].rolling(window=8,min_periods=1).mean()
             df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=2).mean())
             n+=1
         if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
@@ -601,7 +913,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
             pass
             # print("iznum", list(df['{}'.format(x)].head(1))[0])
         # print("len_row_ratios",len_rows_ratios, len(df))
-
         if len(df) == len_rows_ratios:
             df['{}'.format(x)] = df['{}'.format(x)].replace(np.nan, 0)
             earliest_latest_warning = ""
@@ -670,40 +981,7 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     repeated_list = []
     # print("awfyes",year_df["{}".format(fin_metric_title)])
     # print("awfdf",df["{}".format(fin_metric_title)])
-    # df.to_csv("awfdf.csv")
-    def replace(group, stds):
-        group[np.abs(group - group.mean()) > stds * group.std()] = np.nan
-        return group
-    df['pct_chg_temp'] = df['{}'.format(fin_metric_title)]/df['{}'.format(fin_metric_title)].shift(-4)
-    df.loc[df['pct_chg_temp'] > 10, fin_metric_title] = np.nan
-    print("dast new df")
-    # df.to_csv("dastnewcsv.csv")
-
-    # df = df.drop_duplicates(subset=['date','QQ-YYYY', '{}'.format(x)], keep='first')
-    # df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-4)
-    # # print(list(df['pct_chg_temp']))
-
-    # df['pct_chg_temp'].values[df['pct_chg_temp'] > 10] = np.nan
-    # # print("df['pct_chg_temp']")
-    # # print(list(df['pct_chg_temp']))
-    # # # df.loc[df['foo'].isnull(),'foo'] = df['bar']
-    # # df.loc[df['pct_chg_temp'],np.nan] = df['{}'.format(x)]
-
-    # df['{}'.format(x)][df['pct_chg_temp'] == np.nan] = np.nan
-
-
-    # df.to_csv("tisktisk9.csv")
-    # # df = df.drop(['pct_chg_temp'], axis=1)
-
-
-
-
-
-    # df is your DataFrame
-    # df.loc[:, df.columns != '{}'.format(x)] = df.groupby('{}'.format(x)).transform(lambda g: replace(g, 3))
-
-    # df = df.interpolate()
-
+    df.to_csv("awfdf.csv")
     for a,n in enumerate(year_df['{}'.format(fin_metric_title)]):
         if len(repeated_list) >= len(df):
             pass
@@ -927,7 +1205,6 @@ def current_ratio(url_fin_metric,stock_or_etf,url_name,statement_or_ratio,url_sy
     df_tall = year_df[::-1]
     # print("kk2")
     df_tall['Year'] = "4/1/" + df_tall['Year']
-
     df_tall['Stock Price'] = df_tall['Price'].apply(lambda x: "${:,}".format(np.round(x,2)))
     df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
     # print("kk4")

@@ -10,9 +10,9 @@ $("#qaz_tabs")
 	.each(function (i) {
 		i = i + 1;
 		$(this)
-			.attr("id", "tab-" + i)
-			.addClass("tab")
-			.wrapInner("<div class='tab-wrapper'></div>");
+			.attr("id", "qaz_tab-" + i)
+			.addClass("qaz_tab")
+			.wrapInner("<div class='qaz_tab-wrapper'></div>");
 	});
 var count = $("#qaz_tabs").children().length - 1;
 var tab_width = 100 / count + "%";
@@ -29,14 +29,14 @@ $("#qaz_panels")
 	.each(function (i) {
 		i = i + 1;
 		$(this)
-			.attr("id", "panel-" + i)
-			.addClass("panel")
-			.wrapInner("<div class='panel-wrapper'></div>")
-			.prepend("<div class='accordion-tab'></div>");
+			.attr("id", "qaz_panel-" + i)
+			.addClass("qaz_panel")
+			.wrapInner("<div class='qaz_panel-wrapper'></div>")
+			.prepend("<div class='qaz_accordion-tab'></div>");
 	});
-$(".accordion-tab").each(function (i) {
+$(".qaz_accordion-tab").each(function (i) {
 	i = i + 1;
-	var tab_name = $("#tab-" + i).html();
+	var tab_name = $("#qaz_tab-" + i).html();
 	$(this).html(tab_name);
 });
 $("#qaz_tabs").children().eq(selectedTab).addClass("xactive");
@@ -46,7 +46,7 @@ $("#qaz_tabs > li").click(function () {
 	$("#qaz_panels > li").eq($(this).index()).toggleClass("xactive");
 	$(this).toggleClass("xactive");
 });
-$(".accordion-tab").click(function () {
+$(".qaz_accordion-tab").click(function () {
 	$("#qaz_tabs > li, #qaz_panels > li").removeClass("xactive");
 	$("#qaz_tabs > li").eq($(this).parent().index()).toggleClass("xactive");
 	$(this).parent().toggleClass("xactive");
@@ -64,9 +64,9 @@ $("#wsx_tabs")
 	.each(function (i) {
 		i = i + 1;
 		$(this)
-			.attr("id", "tab-" + i)
-			.addClass("tab")
-			.wrapInner("<div class='tab-wrapper'></div>");
+			.attr("id", "wsx_tab-" + i)
+			.addClass("wsx_tab")
+			.wrapInner("<div class='wsx_tab-wrapper'></div>");
 	});
 var count = $("#wsx_tabs").children().length - 1;
 var tab_width = 100 / count + "%";
@@ -83,14 +83,14 @@ $("#wsx_panels")
 	.each(function (i) {
 		i = i + 1;
 		$(this)
-			.attr("id", "panel-" + i)
-			.addClass("panel")
-			.wrapInner("<div class='panel-wrapper'></div>")
-			.prepend("<div class='accordion-tab'></div>");
+			.attr("id", "wsx_panel-" + i)
+			.addClass("wsx_panel")
+			.wrapInner("<div class='wsx_panel-wrapper'></div>")
+			.prepend("<div class='wsx_accordion-tab'></div>");
 	});
-$(".accordion-tab").each(function (i) {
+$(".wsx_accordion-tab").each(function (i) {
 	i = i + 1;
-	var tab_name = $("#tab-" + i).html();
+	var tab_name = $("#wsx_tab-" + i).html();
 	$(this).html(tab_name);
 });
 $("#wsx_tabs").children().eq(selectedTab).addClass("xactive");
@@ -100,30 +100,30 @@ $("#wsx_tabs > li").click(function () {
 	$("#wsx_panels > li").eq($(this).index()).toggleClass("xactive");
 	$(this).toggleClass("xactive");
 });
-$(".accordion-tab").click(function () {
+$(".wsx_accordion-tab").click(function () {
 	$("#wsx_tabs > li, #wsx_panels > li").removeClass("xactive");
 	$("#wsx_tabs > li").eq($(this).parent().index()).toggleClass("xactive");
 	$(this).parent().toggleClass("xactive");
 });
 
-// jQuery Responsive edcpage edctabs 1.0
+// jQuery Responsive edc_page edc_tabs 1.0
 var selectedTab = 0,
 	scrollDelay = 20,
 	scrollSpeed = 400,
 	scrolltopOffset = 0;
 
-$("#edctabs")
+$("#edc_tabs")
 	.children()
 	.each(function (i) {
 		i = i + 1;
 		$(this)
-			.attr("id", "tab-" + i)
-			.addClass("tab")
-			.wrapInner("<div class='tab-wrapper'></div>");
+			.attr("id", "edc_tab-" + i)
+			.addClass("edc_tab")
+			.wrapInner("<div class='edc_tab-wrapper'></div>");
 	});
-var count = $("#edctabs").children().length - 1;
+var count = $("#edc_tabs").children().length - 1;
 var tab_width = 100 / count + "%";
-$("#edctabs li")
+$("#edc_tabs li")
 	.css("width", tab_width)
 	.eq(0)
 	.addClass("first")
@@ -131,30 +131,30 @@ $("#edctabs li")
 	.eq(-1)
 	.addClass("last")
 	.end();
-$("#edcpanels")
+$("#edc_panels")
 	.children()
 	.each(function (i) {
 		i = i + 1;
 		$(this)
-			.attr("id", "panel-" + i)
-			.addClass("panel")
-			.wrapInner("<div class='panel-wrapper'></div>")
-			.prepend("<div class='accordion-tab'></div>");
+			.attr("id", "edc_panel-" + i)
+			.addClass("edc_panel")
+			.wrapInner("<div class='edc_panel-wrapper'></div>")
+			.prepend("<div class='edc_accordion-tab'></div>");
 	});
-$(".accordion-tab").each(function (i) {
+$(".edc_accordion-tab").each(function (i) {
 	i = i + 1;
-	var tab_name = $("#tab-" + i).html();
+	var tab_name = $("#edc_tab-" + i).html();
 	$(this).html(tab_name);
 });
-$("#edctabs").children().eq(selectedTab).addClass("xactive");
-$("#edcpanels").children().eq(selectedTab).addClass("xactive");
-$("#edctabs > li").click(function () {
-	$("#edctabs > li, #edcpanels > li").removeClass("xactive");
-	$("#edcpanels > li").eq($(this).index()).toggleClass("xactive");
+$("#edc_tabs").children().eq(selectedTab).addClass("xactive");
+$("#edc_panels").children().eq(selectedTab).addClass("xactive");
+$("#edc_tabs > li").click(function () {
+	$("#edc_tabs > li, #edc_panels > li").removeClass("xactive");
+	$("#edc_panels > li").eq($(this).index()).toggleClass("xactive");
 	$(this).toggleClass("xactive");
 });
-$(".accordion-tab").click(function () {
-	$("#edctabs > li, #edcpanels > li").removeClass("xactive");
-	$("#edctabs > li").eq($(this).parent().index()).toggleClass("xactive");
+$(".edc_accordion-tab").click(function () {
+	$("#edc_tabs > li, #edc_panels > li").removeClass("xactive");
+	$("#edc_tabs > li").eq($(this).parent().index()).toggleClass("xactive");
 	$(this).parent().toggleClass("xactive");
 });
