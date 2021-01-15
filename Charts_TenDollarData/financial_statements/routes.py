@@ -86,10 +86,12 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     from route_imports.ratio_map import url_to_name_map
     from route_imports.ratio_map import fin_statement_raw_names
     from route_imports.ratio_map import fin_statement_renamed_cols
+    from route_imports.ratio_map import fin_statement_renamed_titles
     from route_imports.ratio_map import metric_to_formula_map
     from route_imports.ratio_map import url_to_metric_map
     from route_imports.ratio_map import url_to_equation_map
     from route_imports.ratio_map import url_to_definition_map
+
     import scipy
     from flask import Markup
     start_time = time.time()
@@ -268,6 +270,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         len_not_na_year_df =  len(year_df_file[year_df_file['{}'.format(fin_metric_name)]==0]) #year_df_file['{}'.format(fin_metric_name)].notna().sum()
         # print("len df", len(df), "len year df", len(year_df_file), "len_not_na_df", len_not_na_df, "len_not_na_year_df", len_not_na_year_df)
         if len(year_df_file)*3 > len(df):
+            print("zYP")
             df = year_df_file
             all_titles = list(df)
             all_numbers_df = df[list(df.select_dtypes(include=['float','int64']))].div(4, axis=0)
@@ -285,8 +288,10 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                     new_df_list.append(new_df)
             df = pd.concat(new_df_list).sort_values(by="date",ascending = True).reset_index()
             df['date'] = df['date'].apply(lambda x: str(x)[0:10])
+            print(list(df))
+            df = df.drop(['index'],axis=1)
         df["Year"] = df["date"].apply(lambda x: x[0:4])
-        # print("sup1")
+        print("sup1")
         df["QQ-YYYY"] = df["period"]+"-"+df["date"].apply(lambda x: x[0:4])
         # else:
             # pass
@@ -304,7 +309,11 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         df = df.sort_values(by="date",ascending = False)
         early_missing_periods = df[::-1]["{}".format(fin_metric_name)].ne(0).idxmax()
         df = df[0:early_missing_periods+1]
-        # print("sup2")
+        print("sup2")
+        # df = df.drop(['index'],axis=1)
+        print(df.head(30))
+        # print(list(df))
+
         def groupby_agg(df):
             if "{}".format(statement_or_ratio) == "income-statement":
                 df_grouped = df.groupby("Year").sum()
@@ -337,7 +346,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 'acid_test_ratio':['quick_assets_math','total_current_liabilities',],
                 'pre_tax_income_to_sales':['pretax_income_non','net_revenue',],
                 'pre_tax_return_on_assets':['pretax_income_non','total_assets',],
-                'pre_tax_return_on_common_equity':['pretax_income_non','common_equity',],
+                'pre_tax_return_on_common_equity':['pretax_income_non','common_stock',],
                 'operating_roa':['operating_income','total_assets',],
                 'operating_profit_margin':['operating_income','net_revenue',],
                 'free_operating_cash_flow_to_debt':['operating_cash_flow','capex','total_debt',],
@@ -366,7 +375,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 'pretax_margin':['net_income','income_tax_expense','net_revenue',],
                 'income_to_net_worth_ratio':['net_income','deferred_income_tax','shares_outstanding_non',],
                 'return_on_assets_roa':['net_income','total_assets',],
-                'roe':['net_income','total_se',],
+                'return_on_equity_roe':['net_income','total_se',],
                 'profit_margin':['net_income','net_revenue',],
                 'earnings_per_share':['net_income','shares_outstanding_non',],
                 'current_cash_debt_coverage':['net_cash_by_operating_activities','total_current_liabilities',],
@@ -377,7 +386,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 'inventory_pct_of_revenue':['inventory','net_revenue',],
                 'intangibles_pct_of_book_value':['goodwill_n_intangible_assets','total_se',],
                 'ffo_funds_from_operations_to_debt':['ffo_math','total_debt',],
-                'operating_margin':['ebitda_non','d_a','net_revenue',],
+                'operating_margin':['ebitda_non','d_n_a','net_revenue',],
                 'cash_coverage_ratio':['ebitda_non','interest_expense',],
                 'ebitda_per_share':['ebitda_non','shares_outstanding_non',],
                 'ebitda_interest_coverage':['ebitda_non','interest_expense',],
@@ -429,8 +438,55 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             fin_df_list.append(fin_df)
         df_merge_is_bs = pd.merge(fin_df_list[0],fin_df_list[1],how="inner", on="QQ-YYYY")
         df_merge = pd.merge(df_merge_is_bs,fin_df_list[2],how="inner", on="QQ-YYYY")
+        # print("df_merge",df_merge)
         df_merge = df_merge[fin_statement_raw_names]
         df_merge.columns = fin_statement_renamed_cols
+        df_title = df_merge.copy()
+        df_title.columns = fin_statement_renamed_titles
+
+
+        df_yoy_cards = df_title.drop_duplicates(subset=['Date']).sort_values(by=["Date"])
+        df_yoy_cards = df_yoy_cards.loc[:, 'Period':'QQ-YYYY']
+
+        L = ['Other'] #['other','Other']
+        print("sup8")
+        print("df_yoy_cards",df_yoy_cards)
+        df_yoy_cards =  df_yoy_cards.loc[:, ~df_yoy_cards.columns.str.contains('|'.join(L))]
+        df_row_1 = (df_yoy_cards.select_dtypes(include=['float','int64']))[0:1].reset_index()
+        print("sup9")
+        df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[4:5].reset_index()
+        df_yoy = (df_row_1.div(df_row_2))-1
+        print("sup10")
+        print("df_yoy_cards",df_yoy)
+
+        greater_than = (df_yoy[list(df_yoy)]>=0.0) & (df_yoy[list(df_yoy)]<10)
+        less_than = (df_yoy[list(df_yoy)]<-0.01) & (df_yoy[list(df_yoy)]>-10)
+        print("sup11")
+        not_zero = (df_yoy[list(df_yoy)] != -420.6942069)
+        df_yoyx = df_yoy[((greater_than) | (less_than)) & not_zero]
+        print("sup12")
+
+        print("df_yoy_cards",df_yoyx)
+        df_yoy_cards.to_csv("df_yoy_cards2.csv")
+        df_yoyx = df_yoyx.dropna(axis=1, how='all')
+        df_yoyx_sorted = df_yoyx.iloc[0].sort_values(ascending=False)
+        print("sup13", df_yoyx_sorted)
+        df_yoyx.sample(5, axis=1)
+        df_yoyx_5 = df_yoyx.sample(5, axis=1)
+
+
+
+
+        yoy_cards_dict = {}
+        profiles_value = df_yoyx_5.values.tolist()[0]
+        for n, profiles_col in enumerate(list(df_yoyx_5)):
+            key = profiles_col
+            value = profiles_value[n]*100
+            value = change_markup(value,"percent","noarrow", "yoy_cards")
+            yoy_cards_dict[key] = value
+
+
+        print("df_merge", df_merge)
         df = df_merge.iloc[::-1]
         df = df.sort_values(by="date",ascending = True)
         df['ffo_math']=df['net_income'] + df['d_n_a'] + df['sales_maturities_of_investments'] + df['purchase_of_investments'] + df['investments_in_pp_n_e'] + df['acquisitions_net']
@@ -470,6 +526,9 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 #     print("negative now", df[['{}'.format(x),"QQ-YYYY" ]])
                 # else:
                     pass
+            print("listd_na",list(df))
+            if len(df[df['{}'.format(x)]==0])/len(df)>.7:
+                df['{}'.format(x)]= 1
             if len(df[df['{}'.format(x)]<0]) > len(df[df['{}'.format(x)]>0]):
                 # pass
                 # print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
@@ -513,6 +572,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # df = df.drop(['pct_chg_temp'], axis=1)
         # fin_metric_vars_old2.append(fin_metric_title)
         df["{}".format(fin_metric_title)] = metric_history
+
 
         print("wassup")
         print(df[fin_metric_vars_old2].head(50))
@@ -562,7 +622,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # print("title_bs", titles_bs)
         # print(list(df))
         df.columns = var_list
-        # print("sup5")
+        print("sup5",list(df))
     except Exception as e:
         pass
     try:
@@ -572,33 +632,33 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             # var_list.remove("Quarter & Year")
         except:
             pass
-        df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x: abs(x))
-        n = 0
-        df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-1)
-        df.loc[df['pct_chg_temp'] > 10, x] = np.nan
-        df.loc[df['pct_chg_temp'] < -10, x] = np.nan
-        # df.to_csv("whatev2.csv")
-        # print("vast new df",x)
-        # print(df[['date','pct_chg_temp',x]].head(40))
-        df = df.drop(['pct_chg_temp'], axis=1)
-        # print("qxaz", fin_statement_dir, df['{}'.format(x)].head(50),2)
-        len_rows_ratios = df['{}'.format(x)].isna().sum()
-        df = df.interpolate(method='linear')
-        while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
-            df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=2).mean())
-            n+=1
-        if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
-            # print("not number", list(df['{}'.format(x)].head(1))[0])
-            df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
-        else:
-            pass
-            # print("iznum", list(df['{}'.format(x)].head(1))[0])
-        # print("len_row_ratios",len_rows_ratios, len(df))
-        if len(df) == len_rows_ratios:
-            df['{}'.format(x)] = df['{}'.format(x)].replace(np.nan, 0)
-            earliest_latest_warning = ""
-            earliest_latest_disclaimer = ""
-            # return render_template('404.html'), 404
+        # df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x: abs(x))
+        # n = 0
+        # df['pct_chg_temp'] = df['{}'.format(x)]/df['{}'.format(x)].shift(-1)
+        # df.loc[df['pct_chg_temp'] > 10, x] = np.nan
+        # df.loc[df['pct_chg_temp'] < -10, x] = np.nan
+        # # df.to_csv("whatev2.csv")
+        # # print("vast new df",x)
+        # # print(df[['date','pct_chg_temp',x]].head(40))
+        # df = df.drop(['pct_chg_temp'], axis=1)
+        # # print("qxaz", fin_statement_dir, df['{}'.format(x)].head(50),2)
+        # len_rows_ratios = df['{}'.format(x)].isna().sum()
+        # df = df.interpolate(method='linear')
+        # while n <= len_rows_ratios: #df[df['{}'.format(x)].isna].shape[0]:#not df['{}'.format(x)].isin([0]).empty:
+        #     df['{}'.format(x)] = df['{}'.format(x)].fillna(df['{}'.format(x)].rolling(window=8,center=True,min_periods=2).mean())
+        #     n+=1
+        # if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
+        #     # print("not number", list(df['{}'.format(x)].head(1))[0])
+        #     df['{}'.format(x)].iloc[0] = df['{}'.format(x)][0:4].mean()
+        # else:
+        #     pass
+        #     # print("iznum", list(df['{}'.format(x)].head(1))[0])
+        # # print("len_row_ratios",len_rows_ratios, len(df))
+        # if len(df) == len_rows_ratios:
+        #     df['{}'.format(x)] = df['{}'.format(x)].replace(np.nan, 0)
+        #     earliest_latest_warning = ""
+        #     earliest_latest_disclaimer = ""
+        #     # return render_template('404.html'), 404
         # print("dxzhead", x, fin_metric_title, list(df['{}'.format(x)]))
         # print("dxghead",list(df['{}'.format(fin_metric_title)]))
         # df['{}'.format(fin_metric_title)] = df['{}'.format(x)]
@@ -627,6 +687,46 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # print("tail")
         # print(df["{}".format(x)].tail(30))
         df.columns = titles_bs
+        print("sup6",list(df))
+        print("sup7")
+        df_yoy_cards = df.loc[:, 'date':'finalLink']
+        L = ['Other'] #['other','Other']
+        print("sup8")
+        print("df_yoy_cards",df_yoy_cards)
+        df_yoy_cards =  df_yoy_cards.loc[:, ~df_yoy_cards.columns.str.contains('|'.join(L))]
+        df_row_1 = (df_yoy_cards.select_dtypes(include=['float','int64']))[0:1].reset_index()
+        print("sup9")
+        df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[4:5].reset_index()
+        df_yoy = (df_row_1.div(df_row_2))-1
+        print("sup10")
+        print("df_yoy_cards",df_yoy)
+
+        greater_than = (df_yoy[list(df_yoy)]>=0.0) & (df_yoy[list(df_yoy)]<10)
+        less_than = (df_yoy[list(df_yoy)]<-0.01) & (df_yoy[list(df_yoy)]>-10)
+        print("sup11")
+        not_zero = (df_yoy[list(df_yoy)] != -420.6942069)
+        df_yoyx = df_yoy[((greater_than) | (less_than)) & not_zero]
+        print("sup12")
+
+        print("df_yoy_cards",df_yoyx)
+        df_yoy_cards.to_csv("df_yoy_cards2.csv")
+        df_yoyx = df_yoyx.dropna(axis=1, how='all')
+        df_yoyx_sorted = df_yoyx.iloc[0].sort_values(ascending=False)
+        print("sup13", df_yoyx_sorted)
+        df_yoyx.sample(5, axis=1)
+        df_yoyx_5 = df_yoyx.sample(5, axis=1)
+
+
+
+
+        yoy_cards_dict = {}
+        profiles_value = df_yoyx_5.values.tolist()[0]
+        for n, profiles_col in enumerate(list(df_yoyx_5)):
+            key = profiles_col
+            value = profiles_value[n]
+            yoy_cards_dict[key] = value
+
+
         df = df[cols]
         # print("yo")
         # print("2try","fin metric title", fin_metric_title,"fin_metric_name",fin_metric_name, list(df))
@@ -648,7 +748,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             prev_4_quarters = np.mean(df["quarter avg"][5:9])
         # df["quarter avg"] = df["quarter avg"]
     except Exception as e:
-        # print("boohoo",e)
+        print("boohoo",e)
         year_df = groupby_agg(df)
         year_df['year'] = pd.to_datetime(year_df.index).values.astype(np.int64) // 10 ** 6
         # print("except e", e,"fin metric title", fin_metric_title,"fin_metric_name",fin_metric_name, list(year_df))
@@ -757,20 +857,26 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     # print("max_metricz", max_metric)
     # print("min_metricz", min_metric)
     try:
-        # print("zx2")
-        if latest_metric > earliest_metric:
-            pct_chg = (latest_metric/earliest_metric)
-        else:
-            pct_chg = (latest_metric/earliest_metric)
-        # print("zx3")
-        if (earliest_metric <0 and latest_metric>0) or (earliest_metric>0 and latest_metric<0):
-            earliest_latest_warning = "*"
-            earliest_latest_disclaimer =  Markup('<span class="ruhroh disclaimer_one">** A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate change, since the bottom/peak contains a negative number.</span>')
-        else:
+        print("zx2",latest_metric, earliest_metric)
+        try:
+
+            if latest_metric > earliest_metric:
+                pct_chg = (latest_metric/earliest_metric)
+            else:
+                pct_chg = (latest_metric/earliest_metric)
+            print("zx3")
+            if (earliest_metric <0 and latest_metric>0) or (earliest_metric>0 and latest_metric<0):
+                earliest_latest_warning = "*"
+                earliest_latest_disclaimer =  Markup('<span class="ruhroh disclaimer_one">** A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate change, since the bottom/peak contains a negative number.</span>')
+            else:
+                earliest_latest_warning = ""
+                earliest_latest_disclaimer = ""
+        except:
+            # pct_chg = 0
             earliest_latest_warning = ""
             earliest_latest_disclaimer = ""
         historical_pct_chg = (round(pct_chg-1, 1))
-        # print("zx4")
+        print("zx4")
         pct_chg = abs(pct_chg)
         annual_pct_chg  = (round(100*(pct_chg**(1/len(sorted_metric))-1),1))
         hist_pct_chg_str = change_markup(historical_pct_chg,"x","arrow","hist_pct_chg_str")
@@ -858,7 +964,10 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         for n,x in enumerate(closest_list_year):
             year_dates_price_list.append(list(market_cap_df[market_cap_df['timestamp'].isin([x])][::-1]['adjClose'])[0])
         df['Price'] = dates_price_list
-        year_df['Price']=year_dates_price_list[::-1]
+        try:
+            year_df['Price']=year_dates_price_list[::-1]
+        except:
+            year_df['Price']=np.nan
         price_json = np.nan_to_num(df[['date',"{}".format("Price")]].to_numpy()).tolist()[::-1]
     except Exception as e:
         price_json = []
@@ -898,9 +1007,16 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         except:
             pct_shares_tradable = '-'
     except Exception as e:
-        last_price = price_json[-1][1]
+        try:
+            last_price = price_json[-1][1]
+        except Exception as j:
+            last_price=""
+            print("kmds",j)
         last_pct_change = 0
-    last_price_json_timestamp  = price_json[-1][0]
+    try:
+        last_price_json_timestamp  = price_json[-1][0]
+    except:
+        last_price_json_timestamp = ""
     price_json = price_json[0:(len(price_json)-1)]
     price_json.append([last_price_json_timestamp,last_price])
     first_price = price_json[0][1]
@@ -977,6 +1093,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         df_html_tall = df_html_tall.to_html(index=False)
     df_html_tall = df_html_tall.replace('border="1" class="dataframe">','class="yoy_chrono_table" id="df_myTable" border="1" class="dataframe">')
     df_html_tall = df_html_tall.replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
+    df_html_tall = df_html_tall.replace("$nan","-")
     df_html_tall = df_html_tall.replace("-inf%","-")
     df_html_tall = df_html_tall.replace("inf%","-")
     df_html_tall = df_html_tall.replace("[","")
@@ -1172,31 +1289,46 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     # print("df_json ", df_json)
     # pd.DataFrame({"df_json":df_json}).to_csv("df_json.csv")
     # Markup('** A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate change, since the bottom/peak contains a negative number.')
-    split_input = profiles_dict['description'].split(".")
-    pass_index = -100
-    sentence_list = []
-    for n,x in enumerate(split_input):
-        print(pass_index)
-        if pass_index == n+1:
-            pass
-        else:
-            if (len(x))<30:
-                try:
-                    sentence = x+split_input[n+1]+"."
-                except:
-                    sentence = x+"."
-                pass_index = n+1
-                sentence = ("<li span='description_list'>{}</li>".format(sentence))
-                sentence_list.append(sentence)
+    try:
+        split_input = profiles_dict['description'].split(".")
+        pass_index = -100
+        sentence_list = []
+        for n,x in enumerate(split_input):
+            print(pass_index)
+            if pass_index == n+1:
+                pass
             else:
-                sentence = x+"."
-                sentence = ("<li span='description_list'>{}</li>".format(sentence))
-                sentence_list.append(sentence)
-        print(n,sentence)
-    sentences_list_joined = Markup("".join(sentence_list[:-1]))
-    html_sentence_list = sentences_list_joined #Markup("<ul>"+sentences_list_joined+"</ul>")
+                if (len(x))<30:
+                    try:
+                        sentence = x+split_input[n+1]+"."
+                    except:
+                        sentence = x+"."
+                    pass_index = n+1
+                    sentence = ("<li span='description_list'>{}</li>".format(sentence))
+                    sentence_list.append(sentence)
+                else:
+                    sentence = x+"."
+                    sentence = ("<li span='description_list'>{}</li>".format(sentence))
+                    sentence_list.append(sentence)
+            print(n,sentence)
+        sentences_list_joined = Markup("".join(sentence_list[:-1]))
+        html_sentence_list = sentences_list_joined #Markup("<ul>"+sentences_list_joined+"</ul>")
+    except:
+        sentence = profiles_dict['description']
+        sentence = ("<li span='description_list'>{}</li>".format(sentence))
+        html_sentence_list = Markup(sentence)
     # print("this", html_sentence_list)
     return render_template('current_ratio.html', \
+                            yoy_1_key = list(yoy_cards_dict.items())[0][0],
+                            yoy_1_value = list(yoy_cards_dict.items())[0][1],
+                            yoy_2_key = list(yoy_cards_dict.items())[1][0],
+                            yoy_2_value = list(yoy_cards_dict.items())[1][1],
+                            yoy_3_key = list(yoy_cards_dict.items())[2][0],
+                            yoy_3_value = list(yoy_cards_dict.items())[2][1],
+                            yoy_4_key = list(yoy_cards_dict.items())[3][0],
+                            yoy_4_value = list(yoy_cards_dict.items())[3][1],
+                            yoy_5_key = list(yoy_cards_dict.items())[4][0],
+                            yoy_5_value = list(yoy_cards_dict.items())[4][1],
                             earliest_latest_warning = earliest_latest_warning,\
                             earliest_latest_disclaimer = earliest_latest_disclaimer,\
                             html_sentence_list = html_sentence_list,\
