@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Horizontal Click and Drag Scrolling with JS</title>
+
+
+
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+/* body,
+html {
+  color: #fff;
+  text-align: center;
+  background: #efefef;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+.grid-container {
+  background: #efefef;
+  font-family: "Rubik", sans-serif;
+} */
+
+@supports (display: grid) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header" "title title footer" "main main main";
+  }
+  @media screen and (max-width: 500px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.3fr 1fr auto 1fr;
+      grid-template-areas: "header" "title" "main" "footer";
+    }
+  }
+
+  .grid-item {
+    color: #fff;
+    background: skyblue;
+    padding: 3.5em 1em;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  /* .header {
+    background-color: #092a37;
+    grid-area: header;
+    padding: 1em;
+  }
+
+  .title {
+    color: #555;
+    background-color: #f4fbfd;
+    grid-area: title;
+  } */
+
+  .main {
+    color: #959595;
+    background-color: white;
+    grid-area: main;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  /* .footer {
+    background-color: #5bbce4;
+    grid-area: footer;
+    padding: 0.6em;
+  } */
+
+  .items {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .items.active {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+
+  .item {
+    display: inline-block;
+    background: skyblue;
+    min-height: 250px;
+    min-width: 400px;
+    margin: 2em 1em;
+  }
+  @media screen and (max-width: 500px) {
+    .item {
+      min-height: 200px;
+      min-width: 200px;
+    }
+  }
+}
+a {
+  display: block;
+  color: #c9e9f6;
+  text-decoration: underline;
+  margin: 1em auto;
+}
+a:hover {
+  cursor: pointer;
+}
+
+p {
+  text-align: left;
+  text-indent: 20px;
+  font-weight: 100;
+}
+
+i {
+  color: skyblue;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="grid-container">
+  <header class="grid-item header">
+    <h2>🍽 CSS Grid Tem-plated 🍽</h2>
+
+  </header>
+  <div class="grid-item title">
+    <h1>So you wanna side scroll, eh?</h1>
+  </div>
+  <main class="grid-item main">
+    <div class="items">
+      <div class="item item1">qwewq</div>
+      <div class="item item2">1223</div>
+      <div class="item item3">qwe</div>
+      <div class="item item4">ecc</div>
+      <div class="item item5">bbb</div>
+      <div class="item item6">3333</div>
+      <div class="item item7">dd</div>
+      <div class="item item8">b</div>
+      <div class="item item9">b</div>
+      <div class="item item10">vvv</div>
+    </div>
+  </main>
+</div>
+    <!-- <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script> -->
+
+
+      <script id="rendered-js" >
+const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
+    </script>
+
+
+
+</body>
+
+</html>
+

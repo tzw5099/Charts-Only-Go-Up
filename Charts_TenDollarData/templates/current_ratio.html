@@ -1,6 +1,156 @@
 {% extends "base.html" %}
 {% block charts_quarter_head %}
+<title>
+    {{company_symbol}}'s {{fin_metric_name}}?
+                    |
+                    {{ earliest_year }}
+                    -
+                    2021
+                    | {{company_short_name}} | Charts.TenDollarData
+</title>
+
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6260e90056330e286d692b412/168a56cc1fa171c0dc39aa3e8.js");</script>
+<!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6260e90056330e286d692b412/168a56cc1fa171c0dc39aa3e8.js");</script> -->
+<!-- <script async data-uid="304db69547" src="https://colossal-hustler-7306.ck.page/304db69547/index.js"></script> -->
 <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+/* body,
+html {
+  color: #fff;
+  text-align: center;
+  background: #efefef;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+.grid-container {
+  background: #efefef;
+  font-family: "Rubik", sans-serif;
+} */
+
+@supports (display: grid) {
+  .horizontal_grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header" "title title footer" "main main main";
+  }
+  @media screen and (max-width: 500px) {
+    .horizontal_grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.3fr 1fr auto 1fr;
+      grid-template-areas: "header" "title" "main" "footer";
+    }
+  }
+
+  .horizontal_grid-item {
+    color: #000000;
+    background: white;
+    border: 2px solid #EDEDED !important;
+    padding: 3.5em 1em;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  /* .header {
+    background-color: #092a37;
+    grid-area: header;
+    padding: 1em;
+  }
+
+  .title {
+    color: #555;
+    background-color: #f4fbfd;
+    grid-area: title;
+  } */
+
+  .main {
+    color: black;
+    background-color: white;
+    grid-area: main;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  /* .footer {
+    background-color: #5bbce4;
+    grid-area: footer;
+    padding: 0.6em;
+  } */
+
+  .items {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .items.active {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+
+  .item {
+    display: inline-block;
+    background: white;
+    border: 2px solid #EDEDED !important;
+    min-height: 100px;
+    min-width: 200px;
+    /* margin: 2em 1em; */
+    margin-top:16px;
+    margin-bottom:16px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 500px) {
+    .item {
+      min-height: 130px;
+      min-width: 200px;
+    }
+  }
+}
+/* a {
+  display: block;
+  color: #c9e9f6;
+  text-decoration: underline;
+  margin: 1em auto;
+} */
+a:hover {
+  cursor: pointer;
+}
+
+/* p {
+  text-align: left;
+  text-indent: 20px;
+  font-weight: 100;
+} */
+
+/* i {
+  color: skyblue;
+} */
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/sliding_tabs.css') }}">
         <script>
@@ -728,7 +878,7 @@
                 <h2 class="text-primary mb-0">
                     <span class="last12months">
                     <!-- {{ latest_year }} -->
-                    Last 12 Months
+                    <!-- Last 12 Months
                     <br>
                     {{yoy_1_key}}
                     <br>
@@ -736,7 +886,7 @@
                     <br>
                     {{yoy_1_value}}
                     <br>
-                    {{yoy_2_value}}
+                    {{yoy_2_value}} -->
                 {{ fin_metric_name }}:
                     <!-- <span class="up_green">
                         <i class="fa fa-arrow-up up_green" aria-hidden="true"></i>
@@ -755,9 +905,9 @@
                 <h2 class="text-primary mb-0">
                     <span class="last12months">
                     <!-- {{ latest_year }} -->
-                    Target price:  {{currency_symbol}}{{stock_price_10_years}}
+                    <!-- Target price:  {{currency_symbol}}{{stock_price_10_years}} -->
 
-                    <br>
+                    <!-- <br> -->
                 </h2>
             </div>
             <div class="pad-10-top pad-10-bottom pad-10-left pad-10-right">
@@ -772,6 +922,8 @@
                     <div id="highbar" class="highbar_mobile">
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
                     <br>
+                    {% if company_similar|length > 3 %}
+
                     Checkout the
                 {{ fin_metric_name }}
                 for
@@ -779,403 +931,558 @@
                 competitors<br>
                 {{ company_similar }}
                 .
+                {% endif %}
                 </span>
     </div>
 </div>
 </div>
 <div class="col rightside">
     <div class="card shadow border-left-primary py-2 rightside" style="margin: 5px;">
-        <!-- <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;"> -->
-        <div class="card-body summary_header">
-            <h2 class="text-primary mb-0 historical">
-                <!-- Summary Statistics (Annual)
-                            <br> -->
-                <!-- {{ fin_metric_name }} -->
+            <!-- <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;"> -->
+            <div class="card-body summary_header">
+                <h2 class="text-primary mb-0 historical">
+                    <!-- Summary Statistics (Annual)
+                                <br> -->
+                    <!-- {{ fin_metric_name }} -->
+                    <!-- <br> -->
+                    Historical (All-Time) Stats for <span class="greenish">{{fin_metric_name}}</span>
+                    <!-- (
+                {{ earliest_year }}
+                -
+                {{ latest_year }}
+                ) -->
+                </h2>
+                <!-- <du class="text-primary mb-0 historical"></du>All Years -->
                 <!-- <br> -->
-                Historical Stats for <span class="greenish">{{fin_metric_name}}</span>
-                <!-- (
-            {{ earliest_year }}
-            -
-            {{ latest_year }}
-            ) -->
-            </h2>
-            <!-- <du class="text-primary mb-0 historical"></du>All Years -->
-            <!-- <br> -->
-            <!-- <div class="text-dark font-weight-bold h5 mb-0"></div> -->
-        </div>
-        <div class="card-body summary_body">
-            <div class="text-dark font-weight-bold h5 mb-0"></div>
-<!--
-    <div id="tgb_page-tgb_tabs" class="tgb_page-tgb_tabs-css">
-        <ul id="tgb_tabs" class="tgb_tabs-css">
-            <li class="hr_one"><a href="#" class="tabs_title_links"><div class="innerhref">All Years</div></a></li>
-            <li class="hr_two"><a href="#" class="tabs_title_links"><div class="innerhref">Past 10 Years</div></a></li>
-            <hr class="stickyhr" />
-        </ul>
-        <ul id="tgb_panels" class="tgb_panels-css">
-            <li>Panel 1</li>
-            <li>Panel 2</li>
-        </ul>
-    </div>
-    <script>
-        var selectedTab = 0, // NOTE: FSDF
-            scrollDelay = 20,
-            scrollSpeed = 400,
-            scrolltopOffset = 0;
-        $("#tgb_tabs").children().each(function (i) {
-            i = i + 1;
-            $(this).attr('id', "tab-" + i).addClass("tab").wrapInner(
-                "<div class='tab-wrapper'></div>");
-        });
-        var count = $("#tgb_tabs").children().length-1;
-        var tab_width = (100 / count) + "%";
-        $("#tgb_tabs li").css("width", tab_width).eq(0).addClass('first').end().eq(-1).addClass(
-            'last').end();
-        $("#tgb_panels").children().each(function (i) {
-            i = i + 1;
-            $(this).attr('id', "panel-" + i).addClass("panel").wrapInner(
-                "<div class='panel-wrapper'></div>").prepend(
-                "<div class='accordion-tab'></div>");
-        });
-        $(".accordion-tab").each(function (i) {
-            i = i + 1;
-            var tab_name = $("#tab-" + i).html();
-            $(this).html(tab_name);
-        });
-        $("#tgb_tabs").children().eq(selectedTab).addClass("xactive");
-        $("#tgb_panels").children().eq(selectedTab).addClass("xactive");
-        $("#tgb_tabs > li").click(function () {
-            $("#tgb_tabs > li, #tgb_panels > li").removeClass("xactive");
-            $("#tgb_panels > li").eq($(this).index()).toggleClass("xactive");
-            $(this).toggleClass("xactive");
-        });
-        $(".accordion-tab").click(function () {
-            $("#tgb_tabs > li, #tgb_panels > li").removeClass("xactive");
-            $("#tgb_tabs > li").eq($(this).parent().index()).toggleClass("xactive");
-            $(this).parent().toggleClass("xactive");
-        });
-    </script>
-             -->
-<!--
-                        {% if statement_or_ratio != "ratios" %}
-            <div class="table-responsive tstat0">
-                <table class="table">
-                        <tbody class="lifetime">
-                        <tr>
-                            <td class="hist_measure">
-                                Cumulative, Total <br />(
+                <!-- <div class="text-dark font-weight-bold h5 mb-0"></div> -->
+            </div>
+            <div class="card-body summary_body">
+                <div class="text-dark font-weight-bold h5 mb-0"></div>
+            <!--
+                <div id="tgb_page-tgb_tabs" class="tgb_page-tgb_tabs-css">
+                    <ul id="tgb_tabs" class="tgb_tabs-css">
+                        <li class="hr_one"><a href="#" class="tabs_title_links"><div class="innerhref">All Years</div></a></li>
+                        <li class="hr_two"><a href="#" class="tabs_title_links"><div class="innerhref">Past 10 Years</div></a></li>
+                        <hr class="stickyhr" />
+                    </ul>
+                    <ul id="tgb_panels" class="tgb_panels-css">
+                        <li>Panel 1</li>
+                        <li>Panel 2</li>
+                    </ul>
+                </div>
+                <script>
+                    var selectedTab = 0, // NOTE: FSDF
+                        scrollDelay = 20,
+                        scrollSpeed = 400,
+                        scrolltopOffset = 0;
+                    $("#tgb_tabs").children().each(function (i) {
+                        i = i + 1;
+                        $(this).attr('id', "tab-" + i).addClass("tab").wrapInner(
+                            "<div class='tab-wrapper'></div>");
+                    });
+                    var count = $("#tgb_tabs").children().length-1;
+                    var tab_width = (100 / count) + "%";
+                    $("#tgb_tabs li").css("width", tab_width).eq(0).addClass('first').end().eq(-1).addClass(
+                        'last').end();
+                    $("#tgb_panels").children().each(function (i) {
+                        i = i + 1;
+                        $(this).attr('id', "panel-" + i).addClass("panel").wrapInner(
+                            "<div class='panel-wrapper'></div>").prepend(
+                            "<div class='accordion-tab'></div>");
+                    });
+                    $(".accordion-tab").each(function (i) {
+                        i = i + 1;
+                        var tab_name = $("#tab-" + i).html();
+                        $(this).html(tab_name);
+                    });
+                    $("#tgb_tabs").children().eq(selectedTab).addClass("xactive");
+                    $("#tgb_panels").children().eq(selectedTab).addClass("xactive");
+                    $("#tgb_tabs > li").click(function () {
+                        $("#tgb_tabs > li, #tgb_panels > li").removeClass("xactive");
+                        $("#tgb_panels > li").eq($(this).index()).toggleClass("xactive");
+                        $(this).toggleClass("xactive");
+                    });
+                    $(".accordion-tab").click(function () {
+                        $("#tgb_tabs > li, #tgb_panels > li").removeClass("xactive");
+                        $("#tgb_tabs > li").eq($(this).parent().index()).toggleClass("xactive");
+                        $(this).parent().toggleClass("xactive");
+                    });
+                </script>
+                        -->
+            <!--
+                            {% if statement_or_ratio != "ratios" %}
+                <div class="table-responsive tstat0">
+                    <table class="table">
+                            <tbody class="lifetime">
+                            <tr>
+                                <td class="hist_measure">
+                                    Cumulative, Total <br />(
+                                    {{ earliest_year }}
+                                    -
+                                    {{ latest_year }}
+                                    )
+                                </td>
+                                <td class="hist_stats">
+                                    {{ lifetime_sum_all_metric }}
+                                </td>
+                                <td rowspan="2" class="subtd pct_chg_summary">
+                                </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                    </div>
+                    {% endif %} -->
+                    <!-- <hr class="stats_hr"> -->
+                    <!-- <br> -->
+                    <div class="table-responsive tstat1">
+                        <table class="table">
+                            <!-- <tr>
+                                <td class="hist_measure">
+                                    Change (
                                 {{ earliest_year }}
                                 -
                                 {{ latest_year }}
                                 )
-                            </td>
-                            <td class="hist_stats">
-                                {{ lifetime_sum_all_metric }}
-                            </td>
-                            <td rowspan="2" class="subtd pct_chg_summary">
-                            </td>
-                        </tr>
+                                </td>
+                                <td class="hist_stats">
+                                    <b>
+                                        {{ historical_pct_chg }}
+                                    </b>
+                                </td>
+                            </tr> -->
+                            <!-- <tbody class="historical_metric_change"> -->
+                            <!-- <tr>
+                                <td class="hist_measure">
+                                                            Change (Annual)
+                                                        </td>
+                                                        <td class="hist_stats">
+                                                            {{ annual_pct_chg_str }}
+                                                        </td></tr> -->
+                            <tr>
+                                <td class="subtd_header">
+                                    <i class="material-icons stats-top">
+                                        <!-- trending_up -->
+                                        chevron_right
+                                    </i>
+                                    {{ latest_year }}
+                                </td>
+                                <td class="subtd_body">
+                                    {{ latest_metric_str }}
+                                </td>
+                                <td rowspan="2" class="subtd pct_chg_summary big_cell">
+                                    {{ hist_pct_chg_str }}{{earliest_latest_warning}}
+
+                                    <br>
+                                    <span class="over_x_years">
+                                        (
+                                    {{ annual_pct_chg_str }}
+                                    / year avg)
+                                    <!-- annual average) -->
+                                    </span>
+                                </td>
+                                <!-- <td class="stock_price_rows">asdsa</td> -->
+                                <!-- <td class="subtd">{{ annual_pct_chg_str }}</td> -->
+                            </tr>
+                            <tr>
+                                <td class="subtd_header">
+                                    <i class="material-icons stats-top">
+                                        <!-- trending_up -->
+                                        chevron_left
+                                    </i>
+                                    {{ earliest_year }}
+                                </td>
+                                <td class="subtd_body">
+                                    {{ earliest_metric_str }}
+                                </td>
+                            </tr>
+                        <!-- </tbody> -->
+                    <!-- </table>
+                    </div> -->
+                    <!-- <div class="table-responsive tstat11">
+                        <table class="table">
+                            <tbody class="historical_metric_change">
+                            <tr>
+                                <td class="subtd_header">
+                                    {{ earliest_year }} - {{ latest_year }}
+                                </td>
+                                <td class="subtd_body">
+                                    {{ latest_metric_str }}
+                                </td>
+                                <td rowspan="2" class="subtd pct_chg_summary big_cell">
+                                    {{ hist_pct_chg_str }}
+                                    <br>
+                                    <span class="over_x_years">
+                                        (
+                                    {{ annual_pct_chg_str }}
+                                    /year avg)
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="subtd_header">
+                                    {{ earliest_metric_str }} - {{ latest_metric_str }}
+                                </td>
+                                <td class="subtd_body">
+                                    {{ earliest_metric_str }}
+                                </td>
+                            </tr>
                         </tbody>
-                </table>
-                </div>
-                {% endif %} -->
-                <!-- <hr class="stats_hr"> -->
-                <!-- <br> -->
-                <div class="table-responsive tstat1">
-                    <table class="table">
-                        <!-- <tr>
-                            <td class="hist_measure">
-                                Change (
-                            {{ earliest_year }}
-                            -
-                            {{ latest_year }}
-                            )
-                            </td>
-                            <td class="hist_stats">
-                                <b>
-                                    {{ historical_pct_chg }}
-                                </b>
-                            </td>
-                        </tr> -->
-                        <!-- <tbody class="historical_metric_change"> -->
-                        <!-- <tr>
-                            <td class="hist_measure">
-                                                        Change (Annual)
-                                                    </td>
-                                                    <td class="hist_stats">
-                                                        {{ annual_pct_chg_str }}
-                                                    </td></tr> -->
-                        <tr>
-                            <td class="subtd_header">
-                                <i class="material-icons stats-top">
-                                    <!-- trending_up -->
-                                    chevron_right
-                                </i>
-                                {{ latest_year }}
-                            </td>
-                            <td class="subtd_body">
-                                {{ latest_metric_str }}
-                            </td>
-                            <td rowspan="2" class="subtd pct_chg_summary big_cell">
-                                {{ hist_pct_chg_str }}{{earliest_latest_warning}}
+                    </table>
+                    </div> -->
+                    <!-- <hr class="stats_hr"> -->
+                    <!-- <br> -->
+                    <!-- <div class="table-responsive tstat2">
+                        <table class="table"> -->
+                    <!-- <tbody class="peakbottom"> -->
+                    <tr>
+                        <td class="hist_measure subtd_header">
+                            <i class="material-icons stats-top">vertical_align_top</i> Peak
+                        </td>
+                        <td class="hist_stats middle">
+                            {{ max_str }}
+                        </td>
+                        <td rowspan="2" class="subtd max_min_summary big_cell ">
+                            {{ max_min_range_str }}
+                            {{min_max_warning}}
 
-                                <br>
-                                <span class="over_x_years">
-                                    (
-                                {{ annual_pct_chg_str }}
-                                / year avg)
-                                <!-- annual average) -->
-                                </span>
-                            </td>
-                            <!-- <td class="stock_price_rows">asdsa</td> -->
-                            <!-- <td class="subtd">{{ annual_pct_chg_str }}</td> -->
-                        </tr>
-                        <tr>
-                            <td class="subtd_header">
-                                <i class="material-icons stats-top">
-                                    <!-- trending_up -->
-                                    chevron_left
-                                </i>
-                                {{ earliest_year }}
-                            </td>
-                            <td class="subtd_body">
-                                {{ earliest_metric_str }}
-                            </td>
-                        </tr>
-                    <!-- </tbody> -->
-                <!-- </table>
-                </div> -->
-                <!-- <div class="table-responsive tstat11">
-                    <table class="table">
-                        <tbody class="historical_metric_change">
-                        <tr>
-                            <td class="subtd_header">
-                                {{ earliest_year }} - {{ latest_year }}
-                            </td>
-                            <td class="subtd_body">
-                                {{ latest_metric_str }}
-                            </td>
-                            <td rowspan="2" class="subtd pct_chg_summary big_cell">
-                                {{ hist_pct_chg_str }}
-                                <br>
-                                <span class="over_x_years">
-                                    (
-                                {{ annual_pct_chg_str }}
-                                /year avg)
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="subtd_header">
-                                {{ earliest_metric_str }} - {{ latest_metric_str }}
-                            </td>
-                            <td class="subtd_body">
-                                {{ earliest_metric_str }}
-                            </td>
-                        </tr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hist_measure subtd_header">
+                            <i class="material-icons  stats-bottom">vertical_align_bottom</i> Bottom
+                        </td>
+                        <td class="hist_stats middle">
+                            {{ min_str }}
+                        </td>
+                    </tr>
+                <!-- </tbody> -->
+                    <!-- </table>
+                    </div> -->
+                    <!-- <hr class="stats_hr"> -->
+                    <!-- <br> -->
+                    <!-- <div class="table-responsive tstat3">
+                        <table class="table"> -->
+                <!-- <tbody class="updownyears"> -->
+                    <tr>
+                        <td class="hist_measure subtd_header">
+                            <i class="material-icons stats-top">
+                                <!-- trending_up -->
+                                arrow_drop_up
+                                <!-- align_vertical_bottom -->
+                            </i> # of Up Years
+                            <!-- <br> <span class="font12">Positive YoY change (0%+)</span> -->
+                        </td>
+                        <td class="hist_stats middle">
+                            {{ num_years_increased }}
+                        </td>
+                        <td rowspan="2" class="subtd big_cell big_up_year">
+                            {{num_years_increased}} of {{num_years}} <br>years up.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hist_measure subtd_header">
+                            <i class="material-icons stats-bottom">
+                                <!-- trending_down -->
+                                arrow_drop_down
+                                <!-- align_vertical_top -->
+                            </i> # of Down Years
+                            <!-- <br><span class="font12">Negative YoY change</span> -->
+                        </td>
+                        <td class="hist_stats middle">
+                            {{ num_years_bad }}
+                        </td>
+                    </tr>
                     </tbody>
-                </table>
-                </div> -->
-                <!-- <hr class="stats_hr"> -->
-                <!-- <br> -->
-                <!-- <div class="table-responsive tstat2">
-                    <table class="table"> -->
-                <!-- <tbody class="peakbottom"> -->
-                <tr>
-                    <td class="hist_measure subtd_header">
-                        <i class="material-icons stats-top">vertical_align_top</i> Peak
-                    </td>
-                    <td class="hist_stats middle">
-                        {{ max_str }}
-                    </td>
-                    <td rowspan="2" class="subtd max_min_summary big_cell ">
-                        {{ max_min_range_str }}
-                        {{min_max_warning}}
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="hist_measure subtd_header">
-                        <i class="material-icons  stats-bottom">vertical_align_bottom</i> Bottom
-                    </td>
-                    <td class="hist_stats middle">
-                        {{ min_str }}
-                    </td>
-                </tr>
-            <!-- </tbody> -->
-                <!-- </table>
-                </div> -->
-                <!-- <hr class="stats_hr"> -->
-                <!-- <br> -->
-                <!-- <div class="table-responsive tstat3">
-                    <table class="table"> -->
-            <!-- <tbody class="updownyears"> -->
-                <tr>
-                    <td class="hist_measure subtd_header">
-                        <i class="material-icons stats-top">
-                            <!-- trending_up -->
-                            arrow_drop_up
-                            <!-- align_vertical_bottom -->
-                        </i> # of Up Years
-                        <!-- <br> <span class="font12">Positive YoY change (0%+)</span> -->
-                    </td>
-                    <td class="hist_stats middle">
-                        {{ num_years_increased }}
-                    </td>
-                    <td rowspan="2" class="subtd big_cell big_up_year">
-                        {{num_years_increased}} of {{num_years}} <br>years up.
-                    </td>
-                </tr>
-                <tr>
-                    <td class="hist_measure subtd_header">
-                        <i class="material-icons stats-bottom">
-                            <!-- trending_down -->
-                            arrow_drop_down
-                            <!-- align_vertical_top -->
-                        </i> # of Down Years
-                        <!-- <br><span class="font12">Negative YoY change</span> -->
-                    </td>
-                    <td class="hist_stats middle">
-                        {{ num_years_bad }}
-                    </td>
-                </tr>
-                </tbody>
-                </table>
-                </div>
-                <!-- <hr class="stats_hr"> -->
-                <!-- <br> -->
-                <span class="font12">Up Years = Positive (0%+) YoY change</span><br>
-                <span class="font12">Down Years = Negative (less than 0%) YoY change </span>
-                <br><br>
+                    </table>
+                    </div>
+                    <!-- <hr class="stats_hr"> -->
+                    <!-- <br> -->
+                    <span class="font12">Up Years = Positive (0%+) YoY change</span><br>
+                    <span class="font12">Down Years = Negative (less than 0%) YoY change </span>
+                    <br><br>
 
 
-                <h2 class="key_points">Key Points <span class="key_subtitle">(Stock Price Comparison)</span></h2>
-                <!-- <br> -->
-                <!-- <h4><span class="key_subtitle">Stock Price Comparison</span></h4> -->
-                <!-- <span class="key_body"> -->
-                <ul class="key_bullets">
-                <li>
-                {{ company_symbol }}'s
-                stock price has
-                {% if all_time_price_chg_num >= 1 %}
-                rallied
-                {% elif all_time_price_chg_num < 1 %}
-                drop
-                {% else %}
-                <!-- nothing -->
-                {% endif %}
-                {{all_time_price_chg}}
-                from {{currency_symbol}}{{first_price}} in {{ earliest_year }}
-                <!-- from {{currency_symbol}}{{first_price}} to {{currency_symbol}}{{last_price}} -->
-                ,
-                or             <!-- {{ hist_pct_chg_str_no_arrow }} -->
-                {{price_metric_rate_change_str}}
-                    <!-- {d% if statement_or_ratio != "ratios" %d} -->
-                {% if price_metric_rate_change|abs > 1 %}
-                faster than it's {{ fin_metric_name.lower() }}
-                {% else %}
-                the rate relative to it's {{ fin_metric_name.lower() }}
-                {% endif %}
-                over the same period.
+                    <h2 class="key_points">Key Points <span class="key_subtitle">(Stock Price Comparison)</span></h2>
+                    <!-- <br> -->
+                    <!-- <h4><span class="key_subtitle">Stock Price Comparison</span></h4> -->
+                    <!-- <span class="key_body"> -->
+                    <ul class="key_bullets">
+                    <li>
+                    {{ company_symbol }}'s
+                    stock price has
+                    {% if all_time_price_chg_num >= 1 %}
+                    rallied
+                    {% elif all_time_price_chg_num < 1 %}
+                    drop
+                    {% else %}
+                    <!-- nothing -->
+                    {% endif %}
+                    {{all_time_price_chg}}
+                    from {{currency_symbol}}{{first_price}} in {{ earliest_year }}
+                    <!-- from {{currency_symbol}}{{first_price}} to {{currency_symbol}}{{last_price}} -->
+                    ,
+                    or             <!-- {{ hist_pct_chg_str_no_arrow }} -->
+                    {{price_metric_rate_change_str}}
+                        <!-- {d% if statement_or_ratio != "ratios" %d} -->
+                    {% if price_metric_rate_change|abs > 1 %}
+                    faster than it's {{ fin_metric_name.lower() }}
+                    {% else %}
+                    the rate relative to it's {{ fin_metric_name.lower() }}
+                    {% endif %}
+                    over the same period.
+                        </li>
+                    <li>
+                        <!-- <h3 class="bigif"> -->
+                        If {{ company_symbol }}
+                    {% if pct_chg_num >= 1 %}
+                    grows
+                    {% elif pct_chg_num < 1 %}
+                    shrinks
+                    {% else %}
+                    <!-- nothing -->
+                    {% endif %}
+                    it's stock at the same rate as it's  {{ fin_metric_name.lower() }}  ({{ annual_pct_chg_str }}/year) , it's stock price will
+                    {% if pct_chg_num >= 1 %}
+                    grow
+                    {% elif pct_chg_num < 1 %}
+                    shrink
+                    {% else %}
+                    <!-- nothing -->
+                    {% endif %}
+                    {{growth_10_years_str}} and
+                    hit {{currency_symbol}}{{stock_price_10_years}} over the next 10 years.
+                    <!-- </h3> -->
                     </li>
-                <li>
-                    <!-- <h3 class="bigif"> -->
-                    If {{ company_symbol }}
-                {% if pct_chg_num >= 1 %}
-                grows
-                {% elif pct_chg_num < 1 %}
-                shrinks
-                {% else %}
-                <!-- nothing -->
-                {% endif %}
-                it's stock at the same rate as it's  {{ fin_metric_name.lower() }}  ({{ annual_pct_chg_str }}/year) , it's stock price will
-                {% if pct_chg_num >= 1 %}
-                grow
-                {% elif pct_chg_num < 1 %}
-                shrink
-                {% else %}
-                <!-- nothing -->
-                {% endif %}
-                {{growth_10_years_str}} and
-                hit {{currency_symbol}}{{stock_price_10_years}} over the next 10 years.
-                <!-- </h3> -->
-                </li>
-                <!-- <ul><li>This the magic of compounding.</li></ul> -->
-                <li>
-                    {{ company_symbol }}'s stock price has gone up {{price_increased_on_metric_up_years}} of the {{num_years_increased}} years ({{percent_correlation_str}}) it's {{ fin_metric_name.lower() }} were also up.
-                    <!-- <li>
-                        {% if percent_correlation > 0.5 %}
-                {% else %}
-                the rate relative to it's {{ fin_metric_name.lower() }}
-                {% endif %}
-                    </li>
-                    Based on history - std dev - increase or dec. next 5 years inc dec.
-                {{ latest_metric }}
-                in
-                {{ latest_year }}
-                .
-                                                        Increased
-                {{ num_years_increased }}
-                of
-                {{ num_years }}
-                . The stock gained {{num_years_increased_price}} of those {{num_years_increased}} years.
-                                                        If you add up all of
-                {{ company_short_name }}
-                's'
-                </li> -->
-                </ul>
-                {{min_max_disclaimer}}
-                <!-- </span> -->
-                <aside>
-                <span class="aside_points">Buy the Dataset</span>
-                <span class="aside_body">
-                <!-- <p>
-                            The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).
-                        </p> -->
-                <!-- <p>If you'd have invested in </p> -->
-                <!-- <p>
-                    Save time and invest smart. Understand how
-                {{ company_symbol }}
-                stacks up to all its competitors."ratio"
-                </p> -->
-                {% if statement_or_ratio != "sratios" %}
-                        <span class="pitch">Historical Financial Statements (1994 - Present)
-                            <!-- for the  -->
-                            <br>
-                            Entire
-                    {{ company_sector }}
-                    Sector (1000+ stocks)
+                    <!-- <ul><li>This the magic of compounding.</li></ul> -->
+                    <li>
+                        {{ company_symbol }}'s stock price has gone up {{price_increased_on_metric_up_years}} of the {{num_years_increased}} years ({{percent_correlation_str}}) it's {{ fin_metric_name.lower() }} were also up.
+                        <!-- <li>
+                            {% if percent_correlation > 0.5 %}
+                    {% else %}
+                    the rate relative to it's {{ fin_metric_name.lower() }}
+                    {% endif %}
+                        </li>
+                        Based on history - std dev - increase or dec. next 5 years inc dec.
+                    {{ latest_metric }}
+                    in
+                    {{ latest_year }}
+                    .
+                                                            Increased
+                    {{ num_years_increased }}
+                    of
+                    {{ num_years }}
+                    . The stock gained {{num_years_increased_price}} of those {{num_years_increased}} years.
+                                                            If you add up all of
+                    {{ company_short_name }}
+                    's'
+                    </li> -->
+                    </ul>
+                    {{min_max_disclaimer}}
+                    <!-- </span> -->
+                    <aside>
+                    <span class="aside_points">Buy the Dataset</span>
+                    <span class="aside_body">
+                    <!-- <p>
+                                The arithmetic mean is used to calculate annual percent change (as opposed to geometric mean).
+                            </p> -->
+                    <!-- <p>If you'd have invested in </p> -->
+                    <!-- <p>
+                        Save time and invest smart. Understand how
+                    {{ company_symbol }}
+                    stacks up to all its competitors."ratio"
+                    </p> -->
+                    {% if statement_or_ratio != "sratios" %}
+                            <span class="pitch">Historical Financial Statements (1994 - Present)
+                                <!-- for the  -->
+                                <br>
+                                Entire
+                        {{ company_sector }}
+                        Sector (1000+ stocks)
+                        </span>
+                    <a href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">
+                    <div class="button_div">
+                        <button class="btn btn-primary button_buy" type="button">
+                            Buy for $10
+                        </button>
+                    </div>
+                    </a>
+
+                    {% else %}
+                    {% endif %}
                     </span>
-                <a href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">
-                <div class="button_div">
-                    <button class="btn btn-primary button_buy" type="button">
-                        Buy for $10
-                    </button>
-                </div>
-                </a>
+                    </aside>
+                    <!-- {{company_symbol}}
+                    {{company_currency}}
+                    {{company_exchange}}
+                    {{company_industry}}
+                    {{company_description}}
+                    [[company_sector]]
+                    [[company_country]]
+                    [[company_ipo_date]] -->
+                    <!-- <p>
+                                to buy the RAW DATA for financial ratios . Ultimately, only high-level analysis in excel gives you the bigger picture
+                            </p> -->
+                    <!-- <p>
+                    the chart data has been cleaned for the clearest analysis. We smooth seasonal spikes and fill in missing data with interpolated values. You can see the clearest historical trend this way. For the raw value, see the table below.
+                    </p> -->
+        </div>
+    </div>
 
-                {% else %}
-                {% endif %}
-                </span>
-                </aside>
-                <!-- {{company_symbol}}
-                {{company_currency}}
-                {{company_exchange}}
-                {{company_industry}}
-                {{company_description}}
-                [[company_sector]]
-                [[company_country]]
-                [[company_ipo_date]] -->
-                <!-- <p>
-                            to buy the RAW DATA for financial ratios . Ultimately, only high-level analysis in excel gives you the bigger picture
-                        </p> -->
-                <!-- <p>
-                the chart data has been cleaned for the clearest analysis. We smooth seasonal spikes and fill in missing data with interpolated values. You can see the clearest historical trend this way. For the raw value, see the table below.
-                </p> -->
+
+
+
+
+
+
 </div>
 </div>
+
+
+<!-- <div class="row horizontal_scroll">
+
+    <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow border-left-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col mr-2">
+                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
+                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div> -->
+
+
+<div class="row horizontal_scroll">
+  <div class="horizontal_grid-container">
+  <main class="horizontal_grid-item main">
+      <span class="five_year_section">5-Year Change 🚀</span>
+    <div class="items">
+
+        <!-- <a class="yoy_card_link" href="https://link.com">
+            <div class="item item1">
+                <span class="yoy_cards_title">{{yoy_1_key}}</span>
+                <span class="yoy_cards_metric">{{yoy_1_value}}</span>
+            </div>
+        </a>
+        <a class="yoy_card_link" href="https://link.com">
+            <div class="item item1">
+                <span class="yoy_cards_title">{{yoy_2_key}}</span>
+                <span class="yoy_cards_metric">{{yoy_2_value}}</span>
+            </div>
+        </a> -->
+        {{yoy_cards_html_joined}}
+      <div class="item item3">qwe</div>
+      <div class="item item4">ecc</div>
+      <div class="item item5">bbb</div>
+      <div class="item item6">3333</div>
+      <div class="item item7">dd</div>
+      <div class="item item8">b</div>
+      <div class="item item9">b</div>
+      <div class="item item10">vvv</div>
+
+                          <!-- {{yoy_1_key}}
+                    <br>
+                    {{yoy_2_key}}
+                    <br>
+                    {{yoy_1_value}}
+                    <br>
+                    {{yoy_2_value}} -->
+    </div>
+  </main>
 </div>
 </div>
+
+
+
+      <script id="rendered-js" >
+const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
+    </script>
+
+
+
+
 <div class="all_tabs_container">
 <div class="content all_tabs">
     <div id="qaz_page-qaz_tabs" class="qaz_page-qaz_tabs-css rfv-parent">
@@ -1317,59 +1624,60 @@
                 <div class="center_tab_header_top">Assets</div>
                 <ol class="tabs_links_ol>
                     <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/cash-and-cash-equivalents">Cash And Cash Equivalents</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/short-term-investments">Short Term Investments</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/cash-and-short-term-investments">Cash And Short-Term Investments</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/net-receivables">Accounts Receivables</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/inventory">Inventory</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-current-assets">Other Current Assets</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-current-assets">Total Current Assets</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/pp-and-e">Pp&E</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/goodwill">Goodwill</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/intangible-assets">Intangible Assets</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/goodwill-and-intangible-assets">Goodwill And Intangible Assets</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/long-term-investments">Long-Term Investments</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/tax-assets">Tax Assets</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-non-current-assets">Other Non-Current Assets</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-non-current-assets">Total Non-Current Assets</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-assets">Other Assets</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-assets">Total Assets (Liabilities + Stockholder'S Equity)</a></span></li>
-                <!-- <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-liabilities-and-stockholders-equity">Total Liabilities & Stockholders Equity</a></span></li>-->
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/cash-and-cash-equivalents">Cash And Cash Equivalents</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/short-term-investments">Short Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/cash-and-short-term-investments">Cash And Short-Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/net-receivables">Accounts Receivables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/inventory">Inventory</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-current-assets">Other Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-current-assets">Total Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/pp-and-e">Pp&E</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/goodwill">Goodwill</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/intangible-assets">Intangible Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/goodwill-and-intangible-assets">Goodwill And Intangible Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/long-term-investments">Long-Term Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/tax-assets">Tax Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-non-current-assets">Other Non-Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-non-current-assets">Total Non-Current Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-assets">Other Assets</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-assets">Total Assets (Liabilities + Stockholder'S Equity)</a></span></li>
+                    <!-- <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-liabilities-and-stockholders-equity">Total Liabilities & Stockholders Equity</a></span></li>-->
                 </ol>
                 <div class="center_tab_header">Liabilities</div>
                 <ol class="tabs_links_ol>
                     <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/accounts-payables">Accounts Payables</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/short-term-debt">Short-Term Debt</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/tax-payables">Income Tax Payables</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/deferred-revenue">Deferred Revenue</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-current-liabilities">Other Current Liabilities</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-current-liabilities">Total Current Liabilities</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/long-term-debt">Long-Term Debt</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/deferred-revenue-non-current">Deferred Revenue Non-Current</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/deferred-tax-liabilities-non-current">Deferred Tax Liabilities Non-Current</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-non-current-liabilities">Other Non-Current Liabilities</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-non-current-liabilities">Total Non-Current Liabilities</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-liabilities">Other Liabilities</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-liabilities">Total Liabilities</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-investments">Total Investments</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-debt">Total Debt</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/net-debt">Net Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/accounts-payables">Accounts Payables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/short-term-debt">Short-Term Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/tax-payables">Income Tax Payables</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/deferred-revenue">Deferred Revenue</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-current-liabilities">Other Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-current-liabilities">Total Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/long-term-debt">Long-Term Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/deferred-revenue-non-current">Deferred Revenue Non-Current</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/deferred-tax-liabilities-non-current">Deferred Tax Liabilities Non-Current</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-non-current-liabilities">Other Non-Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-non-current-liabilities">Total Non-Current Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-liabilities">Other Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-liabilities">Total Liabilities</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-investments">Total Investments</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-debt">Total Debt</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/net-debt">Net Debt</a></span></li>
                 </ol>
                 <!-- </li>-->
                 <div class="center_tab_header">Equity</div>
                 <ol class="tabs_links_ol>
-<li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/common-stock">Common Stock</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/accumulated-other-comprehensive-income-loss',">Accumulated Other Comprehensive Income Loss</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-total-stockholders-equity">Other Shareholders Equity</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-stockholders-equity">Total Shareholders Equity</a></span></li>
-                <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/retained-earnings">Retained Earnings</a></span></li>
+                    <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/common-stock">Common Stock</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/accumulated-other-comprehensive-income-loss',">Accumulated Other Comprehensive Income Loss</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/other-total-stockholders-equity">Other Shareholders Equity</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/total-stockholders-equity">Total Shareholders Equity</a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/balance-sheet/retained-earnings">Retained Earnings</a></span></li>
                 </ol>
             </li>
             <li>
                 <ol class="tabs_links_ol>
                     <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
+                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/net-income">Net Income (Earnings)</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/revenue-sales">Net Revenue (Sales)</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/cost-of-sales-cost-of-revenue-cost-of-goods-sold">Cost Of Revenue (Sales)</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/gross-profit-gross-income">Gross Profit Margin</a></span></li>
@@ -1391,7 +1699,7 @@
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-before-tax-provisions">Pretax Income (Earnings)</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-before-tax-ratio">Pretax Income (Earnings) Margin</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/income-tax-expense-provisions">Provision For Income Taxes</a></span></li>
-                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/net-income">Net Income (Earnings)</a></span></li>
+                    <!-- <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/net-income">Net Income (Earnings)</a></span></li> -->
                     <!-- <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/net-income-ratio">Profit Margin</a></span></li> -->
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/eps-earnings-per-share">Earnings Per Share (Eps)</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/income-statement/eps-earnings-per-share-diluted">Earnings Per Share (Eps) Diluted</a></span></li>
@@ -1401,6 +1709,7 @@
             </li>
             <li>
                 <ol class="tabs_links_ol>
+                    <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-income">Net Income (Earnings)</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/depreciation-and-amortization">Depreciation & Amortization (D&A)</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/deferred-income-tax">Deferred Income Tax</a></span></li>
@@ -1408,7 +1717,7 @@
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/change-in-working-capital">Change In Working Capital</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/accounts-receivable">Accounts Receivables</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/inventory">Inventory</a></span></li>
-                    <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/account-payables">Accounts Payables</a></span></li>
+                    <!-- <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/account-payables">Accounts Payables</a></span></li> -->
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-working-capital">Other Working Capital</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/other-non-cash-items">Other Non-Cash Items</a></span></li>
                     <li><span class="statements balance_sheet tab_links"><a class="statement_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/cash-flow-statement/net-cash-provided-by-operating-activities">Net Cash Provided By Operating Activities</a></span></li>
@@ -1447,50 +1756,51 @@
         </ul>
         <ul id="edc_panels" class="edc_panels-css rfv-panels">
             <li>
-<div class="center_tab_header">⭐ Profit & Sales Ratios</div>
-<ol class="tabs_links_ol>
-        <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
+                <div class="center_tab_header">⭐ Profit & Sales Ratios</div>
+                <ol class="tabs_links_ol>
+                        <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
 
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/debt-coverage">Debt Coverage</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/earnings-per-share">Earnings per Share </a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/ebitda-per-share">EBITDA per Share</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/ebitda-margin">EBITDA Margin</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/free-operating-cash-flow-to-debt">Free Operating Cash Flow-To-Debt</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/gross-profit-margin">Gross Profit Margin</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/operating-profit-margin">Operating Profit Ratio</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/profit-margin">Profit Margin </a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-assets-roa">Return on Assets </a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-capital">Return on Capital</a></span></li>
-
-
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/debt-coverage">Debt Coverage</a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/earnings-per-share">Earnings per Share </a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/ebitda-per-share">EBITDA per Share</a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/ebitda-margin">EBITDA Margin</a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/free-operating-cash-flow-to-debt">Free Operating Cash Flow-To-Debt</a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/gross-profit-margin">Gross Profit Margin</a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/operating-profit-margin">Operating Profit Ratio</a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/profit-margin">Profit Margin </a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-assets-roa">Return on Assets </a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-capital">Return on Capital</a></span></li>
 
 
 
 
 
-</ol>
 
-<div class="center_tab_header">⭐ Debt-Related Ratios</div>
-<ol class="tabs_links_ol>
-    <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
 
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-investment">Return on Investment</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-equity-roe">Return on Owner's Equity</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/current-ratio">Current Ratio</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/debt-service-ratio">Debt Service Ratio</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/debt-to-assets-ratio">Debt-To-Assets Ratio</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/debt-to-equity-ratio">Debt-To-Equity Ratio </a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/lt-debt-as-pct-of-total-debt">Long-Term Debt as % of Total Debt</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/quick-ratio">Quick Ratio</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/total-liabilities-pct-of-total-assets">Total Liabilities % of Total Assets</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/accounts-receivables-turnover-ratio">Accounts Receivables Turnover</a></span></li>
-<li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/book-value-per-share">Book Value per Share</a></span></li>
+                </ol>
 
-</ol>
+                <div class="center_tab_header">⭐ Debt-Related Ratios</div>
+                <ol class="tabs_links_ol>
+                    <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
+
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-investment">Return on Investment</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-equity-roe">Return on Owner's Equity</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/current-ratio">Current Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/debt-service-ratio">Debt Service Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/debt-to-assets-ratio">Debt-To-Assets Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/debt-to-equity-ratio">Debt-To-Equity Ratio </a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/lt-debt-as-pct-of-total-debt">Long-Term Debt as % of Total Debt</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/quick-ratio">Quick Ratio</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/total-liabilities-pct-of-total-assets">Total Liabilities % of Total Assets</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/accounts-receivables-turnover-ratio">Accounts Receivables Turnover</a></span></li>
+                    <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/book-value-per-share">Book Value per Share</a></span></li>
+
+                </ol>
 
             </li>
             <li>
                 <ol class="tabs_links_ol>
+                    <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/cash-flow-from-operations-ratio">Cash Flow From Operations Ratio</a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/cash-flow-margin-ratio-formula">Cash Flow Margin Ratio Formula</a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/cash-flow-per-share">Cash Flow per Share</a></span></li>
@@ -1532,9 +1842,8 @@
                 </ol>
             </li>
             <li>
-                <li><span class="ratios debt_ratios tab_links invisible"><a class="statement_links" href=""></a></span></li>
-
                 <ol class="tabs_links_ol>
+                    <li><span class="ratios debt_ratios tab_links invisible"><a class="statement_links" href=""></a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/acid-test-ratio">Acid Test Ratio</a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/cash-coverage-ratio">Cash Coverage</a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/cash-debt-coverage">Cash Debt Coverage</a></span></li>
@@ -1564,6 +1873,7 @@
             </li>
             <li>
                 <ol class="tabs_links_ol>
+                    <li><span class="statements balance_sheet tab_links invisible"><a class="statement_links" href=""></a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/accounts-receivables-turnover-ratio">Accounts Receivable Turnover Ratio </a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/book-value-per-share">Book Value per Share</a></span></li>
                     <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/capital-intensity">Capital Intensity</a></span></li>

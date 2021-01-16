@@ -79,7 +79,6 @@ charts = Blueprint('charts', __name__)
 @charts.route('/', methods=['POST', 'GET'])
 @charts.route('/random', methods=['POST', 'GET'])
 # @charts.route("/home")
-
 def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple", statement_or_ratio="income-statement", url_fin_metric= "revenue-sales"):
     from route_imports.ratio_map import metric_to_url_map
     from route_imports.ratio_map import url_to_var_name_map
@@ -91,8 +90,9 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     from route_imports.ratio_map import url_to_metric_map
     from route_imports.ratio_map import url_to_equation_map
     from route_imports.ratio_map import url_to_definition_map
-
+    from route_imports.ratio_map import fin_statement_title_links_dict
     import scipy
+    from route_imports.ratio_map import fin_statement_title_statements_dict
     from flask import Markup
     start_time = time.time()
     # titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
@@ -196,8 +196,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # stock_or_etf = "stock"
         # return redirect("http://127.0.0.1:5000/aapl/revenue-sales", code=302)
         return redirect("https://tendollardata.com/aapl/revenue-sales", code=302)
-
-
     if url_symbol=="random":
         import random
         random_list = ["tsla, aapl, fb, amzn, googl, msft, nflx, zm, nvda, nio, baba, amd, pton, pypl, shop, adbe, dis, dkng, mu, wfc, hd"]
@@ -205,7 +203,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         return redirect("http://127.0.0.1:5000/{}".format(random_symbol), code=302)
     else:
         pass
-
     currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())]['currency symbol'])[0]
     currency_symbol_original = currency_symbol
     company_profiles_col = ['symbol',
@@ -223,7 +220,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                             'shortest name',
                             'url name']
     company_profiles = company_profiles[company_profiles_col]
-
     profiles_dict = {}
     profiles_value = company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())].values.tolist()[0]
     for n, profiles_col in enumerate(company_profiles_col):
@@ -260,7 +256,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/quarter/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
         year_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
         year_df_file = (pd.read_csv(year_file))
-        df = pd.read_csv(csv_file)
+        # df = pd.read_csv(csv_file)
+        df = pd.read_csv(year_file)
         matching_row = fin_statements_matching[fin_statements_matching['URL']=="{}".format(url_fin_metric)]
         fin_metric_title = list(matching_row['Title'])[0]
         fin_metric_vars = list(matching_row['Python Variable Name'])
@@ -269,29 +266,33 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         len_not_na_df = len(df[df['{}'.format(fin_metric_name)]==0]) #df['{}'.format(fin_metric_name)].notna().sum()
         len_not_na_year_df =  len(year_df_file[year_df_file['{}'.format(fin_metric_name)]==0]) #year_df_file['{}'.format(fin_metric_name)].notna().sum()
         # print("len df", len(df), "len year df", len(year_df_file), "len_not_na_df", len_not_na_df, "len_not_na_year_df", len_not_na_year_df)
-        if len(year_df_file)*3 > len(df):
-            print("zYP")
-            df = year_df_file
-            all_titles = list(df)
-            all_numbers_df = df[list(df.select_dtypes(include=['float','int64']))].div(4, axis=0)
-            all_objects_df = df[list(df.select_dtypes(include=['object']))]
-            concat_df = pd.concat([all_numbers_df, all_objects_df], axis=1)
-            df = concat_df[all_titles]
-            list_years = list(df["date"].apply(lambda j: j[0:4]))
-            if len(list_years) > len(list(set(list_years))):
-                list_years = np.arange(list_years.min(),list_years.max()+2)
-            new_df_list = []
-            for n,y in enumerate(list_years):
-                for x in ["12-31","03-31","06-30","09-30"]:
-                    new_df = df[n:n+1]
-                    new_df['date'] = pd.to_datetime("{}-{}".format(y,x))
-                    new_df_list.append(new_df)
-            df = pd.concat(new_df_list).sort_values(by="date",ascending = True).reset_index()
-            df['date'] = df['date'].apply(lambda x: str(x)[0:10])
-            print(list(df))
-            df = df.drop(['index'],axis=1)
+        # if len(year_df_file)*3 > len(df):
+        print("zYP")
+        df = year_df_file
+        all_titles = list(df)
+        all_numbers_df = df[list(df.select_dtypes(include=['float','int64']))].div(4, axis=0)
+        all_objects_df = df[list(df.select_dtypes(include=['object']))]
+        concat_df = pd.concat([all_numbers_df, all_objects_df], axis=1)
+        df = concat_df[all_titles]
+        list_years = list(df["date"].apply(lambda j: j[0:4]))
+        print("list_years", list_years)
+        print("list_yezars", len(df),df.head(30))
+        if len(list_years) > len(list(set(list_years))):
+            list_years = np.arange(list_years.min(),list_years.max()+2)
+        new_df_list = []
+        for n,y in enumerate(list_years):
+            for x in ["12-31","03-31","06-30","09-30"]:
+                new_df = df[n:n+1]
+                new_df['date'] = pd.to_datetime("{}-{}".format(y,x))
+                new_df_list.append(new_df)
+        print("list_yxxears", df.head(30))
+        df = pd.concat(new_df_list).sort_values(by="date",ascending = True).reset_index()
+        print("list_yzzzzears", len(df),df.head(30))
+        df['date'] = df['date'].apply(lambda x: str(x)[0:10])
+        print(list(df))
+        df = df.drop(['index'],axis=1)
         df["Year"] = df["date"].apply(lambda x: x[0:4])
-        print("sup1")
+        print("sup1", len(df),df.head(30))
         df["QQ-YYYY"] = df["period"]+"-"+df["date"].apply(lambda x: x[0:4])
         # else:
             # pass
@@ -306,19 +307,20 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         else:
             pass
         fin_metric_equation = ""
-        df = df.sort_values(by="date",ascending = False)
+        print("sup4", len(df),df.head(30))
+        # df = df.sort_values(by="date",ascending = False)
         early_missing_periods = df[::-1]["{}".format(fin_metric_name)].ne(0).idxmax()
+        print("sup5", len(df),df.head(30))
         df = df[0:early_missing_periods+1]
         print("sup2")
         # df = df.drop(['index'],axis=1)
         print(df.head(30))
         # print(list(df))
-
         def groupby_agg(df):
             if "{}".format(statement_or_ratio) == "income-statement":
                 df_grouped = df.groupby("Year").sum()
             elif "{}".format(statement_or_ratio) == "balance-sheet":
-                df_grouped = df.groupby("Year").mean()
+                df_grouped = df.groupby("Year").sum()
             elif "{}".format(statement_or_ratio) == "cash-flow-statement":
                 df_grouped = df.groupby("Year").sum()
             else:
@@ -326,6 +328,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             return df_grouped
     else:
         fin_metric_definition_formula = ""
+
         metric_to_list_variables_map = {
                 'net_working_capital_ratio':['working_capital_math','total_assets',],
                 'book_value_per_share':['total_se','shares_outstanding_non',],
@@ -441,53 +444,66 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # print("df_merge",df_merge)
         df_merge = df_merge[fin_statement_raw_names]
         df_merge.columns = fin_statement_renamed_cols
+
         df_title = df_merge.copy()
         df_title.columns = fin_statement_renamed_titles
-
-
         df_yoy_cards = df_title.drop_duplicates(subset=['Date']).sort_values(by=["Date"])
         df_yoy_cards = df_yoy_cards.loc[:, 'Period':'QQ-YYYY']
-
         L = ['Other'] #['other','Other']
         print("sup8")
         print("df_yoy_cards",df_yoy_cards)
         df_yoy_cards =  df_yoy_cards.loc[:, ~df_yoy_cards.columns.str.contains('|'.join(L))]
         df_row_1 = (df_yoy_cards.select_dtypes(include=['float','int64']))[0:1].reset_index()
         print("sup9")
-        df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[4:5].reset_index()
+        len_yoy = len(df_yoy_cards)
+        if len_yoy <= 5:
+            df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[len_yoy-1:len_yoy].reset_index()
+        else:
+            df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[4:5].reset_index()
+
         df_yoy = (df_row_1.div(df_row_2))-1
         print("sup10")
         print("df_yoy_cards",df_yoy)
-
         greater_than = (df_yoy[list(df_yoy)]>=0.0) & (df_yoy[list(df_yoy)]<10)
         less_than = (df_yoy[list(df_yoy)]<-0.01) & (df_yoy[list(df_yoy)]>-10)
         print("sup11")
-        not_zero = (df_yoy[list(df_yoy)] != -420.6942069)
+        not_zero = (df_yoy[list(df_yoy)] != -1)
         df_yoyx = df_yoy[((greater_than) | (less_than)) & not_zero]
         print("sup12")
-
         print("df_yoy_cards",df_yoyx)
-        df_yoy_cards.to_csv("df_yoy_cards2.csv")
-        df_yoyx = df_yoyx.dropna(axis=1, how='all')
-        df_yoyx_sorted = df_yoyx.iloc[0].sort_values(ascending=False)
-        print("sup13", df_yoyx_sorted)
-        df_yoyx.sample(5, axis=1)
-        df_yoyx_5 = df_yoyx.sample(5, axis=1)
-
-
-
-
+        df_yoyx.to_csv("df_yoy_cards4.csv")
+        # df_yoyx = df_yoyx.dropna(axis=1, how='all')
+        df_yoyx = df_yoy
+        # df_yoyx = df_yoyx.iloc[0].sort_values(ascending=False)
+        # df_yoyx_sorted = df_yoyx.iloc[0].sort_values(ascending=False)
+        # print("sup13", df_yoyx_sort)
+        # df_yoyx.sample(5, axis=1)
+        # df_yoyx_5 = df_yoyx.sample(5, axis=1)
         yoy_cards_dict = {}
-        profiles_value = df_yoyx_5.values.tolist()[0]
-        for n, profiles_col in enumerate(list(df_yoyx_5)):
+        yoy_cards_urls_dict = {}
+        yoy_cards_html_list = []
+        profiles_value = df_yoyx.values.tolist()[0]
+        df_yoyx = df_yoyx.drop(['index'],axis=1)
+
+
+
+        for n, profiles_col in enumerate(list(df_yoyx)):
             key = profiles_col
+            print("dkey", key)
             value = profiles_value[n]*100
             value = change_markup(value,"percent","noarrow", "yoy_cards")
             yoy_cards_dict[key] = value
+            yoy_cards_urls_dict[key] = fin_statement_title_links_dict[key]
+            statement_url = fin_statement_title_statements_dict[key]
+            # statement_url = fin_statements_matching[fin_statements_matching['Title']=="{}".format(key)]["statement_url"][0]
+            # statement_url = fin_statements_matching[fin_statements_matching['Title']==key]["statement_url"]#[0]
+            yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}-{}/{}/{}/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],profiles_col,value))
+            yoy_cards_html_list.append(yoy_cards_html)
+        yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
 
 
-        print("df_merge", df_merge)
         df = df_merge.iloc[::-1]
+        print("df_merge", df_merge)
         df = df.sort_values(by="date",ascending = True)
         df['ffo_math']=df['net_income'] + df['d_n_a'] + df['sales_maturities_of_investments'] + df['purchase_of_investments'] + df['investments_in_pp_n_e'] + df['acquisitions_net']
         df['book_value_math']=df['total_assets'].dropna()-df['total_liabilities'].dropna()
@@ -510,13 +526,11 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # xxx   if len_not_na_year_df + 2 > len(year_df_file):
         #         smart_data_warning = "*"
         #         smart_data_disclaimer = Markup('<span class="ruhroh disclaimer_zero">** The data has been enhanced for easier insights</span>')
-
         df = df.interpolate(method='linear')
         df = df.drop_duplicates(subset=['date']).sort_values(by=["date"])
         for x in fin_metric_vars_old:
             if x=="accumulated_other_comprehensive_income_loss" or x=="other_total_stockholders_equity" or x=="other_income_other_expenses_net" or x == "dividends_paid" or x=="accounts_receivable" or x=="investments_in_property_plant_and_equipment" or x=="acquisitions_net" or x=="purchases_of_investments" or x=="other_investing_activities" or x=="net_cash_used_for_investing_activities" or x=="debt_repayment" or x=="capital_expenditure":
                 df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x: -1*x)
-
             else:
                 # pass
                 # if len(df[df['{}'.format(x)]<0]) > len(df[df['{}'.format(x)]>0]):
@@ -551,8 +565,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             df.loc[df['pct_chg_temp'] > 10, x] = np.nan
             df.loc[df['pct_chg_temp'] < -10, x] = np.nan
             # df = df.drop(['pct_chg_temp'], axis=1)
-
-
             # print("listenman", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
             # print("listendudeagain", len(df), "sad",df['{}'.format(x)].isna().sum(), list(df['{}'.format(x)]))
             # if pd.isnull((df['{}'.format(x)].head(1))[0]):#list(df['{}'.format(x)].head(1))[0]==np.nan:#df['{}'.format(x)].min()
@@ -572,8 +584,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # df = df.drop(['pct_chg_temp'], axis=1)
         # fin_metric_vars_old2.append(fin_metric_title)
         df["{}".format(fin_metric_title)] = metric_history
-
-
         print("wassup")
         print(df[fin_metric_vars_old2].head(50))
         # print("wassup2")
@@ -687,44 +697,68 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # print("tail")
         # print(df["{}".format(x)].tail(30))
         df.columns = titles_bs
+        df['pct_chg_temp'] = df['{}'.format(fin_metric_title)].shift(-4)/df['{}'.format(fin_metric_title)]
+        df.loc[df['pct_chg_temp'] > 10, fin_metric_title] = np.nan
+        df.loc[df['pct_chg_temp'] < -10, fin_metric_title] = np.nan
+        df = df.interpolate()
+        df = df.drop(['pct_chg_temp'],axis=1)
         print("sup6",list(df))
+        df.to_csv("zippy.csv")
         print("sup7")
-        df_yoy_cards = df.loc[:, 'date':'finalLink']
+        # df_yoy_cards = df.loc[:, 'date':'finalLink']
         L = ['Other'] #['other','Other']
-        print("sup8")
+        df_yoy_cards = df.drop(['date','finalLink'],axis=1) #fin_metric_title,
+        print("sup821",list(df_yoy_cards))
         print("df_yoy_cards",df_yoy_cards)
         df_yoy_cards =  df_yoy_cards.loc[:, ~df_yoy_cards.columns.str.contains('|'.join(L))]
         df_row_1 = (df_yoy_cards.select_dtypes(include=['float','int64']))[0:1].reset_index()
         print("sup9")
-        df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[4:5].reset_index()
+        df_yoy_cards.to_csv("yerp.csv")
+        len_yoy = len(df_yoy_cards)
+        if len_yoy <= 25:
+            df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[len_yoy-1:len_yoy].reset_index()
+        else:
+            df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[24:25].reset_index()
+
+
+        # df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[4:5].reset_index()
         df_yoy = (df_row_1.div(df_row_2))-1
         print("sup10")
         print("df_yoy_cards",df_yoy)
-
         greater_than = (df_yoy[list(df_yoy)]>=0.0) & (df_yoy[list(df_yoy)]<10)
         less_than = (df_yoy[list(df_yoy)]<-0.01) & (df_yoy[list(df_yoy)]>-10)
         print("sup11")
-        not_zero = (df_yoy[list(df_yoy)] != -420.6942069)
+        not_zero = (df_yoy[list(df_yoy)] != -1)#-420.6942069)@-1)
         df_yoyx = df_yoy[((greater_than) | (less_than)) & not_zero]
         print("sup12")
-
         print("df_yoy_cards",df_yoyx)
-        df_yoy_cards.to_csv("df_yoy_cards2.csv")
-        df_yoyx = df_yoyx.dropna(axis=1, how='all')
-        df_yoyx_sorted = df_yoyx.iloc[0].sort_values(ascending=False)
-        print("sup13", df_yoyx_sorted)
-        df_yoyx.sample(5, axis=1)
-        df_yoyx_5 = df_yoyx.sample(5, axis=1)
-
-
-
-
+        df_yoyx.to_csv("df_yoy_cards5.csv")
+        # df_yoyx = df_yoyx.dropna(axis=1, how='all')
+        # df_yoyx = df_yoyx.iloc[0].sort_values(ascending=False)
+        # print("sup13", df_yoyx_sorted)
+        # df_yoyx_5 = df_yoyx.sample(5, axis=1)
         yoy_cards_dict = {}
-        profiles_value = df_yoyx_5.values.tolist()[0]
-        for n, profiles_col in enumerate(list(df_yoyx_5)):
+        yoy_cards_urls_dict = {}
+        yoy_cards_html_list = []
+        profiles_value = df_yoyx.values.tolist()[0]
+        df_yoyx = df_yoyx.drop(['index'],axis=1)
+
+        for n, profiles_col in enumerate(list(df_yoyx)):
             key = profiles_col
-            value = profiles_value[n]
+            value = profiles_value[n]*100
+            value = change_markup(value,"percent","noarrow", "yoy_cards")
             yoy_cards_dict[key] = value
+            yoy_cards_urls_dict[key] = fin_statement_title_links_dict[key]
+            statement_url = fin_statement_title_statements_dict[key]
+            # yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(fin_statement_title_links_dict[key],profiles_col,value))
+            yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}-{}/{}/{}/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],profiles_col,value))
+
+            yoy_cards_html_list.append(yoy_cards_html)
+        yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
+
+
+
+
 
 
         df = df[cols]
@@ -740,7 +774,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         df['quarter avg'] = df["{}".format(fin_metric_title)].rolling(window=8,min_periods=1).mean()
         # last_4_quarters = np.sum(df["quarter avg"][0:4])
         # prev_4_quarters = np.sum(df["quarter avg"][5:9])
-        if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "cash-flow-statement":
+        if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "cash-flow-statement" or "{}".format(statement_or_ratio) == "balance-sheet":
             last_4_quarters = np.sum(df["quarter avg"][0:4])
             prev_4_quarters = np.sum(df["quarter avg"][5:9])
         else:
@@ -859,7 +893,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     try:
         print("zx2",latest_metric, earliest_metric)
         try:
-
             if latest_metric > earliest_metric:
                 pct_chg = (latest_metric/earliest_metric)
             else:
@@ -1046,8 +1079,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             if_in_mil = ""
             df_html_tall['{}'.format(fin_metric_title)] = df_html_tall['{}'.format(fin_metric_title)].apply(lambda x: "{:,}".format(np.round(x,2)))
         df_html_tall = df_html_tall.to_html(index=False)
-        full_path = csv_file.split(' ~ ')
-        path = pathlib.PurePath(full_path[0])
+        # full_path = csv_file.split(' ~ ')
+        # path = pathlib.PurePath(full_path[0])
         df_html_formula = ""
     else:
         df_tall['YoY % Change float'] = df_tall['{}'.format(fin_metric_title)]/df_tall['{}'.format(fin_metric_title)].shift(-1)
@@ -1330,6 +1363,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                             yoy_5_key = list(yoy_cards_dict.items())[4][0],
                             yoy_5_value = list(yoy_cards_dict.items())[4][1],
                             earliest_latest_warning = earliest_latest_warning,\
+                            yoy_cards_html_joined = yoy_cards_html_joined,\
                             earliest_latest_disclaimer = earliest_latest_disclaimer,\
                             html_sentence_list = html_sentence_list,\
                             df_html_formula = [df_html_formula],\
