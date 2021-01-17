@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% block charts_quarter_head %}
+
+
+{% endblock %}
+        {% block quarterly_body %}
+
+
+<input type="button" id="basicFetchButton" value="Try it">
+
+<!--
+<script>
+
+  document.getElementById("basicFetchButton").addEventListener("click", function(){
+          // Loading the jQuery code
+          fetch("https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+              .then(function (response) {
+                  response.text().then(function (responseText) {
+                      console.log(responseText);
+                      alert("Done using Fetch!");
+                  });
+              });
+      });
+
+
+
+</script> -->
+
+
+
+
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+<button id="Go">Go</button>
+
+
+{{ url_for('static', filename='../static/json/company_urls_records_remote.json') }}
+<script>
+// var url = '{{ url_for('static', filename='../static/json/company_urls_records_sample.json') }}';
+// var url = 'https://demo-live-data.highcharts.com/aapl-c.json'
+var url = 'http://twitter.github.io/typeahead.js/data/films/post_1960.json'
+var myJsonData= {};
+$.ajax({
+    type: 'GET',
+    url: url,
+    async: false,
+    contentType: "application/json",
+    dataType: 'json',
+    success: function (data) {
+        alert('success');
+        console.log(data);
+        myJsonData= data;
+    },
+    error: function (e) {
+        alert('error');
+        console.log(e);
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+  document.getElementById("Go").onclick = function setup() {
+    var jsonstring = loadJSON("{{ url_for('static', filename='../static/json/company_urls_records_sample.json') }}");
+    var o1 = eval(jsonstring);
+    alert(o1[0]);
+    // document.getElementById("demo").innerHTML = "ASdasd";
+}
+</script>
+
+
+
+
+<script>
+  // var flower;
+  // function setup() {
+  //   createCanvas(400,400);
+  //   flower = loadJSON("{{ url_for('static', filename='../static/json/company_urls_records_remote.json') }}")
+  // }
+
+</script>
+
+
+<script>
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+
+
+<script>
+//   json_data= "{{ url_for('static', filename='../static/json/company_urls_records_sample.json') }}"
+
+//   $.getJSON("", function(json) {
+//     console.log(json); // this will show the info it in firebug console
+
+//   });
+// console.log("juked")
+
+// $.getJSON(json_data, function(data) {
+//   console.log(data);
+// });
+</script>
+
+
+
+
+
+
+<script>
+  "use strict";
+
+  // var myInit = {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     mode: 'cors',
+//     cache: 'default'
+//   }
+
+//   let myRequest = new Request("{{ url_for('static', filename='../static/json/company_urls_records_sample.json') }}")
+
+
+
+//   fetch(myRequest, myInit)
+//   .then(function(resp) {
+//     return resp.json();
+//   })
+//   .then(function(data) {
+//     console.log(data);
+//     console.log("sup");
+//   })
+//   .catch(err => {
+//   // Do something for an error here
+//   });
+
+
+// console.log("Hello world!");
+// console.log("ssss"+ myRequest);
+// var myJSON = JSON.stringify(myRequest);
+// document.getElementById("demo").innerHTML = myJSON;
+</script>
+
+
+{% endblock %}
+

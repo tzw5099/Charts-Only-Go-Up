@@ -72,6 +72,32 @@ charts = Blueprint('charts', __name__)
 # @charts.route("/home")
 # def index():
 #     return render_template('index.html')
+import linecache
+import inspect
+# import d6tstack
+from inspect import currentframe, getframeinfo
+def PrintException():
+    callerframerecord = inspect.stack()[1]    # 0 represents this line
+                                            # 1 represents line at caller
+    exc_type, exc_obj, tb = sys.exc_info()
+    f = tb.tb_frame
+    lineno = tb.tb_lineno
+    frame = callerframerecord[0]
+    info = inspect.getframeinfo(frame)
+    error_function = info.function
+    filename = f.f_code.co_filename
+    linecache.checkcache(filename)
+#     line = linecache.getline(filename, lineno, f.f_globals,error_function)
+    line = linecache.getline(filename, lineno,error_function)
+    print("exception!", lineno, line.strip(), exc_obj)
+    return(lineno, line.strip(), exc_obj,)
+
+
+
+@charts.route("/json")
+def json_js_practice():
+    return render_template('json_js_practice.html')
+
 @charts.route('/<url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
 @charts.route('/<url_symbol>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
 @charts.route('/<url_symbol>/<url_fin_metric>', methods=['POST', 'GET'])
@@ -94,6 +120,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     import scipy
     from route_imports.ratio_map import fin_statement_title_statements_dict
     from flask import Markup
+    domain = "http://127.0.0.1:5000"
+    subdomain = "http://127.0.0.1:5000"
     start_time = time.time()
     # titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
     titles_list = ['Selling, General and Administrative (SG&A)','Selling General and Administrative (SG&A)', "EBITDA Margin", "Operating Margin" ,"Profit Margin"]
@@ -487,6 +515,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
 
 
 
+
         for n, profiles_col in enumerate(list(df_yoyx)):
             key = profiles_col
             print("dkey", key)
@@ -497,7 +526,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             statement_url = fin_statement_title_statements_dict[key]
             # statement_url = fin_statements_matching[fin_statements_matching['Title']=="{}".format(key)]["statement_url"][0]
             # statement_url = fin_statements_matching[fin_statements_matching['Title']==key]["statement_url"]#[0]
-            yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}-{}/{}/{}/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],profiles_col,value))
+            yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}-{}/{}/{}/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(subdomain,url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],profiles_col,value))
             yoy_cards_html_list.append(yoy_cards_html)
         yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
 
@@ -703,36 +732,37 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         df = df.interpolate()
         df = df.drop(['pct_chg_temp'],axis=1)
         print("sup6",list(df))
-        df.to_csv("zippy.csv")
+        df.to_csv("zippy2.csv")
         print("sup7")
         # df_yoy_cards = df.loc[:, 'date':'finalLink']
-        L = ['Other'] #['other','Other']
+        L = ['xx'] #['other','Other']
         df_yoy_cards = df.drop(['date','finalLink'],axis=1) #fin_metric_title,
         print("sup821",list(df_yoy_cards))
         print("df_yoy_cards",df_yoy_cards)
         df_yoy_cards =  df_yoy_cards.loc[:, ~df_yoy_cards.columns.str.contains('|'.join(L))]
         df_row_1 = (df_yoy_cards.select_dtypes(include=['float','int64']))[0:1].reset_index()
         print("sup9")
-        df_yoy_cards.to_csv("yerp.csv")
+        df_yoy_cards.to_csv("yerp2.csv")
         len_yoy = len(df_yoy_cards)
         if len_yoy <= 25:
             df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[len_yoy-1:len_yoy].reset_index()
         else:
-            df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[24:25].reset_index()
+            df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[25:26].reset_index()
 
 
         # df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[4:5].reset_index()
         df_yoy = (df_row_1.div(df_row_2))-1
+        df_yoy = df_yoy.drop(['index'],axis=1)
         print("sup10")
         print("df_yoy_cards",df_yoy)
-        greater_than = (df_yoy[list(df_yoy)]>=0.0) & (df_yoy[list(df_yoy)]<10)
-        less_than = (df_yoy[list(df_yoy)]<-0.01) & (df_yoy[list(df_yoy)]>-10)
+        greater_than = (df_yoy[list(df_yoy)]>=0.0) & (df_yoy[list(df_yoy)]<100)
+        less_than = (df_yoy[list(df_yoy)]<-0.01) & (df_yoy[list(df_yoy)]>-100)
         print("sup11")
         not_zero = (df_yoy[list(df_yoy)] != -1)#-420.6942069)@-1)
         df_yoyx = df_yoy[((greater_than) | (less_than)) & not_zero]
         print("sup12")
         print("df_yoy_cards",df_yoyx)
-        df_yoyx.to_csv("df_yoy_cards5.csv")
+        df_yoyx.to_csv("df_yoy_cards2.csv")
         # df_yoyx = df_yoyx.dropna(axis=1, how='all')
         # df_yoyx = df_yoyx.iloc[0].sort_values(ascending=False)
         # print("sup13", df_yoyx_sorted)
@@ -741,17 +771,22 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         yoy_cards_urls_dict = {}
         yoy_cards_html_list = []
         profiles_value = df_yoyx.values.tolist()[0]
-        df_yoyx = df_yoyx.drop(['index'],axis=1)
+        print("sup13")
+        # df_yoyx = df_yoyx.drop(['index'],axis=1)
+        df_yoyx = df_yoyx.dropna(axis=1, how='all')
+        df_yoyx.to_csv("df_yoy_dropped_all_2.csv")
 
         for n, profiles_col in enumerate(list(df_yoyx)):
             key = profiles_col
+            print("sup",n)
             value = profiles_value[n]*100
             value = change_markup(value,"percent","noarrow", "yoy_cards")
             yoy_cards_dict[key] = value
             yoy_cards_urls_dict[key] = fin_statement_title_links_dict[key]
             statement_url = fin_statement_title_statements_dict[key]
+            print("sup","key",key,"value",value,"link",fin_statement_title_links_dict[key],"statement",fin_statement_title_statements_dict[key])
             # yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(fin_statement_title_links_dict[key],profiles_col,value))
-            yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}-{}/{}/{}/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],profiles_col,value))
+            yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}-{}/{}/{}/{}"><div class="item item1"><span class="yoy_cards_metric">{}</span><span class="yoy_cards_title">{}</span></div></a>'.format(subdomain,url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],value,profiles_col))
 
             yoy_cards_html_list.append(yoy_cards_html)
         yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
@@ -1155,8 +1190,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     max_min_range_str = change_markup(max_min_range,"x","arrow","max_min_range_str")
     last_4_quarters_str = magnitude_num(last_4_quarters,currency_symbol)
     try:
-        subdomain = "https://charts.tendollardata.com"
-        subdomain = "http://127.0.0.1:5000"
+        domain = "https://charts.tendollardata.com"
+        subdomain = "127.0.0.1:5000" #"http://127.0.0.1:5000"
         company_similar = profiles_dict['Similar Companies'].split(",")
         company_similar = [ x for x in company_similar if "XL" not in x ]
         company_similar_list = []
@@ -1371,8 +1406,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                             min_max_warning = min_max_warning,\
                             min_max_disclaimer = min_max_disclaimer,\
                             if_in_mil = if_in_mil,\
-                            domain = "http://127.0.0.1:5000",\
-                            subdomain = "http://127.0.0.1:5000",\
+                            domain = domain,\
+                            subdomain = subdomain,\
                             fin_metric_definition_formula = fin_metric_definition_formula,\
                             company_symbol = profiles_dict['symbol'],\
                             difference = difference,\

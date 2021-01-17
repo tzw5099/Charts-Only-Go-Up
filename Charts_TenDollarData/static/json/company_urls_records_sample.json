@@ -1,0 +1,66 @@
+[
+  {
+    "ticker": "nen",
+    "value": "(NEN) New England Realty Associates"
+  },
+  {
+    "ticker": "iae",
+    "value": "(IAE) Voya Asia Pacific High Dividend Equity Income Fund"
+  },
+  {
+    "ticker": "efc",
+    "value": "(EFC) Ellington Financial"
+  },
+  {
+    "ticker": "psxp",
+    "value": "(PSXP) Phillips 66 Partners"
+  },
+  {
+    "ticker": "eoi",
+    "value": "(EOI) Eaton Vance Enhanced Equity Income Fund"
+  },
+  {
+    "ticker": "pgp",
+    "value": "(PGP) PIMCO Global StocksPLUS & Income Fund"
+  },
+  {
+    "ticker": "evg",
+    "value": "(EVG) Eaton Vance Short Duration Diversified Income Fund"
+  },
+  {
+    "ticker": "am",
+    "value": "(AM) Antero Midstream"
+  },
+  {
+    "ticker": "elj",
+    "value": "(ELJ) Entergy Louisiana LLC"
+  },
+  {
+    "ticker": "pagp",
+    "value": "(PAGP) Plains GP"
+  },
+  {
+    "ticker": "apo",
+    "value": "(APO) Apollo Global Management"
+  },
+  {
+    "ticker": "ihta",
+    "value": "(IHTA) Invesco High Inc 2024 Tgt Term"
+  },
+  {
+    "ticker": "mgp",
+    "value": "(MGP) MGM Growth Properties"
+  },
+  {
+    "ticker": "glop",
+    "value": "(GLOP) GasLog"
+  },
+  {
+    "ticker": "bx",
+    "value": "(BX) Blackstone Group"
+  },
+  {
+    "ticker": "mplx",
+    "value": "(MPLX) MPLX"
+  },
+]

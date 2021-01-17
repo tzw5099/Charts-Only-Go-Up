@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block charts_quarter_head %}
+
+
+{% endblock %}
+{% block quarterly_body %}
+
+
+<script>
+
+// var test = require("{{ url_for('static', filename='../static/json/company_urls_records_sample.json') }}");
+// var test = "http://twitter.github.io/typeahead.js/data/films/post_1960.json"
+// var test = require("http://twitter.github.io/typeahead.js/data/films/post_1960.json");
+// console.log("ff");
+// console.log(test);
+// console.log("ds");
+
+</script>
+
+
+<script>
+  json_data= "http://twitter.github.io/typeahead.js/data/films/post_1960.json"
+
+  $.getJSON("", function(json) {
+    console.log(json); // this will show the info it in firebug console
+
+  });
+console.log("juked")
+
+$.getJSON(json_data, function(data) {
+  console.log(data[0]);
+});
+
+
+$.getJSON(json_data, function(data) {
+  // for x in data {
+    for (i = 0; i<data.length;i++){
+      data[i] = {
+        // statements = "balance-sheet",
+        console.log(data[i]);
+      };
+    // console.log(data[i]);
+  };
+});
+
+
+// var monthlist = [];
+// for (i=0;i<=days_in_months;i++) {
+//     monthlist[i] = {
+//        date: ""
+//     };
+// }
+// console.log("monthlist")
+// console.log(monthlist)
+</script>
+
+<input type="button" id="basicFetchButton" value="Try it">
+
+
+
+
+
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+<button id="Go">Go</button>
+
+
+{{ url_for('static', filename='../static/json/company_urls_records_remote.json') }}
+
+
+{% endblock %}
+

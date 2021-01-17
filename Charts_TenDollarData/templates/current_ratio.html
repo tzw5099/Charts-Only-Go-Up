@@ -6,10 +6,10 @@
                     {{ earliest_year }}
                     -
                     2021
-                    | {{company_short_name}} | Charts.TenDollarData
+                    | {{company_short_name}} | Charts.$10
 </title>
 
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6260e90056330e286d692b412/168a56cc1fa171c0dc39aa3e8.js");</script>
+<!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6260e90056330e286d692b412/168a56cc1fa171c0dc39aa3e8.js");</script> -->
 <!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6260e90056330e286d692b412/168a56cc1fa171c0dc39aa3e8.js");</script> -->
 <!-- <script async data-uid="304db69547" src="https://colossal-hustler-7306.ck.page/304db69547/index.js"></script> -->
 <script src="https://code.highcharts.com/maps/modules/map.js"></script>
@@ -70,8 +70,8 @@ html {
     background-color: white;
     grid-area: main;
     padding: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    /* overflow-x: scroll; */
+    /* overflow-y: hidden; */
   }
 
   /* .footer {
@@ -82,7 +82,7 @@ html {
 
   .items {
     position: relative;
-    width: 100%;
+    width: 101%;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -269,6 +269,10 @@ a:hover {
                                     legend: {
                                         enabled: true,
                                         verticalAlign: 'bottom',
+                                    },
+                                    mapNavigation: {
+                                        enabled: false,
+                                        enableButtons: false,//false
                                     },
                                     yAxis: [
                                         {
@@ -588,6 +592,12 @@ a:hover {
                             },
                             // tickPixelInterval: 70,
                         },
+                        {
+                            yAxis: 2,
+                            opposite: false,
+                            visible: false,
+
+                        },
                         {// SECTION - Highcharts - yAxis - metric - percent
                             opposite:true,
                             yAxis: 1,
@@ -683,21 +693,23 @@ a:hover {
                         },
                         {
                             // SECTION - Highcharts - series - all
-                            type: 'area',
-                            // type: 'column',
+                            type: 'area', // type: 'column',
                             lineWidth: 0,
-                            fillOpacity: .1,
-                            color: "#19a419", //"#177737",
-                            marker: {
-                                // symbol: 'triangle',
-                                radius: 1,
-                                states: {
-                                    hover: {
-                                        enabled: true,
-                                        lineColor: 'rgb(100,100,100)'
-                                    }
-                                }
-                            },
+                            color: 'transparent',
+                            borderColor: 'transparent',
+                            showInLegend: false,
+                            // fillOpacity: .1,
+                            // color: "#19a419", //"#177737",
+                            // marker: {
+                            //     // symbol: 'triangle',
+                            //     radius: 1,
+                            //     states: {
+                            //         hover: {
+                            //             enabled: true,
+                            //             lineColor: 'rgb(100,100,100)'
+                            //         }
+                            //     }
+                            // },
                             name: 'Quarterly (Q)   {{ fin_metric_name }}',
                             pointInterval: 1,
                             pointIntervalUnit: 'year',
@@ -770,7 +782,7 @@ a:hover {
                             },
                             data: df_json,
                             zIndex: 98,
-                            yAxis: 1
+                            yAxis: 2
                         }, {
                             type: 'line',
                             yAxis: 1,
@@ -784,6 +796,7 @@ a:hover {
                                 // tooltip_legend +
                                 valuePrefix: "{{ currency_symbol }}",
                                 pointFormatter: function () {
+                                // formatter: function () {
                                     // ●♦■▲▼
                                     // tooltip_legend = this.series.name + ' '; //'● '+ this.series.name
                                     tooltip_legend = Highcharts.dateFormat('FY %Y', this.x) + ' '; // '● '+ this.series.name
@@ -804,7 +817,8 @@ a:hover {
                                         million_rounded = Math.round((ratio) * 100) / 100;
                                         return(tooltip_legend + '<b>' + million_rounded) + '</b>';
                                     }
-                                }
+                                },
+
                             },
                             pointInterval: 3,
                             pointIntervalUnit: 'month',
