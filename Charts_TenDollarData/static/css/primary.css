@@ -1,11 +1,54 @@
+.form-inline .form-control {
+	width: 100px;
+}
+@media (max-width: 768px) {
+	input[type="search"] {
+		-webkit-appearance: textfield;
+		-webkit-box-sizing: content-box;
+		outline: none;
+		border: solid 1px #ccc;
+		background: #ededed;
+		padding: 3px 0px 3px 9px;
+		width: 55px;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		transition: all 0.5s;
+	}
+	input::-webkit-search-decoration,
+	input::-webkit-search-cancel-button {
+		display: none;
+	}
+	input[type="search"]:focus {
+		width: 200px !important;
+		background-color: #fff;
+		border-color: #66cc75;
+	}
+}
+
+.tt-suggestion {
+	padding-bottom: 3px;
+	border-bottom: 2px solid #ededed;
+	margin-bottom: 0px;
+	padding-top: 2px;
+}
+.tt-menu {
+	background-color: #fff;
+	border: 2px #ededed solid;
+	padding: 10px;
+	max-height: 500px;
+	overflow-y: auto;
+	width: 500px;
+	background-color: #ffffff;
+}
 .tt-suggestion a {
 	/* color: #3508ff !important; */
 	color: #000000 !important;
 }
 
 .tt-suggestion strong {
-	font-weight: normal;
-	color: red;
+	font-weight: bolder;
+	color: #154ee2;
+	/* color: #177737; */
 }
 
 .dropdown_menu {
@@ -90,6 +133,12 @@
 } */
 	.pad-10-right {
 		padding-right: 0px;
+	}
+}
+
+@media (max-width: 768px) {
+	.lazytype {
+		width: 360px;
 	}
 }
 
@@ -309,12 +358,6 @@ tspan.chart_current_price {
 	text-align: center;
 }
 
-.tt-menu {
-	max-height: 130px;
-	overflow-y: auto;
-	width: 500px;
-	background-color: #ffffff;
-}
 .typeahead {
 	width: 100px;
 	background-color: yellow;

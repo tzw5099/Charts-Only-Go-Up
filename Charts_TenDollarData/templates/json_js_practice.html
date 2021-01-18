@@ -1,74 +1,67 @@
+
 {% extends "base.html" %}
 {% block charts_quarter_head %}
-
-
 {% endblock %}
 {% block quarterly_body %}
-
-
 <script>
-
-// var test = require("{{ url_for('static', filename='../static/json/company_urls_records_sample.json') }}");
-// var test = "http://twitter.github.io/typeahead.js/data/films/post_1960.json"
-// var test = require("http://twitter.github.io/typeahead.js/data/films/post_1960.json");
-// console.log("ff");
-// console.log(test);
-// console.log("ds");
-
+//   json_data= "http://twitter.github.io/typeahead.js/data/films/post_1960.json"
+//   $.getJSON("", function(json) {
+//     console.log(json); // this will show the info it in firebug console
+//   });
+// console.log("juked")
+// $.getJSON(json_data, function(data) {
+//   console.log(data[0]);
+// });
+// $.getJSON(json_data, function(data) {
+//   // for x in data {
+//     for (i = 0; i<data.length; i++){
+//       // data[i] = {
+//       //   // statements = "balance-sheet"
+//       // };
+//       console.log("yo"+JSON.stringify(data[i].year));
+//   };
+// });
 </script>
-
-
-<script>
-  json_data= "http://twitter.github.io/typeahead.js/data/films/post_1960.json"
-
-  $.getJSON("", function(json) {
-    console.log(json); // this will show the info it in firebug console
-
-  });
-console.log("juked")
-
-$.getJSON(json_data, function(data) {
-  console.log(data[0]);
-});
-
-
-$.getJSON(json_data, function(data) {
-  // for x in data {
-    for (i = 0; i<data.length;i++){
-      data[i] = {
-        // statements = "balance-sheet",
-        console.log(data[i]);
-      };
-    // console.log(data[i]);
-  };
-});
-
-
-// var monthlist = [];
-// for (i=0;i<=days_in_months;i++) {
-//     monthlist[i] = {
-//        date: ""
-//     };
-// }
-// console.log("monthlist")
-// console.log(monthlist)
-</script>
-
 <input type="button" id="basicFetchButton" value="Try it">
-
-
-
-
-
-
 <h2>Create Object from JSON String</h2>
-
 <p id="demo"></p>
 <button id="Go">Go</button>
 
+<p class="search_item_head_p">
+  <a class="search_item_link" href="https://charts.tendollardata.com/TSLA">
+    Tesla - <strong>Cash</strong>
+  </a>
+</p>
+<!-- <table>
+  <tbody>
+    <tr>
+      <td> -->
+        <p class="search_item_body_p">
+          <a class="search_item_link" href="https://charts.tendollardata.com/TSLA">
+            Tesla - <strong>Net Revenue</strong>
+          </a>
+        </p>
+      <!-- </td>
+      <td> -->
+        <p class="search_item_body_p">
+          <a class="search_item_link" href="https://charts.tendollardata.com/TSLA">
+            Tesla - <strong>Net Revenue</strong>
+          </a>
+        </p>
+      <!-- </td>
+    </tr> -->
+        <p class="search_item_body_p">
+          <a class="search_item_link" href="https://charts.tendollardata.com/TSLA">
+            Tesla - <strong>Net Revenue</strong>
+          </a>
+        </p>
+        <p class="search_item_body_p">
+          <a class="search_item_link" href="https://charts.tendollardata.com/TSLA">
+            Tesla - <strong>🔥 Net Revenue</strong>
+          </a>
+        </p>
+<!-- </tbody>
+</table> -->
 
 {{ url_for('static', filename='../static/json/company_urls_records_remote.json') }}
-
-
 {% endblock %}
-

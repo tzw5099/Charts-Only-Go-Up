@@ -47,6 +47,9 @@
         <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
         <!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
+
+        <!-- <script src="{{ url_for('static', filename='../static/js/typeahead.bundle.min.js') }}"></script> -->
+        <!-- <script src="{{ url_for('static', filename='../static/js/toms_typeahead.bundle.min.js') }}"></script> -->
         {% block charts_quarter_head %}
         {% endblock %}
         </head>
@@ -70,12 +73,66 @@
                     </span>
                     </a>
                 </div>
+<div class="spacer"></div>
                 <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                     <span class="sr-only">
                         Toggle navigation
                     </span>
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+
+
+
+
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation">
+
+                            <form class="form-inline mr-auto" target="_self">
+
+
+                                <div class="form-group">
+
+                                    <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+
+                                        <div class="input-group">
+                                                <button class="btn btn-primary py-0" type="button">
+                                                    <!-- <!- - <i class="fas fa-search"></i> - -> -->
+                                                    <i class="material-icons typeahead_icon">
+                                                        search
+                                                    </i>
+                                                </button>
+                                            <div class="lazytype">
+
+                                                <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary py-0" type="button">
+                                                    <!-- <!- - <i class="fas fa-search"></i> - -> -->
+                                                    <i class="material-icons typeahead_icon">
+                                                        search
+                                                    </i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+
+
+
+<div class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="https://tendollardata.com">
+                                Home
+                            </a>
+                        </li>
+</ul>
+</div>
+
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav">
                         <li class="nav-item" role="presentation">
@@ -125,18 +182,19 @@
                             </a>
                         </li> -->
                     </ul>
-                    <ul class="nav navbar-nav">
+                    <!-- <ul class="nav navbar-nav">
                         <li class="nav-item" role="presentation">
                             <form class="form-inline mr-auto" target="_self">
                                 <div class="form-group">
                                     <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                                         <div class="input-group">
                                             <div class="lazytype">
-                                                <input class="bg-light form-control border-0 small typeahead" type="text" placeholder="TSLA, AAPL, SPY...">
+
+                                                <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
                                             </div>
                                             <div class="input-group-append">
                                                 <button class="btn btn-primary py-0" type="button">
-                                                    <!-- <i class="fas fa-search"></i> -->
+                                                    <!- - <i class="fas fa-search"></i> - ->
                                                     <i class="material-icons typeahead_icon">
                                                         search
                                                     </i>
@@ -147,7 +205,7 @@
                                 </div>
                             </form>
                         </li>
-                    </ul>
+                    </ul> -->
                     <ul class="nav navbar-nav mx-auto">
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" href="#">
@@ -169,15 +227,31 @@
                 </div>
             </div>
         </nav>
+<script>
+    var stringToHTML = function (str) {
+	var dom = document.createElement('div');
+	dom.innerHTML = str;
+    return dom;
+        };
+    string_concat = ['<div class="1empty-message">', 'Try <a href=\"https://charts.tendollardata.com/TSLA>TSLA</a>', '<a href=\"https://charts.tendollardata.com/AAPL>AAPL</a>', '<a href=\"https://charts.tendollardata.com/SPY>SPY</a>...', '</div>'].join('\n')
+    string_concat_html = stringToHTML(string_concat)
+    // console.log(string_concat)
+
+
+
+</script>
         <script>
-            $(".lazytype").one("click", function () {
+            console.log(string_concat_html)
+            // $(".lazytype").one("click", function () {
                 var bestPictures = new Bloodhound({
                     datumTokenizer: Bloodhound.tokenizers.obj.nonword('value'), // Bloodhound.tokenizers.obj.whitespace('tokens'),
                     queryTokenizer: Bloodhound.tokenizers.whitespace,
-                    prefetch: "{{ url_for('static', filename='../static/json/company_urls_records_remote.json') }}"
+
+                    prefetch: "{{ url_for('static', filename='../static/json/company_urls_records.json') }}"
                 });
                 bestPictures.initialize();
                 $('.typeahead').typeahead(null, {
+                        limit: 20,
                     minLength: 1,
                     name: 'ticker',
                     display: 'value',
@@ -185,23 +259,52 @@
                     highlight: true,
                     hint: true,
                     templates: {
-                        empty: ['<div class="empty-message">', 'Try <a href=\"https://charts.tendollardata.com/TSLA>TSLA</a>, <a href=\"https://charts.tendollardata.com/AAPL>AAPL</a>, <a href=\"https://charts.tendollardata.com/SPY>SPY</a>...', '</div>'].join('\n'),
+                        // empty: ['<div class="empty-message">', 'Try <a href=\"https://charts.tendollardata.com/TSLA>TSLA</a>', '<a href=\"https://charts.tendollardata.com/AAPL>AAPL</a>', '<a href=\"https://charts.tendollardata.com/SPY>SPY</a>...', '</div>'].join('\n'),
+                        empty: ['<div class="empty-message">', 'No results found.', '</div>'].join('\n'),
+                        // empty: string_concat_html,
+
+                        // empty: ['<div class="empty-message">', 'Try TSLA, AAPL, SPY,...', '</div>'].join('\n'),
                         suggestion: function (data) {
-                            return "<p><a href=\"https://charts.tendollardata.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>"
+                            return stringToHTML('<p class="sasa"><a href="https://charts.tendollardata.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Cash</strong>' + '</a></p>' + '<p class="dada"><a href="https://charts.tendollardata.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Net Revenue</strong>'  + '</a></p>')
+                            // return "<p class='sasa'><a href=\"https://charts.tendollardata.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>\
+                            // <p><a href=\"https://charts.tendollardata.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>"
                         }
                     }
                 });
-            });
+
+    // js highlight characters same as characters typed
+    // https://stackoverflow.com/questions/15951214/highlight-text-of-a-div-as-user-types-characters-in-an-input-field
+// var the_menu = 'tt-menu'
+// var s = document.getElementsByClassName('typeahead')[0].innerHTML;    // your input
+// var div = document.getElementsByClassName('tt-menu')[0].innerHTML;  // the div to change
+// console.log("dmas");
+// var t = ['tt-menu'].textContent || ['tt-menu'].innerText;
+// s.onkeyup = function(){
+// console.log("dmdas");
+//    div.innerHTML = this.value
+//    ? t.replace(new RegExp('('+this.value+')','ig'), '<span class=highlight>$1</span>')
+//    : t;
+// };
+// console.log(s.value);
+// console.log(this.value);
+
+            // });
         </script>
+<script>
+
+
+</script>
+
             {% block quarterly_body %}
             {% endblock %}
 <script type="text/javascript">$.typeahead({
+    limit: 20,
     input: '.js-typeahead',
     minLength: 1,
     filter: false, // Disables typahead filter to just show everything in the results from the database
     debug: true,
     highlight: true,
-    maxItem: 10,
+    maxItem: 100,
     hint: true,
     dynamic: true,
     delay: 200,
@@ -214,5 +317,7 @@
     display: ["name"]
 });
 </script>
+
+
         </body>
 </html>
