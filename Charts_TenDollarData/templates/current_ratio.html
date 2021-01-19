@@ -248,7 +248,7 @@ a:hover {
                         rules: [
                             {
                                 condition: {
-                                    maxWidth: 768
+                                    maxWidth: 500
                                 },
                                 // width: '1000',
                                 chartOptions: {
@@ -260,12 +260,23 @@ a:hover {
                                         // enabled: false
                                     },
                                     rangeSelector: {inputEnabled: false},
-                                    plotOptions: { line:{
+                                    plotOptions: {
+                                        line:{
                                         dataLabels:{
                                             enabled:false,
                                             // format: "FY {point.x:%y}",
+                                            }
+                                        },
+                                        spline:{
+                                            visible:false,
+                                            labels:{
+                                                // enabled: false,
+                                                // visible:false,
+                                            }
                                         }
-                                    }},
+
+
+                                },
                                     legend: {
                                         enabled: true,
                                         verticalAlign: 'bottom',
@@ -276,6 +287,13 @@ a:hover {
                                     },
                                     yAxis: [
                                         {
+                                            yAxis: 2,
+                                            opposite: true,
+                                            labels:{
+                                                // enabled: false,
+                                            },
+                                        },
+                                    {
                                             yAxis: 1,
                                             opposite: false,
                                             labels:{
@@ -289,10 +307,18 @@ a:hover {
                                                 // enabled: false,
                                             },
                                         },
+                                        {
+                                            yAxis: 0,
+                                            enabled: false,
+                                            // opposite: true,
+                                            labels:{
+                                                enabled: false,
+                                            },
+                                        },
                                     ],
                                     xAxis: {
                                         labels:{
-                                            enabled: false,
+                                            // enabled: false,
                                         },
                                             scrollbar: {
                                                 enabled: false
@@ -474,12 +500,14 @@ a:hover {
                         },
                     ],
                     plotOptions: {
-                        series: {
-                            dataLabels:{
-                                // overflow: "allow",
-                                // crop: "false",
-                            }
-                        },
+                        // series: {
+                        //     dataLabels:{
+                        //         // overflow: "allow",
+                        //         // crop: "false",
+                        //     }
+                        // },
+
+                        // !!!!!!
                         line: { // SECTION - Highcharts - plotOptions - line
                             allowPointSelect: true,
                             connectNulls: true,
@@ -514,10 +542,10 @@ a:hover {
                         },
                         spline: { // SECTION - Highcharts - plotOptions - area
                         },
-                        column: { // SECTION - Highcharts - plotOptions- column
-                            groupPadding: 0.1,
-                            color: '#D6D9BF',
-                        },
+                        // column: { // SECTION - Highcharts - plotOptions- column
+                        //     groupPadding: 0.1,
+                        //     color: '#D6D9BF',
+                        // },
                         series: {
                             name: 'Quarterly Data',
                             groupPadding: 0,
@@ -525,7 +553,12 @@ a:hover {
                                 enabled: false
                             },
                             type: 'line',
-                            xAxis: 1,
+                            xAxis: 0,
+                            visible: false,
+                            labels:{
+                                visible: false,
+                            }
+
                         },
                         series: {
                             type: 'area',
@@ -596,6 +629,10 @@ a:hover {
                             yAxis: 2,
                             opposite: false,
                             visible: false,
+                            labels: {
+                                enabled: false,
+
+                            }
 
                         },
                         {// SECTION - Highcharts - yAxis - metric - percent
@@ -603,6 +640,7 @@ a:hover {
                             yAxis: 1,
                             title:'metric',
                             {% if statement_or_ratio != "sratios" %}
+                            {% endif %}
                             tickPositioner: function () {
                                 the_minimum = this.dataMin
                                 var positions = [],
@@ -614,7 +652,7 @@ a:hover {
                                 }
                                 return positions;
                             },
-                            {% endif %}
+
                             labels: { // SECTION - Highcharts - yAxis - labels
                                 style: {
                                     color: "#19a419", // '#177737', // 'red'
@@ -711,8 +749,8 @@ a:hover {
                             //     }
                             // },
                             name: 'Quarterly (Q)   {{ fin_metric_name }}',
-                            pointInterval: 1,
-                            pointIntervalUnit: 'year',
+                            // pointInterval: 1,
+                            // pointIntervalUnit: 'year',
                             tooltip: {
                                 // split: true,
                                 shared: true,
@@ -782,10 +820,11 @@ a:hover {
                             },
                             data: df_json,
                             zIndex: 98,
-                            yAxis: 2
+                            yAxis: 1,
+                            // xAxis: 0,
                         }, {
                             type: 'line',
-                            yAxis: 1,
+                            yAxis: 2,
                             zIndex: 100,
                             tooltip: {
                                 shared: true,
@@ -820,8 +859,8 @@ a:hover {
                                 },
 
                             },
-                            pointInterval: 3,
-                            pointIntervalUnit: 'month',
+                            // pointInterval: 1,
+                            // pointIntervalUnit: 'year',
                             color: "#19a419", //'#177737', // '#343A40', // '#1C9179',
                             lineWidth: 3,
                             xDateFormat: '%Y',
@@ -857,7 +896,7 @@ a:hover {
 <!-- <div class="table_container"></div> -->
 <!-- <div id="chart"></div> -->
 <div class="d-flex flex-column" id="content-wrapper">
-    <div class="row">
+    <div class="row rightrow">
         <!-- <div class="col-md-9 col-lg-9 col-xl-9">  -->
             <div class="col-md-8 col-lg-8 col-xl-8">
             <div class="text-dark h1_info left_side">
@@ -901,7 +940,8 @@ a:hover {
                     {{yoy_1_value}}
                     <br>
                     {{yoy_2_value}} -->
-                {{ fin_metric_name }}:
+                {{ fin_metric_name }}
+                <span class="equals_is"> is </span>
                     <!-- <span class="up_green">
                         <i class="fa fa-arrow-up up_green" aria-hidden="true"></i>
                     </span> -->
@@ -910,10 +950,12 @@ a:hover {
                     <!-- <i class="fa fa-arrow-down down_red" aria-hidden="true"></i> -->
                     <!-- <br> -->
                     {{ last_4_quarters_str }}
-                (YoY
+                <span class="yoy_subtitle">
+                    (1Y
                 {{ y_y_chg }}
                 )
-                    <br>
+                </span>
+                    <!-- <br> -->
                 </h2>
                 <!-- <br> -->
                 <h2 class="text-primary mb-0">
@@ -928,8 +970,9 @@ a:hover {
                 <div class="highbar_container">
                     <div class="highbar_title">
                     {{company_symbol}}
+                    <span class="hide_on_mobile">
                     <span class="highbar_title_stock">
-                    Stock Price</span> &
+                    Stock Price</span> &</span>
                     <span class="highbar_title_metric">
                     {{ fin_metric_name }}</span>
                     </div>
@@ -1183,7 +1226,7 @@ a:hover {
                                 <!-- trending_up -->
                                 arrow_drop_up
                                 <!-- align_vertical_bottom -->
-                            </i> # of Up Years
+                            </i> # Up Years
                             <!-- <br> <span class="font12">Positive YoY change (0%+)</span> -->
                         </td>
                         <td class="hist_stats middle">
@@ -1199,7 +1242,7 @@ a:hover {
                                 <!-- trending_down -->
                                 arrow_drop_down
                                 <!-- align_vertical_top -->
-                            </i> # of Down Years
+                            </i> # Down Years
                             <!-- <br><span class="font12">Negative YoY change</span> -->
                         </td>
                         <td class="hist_stats middle">
@@ -1212,7 +1255,7 @@ a:hover {
                     <!-- <hr class="stats_hr"> -->
                     <!-- <br> -->
                     <span class="font12">Up Years = Positive (0%+) YoY change</span><br>
-                    <span class="font12">Down Years = Negative (less than 0%) YoY change </span>
+                    <span class="font12">Down Years = Zero or Negative (0% or less) YoY change </span>
                     <br><br>
 
 
@@ -1349,79 +1392,6 @@ a:hover {
 
 
 </div>
-</div>
-
-
-<!-- <div class="row horizontal_scroll">
-
-    <div class="col-md-6 col-xl-3 mb-4">
-            <div class="card shadow border-left-primary py-2">
-                <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col mr-2">
-                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
-                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                        </div>
-                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="col-md-6 col-xl-3 mb-4">
-            <div class="card shadow border-left-primary py-2">
-                <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col mr-2">
-                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
-                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                        </div>
-                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="col-md-6 col-xl-3 mb-4">
-            <div class="card shadow border-left-primary py-2">
-                <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col mr-2">
-                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
-                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                        </div>
-                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="col-md-6 col-xl-3 mb-4">
-            <div class="card shadow border-left-primary py-2">
-                <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col mr-2">
-                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
-                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                        </div>
-                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="col-md-6 col-xl-3 mb-4">
-            <div class="card shadow border-left-primary py-2">
-                <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col mr-2">
-                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Earnings (monthly)</span><span>Earnings (monthly)</span></div>
-                            <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                        </div>
-                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div> -->
-
-
 <div class="row horizontal_scroll">
   <div class="horizontal_grid-container">
   <main class="horizontal_grid-item main">
@@ -1441,14 +1411,9 @@ a:hover {
             </div>
         </a> -->
         {{yoy_cards_html_joined}}
-      <div class="item item3">qwe</div>
-      <div class="item item4">ecc</div>
-      <div class="item item5">bbb</div>
-      <div class="item item6">3333</div>
-      <div class="item item7">dd</div>
-      <div class="item item8">b</div>
-      <div class="item item9">b</div>
-      <div class="item item10">vvv</div>
+      <!-- <div class="item item3">qwe</div>
+      <div class="item item4">ecc</div> -->
+
 
                           <!-- {{yoy_1_key}}
                     <br>
@@ -1461,6 +1426,8 @@ a:hover {
   </main>
 </div>
 </div>
+</div>
+
 
 
 
@@ -1781,7 +1748,7 @@ slider.addEventListener('mousemove', e => {
                         <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/free-operating-cash-flow-to-debt">Free Operating Cash Flow-To-Debt</a></span></li>
                         <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/gross-profit-margin">Gross Profit Margin</a></span></li>
                         <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/operating-profit-margin">Operating Profit Ratio</a></span></li>
-                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/profit-margin">Profit Margin </a></span></li>
+                        <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/profit-margin">Net Profit Margin </a></span></li>
                         <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-assets-roa">Return on Assets </a></span></li>
                         <li><span class="ratios debt_ratios tab_links"><a class="ratios_links" href="{{domain}}/{{url_symbol}}-stock/{{company_url_name}}/ratios/return-on-capital">Return on Capital</a></span></li>
 
