@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GRCYU,,NASDAQ,2020-07-24,,9.95,10.05,9.75,10.0,10.0,1828760.0,1828760.0,0.09500000000000001,0.02476923076923077,8.433359230769232

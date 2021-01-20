@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,GHIVU,"Gores Holdings IV, Inc.",NASDAQ,2020-01-24,123208875.0,10.52,11.25,9.4215,11.25,11.25,22543997.0,22543997.0,0.3710999999999996,0.02927941176470591,10.506972647058822

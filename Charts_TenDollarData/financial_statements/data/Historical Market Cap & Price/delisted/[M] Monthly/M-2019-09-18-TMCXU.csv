@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-09-01,TMCXU,Trinity Merger Corp Unit,delisted,2019-09-18,100740000,11.01,11.68,11.01,11.68,11.68,503.0,503.0,0.0,0.0,11.344999999999999
+2019-10-01,TMCXU,Trinity Merger Corp Unit,delisted,2019-09-18,104535000,11.62,12.12,11.5,12.12,12.12,11548.0,11548.0,-0.31000000000000005,-0.325375,10.29916625
+2019-11-01,TMCXU,Trinity Merger Corp Unit,delisted,2019-09-18,108243750,12.02,12.55,10.5,12.55,12.55,6495.0,6495.0,-0.41000000000000003,-0.32380000000000014,4.651999999999999

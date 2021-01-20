@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,DPHCW,DiamondPeak Holdings Corp.,NASDAQ,2020-07-21,333760000000.0,2.5,14.3,2.14,11.92,11.92,18138911.0,18138911.0,-1.595,-0.9853333333333328,5.493230606060607

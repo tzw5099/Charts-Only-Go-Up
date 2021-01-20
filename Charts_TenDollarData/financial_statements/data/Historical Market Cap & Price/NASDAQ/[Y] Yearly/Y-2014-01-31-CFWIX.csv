@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,CFWIX,Calvert Global Water Fund Class I,NASDAQ,2014-01-31,,18.99,21.18,16.76,17.65,16.776876,0.0,0.0,0.0,0.0,
+2015-01-01,CFWIX,Calvert Global Water Fund Class I,NASDAQ,2014-01-31,,17.57,18.66,14.82,15.32,14.715446,0.0,0.0,0.0,0.0,
+2016-01-01,CFWIX,Calvert Global Water Fund Class I,NASDAQ,2014-01-31,,15.17,17.950001,13.68,17.530001,16.838238,0.0,0.0,0.0,0.0,
+2017-01-01,CFWIX,Calvert Global Water Fund Class I,NASDAQ,2014-01-31,,17.59,20.879999,17.540001,20.639999,20.089745,0.0,0.0,0.0,0.0,
+2018-01-01,CFWIX,Calvert Global Water Fund Class I,NASDAQ,2014-01-31,,20.74,21.459999,16.870001,17.6,17.413168,0.0,0.0,0.0,0.0,
+2019-01-01,CFWIX,Calvert Global Water Fund Class I,NASDAQ,2014-01-31,,17.59,22.450001,17.370001,22.35,22.35,0.0,0.0,0.0,0.0,
+2020-01-01,CFWIX,Calvert Global Water Fund Class I,NASDAQ,2014-01-31,,22.370001,23.120001,14.74,22.24,22.24,0.0,0.0,0.0,0.0,

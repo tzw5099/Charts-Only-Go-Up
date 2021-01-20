@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,22.959999,23.549999,22.959999,23.040001,19.178432,0.0,0.0,0.0,0.0,
+2013-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,23.02,23.360001,21.120001,21.450001,18.429939,0.0,0.0,0.0,0.0,
+2014-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,21.469999,23.629999,21.469999,23.43,20.709002,0.0,0.0,0.0,0.0,
+2015-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,23.469999,23.959999,23.040001,23.809999,21.524805,0.0,0.0,0.0,0.0,
+2016-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,23.9,25.18,22.99,23.32,21.552771,0.0,0.0,0.0,0.0,
+2017-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,23.33,24.549999,23.309999,24.370001,23.068777,0.0,0.0,0.0,0.0,
+2018-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,24.370001,24.379999,23.27,23.809999,23.137976,0.0,0.0,0.0,0.0,
+2019-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,23.860001,25.59,23.860001,25.07,24.930614,0.0,0.0,0.0,0.0,
+2020-01-01,PTRMX,Performance Trust Municipal Bond Fund - A Class,NASDAQ,2012-09-28,,25.129999,26.209999,22.85,25.52,25.52,0.0,0.0,0.0,0.0,

@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,9.79,10.24,9.24,9.79,7.662746,0.0,0.0,0.0,0.0,
+2012-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,9.93,11.58,9.93,11.21,8.774196,0.0,0.0,0.0,0.0,
+2013-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,11.48,14.77,11.41,14.68,11.815801,0.0,0.0,0.0,0.0,
+2014-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,14.54,16.959999,13.69,15.72,13.396892,0.0,0.0,0.0,0.0,
+2015-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,15.7,16.93,14.94,15.73,13.635523,0.0,0.0,0.0,0.0,
+2016-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,15.45,16.889999,14.06,16.52,14.320333,0.0,0.0,0.0,0.0,
+2017-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,16.65,18.34,16.65,16.809999,15.71282,0.0,0.0,0.0,0.0,
+2018-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,16.93,17.690001,14.82,15.25,15.25,0.0,0.0,0.0,0.0,
+2019-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,15.28,16.32,15.13,16.08,16.08,0.0,0.0,0.0,0.0,
+2020-01-01,ACDHX,AC Alternatives Disciplined Long Short Fund C Class,NASDAQ,2011-11-01,,16.18,16.309999,16.040001,16.299999,16.299999,0.0,0.0,0.0,0.0,

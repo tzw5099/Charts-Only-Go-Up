@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,SSC,Seven Stars Cloud Group Inc.,NASDAQ,2018-11-12,,3.07,3.16,2.9,2.98,,385600.0,385600.0,2.98,0.0,3.0054

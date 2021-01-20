@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,DWEQ,AdvisorShares DWA Alpha Equal Weight ETF,NASDAQ,2019-12-27,,20.02,25.12,20.02,25.05,25.05,1258100.0,1258100.0,5.241999999999999,8.676333333333334,24.45244333333333
+2020-01-01,DWEQ,AdvisorShares DWA Alpha Equal Weight ETF,NASDAQ,2019-12-27,,25.055,27.49,18.237,23.298,23.298,1903100.0,1903100.0,-4.556999999999999,-0.12490740740740745,21.255483456790117

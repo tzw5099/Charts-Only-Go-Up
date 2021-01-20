@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,JSMVX,Jackson Square SMID-Cap Growth Fund Investor Class,NASDAQ,2016-09-19,,17.84,18.620001,16.83,18.08,15.148181,0.0,0.0,0.0,0.0,
+2017-01-01,JSMVX,Jackson Square SMID-Cap Growth Fund Investor Class,NASDAQ,2016-09-19,,18.17,21.74,18.17,21.57,18.173538,0.0,0.0,0.0,0.0,
+2018-01-01,JSMVX,Jackson Square SMID-Cap Growth Fund Investor Class,NASDAQ,2016-09-19,,21.700001,26.34,19.110001,19.299999,18.497395,0.0,0.0,0.0,0.0,
+2019-01-01,JSMVX,Jackson Square SMID-Cap Growth Fund Investor Class,NASDAQ,2016-09-19,,19.200001,25.51,18.68,24.059999,24.059999,0.0,0.0,0.0,0.0,
+2020-01-01,JSMVX,Jackson Square SMID-Cap Growth Fund Investor Class,NASDAQ,2016-09-19,,24.200001,31.35,16.48,29.809999,29.809999,0.0,0.0,0.0,0.0,

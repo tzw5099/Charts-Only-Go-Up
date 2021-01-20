@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-07-01,DBRT,Credit Suisse AxelaTrader 3x Inverse Brent Crude Oil ETN,delisted,2017-09-15,,99.09,99.24,99.09,99.24,,227.0,227.0,99.24,0.0,99.165
+2017-10-01,DBRT,Credit Suisse AxelaTrader 3x Inverse Brent Crude Oil ETN,delisted,2017-09-15,,95.76,95.76,50.12,50.12,,28048.0,28048.0,-49.11999999999999,-1.4538181818181823,65.96998378378376
+2018-01-01,DBRT,Credit Suisse AxelaTrader 3x Inverse Brent Crude Oil ETN,delisted,2017-09-15,,50.23,59.36,42.67,45.09,,11263.0,11263.0,-5.030000000000001,-0.10085714285714288,47.46491904761906
+2018-04-01,DBRT,Credit Suisse AxelaTrader 3x Inverse Brent Crude Oil ETN,delisted,2017-09-15,,35.93,35.93,23.31,23.36,,48132.0,48132.0,-21.73,-1.4598749999999998,29.103881818181826
+2018-07-01,DBRT,Credit Suisse AxelaTrader 3x Inverse Brent Crude Oil ETN,delisted,2017-09-15,,24.11,30.15,23.07,26.36,,328466.0,328466.0,2.9999999999999996,0.8214736842105261,26.780399999999997

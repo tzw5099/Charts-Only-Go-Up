@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FMBIP,,NASDAQ,2020-09-17,2910909440.0,24.8415,26.6,23.852,26.1,26.1,2087674.0,2087674.0,-0.41490000000000016,-0.02402857142857147,25.18619671428572

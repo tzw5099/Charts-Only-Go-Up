@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,SDGR,"Schrodinger, Inc.",NASDAQ,2020-02-06,3312932005.8,26.0,99.5,25.5,52.34,52.34,206105736.0,206105736.0,-18.692990000000016,0.26269677419354864,58.16590980645164

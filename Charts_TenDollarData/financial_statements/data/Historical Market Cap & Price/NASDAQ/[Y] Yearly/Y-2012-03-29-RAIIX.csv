@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,9.91,11.41,9.12,11.39,10.529103,0.0,0.0,0.0,0.0,
+2013-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,11.55,14.94,11.48,14.94,14.072277,0.0,0.0,0.0,0.0,
+2014-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,14.93,16.049999,13.89,14.1,13.982056,0.0,0.0,0.0,0.0,
+2015-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,14.13,16.68,13.79,16.34,16.211515,0.0,0.0,0.0,0.0,
+2016-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,15.99,16.83,14.36,15.27,15.14993,0.0,0.0,0.0,0.0,
+2017-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,15.29,21.66,15.29,21.66,21.519444,0.0,0.0,0.0,0.0,
+2018-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,21.790001,23.469999,17.120001,17.690001,17.640181,0.0,0.0,0.0,0.0,
+2019-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,17.68,22.059999,17.370001,22.040001,22.040001,0.0,0.0,0.0,0.0,
+2020-01-01,RAIIX,Manning & Napier Rainier International Discovery Series Class I,NASDAQ,2012-03-29,,22.200001,26.52,15.2,26.120001,26.120001,0.0,0.0,0.0,0.0,

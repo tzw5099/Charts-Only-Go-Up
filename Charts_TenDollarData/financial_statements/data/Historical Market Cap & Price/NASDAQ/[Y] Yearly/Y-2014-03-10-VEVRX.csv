@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,VEVRX,Victory Sycamore Established Value Fund Class R6,NASDAQ,2014-03-10,,35.330002,38.77,33.669998,33.669998,24.329435,0.0,0.0,0.0,0.0,
+2015-01-01,VEVRX,Victory Sycamore Established Value Fund Class R6,NASDAQ,2014-03-10,,33.599998,36.060001,30.43,30.43,24.601149,0.0,0.0,0.0,0.0,
+2016-01-01,VEVRX,Victory Sycamore Established Value Fund Class R6,NASDAQ,2014-03-10,,30.049999,37.299999,27.690001,36.18,29.793966,0.0,0.0,0.0,0.0,
+2017-01-01,VEVRX,Victory Sycamore Established Value Fund Class R6,NASDAQ,2014-03-10,,36.400002,41.66,36.400002,40.610001,34.587715,0.0,0.0,0.0,0.0,
+2018-01-01,VEVRX,Victory Sycamore Established Value Fund Class R6,NASDAQ,2014-03-10,,40.799999,43.43,31.459999,33.07,31.116936,0.0,0.0,0.0,0.0,
+2019-01-01,VEVRX,Victory Sycamore Established Value Fund Class R6,NASDAQ,2014-03-10,,32.970001,41.700001,32.549999,40.09,39.838394,0.0,0.0,0.0,0.0,
+2020-01-01,VEVRX,Victory Sycamore Established Value Fund Class R6,NASDAQ,2014-03-10,,40.119999,40.630001,23.969999,35.650002,35.650002,0.0,0.0,0.0,0.0,

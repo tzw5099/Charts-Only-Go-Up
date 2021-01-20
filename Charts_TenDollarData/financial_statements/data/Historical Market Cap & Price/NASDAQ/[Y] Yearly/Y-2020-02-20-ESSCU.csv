@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ESSCU,East Stone Acquisition Corporation,NASDAQ,2020-02-20,,10.05,10.42,9.25,10.4,10.4,8854546.0,8854546.0,-0.4577,-0.03383193277310923,8.744661848739497

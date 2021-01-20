@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NELAX,Nuveen Equity Long/Short Fund Class A,NASDAQ,2013-06-26,,28.18,32.369999,28.18,30.99,30.011314,0.0,0.0,0.0,0.0,
+2014-01-01,NELAX,Nuveen Equity Long/Short Fund Class A,NASDAQ,2013-06-26,,30.780001,34.0,29.43,33.599998,32.619247,0.0,0.0,0.0,0.0,
+2015-01-01,NELAX,Nuveen Equity Long/Short Fund Class A,NASDAQ,2013-06-26,,33.52,35.25,31.18,33.619999,32.63866,0.0,0.0,0.0,0.0,
+2016-01-01,NELAX,Nuveen Equity Long/Short Fund Class A,NASDAQ,2013-06-26,,33.279999,36.400002,29.209999,35.130001,34.104588,0.0,0.0,0.0,0.0,
+2017-01-01,NELAX,Nuveen Equity Long/Short Fund Class A,NASDAQ,2013-06-26,,35.470001,41.77,35.240002,41.139999,40.588577,0.0,0.0,0.0,0.0,
+2018-01-01,NELAX,Nuveen Equity Long/Short Fund Class A,NASDAQ,2013-06-26,,41.540001,44.779999,38.150002,39.540001,39.540001,0.0,0.0,0.0,0.0,
+2019-01-01,NELAX,Nuveen Equity Long/Short Fund Class A,NASDAQ,2013-06-26,,39.84,42.060001,38.32,41.939999,41.939999,0.0,0.0,0.0,0.0,
+2020-01-01,NELAX,Nuveen Equity Long/Short Fund Class A,NASDAQ,2013-06-26,,42.169998,42.169998,31.379999,39.619999,39.619999,0.0,0.0,0.0,0.0,

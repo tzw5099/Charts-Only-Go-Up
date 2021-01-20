@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,SNUG,Alpha Architect Merlyn.AI Tactical Growth and Income ETF,NASDAQ,2020-02-25,,24.8803,27.129999,19.6928,26.2817,26.2817,1010255.0,1010255.0,-2.4923999999999995,-0.07915199999999999,24.109293359999995

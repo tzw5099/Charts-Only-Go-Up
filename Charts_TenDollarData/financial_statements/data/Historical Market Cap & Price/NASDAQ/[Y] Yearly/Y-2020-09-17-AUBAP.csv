@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,AUBAP,,NASDAQ,2020-09-17,2082177000.0,24.4745,26.5,21.6845,26.290001,26.290001,4549996.0,4549996.0,0.03059999999999985,0.00011594202898555401,25.17701101449275

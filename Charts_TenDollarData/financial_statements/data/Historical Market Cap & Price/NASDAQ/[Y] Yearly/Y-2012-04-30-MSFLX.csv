@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,18.07,18.85,16.26,17.83,12.927293,0.0,0.0,0.0,0.0,
+2013-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,18.139999,20.889999,18.08,20.389999,15.361329,0.0,0.0,0.0,0.0,
+2014-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,20.1,21.68,18.879999,19.870001,15.981455,0.0,0.0,0.0,0.0,
+2015-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,19.700001,21.719999,19.15,19.91,16.90893,0.0,0.0,0.0,0.0,
+2016-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,19.559999,21.610001,18.66,20.129999,17.724808,0.0,0.0,0.0,0.0,
+2017-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,20.08,25.129999,20.08,24.18,22.155312,0.0,0.0,0.0,0.0,
+2018-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,24.18,25.92,21.620001,22.51,21.636278,0.0,0.0,0.0,0.0,
+2019-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,22.32,28.52,21.940001,27.84,27.84,0.0,0.0,0.0,0.0,
+2020-01-01,MSFLX,"Morgan Stanley Institutional Fund, Inc. Global Franchise Portfolio Class L",NASDAQ,2012-04-30,,27.99,30.940001,20.67,29.950001,29.950001,0.0,0.0,0.0,0.0,

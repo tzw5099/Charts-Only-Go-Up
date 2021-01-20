@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,BKCH,AdvisorShares Sabretooth ETF,NASDAQ,2019-02-07,,24.77,28.96,24.45,24.9,24.9,1398343.0,1398343.0,-6.319999999999998,-0.14021428571428568,23.743254166666652

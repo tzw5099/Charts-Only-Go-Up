@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,CGTUX,Columbia Global Technology Growth Fund Institutional 3 Class,NASDAQ,2016-03-02,,19.26,23.610001,18.98,23.129999,20.808729,0.0,0.0,0.0,0.0,
+2017-01-01,CGTUX,Columbia Global Technology Growth Fund Institutional 3 Class,NASDAQ,2016-03-02,,23.309999,34.529999,23.309999,32.040001,29.874813,0.0,0.0,0.0,0.0,
+2018-01-01,CGTUX,Columbia Global Technology Growth Fund Institutional 3 Class,NASDAQ,2016-03-02,,32.619999,38.68,27.860001,29.959999,29.53372,0.0,0.0,0.0,0.0,
+2019-01-01,CGTUX,Columbia Global Technology Growth Fund Institutional 3 Class,NASDAQ,2016-03-02,,29.99,42.470001,28.75,42.200001,42.200001,0.0,0.0,0.0,0.0,
+2020-01-01,CGTUX,Columbia Global Technology Growth Fund Institutional 3 Class,NASDAQ,2016-03-02,,43.009998,58.290001,32.740002,53.240002,53.240002,0.0,0.0,0.0,0.0,

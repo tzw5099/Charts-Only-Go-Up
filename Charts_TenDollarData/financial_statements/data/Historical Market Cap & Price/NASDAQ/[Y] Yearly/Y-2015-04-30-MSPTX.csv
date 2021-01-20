@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,MSPTX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class C",NASDAQ,2015-04-30,,13.3,13.54,11.54,12.04,9.82853,0.0,0.0,0.0,0.0,
+2016-01-01,MSPTX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class C",NASDAQ,2015-04-30,,11.74,12.44,10.33,11.66,9.734596,0.0,0.0,0.0,0.0,
+2017-01-01,MSPTX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class C",NASDAQ,2015-04-30,,11.72,16.24,11.72,14.6,13.643344,0.0,0.0,0.0,0.0,
+2018-01-01,MSPTX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class C",NASDAQ,2015-04-30,,14.79,16.379999,12.07,13.03,12.721519,0.0,0.0,0.0,0.0,
+2019-01-01,MSPTX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class C",NASDAQ,2015-04-30,,12.96,17.200001,12.63,16.540001,16.540001,0.0,0.0,0.0,0.0,
+2020-01-01,MSPTX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class C",NASDAQ,2015-04-30,,16.790001,27.08,12.9,24.41,24.41,0.0,0.0,0.0,0.0,

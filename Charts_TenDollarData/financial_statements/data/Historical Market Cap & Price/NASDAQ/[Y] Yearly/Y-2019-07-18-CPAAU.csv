@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,CPAAU,Conyers Park II Acquisition Corp.,NASDAQ,2019-07-18,,10.2,11.78,10.15,10.88,10.88,8187573.0,8187573.0,-1.3055000000000003,-0.10261224489795917,10.601940102040816
+2020-01-01,CPAAU,Conyers Park II Acquisition Corp.,NASDAQ,2019-07-18,119587501.287,11.0,13.74,9.2901,10.63,10.63,2887681.0,2887681.0,-1.3548,-0.07999099099099097,10.373267207207208

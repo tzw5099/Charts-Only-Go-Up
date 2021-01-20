@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,RKT,RockTenn Company,delisted,2020-08-06,,18.0,34.423,17.5,22.57,22.57,952484832.0,952484832.0,-4.97,-0.39086666666666653,24.188911000000004

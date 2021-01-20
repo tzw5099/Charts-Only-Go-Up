@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-12-01,INDU,Industrea Acquisition Corp.,NASDAQ,2018-12-06,,10.1,10.1,9.11,9.36,,27017.0,27017.0,9.36,0.0,9.4051

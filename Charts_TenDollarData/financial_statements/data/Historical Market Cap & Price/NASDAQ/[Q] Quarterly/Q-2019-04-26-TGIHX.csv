@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,TGIHX,TIAA-CREF Growth & Income Fund Advisor Class,NASDAQ,2019-04-26,,14.43,14.58,13.54,14.49,13.583624,0.0,0.0,0.0,0.0,
+2019-07-01,TGIHX,TIAA-CREF Growth & Income Fund Advisor Class,NASDAQ,2019-04-26,,14.6,14.89,13.95,14.42,13.553937,0.0,0.0,0.0,0.0,
+2019-10-01,TGIHX,TIAA-CREF Growth & Income Fund Advisor Class,NASDAQ,2019-04-26,,14.21,15.25,13.96,14.79,14.733274,0.0,0.0,0.0,0.0,
+2020-01-01,TGIHX,TIAA-CREF Growth & Income Fund Advisor Class,NASDAQ,2019-04-26,,14.93,15.56,9.99,11.56,11.56,0.0,0.0,0.0,0.0,
+2020-04-01,TGIHX,TIAA-CREF Growth & Income Fund Advisor Class,NASDAQ,2019-04-26,,11.05,14.61,11.05,14.09,14.09,0.0,0.0,0.0,0.0,
+2020-07-01,TGIHX,TIAA-CREF Growth & Income Fund Advisor Class,NASDAQ,2019-04-26,,14.16,16.440001,14.16,15.27,15.27,0.0,0.0,0.0,0.0,

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,DHTCX,Diamond Hill All Cap Select Fund Class C,NASDAQ,2019-04-26,,13.8,14.09,12.79,13.72,13.436138,0.0,0.0,0.0,0.0,
+2019-07-01,DHTCX,Diamond Hill All Cap Select Fund Class C,NASDAQ,2019-04-26,,13.77,14.3,13.04,13.97,13.680965,0.0,0.0,0.0,0.0,
+2019-10-01,DHTCX,Diamond Hill All Cap Select Fund Class C,NASDAQ,2019-04-26,,13.75,15.19,13.51,14.98,14.98,0.0,0.0,0.0,0.0,
+2020-01-01,DHTCX,Diamond Hill All Cap Select Fund Class C,NASDAQ,2019-04-26,,15.07,15.3,8.51,9.86,9.86,0.0,0.0,0.0,0.0,
+2020-04-01,DHTCX,Diamond Hill All Cap Select Fund Class C,NASDAQ,2019-04-26,,9.28,13.63,9.04,12.23,12.23,0.0,0.0,0.0,0.0,
+2020-07-01,DHTCX,Diamond Hill All Cap Select Fund Class C,NASDAQ,2019-04-26,,12.03,14.24,11.97,14.14,14.14,0.0,0.0,0.0,0.0,

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,HJSIX,Hennessy Japan Small Cap Fund Institutional Class,NASDAQ,2015-06-15,,10.89,11.11,9.59,10.23,8.865139,0.0,0.0,0.0,0.0,
+2016-01-01,HJSIX,Hennessy Japan Small Cap Fund Institutional Class,NASDAQ,2015-06-15,,10.16,11.47,8.99,10.68,9.635564,0.0,0.0,0.0,0.0,
+2017-01-01,HJSIX,Hennessy Japan Small Cap Fund Institutional Class,NASDAQ,2015-06-15,,10.64,15.68,10.64,15.68,14.481597,0.0,0.0,0.0,0.0,
+2018-01-01,HJSIX,Hennessy Japan Small Cap Fund Institutional Class,NASDAQ,2015-06-15,,15.75,16.76,12.38,13.3,12.718561,0.0,0.0,0.0,0.0,
+2019-01-01,HJSIX,Hennessy Japan Small Cap Fund Institutional Class,NASDAQ,2015-06-15,,13.37,15.93,13.28,15.75,15.75,0.0,0.0,0.0,0.0,
+2020-01-01,HJSIX,Hennessy Japan Small Cap Fund Institutional Class,NASDAQ,2015-06-15,,15.78,15.83,10.46,15.36,15.36,0.0,0.0,0.0,0.0,

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,EVFTC,Eaton Vance NextShares Trust II,NASDAQ,2017-11-30,,99.2231,99.2231,99.2231,99.2231,,49549.0,49549.0,99.2231,0.0,99.2231
+2018-01-01,EVFTC,Eaton Vance NextShares Trust II,NASDAQ,2017-11-30,,99.2557,99.5882,99.2557,99.6675,,5087.0,5087.0,0.444333,0.0128,99.41586666666667
+2019-01-01,EVFTC,Eaton Vance NextShares Trust II,NASDAQ,2017-11-30,,99.831,99.9106,99.831,99.9106,,6624.0,6624.0,0.24313700000000002,0.01626666666666667,99.87165

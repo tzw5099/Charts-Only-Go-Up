@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NRIX,,NASDAQ,2020-07-24,,18.06,32.970001,15.21,31.709999,31.709999,14892601.0,14892601.0,9.479999999999999,1.3343076923076926,23.623548461538466

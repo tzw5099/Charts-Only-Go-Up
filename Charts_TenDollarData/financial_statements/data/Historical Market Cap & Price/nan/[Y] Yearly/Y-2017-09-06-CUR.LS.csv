@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,CUR.LS,CUR Stock LS,,2017-09-06,,0.0,0.0,0.0,1.17,1.17,0.0,0.0,0.0,0.0,0.0
+2018-01-01,CUR.LS,CUR Stock LS,,2017-09-06,,,,,,,0.0,0.0,0.0,,
+2019-01-01,CUR.LS,CUR Stock LS,,2017-09-06,,,,,,,0.0,0.0,0.0,,
+2020-01-01,CUR.LS,CUR Stock LS,,2017-09-06,,1.17,1.17,1.17,1.17,1.17,0.0,0.0,0.0,0.0,0.0

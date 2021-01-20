@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PRJIX,T. Rowe Price New Horizons Fund I Class,NASDAQ,2015-08-28,,45.740002,47.419998,42.049999,42.490002,29.171217,0.0,0.0,0.0,0.0,
+2016-01-01,PRJIX,T. Rowe Price New Horizons Fund I Class,NASDAQ,2015-08-28,,41.450001,47.439999,34.869999,43.349998,31.502329,0.0,0.0,0.0,0.0,
+2017-01-01,PRJIX,T. Rowe Price New Horizons Fund I Class,NASDAQ,2015-08-28,,43.580002,56.68,43.580002,52.630001,41.510174,0.0,0.0,0.0,0.0,
+2018-01-01,PRJIX,T. Rowe Price New Horizons Fund I Class,NASDAQ,2015-08-28,,53.16,66.139999,45.220001,48.259998,43.132145,0.0,0.0,0.0,0.0,
+2019-01-01,PRJIX,T. Rowe Price New Horizons Fund I Class,NASDAQ,2015-08-28,,47.98,66.610001,46.990002,59.52,59.52,0.0,0.0,0.0,0.0,
+2020-01-01,PRJIX,T. Rowe Price New Horizons Fund I Class,NASDAQ,2015-08-28,,60.349998,81.57,45.889999,78.019997,78.019997,0.0,0.0,0.0,0.0,

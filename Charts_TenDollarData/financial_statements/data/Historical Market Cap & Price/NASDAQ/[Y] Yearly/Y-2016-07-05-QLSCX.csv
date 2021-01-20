@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,QLSCX,Federated MDT Small Cap Core Fund Class R6,NASDAQ,2016-07-05,,14.32,18.610001,14.32,18.09,16.589695,0.0,0.0,0.0,0.0,
+2017-01-01,QLSCX,Federated MDT Small Cap Core Fund Class R6,NASDAQ,2016-07-05,,18.18,21.040001,17.719999,20.02,19.19861,0.0,0.0,0.0,0.0,
+2018-01-01,QLSCX,Federated MDT Small Cap Core Fund Class R6,NASDAQ,2016-07-05,,20.24,23.280001,16.040001,17.08,16.96769,0.0,0.0,0.0,0.0,
+2019-01-01,QLSCX,Federated MDT Small Cap Core Fund Class R6,NASDAQ,2016-07-05,,17.209999,20.219999,16.84,20.09,20.09,0.0,0.0,0.0,0.0,
+2020-01-01,QLSCX,Federated MDT Small Cap Core Fund Class R6,NASDAQ,2016-07-05,,20.07,20.43,11.42,18.219999,18.219999,0.0,0.0,0.0,0.0,

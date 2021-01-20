@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,CPAAW,Conyers Park II Acquisition Corp.,NASDAQ,2020-07-21,,0.0,2.74,1.32,1.74,1.74,1367640.0,1367640.0,0.0,0.0,2.0267013793103446

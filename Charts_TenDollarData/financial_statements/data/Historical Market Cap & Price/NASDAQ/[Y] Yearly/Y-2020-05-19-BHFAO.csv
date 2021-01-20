@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BHFAO,,NASDAQ,2020-05-19,,24.7,27.92,24.34,27.059999,27.059999,15261998.0,15261998.0,0.40700000000000014,0.01884705882352944,25.98057152941177

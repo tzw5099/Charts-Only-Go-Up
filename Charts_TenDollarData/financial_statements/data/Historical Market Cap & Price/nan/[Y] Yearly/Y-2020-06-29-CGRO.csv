@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CGRO,,,2020-06-29,187558312.5,9.8,10.5,9.7,9.81,9.81,4149496.0,4149496.0,-1.4870000000000003,-0.2692727272727272,9.710920909090909

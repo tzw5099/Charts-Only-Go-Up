@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,22.030001,23.030001,20.360001,21.48,14.852289,0.0,0.0,0.0,0.0,
+2011-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,21.639999,21.639999,13.6,13.61,9.451854,0.0,0.0,0.0,0.0,
+2012-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,13.9,18.389999,13.9,17.530001,12.449162,0.0,0.0,0.0,0.0,
+2013-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,17.74,18.440001,12.38,16.309999,11.742269,0.0,0.0,0.0,0.0,
+2014-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,15.95,27.190001,15.39,26.49,19.233614,0.0,0.0,0.0,0.0,
+2015-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,26.879999,30.6,25.35,26.49,19.451757,0.0,0.0,0.0,0.0,
+2016-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,26.18,29.379999,22.92,25.77,19.258718,0.0,0.0,0.0,0.0,
+2017-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,25.83,34.509998,25.83,34.509998,26.19832,0.0,0.0,0.0,0.0,
+2018-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,34.459999,35.650002,25.469999,26.559999,23.67651,0.0,0.0,0.0,0.0,
+2019-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,26.290001,28.200001,23.360001,23.549999,23.549999,0.0,0.0,0.0,0.0,
+2020-01-01,MIDNX,Matthews India Fund Institutional Class,NASDAQ,2010-10-29,,23.639999,24.49,14.02,23.049999,23.049999,0.0,0.0,0.0,0.0,

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,BPTUX,Baron Partners Fund R6 Shares,NASDAQ,2016-08-31,,38.610001,39.209999,34.400002,37.709999,37.597626,0.0,0.0,0.0,0.0,
+2017-01-01,BPTUX,Baron Partners Fund R6 Shares,NASDAQ,2016-08-31,,38.040001,51.040001,38.040001,49.73,49.581806,0.0,0.0,0.0,0.0,
+2018-01-01,BPTUX,Baron Partners Fund R6 Shares,NASDAQ,2016-08-31,,49.939999,62.029999,44.52,48.860001,48.714401,0.0,0.0,0.0,0.0,
+2019-01-01,BPTUX,Baron Partners Fund R6 Shares,NASDAQ,2016-08-31,,47.700001,71.480003,46.23,70.82,70.82,0.0,0.0,0.0,0.0,
+2020-01-01,BPTUX,Baron Partners Fund R6 Shares,NASDAQ,2016-08-31,,72.040001,132.929993,45.169998,124.919998,124.919998,0.0,0.0,0.0,0.0,

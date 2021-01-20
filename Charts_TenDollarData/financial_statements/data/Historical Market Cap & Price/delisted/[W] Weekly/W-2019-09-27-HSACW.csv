@@ -1,0 +1,14 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-09-23,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,0.84,0.84,0.84,0.84,0.84,200.0,200.0,0.0,0.0,0.84
+2019-09-30,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,0.9,1.31,0.21,1.1,1.1,720672.0,720672.0,-0.5,-10.354,0.9674999999999999
+2019-10-07,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,0.25,1.11,0.21,1.06,1.06,135200.0,135200.0,1.61,212.641,0.9666666666666668
+2019-10-14,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,1.05,1.05,1.05,1.05,1.05,400.0,400.0,0.8,160.0,0.525
+2019-10-21,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,1.05,1.05,1.0,1.02,1.02,7402.0,7402.0,0.0,0.0,1.0191675
+2019-10-28,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,1.01,1.05,1.0,0.99,0.99,109100.0,109100.0,1.57,125.598,1.0273340000000002
+2019-11-04,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,1.0,1.0,0.96,0.99,0.99,56200.0,56200.0,0.72,95.00666666666666,0.9855533333333334
+2019-11-11,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,0.98,1.0,0.95,1.0,1.0,188342.0,188342.0,0.02,0.51275,0.9908325
+2019-11-18,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,1.0,1.08,0.97,1.0,1.0,437853.0,437853.0,0.08,1.594,1.0133320000000001
+2019-11-25,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,1.01,1.0,0.9,1.0,1.0,61183.0,61183.0,-0.09,-3.0653333333333332,0.6433333333333333
+2019-12-02,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,1.01,1.14,0.9,1.1,1.1,36382.0,36382.0,0.05000000000000001,1.2674999999999998,0.7383325000000001
+2019-12-09,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,0.98,1.59,1.12,1.5,1.5,536319.0,536319.0,0.99,17.142599999999998,1.335334
+2019-12-16,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,1.19,2.0,1.5,1.66,1.66,500759.0,500759.0,0.59,16.703,1.78

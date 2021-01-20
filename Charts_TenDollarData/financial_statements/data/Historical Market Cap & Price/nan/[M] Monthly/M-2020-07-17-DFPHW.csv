@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,DFPHW,Healthcare Acquisitions Corp. Warrant,,2020-07-17,,0.0,2.1,1.7186,1.8,1.8,17475.0,17475.0,0.0,0.0,1.9621860000000002
+2020-08-01,DFPHW,Healthcare Acquisitions Corp. Warrant,,2020-07-17,,0.0,1.95,1.28,1.28,1.28,61667.0,61667.0,0.0,0.0,1.5803666666666667
+2020-09-01,DFPHW,Healthcare Acquisitions Corp. Warrant,,2020-07-17,,0.0,2.01,1.42,1.8,1.8,43866.0,43866.0,0.0,0.0,1.6022216666666667

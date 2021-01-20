@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,TSCPX,AMG TimesSquare Small Cap Growth Fund Class N,NASDAQ,2019-04-26,,15.29,15.43,14.27,15.34,13.699305,0.0,0.0,0.0,0.0,
+2019-07-01,TSCPX,AMG TimesSquare Small Cap Growth Fund Class N,NASDAQ,2019-04-26,,15.39,15.75,14.09,14.18,12.663373,0.0,0.0,0.0,0.0,
+2019-10-01,TSCPX,AMG TimesSquare Small Cap Growth Fund Class N,NASDAQ,2019-04-26,,13.9,15.3,13.66,13.96,13.96,0.0,0.0,0.0,0.0,
+2020-01-01,TSCPX,AMG TimesSquare Small Cap Growth Fund Class N,NASDAQ,2019-04-26,,14.04,14.88,8.94,10.44,10.44,0.0,0.0,0.0,0.0,
+2020-04-01,TSCPX,AMG TimesSquare Small Cap Growth Fund Class N,NASDAQ,2019-04-26,,9.73,14.35,9.58,14.07,14.07,0.0,0.0,0.0,0.0,
+2020-07-01,TSCPX,AMG TimesSquare Small Cap Growth Fund Class N,NASDAQ,2019-04-26,,14.15,15.69,13.9,14.78,14.78,0.0,0.0,0.0,0.0,

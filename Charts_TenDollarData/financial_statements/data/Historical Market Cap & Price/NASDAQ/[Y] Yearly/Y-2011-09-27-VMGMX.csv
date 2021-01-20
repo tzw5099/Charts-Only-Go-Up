@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,25.0,27.4,22.34,25.66,23.954615,0.0,0.0,0.0,0.0,
+2012-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,25.98,30.07,25.98,29.549999,27.775028,0.0,0.0,0.0,0.0,
+2013-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,30.24,38.830002,30.24,38.830002,36.726025,0.0,0.0,0.0,0.0,
+2014-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,38.490002,44.32,37.080002,43.720001,42.00602,0.0,0.0,0.0,0.0,
+2015-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,43.759998,47.25,41.029999,42.939999,41.593079,0.0,0.0,0.0,0.0,
+2016-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,42.290001,46.5,36.68,45.459999,44.399624,0.0,0.0,0.0,0.0,
+2017-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,45.84,55.310001,45.84,54.959999,54.090363,0.0,0.0,0.0,0.0,
+2018-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,55.400002,61.84,48.130001,51.48,51.055759,0.0,0.0,0.0,0.0,
+2019-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,51.200001,68.470001,49.959999,68.339996,68.214485,0.0,0.0,0.0,0.0,
+2020-01-01,VMGMX,Vanguard Mid-Cap Growth Index Fund Admiral Shares,NASDAQ,2011-09-27,,68.900002,81.32,46.869999,76.550003,76.550003,0.0,0.0,0.0,0.0,

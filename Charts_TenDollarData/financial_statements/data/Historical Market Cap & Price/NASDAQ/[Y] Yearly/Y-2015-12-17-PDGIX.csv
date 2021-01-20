@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PDGIX,T. Rowe Price Dividend Growth Fund I Class,NASDAQ,2015-12-17,,34.240002,34.889999,33.689999,34.34,30.716766,0.0,0.0,0.0,0.0,
+2016-01-01,PDGIX,T. Rowe Price Dividend Growth Fund I Class,NASDAQ,2015-12-17,,33.830002,38.259998,31.43,37.169998,34.331585,0.0,0.0,0.0,0.0,
+2017-01-01,PDGIX,T. Rowe Price Dividend Growth Fund I Class,NASDAQ,2015-12-17,,37.400002,43.950001,37.349998,43.369999,41.016914,0.0,0.0,0.0,0.0,
+2018-01-01,PDGIX,T. Rowe Price Dividend Growth Fund I Class,NASDAQ,2015-12-17,,43.490002,47.509998,39.130001,41.459999,40.636631,0.0,0.0,0.0,0.0,
+2019-01-01,PDGIX,T. Rowe Price Dividend Growth Fund I Class,NASDAQ,2015-12-17,,41.27,53.389999,40.419998,53.299999,53.106049,0.0,0.0,0.0,0.0,
+2020-01-01,PDGIX,T. Rowe Price Dividend Growth Fund I Class,NASDAQ,2015-12-17,,53.610001,56.34,37.200001,54.459999,54.459999,0.0,0.0,0.0,0.0,

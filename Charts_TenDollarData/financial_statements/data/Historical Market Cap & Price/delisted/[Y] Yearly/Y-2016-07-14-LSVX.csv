@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,LSVX,UBS AG VelocityShares VIX Variable LongShort ETN linked to the S&P 500 VIX Futures Variable LongShort Index a Short Term due July 18 2046,delisted,2016-07-14,,25.15,29.59,24.95,26.75,,15080.0,15080.0,26.75,0.10487837837837835,26.781319047619046
+2017-01-01,LSVX,UBS AG VelocityShares VIX Variable LongShort ETN linked to the S&P 500 VIX Futures Variable LongShort Index a Short Term due July 18 2046,delisted,2016-07-14,,27.36,31.21,27.36,30.6,,261969.0,261969.0,3.8499999999999974,0.0693701923076923,29.471831756756753
+2018-01-01,LSVX,UBS AG VelocityShares VIX Variable LongShort ETN linked to the S&P 500 VIX Futures Variable LongShort Index a Short Term due July 18 2046,delisted,2016-07-14,,30.6,33.3948,12.32,14.88,,687685.0,687685.0,-15.720000000000004,-0.12219999999999996,18.729337313432833

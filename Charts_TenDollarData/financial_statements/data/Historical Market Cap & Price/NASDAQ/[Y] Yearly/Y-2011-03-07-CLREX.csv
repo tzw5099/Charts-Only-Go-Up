@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,27.16,27.860001,24.219999,25.58,19.752066,0.0,0.0,0.0,0.0,
+2012-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,25.9,29.1,25.889999,28.719999,22.514208,0.0,0.0,0.0,0.0,
+2013-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,29.23,34.48,29.16,34.48,27.339891,0.0,0.0,0.0,0.0,
+2014-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,34.310001,37.849998,33.299999,36.279999,30.178946,0.0,0.0,0.0,0.0,
+2015-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,36.259998,37.610001,34.459999,35.529999,30.78384,0.0,0.0,0.0,0.0,
+2016-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,35.25,37.720001,33.450001,37.200001,32.785477,0.0,0.0,0.0,0.0,
+2017-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,37.41,41.639999,37.41,41.330002,37.493107,0.0,0.0,0.0,0.0,
+2018-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,41.560001,43.189999,35.599998,36.91,35.355381,0.0,0.0,0.0,0.0,
+2019-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,37.009998,43.959999,36.540001,43.529999,43.332508,0.0,0.0,0.0,0.0,
+2020-01-01,CLREX,Columbia Balanced Fund Institutional 2 Class,NASDAQ,2011-03-07,,43.830002,48.41,34.830002,46.740002,46.740002,0.0,0.0,0.0,0.0,

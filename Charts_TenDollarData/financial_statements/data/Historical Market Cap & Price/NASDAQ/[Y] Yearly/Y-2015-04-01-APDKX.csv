@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,APDKX,Artisan International Value Fund Advisor Class,NASDAQ,2015-04-01,,35.540001,37.029999,31.459999,31.700001,26.851315,0.0,0.0,0.0,0.0,
+2016-01-01,APDKX,Artisan International Value Fund Advisor Class,NASDAQ,2015-04-01,,31.18,34.189999,28.6,32.41,28.373308,0.0,0.0,0.0,0.0,
+2017-01-01,APDKX,Artisan International Value Fund Advisor Class,NASDAQ,2015-04-01,,32.560001,39.91,32.560001,38.580002,35.180256,0.0,0.0,0.0,0.0,
+2018-01-01,APDKX,Artisan International Value Fund Advisor Class,NASDAQ,2015-04-01,,38.720001,40.68,29.879999,30.92,29.704876,0.0,0.0,0.0,0.0,
+2019-01-01,APDKX,Artisan International Value Fund Advisor Class,NASDAQ,2015-04-01,,30.73,36.880001,30.42,36.869999,36.869999,0.0,0.0,0.0,0.0,
+2020-01-01,APDKX,Artisan International Value Fund Advisor Class,NASDAQ,2015-04-01,,37.040001,37.310001,23.1,34.48,34.48,0.0,0.0,0.0,0.0,

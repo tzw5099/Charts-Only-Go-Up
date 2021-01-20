@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,FCIVX,Frontier MFG Core Infrastructure Fund Service Class,NASDAQ,2016-07-15,,15.23,15.42,13.37,13.95,12.792985,0.0,0.0,0.0,0.0,
+2017-01-01,FCIVX,Frontier MFG Core Infrastructure Fund Service Class,NASDAQ,2016-07-15,,13.93,16.92,13.92,16.25,15.375108,0.0,0.0,0.0,0.0,
+2018-01-01,FCIVX,Frontier MFG Core Infrastructure Fund Service Class,NASDAQ,2016-07-15,,16.219999,16.290001,14.46,14.76,14.369182,0.0,0.0,0.0,0.0,
+2019-01-01,FCIVX,Frontier MFG Core Infrastructure Fund Service Class,NASDAQ,2016-07-15,,14.66,18.41,14.66,18.370001,18.284088,0.0,0.0,0.0,0.0,
+2020-01-01,FCIVX,Frontier MFG Core Infrastructure Fund Service Class,NASDAQ,2016-07-15,,18.27,19.49,12.81,16.98,16.98,0.0,0.0,0.0,0.0,

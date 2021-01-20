@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PRIUX,T. Rowe Price International Stock Fund I Class,NASDAQ,2015-08-28,,15.71,16.09,14.59,15.29,12.781637,0.0,0.0,0.0,0.0,
+2016-01-01,PRIUX,T. Rowe Price International Stock Fund I Class,NASDAQ,2015-08-28,,15.0,16.629999,13.41,15.28,13.099939,0.0,0.0,0.0,0.0,
+2017-01-01,PRIUX,T. Rowe Price International Stock Fund I Class,NASDAQ,2015-08-28,,15.41,19.540001,15.41,18.66,16.82909,0.0,0.0,0.0,0.0,
+2018-01-01,PRIUX,T. Rowe Price International Stock Fund I Class,NASDAQ,2015-08-28,,18.860001,20.01,14.46,14.96,14.493694,0.0,0.0,0.0,0.0,
+2019-01-01,PRIUX,T. Rowe Price International Stock Fund I Class,NASDAQ,2015-08-28,,14.9,18.85,14.68,18.639999,18.639999,0.0,0.0,0.0,0.0,
+2020-01-01,PRIUX,T. Rowe Price International Stock Fund I Class,NASDAQ,2015-08-28,,18.82,19.26,12.8,19.01,19.01,0.0,0.0,0.0,0.0,

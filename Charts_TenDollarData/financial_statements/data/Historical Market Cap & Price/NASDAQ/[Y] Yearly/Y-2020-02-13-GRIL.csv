@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,GRIL,"Muscle Maker, Inc.",NASDAQ,2020-02-13,10720137.62335128,4.698,5.09,1.42,1.54999996,1.54999996,44526847.0,44526847.0,-3.498,-0.35951333333333335,2.4165645999999996

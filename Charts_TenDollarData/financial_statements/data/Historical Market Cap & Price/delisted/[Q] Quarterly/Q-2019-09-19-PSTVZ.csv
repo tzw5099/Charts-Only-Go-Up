@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,PSTVZ,Cytori Therapeutics Inc Series S Warrant,delisted,2019-09-19,,0.01,0.02,0.01,0.01,0.01,126271.0,126271.0,0.01,33.333333333333336,0.012223333333333334
+2019-10-01,PSTVZ,Cytori Therapeutics Inc Series S Warrant,delisted,2019-09-19,,0.01,0.01,0.0,0.01,0.01,2999757.0,2999757.0,0.0,0.0,0.006394693877551023
+2020-01-01,PSTVZ,Cytori Therapeutics Inc Series S Warrant,delisted,2019-09-19,,0.0,0.01,0.0,0.0,0.0,3155586.0,3155586.0,0.0,0.0,0.0031254166666666665
+2020-04-01,PSTVZ,Cytori Therapeutics Inc Series S Warrant,delisted,2019-09-19,,0.01,0.01,0.0,0.01,0.01,4462509.0,4462509.0,0.0,0.0,0.008928928571428574

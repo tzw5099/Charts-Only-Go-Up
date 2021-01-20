@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NSDVX,North Star Dividend Fund Class I,NASDAQ,2013-05-31,,16.0,18.18,15.65,17.709999,13.847803,0.0,0.0,0.0,0.0,
+2014-01-01,NSDVX,North Star Dividend Fund Class I,NASDAQ,2013-05-31,,17.51,18.709999,17.09,18.549999,15.203814,0.0,0.0,0.0,0.0,
+2015-01-01,NSDVX,North Star Dividend Fund Class I,NASDAQ,2013-05-31,,18.5,18.82,16.790001,17.42,14.783989,0.0,0.0,0.0,0.0,
+2016-01-01,NSDVX,North Star Dividend Fund Class I,NASDAQ,2013-05-31,,17.07,21.120001,16.4,20.51,18.272249,0.0,0.0,0.0,0.0,
+2017-01-01,NSDVX,North Star Dividend Fund Class I,NASDAQ,2013-05-31,,20.43,22.040001,19.360001,21.639999,19.785042,0.0,0.0,0.0,0.0,
+2018-01-01,NSDVX,North Star Dividend Fund Class I,NASDAQ,2013-05-31,,21.719999,23.4,16.99,17.83,17.343393,0.0,0.0,0.0,0.0,
+2019-01-01,NSDVX,North Star Dividend Fund Class I,NASDAQ,2013-05-31,,18.15,20.59,17.889999,20.139999,20.008717,0.0,0.0,0.0,0.0,
+2020-01-01,NSDVX,North Star Dividend Fund Class I,NASDAQ,2013-05-31,,20.040001,20.35,13.2,17.450001,17.450001,0.0,0.0,0.0,0.0,

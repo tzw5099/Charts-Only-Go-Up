@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NWKEX,Nationwide WCM Focused Small Cap Fund Class R6,NASDAQ,2013-09-19,,26.209999,28.459999,25.559999,28.42,14.774998,0.0,0.0,0.0,0.0,
+2014-01-01,NWKEX,Nationwide WCM Focused Small Cap Fund Class R6,NASDAQ,2013-09-19,,28.139999,32.040001,27.030001,31.73,16.495802,0.0,0.0,0.0,0.0,
+2015-01-01,NWKEX,Nationwide WCM Focused Small Cap Fund Class R6,NASDAQ,2013-09-19,,31.540001,33.560001,28.49,29.299999,15.738063,0.0,0.0,0.0,0.0,
+2016-01-01,NWKEX,Nationwide WCM Focused Small Cap Fund Class R6,NASDAQ,2013-09-19,,28.5,36.959999,24.790001,36.139999,19.436687,0.0,0.0,0.0,0.0,
+2017-01-01,NWKEX,Nationwide WCM Focused Small Cap Fund Class R6,NASDAQ,2013-09-19,,36.139999,41.200001,35.740002,37.970001,22.165934,0.0,0.0,0.0,0.0,
+2018-01-01,NWKEX,Nationwide WCM Focused Small Cap Fund Class R6,NASDAQ,2013-09-19,,38.23,42.34,19.940001,21.16,20.278072,0.0,0.0,0.0,0.0,
+2019-01-01,NWKEX,Nationwide WCM Focused Small Cap Fund Class R6,NASDAQ,2013-09-19,,21.16,27.1,20.6,26.16,26.16,0.0,0.0,0.0,0.0,
+2020-01-01,NWKEX,Nationwide WCM Focused Small Cap Fund Class R6,NASDAQ,2013-09-19,,26.25,27.120001,14.55,21.65,21.65,0.0,0.0,0.0,0.0,

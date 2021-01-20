@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ZI,,NASDAQ,2020-09-17,4669611150.1,40.0,64.4,30.83,32.259998,32.259998,235196714.0,235196714.0,-34.209999999999994,-0.9244864864864863,41.745184729729736

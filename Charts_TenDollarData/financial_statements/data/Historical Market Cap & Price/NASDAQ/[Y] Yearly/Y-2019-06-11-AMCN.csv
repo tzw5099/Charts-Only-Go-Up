@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,AMCN,AirMedia Group Inc,NASDAQ,2019-06-11,,1.65,1.84,1.52,1.65,,49134.0,49134.0,1.65,3.9215,1.6551

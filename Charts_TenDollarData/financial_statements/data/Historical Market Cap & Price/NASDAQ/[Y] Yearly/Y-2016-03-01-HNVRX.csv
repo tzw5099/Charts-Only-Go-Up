@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HNVRX,Harbor Small Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,23.91,31.24,23.91,30.440001,26.500275,0.0,0.0,0.0,0.0,
+2017-01-01,HNVRX,Harbor Small Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,30.59,37.380001,30.52,36.310001,32.263733,0.0,0.0,0.0,0.0,
+2018-01-01,HNVRX,Harbor Small Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,36.639999,38.830002,25.76,27.469999,27.063791,0.0,0.0,0.0,0.0,
+2019-01-01,HNVRX,Harbor Small Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,27.52,35.18,26.870001,34.93,34.93,0.0,0.0,0.0,0.0,
+2020-01-01,HNVRX,Harbor Small Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,35.18,35.860001,20.74,31.09,31.09,0.0,0.0,0.0,0.0,

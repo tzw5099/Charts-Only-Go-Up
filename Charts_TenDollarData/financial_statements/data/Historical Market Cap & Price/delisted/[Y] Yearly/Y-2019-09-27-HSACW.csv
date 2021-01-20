@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,HSACW,Health Sciences Acquisitions Corp Warrants 01042024,delisted,2019-09-27,,0.84,2.0,0.21,1.66,1.66,2790012.0,2790012.0,5.840000000000001,42.85291304347826,1.0165215217391304

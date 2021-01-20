@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,NPAUU,New Providence Acquisition Corp.,NASDAQ,2019-09-11,,10.02,10.3,10.02,10.28,10.28,10526670.0,10526670.0,0.36619999999999997,0.05734920634920636,10.12433682539682
+2020-01-01,NPAUU,New Providence Acquisition Corp.,NASDAQ,2019-09-11,,10.31,10.97,9.8,10.37,10.37,2395451.0,2395451.0,-0.6927,-0.07543037974683543,8.173320379746835

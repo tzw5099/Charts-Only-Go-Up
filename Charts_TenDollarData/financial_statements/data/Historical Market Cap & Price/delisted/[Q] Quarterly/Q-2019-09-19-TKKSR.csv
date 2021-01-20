@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,TKKSR,TKK Symphony Acquisition Corp Tradeable Rights Sept 2018,delisted,2019-09-19,1662409.92,0.28,0.28,0.23,0.24,0.24,44512.0,44512.0,0.01,1.389,0.25444333333333335
+2019-10-01,TKKSR,TKK Symphony Acquisition Corp Tradeable Rights Sept 2018,delisted,2019-09-19,1738094.25,0.23,0.4,0.17,0.25,0.25,6411836.0,6411836.0,0.07999999999999997,1.1651399999999996,0.2468664
+2020-01-01,TKKSR,TKK Symphony Acquisition Corp Tradeable Rights Sept 2018,delisted,2019-09-19,17746882.92,0.31,0.45,0.21,0.39,0.39,2528841.0,2528841.0,-0.27,-4.8773888888888886,0.2570377777777778

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,FTHSX,Fuller & Thaler Behavioral Small-Cap Equity Fund Institutional Shares,NASDAQ,2015-10-28,,19.93,20.49,16.379999,16.379999,16.124002,0.0,0.0,0.0,0.0,
+2016-01-01,FTHSX,Fuller & Thaler Behavioral Small-Cap Equity Fund Institutional Shares,NASDAQ,2015-10-28,,16.1,21.549999,14.37,21.18,20.931973,0.0,0.0,0.0,0.0,
+2017-01-01,FTHSX,Fuller & Thaler Behavioral Small-Cap Equity Fund Institutional Shares,NASDAQ,2015-10-28,,21.26,24.969999,20.870001,24.790001,24.564049,0.0,0.0,0.0,0.0,
+2018-01-01,FTHSX,Fuller & Thaler Behavioral Small-Cap Equity Fund Institutional Shares,NASDAQ,2015-10-28,,25.01,27.110001,20.09,21.41,21.325207,0.0,0.0,0.0,0.0,
+2019-01-01,FTHSX,Fuller & Thaler Behavioral Small-Cap Equity Fund Institutional Shares,NASDAQ,2015-10-28,,21.459999,27.360001,21.049999,27.309999,27.309999,0.0,0.0,0.0,0.0,
+2020-01-01,FTHSX,Fuller & Thaler Behavioral Small-Cap Equity Fund Institutional Shares,NASDAQ,2015-10-28,,27.35,27.74,17.27,25.059999,25.059999,0.0,0.0,0.0,0.0,

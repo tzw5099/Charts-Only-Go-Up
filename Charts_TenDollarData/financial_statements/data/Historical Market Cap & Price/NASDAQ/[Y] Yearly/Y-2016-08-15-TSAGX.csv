@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TSAGX,Touchstone Large Company Growth Fund Class A,NASDAQ,2016-08-15,,31.379999,31.73,29.120001,29.120001,24.487698,0.0,0.0,0.0,0.0,
+2017-01-01,TSAGX,Touchstone Large Company Growth Fund Class A,NASDAQ,2016-08-15,,29.49,40.580002,29.49,39.060001,33.806854,0.0,0.0,0.0,0.0,
+2018-01-01,TSAGX,Touchstone Large Company Growth Fund Class A,NASDAQ,2016-08-15,,39.77,44.009998,32.130001,34.419998,31.997766,0.0,0.0,0.0,0.0,
+2019-01-01,TSAGX,Touchstone Large Company Growth Fund Class A,NASDAQ,2016-08-15,,34.380001,45.200001,33.27,43.560001,43.560001,0.0,0.0,0.0,0.0,
+2020-01-01,TSAGX,Touchstone Large Company Growth Fund Class A,NASDAQ,2016-08-15,,44.290001,56.34,33.369999,51.099998,51.099998,0.0,0.0,0.0,0.0,

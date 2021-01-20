@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,BGLUX,Baron Global Advantage Fund R6 Shares,NASDAQ,2016-08-31,,14.37,15.06,13.7,13.87,13.87,0.0,0.0,0.0,0.0,
+2017-01-01,BGLUX,Baron Global Advantage Fund R6 Shares,NASDAQ,2016-08-31,,14.03,20.83,14.03,20.790001,20.790001,0.0,0.0,0.0,0.0,
+2018-01-01,BGLUX,Baron Global Advantage Fund R6 Shares,NASDAQ,2016-08-31,,21.16,24.639999,18.700001,20.030001,20.030001,0.0,0.0,0.0,0.0,
+2019-01-01,BGLUX,Baron Global Advantage Fund R6 Shares,NASDAQ,2016-08-31,,19.950001,29.42,19.379999,29.129999,29.129999,0.0,0.0,0.0,0.0,
+2020-01-01,BGLUX,Baron Global Advantage Fund R6 Shares,NASDAQ,2016-08-31,,29.639999,45.57,23.73,42.869999,42.869999,0.0,0.0,0.0,0.0,

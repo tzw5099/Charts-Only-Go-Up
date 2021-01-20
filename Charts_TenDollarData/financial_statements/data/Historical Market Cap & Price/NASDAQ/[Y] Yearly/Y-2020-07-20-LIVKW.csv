@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,LIVKW,LIV Capital Acquisition Corp.,NASDAQ,2020-07-20,1142779.95,0.4043,0.55,0.26,0.45,0.45,173210.0,173210.0,-0.22949999999999993,-2.703142857142858,0.3733814285714286

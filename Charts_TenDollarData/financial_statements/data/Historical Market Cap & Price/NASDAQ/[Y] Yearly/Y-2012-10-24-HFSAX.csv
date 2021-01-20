@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,23.969999,24.24,23.1,23.1,15.179009,0.0,0.0,0.0,0.0,
+2013-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,23.1,24.530001,23.1,23.620001,16.377357,0.0,0.0,0.0,0.0,
+2014-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,23.639999,24.6,22.360001,22.360001,16.874033,0.0,0.0,0.0,0.0,
+2015-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,22.34,23.049999,22.02,22.02,16.925606,0.0,0.0,0.0,0.0,
+2016-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,21.940001,23.809999,21.57,22.889999,18.598053,0.0,0.0,0.0,0.0,
+2017-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,22.959999,24.52,22.57,22.620001,20.605446,0.0,0.0,0.0,0.0,
+2018-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,22.700001,23.34,21.43,21.52,20.199764,0.0,0.0,0.0,0.0,
+2019-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,21.530001,23.34,21.5,22.290001,22.290001,0.0,0.0,0.0,0.0,
+2020-01-01,HFSAX,Hundredfold Select Alternative Fund Investor Class,NASDAQ,2012-10-24,,22.41,28.129999,22.370001,27.41,27.41,0.0,0.0,0.0,0.0,

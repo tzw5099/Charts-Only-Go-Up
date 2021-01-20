@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BRLIU,,NASDAQ,2020-06-24,,10.01,10.5,9.9,10.23,10.23,3600731.0,3600731.0,-0.164,-0.023600000000000003,9.224799666666666

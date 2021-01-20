@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ONEW,OneWater Marine Inc.,NASDAQ,2020-02-07,131512290.0,15.02,33.599998,3.41,21.57,21.57,15010230.0,15010230.0,-5.999999999999999,0.17681818181818182,17.778590519480527

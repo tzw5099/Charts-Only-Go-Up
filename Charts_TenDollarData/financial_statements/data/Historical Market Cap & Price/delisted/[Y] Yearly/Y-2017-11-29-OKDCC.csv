@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,OKDCC,Eaton Vance NextShares Trust II,delisted,2017-11-29,,99.2691,99.2691,99.2691,99.2691,,1114.0,1114.0,99.2691,0.0,99.2691
+2018-01-01,OKDCC,Eaton Vance NextShares Trust II,delisted,2017-11-29,,99.362,99.7879,99.239,99.7879,,232896.0,232896.0,0.518834,0.007791044776119402,99.49897931034482
+2019-01-01,OKDCC,Eaton Vance NextShares Trust II,delisted,2017-11-29,,99.8719,99.9253,99.7988,99.84,,5993.0,5993.0,0.052065999999999994,0.0022083333333333334,99.86915

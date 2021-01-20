@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,VEAC,Vantage Energy Acquisition Corp,delisted,2017-04-28,,9.85,9.95,9.62,9.72,,14372206.0,14372206.0,9.72,-0.011752293577981653,9.748404000000004
+2018-01-01,VEAC,Vantage Energy Acquisition Corp,delisted,2017-04-28,,9.73,10.16,9.7,10.05,,28401300.0,28401300.0,0.32999999999999985,0.01848633879781421,9.91351476510067
+2019-01-01,VEAC,Vantage Energy Acquisition Corp,delisted,2017-04-28,,10.05,10.28,10.05,10.21,,26704340.0,26704340.0,0.1599999999999999,0.022055555555555554,10.16059027777778

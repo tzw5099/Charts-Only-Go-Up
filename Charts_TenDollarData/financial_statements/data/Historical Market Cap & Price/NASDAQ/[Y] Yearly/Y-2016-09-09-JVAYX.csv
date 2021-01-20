@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,JVAYX,JPMorgan Value Advantage Fund Class R6,NASDAQ,2016-09-09,,29.57,33.130001,29.309999,32.209999,28.143272,0.0,0.0,0.0,0.0,
+2017-01-01,JVAYX,JPMorgan Value Advantage Fund Class R6,NASDAQ,2016-09-09,,32.470001,36.52,32.169998,35.98,32.147003,0.0,0.0,0.0,0.0,
+2018-01-01,JVAYX,JPMorgan Value Advantage Fund Class R6,NASDAQ,2016-09-09,,36.209999,38.16,28.790001,30.51,29.260736,0.0,0.0,0.0,0.0,
+2019-01-01,JVAYX,JPMorgan Value Advantage Fund Class R6,NASDAQ,2016-09-09,,30.59,37.869999,30.15,37.279999,37.279999,0.0,0.0,0.0,0.0,
+2020-01-01,JVAYX,JPMorgan Value Advantage Fund Class R6,NASDAQ,2016-09-09,,37.330002,37.540001,22.129999,31.84,31.84,0.0,0.0,0.0,0.0,

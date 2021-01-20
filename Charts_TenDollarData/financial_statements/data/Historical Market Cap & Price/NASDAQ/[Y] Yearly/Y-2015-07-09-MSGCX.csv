@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,MSGCX,Meridian Small Cap Growth Fund Class C,NASDAQ,2015-07-09,,12.77,13.13,11.04,11.2,8.95209,0.0,0.0,0.0,0.0,
+2016-01-01,MSGCX,Meridian Small Cap Growth Fund Class C,NASDAQ,2015-07-09,,11.02,13.66,9.53,13.35,10.670571,0.0,0.0,0.0,0.0,
+2017-01-01,MSGCX,Meridian Small Cap Growth Fund Class C,NASDAQ,2015-07-09,,13.38,16.18,13.38,15.57,12.981621,0.0,0.0,0.0,0.0,
+2018-01-01,MSGCX,Meridian Small Cap Growth Fund Class C,NASDAQ,2015-07-09,,15.68,18.92,12.88,13.68,12.89208,0.0,0.0,0.0,0.0,
+2019-01-01,MSGCX,Meridian Small Cap Growth Fund Class C,NASDAQ,2015-07-09,,13.7,16.059999,13.41,15.21,15.21,0.0,0.0,0.0,0.0,
+2020-01-01,MSGCX,Meridian Small Cap Growth Fund Class C,NASDAQ,2015-07-09,,15.15,15.33,9.16,15.31,15.31,0.0,0.0,0.0,0.0,

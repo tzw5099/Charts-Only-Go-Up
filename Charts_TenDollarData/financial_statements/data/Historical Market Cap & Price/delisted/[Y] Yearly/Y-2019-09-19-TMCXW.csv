@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TMCXW,Trinity Merger Corp Warrants 11052025,delisted,2019-09-19,,0.67,1.84,0.62,1.82,1.82,16101809.0,16101809.0,0.7999999999999998,1.6386111111111106,1.4371297222222223

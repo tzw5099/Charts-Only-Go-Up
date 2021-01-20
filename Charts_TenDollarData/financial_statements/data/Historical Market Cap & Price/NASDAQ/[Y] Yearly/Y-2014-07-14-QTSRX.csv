@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,QTSRX,AQR TM Small Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,15.55,15.88,13.7,15.45,13.468509,0.0,0.0,0.0,0.0,
+2015-01-01,QTSRX,AQR TM Small Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,15.39,16.799999,14.22,15.01,13.187521,0.0,0.0,0.0,0.0,
+2016-01-01,QTSRX,AQR TM Small Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,14.57,17.25,12.33,16.85,14.919951,0.0,0.0,0.0,0.0,
+2017-01-01,QTSRX,AQR TM Small Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,16.93,19.799999,16.82,19.6,17.427612,0.0,0.0,0.0,0.0,
+2018-01-01,QTSRX,AQR TM Small Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,19.74,23.190001,14.66,15.56,15.277864,0.0,0.0,0.0,0.0,
+2019-01-01,QTSRX,AQR TM Small Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,15.59,20.129999,15.19,19.68,19.68,0.0,0.0,0.0,0.0,
+2020-01-01,QTSRX,AQR TM Small Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,19.690001,20.719999,12.35,20.209999,20.209999,0.0,0.0,0.0,0.0,

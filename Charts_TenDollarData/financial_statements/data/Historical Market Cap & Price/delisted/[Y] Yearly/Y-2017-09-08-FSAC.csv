@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,FSAC,Federal Street Acquisition Corp,delisted,2017-09-08,,9.7,9.8,9.68,9.71,,6611042.0,6611042.0,9.710000000000003,0.00026923076923076976,9.733328571428572
+2018-01-01,FSAC,Federal Street Acquisition Corp,delisted,2017-09-08,,9.7,11.0,9.45,10.23,,37455324.0,37455324.0,0.5200000000000002,0.029270270270270276,9.92819872611465
+2019-01-01,FSAC,Federal Street Acquisition Corp,delisted,2017-09-08,,10.23,10.92,9.51,10.11,,20955.0,20955.0,-0.12000000000000009,-0.2266666666666665,10.1029

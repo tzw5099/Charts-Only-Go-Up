@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IMAB,I-Mab,NASDAQ,2020-01-17,,14.75,42.299999,9.3,36.799999,36.799999,21833339.0,21833339.0,1.8329999999999935,0.25088095238095237,21.791385000000002

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,PCVX,,NASDAQ,2020-09-17,571066888.20378,20.8,55.040001,17.8,49.419998,49.419998,15123720.0,15123720.0,30.19999999999999,1.6325588235294117,36.49323794117647

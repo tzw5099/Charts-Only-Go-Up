@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,RPRX,,NASDAQ,2020-06-16,14375128153.98,44.0,56.5,38.540001,41.279999,41.279999,124950600.0,124950600.0,-18.601000000000006,-0.5304090909090907,44.29662651515152

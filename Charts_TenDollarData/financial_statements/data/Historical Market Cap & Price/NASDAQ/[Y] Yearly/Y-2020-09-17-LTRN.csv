@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,LTRN,,NASDAQ,2020-09-17,110051172.21758,14.8,19.5,10.4,16.82,16.82,4439991.0,4439991.0,0.5419999999999995,0.22676811594202906,13.681102463768113

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CMFNL,CM Finance Inc - 6.125% Notes d,NASDAQ,2020-07-21,,21.76,22.88,21.0,22.25,22.25,68378.0,68378.0,7.880000000000002,1.097484848484849,21.942126363636362

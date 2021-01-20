@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,TRACX,PGIM QMA Small-Cap Value Fund- Class C,NASDAQ,2015-06-19,,26.360001,26.66,16.309999,16.549999,12.811556,0.0,0.0,0.0,0.0,
+2016-01-01,TRACX,PGIM QMA Small-Cap Value Fund- Class C,NASDAQ,2015-06-19,,16.23,22.379999,14.18,21.73,16.989887,0.0,0.0,0.0,0.0,
+2017-01-01,TRACX,PGIM QMA Small-Cap Value Fund- Class C,NASDAQ,2015-06-19,,21.91,23.1,19.93,20.34,17.875727,0.0,0.0,0.0,0.0,
+2018-01-01,TRACX,PGIM QMA Small-Cap Value Fund- Class C,NASDAQ,2015-06-19,,20.530001,21.58,14.21,14.97,14.322436,0.0,0.0,0.0,0.0,
+2019-01-01,TRACX,PGIM QMA Small-Cap Value Fund- Class C,NASDAQ,2015-06-19,,15.21,17.76,14.62,16.809999,16.809999,0.0,0.0,0.0,0.0,
+2020-01-01,TRACX,PGIM QMA Small-Cap Value Fund- Class C,NASDAQ,2015-06-19,,16.719999,16.74,7.69,12.51,12.51,0.0,0.0,0.0,0.0,

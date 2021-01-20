@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,CBLLX,Wells Fargo C&B Large Cap Value Fund - Class Admin,NASDAQ,2019-04-26,,13.91,14.1,13.03,14.1,12.90371,0.0,0.0,0.0,0.0,
+2019-07-01,CBLLX,Wells Fargo C&B Large Cap Value Fund - Class Admin,NASDAQ,2019-04-26,,14.19,14.74,13.62,14.48,13.251469,0.0,0.0,0.0,0.0,
+2019-10-01,CBLLX,Wells Fargo C&B Large Cap Value Fund - Class Admin,NASDAQ,2019-04-26,,14.23,15.49,13.9,14.46,14.46,0.0,0.0,0.0,0.0,
+2020-01-01,CBLLX,Wells Fargo C&B Large Cap Value Fund - Class Admin,NASDAQ,2019-04-26,,14.53,14.68,8.41,9.97,9.97,0.0,0.0,0.0,0.0,
+2020-04-01,CBLLX,Wells Fargo C&B Large Cap Value Fund - Class Admin,NASDAQ,2019-04-26,,9.43,12.97,9.4,11.53,11.53,0.0,0.0,0.0,0.0,
+2020-07-01,CBLLX,Wells Fargo C&B Large Cap Value Fund - Class Admin,NASDAQ,2019-04-26,,11.41,13.02,11.25,12.63,12.63,0.0,0.0,0.0,0.0,

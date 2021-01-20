@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,CMSSU,CM Seven Star Acquisition Corp Units 1 Ord12 War 110 RTS,delisted,2017-10-26,,10.01,10.07,9.93,9.96,,5926758.0,5926758.0,9.960000000000004,-0.01496969696969697,9.998654545454544
+2018-01-01,CMSSU,CM Seven Star Acquisition Corp Units 1 Ord12 War 110 RTS,delisted,2017-10-26,,9.97,11.0,9.94,10.65,,3927474.0,3927474.0,0.6899999999999998,0.06049137931034481,10.324871559633037
+2019-01-01,CMSSU,CM Seven Star Acquisition Corp Units 1 Ord12 War 110 RTS,delisted,2017-10-26,,10.64,12.6,3.11,3.11,,277265.0,277265.0,-7.54,-3.596458333333333,10.04380625

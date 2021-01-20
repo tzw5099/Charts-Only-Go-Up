@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,WTFCP,,NASDAQ,2020-09-17,1582516500.0,25.89,27.299999,25.34,26.93,26.93,5691966.0,5691966.0,0.9799999999999995,0.04811538461538462,26.147734743589734

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,OCFCP,OceanFirst Financial Corp. - De,NASDAQ,2020-09-17,1590226960.122,24.3225,27.09,24.048,26.51,26.51,995414.0,995414.0,-1.1089999999999995,-0.04360215053763439,25.632497849462368

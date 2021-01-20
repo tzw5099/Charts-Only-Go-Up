@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GRNVW,GreenVision Acquisition Corp.,NASDAQ,2020-07-21,,0.35,0.39,0.265,0.35,0.35,39421.0,39421.0,-0.0401,-2.8642499999999997,0.33582749999999995
+2020-08-01,GRNVW,GreenVision Acquisition Corp.,NASDAQ,2020-07-21,,0.35,0.42,0.21,0.349,0.349,1595983.0,1595983.0,-0.6461,-18.4601,0.28430199999999994
+2020-09-01,GRNVW,GreenVision Acquisition Corp.,NASDAQ,2020-07-21,,0.35,1.08,0.3618,0.85,0.85,2262745.0,2262745.0,2.6625,76.0714,0.6265510000000001

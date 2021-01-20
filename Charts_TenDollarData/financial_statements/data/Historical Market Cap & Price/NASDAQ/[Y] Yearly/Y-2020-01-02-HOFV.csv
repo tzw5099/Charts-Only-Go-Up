@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,HOFV,,NASDAQ,2020-01-02,15865199.5,10.56,12.7,3.565,3.65,3.65,25425260.0,25425260.0,-7.638000000000001,-1.3197283950617282,7.01501271604938

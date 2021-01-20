@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NOVS,,NASDAQ,2020-06-12,,10.01,10.5,9.61,9.93000031,9.93000031,2161360.0,2161360.0,-0.10850000000000003,-0.013119402985074647,9.907995074626868

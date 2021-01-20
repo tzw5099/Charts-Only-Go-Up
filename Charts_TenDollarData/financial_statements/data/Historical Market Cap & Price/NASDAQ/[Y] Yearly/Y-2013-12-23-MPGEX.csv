@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,MPGEX,Meritage Growth Equity Fund Investor Shares,NASDAQ,2013-12-23,,10.01,10.13,10.01,10.13,8.375594,0.0,0.0,0.0,0.0,
+2014-01-01,MPGEX,Meritage Growth Equity Fund Investor Shares,NASDAQ,2013-12-23,,10.02,11.44,9.52,11.2,9.357621,0.0,0.0,0.0,0.0,
+2015-01-01,MPGEX,Meritage Growth Equity Fund Investor Shares,NASDAQ,2013-12-23,,11.16,11.99,10.7,11.14,9.499969,0.0,0.0,0.0,0.0,
+2016-01-01,MPGEX,Meritage Growth Equity Fund Investor Shares,NASDAQ,2013-12-23,,10.94,12.62,9.92,12.28,10.57267,0.0,0.0,0.0,0.0,
+2017-01-01,MPGEX,Meritage Growth Equity Fund Investor Shares,NASDAQ,2013-12-23,,12.33,15.56,12.33,14.41,13.292403,0.0,0.0,0.0,0.0,
+2018-01-01,MPGEX,Meritage Growth Equity Fund Investor Shares,NASDAQ,2013-12-23,,14.61,16.58,12.61,12.74,12.74,0.0,0.0,0.0,0.0,
+2019-01-01,MPGEX,Meritage Growth Equity Fund Investor Shares,NASDAQ,2013-12-23,,12.68,16.950001,12.27,16.879999,16.879999,0.0,0.0,0.0,0.0,
+2020-01-01,MPGEX,Meritage Growth Equity Fund Investor Shares,NASDAQ,2013-12-23,,17.1,18.780001,10.91,10.91,10.91,0.0,0.0,0.0,0.0,

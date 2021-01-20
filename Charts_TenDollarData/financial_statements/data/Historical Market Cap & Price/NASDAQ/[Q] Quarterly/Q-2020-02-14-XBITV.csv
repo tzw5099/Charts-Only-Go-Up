@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,XBITV,XBiotech Inc.,NASDAQ,2020-02-14,,17.3,17.3,14.5,14.62,14.62,53300.0,53300.0,-0.75,-1.4303333333333332,15.445556666666667

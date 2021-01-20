@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CVLG,,NASDAQ,2020-01-06,284873630.0,13.03,20.700001,11.39,16.540001,16.540001,16004464.0,16004464.0,1.6200000000000006,0.1566881720430106,15.784731290322583

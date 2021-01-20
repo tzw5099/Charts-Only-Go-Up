@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,SSSJX,State Street Dynamic Small Cap Fund Class I,NASDAQ,2014-07-09,,37.139999,38.389999,33.0,37.889999,36.229679,0.0,0.0,0.0,0.0,
+2015-01-01,SSSJX,State Street Dynamic Small Cap Fund Class I,NASDAQ,2014-07-09,,37.720001,40.360001,35.98,37.73,36.376965,0.0,0.0,0.0,0.0,
+2016-01-01,SSSJX,State Street Dynamic Small Cap Fund Class I,NASDAQ,2014-07-09,,36.790001,46.049999,32.5,45.0,43.486721,0.0,0.0,0.0,0.0,
+2017-01-01,SSSJX,State Street Dynamic Small Cap Fund Class I,NASDAQ,2014-07-09,,45.220001,49.75,43.779999,48.779999,47.424068,0.0,0.0,0.0,0.0,
+2018-01-01,SSSJX,State Street Dynamic Small Cap Fund Class I,NASDAQ,2014-07-09,,49.049999,55.009998,40.41,42.849998,42.300388,0.0,0.0,0.0,0.0,
+2019-01-01,SSSJX,State Street Dynamic Small Cap Fund Class I,NASDAQ,2014-07-09,,43.119999,52.48,42.27,51.630001,51.630001,0.0,0.0,0.0,0.0,
+2020-01-01,SSSJX,State Street Dynamic Small Cap Fund Class I,NASDAQ,2014-07-09,,51.57,55.84,30.18,46.299999,46.299999,0.0,0.0,0.0,0.0,

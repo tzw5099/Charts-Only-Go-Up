@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,GIBRX,Guggenheim Total Return Bond Fund Class R6,NASDAQ,2016-10-19,,27.15,27.18,26.290001,26.440001,24.611946,0.0,0.0,0.0,0.0,
+2017-01-01,GIBRX,Guggenheim Total Return Bond Fund Class R6,NASDAQ,2016-10-19,,26.450001,27.290001,26.440001,27.23,25.671011,0.0,0.0,0.0,0.0,
+2018-01-01,GIBRX,Guggenheim Total Return Bond Fund Class R6,NASDAQ,2016-10-19,,27.17,27.209999,26.43,26.58,25.893227,0.0,0.0,0.0,0.0,
+2019-01-01,GIBRX,Guggenheim Total Return Bond Fund Class R6,NASDAQ,2016-10-19,,26.65,27.709999,26.5,27.139999,26.988832,0.0,0.0,0.0,0.0,
+2020-01-01,GIBRX,Guggenheim Total Return Bond Fund Class R6,NASDAQ,2016-10-19,,27.18,30.07,27.139999,29.92,29.92,0.0,0.0,0.0,0.0,

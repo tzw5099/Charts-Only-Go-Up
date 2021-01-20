@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,20.290001,21.49,19.870001,21.299999,12.144761,0.0,0.0,0.0,0.0,
+2013-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,21.940001,26.360001,21.51,26.360001,15.029856,0.0,0.0,0.0,0.0,
+2014-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,26.120001,33.18,25.639999,29.360001,18.843309,0.0,0.0,0.0,0.0,
+2015-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,29.24,33.82,28.030001,29.879999,20.748234,0.0,0.0,0.0,0.0,
+2016-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,29.379999,35.369999,25.4,32.290001,24.233137,0.0,0.0,0.0,0.0,
+2017-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,32.540001,46.509998,32.540001,40.619999,32.678417,0.0,0.0,0.0,0.0,
+2018-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,41.540001,47.060001,30.66,33.119999,29.912357,0.0,0.0,0.0,0.0,
+2019-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,33.34,49.220001,31.780001,46.450001,46.450001,0.0,0.0,0.0,0.0,
+2020-01-01,CCHRX,Columbia Seligman Global Technology Fund Advisor Class,NASDAQ,2012-11-09,,47.259998,56.599998,31.629999,52.560001,52.560001,0.0,0.0,0.0,0.0,

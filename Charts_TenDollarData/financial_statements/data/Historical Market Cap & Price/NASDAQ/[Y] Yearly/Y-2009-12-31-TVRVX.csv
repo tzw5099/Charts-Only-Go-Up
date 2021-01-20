@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,20.469999,20.469999,20.469999,20.469999,11.546299,0.0,0.0,0.0,0.0,
+2010-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,20.66,24.059999,19.15,23.15,13.573953,0.0,0.0,0.0,0.0,
+2011-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,23.440001,24.67,18.440001,20.24,11.867679,0.0,0.0,0.0,0.0,
+2012-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,20.6,27.219999,20.43,25.280001,16.137207,0.0,0.0,0.0,0.0,
+2013-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,25.58,29.620001,25.43,28.690001,18.749039,0.0,0.0,0.0,0.0,
+2014-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,28.559999,32.560001,27.870001,31.32,21.161421,0.0,0.0,0.0,0.0,
+2015-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,31.49,32.91,28.059999,28.58,20.325062,0.0,0.0,0.0,0.0,
+2016-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,28.209999,31.200001,24.129999,29.73,21.452234,0.0,0.0,0.0,0.0,
+2017-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,29.860001,36.009998,29.860001,34.16,26.145638,0.0,0.0,0.0,0.0,
+2018-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,34.290001,35.43,24.18,24.700001,20.861383,0.0,0.0,0.0,0.0,
+2019-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,24.469999,29.32,24.379999,25.200001,25.200001,0.0,0.0,0.0,0.0,
+2020-01-01,TVRVX,Third Avenue Real Estate Value Fund Investor Class,NASDAQ,2009-12-31,,25.09,26.299999,15.02,20.74,20.74,0.0,0.0,0.0,0.0,

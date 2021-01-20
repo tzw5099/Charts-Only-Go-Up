@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,DKNGW,DraftKings Inc.,NASDAQ,2020-04-24,,8.25,33.4,6.52,20.0,20.0,28547158.0,28547158.0,-17.89,-0.5764285714285716,20.192585102040812

@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TDEAX,Touchstone Dynamic Equity Fund Class A,NASDAQ,2019-04-26,,15.46,16.049999,13.17,13.27,13.27,0.0,0.0,0.0,0.0,
+2020-01-01,TDEAX,Touchstone Dynamic Equity Fund Class A,NASDAQ,2019-04-26,,13.35,13.77,9.71,12.78,12.78,0.0,0.0,0.0,0.0,

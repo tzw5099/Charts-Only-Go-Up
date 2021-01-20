@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-04-01,ZNWAA,"Zion Oil & Gas, Inc.",NASDAQ,2020-04-21,596156026710.0,0.0,4294.67,4294.67,4294.67,4294.67,0.0,0.0,0.0,0.0,0.0
+2020-05-01,ZNWAA,"Zion Oil & Gas, Inc.",NASDAQ,2020-04-21,,,,,,,0.0,0.0,0.0,,
+2020-06-01,ZNWAA,"Zion Oil & Gas, Inc.",NASDAQ,2020-04-21,668194809.154214,0.0,4294.669922,4294.669922,4294.669922,4294.669922,0.0,0.0,0.0,0.0,0.0
+2020-07-01,ZNWAA,"Zion Oil & Gas, Inc.",NASDAQ,2020-04-21,668194809.154214,0.0,4294.669922,4294.669922,4294.669922,4294.669922,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ACEVU,,NASDAQ,2020-07-28,,10.2,10.3299,9.9,10.09,10.09,16442954.0,16442954.0,-0.7509000000000001,-0.20089189189189186,9.76079135135135

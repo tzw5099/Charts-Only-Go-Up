@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ESCR,Escalera Resources Company,delisted,2020-05-04,,21.120001,23.309999,19.959999,22.604,22.604,412900.0,412900.0,0.7620000000000001,0.03828421052631578,22.359979506172838

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,SFDYX,SEI Institutional Managed Trust Mid-Cap Fund Class Y,NASDAQ,2015-11-03,,27.01,27.01,21.620001,21.870001,17.02825,0.0,0.0,0.0,0.0,
+2016-01-01,SFDYX,SEI Institutional Managed Trust Mid-Cap Fund Class Y,NASDAQ,2015-11-03,,21.610001,25.639999,19.059999,24.860001,19.738285,0.0,0.0,0.0,0.0,
+2017-01-01,SFDYX,SEI Institutional Managed Trust Mid-Cap Fund Class Y,NASDAQ,2015-11-03,,25.07,29.389999,25.07,27.66,23.80476,0.0,0.0,0.0,0.0,
+2018-01-01,SFDYX,SEI Institutional Managed Trust Mid-Cap Fund Class Y,NASDAQ,2015-11-03,,27.91,29.549999,20.299999,21.530001,21.012941,0.0,0.0,0.0,0.0,
+2019-01-01,SFDYX,SEI Institutional Managed Trust Mid-Cap Fund Class Y,NASDAQ,2015-11-03,,21.530001,26.43,21.16,26.23,26.015907,0.0,0.0,0.0,0.0,
+2020-01-01,SFDYX,SEI Institutional Managed Trust Mid-Cap Fund Class Y,NASDAQ,2015-11-03,,26.280001,26.66,15.41,23.82,23.82,0.0,0.0,0.0,0.0,

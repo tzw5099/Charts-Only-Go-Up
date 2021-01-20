@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-03-26,ENRJ,Enerjex Resources Inc,delisted,2018-03-26,,0.1797,0.27,0.174,0.2051,,11396788.0,11396788.0,0.2051,0.0,0.228032

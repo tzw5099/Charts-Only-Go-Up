@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-04-01,MRDN,Meridian Waste Solutions Inc,NASDAQ,2018-04-27,,0.6474,0.651,0.5801,0.5999,,168353.0,168353.0,0.5999,-2.2375,0.617827

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,GINNX,Guinness Atkinson Global Innovators Fund Institutional Class,NASDAQ,2016-01-05,,30.74,35.040001,27.52,34.209999,29.64344,0.0,0.0,0.0,0.0,
+2017-01-01,GINNX,Guinness Atkinson Global Innovators Fund Institutional Class,NASDAQ,2016-01-05,,34.439999,46.52,34.439999,45.09,40.045845,0.0,0.0,0.0,0.0,
+2018-01-01,GINNX,Guinness Atkinson Global Innovators Fund Institutional Class,NASDAQ,2016-01-05,,45.540001,48.43,33.18,34.990002,33.35976,0.0,0.0,0.0,0.0,
+2019-01-01,GINNX,Guinness Atkinson Global Innovators Fund Institutional Class,NASDAQ,2016-01-05,,34.959999,47.009998,33.91,45.84,45.84,0.0,0.0,0.0,0.0,
+2020-01-01,GINNX,Guinness Atkinson Global Innovators Fund Institutional Class,NASDAQ,2016-01-05,,46.57,56.27,33.419998,53.98,53.98,0.0,0.0,0.0,0.0,

@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,BCNA,Reality Shares Nasdaq NexGen Economy China ETF,NASDAQ,2018-06-20,,24.2,24.47,17.9,18.09,18.01,195800.0,195800.0,-0.2700000000000008,0.003701492537313449,19.461940298507457
+2019-01-01,BCNA,Reality Shares Nasdaq NexGen Economy China ETF,NASDAQ,2018-06-20,,17.86,27.86,17.68,20.83,20.83,220700.0,220700.0,1.889999999999999,0.04278640776699028,19.79001655339806

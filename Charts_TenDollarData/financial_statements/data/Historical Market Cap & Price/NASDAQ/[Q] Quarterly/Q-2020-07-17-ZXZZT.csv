@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ZXZZT,NASDAQ TEST STOCK,NASDAQ,2020-07-17,,84.44,85.2,4.99,32.119999,32.119999,199378.0,199378.0,-62.320000000000014,-13.602823529411765,21.659803529411768

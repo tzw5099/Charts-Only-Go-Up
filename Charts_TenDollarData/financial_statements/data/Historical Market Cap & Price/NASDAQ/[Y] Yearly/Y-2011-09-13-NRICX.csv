@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,20.0,20.700001,19.129999,20.370001,13.640712,0.0,0.0,0.0,0.0,
+2012-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,20.51,22.639999,20.42,22.26,15.874445,0.0,0.0,0.0,0.0,
+2013-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,22.440001,24.309999,21.959999,22.01,16.616882,0.0,0.0,0.0,0.0,
+2014-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,21.99,24.639999,21.99,23.790001,18.901054,0.0,0.0,0.0,0.0,
+2015-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,23.83,24.48,21.309999,21.889999,18.169502,0.0,0.0,0.0,0.0,
+2016-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,21.74,24.280001,20.57,22.77,19.765062,0.0,0.0,0.0,0.0,
+2017-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,22.84,24.459999,22.84,24.15,21.996483,0.0,0.0,0.0,0.0,
+2018-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,24.17,24.23,21.190001,21.469999,20.445005,0.0,0.0,0.0,0.0,
+2019-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,21.49,25.0,21.49,24.77,24.510923,0.0,0.0,0.0,0.0,
+2020-01-01,NRICX,Nuveen Real Asset Income Fund Class C,NASDAQ,2011-09-13,,24.700001,25.379999,15.83,21.469999,21.469999,0.0,0.0,0.0,0.0,

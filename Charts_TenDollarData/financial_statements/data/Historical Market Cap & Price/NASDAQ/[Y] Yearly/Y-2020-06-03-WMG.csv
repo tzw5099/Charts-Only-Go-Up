@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,WMG,,NASDAQ,2020-06-03,14550300350.166,26.8798,34.6402,26.8698,28.5300006866,28.5300006866,134867388.0,134867388.0,0.08110000000000062,0.04868918918918903,29.784254999999998

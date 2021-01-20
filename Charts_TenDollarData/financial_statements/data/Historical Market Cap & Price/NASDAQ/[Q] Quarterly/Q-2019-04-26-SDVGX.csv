@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,SDVGX,Sit Dividend Growth Fund Class I,NASDAQ,2019-04-26,,14.39,14.53,13.57,14.45,12.773585,0.0,0.0,0.0,0.0,
+2019-07-01,SDVGX,Sit Dividend Growth Fund Class I,NASDAQ,2019-04-26,,14.56,14.98,13.98,14.91,13.237181,0.0,0.0,0.0,0.0,
+2019-10-01,SDVGX,Sit Dividend Growth Fund Class I,NASDAQ,2019-04-26,,14.72,15.84,14.24,14.33,14.271125,0.0,0.0,0.0,0.0,
+2020-01-01,SDVGX,Sit Dividend Growth Fund Class I,NASDAQ,2019-04-26,,14.42,14.94,9.71,11.41,11.363122,0.0,0.0,0.0,0.0,
+2020-04-01,SDVGX,Sit Dividend Growth Fund Class I,NASDAQ,2019-04-26,,10.92,14.05,10.92,13.48,13.422848,0.0,0.0,0.0,0.0,
+2020-07-01,SDVGX,Sit Dividend Growth Fund Class I,NASDAQ,2019-04-26,,13.5,15.16,13.49,14.54,14.54,0.0,0.0,0.0,0.0,

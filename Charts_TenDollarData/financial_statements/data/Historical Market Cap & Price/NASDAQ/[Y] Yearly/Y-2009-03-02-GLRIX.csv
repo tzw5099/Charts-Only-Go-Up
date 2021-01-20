@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,14.8,18.33,14.53,18.0,12.049851,0.0,0.0,0.0,0.0,
+2010-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,18.16,20.290001,17.700001,20.040001,13.652323,0.0,0.0,0.0,0.0,
+2011-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,20.139999,20.91,19.32,20.42,14.339071,0.0,0.0,0.0,0.0,
+2012-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,20.549999,21.75,20.4,21.559999,15.547105,0.0,0.0,0.0,0.0,
+2013-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,21.790001,23.969999,21.75,23.82,17.605068,0.0,0.0,0.0,0.0,
+2014-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,23.82,25.440001,23.18,24.42,18.912138,0.0,0.0,0.0,0.0,
+2015-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,24.43,25.309999,23.6,23.629999,18.819107,0.0,0.0,0.0,0.0,
+2016-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,23.469999,24.5,22.5,24.219999,19.654711,0.0,0.0,0.0,0.0,
+2017-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,24.32,25.379999,23.639999,23.809999,20.889055,0.0,0.0,0.0,0.0,
+2018-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,23.860001,24.25,18.76,19.139999,18.718052,0.0,0.0,0.0,0.0,
+2019-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,19.200001,21.129999,19.059999,21.040001,20.953918,0.0,0.0,0.0,0.0,
+2020-01-01,GLRIX,James Balanced: Golden Rainbow Fund Institutional Class,NASDAQ,2009-03-02,,21.120001,21.370001,17.790001,20.51,20.51,0.0,0.0,0.0,0.0,

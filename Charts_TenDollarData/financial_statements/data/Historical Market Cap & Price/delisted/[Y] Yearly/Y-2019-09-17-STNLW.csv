@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.45,0.5,0.0,0.0,0.0,4600205.0,4600205.0,-0.09000000000000002,2.390461538461539,0.3407688461538462

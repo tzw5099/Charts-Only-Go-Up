@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,JVARX,JPMorgan Value Advantage Fund Class R5,NASDAQ,2016-09-09,,29.57,33.119999,29.309999,32.209999,28.204008,0.0,0.0,0.0,0.0,
+2017-01-01,JVARX,JPMorgan Value Advantage Fund Class R5,NASDAQ,2016-09-09,,32.470001,36.490002,32.169998,35.959999,32.185699,0.0,0.0,0.0,0.0,
+2018-01-01,JVARX,JPMorgan Value Advantage Fund Class R5,NASDAQ,2016-09-09,,36.189999,38.110001,28.77,30.49,29.267315,0.0,0.0,0.0,0.0,
+2019-01-01,JVARX,JPMorgan Value Advantage Fund Class R5,NASDAQ,2016-09-09,,30.57,37.810001,30.129999,37.25,37.25,0.0,0.0,0.0,0.0,
+2020-01-01,JVARX,JPMorgan Value Advantage Fund Class R5,NASDAQ,2016-09-09,,37.310001,37.509998,22.110001,31.790001,31.790001,0.0,0.0,0.0,0.0,

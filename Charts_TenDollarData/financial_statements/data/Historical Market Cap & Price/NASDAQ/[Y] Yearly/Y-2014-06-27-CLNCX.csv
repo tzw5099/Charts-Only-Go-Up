@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,CLNCX,Columbia Large Cap Enhanced Core Fund Institutional 2 Class,NASDAQ,2014-06-27,,19.91,21.620001,19.200001,21.25,15.340759,0.0,0.0,0.0,0.0,
+2015-01-01,CLNCX,Columbia Large Cap Enhanced Core Fund Institutional 2 Class,NASDAQ,2014-06-27,,21.24,22.18,19.23,20.77,15.351016,0.0,0.0,0.0,0.0,
+2016-01-01,CLNCX,Columbia Large Cap Enhanced Core Fund Institutional 2 Class,NASDAQ,2014-06-27,,20.469999,22.85,18.4,22.450001,16.881386,0.0,0.0,0.0,0.0,
+2017-01-01,CLNCX,Columbia Large Cap Enhanced Core Fund Institutional 2 Class,NASDAQ,2014-06-27,,22.620001,26.48,22.620001,24.52,21.01264,0.0,0.0,0.0,0.0,
+2018-01-01,CLNCX,Columbia Large Cap Enhanced Core Fund Institutional 2 Class,NASDAQ,2014-06-27,,24.709999,26.379999,19.58,20.91,20.011118,0.0,0.0,0.0,0.0,
+2019-01-01,CLNCX,Columbia Large Cap Enhanced Core Fund Institutional 2 Class,NASDAQ,2014-06-27,,20.950001,25.299999,20.42,25.209999,25.209999,0.0,0.0,0.0,0.0,
+2020-01-01,CLNCX,Columbia Large Cap Enhanced Core Fund Institutional 2 Class,NASDAQ,2014-06-27,,25.41,26.35,17.27,24.51,24.51,0.0,0.0,0.0,0.0,

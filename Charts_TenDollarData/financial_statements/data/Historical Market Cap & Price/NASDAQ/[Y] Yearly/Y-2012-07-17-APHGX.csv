@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,10.75,12.17,10.5,11.96,9.341046,0.0,0.0,0.0,0.0,
+2013-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,12.19,15.34,12.16,15.34,12.280592,0.0,0.0,0.0,0.0,
+2014-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,15.15,16.43,14.49,15.52,12.867746,0.0,0.0,0.0,0.0,
+2015-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,15.45,16.32,14.03,14.23,12.529202,0.0,0.0,0.0,0.0,
+2016-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,13.99,15.55,12.74,15.25,13.817854,0.0,0.0,0.0,0.0,
+2017-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,15.37,18.309999,15.37,18.17,16.840748,0.0,0.0,0.0,0.0,
+2018-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,18.26,19.360001,14.32,14.91,14.672853,0.0,0.0,0.0,0.0,
+2019-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,14.94,18.27,14.74,18.209999,18.209999,0.0,0.0,0.0,0.0,
+2020-01-01,APHGX,Artisan Global Value Fund Institutional Class,NASDAQ,2012-07-17,,18.389999,18.620001,11.19,16.43,16.43,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,LOACW,Longevity Acquisition Corporation WT EXP 073125,NASDAQ,2020-07-20,696239.25,0.25,0.36,0.17,0.35,0.35,417599.0,417599.0,0.39169999999999994,5.8029629629629635,0.26449259259259256

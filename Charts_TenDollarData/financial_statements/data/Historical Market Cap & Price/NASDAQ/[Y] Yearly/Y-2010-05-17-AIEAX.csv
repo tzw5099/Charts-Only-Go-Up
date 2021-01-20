@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,14.14,17.0,13.18,16.58,12.439764,0.0,0.0,0.0,0.0,
+2011-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,16.719999,18.6,13.4,14.04,10.955701,0.0,0.0,0.0,0.0,
+2012-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,14.43,16.98,13.26,16.549999,13.245842,0.0,0.0,0.0,0.0,
+2013-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,16.85,20.219999,16.59,20.219999,16.412046,0.0,0.0,0.0,0.0,
+2014-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,19.93,21.110001,18.219999,18.27,15.19407,0.0,0.0,0.0,0.0,
+2015-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,18.209999,20.559999,17.040001,17.51,14.874102,0.0,0.0,0.0,0.0,
+2016-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,17.190001,17.889999,15.07,17.1,14.8519,0.0,0.0,0.0,0.0,
+2017-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,17.17,21.09,17.17,20.709999,18.47896,0.0,0.0,0.0,0.0,
+2018-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,20.860001,22.07,15.38,15.78,15.381276,0.0,0.0,0.0,0.0,
+2019-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,15.69,18.77,15.6,18.299999,18.299999,0.0,0.0,0.0,0.0,
+2020-01-01,AIEAX,American Beacon International Equity Fund Class A,NASDAQ,2010-05-17,,18.41,18.41,11.07,16.139999,16.139999,0.0,0.0,0.0,0.0,

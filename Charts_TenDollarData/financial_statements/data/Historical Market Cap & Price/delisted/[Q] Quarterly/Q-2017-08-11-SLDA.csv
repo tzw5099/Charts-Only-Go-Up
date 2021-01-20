@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-07-01,SLDA,Sutherland Asset Management Corporation 7.00 Convertible Senior Notes due 2023,delisted,2017-08-11,,24.4194,25.0179,24.1299,24.9696,,988420.0,988420.0,24.969600999999997,0.05845714285714287,24.609402857142857
+2017-10-01,SLDA,Sutherland Asset Management Corporation 7.00 Convertible Senior Notes due 2023,delisted,2017-08-11,,24.9986,25.2887,24.5913,25.2101,,940448.0,940448.0,0.24050699999999986,0.016966666666666665,24.979928813559326
+2018-01-01,SLDA,Sutherland Asset Management Corporation 7.00 Convertible Senior Notes due 2023,delisted,2017-08-11,,25.0135,25.8785,24.58,25.54,,1683852.0,1683852.0,0.3298970000000001,0.022918032786885235,25.134840983606555
+2018-04-01,SLDA,Sutherland Asset Management Corporation 7.00 Convertible Senior Notes due 2023,delisted,2017-08-11,,25.59,26.24,24.85,26.0,,786125.0,786125.0,0.46,0.03068852459016393,25.438878688524586
+2018-07-01,SLDA,Sutherland Asset Management Corporation 7.00 Convertible Senior Notes due 2023,delisted,2017-08-11,,25.9,26.5823,25.72,26.25,,260498.0,260498.0,0.25,0.018491525423728807,26.20398301886792

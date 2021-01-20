@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,SSPKW,Silver Spike Acquisition Corp.,NASDAQ,2020-07-21,,0.6,0.6002,0.47,0.47,0.47,222680.0,222680.0,-0.1704,-5.126833333333334,0.5183383333333333
+2020-08-01,SSPKW,Silver Spike Acquisition Corp.,NASDAQ,2020-07-21,,0.5101,0.62,0.4478,0.59,0.59,368274.0,368274.0,0.3337,5.032307692307692,0.5337723076923078
+2020-09-01,SSPKW,Silver Spike Acquisition Corp.,NASDAQ,2020-07-21,,0.5101,0.65,0.55,0.62,0.62,183956.0,183956.0,1.068,20.936999999999994,0.6155630000000001

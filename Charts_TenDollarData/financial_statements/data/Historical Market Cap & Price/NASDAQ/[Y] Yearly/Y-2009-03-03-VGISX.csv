@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,9.93,19.18,9.35,17.16,11.564026,0.0,0.0,0.0,0.0,
+2010-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,17.190001,21.620001,15.9,19.379999,14.257727,0.0,0.0,0.0,0.0,
+2011-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,19.59,22.110001,17.139999,19.030001,14.376844,0.0,0.0,0.0,0.0,
+2012-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,19.27,23.35,18.91,22.799999,17.791595,0.0,0.0,0.0,0.0,
+2013-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,23.049999,25.84,21.969999,22.530001,18.035959,0.0,0.0,0.0,0.0,
+2014-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,22.450001,27.68,22.450001,26.9,22.164106,0.0,0.0,0.0,0.0,
+2015-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,27.09,29.030001,25.17,26.610001,22.593964,0.0,0.0,0.0,0.0,
+2016-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,26.27,30.559999,24.209999,27.02,23.542284,0.0,0.0,0.0,0.0,
+2017-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,26.959999,30.299999,26.549999,29.629999,26.604652,0.0,0.0,0.0,0.0,
+2018-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,29.549999,31.16,26.690001,27.33,25.346155,0.0,0.0,0.0,0.0,
+2019-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,26.9,35.360001,26.9,32.900002,32.900002,0.0,0.0,0.0,0.0,
+2020-01-01,VGISX,Virtus Duff & Phelps Global Real Estate Securities Fund Class I,NASDAQ,2009-03-03,,32.580002,34.919998,20.389999,29.110001,29.110001,0.0,0.0,0.0,0.0,

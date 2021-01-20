@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NIMEX,Nuveen Equity Market Neutral Fund Class I,NASDAQ,2013-06-26,,19.92,21.73,19.92,21.469999,20.377872,0.0,0.0,0.0,0.0,
+2014-01-01,NIMEX,Nuveen Equity Market Neutral Fund Class I,NASDAQ,2013-06-26,,21.48,22.280001,20.59,21.950001,20.894102,0.0,0.0,0.0,0.0,
+2015-01-01,NIMEX,Nuveen Equity Market Neutral Fund Class I,NASDAQ,2013-06-26,,21.85,22.530001,20.950001,21.950001,21.241974,0.0,0.0,0.0,0.0,
+2016-01-01,NIMEX,Nuveen Equity Market Neutral Fund Class I,NASDAQ,2013-06-26,,21.82,23.66,21.15,23.290001,22.538754,0.0,0.0,0.0,0.0,
+2017-01-01,NIMEX,Nuveen Equity Market Neutral Fund Class I,NASDAQ,2013-06-26,,23.41,24.74,22.27,24.040001,23.742687,0.0,0.0,0.0,0.0,
+2018-01-01,NIMEX,Nuveen Equity Market Neutral Fund Class I,NASDAQ,2013-06-26,,24.110001,26.030001,24.07,25.540001,25.359118,0.0,0.0,0.0,0.0,
+2019-01-01,NIMEX,Nuveen Equity Market Neutral Fund Class I,NASDAQ,2013-06-26,,25.620001,25.709999,23.24,23.24,23.24,0.0,0.0,0.0,0.0,
+2020-01-01,NIMEX,Nuveen Equity Market Neutral Fund Class I,NASDAQ,2013-06-26,,23.309999,23.309999,21.120001,21.190001,21.190001,0.0,0.0,0.0,0.0,

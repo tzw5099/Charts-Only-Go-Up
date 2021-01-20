@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NBACW,Newborn Acquisition Corp.,NASDAQ,2020-09-17,499047.6,0.1999,0.24,0.1,0.21,0.21,528451.0,528451.0,-1.3749000000000002,-22.926366666666674,0.15250599999999995

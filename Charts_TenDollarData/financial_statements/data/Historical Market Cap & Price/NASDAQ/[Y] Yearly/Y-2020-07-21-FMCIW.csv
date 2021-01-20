@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FMCIW,Forum Merger II Corporation WT EXP 093025,NASDAQ,2020-07-21,61651321.16,5.54,9.82,3.08,9.02,9.02,23048490.0,23048490.0,35.55,24.256212121212123,5.679340000000001

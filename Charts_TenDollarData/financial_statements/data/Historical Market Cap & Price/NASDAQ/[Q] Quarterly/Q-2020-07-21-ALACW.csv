@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ALACW,Alberton Acquisition Corporation,NASDAQ,2020-07-21,,0.249,0.28,0.0699,0.2599,0.2599,2893505.0,2893505.0,-3.364,-40.93869696969697,0.14602484848484848

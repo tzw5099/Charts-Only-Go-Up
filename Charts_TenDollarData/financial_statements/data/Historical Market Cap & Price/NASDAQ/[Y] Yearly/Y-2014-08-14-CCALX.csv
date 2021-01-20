@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,CCALX,Conestoga Small Cap Institutional Class,NASDAQ,2014-08-14,,32.139999,34.330002,29.59,33.73,29.907467,0.0,0.0,0.0,0.0,
+2015-01-01,CCALX,Conestoga Small Cap Institutional Class,NASDAQ,2014-08-14,,33.330002,37.599998,32.150002,35.849998,32.389473,0.0,0.0,0.0,0.0,
+2016-01-01,CCALX,Conestoga Small Cap Institutional Class,NASDAQ,2014-08-14,,34.700001,41.740002,29.690001,40.5,37.026768,0.0,0.0,0.0,0.0,
+2017-01-01,CCALX,Conestoga Small Cap Institutional Class,NASDAQ,2014-08-14,,40.619999,52.860001,39.849998,49.34,47.659504,0.0,0.0,0.0,0.0,
+2018-01-01,CCALX,Conestoga Small Cap Institutional Class,NASDAQ,2014-08-14,,49.59,62.790001,45.799999,49.07,48.038612,0.0,0.0,0.0,0.0,
+2019-01-01,CCALX,Conestoga Small Cap Institutional Class,NASDAQ,2014-08-14,,48.639999,61.630001,47.290001,60.25,60.25,0.0,0.0,0.0,0.0,
+2020-01-01,CCALX,Conestoga Small Cap Institutional Class,NASDAQ,2014-08-14,,60.84,67.330002,43.240002,61.450001,61.450001,0.0,0.0,0.0,0.0,

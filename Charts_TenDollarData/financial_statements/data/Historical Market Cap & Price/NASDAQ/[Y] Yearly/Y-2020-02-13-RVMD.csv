@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,RVMD,"Revolution Medicines, Inc.",NASDAQ,2020-02-13,1692071653.24751,28.21,47.14,17.345,28.799999,28.799999,56113955.0,56113955.0,-2.52000000000001,0.09850666666666659,29.010427133333316

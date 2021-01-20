@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,OFSSL,OFS Capital Corporation 6.375% NT 25,NASDAQ,2020-07-21,,23.5,24.0,21.475,23.6,23.6,29388.0,29388.0,-8.690000000000001,-1.6077391304347823,23.108993478260867

@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,TRAOX,T. Rowe Price Asia Opportunities Fund,NASDAQ,2014-05-23,,10.11,11.01,10.03,10.33,9.851034,0.0,0.0,0.0,0.0,
+2015-01-01,TRAOX,T. Rowe Price Asia Opportunities Fund,NASDAQ,2014-05-23,,10.44,11.77,9.26,10.15,9.786711,0.0,0.0,0.0,0.0,
+2016-01-01,TRAOX,T. Rowe Price Asia Opportunities Fund,NASDAQ,2014-05-23,,9.91,11.64,8.91,10.41,10.247113,0.0,0.0,0.0,0.0,
+2017-01-01,TRAOX,T. Rowe Price Asia Opportunities Fund,NASDAQ,2014-05-23,,10.51,15.15,10.51,14.87,14.677376,0.0,0.0,0.0,0.0,
+2018-01-01,TRAOX,T. Rowe Price Asia Opportunities Fund,NASDAQ,2014-05-23,,15.2,16.34,12.16,13.12,13.038407,0.0,0.0,0.0,0.0,
+2019-01-01,TRAOX,T. Rowe Price Asia Opportunities Fund,NASDAQ,2014-05-23,,13.02,16.309999,12.7,16.309999,16.309999,0.0,0.0,0.0,0.0,
+2020-01-01,TRAOX,T. Rowe Price Asia Opportunities Fund,NASDAQ,2014-05-23,,16.57,18.200001,12.03,17.77,17.77,0.0,0.0,0.0,0.0,

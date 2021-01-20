@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NWJFX,Nationwide Ziegler NYSE Arca Tech 100 Index Fund Institutional Service Class,NASDAQ,2013-09-17,,45.400002,49.380001,43.91,49.380001,43.939217,0.0,0.0,0.0,0.0,
+2014-01-01,NWJFX,Nationwide Ziegler NYSE Arca Tech 100 Index Fund Institutional Service Class,NASDAQ,2013-09-17,,48.900002,57.380001,48.23,56.220001,50.439884,0.0,0.0,0.0,0.0,
+2015-01-01,NWJFX,Nationwide Ziegler NYSE Arca Tech 100 Index Fund Institutional Service Class,NASDAQ,2013-09-17,,56.279999,60.220001,51.529999,55.220001,49.949223,0.0,0.0,0.0,0.0,
+2016-01-01,NWJFX,Nationwide Ziegler NYSE Arca Tech 100 Index Fund Institutional Service Class,NASDAQ,2013-09-17,,54.25,62.119999,47.959999,61.080002,55.786457,0.0,0.0,0.0,0.0,
+2017-01-01,NWJFX,Nationwide Ziegler NYSE Arca Tech 100 Index Fund Institutional Service Class,NASDAQ,2013-09-17,,61.080002,81.169998,61.080002,77.190002,73.420837,0.0,0.0,0.0,0.0,
+2018-01-01,NWJFX,Nationwide Ziegler NYSE Arca Tech 100 Index Fund Institutional Service Class,NASDAQ,2013-09-17,,78.269997,91.870003,70.669998,75.760002,74.072563,0.0,0.0,0.0,0.0,
+2019-01-01,NWJFX,Nationwide Ziegler NYSE Arca Tech 100 Index Fund Institutional Service Class,NASDAQ,2013-09-17,,75.709999,99.889999,73.129997,99.25,99.057564,0.0,0.0,0.0,0.0,
+2020-01-01,NWJFX,Nationwide Ziegler NYSE Arca Tech 100 Index Fund Institutional Service Class,NASDAQ,2013-09-17,,100.690002,116.360001,72.330002,106.349998,106.349998,0.0,0.0,0.0,0.0,

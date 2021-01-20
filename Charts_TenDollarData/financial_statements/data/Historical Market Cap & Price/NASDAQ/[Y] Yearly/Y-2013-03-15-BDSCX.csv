@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,BDSCX,BlackRock Advantage Small Cap Core Fund Investor C Shares,NASDAQ,2013-03-15,,10.0,12.06,9.53,11.63,9.457303,0.0,0.0,0.0,0.0,
+2014-01-01,BDSCX,BlackRock Advantage Small Cap Core Fund Investor C Shares,NASDAQ,2013-03-15,,11.52,12.56,10.07,11.01,9.852443,0.0,0.0,0.0,0.0,
+2015-01-01,BDSCX,BlackRock Advantage Small Cap Core Fund Investor C Shares,NASDAQ,2013-03-15,,10.98,12.05,10.05,10.18,9.538051,0.0,0.0,0.0,0.0,
+2016-01-01,BDSCX,BlackRock Advantage Small Cap Core Fund Investor C Shares,NASDAQ,2013-03-15,,9.94,12.67,8.56,12.44,11.687043,0.0,0.0,0.0,0.0,
+2017-01-01,BDSCX,BlackRock Advantage Small Cap Core Fund Investor C Shares,NASDAQ,2013-03-15,,12.48,13.63,12.09,13.39,12.82234,0.0,0.0,0.0,0.0,
+2018-01-01,BDSCX,BlackRock Advantage Small Cap Core Fund Investor C Shares,NASDAQ,2013-03-15,,13.5,15.32,10.86,11.59,11.573398,0.0,0.0,0.0,0.0,
+2019-01-01,BDSCX,BlackRock Advantage Small Cap Core Fund Investor C Shares,NASDAQ,2013-03-15,,11.63,15.21,11.42,15.14,15.14,0.0,0.0,0.0,0.0,
+2020-01-01,BDSCX,BlackRock Advantage Small Cap Core Fund Investor C Shares,NASDAQ,2013-03-15,,15.12,15.5,8.77,14.13,14.13,0.0,0.0,0.0,0.0,

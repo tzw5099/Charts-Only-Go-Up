@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,HILFX,Hennessy Large Cap Financial Fund Institutional Class,NASDAQ,2015-06-17,,19.74,20.209999,16.51,16.709999,15.233294,0.0,0.0,0.0,0.0,
+2016-01-01,HILFX,Hennessy Large Cap Financial Fund Institutional Class,NASDAQ,2015-06-17,,16.4,19.65,13.64,19.0,17.597027,0.0,0.0,0.0,0.0,
+2017-01-01,HILFX,Hennessy Large Cap Financial Fund Institutional Class,NASDAQ,2015-06-17,,19.209999,22.629999,18.440001,21.74,21.075121,0.0,0.0,0.0,0.0,
+2018-01-01,HILFX,Hennessy Large Cap Financial Fund Institutional Class,NASDAQ,2015-06-17,,21.77,23.870001,17.469999,18.700001,18.66048,0.0,0.0,0.0,0.0,
+2019-01-01,HILFX,Hennessy Large Cap Financial Fund Institutional Class,NASDAQ,2015-06-17,,18.93,24.5,18.540001,24.35,24.35,0.0,0.0,0.0,0.0,
+2020-01-01,HILFX,Hennessy Large Cap Financial Fund Institutional Class,NASDAQ,2015-06-17,,24.629999,26.280001,15.56,24.07,24.07,0.0,0.0,0.0,0.0,

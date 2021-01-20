@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,DOPIX,BNY Mellon Opportunistic Small Cap Fund Class I,NASDAQ,2016-09-30,,30.620001,34.580002,27.790001,33.290001,23.107872,0.0,0.0,0.0,0.0,
+2017-01-01,DOPIX,BNY Mellon Opportunistic Small Cap Fund Class I,NASDAQ,2016-09-30,,33.66,41.049999,33.32,36.82,28.802361,0.0,0.0,0.0,0.0,
+2018-01-01,DOPIX,BNY Mellon Opportunistic Small Cap Fund Class I,NASDAQ,2016-09-30,,37.200001,40.700001,21.969999,23.209999,23.108126,0.0,0.0,0.0,0.0,
+2019-01-01,DOPIX,BNY Mellon Opportunistic Small Cap Fund Class I,NASDAQ,2016-09-30,,23.49,28.120001,23.26,28.030001,28.030001,0.0,0.0,0.0,0.0,
+2020-01-01,DOPIX,BNY Mellon Opportunistic Small Cap Fund Class I,NASDAQ,2016-09-30,,28.08,28.91,15.96,27.049999,27.049999,0.0,0.0,0.0,0.0,

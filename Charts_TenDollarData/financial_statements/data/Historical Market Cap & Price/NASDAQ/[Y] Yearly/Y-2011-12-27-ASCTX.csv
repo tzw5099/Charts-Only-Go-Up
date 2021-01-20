@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,10.07,10.08,9.98,10.01,7.216982,0.0,0.0,0.0,0.0,
+2012-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,10.08,11.33,9.99,11.22,8.191669,0.0,0.0,0.0,0.0,
+2013-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,11.52,15.29,11.52,14.78,11.166179,0.0,0.0,0.0,0.0,
+2014-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,14.54,15.72,13.53,15.09,11.642565,0.0,0.0,0.0,0.0,
+2015-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,15.01,16.120001,14.01,14.01,11.254033,0.0,0.0,0.0,0.0,
+2016-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,13.65,18.379999,12.2,17.9,14.480248,0.0,0.0,0.0,0.0,
+2017-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,17.98,19.98,17.209999,18.26,15.967196,0.0,0.0,0.0,0.0,
+2018-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,18.379999,19.219999,13.38,13.56,13.250128,0.0,0.0,0.0,0.0,
+2019-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,13.57,16.57,13.37,16.280001,16.280001,0.0,0.0,0.0,0.0,
+2020-01-01,ASCTX,AMG Managers Silvercrest Small Cap Fund Class N,NASDAQ,2011-12-27,,16.290001,16.559999,9.53,13.65,13.65,0.0,0.0,0.0,0.0,

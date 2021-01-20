@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,HCCOW,Healthcare Merger Corp.,NASDAQ,2020-07-21,15499653.75,1.28,2.4,1.26,1.89,1.89,6612638.0,6612638.0,16.430000000000003,38.89684848484848,1.8073387878787877

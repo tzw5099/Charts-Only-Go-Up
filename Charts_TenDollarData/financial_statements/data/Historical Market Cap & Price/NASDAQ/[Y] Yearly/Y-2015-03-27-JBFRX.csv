@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,JBFRX,John Hancock Bond Fund Class R4,NASDAQ,2015-03-27,,16.18,16.27,15.46,15.48,13.415799,0.0,0.0,0.0,0.0,
+2016-01-01,JBFRX,John Hancock Bond Fund Class R4,NASDAQ,2015-03-27,,15.49,16.219999,15.4,15.67,14.042347,0.0,0.0,0.0,0.0,
+2017-01-01,JBFRX,John Hancock Bond Fund Class R4,NASDAQ,2015-03-27,,15.69,16.110001,15.59,15.93,14.768079,0.0,0.0,0.0,0.0,
+2018-01-01,JBFRX,John Hancock Bond Fund Class R4,NASDAQ,2015-03-27,,15.89,15.91,15.08,15.2,14.61293,0.0,0.0,0.0,0.0,
+2019-01-01,JBFRX,John Hancock Bond Fund Class R4,NASDAQ,2015-03-27,,15.22,16.43,15.22,16.120001,15.993793,0.0,0.0,0.0,0.0,
+2020-01-01,JBFRX,John Hancock Bond Fund Class R4,NASDAQ,2015-03-27,,16.16,16.98,14.95,16.84,16.84,0.0,0.0,0.0,0.0,

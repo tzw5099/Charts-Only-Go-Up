@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,SPQQ,,NASDAQ,2020-07-01,,25.2,29.065001,25.11,27.594999,27.594999,182764.0,182764.0,-0.606,-0.04419999999999999,24.111326000000005

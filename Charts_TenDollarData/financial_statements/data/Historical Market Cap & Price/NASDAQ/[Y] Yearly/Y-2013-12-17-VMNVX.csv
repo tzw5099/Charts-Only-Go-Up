@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,VMNVX,Vanguard Global Minimum Volatility Fund Admiral Shares,NASDAQ,2013-12-17,,20.110001,20.59,20.110001,20.59,14.870832,0.0,0.0,0.0,0.0,
+2014-01-01,VMNVX,Vanguard Global Minimum Volatility Fund Admiral Shares,NASDAQ,2013-12-17,,20.440001,23.530001,19.940001,22.059999,18.085806,0.0,0.0,0.0,0.0,
+2015-01-01,VMNVX,Vanguard Global Minimum Volatility Fund Admiral Shares,NASDAQ,2013-12-17,,22.049999,24.030001,21.74,22.6,19.141069,0.0,0.0,0.0,0.0,
+2016-01-01,VMNVX,Vanguard Global Minimum Volatility Fund Admiral Shares,NASDAQ,2013-12-17,,22.280001,24.709999,21.049999,23.860001,20.778057,0.0,0.0,0.0,0.0,
+2017-01-01,VMNVX,Vanguard Global Minimum Volatility Fund Admiral Shares,NASDAQ,2013-12-17,,23.98,27.809999,23.959999,27.059999,24.108488,0.0,0.0,0.0,0.0,
+2018-01-01,VMNVX,Vanguard Global Minimum Volatility Fund Admiral Shares,NASDAQ,2013-12-17,,27.08,29.08,23.99,24.799999,23.698597,0.0,0.0,0.0,0.0,
+2019-01-01,VMNVX,Vanguard Global Minimum Volatility Fund Admiral Shares,NASDAQ,2013-12-17,,24.68,30.24,24.48,29.07,29.07,0.0,0.0,0.0,0.0,
+2020-01-01,VMNVX,Vanguard Global Minimum Volatility Fund Admiral Shares,NASDAQ,2013-12-17,,29.120001,30.35,20.299999,26.48,26.48,0.0,0.0,0.0,0.0,

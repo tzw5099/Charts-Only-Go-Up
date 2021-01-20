@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,9.0,9.89,7.93,9.83,6.887815,0.0,0.0,0.0,0.0,
+2011-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,9.97,10.86,8.08,9.73,6.877424,0.0,0.0,0.0,0.0,
+2012-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,9.86,11.32,9.68,10.57,7.942644,0.0,0.0,0.0,0.0,
+2013-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,10.84,14.41,10.82,13.74,11.063541,0.0,0.0,0.0,0.0,
+2014-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,13.58,14.89,12.81,14.34,11.952335,0.0,0.0,0.0,0.0,
+2015-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,14.31,15.25,12.83,12.91,11.444929,0.0,0.0,0.0,0.0,
+2016-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,12.76,15.49,10.98,14.97,13.415358,0.0,0.0,0.0,0.0,
+2017-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,15.1,17.49,15.1,17.049999,15.743449,0.0,0.0,0.0,0.0,
+2018-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,17.16,18.030001,12.0,12.69,12.572567,0.0,0.0,0.0,0.0,
+2019-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,12.75,15.88,12.61,15.84,15.84,0.0,0.0,0.0,0.0,
+2020-01-01,ABMAX,American Beacon Mid-Cap Value Fund Class A,NASDAQ,2010-05-17,,15.87,16.15,7.94,12.84,12.84,0.0,0.0,0.0,0.0,

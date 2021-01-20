@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,FMIYX,FMI International Fund Institutional Class,NASDAQ,2016-10-31,,30.360001,31.0,29.709999,29.879999,26.366228,0.0,0.0,0.0,0.0,
+2017-01-01,FMIYX,FMI International Fund Institutional Class,NASDAQ,2016-10-31,,29.99,34.740002,29.99,33.970001,30.476652,0.0,0.0,0.0,0.0,
+2018-01-01,FMIYX,FMI International Fund Institutional Class,NASDAQ,2016-10-31,,34.119999,34.950001,27.879999,28.639999,27.611008,0.0,0.0,0.0,0.0,
+2019-01-01,FMIYX,FMI International Fund Institutional Class,NASDAQ,2016-10-31,,28.58,33.009998,28.15,32.380001,32.380001,0.0,0.0,0.0,0.0,
+2020-01-01,FMIYX,FMI International Fund Institutional Class,NASDAQ,2016-10-31,,32.650002,32.939999,20.610001,28.41,28.41,0.0,0.0,0.0,0.0,

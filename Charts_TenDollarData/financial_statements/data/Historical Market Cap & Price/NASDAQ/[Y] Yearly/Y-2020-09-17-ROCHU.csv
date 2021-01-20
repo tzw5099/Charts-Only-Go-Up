@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ROCHU,Roth CH Acquisition I Co.,NASDAQ,2020-09-17,23087389.5,9.95,10.71,9.89,10.6,10.6,4095407.0,4095407.0,-0.23500000000000004,-0.027358024691358028,8.720004320987652

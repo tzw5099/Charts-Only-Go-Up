@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTA,iShares iBonds Dec 2021 Term Treasury ETF,NASDAQ,2020-02-28,,25.14,26.72,25.14,25.360001,25.360001,1216216.0,1216216.0,-0.7095000000000002,-0.0320114942528736,23.91727609195399

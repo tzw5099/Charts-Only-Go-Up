@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,USMYX,Natixis ASG Tactical U.S. Market Fund Class Y,NASDAQ,2013-10-03,,9.97,11.26,9.8,11.03,9.516381,0.0,0.0,0.0,0.0,
+2014-01-01,USMYX,Natixis ASG Tactical U.S. Market Fund Class Y,NASDAQ,2013-10-03,,10.91,12.63,10.15,11.88,10.685448,0.0,0.0,0.0,0.0,
+2015-01-01,USMYX,Natixis ASG Tactical U.S. Market Fund Class Y,NASDAQ,2013-10-03,,11.85,12.28,10.82,11.45,10.393779,0.0,0.0,0.0,0.0,
+2016-01-01,USMYX,Natixis ASG Tactical U.S. Market Fund Class Y,NASDAQ,2013-10-03,,11.35,12.12,10.94,11.87,10.852167,0.0,0.0,0.0,0.0,
+2017-01-01,USMYX,Natixis ASG Tactical U.S. Market Fund Class Y,NASDAQ,2013-10-03,,11.96,15.03,11.96,14.17,13.639428,0.0,0.0,0.0,0.0,
+2018-01-01,USMYX,Natixis ASG Tactical U.S. Market Fund Class Y,NASDAQ,2013-10-03,,14.28,15.49,12.75,13.26,13.143642,0.0,0.0,0.0,0.0,
+2019-01-01,USMYX,Natixis ASG Tactical U.S. Market Fund Class Y,NASDAQ,2013-10-03,,13.26,16.43,13.01,16.209999,15.697169,0.0,0.0,0.0,0.0,
+2020-01-01,USMYX,Natixis ASG Tactical U.S. Market Fund Class Y,NASDAQ,2013-10-03,,16.389999,17.35,11.61,14.1,14.1,0.0,0.0,0.0,0.0,

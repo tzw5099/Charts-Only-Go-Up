@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,BSMQ,Invesco BulletShares (R) 2026 Municipal Bond ETF,NASDAQ,2019-09-26,,25.03,25.08,24.8208,24.99,24.99,127098.0,127098.0,-0.0314,-0.0046296296296296285,24.96192851851852
+2020-01-01,BSMQ,Invesco BulletShares (R) 2026 Municipal Bond ETF,NASDAQ,2019-09-26,,25.02,26.08,22.545,25.565001,25.565001,648782.0,648782.0,-4.436100000000001,-0.13158518518518517,25.219679629629635

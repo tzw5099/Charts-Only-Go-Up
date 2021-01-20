@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,CADIX,Columbia Select Global Growth Fund Institutional 2 Class,NASDAQ,2014-01-08,,13.95,14.3,12.46,13.06,11.555608,0.0,0.0,0.0,0.0,
+2015-01-01,CADIX,Columbia Select Global Growth Fund Institutional 2 Class,NASDAQ,2014-01-08,,13.04,14.13,12.3,13.01,11.712574,0.0,0.0,0.0,0.0,
+2016-01-01,CADIX,Columbia Select Global Growth Fund Institutional 2 Class,NASDAQ,2014-01-08,,12.66,13.1,10.41,11.53,11.041809,0.0,0.0,0.0,0.0,
+2017-01-01,CADIX,Columbia Select Global Growth Fund Institutional 2 Class,NASDAQ,2014-01-08,,11.64,15.57,11.64,15.45,14.795833,0.0,0.0,0.0,0.0,
+2018-01-01,CADIX,Columbia Select Global Growth Fund Institutional 2 Class,NASDAQ,2014-01-08,,15.78,17.639999,12.18,13.03,12.655583,0.0,0.0,0.0,0.0,
+2019-01-01,CADIX,Columbia Select Global Growth Fund Institutional 2 Class,NASDAQ,2014-01-08,,13.07,17.51,12.68,17.34,17.34,0.0,0.0,0.0,0.0,
+2020-01-01,CADIX,Columbia Select Global Growth Fund Institutional 2 Class,NASDAQ,2014-01-08,,17.610001,21.08,13.07,21.08,21.08,0.0,0.0,0.0,0.0,

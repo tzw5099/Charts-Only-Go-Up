@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-06,DKNGZ,DraftKings Inc Warrant,delisted,2020-07-06,2385802080.0,10.02,10.02,10.02,10.02,10.02,136.0,136.0,0.0,0.0,10.02
+2020-07-07,DKNGZ,DraftKings Inc Warrant,delisted,2020-07-06,19095940800.0,20.0,80.2,21.0,80.2,80.2,4298.0,4298.0,60.2,301.0,60.46667
+2020-07-08,DKNGZ,DraftKings Inc Warrant,delisted,2020-07-06,6895491601.896,250.0,249.899994,25.0,28.959999,28.959999,0.0,0.0,-221.04,-88.416,0.0

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,KROS,"Keros Therapeutics, Inc.",NASDAQ,2020-09-17,923038503.3580799,20.85,65.5,19.1,44.990002,44.990002,11899820.0,11899820.0,23.21399999999999,0.7851415929203543,34.98404176991149

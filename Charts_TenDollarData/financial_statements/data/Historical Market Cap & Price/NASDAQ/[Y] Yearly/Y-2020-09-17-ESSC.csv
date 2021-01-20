@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ESSC,East Stone Acquisition Corporation,NASDAQ,2020-09-17,135792000.0,9.35,10.136,9.35,9.84,9.84,4498886.0,4498886.0,-0.427,-0.04066990291262137,9.23327213592233

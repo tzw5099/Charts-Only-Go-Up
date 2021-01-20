@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,RNLX,,NASDAQ,2020-07-17,,13.92,18.0,13.205,13.5,13.5,5361151.0,5361151.0,-2.008999999999999,-0.26609090909090916,15.001102954545457

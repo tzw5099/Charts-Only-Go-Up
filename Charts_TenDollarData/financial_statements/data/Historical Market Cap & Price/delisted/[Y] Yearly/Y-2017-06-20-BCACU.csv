@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,BCACU,Bison Capital Acquisition Corp Units Consisting of 1 OS 12 WT and 1 RT,delisted,2017-06-20,,10.1,10.4013,10.05,10.27,,3124734.0,3124734.0,10.269999999999998,0.020363636363636365,10.256853260869564
+2018-01-01,BCACU,Bison Capital Acquisition Corp Units Consisting of 1 OS 12 WT and 1 RT,delisted,2017-06-20,,10.3138,14.26,10.26,10.89,,170177.0,170177.0,0.62,0.15226315789473685,10.682756250000002
+2019-01-01,BCACU,Bison Capital Acquisition Corp Units Consisting of 1 OS 12 WT and 1 RT,delisted,2017-06-20,,10.8,10.8,8.8152,8.8152,,2818.0,2818.0,-2.0747999999999998,-2.7478571428571428,10.237925

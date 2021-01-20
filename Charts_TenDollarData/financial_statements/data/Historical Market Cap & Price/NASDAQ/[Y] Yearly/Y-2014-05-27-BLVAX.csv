@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,BLVAX,BMO Low Volatility Equity Fund Class A,NASDAQ,2014-05-27,,12.74,14.06,12.59,13.05,10.18821,0.0,0.0,0.0,0.0,
+2015-01-01,BLVAX,BMO Low Volatility Equity Fund Class A,NASDAQ,2014-05-27,,13.05,13.58,12.32,12.74,10.3544,0.0,0.0,0.0,0.0,
+2016-01-01,BLVAX,BMO Low Volatility Equity Fund Class A,NASDAQ,2014-05-27,,12.62,13.99,11.98,13.61,11.355886,0.0,0.0,0.0,0.0,
+2017-01-01,BLVAX,BMO Low Volatility Equity Fund Class A,NASDAQ,2014-05-27,,13.66,15.1,13.6,14.73,12.795118,0.0,0.0,0.0,0.0,
+2018-01-01,BLVAX,BMO Low Volatility Equity Fund Class A,NASDAQ,2014-05-27,,14.76,15.83,12.6,13.26,12.809833,0.0,0.0,0.0,0.0,
+2019-01-01,BLVAX,BMO Low Volatility Equity Fund Class A,NASDAQ,2014-05-27,,13.16,16.030001,12.98,15.88,15.813581,0.0,0.0,0.0,0.0,
+2020-01-01,BLVAX,BMO Low Volatility Equity Fund Class A,NASDAQ,2014-05-27,,15.85,16.389999,11.32,14.67,14.67,0.0,0.0,0.0,0.0,

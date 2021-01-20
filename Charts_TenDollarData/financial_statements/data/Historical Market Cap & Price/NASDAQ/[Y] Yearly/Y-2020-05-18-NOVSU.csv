@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NOVSU,,NASDAQ,2020-05-18,,9.972,11.8,9.9,11.75,11.75,2615380.0,2615380.0,-0.7999999999999999,-0.062341772151898595,8.721902911392403

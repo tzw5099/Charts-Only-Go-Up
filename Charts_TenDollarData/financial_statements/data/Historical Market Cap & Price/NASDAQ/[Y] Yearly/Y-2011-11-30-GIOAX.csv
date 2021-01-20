@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,25.0,25.07,24.809999,24.99,17.829165,0.0,0.0,0.0,0.0,
+2012-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,25.17,27.07,25.120001,27.049999,20.234266,0.0,0.0,0.0,0.0,
+2013-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,27.120001,27.83,26.299999,26.700001,21.012308,0.0,0.0,0.0,0.0,
+2014-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,26.690001,27.25,26.65,26.83,22.10454,0.0,0.0,0.0,0.0,
+2015-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,26.84,27.08,24.620001,24.620001,21.309547,0.0,0.0,0.0,0.0,
+2016-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,25.09,26.35,24.4,26.33,24.003597,0.0,0.0,0.0,0.0,
+2017-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,26.360001,26.77,26.360001,26.76,25.192907,0.0,0.0,0.0,0.0,
+2018-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,26.790001,26.93,25.969999,25.969999,25.235958,0.0,0.0,0.0,0.0,
+2019-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,25.969999,26.02,25.690001,25.700001,25.539543,0.0,0.0,0.0,0.0,
+2020-01-01,GIOAX,Guggenheim Macro Opportunities Fund Class A,NASDAQ,2011-11-30,,25.700001,26.360001,23.549999,26.360001,26.360001,0.0,0.0,0.0,0.0,

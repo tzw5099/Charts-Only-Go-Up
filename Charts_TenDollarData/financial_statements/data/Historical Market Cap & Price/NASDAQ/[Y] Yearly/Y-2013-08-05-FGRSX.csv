@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,FGRSX,Federated International Leaders Fund Class R6 Shares,NASDAQ,2013-08-05,,30.32,33.73,29.040001,33.73,29.95332,0.0,0.0,0.0,0.0,
+2014-01-01,FGRSX,Federated International Leaders Fund Class R6 Shares,NASDAQ,2013-08-05,,33.32,35.57,30.35,31.98,28.712765,0.0,0.0,0.0,0.0,
+2015-01-01,FGRSX,Federated International Leaders Fund Class R6 Shares,NASDAQ,2013-08-05,,31.860001,36.009998,30.09,30.860001,28.173477,0.0,0.0,0.0,0.0,
+2016-01-01,FGRSX,Federated International Leaders Fund Class R6 Shares,NASDAQ,2013-08-05,,30.27,30.27,25.66,29.309999,27.429981,0.0,0.0,0.0,0.0,
+2017-01-01,FGRSX,Federated International Leaders Fund Class R6 Shares,NASDAQ,2013-08-05,,29.65,37.450001,29.65,37.369999,35.206196,0.0,0.0,0.0,0.0,
+2018-01-01,FGRSX,Federated International Leaders Fund Class R6 Shares,NASDAQ,2013-08-05,,37.599998,40.259998,28.42,28.73,27.977152,0.0,0.0,0.0,0.0,
+2019-01-01,FGRSX,Federated International Leaders Fund Class R6 Shares,NASDAQ,2013-08-05,,28.530001,36.450001,28.219999,35.560001,35.560001,0.0,0.0,0.0,0.0,
+2020-01-01,FGRSX,Federated International Leaders Fund Class R6 Shares,NASDAQ,2013-08-05,,35.830002,36.549999,23.68,36.290001,36.290001,0.0,0.0,0.0,0.0,

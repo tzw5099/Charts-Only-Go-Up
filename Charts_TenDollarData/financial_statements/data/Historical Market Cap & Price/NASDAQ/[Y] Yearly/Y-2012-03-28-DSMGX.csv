@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,15.0,15.4,13.29,15.31,10.18888,0.0,0.0,0.0,0.0,
+2013-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,15.67,19.879999,15.67,19.879999,13.69633,0.0,0.0,0.0,0.0,
+2014-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,19.809999,21.190001,17.950001,18.440001,14.121208,0.0,0.0,0.0,0.0,
+2015-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,18.42,20.66,17.799999,18.51,15.263128,0.0,0.0,0.0,0.0,
+2016-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,18.01,19.190001,15.66,17.690001,14.924797,0.0,0.0,0.0,0.0,
+2017-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,17.889999,25.610001,17.889999,24.959999,21.450018,0.0,0.0,0.0,0.0,
+2018-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,25.440001,27.530001,16.709999,17.33,17.328476,0.0,0.0,0.0,0.0,
+2019-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,17.290001,22.82,16.790001,22.68,22.68,0.0,0.0,0.0,0.0,
+2020-01-01,DSMGX,Touchstone International Growth Opportunities Fund Institutional Class,NASDAQ,2012-03-28,,23.01,27.01,16.23,25.77,25.77,0.0,0.0,0.0,0.0,

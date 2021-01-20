@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,RBAIX,T. Rowe Price Balanced I Class,NASDAQ,2015-12-17,,21.42,21.700001,21.23,21.459999,17.265976,0.0,0.0,0.0,0.0,
+2016-01-01,RBAIX,T. Rowe Price Balanced I Class,NASDAQ,2015-12-17,,21.219999,22.610001,19.77,21.98,18.325865,0.0,0.0,0.0,0.0,
+2017-01-01,RBAIX,T. Rowe Price Balanced I Class,NASDAQ,2015-12-17,,22.1,25.49,22.1,24.34,21.663425,0.0,0.0,0.0,0.0,
+2018-01-01,RBAIX,T. Rowe Price Balanced I Class,NASDAQ,2015-12-17,,24.34,25.51,20.66,21.389999,20.619719,0.0,0.0,0.0,0.0,
+2019-01-01,RBAIX,T. Rowe Price Balanced I Class,NASDAQ,2015-12-17,,21.389999,25.01,21.16,24.940001,24.812401,0.0,0.0,0.0,0.0,
+2020-01-01,RBAIX,T. Rowe Price Balanced I Class,NASDAQ,2015-12-17,,25.120001,26.77,19.18,26.02,26.02,0.0,0.0,0.0,0.0,

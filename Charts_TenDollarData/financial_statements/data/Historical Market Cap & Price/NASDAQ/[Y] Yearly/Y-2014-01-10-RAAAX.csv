@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,RAAAX,Altegris/AACA Opportunistic Real Estate Fund A,NASDAQ,2014-01-10,,10.12,12.51,9.92,12.21,10.884767,0.0,0.0,0.0,0.0,
+2015-01-01,RAAAX,Altegris/AACA Opportunistic Real Estate Fund A,NASDAQ,2014-01-10,,12.27,13.12,11.02,11.56,10.829652,0.0,0.0,0.0,0.0,
+2016-01-01,RAAAX,Altegris/AACA Opportunistic Real Estate Fund A,NASDAQ,2014-01-10,,11.4,13.39,9.87,13.0,12.208542,0.0,0.0,0.0,0.0,
+2017-01-01,RAAAX,Altegris/AACA Opportunistic Real Estate Fund A,NASDAQ,2014-01-10,,13.14,16.120001,13.14,16.02,15.090092,0.0,0.0,0.0,0.0,
+2018-01-01,RAAAX,Altegris/AACA Opportunistic Real Estate Fund A,NASDAQ,2014-01-10,,15.96,16.67,11.84,12.57,12.308915,0.0,0.0,0.0,0.0,
+2019-01-01,RAAAX,Altegris/AACA Opportunistic Real Estate Fund A,NASDAQ,2014-01-10,,12.35,18.040001,12.25,17.98,17.98,0.0,0.0,0.0,0.0,
+2020-01-01,RAAAX,Altegris/AACA Opportunistic Real Estate Fund A,NASDAQ,2014-01-10,,17.940001,20.52,12.43,19.389999,19.389999,0.0,0.0,0.0,0.0,

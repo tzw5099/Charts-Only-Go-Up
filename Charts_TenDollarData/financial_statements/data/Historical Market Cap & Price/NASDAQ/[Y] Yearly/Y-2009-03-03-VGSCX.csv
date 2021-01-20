@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,9.93,19.049999,9.35,17.09,12.536785,0.0,0.0,0.0,0.0,
+2010-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,17.110001,21.34,15.81,19.309999,15.280745,0.0,0.0,0.0,0.0,
+2011-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,19.52,21.91,16.950001,18.860001,15.250698,0.0,0.0,0.0,0.0,
+2012-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,19.1,22.969999,18.74,22.48,18.681099,0.0,0.0,0.0,0.0,
+2013-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,22.719999,25.379999,21.51,22.200001,18.75082,0.0,0.0,0.0,0.0,
+2014-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,22.120001,27.02,22.120001,26.42,22.809559,0.0,0.0,0.0,0.0,
+2015-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,26.6,28.48,24.559999,26.1,23.021353,0.0,0.0,0.0,0.0,
+2016-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,25.76,29.799999,23.709999,26.41,23.750811,0.0,0.0,0.0,0.0,
+2017-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,26.35,29.559999,25.889999,29.030001,26.569338,0.0,0.0,0.0,0.0,
+2018-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,28.950001,30.34,26.18,26.809999,25.077246,0.0,0.0,0.0,0.0,
+2019-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,26.379999,34.389999,26.379999,32.220001,32.220001,0.0,0.0,0.0,0.0,
+2020-01-01,VGSCX,Virtus Duff & Phelps Global Real Estate Securities Fund Class C,NASDAQ,2009-03-03,,31.9,34.150002,19.92,29.1,29.1,0.0,0.0,0.0,0.0,

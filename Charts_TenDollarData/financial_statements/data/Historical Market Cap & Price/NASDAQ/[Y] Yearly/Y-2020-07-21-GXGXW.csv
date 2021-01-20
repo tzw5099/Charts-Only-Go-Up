@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,GXGXW,GX Acquisition Corp.,NASDAQ,2020-07-21,,1.035,2.25,0.9648,1.82,1.82,2270639.0,2270639.0,19.209999999999997,58.001250000000006,1.6437046874999999

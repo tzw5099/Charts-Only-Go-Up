@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,RLAY,,NASDAQ,2020-07-16,3381203627.04852,34.845,49.89,32.560001,40.18,40.18,27779817.0,27779817.0,18.484999999999996,1.2242666666666666,37.538281999999995

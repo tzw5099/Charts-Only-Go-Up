@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,PPIPX,T. Rowe Price Personal Strategy Income Fund I Class,NASDAQ,2016-03-30,,17.530001,18.43,17.43,18.0,15.80584,0.0,0.0,0.0,0.0,
+2017-01-01,PPIPX,T. Rowe Price Personal Strategy Income Fund I Class,NASDAQ,2016-03-30,,18.059999,20.0,18.059999,19.540001,17.857256,0.0,0.0,0.0,0.0,
+2018-01-01,PPIPX,T. Rowe Price Personal Strategy Income Fund I Class,NASDAQ,2016-03-30,,19.540001,20.15,17.67,18.02,17.338064,0.0,0.0,0.0,0.0,
+2019-01-01,PPIPX,T. Rowe Price Personal Strategy Income Fund I Class,NASDAQ,2016-03-30,,18.02,20.09,17.940001,19.969999,19.91403,0.0,0.0,0.0,0.0,
+2020-01-01,PPIPX,T. Rowe Price Personal Strategy Income Fund I Class,NASDAQ,2016-03-30,,20.07,21.08,16.49,20.73,20.73,0.0,0.0,0.0,0.0,

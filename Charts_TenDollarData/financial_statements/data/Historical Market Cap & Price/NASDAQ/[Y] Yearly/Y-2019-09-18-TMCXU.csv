@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TMCXU,Trinity Merger Corp.,NASDAQ,2019-09-18,108243750,11.01,12.55,10.5,12.55,12.55,18546.0,18546.0,-0.7200000000000001,-0.29205000000000003,7.5801665

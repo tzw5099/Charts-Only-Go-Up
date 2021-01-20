@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BDTX,"Black Diamond Therapeutics, Inc.",NASDAQ,2020-01-30,1074807849.6,33.0,46.25,17.63,29.93,29.93,36359487.0,36359487.0,-13.23,-0.07456874999999982,33.0313349375

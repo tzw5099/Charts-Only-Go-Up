@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,RNA,,NASDAQ,2020-09-17,1290553492.473,26.5,37.459999,23.06,33.369999,33.369999,18752770.0,18752770.0,4.690000000000001,0.31138235294117644,28.708652058823528

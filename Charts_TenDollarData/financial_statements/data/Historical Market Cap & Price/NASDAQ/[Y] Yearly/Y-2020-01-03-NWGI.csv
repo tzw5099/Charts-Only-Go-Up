@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NWGI,"Newgioco Group, Inc.",NASDAQ,2020-01-03,20024121.2,3.38,4.4,1.09,1.64,1.64,23783301.0,23783301.0,-1.8420000000000003,-0.2241629213483146,2.8013053370786527

@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,GILCX,Guggenheim Large Cap Value Fund Class Institutional,NASDAQ,2013-04-25,,35.259998,41.040001,35.080002,41.040001,27.321363,0.0,0.0,0.0,0.0,
+2014-01-01,GILCX,Guggenheim Large Cap Value Fund Class Institutional,NASDAQ,2013-04-25,,40.68,45.32,38.66,42.970001,29.802427,0.0,0.0,0.0,0.0,
+2015-01-01,GILCX,Guggenheim Large Cap Value Fund Class Institutional,NASDAQ,2013-04-25,,42.889999,44.27,36.77,37.880001,28.500198,0.0,0.0,0.0,0.0,
+2016-01-01,GILCX,Guggenheim Large Cap Value Fund Class Institutional,NASDAQ,2013-04-25,,37.07,44.349998,33.299999,43.040001,34.319595,0.0,0.0,0.0,0.0,
+2017-01-01,GILCX,Guggenheim Large Cap Value Fund Class Institutional,NASDAQ,2013-04-25,,43.43,49.619999,43.009998,45.779999,39.666039,0.0,0.0,0.0,0.0,
+2018-01-01,GILCX,Guggenheim Large Cap Value Fund Class Institutional,NASDAQ,2013-04-25,,46.119999,48.599998,36.529999,38.68,35.76572,0.0,0.0,0.0,0.0,
+2019-01-01,GILCX,Guggenheim Large Cap Value Fund Class Institutional,NASDAQ,2013-04-25,,38.799999,46.610001,38.18,43.529999,43.529999,0.0,0.0,0.0,0.0,
+2020-01-01,GILCX,Guggenheim Large Cap Value Fund Class Institutional,NASDAQ,2013-04-25,,43.689999,43.91,27.0,38.93,38.93,0.0,0.0,0.0,0.0,

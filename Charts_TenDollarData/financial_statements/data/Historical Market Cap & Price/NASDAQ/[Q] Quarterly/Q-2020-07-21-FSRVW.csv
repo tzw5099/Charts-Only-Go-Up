@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,FSRVW,FinServ Acquisition Corp.,NASDAQ,2020-07-21,0.038,1.25,1.41,0.7501,0.95,0.95,746576.0,746576.0,-3.6540999999999997,-12.005041666666665,1.1143308333333335

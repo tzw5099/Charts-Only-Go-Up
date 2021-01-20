@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,UCL,,NASDAQ,2020-06-10,,22.5,24.77,12.0,12.7100000381,12.7100000381,1944600.0,1944600.0,-11.880999999999998,-0.8752028985507245,14.278164057971015

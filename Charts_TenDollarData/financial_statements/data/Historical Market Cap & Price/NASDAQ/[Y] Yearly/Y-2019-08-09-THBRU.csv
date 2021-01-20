@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,THBRU,"Thunder Bridge Acquisition II, Ltd.",NASDAQ,2019-08-09,,10.07,10.45,9.98,10.45,10.45,8516053.0,8516053.0,0.7859,0.09884615384615385,10.220946794871796
+2020-01-01,THBRU,"Thunder Bridge Acquisition II, Ltd.",NASDAQ,2019-08-09,,10.4,11.7,9.15,10.6,10.6,1508584.0,1508584.0,4.309100000000001,0.4630842105263158,8.074019789473683

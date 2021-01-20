@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,9.68,9.68,9.68,9.68,6.14186,0.0,0.0,0.0,0.0,
+2012-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,9.87,11.02,9.43,10.43,6.617729,0.0,0.0,0.0,0.0,
+2013-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,10.7,14.72,10.7,12.99,9.5721,0.0,0.0,0.0,0.0,
+2014-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,12.87,14.48,12.42,12.96,10.719791,0.0,0.0,0.0,0.0,
+2015-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,12.92,14.32,12.1,12.41,10.601051,0.0,0.0,0.0,0.0,
+2016-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,12.24,13.87,10.81,13.42,11.632007,0.0,0.0,0.0,0.0,
+2017-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,13.55,16.200001,13.55,16.139999,14.011258,0.0,0.0,0.0,0.0,
+2018-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,16.190001,17.26,12.17,12.74,12.319853,0.0,0.0,0.0,0.0,
+2019-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,12.91,16.549999,12.71,16.370001,16.370001,0.0,0.0,0.0,0.0,
+2020-01-01,DHTYX,Diamond Hill All Cap Select Fund Class Y,NASDAQ,2011-12-30,,16.469999,16.719999,9.32,15.58,15.58,0.0,0.0,0.0,0.0,

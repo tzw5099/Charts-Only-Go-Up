@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,14.13,14.58,13.85,14.33,10.064394,0.0,0.0,0.0,0.0,
+2011-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,14.43,14.6,12.07,12.48,9.063188,0.0,0.0,0.0,0.0,
+2012-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,12.64,14.57,12.48,14.57,11.02677,0.0,0.0,0.0,0.0,
+2013-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,14.75,16.629999,14.52,15.59,12.281664,0.0,0.0,0.0,0.0,
+2014-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,15.48,16.77,14.53,15.26,12.260007,0.0,0.0,0.0,0.0,
+2015-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,15.24,17.780001,14.55,15.35,12.743524,0.0,0.0,0.0,0.0,
+2016-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,15.09,17.17,13.96,15.52,13.313177,0.0,0.0,0.0,0.0,
+2017-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,15.56,20.34,15.56,19.73,17.938555,0.0,0.0,0.0,0.0,
+2018-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,19.98,21.129999,15.6,16.040001,15.686053,0.0,0.0,0.0,0.0,
+2019-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,15.93,17.639999,15.63,17.469999,17.40941,0.0,0.0,0.0,0.0,
+2020-01-01,MIPIX,Matthews Asia Dividend Fund Institutional Class,NASDAQ,2010-10-29,,17.65,19.799999,12.71,19.799999,19.799999,0.0,0.0,0.0,0.0,

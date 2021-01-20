@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HOOSX,Hartford Schroders US Small Cap Opportunities Fund Class R4,NASDAQ,2016-10-24,,25.07,27.780001,24.219999,25.870001,20.497696,0.0,0.0,0.0,0.0,
+2017-01-01,HOOSX,Hartford Schroders US Small Cap Opportunities Fund Class R4,NASDAQ,2016-10-24,,25.99,29.75,25.870001,27.209999,23.500263,0.0,0.0,0.0,0.0,
+2018-01-01,HOOSX,Hartford Schroders US Small Cap Opportunities Fund Class R4,NASDAQ,2016-10-24,,27.370001,29.690001,20.780001,21.98,20.899817,0.0,0.0,0.0,0.0,
+2019-01-01,HOOSX,Hartford Schroders US Small Cap Opportunities Fund Class R4,NASDAQ,2016-10-24,,22.049999,28.110001,21.68,27.559999,27.559999,0.0,0.0,0.0,0.0,
+2020-01-01,HOOSX,Hartford Schroders US Small Cap Opportunities Fund Class R4,NASDAQ,2016-10-24,,27.639999,27.950001,15.98,23.799999,23.799999,0.0,0.0,0.0,0.0,

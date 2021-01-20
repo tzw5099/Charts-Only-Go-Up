@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,HSACU,Health Sciences Acquisitions Corporation,NASDAQ,2019-05-10,788164720.0,10.2,20.0,10.19,20.0,20.0,4925838.0,4925838.0,6.909999999999999,0.31657324840764334,8.337282547770704

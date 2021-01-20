@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,NPSFX,Nuveen Preferred Securities & Income Fund Class R6,NASDAQ,2016-07-05,,16.84,17.309999,16.709999,16.83,14.21542,0.0,0.0,0.0,0.0,
+2017-01-01,NPSFX,Nuveen Preferred Securities & Income Fund Class R6,NASDAQ,2016-07-05,,16.870001,17.83,16.870001,17.709999,15.818129,0.0,0.0,0.0,0.0,
+2018-01-01,NPSFX,Nuveen Preferred Securities & Income Fund Class R6,NASDAQ,2016-07-05,,17.690001,17.75,15.76,15.8,14.933654,0.0,0.0,0.0,0.0,
+2019-01-01,NPSFX,Nuveen Preferred Securities & Income Fund Class R6,NASDAQ,2016-07-05,,15.83,17.6,15.81,17.59,17.345778,0.0,0.0,0.0,0.0,
+2020-01-01,NPSFX,Nuveen Preferred Securities & Income Fund Class R6,NASDAQ,2016-07-05,,17.639999,17.92,13.12,17.01,17.01,0.0,0.0,0.0,0.0,

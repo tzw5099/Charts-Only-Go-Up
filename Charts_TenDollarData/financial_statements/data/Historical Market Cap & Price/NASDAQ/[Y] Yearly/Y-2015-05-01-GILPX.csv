@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,GILPX,Guggenheim Limited Duration Fund Class P,NASDAQ,2015-05-01,,24.860001,24.879999,24.43,24.440001,22.213984,0.0,0.0,0.0,0.0,
+2016-01-01,GILPX,Guggenheim Limited Duration Fund Class P,NASDAQ,2015-05-01,,24.43,24.73,24.15,24.66,23.060581,0.0,0.0,0.0,0.0,
+2017-01-01,GILPX,Guggenheim Limited Duration Fund Class P,NASDAQ,2015-05-01,,24.67,24.879999,24.67,24.780001,23.722672,0.0,0.0,0.0,0.0,
+2018-01-01,GILPX,Guggenheim Limited Duration Fund Class P,NASDAQ,2015-05-01,,24.780001,24.790001,24.610001,24.620001,24.068338,0.0,0.0,0.0,0.0,
+2019-01-01,GILPX,Guggenheim Limited Duration Fund Class P,NASDAQ,2015-05-01,,24.620001,24.76,24.57,24.58,24.471144,0.0,0.0,0.0,0.0,
+2020-01-01,GILPX,Guggenheim Limited Duration Fund Class P,NASDAQ,2015-05-01,,24.59,25.59,23.940001,25.58,25.58,0.0,0.0,0.0,0.0,

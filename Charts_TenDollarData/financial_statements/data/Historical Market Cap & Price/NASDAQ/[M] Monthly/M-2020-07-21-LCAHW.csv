@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,LCAHW,Landcadia Holdings Inc. Warrant,NASDAQ,2020-07-21,26210525.6,4.1,4.325,2.71,2.8,2.8,4213627.0,4213627.0,-6.58,-20.061,3.31521375
+2020-08-01,LCAHW,Landcadia Holdings Inc. Warrant,NASDAQ,2020-07-21,49799998.64,4.1,5.58,2.55,5.32,5.32,5415851.0,5415851.0,2.9799999999999995,5.191714285714286,4.292257142857143
+2020-09-01,LCAHW,Landcadia Holdings Inc. Warrant,NASDAQ,2020-07-21,59067291.62,4.1,7.1,4.99,6.31,6.31,4685377.0,4685377.0,22.84,50.643,6.19459

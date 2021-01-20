@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,CLFFX,Clifford Capital Partners Fund Investor Class,NASDAQ,2014-02-03,,9.79,12.15,9.79,11.86,10.219855,0.0,0.0,0.0,0.0,
+2015-01-01,CLFFX,Clifford Capital Partners Fund Investor Class,NASDAQ,2014-02-03,,11.85,12.12,10.16,10.4,9.176626,0.0,0.0,0.0,0.0,
+2016-01-01,CLFFX,Clifford Capital Partners Fund Investor Class,NASDAQ,2014-02-03,,10.26,14.33,9.41,14.01,12.412212,0.0,0.0,0.0,0.0,
+2017-01-01,CLFFX,Clifford Capital Partners Fund Investor Class,NASDAQ,2014-02-03,,14.15,15.52,13.59,14.75,13.732313,0.0,0.0,0.0,0.0,
+2018-01-01,CLFFX,Clifford Capital Partners Fund Investor Class,NASDAQ,2014-02-03,,14.68,16.110001,12.66,12.66,12.461555,0.0,0.0,0.0,0.0,
+2019-01-01,CLFFX,Clifford Capital Partners Fund Investor Class,NASDAQ,2014-02-03,,12.76,15.68,12.7,15.42,15.42,0.0,0.0,0.0,0.0,
+2020-01-01,CLFFX,Clifford Capital Partners Fund Investor Class,NASDAQ,2014-02-03,,15.37,15.41,9.23,14.22,14.22,0.0,0.0,0.0,0.0,

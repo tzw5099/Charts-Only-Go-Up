@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,2.95,2.95,2.9,2.9,2.9,587.0,587.0,0.0,0.0,2.9333333333333336
+2013-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,2.32,3.0,0.44,1.99,1.99,26179.0,26179.0,0.0,0.0,1.8281818181818181
+2014-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,2.3,3.0,0.58,1.21,1.21,14677.0,14677.0,0.0,0.0,1.708148148148148
+2015-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,1.44,1.61,0.23,0.23,0.23,53218.0,53218.0,0.0,0.0,1.1678260869565216
+2016-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,1.03,1.03,1.03,1.03,1.03,5724.0,5724.0,0.0,0.0,1.03
+2017-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,,,,,,0.0,0.0,0.0,,
+2018-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,,,,,,0.0,0.0,0.0,,
+2019-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,,,,,,0.0,0.0,0.0,,
+2020-01-01,ALACR,Alberton Acquisition Corporation RT,NASDAQ,2012-03-08,,0.2101,0.3,0.14,0.26,0.26,101585.0,101585.0,-0.12390000000000002,-1.013571428571429,0.2299642857142857

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-07-01,FSACU,Federal Street Acquisition Corp. Unit consisting of One Common Stock and Half of a Warrant,NASDAQ,2017-07-19,,10.06,10.5,10.06,10.3,,5491535.0,5491535.0,10.299999999999997,0.04248936170212765,10.17682727272727
+2017-10-01,FSACU,Federal Street Acquisition Corp. Unit consisting of One Common Stock and Half of a Warrant,NASDAQ,2017-07-19,,10.245,10.38,9.531,10.25,,593949.0,593949.0,-0.05,-0.010857142857142857,10.254602631578946
+2018-01-01,FSACU,Federal Street Acquisition Corp. Unit consisting of One Common Stock and Half of a Warrant,NASDAQ,2017-07-19,,10.22,10.38,10.1,10.2405,,767005.0,767005.0,-0.009499999999999998,-0.001227272727272726,10.221477272727272
+2018-04-01,FSACU,Federal Street Acquisition Corp. Unit consisting of One Common Stock and Half of a Warrant,NASDAQ,2017-07-19,,10.25,10.5,10.05,10.35,,395239.0,395239.0,0.10950000000000007,0.028229166666666677,10.338502083333335
+2018-07-01,FSACU,Federal Street Acquisition Corp. Unit consisting of One Common Stock and Half of a Warrant,NASDAQ,2017-07-19,,10.34,11.1,10.22,10.9,,551142.0,551142.0,0.55,0.32835294117647057,10.719071428571427
+2018-10-01,FSACU,Federal Street Acquisition Corp. Unit consisting of One Common Stock and Half of a Warrant,NASDAQ,2017-07-19,,10.85,11.0,10.0,10.11,,148490.0,148490.0,-0.7899999999999999,-0.4832,10.695912499999999

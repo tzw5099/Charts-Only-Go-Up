@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-04-01,LSXMR,,NASDAQ,2020-05-21,809400000,6.0,15.94,5.38,13.49,13.49,11217174.0,11217174.0,7.210000000000001,7.850454545454545,10.758181818181818

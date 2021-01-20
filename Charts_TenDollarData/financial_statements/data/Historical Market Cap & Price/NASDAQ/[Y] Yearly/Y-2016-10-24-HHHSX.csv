@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HHHSX,Hartford Schroders Emerging Markets Equity Fund Class R4,NASDAQ,2016-10-24,,12.78,12.78,11.68,11.91,11.515668,0.0,0.0,0.0,0.0,
+2017-01-01,HHHSX,Hartford Schroders Emerging Markets Equity Fund Class R4,NASDAQ,2016-10-24,,12.06,16.799999,12.06,16.620001,16.178629,0.0,0.0,0.0,0.0,
+2018-01-01,HHHSX,Hartford Schroders Emerging Markets Equity Fund Class R4,NASDAQ,2016-10-24,,17.040001,18.33,13.61,13.82,13.623155,0.0,0.0,0.0,0.0,
+2019-01-01,HHHSX,Hartford Schroders Emerging Markets Equity Fund Class R4,NASDAQ,2016-10-24,,13.8,16.92,13.56,16.67,16.67,0.0,0.0,0.0,0.0,
+2020-01-01,HHHSX,Hartford Schroders Emerging Markets Equity Fund Class R4,NASDAQ,2016-10-24,,16.969999,17.459999,11.7,17.35,17.35,0.0,0.0,0.0,0.0,

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,JENYX,Jensen Quality Growth Fund Class Y,NASDAQ,2016-09-30,,40.119999,41.380001,38.959999,39.110001,31.613155,0.0,0.0,0.0,0.0,
+2017-01-01,JENYX,Jensen Quality Growth Fund Class Y,NASDAQ,2016-09-30,,39.299999,48.290001,39.299999,46.650002,39.076031,0.0,0.0,0.0,0.0,
+2018-01-01,JENYX,Jensen Quality Growth Fund Class Y,NASDAQ,2016-09-30,,46.869999,53.099998,40.869999,43.459999,39.993492,0.0,0.0,0.0,0.0,
+2019-01-01,JENYX,Jensen Quality Growth Fund Class Y,NASDAQ,2016-09-30,,43.18,55.02,41.939999,51.75,51.533436,0.0,0.0,0.0,0.0,
+2020-01-01,JENYX,Jensen Quality Growth Fund Class Y,NASDAQ,2016-09-30,,52.07,57.279999,36.82,54.709999,54.709999,0.0,0.0,0.0,0.0,

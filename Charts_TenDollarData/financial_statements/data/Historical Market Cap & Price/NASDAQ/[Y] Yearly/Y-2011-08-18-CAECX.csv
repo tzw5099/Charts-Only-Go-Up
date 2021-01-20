@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,10.0,10.76,8.97,9.44,9.25043,0.0,0.0,0.0,0.0,
+2012-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,9.7,11.74,9.43,11.74,11.524151,0.0,0.0,0.0,0.0,
+2013-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,11.88,15.55,11.74,15.54,15.270795,0.0,0.0,0.0,0.0,
+2014-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,15.37,16.1,13.34,14.16,13.981743,0.0,0.0,0.0,0.0,
+2015-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,14.09,15.92,13.71,14.63,14.45857,0.0,0.0,0.0,0.0,
+2016-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,14.38,15.35,13.09,13.99,13.8499,0.0,0.0,0.0,0.0,
+2017-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,13.98,19.120001,13.98,19.120001,18.967138,0.0,0.0,0.0,0.0,
+2018-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,19.25,20.360001,14.91,15.33,15.2985,0.0,0.0,0.0,0.0,
+2019-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,15.19,22.25,14.97,22.15,22.15,0.0,0.0,0.0,0.0,
+2020-01-01,CAECX,Columbia Acorn European Fund Class C,NASDAQ,2011-08-18,,22.379999,24.120001,13.31,23.4,23.4,0.0,0.0,0.0,0.0,

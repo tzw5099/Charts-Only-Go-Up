@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NBAC,Newborn Acquisition Corp.,,2020-05-01,22902208.2,9.79,10.02,9.7,9.91,9.91,789904.0,789904.0,-0.35199999999999987,-0.04553846153846154,8.998239743589737

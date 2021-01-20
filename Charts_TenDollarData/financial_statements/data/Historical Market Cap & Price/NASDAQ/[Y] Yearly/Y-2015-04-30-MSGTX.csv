@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,MSGTX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class C",NASDAQ,2015-04-30,,15.87,15.92,12.16,12.47,10.278224,0.0,0.0,0.0,0.0,
+2016-01-01,MSGTX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class C",NASDAQ,2015-04-30,,12.39,15.34,11.27,13.81,11.757054,0.0,0.0,0.0,0.0,
+2017-01-01,MSGTX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class C",NASDAQ,2015-04-30,,13.86,15.58,13.51,14.36,13.104724,0.0,0.0,0.0,0.0,
+2018-01-01,MSGTX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class C",NASDAQ,2015-04-30,,14.44,14.58,11.83,12.17,11.913105,0.0,0.0,0.0,0.0,
+2019-01-01,MSGTX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class C",NASDAQ,2015-04-30,,12.16,15.09,12.16,15.08,15.08,0.0,0.0,0.0,0.0,
+2020-01-01,MSGTX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class C",NASDAQ,2015-04-30,,15.03,15.93,10.39,14.02,14.02,0.0,0.0,0.0,0.0,

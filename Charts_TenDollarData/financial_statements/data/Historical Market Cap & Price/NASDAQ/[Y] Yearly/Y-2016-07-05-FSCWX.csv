@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,FSCWX,Nuveen Small Cap Value Fund Class R6,NASDAQ,2016-07-05,,20.83,26.1,20.83,25.26,23.414364,0.0,0.0,0.0,0.0,
+2017-01-01,FSCWX,Nuveen Small Cap Value Fund Class R6,NASDAQ,2016-07-05,,25.4,27.24,23.73,26.58,24.891685,0.0,0.0,0.0,0.0,
+2018-01-01,FSCWX,Nuveen Small Cap Value Fund Class R6,NASDAQ,2016-07-05,,26.75,27.92,19.370001,20.299999,19.78915,0.0,0.0,0.0,0.0,
+2019-01-01,FSCWX,Nuveen Small Cap Value Fund Class R6,NASDAQ,2016-07-05,,20.4,24.17,20.209999,23.57,23.57,0.0,0.0,0.0,0.0,
+2020-01-01,FSCWX,Nuveen Small Cap Value Fund Class R6,NASDAQ,2016-07-05,,23.57,23.790001,12.29,17.84,17.84,0.0,0.0,0.0,0.0,

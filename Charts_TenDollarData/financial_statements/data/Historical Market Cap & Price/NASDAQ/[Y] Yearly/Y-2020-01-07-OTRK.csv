@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,OTRK,,NASDAQ,2020-01-07,1050229183.006,15.1,83.339996,14.59,58.439999,58.439999,45761707.0,45761707.0,24.519990000000007,0.8963186813186811,36.31109835164836

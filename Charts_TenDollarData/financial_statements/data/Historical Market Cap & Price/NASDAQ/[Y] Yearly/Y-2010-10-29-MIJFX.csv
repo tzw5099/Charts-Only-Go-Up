@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,11.73,12.55,11.62,12.53,10.069434,0.0,0.0,0.0,0.0,
+2011-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,12.56,13.36,10.96,11.34,9.288463,0.0,0.0,0.0,0.0,
+2012-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,11.51,12.37,10.96,12.26,10.07447,0.0,0.0,0.0,0.0,
+2013-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,12.51,16.67,12.28,16.200001,13.526467,0.0,0.0,0.0,0.0,
+2014-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,16.02,16.959999,15.07,15.71,13.193078,0.0,0.0,0.0,0.0,
+2015-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,15.72,19.540001,15.5,19.0,15.955981,0.0,0.0,0.0,0.0,
+2016-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,18.799999,21.1,16.49,18.860001,16.040403,0.0,0.0,0.0,0.0,
+2017-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,18.98,25.35,18.98,24.16,21.367949,0.0,0.0,0.0,0.0,
+2018-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,24.34,26.34,17.620001,18.57,17.090574,0.0,0.0,0.0,0.0,
+2019-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,18.67,23.52,18.450001,21.549999,21.549999,0.0,0.0,0.0,0.0,
+2020-01-01,MIJFX,Matthews Japan Fund Institutional Class,NASDAQ,2010-10-29,,21.790001,23.559999,15.71,23.559999,23.559999,0.0,0.0,0.0,0.0,

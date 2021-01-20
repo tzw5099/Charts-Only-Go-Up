@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-05-21,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.18,0.15,0.16,0.16,493503.0,493503.0,0.0,0.0,0.16333
+2020-05-22,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.2,0.16,0.16,0.16,572656.0,572656.0,0.0,0.0,0.17333
+2020-05-26,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.2,0.16,0.19,0.19,1023570.0,1023570.0,0.0,0.0,0.18333
+2020-05-27,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.2,0.16,0.19,0.19,884671.0,884671.0,0.0,0.0,0.18333
+2020-05-28,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.22,0.17,0.21,0.21,2163881.0,2163881.0,0.0,0.0,0.2
+2020-05-29,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.22,0.18,0.21,0.21,854781.0,854781.0,0.0,0.0,0.20333
+2020-06-01,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.21,0.17,0.18,0.18,1381690.0,1381690.0,0.0,0.0,0.18667
+2020-06-02,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.2,0.18,0.18,0.18,1757102.0,1757102.0,0.0,0.0,0.18667
+2020-06-03,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.3,0.18,0.3,0.3,2069010.0,2069010.0,0.0,0.0,0.26
+2020-06-04,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.31,0.23,0.29,0.29,1729415.0,1729415.0,0.0,0.0,0.27667

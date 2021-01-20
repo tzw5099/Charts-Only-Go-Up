@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,HWCPZ,,NASDAQ,2020-09-17,2309125366.744,24.7278,26.879999,24.4181,26.360001,26.360001,3733374.0,3733374.0,-0.7294999999999998,-0.04230769230769232,25.629936615384622

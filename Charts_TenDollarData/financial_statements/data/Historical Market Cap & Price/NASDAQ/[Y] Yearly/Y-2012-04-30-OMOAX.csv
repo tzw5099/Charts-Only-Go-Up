@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,25.0,25.92,24.860001,25.209999,20.644258,0.0,0.0,0.0,0.0,
+2013-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,25.389999,25.68,24.15,25.379999,20.827768,0.0,0.0,0.0,0.0,
+2014-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,25.440001,26.59,25.08,25.700001,21.330837,0.0,0.0,0.0,0.0,
+2015-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,25.75,26.59,25.030001,25.110001,21.894426,0.0,0.0,0.0,0.0,
+2016-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,25.17,26.940001,24.98,26.549999,23.531252,0.0,0.0,0.0,0.0,
+2017-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,26.540001,27.030001,26.110001,26.120001,23.865852,0.0,0.0,0.0,0.0,
+2018-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,26.129999,26.280001,24.57,24.76,22.921028,0.0,0.0,0.0,0.0,
+2019-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,24.92,27.549999,24.91,25.860001,25.565975,0.0,0.0,0.0,0.0,
+2020-01-01,OMOAX,Vivaldi Multi-Strategy Fund Class A,NASDAQ,2012-04-30,,25.870001,25.92,21.07,24.33,24.33,0.0,0.0,0.0,0.0,

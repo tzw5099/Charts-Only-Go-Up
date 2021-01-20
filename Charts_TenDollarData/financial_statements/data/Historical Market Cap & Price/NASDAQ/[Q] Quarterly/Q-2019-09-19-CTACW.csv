@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,CTACW,Chaserg Technology Acquisition Corp WT EXP 041025,NASDAQ,2019-09-19,,0.88,0.89,0.88,0.89,0.89,2006.0,2006.0,0.0,0.0,0.885
+2019-10-01,CTACW,Chaserg Technology Acquisition Corp WT EXP 041025,NASDAQ,2019-09-19,,0.89,2.5,0.89,2.2,2.2,3135737.0,3135737.0,2.2000000000000015,3.499560975609756,1.7133334146341466
+2020-01-01,CTACW,Chaserg Technology Acquisition Corp WT EXP 041025,NASDAQ,2019-09-19,,2.2,3.83,2.1,2.79,2.79,2596702.0,2596702.0,4.050000000000001,4.2835,2.6733335

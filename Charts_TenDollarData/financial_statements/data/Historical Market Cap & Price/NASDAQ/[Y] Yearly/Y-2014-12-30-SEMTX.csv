@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,SEMTX,Hartford Schroders Emerging Markets Equity Fund Class SDR,NASDAQ,2014-12-30,,12.6,12.6,12.59,12.59,11.773588,0.0,0.0,0.0,0.0,
+2015-01-01,SEMTX,Hartford Schroders Emerging Markets Equity Fund Class SDR,NASDAQ,2014-12-30,,12.59,13.94,10.44,10.88,10.285543,0.0,0.0,0.0,0.0,
+2016-01-01,SEMTX,Hartford Schroders Emerging Markets Equity Fund Class SDR,NASDAQ,2014-12-30,,10.55,12.9,9.5,11.92,11.379743,0.0,0.0,0.0,0.0,
+2017-01-01,SEMTX,Hartford Schroders Emerging Markets Equity Fund Class SDR,NASDAQ,2014-12-30,,12.07,16.879999,12.07,16.66,16.056957,0.0,0.0,0.0,0.0,
+2018-01-01,SEMTX,Hartford Schroders Emerging Markets Equity Fund Class SDR,NASDAQ,2014-12-30,,16.66,18.370001,13.69,13.89,13.573984,0.0,0.0,0.0,0.0,
+2019-01-01,SEMTX,Hartford Schroders Emerging Markets Equity Fund Class SDR,NASDAQ,2014-12-30,,13.87,17.01,13.63,16.610001,16.610001,0.0,0.0,0.0,0.0,
+2020-01-01,SEMTX,Hartford Schroders Emerging Markets Equity Fund Class SDR,NASDAQ,2014-12-30,,16.91,17.42,11.66,16.85,16.85,0.0,0.0,0.0,0.0,

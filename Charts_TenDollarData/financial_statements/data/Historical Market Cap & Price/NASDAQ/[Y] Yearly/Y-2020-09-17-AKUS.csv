@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,AKUS,,NASDAQ,2020-09-17,824895600.0,22.26,30.67,19.0,23.379999,23.379999,13116151.0,13116151.0,-1.5910000000000004,-0.049965517241379265,21.994034310344826

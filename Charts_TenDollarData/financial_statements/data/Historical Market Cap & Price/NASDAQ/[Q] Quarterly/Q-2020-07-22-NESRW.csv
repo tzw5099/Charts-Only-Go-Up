@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,NESRW,National Energy Services Reunited Corp. Warrant,NASDAQ,2020-07-22,,0.78,1.1,0.5728,0.79,0.79,2838825.0,2838825.0,-1.3986000000000005,-5.965880000000001,0.8479376000000001

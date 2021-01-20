@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,HCYAX,Hilton Tactical Income Fund Investor Class,NASDAQ,2013-09-16,,15.0,15.62,14.8,15.57,12.61872,0.0,0.0,0.0,0.0,
+2014-01-01,HCYAX,Hilton Tactical Income Fund Investor Class,NASDAQ,2013-09-16,,15.47,16.469999,15.14,15.72,13.206517,0.0,0.0,0.0,0.0,
+2015-01-01,HCYAX,Hilton Tactical Income Fund Investor Class,NASDAQ,2013-09-16,,15.78,15.91,14.66,15.05,13.150969,0.0,0.0,0.0,0.0,
+2016-01-01,HCYAX,Hilton Tactical Income Fund Investor Class,NASDAQ,2013-09-16,,14.96,15.92,14.33,15.92,14.449945,0.0,0.0,0.0,0.0,
+2017-01-01,HCYAX,Hilton Tactical Income Fund Investor Class,NASDAQ,2013-09-16,,15.9,16.82,15.86,16.76,15.656734,0.0,0.0,0.0,0.0,
+2018-01-01,HCYAX,Hilton Tactical Income Fund Investor Class,NASDAQ,2013-09-16,,16.73,17.049999,15.32,15.66,15.196776,0.0,0.0,0.0,0.0,
+2019-01-01,HCYAX,Hilton Tactical Income Fund Investor Class,NASDAQ,2013-09-16,,15.6,17.57,15.57,17.57,17.377947,0.0,0.0,0.0,0.0,
+2020-01-01,HCYAX,Hilton Tactical Income Fund Investor Class,NASDAQ,2013-09-16,,17.549999,18.1,13.41,16.049999,16.049999,0.0,0.0,0.0,0.0,

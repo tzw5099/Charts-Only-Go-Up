@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,9.98,10.42,9.41,9.73,8.075378,0.0,0.0,0.0,0.0,
+2012-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,9.89,12.99,9.78,12.99,10.871672,0.0,0.0,0.0,0.0,
+2013-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,13.1,15.48,12.55,15.13,12.688257,0.0,0.0,0.0,0.0,
+2014-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,15.13,18.1,14.24,16.52,14.574368,0.0,0.0,0.0,0.0,
+2015-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,16.610001,17.860001,14.6,14.9,13.701826,0.0,0.0,0.0,0.0,
+2016-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,14.56,16.23,13.2,13.77,13.000807,0.0,0.0,0.0,0.0,
+2017-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,13.82,18.790001,13.82,18.73,18.271353,0.0,0.0,0.0,0.0,
+2018-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,18.85,19.74,13.63,14.04,14.015718,0.0,0.0,0.0,0.0,
+2019-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,13.98,16.9,13.88,16.9,16.9,0.0,0.0,0.0,0.0,
+2020-01-01,BESIX,William Blair Emerging Markets Small Cap Growth Fund Class I,NASDAQ,2011-10-25,,17.059999,19.860001,11.93,19.34,19.34,0.0,0.0,0.0,0.0,

@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,NHCCX,Nuveen High Yield Municipal Bond Fund Class C,NASDAQ,2014-02-10,,15.91,17.25,15.9,17.25,13.800764,0.0,0.0,0.0,0.0,
+2015-01-01,NHCCX,Nuveen High Yield Municipal Bond Fund Class C,NASDAQ,2014-02-10,,17.27,17.49,16.82,17.120001,14.360037,0.0,0.0,0.0,0.0,
+2016-01-01,NHCCX,Nuveen High Yield Municipal Bond Fund Class C,NASDAQ,2014-02-10,,17.15,18.0,16.219999,16.440001,14.43646,0.0,0.0,0.0,0.0,
+2017-01-01,NHCCX,Nuveen High Yield Municipal Bond Fund Class C,NASDAQ,2014-02-10,,16.440001,17.540001,16.440001,17.440001,16.026012,0.0,0.0,0.0,0.0,
+2018-01-01,NHCCX,Nuveen High Yield Municipal Bond Fund Class C,NASDAQ,2014-02-10,,17.450001,17.459999,16.68,16.860001,16.184835,0.0,0.0,0.0,0.0,
+2019-01-01,NHCCX,Nuveen High Yield Municipal Bond Fund Class C,NASDAQ,2014-02-10,,16.879999,18.120001,16.84,17.969999,17.791803,0.0,0.0,0.0,0.0,
+2020-01-01,NHCCX,Nuveen High Yield Municipal Bond Fund Class C,NASDAQ,2014-02-10,,17.99,18.809999,14.61,16.879999,16.879999,0.0,0.0,0.0,0.0,

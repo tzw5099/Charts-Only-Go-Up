@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,RPTX,,NASDAQ,2020-09-17,1223522387.25345,32.49,36.669998,21.45,33.919998,33.919998,11970871.0,11970871.0,-1.4260000000000033,-0.03457142857142882,26.524687301587306

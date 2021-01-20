@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTH,iShares iBonds Dec 2027 Term Treasury ETF,NASDAQ,2020-02-28,,25.2154,27.8062,25.2154,26.440001,26.440001,666187.0,666187.0,-1.8309999999999993,-0.055444444444444456,25.623821904761908

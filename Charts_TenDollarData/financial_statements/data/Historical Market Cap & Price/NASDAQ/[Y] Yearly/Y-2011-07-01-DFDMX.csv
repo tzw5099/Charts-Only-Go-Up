@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,10.0,10.29,7.83,9.61,8.227426,0.0,0.0,0.0,0.0,
+2012-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,9.7,11.4,9.63,11.37,9.734219,0.0,0.0,0.0,0.0,
+2013-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,11.65,15.68,11.65,15.68,13.891107,0.0,0.0,0.0,0.0,
+2014-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,15.51,16.1,14.43,15.31,14.164773,0.0,0.0,0.0,0.0,
+2015-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,15.2,16.68,14.46,15.05,14.376431,0.0,0.0,0.0,0.0,
+2016-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,14.61,16.200001,12.78,15.57,14.88633,0.0,0.0,0.0,0.0,
+2017-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,15.67,20.719999,15.67,20.370001,19.53441,0.0,0.0,0.0,0.0,
+2018-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,20.450001,24.33,18.43,19.66,19.487213,0.0,0.0,0.0,0.0,
+2019-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,19.5,27.59,18.93,27.309999,27.309999,0.0,0.0,0.0,0.0,
+2020-01-01,DFDMX,DF Dent Midcap Growth Fund Investor Shares,NASDAQ,2011-07-01,,27.559999,32.709999,19.950001,30.889999,30.889999,0.0,0.0,0.0,0.0,

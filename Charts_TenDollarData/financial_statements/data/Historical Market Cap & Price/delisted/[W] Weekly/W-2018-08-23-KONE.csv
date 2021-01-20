@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-08-20,KONE,Kingtone Wirelessinfo Solutions Hldg Ltd,delisted,2018-08-23,,6.58,6.9989,6.5001,6.775,,66237.0,66237.0,6.7749999999999995,1.0935,6.74695
+2018-08-27,KONE,Kingtone Wirelessinfo Solutions Hldg Ltd,delisted,2018-08-23,,7.47,7.8912,6.8153,7.68,,113994.0,113994.0,0.905,2.6437999999999997,7.57402
+2018-09-03,KONE,Kingtone Wirelessinfo Solutions Hldg Ltd,delisted,2018-08-23,,7.65,7.83,6.96,7.57,,30979.0,30979.0,-0.10999999999999999,-0.18825000000000047,7.4891
+2018-09-10,KONE,Kingtone Wirelessinfo Solutions Hldg Ltd,delisted,2018-08-23,,7.55,7.85,7.035,7.67,,16424.0,16424.0,0.1,0.4526666666666667,7.553833333333333

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,AMHC,Amplitude Healthcare Acquisition Corporation,NASDAQ,2020-01-10,123625000.0,9.82,10.25,9.45,9.89,9.89,6235458.0,6235458.0,-0.8520000000000001,-0.09134042553191492,9.249124042553191

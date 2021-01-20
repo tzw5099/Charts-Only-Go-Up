@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FLLCW,Fellazo Inc Red Wts 05152026,delisted,2020-02-07,,0.06,0.07,0.05,0.06,0.06,157782.0,157782.0,-0.01,-2.7778333333333336,0.05944333333333333

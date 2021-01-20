@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,20.0,20.030001,20.0,20.030001,15.792989,0.0,0.0,0.0,0.0,
+2012-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,20.0,21.34,20.0,21.280001,17.314812,0.0,0.0,0.0,0.0,
+2013-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,21.15,21.559999,20.35,20.370001,17.198353,0.0,0.0,0.0,0.0,
+2014-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,20.370001,21.5,20.370001,21.190001,18.342596,0.0,0.0,0.0,0.0,
+2015-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,21.23,21.52,20.26,20.27,18.133015,0.0,0.0,0.0,0.0,
+2016-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,20.290001,21.389999,20.290001,20.92,19.213493,0.0,0.0,0.0,0.0,
+2017-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,20.940001,21.52,20.940001,21.370001,20.250622,0.0,0.0,0.0,0.0,
+2018-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,21.4,21.52,20.469999,20.52,19.954367,0.0,0.0,0.0,0.0,
+2019-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,20.57,21.68,20.57,21.540001,21.428406,0.0,0.0,0.0,0.0,
+2020-01-01,SSIZX,Sierra Tactical Core Income Fund Class A,NASDAQ,2011-12-21,,21.57,21.99,20.639999,21.73,21.73,0.0,0.0,0.0,0.0,

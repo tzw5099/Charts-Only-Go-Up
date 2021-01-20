@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BNGOW,"BioNano Genomics, Inc. WT EXP 082123",NASDAQ,2020-07-21,,0.11,0.4,0.12,0.2175,0.2175,2504360.0,2504360.0,2.8794000000000013,71.17551515151514,0.20966878787878787

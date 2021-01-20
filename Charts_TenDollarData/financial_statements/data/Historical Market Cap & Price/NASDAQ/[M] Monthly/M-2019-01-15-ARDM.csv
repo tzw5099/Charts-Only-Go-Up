@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,ARDM,Aradigm Corporation,NASDAQ,2019-01-15,,0.3,0.64,0.24025,0.5475,,481903.0,481903.0,0.5475,18.4375,0.42427950000000003

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,GLADN,Gladstone Capital Corporation 6.00% Series 2024 Term Preferred Stock,NASDAQ,2017-09-21,,24.8,26.14,24.75,25.85,23.31,1465800.0,1465800.0,1.7299999999999998,0.09812857142857144,25.281618857142846
+2018-01-01,GLADN,Gladstone Capital Corporation 6.00% Series 2024 Term Preferred Stock,NASDAQ,2017-09-21,,26.03,26.12,22.88,24.68,23.6,1145400.0,1145400.0,-0.7999999999999988,-0.011191235059760937,23.779628167330678
+2019-01-01,GLADN,Gladstone Capital Corporation 6.00% Series 2024 Term Preferred Stock,NASDAQ,2017-09-21,,24.3,25.99,24.3,25.0,25.0,500171.0,500171.0,3.839999999999999,0.07812755102040814,23.387806479591852

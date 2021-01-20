@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,43.189999,44.580002,42.759998,43.779999,28.596939,0.0,0.0,0.0,0.0,
+2012-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,44.279999,51.060001,43.830002,50.700001,33.663868,0.0,0.0,0.0,0.0,
+2013-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,52.279999,74.449997,52.040001,74.419998,50.252934,0.0,0.0,0.0,0.0,
+2014-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,73.220001,76.529999,65.699997,72.190002,51.423676,0.0,0.0,0.0,0.0,
+2015-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,71.349998,81.160004,68.279999,72.07,55.943527,0.0,0.0,0.0,0.0,
+2016-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,70.029999,81.25,59.650002,74.290001,60.737213,0.0,0.0,0.0,0.0,
+2017-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,74.959999,98.5,74.550003,90.589996,78.448891,0.0,0.0,0.0,0.0,
+2018-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,91.220001,124.150002,78.129997,84.830002,78.155457,0.0,0.0,0.0,0.0,
+2019-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,84.029999,113.269997,81.269997,101.199997,101.199997,0.0,0.0,0.0,0.0,
+2020-01-01,BCSSX,Brown Capital Management Small Company Fund Institutional Shares,NASDAQ,2011-12-15,,102.050003,129.460007,74.040001,120.080002,120.080002,0.0,0.0,0.0,0.0,

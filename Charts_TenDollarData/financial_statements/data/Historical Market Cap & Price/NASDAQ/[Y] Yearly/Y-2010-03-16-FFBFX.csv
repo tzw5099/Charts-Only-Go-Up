@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,14.85,16.139999,13.09,15.14,11.611218,0.0,0.0,0.0,0.0,
+2011-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,15.39,15.8,11.95,14.5,11.120387,0.0,0.0,0.0,0.0,
+2012-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,14.74,17.66,14.69,17.559999,13.467172,0.0,0.0,0.0,0.0,
+2013-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,18.01,25.24,18.01,25.219999,19.341805,0.0,0.0,0.0,0.0,
+2014-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,24.91,27.15,24.299999,27.02,20.722267,0.0,0.0,0.0,0.0,
+2015-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,26.76,32.630001,25.040001,30.98,23.759283,0.0,0.0,0.0,0.0,
+2016-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,30.15,40.110001,25.780001,39.68,30.431515,0.0,0.0,0.0,0.0,
+2017-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,39.599998,45.43,38.200001,43.43,34.27779,0.0,0.0,0.0,0.0,
+2018-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,43.389999,48.0,26.24,27.49,27.49,0.0,0.0,0.0,0.0,
+2019-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,27.639999,33.169998,27.379999,33.130001,33.130001,0.0,0.0,0.0,0.0,
+2020-01-01,FFBFX,Emerald Banking and Finance Fund Investor Class,NASDAQ,2010-03-16,,33.0,33.400002,17.09,25.32,25.32,0.0,0.0,0.0,0.0,

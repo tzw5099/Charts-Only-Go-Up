@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GDYNW,"Grid Dynamics Holdings, Inc.",NASDAQ,2020-09-17,47677.2,1.61,1.98,0.53,1.2,1.2,16776.0,16776.0,-2.56,-19.765,1.3404175
+2020-08-01,GDYNW,"Grid Dynamics Holdings, Inc.",NASDAQ,2020-09-17,71118.49,1.63,1.85,1.25,1.79,1.79,69014.0,69014.0,0.46499999999999997,3.565875,1.65895875
+2020-09-01,GDYNW,"Grid Dynamics Holdings, Inc.",NASDAQ,2020-09-17,72310.42,1.63,1.87,1.505,1.64,1.64,148254.0,148254.0,0.8,7.011142857142857,1.4631014285714288

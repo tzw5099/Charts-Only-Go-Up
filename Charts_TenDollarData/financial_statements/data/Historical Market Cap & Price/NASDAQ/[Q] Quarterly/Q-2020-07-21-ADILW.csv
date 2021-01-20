@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ADILW,"Adial Pharmaceuticals, Inc. WT EXP 073123",NASDAQ,2020-07-21,3268404.3,0.37,0.73,0.25,0.3,0.3,139786.0,139786.0,-0.42010000000000003,-3.7846666666666664,0.354266

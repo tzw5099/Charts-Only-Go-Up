@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NLIGX,Nuveen Large Cap Growth Fund Class I,NASDAQ,2013-06-26,,19.48,23.51,19.48,23.459999,14.224856,0.0,0.0,0.0,0.0,
+2014-01-01,NLIGX,Nuveen Large Cap Growth Fund Class I,NASDAQ,2013-06-26,,23.309999,27.52,22.01,26.049999,16.493002,0.0,0.0,0.0,0.0,
+2015-01-01,NLIGX,Nuveen Large Cap Growth Fund Class I,NASDAQ,2013-06-26,,25.99,27.66,23.950001,24.6,16.226463,0.0,0.0,0.0,0.0,
+2016-01-01,NLIGX,Nuveen Large Cap Growth Fund Class I,NASDAQ,2013-06-26,,24.25,27.790001,21.540001,26.84,17.870138,0.0,0.0,0.0,0.0,
+2017-01-01,NLIGX,Nuveen Large Cap Growth Fund Class I,NASDAQ,2013-06-26,,27.139999,31.709999,27.139999,30.73,22.153004,0.0,0.0,0.0,0.0,
+2018-01-01,NLIGX,Nuveen Large Cap Growth Fund Class I,NASDAQ,2013-06-26,,31.09,34.98,21.49,22.969999,21.018017,0.0,0.0,0.0,0.0,
+2019-01-01,NLIGX,Nuveen Large Cap Growth Fund Class I,NASDAQ,2013-06-26,,23.049999,29.059999,22.530001,27.48,27.48,0.0,0.0,0.0,0.0,
+2020-01-01,NLIGX,Nuveen Large Cap Growth Fund Class I,NASDAQ,2013-06-26,,27.75,32.130001,18.700001,29.620001,29.620001,0.0,0.0,0.0,0.0,

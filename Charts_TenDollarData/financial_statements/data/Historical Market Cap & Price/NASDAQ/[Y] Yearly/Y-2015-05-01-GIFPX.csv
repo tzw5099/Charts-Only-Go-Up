@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,GIFPX,Guggenheim Floating Rate Strategies Fund Class P,NASDAQ,2015-05-01,,26.370001,26.379999,25.219999,25.25,21.356071,0.0,0.0,0.0,0.0,
+2016-01-01,GIFPX,Guggenheim Floating Rate Strategies Fund Class P,NASDAQ,2015-05-01,,25.23,26.07,24.780001,26.07,23.010061,0.0,0.0,0.0,0.0,
+2017-01-01,GIFPX,Guggenheim Floating Rate Strategies Fund Class P,NASDAQ,2015-05-01,,26.08,26.16,25.99,26.0,23.787275,0.0,0.0,0.0,0.0,
+2018-01-01,GIFPX,Guggenheim Floating Rate Strategies Fund Class P,NASDAQ,2015-05-01,,26.01,26.1,24.82,24.82,23.706934,0.0,0.0,0.0,0.0,
+2019-01-01,GIFPX,Guggenheim Floating Rate Strategies Fund Class P,NASDAQ,2015-05-01,,24.790001,25.58,24.790001,25.33,25.051977,0.0,0.0,0.0,0.0,
+2020-01-01,GIFPX,Guggenheim Floating Rate Strategies Fund Class P,NASDAQ,2015-05-01,,25.34,25.459999,20.469999,24.190001,24.190001,0.0,0.0,0.0,0.0,

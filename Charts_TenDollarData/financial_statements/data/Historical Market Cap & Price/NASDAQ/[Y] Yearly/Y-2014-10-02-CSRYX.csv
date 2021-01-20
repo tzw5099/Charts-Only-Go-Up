@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,CSRYX,Columbia Select Large Cap Value Fund Institutional 3 Class,NASDAQ,2014-10-02,,23.469999,24.709999,22.26,23.860001,17.76943,0.0,0.0,0.0,0.0,
+2015-01-01,CSRYX,Columbia Select Large Cap Value Fund Institutional 3 Class,NASDAQ,2014-10-02,,23.85,24.639999,20.75,21.530001,16.80736,0.0,0.0,0.0,0.0,
+2016-01-01,CSRYX,Columbia Select Large Cap Value Fund Institutional 3 Class,NASDAQ,2014-10-02,,21.299999,26.27,18.620001,24.040001,20.315283,0.0,0.0,0.0,0.0,
+2017-01-01,CSRYX,Columbia Select Large Cap Value Fund Institutional 3 Class,NASDAQ,2014-10-02,,24.23,28.610001,24.07,27.610001,24.482246,0.0,0.0,0.0,0.0,
+2018-01-01,CSRYX,Columbia Select Large Cap Value Fund Institutional 3 Class,NASDAQ,2014-10-02,,27.809999,29.450001,21.870001,23.190001,21.537094,0.0,0.0,0.0,0.0,
+2019-01-01,CSRYX,Columbia Select Large Cap Value Fund Institutional 3 Class,NASDAQ,2014-10-02,,23.309999,28.559999,22.83,27.49,27.49,0.0,0.0,0.0,0.0,
+2020-01-01,CSRYX,Columbia Select Large Cap Value Fund Institutional 3 Class,NASDAQ,2014-10-02,,27.639999,27.799999,16.27,25.049999,25.049999,0.0,0.0,0.0,0.0,

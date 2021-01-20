@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,CAGIX,Calvert Growth Allocation Fund Class I,NASDAQ,2016-05-20,,17.17,18.459999,16.549999,17.690001,15.08565,0.0,0.0,0.0,0.0,
+2017-01-01,CAGIX,Calvert Growth Allocation Fund Class I,NASDAQ,2016-05-20,,17.809999,21.360001,17.809999,20.17,18.207413,0.0,0.0,0.0,0.0,
+2018-01-01,CAGIX,Calvert Growth Allocation Fund Class I,NASDAQ,2016-05-20,,20.309999,21.459999,17.360001,17.49,16.857981,0.0,0.0,0.0,0.0,
+2019-01-01,CAGIX,Calvert Growth Allocation Fund Class I,NASDAQ,2016-05-20,,17.469999,22.360001,17.15,21.52,21.52,0.0,0.0,0.0,0.0,
+2020-01-01,CAGIX,Calvert Growth Allocation Fund Class I,NASDAQ,2016-05-20,,21.700001,23.09,14.96,22.49,22.49,0.0,0.0,0.0,0.0,

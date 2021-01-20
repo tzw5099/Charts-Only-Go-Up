@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,LACQW,Leisure Acquisition Corp. Warrant,NASDAQ,2020-07-21,,0.71,0.4616,0.29,0.4159,0.4159,1855733.0,1855733.0,-11.3269,-46.858818181818165,0.3833118181818182

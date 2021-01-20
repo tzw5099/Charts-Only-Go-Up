@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,ABSZX,AB Discovery Value Fund Class Z,NASDAQ,2013-10-21,,22.469999,22.85,20.77,21.209999,13.254436,0.0,0.0,0.0,0.0,
+2014-01-01,ABSZX,AB Discovery Value Fund Class Z,NASDAQ,2013-10-21,,20.93,23.24,19.74,20.1,14.492459,0.0,0.0,0.0,0.0,
+2015-01-01,ABSZX,AB Discovery Value Fund Class Z,NASDAQ,2013-10-21,,20.0,21.219999,17.4,17.780001,13.678339,0.0,0.0,0.0,0.0,
+2016-01-01,ABSZX,AB Discovery Value Fund Class Z,NASDAQ,2013-10-21,,17.52,22.98,15.55,21.370001,17.07098,0.0,0.0,0.0,0.0,
+2017-01-01,ABSZX,AB Discovery Value Fund Class Z,NASDAQ,2013-10-21,,21.52,24.030001,20.77,22.58,19.286921,0.0,0.0,0.0,0.0,
+2018-01-01,ABSZX,AB Discovery Value Fund Class Z,NASDAQ,2013-10-21,,22.73,23.99,16.17,17.110001,16.375137,0.0,0.0,0.0,0.0,
+2019-01-01,ABSZX,AB Discovery Value Fund Class Z,NASDAQ,2013-10-21,,17.15,20.27,16.93,19.690001,19.690001,0.0,0.0,0.0,0.0,
+2020-01-01,ABSZX,AB Discovery Value Fund Class Z,NASDAQ,2013-10-21,,19.66,19.82,10.5,16.5,16.5,0.0,0.0,0.0,0.0,

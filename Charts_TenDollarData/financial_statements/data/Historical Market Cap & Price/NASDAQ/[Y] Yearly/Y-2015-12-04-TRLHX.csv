@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,TRLHX,TIAA-CREF Large Cap Value Fund Advisor Class,NASDAQ,2015-12-04,,17.690001,17.690001,15.51,15.88,12.498803,0.0,0.0,0.0,0.0,
+2016-01-01,TRLHX,TIAA-CREF Large Cap Value Fund Advisor Class,NASDAQ,2015-12-04,,15.65,19.059999,13.74,18.07,14.822885,0.0,0.0,0.0,0.0,
+2017-01-01,TRLHX,TIAA-CREF Large Cap Value Fund Advisor Class,NASDAQ,2015-12-04,,18.27,20.02,18.1,19.040001,16.675211,0.0,0.0,0.0,0.0,
+2018-01-01,TRLHX,TIAA-CREF Large Cap Value Fund Advisor Class,NASDAQ,2015-12-04,,19.190001,20.33,13.71,14.58,14.27521,0.0,0.0,0.0,0.0,
+2019-01-01,TRLHX,TIAA-CREF Large Cap Value Fund Advisor Class,NASDAQ,2015-12-04,,14.62,18.43,14.36,18.389999,18.389999,0.0,0.0,0.0,0.0,
+2020-01-01,TRLHX,TIAA-CREF Large Cap Value Fund Advisor Class,NASDAQ,2015-12-04,,18.5,18.700001,11.49,16.6,16.6,0.0,0.0,0.0,0.0,

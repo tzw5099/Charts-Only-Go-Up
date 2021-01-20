@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,INDUU,Industrea Acquisition Corp. Unit,NASDAQ,2017-07-27,,10.02,10.455,9.95,10.05,,8056558.0,8056558.0,10.050000000000008,0.002740740740740737,10.097583333333334
+2018-01-01,INDUU,Industrea Acquisition Corp. Unit,NASDAQ,2017-07-27,,10.08,12.22,10.02,10.8,,4523818.0,4523818.0,0.7500000000000002,0.07999999999999996,10.489475531914897

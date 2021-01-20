@@ -1,0 +1,18 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-02-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,99.8448,99.8448,99.8448,99.8448,,50940.0,50940.0,99.8448,0.0,99.8448
+2018-03-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,99.8448,99.8448,99.8448,99.8448,,713.0,713.0,6e-06,0.0,99.8448
+2018-04-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,99.8088,99.8088,99.8088,99.8088,,203.0,203.0,-0.035935,-0.009,99.8088
+2018-05-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,,,0.0,0.0,0.0,,
+2018-06-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,99.8088,,3.0,3.0,0.0,0.0,
+2018-07-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,99.8088,,2.0,2.0,-4e-06,0.0,
+2018-08-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,99.8088,,13.0,13.0,0.0,0.0,
+2018-09-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,,,0.0,0.0,0.0,,
+2018-10-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,99.9225,99.9225,99.9225,99.9225,,1002.0,1002.0,0.113654,0.057,99.9225
+2018-11-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,99.9225,,11.0,11.0,0.0,0.0,
+2018-12-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,99.9225,,2.0,2.0,1.4e-05,0.0,
+2019-01-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,99.9225,,86.0,86.0,2e-06,0.0,
+2019-02-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,100.002,100.002,100.002,100.002,,261.0,261.0,0.07947,0.04,100.002
+2019-03-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,100.002,100.002,100.002,100.002,,151.0,151.0,0.0,0.0,100.002
+2019-04-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,100.002,,4.0,4.0,1.5e-05,0.0,
+2019-05-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,,,,,,0.0,0.0,0.0,,
+2019-06-01,BVNSC,Brandes Investment Trust,NASDAQ,2018-02-15,,99.99,99.99,99.99,99.99,,940.0,940.0,-0.012,-0.012,99.99

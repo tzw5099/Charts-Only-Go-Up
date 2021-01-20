@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,7.54,9.25,7.02,9.17,8.84806,0.0,0.0,0.0,0.0,
+2010-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,9.31,10.14,8.24,10.09,9.791521,0.0,0.0,0.0,0.0,
+2011-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,10.22,11.09,8.69,9.86,9.568325,0.0,0.0,0.0,0.0,
+2012-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,10.04,12.24,9.97,11.95,11.596499,0.0,0.0,0.0,0.0,
+2013-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,12.27,16.26,12.11,16.219999,15.740185,0.0,0.0,0.0,0.0,
+2014-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,16.120001,18.01,15.41,17.549999,17.053026,0.0,0.0,0.0,0.0,
+2015-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,17.540001,20.15,16.620001,18.709999,18.180178,0.0,0.0,0.0,0.0,
+2016-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,18.209999,19.690001,15.31,18.379999,17.859522,0.0,0.0,0.0,0.0,
+2017-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,18.58,26.48,18.58,25.91,25.176292,0.0,0.0,0.0,0.0,
+2018-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,26.370001,32.0,24.370001,26.27,25.526098,0.0,0.0,0.0,0.0,
+2019-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,26.25,34.889999,25.48,34.27,34.27,0.0,0.0,0.0,0.0,
+2020-01-01,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class,NASDAQ,2009-05-29,,34.889999,50.009998,26.940001,46.549999,46.549999,0.0,0.0,0.0,0.0,

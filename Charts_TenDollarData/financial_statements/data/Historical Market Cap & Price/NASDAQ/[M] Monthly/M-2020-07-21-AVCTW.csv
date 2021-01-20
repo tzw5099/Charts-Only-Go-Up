@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,AVCTW,American Virtual Cloud Tech Inc. Warrants,NASDAQ,2020-07-21,,0.2295,0.4,0.271,0.38,0.38,3675977.0,3675977.0,0.9438,51.405249999999995,0.34227874999999996
+2020-08-01,AVCTW,American Virtual Cloud Tech Inc. Warrants,NASDAQ,2020-07-21,,0.2295,1.68,0.2601,0.3101,0.3101,4444693.0,4444693.0,2.1809,67.87742857142858,0.4121221428571428
+2020-09-01,AVCTW,American Virtual Cloud Tech Inc. Warrants,NASDAQ,2020-07-21,,0.2295,0.3675,0.2501,0.318,0.318,905352.0,905352.0,0.8402999999999999,30.511916666666668,0.3021875

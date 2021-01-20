@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,20.719999,20.719999,16.209999,18.299999,7.927315,0.0,0.0,0.0,0.0,
+2012-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,18.530001,23.16,18.309999,21.98,10.641552,0.0,0.0,0.0,0.0,
+2013-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,22.32,24.540001,20.02,20.23,11.0045,0.0,0.0,0.0,0.0,
+2014-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,20.209999,21.799999,19.58,20.049999,12.075497,0.0,0.0,0.0,0.0,
+2015-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,20.18,22.02,18.540001,18.559999,12.399628,0.0,0.0,0.0,0.0,
+2016-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,18.280001,20.02,16.360001,18.120001,13.344466,0.0,0.0,0.0,0.0,
+2017-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,18.15,19.91,18.15,19.219999,15.659085,0.0,0.0,0.0,0.0,
+2018-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,19.280001,19.65,15.87,16.07,14.328464,0.0,0.0,0.0,0.0,
+2019-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,15.9,19.59,15.9,18.889999,18.44812,0.0,0.0,0.0,0.0,
+2020-01-01,JARIX,James Alpha Global Real Estate Investments Portfolio Class I Shares,NASDAQ,2011-08-01,,18.77,19.889999,11.83,16.43,16.43,0.0,0.0,0.0,0.0,

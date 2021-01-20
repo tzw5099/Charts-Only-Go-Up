@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,USXF,,NASDAQ,2020-06-18,,25.6,29.764,24.79,27.787399,27.787399,167094.0,167094.0,-2.6966,-0.17556363636363634,26.256371636363628

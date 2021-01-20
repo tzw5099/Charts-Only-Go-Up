@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,CLDIX,Calvert Long-Term Income Fund Class I,NASDAQ,2015-02-03,,18.120001,18.120001,16.309999,16.360001,13.650166,0.0,0.0,0.0,0.0,
+2016-01-01,CLDIX,Calvert Long-Term Income Fund Class I,NASDAQ,2015-02-03,,16.4,18.530001,16.049999,16.32,14.651746,0.0,0.0,0.0,0.0,
+2017-01-01,CLDIX,Calvert Long-Term Income Fund Class I,NASDAQ,2015-02-03,,16.360001,17.4,16.08,17.32,16.105593,0.0,0.0,0.0,0.0,
+2018-01-01,CLDIX,Calvert Long-Term Income Fund Class I,NASDAQ,2015-02-03,,17.190001,17.24,15.47,15.79,15.251122,0.0,0.0,0.0,0.0,
+2019-01-01,CLDIX,Calvert Long-Term Income Fund Class I,NASDAQ,2015-02-03,,15.84,18.84,15.8,18.450001,18.308342,0.0,0.0,0.0,0.0,
+2020-01-01,CLDIX,Calvert Long-Term Income Fund Class I,NASDAQ,2015-02-03,,18.559999,20.66,16.43,20.16,20.16,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,PAND,,NASDAQ,2020-07-17,433454790.89479,27.0,27.752,14.61,16.799999,16.799999,10590920.0,10590920.0,-11.830000000000004,-1.044795454545454,18.050106363636356

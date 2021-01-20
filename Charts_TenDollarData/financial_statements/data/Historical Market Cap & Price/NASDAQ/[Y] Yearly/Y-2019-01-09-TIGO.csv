@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TIGO,Millicom International Cellular S.A.,NASDAQ,2019-01-09,,59.188,71.203,40.83,48.23,48.23,7876100.0,7876100.0,12.10609999999999,0.0865991902834008,52.46034748987858
+2020-01-01,TIGO,Millicom International Cellular S.A.,NASDAQ,2019-01-09,,48.22,49.42,20.15,32.139999,32.139999,19099700.0,19099700.0,-15.914999999999997,-0.2688826815642459,32.32353430167599

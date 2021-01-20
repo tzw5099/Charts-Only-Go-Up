@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,15.88,16.549999,15.59,16.370001,11.561388,0.0,0.0,0.0,0.0,
+2013-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,16.83,21.629999,16.790001,20.889999,14.753658,0.0,0.0,0.0,0.0,
+2014-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,20.719999,23.75,19.610001,21.969999,16.639509,0.0,0.0,0.0,0.0,
+2015-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,21.92,23.42,20.549999,21.389999,17.152916,0.0,0.0,0.0,0.0,
+2016-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,21.1,23.51,19.18,22.860001,18.629932,0.0,0.0,0.0,0.0,
+2017-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,23.059999,27.51,23.059999,26.299999,22.679045,0.0,0.0,0.0,0.0,
+2018-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,26.559999,28.26,20.58,21.879999,20.647884,0.0,0.0,0.0,0.0,
+2019-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,21.959999,28.190001,21.42,27.450001,27.450001,0.0,0.0,0.0,0.0,
+2020-01-01,CORRX,Columbia Contrarian Core Fund Advisor Class,NASDAQ,2012-11-09,,27.709999,31.32,19.530001,29.25,29.25,0.0,0.0,0.0,0.0,

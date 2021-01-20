@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,FATBP,,NASDAQ,2020-07-14,,20.0814,20.0814,12.95,15.3999,15.3999,221067.0,221067.0,-1.2808000000000004,-0.07906382978723392,15.761264042553194

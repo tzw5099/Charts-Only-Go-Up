@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,17.59,20.18,17.59,18.59,10.22197,0.0,0.0,0.0,0.0,
+2013-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,18.969999,25.57,18.969999,24.950001,14.447791,0.0,0.0,0.0,0.0,
+2014-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,24.75,28.450001,23.709999,26.719999,16.455149,0.0,0.0,0.0,0.0,
+2015-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,26.639999,28.07,23.49,23.65,16.175278,0.0,0.0,0.0,0.0,
+2016-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,23.200001,25.52,20.540001,25.09,17.160158,0.0,0.0,0.0,0.0,
+2017-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,25.26,33.09,25.26,30.16,22.488165,0.0,0.0,0.0,0.0,
+2018-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,30.629999,34.599998,22.73,24.26,21.808428,0.0,0.0,0.0,0.0,
+2019-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,24.32,30.17,23.77,27.33,27.33,0.0,0.0,0.0,0.0,
+2020-01-01,SFLWX,AIG Focused Alpha Large-Cap Fund Class W,NASDAQ,2012-01-23,,27.58,32.07,19.99,30.32,30.32,0.0,0.0,0.0,0.0,

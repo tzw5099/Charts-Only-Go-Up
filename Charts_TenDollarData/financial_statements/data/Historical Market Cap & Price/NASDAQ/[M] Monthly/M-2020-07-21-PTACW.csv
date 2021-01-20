@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,PTACW,PropTech Acquisition Corporation,NASDAQ,2020-07-21,0.0668,0.99,2.3,1.59,1.67,1.67,1304092.0,1304092.0,7.26,91.6665,1.888125
+2020-08-01,PTACW,PropTech Acquisition Corporation,NASDAQ,2020-07-21,0.06,0.99,1.75,1.19,1.5,1.5,907093.0,907093.0,6.79,48.989928571428564,1.4581757142857144
+2020-09-01,PTACW,PropTech Acquisition Corporation,NASDAQ,2020-07-21,0.076,0.99,2.0,1.36,1.9,1.9,2085353.0,2085353.0,7.640000000000001,77.17159999999998,1.5738629999999998

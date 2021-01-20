@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,SCURX,Hartford Schroders US Small Cap Opportunities Fund Class SDR,NASDAQ,2015-09-28,,23.83,25.9,22.559999,22.92,16.984362,0.0,0.0,0.0,0.0,
+2016-01-01,SCURX,Hartford Schroders US Small Cap Opportunities Fund Class SDR,NASDAQ,2015-09-28,,22.49,27.84,20.129999,25.91,20.29077,0.0,0.0,0.0,0.0,
+2017-01-01,SCURX,Hartford Schroders US Small Cap Opportunities Fund Class SDR,NASDAQ,2015-09-28,,26.040001,29.860001,25.92,27.27,23.320656,0.0,0.0,0.0,0.0,
+2018-01-01,SCURX,Hartford Schroders US Small Cap Opportunities Fund Class SDR,NASDAQ,2015-09-28,,27.43,29.790001,20.870001,22.030001,20.782011,0.0,0.0,0.0,0.0,
+2019-01-01,SCURX,Hartford Schroders US Small Cap Opportunities Fund Class SDR,NASDAQ,2015-09-28,,22.1,28.25,21.719999,27.65,27.65,0.0,0.0,0.0,0.0,
+2020-01-01,SCURX,Hartford Schroders US Small Cap Opportunities Fund Class SDR,NASDAQ,2015-09-28,,27.74,28.049999,16.049999,24.469999,24.469999,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,SMMCW,South Mountain Merger Corp WT,NASDAQ,2020-07-21,,1.15,1.52,1.065,1.46,1.46,945880.0,945880.0,4.489999999999999,13.463206896551727,1.3030106896551723

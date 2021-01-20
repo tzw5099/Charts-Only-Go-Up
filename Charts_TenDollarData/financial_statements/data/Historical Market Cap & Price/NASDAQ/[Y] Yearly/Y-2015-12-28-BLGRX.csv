@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,BLGRX,BMO Large-Cap Growth Fund Class R6,NASDAQ,2015-12-28,,14.75,14.91,14.65,14.65,10.546894,0.0,0.0,0.0,0.0,
+2016-01-01,BLGRX,BMO Large-Cap Growth Fund Class R6,NASDAQ,2015-12-28,,14.38,15.86,13.08,14.97,11.501204,0.0,0.0,0.0,0.0,
+2017-01-01,BLGRX,BMO Large-Cap Growth Fund Class R6,NASDAQ,2015-12-28,,15.08,19.110001,15.08,18.110001,14.787534,0.0,0.0,0.0,0.0,
+2018-01-01,BLGRX,BMO Large-Cap Growth Fund Class R6,NASDAQ,2015-12-28,,18.23,21.280001,14.39,15.44,14.673263,0.0,0.0,0.0,0.0,
+2019-01-01,BLGRX,BMO Large-Cap Growth Fund Class R6,NASDAQ,2015-12-28,,15.45,19.43,15.09,18.790001,18.790001,0.0,0.0,0.0,0.0,
+2020-01-01,BLGRX,BMO Large-Cap Growth Fund Class R6,NASDAQ,2015-12-28,,19.01,23.17,13.73,21.32,21.32,0.0,0.0,0.0,0.0,

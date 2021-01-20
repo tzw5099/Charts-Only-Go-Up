@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,DADA,,NASDAQ,2020-06-05,,18.3,34.94,14.6,28.18,28.18,100058161.0,100058161.0,3.326999999999999,0.32382191780821923,24.376602739726025

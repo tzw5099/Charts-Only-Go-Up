@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,ODMCX,JPMorgan Intrepid Mid Cap Fund Class C,NASDAQ,2019-04-26,,14.96,15.05,13.73,14.64,12.711663,0.0,0.0,0.0,0.0,
+2019-07-01,ODMCX,JPMorgan Intrepid Mid Cap Fund Class C,NASDAQ,2019-04-26,,14.77,15.07,14.02,14.85,12.894002,0.0,0.0,0.0,0.0,
+2019-10-01,ODMCX,JPMorgan Intrepid Mid Cap Fund Class C,NASDAQ,2019-04-26,,14.61,15.82,13.67,13.84,13.84,0.0,0.0,0.0,0.0,
+2020-01-01,ODMCX,JPMorgan Intrepid Mid Cap Fund Class C,NASDAQ,2019-04-26,,13.86,14.25,8.36,9.88,9.88,0.0,0.0,0.0,0.0,
+2020-04-01,ODMCX,JPMorgan Intrepid Mid Cap Fund Class C,NASDAQ,2019-04-26,,9.38,13.31,9.2,12.08,12.08,0.0,0.0,0.0,0.0,
+2020-07-01,ODMCX,JPMorgan Intrepid Mid Cap Fund Class C,NASDAQ,2019-04-26,,12.03,13.46,11.83,13.08,13.08,0.0,0.0,0.0,0.0,

@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,10.0,10.83,9.92,10.41,6.599188,0.0,0.0,0.0,0.0,
+2011-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,10.45,11.77,10.12,11.5,7.598665,0.0,0.0,0.0,0.0,
+2012-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,11.54,13.27,11.34,12.9,8.916787,0.0,0.0,0.0,0.0,
+2013-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,13.11,14.7,12.95,14.22,10.433137,0.0,0.0,0.0,0.0,
+2014-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,14.06,16.610001,13.9,15.34,11.932519,0.0,0.0,0.0,0.0,
+2015-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,15.37,16.08,12.21,12.52,10.194972,0.0,0.0,0.0,0.0,
+2016-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,12.43,15.42,11.31,13.94,11.684645,0.0,0.0,0.0,0.0,
+2017-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,14.0,15.76,13.65,14.55,13.068158,0.0,0.0,0.0,0.0,
+2018-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,14.63,14.77,11.98,12.33,11.916908,0.0,0.0,0.0,0.0,
+2019-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,12.31,15.3,12.31,15.29,15.29,0.0,0.0,0.0,0.0,
+2020-01-01,MTILX,"Morgan Stanley Institutional Fund, Inc. Global Infrastructure Portfolio Class L",NASDAQ,2010-09-20,,15.23,16.16,10.54,13.76,13.76,0.0,0.0,0.0,0.0,

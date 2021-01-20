@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,MUDSW,Mudrick Capital Acquisition Corporation Warrant,NASDAQ,2019-09-17,10192000.0,0.55,0.65,0.4,0.49,0.49,1235990.0,1235990.0,-0.41000000000000003,-1.4142884615384614,0.5633967307692307
+2020-01-01,MUDSW,Mudrick Capital Acquisition Corporation Warrant,NASDAQ,2019-09-17,11137989.45,0.53,1.25,0.2,1.19,1.19,21590967.0,21590967.0,1.0299999999999998,2.395505617977528,0.6122473033707863

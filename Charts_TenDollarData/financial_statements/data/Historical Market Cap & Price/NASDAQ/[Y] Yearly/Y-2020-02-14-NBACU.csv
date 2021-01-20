@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NBACU,Newborn Acquisition Corp.,NASDAQ,2020-02-14,,10.02,11.0,9.3,10.29,10.29,2729225.0,2729225.0,0.8530000000000002,0.07977777777777775,8.878863796296297

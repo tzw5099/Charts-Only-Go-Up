@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,SAQN,Software Acquisition Group Inc.,NASDAQ,2020-01-08,46670183.1,9.94,10.44,9.3,9.99,9.99,15938500.0,15938500.0,-1.0470000000000002,-0.0813125,9.861609296874994

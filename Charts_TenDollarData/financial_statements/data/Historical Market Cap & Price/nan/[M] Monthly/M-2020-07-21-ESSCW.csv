@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ESSCW,East Stone Acquisition Corporation,,2020-07-21,,0.0,0.249,0.17,0.185,0.185,637942.0,637942.0,0.0,0.0,0.2094516666666667
+2020-08-01,ESSCW,East Stone Acquisition Corporation,,2020-07-21,,0.0,0.22,0.14,0.17,0.17,1102009.0,1102009.0,0.0,0.0,0.17160846153846154
+2020-09-01,ESSCW,East Stone Acquisition Corporation,,2020-07-21,,0.0,0.28,0.15,0.24,0.24,889808.0,889808.0,0.0,0.0,0.21020000000000003

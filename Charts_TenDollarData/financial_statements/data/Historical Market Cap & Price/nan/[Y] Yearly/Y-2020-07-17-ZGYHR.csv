@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ZGYHR,Yunhong International,,2020-07-17,,0.272,0.32,0.151,0.22,0.22,243550.0,243550.0,0.18710000000000002,5.838115384615384,0.21071846153846158

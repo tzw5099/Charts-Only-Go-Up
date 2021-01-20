@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ZJZZT,ZJZZT,NASDAQ,2020-07-20,,30.1,48.0,11.66,48.0,48.0,933079.0,933079.0,0.0,0.0,21.02333333333333

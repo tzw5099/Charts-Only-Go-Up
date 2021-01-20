@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CHPM,CHP Merger Corp.,NASDAQ,2020-01-10,304500000000,9.9,10.55,9.2,10.15,10.15,17809801.0,17809801.0,1.8759999999999992,0.15630645161290324,9.643185483870965

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HNGIX,Harbor Global Leaders Fund Retirement Class,NASDAQ,2016-03-01,,19.790001,21.5,19.33,20.059999,16.821274,0.0,0.0,0.0,0.0,
+2017-01-01,HNGIX,Harbor Global Leaders Fund Retirement Class,NASDAQ,2016-03-01,,20.18,26.370001,20.18,24.16,22.13394,0.0,0.0,0.0,0.0,
+2018-01-01,HNGIX,Harbor Global Leaders Fund Retirement Class,NASDAQ,2016-03-01,,24.360001,27.889999,22.76,24.110001,22.622972,0.0,0.0,0.0,0.0,
+2019-01-01,HNGIX,Harbor Global Leaders Fund Retirement Class,NASDAQ,2016-03-01,,24.02,32.5,23.42,30.93,30.93,0.0,0.0,0.0,0.0,
+2020-01-01,HNGIX,Harbor Global Leaders Fund Retirement Class,NASDAQ,2016-03-01,,31.26,36.169998,21.98,34.68,34.68,0.0,0.0,0.0,0.0,

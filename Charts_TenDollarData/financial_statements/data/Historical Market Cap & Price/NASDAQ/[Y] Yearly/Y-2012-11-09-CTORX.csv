@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,14.09,14.49,13.96,14.19,10.940613,0.0,0.0,0.0,0.0,
+2013-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,14.33,15.48,14.33,14.46,11.148787,0.0,0.0,0.0,0.0,
+2014-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,14.46,15.22,14.46,14.74,11.714244,0.0,0.0,0.0,0.0,
+2015-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,14.75,15.06,14.15,14.19,11.752213,0.0,0.0,0.0,0.0,
+2016-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,14.13,14.72,13.62,14.47,12.303885,0.0,0.0,0.0,0.0,
+2017-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,14.49,14.97,14.47,14.5,12.979758,0.0,0.0,0.0,0.0,
+2018-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,14.5,14.6,13.58,13.72,12.992092,0.0,0.0,0.0,0.0,
+2019-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,13.73,15.64,13.73,14.97,14.97,0.0,0.0,0.0,0.0,
+2020-01-01,CTORX,Columbia Thermostat Fund Advisor Class,NASDAQ,2012-11-09,,15.01,18.32,13.7,17.950001,17.950001,0.0,0.0,0.0,0.0,

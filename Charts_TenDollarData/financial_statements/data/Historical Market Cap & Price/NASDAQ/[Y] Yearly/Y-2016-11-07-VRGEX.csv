@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,VRGEX,Virtus Duff & Phelps Global Real Estate Securities Fund Class R6,NASDAQ,2016-11-07,,27.16,27.51,26.08,27.030001,23.434551,0.0,0.0,0.0,0.0,
+2017-01-01,VRGEX,Virtus Duff & Phelps Global Real Estate Securities Fund Class R6,NASDAQ,2016-11-07,,26.969999,30.33,26.559999,29.639999,26.52351,0.0,0.0,0.0,0.0,
+2018-01-01,VRGEX,Virtus Duff & Phelps Global Real Estate Securities Fund Class R6,NASDAQ,2016-11-07,,29.549999,31.200001,26.709999,27.360001,25.310436,0.0,0.0,0.0,0.0,
+2019-01-01,VRGEX,Virtus Duff & Phelps Global Real Estate Securities Fund Class R6,NASDAQ,2016-11-07,,26.92,35.459999,26.92,32.98,32.98,0.0,0.0,0.0,0.0,
+2020-01-01,VRGEX,Virtus Duff & Phelps Global Real Estate Securities Fund Class R6,NASDAQ,2016-11-07,,32.650002,35.009998,20.450001,30.059999,30.059999,0.0,0.0,0.0,0.0,

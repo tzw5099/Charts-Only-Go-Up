@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,PRJQX,PGIM Jennison Global Opportunities Fund-Class R6,NASDAQ,2014-12-22,,14.15,14.15,13.91,13.91,13.91,0.0,0.0,0.0,0.0,
+2015-01-01,PRJQX,PGIM Jennison Global Opportunities Fund-Class R6,NASDAQ,2014-12-22,,13.92,16.51,13.58,15.69,15.69,0.0,0.0,0.0,0.0,
+2016-01-01,PRJQX,PGIM Jennison Global Opportunities Fund-Class R6,NASDAQ,2014-12-22,,15.25,16.110001,12.92,15.0,15.0,0.0,0.0,0.0,0.0,
+2017-01-01,PRJQX,PGIM Jennison Global Opportunities Fund-Class R6,NASDAQ,2014-12-22,,15.15,21.870001,15.15,21.52,21.52,0.0,0.0,0.0,0.0,
+2018-01-01,PRJQX,PGIM Jennison Global Opportunities Fund-Class R6,NASDAQ,2014-12-22,,21.91,25.17,19.360001,20.98,20.98,0.0,0.0,0.0,0.0,
+2019-01-01,PRJQX,PGIM Jennison Global Opportunities Fund-Class R6,NASDAQ,2014-12-22,,20.82,27.709999,20.23,27.41,27.41,0.0,0.0,0.0,0.0,
+2020-01-01,PRJQX,PGIM Jennison Global Opportunities Fund-Class R6,NASDAQ,2014-12-22,,27.889999,42.790001,21.23,38.369999,38.369999,0.0,0.0,0.0,0.0,

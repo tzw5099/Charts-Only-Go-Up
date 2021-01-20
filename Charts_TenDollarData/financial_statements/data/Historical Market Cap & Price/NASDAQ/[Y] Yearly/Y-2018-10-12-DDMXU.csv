@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,DDMXU,DD3 Acquisition Corp. Units,NASDAQ,2018-10-12,,10.02,10.1,9.9,10.02,10.02,2156600.0,2156600.0,0.1,0.01881481481481482,7.766357962962965
+2019-01-01,DDMXU,DD3 Acquisition Corp. Units,NASDAQ,2018-10-12,,9.98,10.8,9.95,10.8,10.8,1784200.0,1784200.0,0.52,0.01996825396825397,3.9159128174603155
+2020-01-01,DDMXU,DD3 Acquisition Corp. Units,NASDAQ,2018-10-12,,10.8,10.8,10.8,10.8,10.8,0.0,0.0,0.0,0.0,0.0

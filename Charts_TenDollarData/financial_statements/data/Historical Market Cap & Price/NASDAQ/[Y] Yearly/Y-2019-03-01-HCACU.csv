@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,HCACU,Hennessy Capital Acquisition Corp. IV,NASDAQ,2019-03-01,327463650.0,10.0,11.0,10.0,10.91,10.91,11463267.0,11463267.0,0.9478000000000002,0.0666857142857143,10.378243142857144
+2020-01-01,HCACU,Hennessy Capital Acquisition Corp. IV,NASDAQ,2019-03-01,453226500.0,10.73,16.87,9.92,15.1,15.1,1949472.0,1949472.0,-6.058799999999998,-0.4420121951219513,11.376831951219511

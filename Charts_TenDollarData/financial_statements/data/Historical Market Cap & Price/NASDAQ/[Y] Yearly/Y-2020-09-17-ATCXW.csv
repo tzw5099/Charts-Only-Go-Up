@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ATCXW,"Atlas Technical Consultants, Inc.",NASDAQ,2020-09-17,3148968.7320000003,0.5,0.67,0.3999,0.55,0.55,745512.0,745512.0,2.5908000000000007,18.730133333333338,0.5524846666666666

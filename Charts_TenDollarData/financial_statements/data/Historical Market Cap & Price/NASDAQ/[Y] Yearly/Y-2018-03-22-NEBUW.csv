@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,NEBUW,Nebula Acquisition Corporation Warrant,NASDAQ,2018-03-22,,1.05,2.5,0.85,1.35,1.35,178800.0,178800.0,1.48,0.7838214285714286,0.3009864285714286
+2019-01-01,NEBUW,Nebula Acquisition Corporation Warrant,NASDAQ,2018-03-22,,1.35,1.39,0.57,1.25,1.25,2472700.0,2472700.0,0.41000000000000014,0.23125,0.27705019841269835
+2020-01-01,NEBUW,Nebula Acquisition Corporation Warrant,NASDAQ,2018-03-22,,1.25,3.74,0.43,2.85,2.85,10923400.0,10923400.0,2.9099999999999993,2.1177837837837843,0.9747745945945948

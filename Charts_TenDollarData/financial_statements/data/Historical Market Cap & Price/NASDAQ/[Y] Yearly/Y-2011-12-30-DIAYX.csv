@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,16.93,16.93,16.93,16.93,14.144565,0.0,0.0,0.0,0.0,
+2012-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,17.209999,18.790001,16.74,18.35,15.330937,0.0,0.0,0.0,0.0,
+2013-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,18.67,22.629999,18.67,22.52,18.916843,0.0,0.0,0.0,0.0,
+2014-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,22.4,24.5,21.870001,24.25,20.370045,0.0,0.0,0.0,0.0,
+2015-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,24.23,25.02,22.74,23.83,20.110046,0.0,0.0,0.0,0.0,
+2016-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,23.66,26.59,21.76,25.530001,22.262884,0.0,0.0,0.0,0.0,
+2017-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,25.74,27.01,25.719999,26.49,23.613873,0.0,0.0,0.0,0.0,
+2018-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,26.629999,27.84,22.68,23.42,21.981215,0.0,0.0,0.0,0.0,
+2019-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,23.639999,28.610001,23.200001,27.1,27.1,0.0,0.0,0.0,0.0,
+2020-01-01,DIAYX,Diamond Hill Long-Short Fund Class Y,NASDAQ,2011-12-30,,27.27,27.35,18.73,24.24,24.24,0.0,0.0,0.0,0.0,

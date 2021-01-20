@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,TIDDX,T. Rowe Price International Discovery Fund I Class,NASDAQ,2015-12-17,,53.209999,54.330002,53.07,53.959999,47.099697,0.0,0.0,0.0,0.0,
+2016-01-01,TIDDX,T. Rowe Price International Discovery Fund I Class,NASDAQ,2015-12-17,,52.93,57.52,47.470001,53.200001,47.610081,0.0,0.0,0.0,0.0,
+2017-01-01,TIDDX,T. Rowe Price International Discovery Fund I Class,NASDAQ,2015-12-17,,53.32,72.68,53.32,71.449997,66.281731,0.0,0.0,0.0,0.0,
+2018-01-01,TIDDX,T. Rowe Price International Discovery Fund I Class,NASDAQ,2015-12-17,,72.239998,76.610001,53.240002,55.5,54.733116,0.0,0.0,0.0,0.0,
+2019-01-01,TIDDX,T. Rowe Price International Discovery Fund I Class,NASDAQ,2015-12-17,,55.43,68.550003,54.5,68.43,68.43,0.0,0.0,0.0,0.0,
+2020-01-01,TIDDX,T. Rowe Price International Discovery Fund I Class,NASDAQ,2015-12-17,,69.089996,82.43,47.32,81.220001,81.220001,0.0,0.0,0.0,0.0,

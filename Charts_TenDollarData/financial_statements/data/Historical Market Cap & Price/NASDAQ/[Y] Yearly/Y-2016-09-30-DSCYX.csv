@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,DSCYX,BNY Mellon Opportunistic Small Cap Fund Class Y,NASDAQ,2016-09-30,,30.620001,34.57,27.780001,33.279999,23.065878,0.0,0.0,0.0,0.0,
+2017-01-01,DSCYX,BNY Mellon Opportunistic Small Cap Fund Class Y,NASDAQ,2016-09-30,,33.639999,41.060001,33.310001,36.84,28.773378,0.0,0.0,0.0,0.0,
+2018-01-01,DSCYX,BNY Mellon Opportunistic Small Cap Fund Class Y,NASDAQ,2016-09-30,,37.220001,40.73,22.01,23.24,23.094219,0.0,0.0,0.0,0.0,
+2019-01-01,DSCYX,BNY Mellon Opportunistic Small Cap Fund Class Y,NASDAQ,2016-09-30,,23.530001,28.15,23.299999,28.059999,28.059999,0.0,0.0,0.0,0.0,
+2020-01-01,DSCYX,BNY Mellon Opportunistic Small Cap Fund Class Y,NASDAQ,2016-09-30,,28.110001,28.950001,15.98,27.1,27.1,0.0,0.0,0.0,0.0,

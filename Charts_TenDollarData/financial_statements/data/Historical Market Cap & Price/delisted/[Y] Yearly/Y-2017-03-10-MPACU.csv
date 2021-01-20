@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,MPACU,Matlin & Partners Acquisition Corporation Units,delisted,2017-03-10,,10.0,11.0,10.0,10.15,,7798558.0,7798558.0,10.150000000000006,0.008641176470588234,10.083192771084338
+2018-01-01,MPACU,Matlin & Partners Acquisition Corporation Units,delisted,2017-03-10,,10.17,12.0,9.999,10.0,,2702549.0,2702549.0,-0.15000000000000013,-0.010631067961165063,10.354510416666669

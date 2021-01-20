@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,RPTIX,T. Rowe Price Mid-Cap Growth Fund I Class,NASDAQ,2015-08-28,,79.779999,82.519997,71.809998,73.309998,55.525074,0.0,0.0,0.0,0.0,
+2016-01-01,RPTIX,T. Rowe Price Mid-Cap Growth Fund I Class,NASDAQ,2015-08-28,,72.040001,79.769997,62.93,75.360001,59.090771,0.0,0.0,0.0,0.0,
+2017-01-01,RPTIX,T. Rowe Price Mid-Cap Growth Fund I Class,NASDAQ,2015-08-28,,75.839996,94.370003,75.839996,87.010002,73.84539,0.0,0.0,0.0,0.0,
+2018-01-01,RPTIX,T. Rowe Price Mid-Cap Growth Fund I Class,NASDAQ,2015-08-28,,87.779999,99.010002,71.699997,76.370003,72.376999,0.0,0.0,0.0,0.0,
+2019-01-01,RPTIX,T. Rowe Price Mid-Cap Growth Fund I Class,NASDAQ,2015-08-28,,76.029999,99.080002,74.309998,95.309998,95.309998,0.0,0.0,0.0,0.0,
+2020-01-01,RPTIX,T. Rowe Price Mid-Cap Growth Fund I Class,NASDAQ,2015-08-28,,96.0,105.089996,63.439999,101.040001,101.040001,0.0,0.0,0.0,0.0,

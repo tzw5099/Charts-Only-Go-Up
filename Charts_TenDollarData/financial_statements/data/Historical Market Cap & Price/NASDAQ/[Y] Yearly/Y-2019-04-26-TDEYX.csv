@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TDEYX,Touchstone Dynamic Equity Fund Class Y,NASDAQ,2019-04-26,,15.62,16.25,13.37,13.42,13.42,0.0,0.0,0.0,0.0,
+2020-01-01,TDEYX,Touchstone Dynamic Equity Fund Class Y,NASDAQ,2019-04-26,,13.5,13.92,9.82,12.94,12.94,0.0,0.0,0.0,0.0,

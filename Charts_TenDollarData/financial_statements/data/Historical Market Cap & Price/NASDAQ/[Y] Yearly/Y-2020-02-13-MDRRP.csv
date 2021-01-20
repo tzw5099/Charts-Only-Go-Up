@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,MDRRP,"Medalist Diversified REIT, Inc.",NASDAQ,2020-02-13,,18.7306,20.7396,10.5579,12.75,12.75,142884.0,142884.0,-13.879,-0.8658041237113399,11.774045154639175

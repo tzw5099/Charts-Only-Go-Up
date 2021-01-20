@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TPPAX,T. Rowe Price Personal Strategy Balanced Fund I Class,NASDAQ,2016-03-24,,20.82,22.299999,20.68,21.74,18.162537,0.0,0.0,0.0,0.0,
+2017-01-01,TPPAX,T. Rowe Price Personal Strategy Balanced Fund I Class,NASDAQ,2016-03-24,,21.85,25.15,21.85,24.09,21.33396,0.0,0.0,0.0,0.0,
+2018-01-01,TPPAX,T. Rowe Price Personal Strategy Balanced Fund I Class,NASDAQ,2016-03-24,,24.09,25.219999,20.57,21.18,20.397392,0.0,0.0,0.0,0.0,
+2019-01-01,TPPAX,T. Rowe Price Personal Strategy Balanced Fund I Class,NASDAQ,2016-03-24,,21.18,24.52,21.0,24.379999,24.298771,0.0,0.0,0.0,0.0,
+2020-01-01,TPPAX,T. Rowe Price Personal Strategy Balanced Fund I Class,NASDAQ,2016-03-24,,24.549999,25.99,18.93,25.370001,25.370001,0.0,0.0,0.0,0.0,

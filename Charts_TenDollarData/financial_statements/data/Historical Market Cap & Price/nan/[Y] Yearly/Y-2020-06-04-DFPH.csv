@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,DFPH,Healthcare Acquisitions Corp. Class A Common Stock,,2020-06-04,293250000.0,9.7,10.9,9.7,10.28,10.28,2210575.0,2210575.0,-0.5670000000000002,-0.0787936507936508,9.6424026984127

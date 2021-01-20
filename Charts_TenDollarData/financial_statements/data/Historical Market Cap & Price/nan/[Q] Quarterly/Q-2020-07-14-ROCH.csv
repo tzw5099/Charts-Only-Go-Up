@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ROCH,,,2020-07-14,24434353.8,10.2,10.2,9.76,9.93,9.93,278352.0,278352.0,0.7249999999999999,0.21014285714285721,7.38319057142857

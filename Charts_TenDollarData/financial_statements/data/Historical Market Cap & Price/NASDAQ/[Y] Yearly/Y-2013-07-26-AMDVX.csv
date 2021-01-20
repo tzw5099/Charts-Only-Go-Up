@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,AMDVX,American Century Mid Cap Value Fund R6 Class,NASDAQ,2013-07-26,,15.66,16.540001,15.09,15.73,9.462068,0.0,0.0,0.0,0.0,
+2014-01-01,AMDVX,American Century Mid Cap Value Fund R6 Class,NASDAQ,2013-07-26,,15.57,18.1,15.08,16.459999,11.053367,0.0,0.0,0.0,0.0,
+2015-01-01,AMDVX,American Century Mid Cap Value Fund R6 Class,NASDAQ,2013-07-26,,16.459999,16.98,14.34,14.6,10.910424,0.0,0.0,0.0,0.0,
+2016-01-01,AMDVX,American Century Mid Cap Value Fund R6 Class,NASDAQ,2013-07-26,,14.45,18.110001,13.24,17.219999,13.441165,0.0,0.0,0.0,0.0,
+2017-01-01,AMDVX,American Century Mid Cap Value Fund R6 Class,NASDAQ,2013-07-26,,17.34,18.860001,17.25,17.52,15.047481,0.0,0.0,0.0,0.0,
+2018-01-01,AMDVX,American Century Mid Cap Value Fund R6 Class,NASDAQ,2013-07-26,,17.639999,18.49,12.8,13.47,13.214653,0.0,0.0,0.0,0.0,
+2019-01-01,AMDVX,American Century Mid Cap Value Fund R6 Class,NASDAQ,2013-07-26,,13.49,17.110001,13.31,17.09,17.043505,0.0,0.0,0.0,0.0,
+2020-01-01,AMDVX,American Century Mid Cap Value Fund R6 Class,NASDAQ,2013-07-26,,17.09,17.27,10.47,15.24,15.24,0.0,0.0,0.0,0.0,

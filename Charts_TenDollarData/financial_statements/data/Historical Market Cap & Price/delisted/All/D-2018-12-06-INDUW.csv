@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-12-06,INDUW,Industrea Acquisition Corp Warrants,delisted,2018-12-06,,0.69,0.69,0.64,0.68,,127800.0,127800.0,0.68,0.0,0.669868

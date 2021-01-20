@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BEAM,BEAM Inc,delisted,2020-09-17,1422599478.6301398,24.0,31.8,13.0,28.389999,28.389999,67517332.0,67517332.0,-17.105000000000008,-0.331442307692308,22.68527557692307

@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,APXT,Apex Technology Acquisition Corporation,NASDAQ,2019-11-05,442513356.6,9.78,10.43,9.78,9.87,9.87,1626200.0,1626200.0,0.20700000000000002,0.17866666666666667,9.969860833333334
+2020-01-01,APXT,Apex Technology Acquisition Corporation,NASDAQ,2019-11-05,454511999.99999994,9.88,10.99,9.125,10.2,10.2,21966452.0,21966452.0,-1.7120000000000006,-0.10562732919254661,10.055337329192543

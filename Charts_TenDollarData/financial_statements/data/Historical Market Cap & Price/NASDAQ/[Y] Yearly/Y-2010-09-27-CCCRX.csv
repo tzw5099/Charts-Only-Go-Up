@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,12.62,14.29,12.57,14.29,9.416194,0.0,0.0,0.0,0.0,
+2011-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,14.47,15.49,12.28,13.74,9.286602,0.0,0.0,0.0,0.0,
+2012-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,14.03,16.51,14.02,16.120001,10.967172,0.0,0.0,0.0,0.0,
+2013-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,16.57,21.200001,16.530001,20.530001,14.811541,0.0,0.0,0.0,0.0,
+2014-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,20.370001,23.24,19.27,21.559999,16.623781,0.0,0.0,0.0,0.0,
+2015-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,21.52,22.92,20.110001,20.969999,17.053804,0.0,0.0,0.0,0.0,
+2016-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,20.68,22.940001,18.790001,22.389999,18.424858,0.0,0.0,0.0,0.0,
+2017-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,22.59,26.83,22.59,25.719999,22.320684,0.0,0.0,0.0,0.0,
+2018-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,25.969999,27.629999,20.09,21.360001,20.221062,0.0,0.0,0.0,0.0,
+2019-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,21.440001,27.4,20.91,26.75,26.75,0.0,0.0,0.0,0.0,
+2020-01-01,CCCRX,Columbia Contrarian Core Fund Class R,NASDAQ,2010-09-27,,27.01,30.42,19.01,28.82,28.82,0.0,0.0,0.0,0.0,

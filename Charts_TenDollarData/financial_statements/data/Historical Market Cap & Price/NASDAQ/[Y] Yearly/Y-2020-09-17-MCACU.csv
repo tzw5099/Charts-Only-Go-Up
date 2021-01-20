@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,MCACU,,NASDAQ,2020-09-17,70484796.0,10.05,10.805,9.98,10.59,10.59,2426846.0,2426846.0,0.48450000000000004,0.07037681159420289,10.005490289855071

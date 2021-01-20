@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,WPSIX,AB Concentrated Growth Fund Class I,NASDAQ,2014-03-10,,25.18,28.809999,23.77,27.76,23.32361,0.0,0.0,0.0,0.0,
+2015-01-01,WPSIX,AB Concentrated Growth Fund Class I,NASDAQ,2014-03-10,,27.66,29.91,26.4,27.35,23.64036,0.0,0.0,0.0,0.0,
+2016-01-01,WPSIX,AB Concentrated Growth Fund Class I,NASDAQ,2014-03-10,,26.75,29.26,23.43,28.709999,24.924074,0.0,0.0,0.0,0.0,
+2017-01-01,WPSIX,AB Concentrated Growth Fund Class I,NASDAQ,2014-03-10,,28.950001,35.360001,28.950001,34.110001,30.646841,0.0,0.0,0.0,0.0,
+2018-01-01,WPSIX,AB Concentrated Growth Fund Class I,NASDAQ,2014-03-10,,34.5,39.630001,30.040001,32.169998,31.134449,0.0,0.0,0.0,0.0,
+2019-01-01,WPSIX,AB Concentrated Growth Fund Class I,NASDAQ,2014-03-10,,32.09,44.27,31.299999,43.5,43.5,0.0,0.0,0.0,0.0,
+2020-01-01,WPSIX,AB Concentrated Growth Fund Class I,NASDAQ,2014-03-10,,43.889999,48.889999,29.639999,45.759998,45.759998,0.0,0.0,0.0,0.0,

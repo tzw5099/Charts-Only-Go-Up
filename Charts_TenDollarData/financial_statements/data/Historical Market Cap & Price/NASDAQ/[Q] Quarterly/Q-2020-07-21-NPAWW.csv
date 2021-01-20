@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,NPAWW,New Providence Acquisition Corp.,NASDAQ,2020-07-21,6023766.8,1.01,1.1499,0.72,0.86,0.86,1147151.0,1147151.0,-4.0112000000000005,-12.034848484848483,0.8939515151515153

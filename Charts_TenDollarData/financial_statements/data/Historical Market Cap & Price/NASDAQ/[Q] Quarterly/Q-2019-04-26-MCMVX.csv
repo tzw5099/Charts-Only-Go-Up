@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,MCMVX,Monongahela All Cap Value Fund,NASDAQ,2019-04-26,,13.94,14.06,13.08,14.06,13.637907,0.0,0.0,0.0,0.0,
+2019-07-01,MCMVX,Monongahela All Cap Value Fund,NASDAQ,2019-04-26,,14.13,14.4,13.2,14.27,13.841603,0.0,0.0,0.0,0.0,
+2019-10-01,MCMVX,Monongahela All Cap Value Fund,NASDAQ,2019-04-26,,14.06,15.37,13.72,14.94,14.94,0.0,0.0,0.0,0.0,
+2020-01-01,MCMVX,Monongahela All Cap Value Fund,NASDAQ,2019-04-26,,14.97,15.24,9.64,11.23,11.23,0.0,0.0,0.0,0.0,
+2020-04-01,MCMVX,Monongahela All Cap Value Fund,NASDAQ,2019-04-26,,10.69,14.59,10.53,13.58,13.58,0.0,0.0,0.0,0.0,
+2020-07-01,MCMVX,Monongahela All Cap Value Fund,NASDAQ,2019-04-26,,13.53,14.66,13.34,14.33,14.33,0.0,0.0,0.0,0.0,

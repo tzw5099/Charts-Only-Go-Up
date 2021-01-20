@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,JHQCX,JPMorgan Hedged Equity Fund Class C,NASDAQ,2014-05-30,,15.67,16.43,15.38,16.43,15.974256,0.0,0.0,0.0,0.0,
+2015-01-01,JHQCX,JPMorgan Hedged Equity Fund Class C,NASDAQ,2014-05-30,,16.440001,16.879999,15.39,15.96,15.623582,0.0,0.0,0.0,0.0,
+2016-01-01,JHQCX,JPMorgan Hedged Equity Fund Class C,NASDAQ,2014-05-30,,15.88,17.25,14.9,17.23,16.98893,0.0,0.0,0.0,0.0,
+2017-01-01,JHQCX,JPMorgan Hedged Equity Fund Class C,NASDAQ,2014-05-30,,17.309999,19.200001,17.309999,19.200001,19.011637,0.0,0.0,0.0,0.0,
+2018-01-01,JHQCX,JPMorgan Hedged Equity Fund Class C,NASDAQ,2014-05-30,,19.280001,20.030001,18.52,18.82,18.733141,0.0,0.0,0.0,0.0,
+2019-01-01,JHQCX,JPMorgan Hedged Equity Fund Class C,NASDAQ,2014-05-30,,18.77,21.08,18.59,21.07,21.06785,0.0,0.0,0.0,0.0,
+2020-01-01,JHQCX,JPMorgan Hedged Equity Fund Class C,NASDAQ,2014-05-30,,21.17,22.77,17.629999,22.58,22.58,0.0,0.0,0.0,0.0,

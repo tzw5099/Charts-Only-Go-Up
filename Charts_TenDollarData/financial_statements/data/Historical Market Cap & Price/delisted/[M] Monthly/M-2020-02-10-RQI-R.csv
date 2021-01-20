@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-02-01,RQI-R,,delisted,2020-02-10,,0.0,0.03,0.01,0.01,0.01,12348262.0,12348262.0,0.0,0.0,0.01889

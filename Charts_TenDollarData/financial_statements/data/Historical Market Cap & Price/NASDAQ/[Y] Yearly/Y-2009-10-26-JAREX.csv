@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,18.549999,19.98,18.43,19.940001,7.792864,0.0,0.0,0.0,0.0,
+2010-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,19.9,23.040001,18.24,20.540001,8.501027,0.0,0.0,0.0,0.0,
+2011-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,20.75,21.91,16.219999,18.299999,7.961166,0.0,0.0,0.0,0.0,
+2012-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,18.530001,23.17,18.309999,21.99,10.667323,0.0,0.0,0.0,0.0,
+2013-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,22.33,24.48,19.889999,20.08,10.925714,0.0,0.0,0.0,0.0,
+2014-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,20.08,21.530001,19.33,19.780001,11.909241,0.0,0.0,0.0,0.0,
+2015-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,19.91,21.709999,18.24,18.24,12.16989,0.0,0.0,0.0,0.0,
+2016-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,17.959999,19.629999,16.07,17.719999,13.026432,0.0,0.0,0.0,0.0,
+2017-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,17.76,19.389999,17.76,18.709999,15.214774,0.0,0.0,0.0,0.0,
+2018-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,18.77,19.129999,15.39,15.58,13.867644,0.0,0.0,0.0,0.0,
+2019-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,15.42,18.9,15.42,18.200001,17.772709,0.0,0.0,0.0,0.0,
+2020-01-01,JAREX,James Alpha Global Real Estate Investments Portfolio Class A Shares,NASDAQ,2009-10-26,,18.09,19.17,11.39,15.78,15.78,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTB,iShares iBonds Dec 2022 Term Treasury ETF,NASDAQ,2020-03-03,,25.37,25.9,25.31,25.559999,25.559999,105339.0,105339.0,-0.31640000000000007,-0.019603174603174605,19.876443968253973

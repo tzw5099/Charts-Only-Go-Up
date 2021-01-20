@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,CLOU,Global X Cloud Computing ETF Global X Cloud Computing ETF,NASDAQ,2019-04-16,,15.1258,16.9444,14.2265,15.747,15.747,58510600.0,58510600.0,-4.389000000000001,-0.15115555555555546,15.453982444444447
+2020-01-01,CLOU,Global X Cloud Computing ETF Global X Cloud Computing ETF,NASDAQ,2019-04-16,,15.83,26.059999,12.36,22.68,22.68,151101721.0,151101721.0,3.220000000000003,0.159653631284916,18.923225530726256

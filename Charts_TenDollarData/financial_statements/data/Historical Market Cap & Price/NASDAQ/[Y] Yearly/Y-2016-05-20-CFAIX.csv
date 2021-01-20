@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,CFAIX,Calvert Conservative Allocation Fund Class I,NASDAQ,2016-05-20,,16.07,16.59,15.96,16.16,14.19447,0.0,0.0,0.0,0.0,
+2017-01-01,CFAIX,Calvert Conservative Allocation Fund Class I,NASDAQ,2016-05-20,,16.200001,17.620001,16.200001,17.120001,15.601279,0.0,0.0,0.0,0.0,
+2018-01-01,CFAIX,Calvert Conservative Allocation Fund Class I,NASDAQ,2016-05-20,,17.15,17.51,15.82,15.88,15.2047,0.0,0.0,0.0,0.0,
+2019-01-01,CFAIX,Calvert Conservative Allocation Fund Class I,NASDAQ,2016-05-20,,15.88,18.18,15.82,17.620001,17.545753,0.0,0.0,0.0,0.0,
+2020-01-01,CFAIX,Calvert Conservative Allocation Fund Class I,NASDAQ,2016-05-20,,17.700001,18.690001,14.95,18.52,18.52,0.0,0.0,0.0,0.0,

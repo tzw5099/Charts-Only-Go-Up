@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ONEM,"1Life Healthcare, Inc.",NASDAQ,2020-01-31,3734050360.0,18.0,44.87,15.0,29.6,29.6,243880235.0,243880235.0,-0.01699999999999735,0.2832830188679244,27.94689490566038

@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,11.13,14.5,10.68,14.13,11.025274,0.0,0.0,0.0,0.0,
+2010-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,14.45,17.360001,12.94,17.360001,13.922421,0.0,0.0,0.0,0.0,
+2011-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,17.49,18.33,12.86,13.25,11.680151,0.0,0.0,0.0,0.0,
+2012-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,13.61,15.66,13.31,15.63,13.802167,0.0,0.0,0.0,0.0,
+2013-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,15.91,19.26,15.56,19.049999,16.823124,0.0,0.0,0.0,0.0,
+2014-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,18.9,20.219999,17.549999,18.09,16.474779,0.0,0.0,0.0,0.0,
+2015-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,18.129999,20.27,17.17,18.17,16.717981,0.0,0.0,0.0,0.0,
+2016-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,17.83,19.82,15.87,18.25,16.935061,0.0,0.0,0.0,0.0,
+2017-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,18.35,24.389999,18.35,24.190001,23.258606,0.0,0.0,0.0,0.0,
+2018-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,24.450001,26.209999,18.540001,19.290001,19.149151,0.0,0.0,0.0,0.0,
+2019-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,19.280001,24.9,19.02,24.879999,24.879999,0.0,0.0,0.0,0.0,
+2020-01-01,BINIX,Baron International Growth Fund Institutional Shares,NASDAQ,2009-05-29,,25.129999,28.24,17.27,27.15,27.15,0.0,0.0,0.0,0.0,

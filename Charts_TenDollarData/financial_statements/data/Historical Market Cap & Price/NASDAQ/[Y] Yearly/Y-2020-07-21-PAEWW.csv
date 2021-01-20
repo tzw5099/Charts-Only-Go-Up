@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,PAEWW,PAE Incorporated,NASDAQ,2020-07-21,186871130.95000002,2.35,2.72,1.98,2.45,2.45,606370.0,606370.0,-4.4999,-8.580952380952379,2.162272380952381

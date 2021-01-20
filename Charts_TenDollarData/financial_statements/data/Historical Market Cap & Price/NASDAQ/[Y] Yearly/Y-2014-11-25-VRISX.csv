@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,VRISX,Virtus KAR International Small-Cap Fund Class R6,NASDAQ,2014-11-25,,13.35,13.35,11.48,11.64,10.335546,0.0,0.0,0.0,0.0,
+2015-01-01,VRISX,Virtus KAR International Small-Cap Fund Class R6,NASDAQ,2014-11-25,,11.57,13.25,10.8,11.15,10.257191,0.0,0.0,0.0,0.0,
+2016-01-01,VRISX,Virtus KAR International Small-Cap Fund Class R6,NASDAQ,2014-11-25,,10.98,13.32,9.89,13.12,12.429621,0.0,0.0,0.0,0.0,
+2017-01-01,VRISX,Virtus KAR International Small-Cap Fund Class R6,NASDAQ,2014-11-25,,13.12,16.559999,13.12,16.559999,15.993253,0.0,0.0,0.0,0.0,
+2018-01-01,VRISX,Virtus KAR International Small-Cap Fund Class R6,NASDAQ,2014-11-25,,16.76,18.35,14.88,15.23,14.922218,0.0,0.0,0.0,0.0,
+2019-01-01,VRISX,Virtus KAR International Small-Cap Fund Class R6,NASDAQ,2014-11-25,,15.21,19.4,15.08,19.049999,19.049999,0.0,0.0,0.0,0.0,
+2020-01-01,VRISX,Virtus KAR International Small-Cap Fund Class R6,NASDAQ,2014-11-25,,19.08,19.690001,12.08,19.42,19.42,0.0,0.0,0.0,0.0,

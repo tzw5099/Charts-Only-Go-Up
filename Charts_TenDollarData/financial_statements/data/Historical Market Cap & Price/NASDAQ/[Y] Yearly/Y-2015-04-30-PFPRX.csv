@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PFPRX,Parnassus Fund Institutional Shares,NASDAQ,2015-04-30,,49.439999,51.23,40.450001,40.450001,32.918163,0.0,0.0,0.0,0.0,
+2016-01-01,PFPRX,Parnassus Fund Institutional Shares,NASDAQ,2015-04-30,,39.939999,46.07,34.509998,44.950001,36.921665,0.0,0.0,0.0,0.0,
+2017-01-01,PFPRX,Parnassus Fund Institutional Shares,NASDAQ,2015-04-30,,45.549999,50.990002,45.41,48.25,42.938416,0.0,0.0,0.0,0.0,
+2018-01-01,PFPRX,Parnassus Fund Institutional Shares,NASDAQ,2015-04-30,,48.75,51.0,39.049999,40.52,38.79945,0.0,0.0,0.0,0.0,
+2019-01-01,PFPRX,Parnassus Fund Institutional Shares,NASDAQ,2015-04-30,,40.490002,51.84,39.75,50.43,50.43,0.0,0.0,0.0,0.0,
+2020-01-01,PFPRX,Parnassus Fund Institutional Shares,NASDAQ,2015-04-30,,50.68,56.740002,35.080002,54.220001,54.220001,0.0,0.0,0.0,0.0,

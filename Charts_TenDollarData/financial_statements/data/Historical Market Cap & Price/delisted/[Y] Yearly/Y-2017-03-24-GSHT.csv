@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,GSHT,Gores Holdings II Inc,delisted,2017-03-24,,10.0,11.24,9.3,9.94,,11704360.0,11704360.0,9.939999999999996,0.007028169014084503,9.977432824427483
+2018-01-01,GSHT,Gores Holdings II Inc,delisted,2017-03-24,,9.9,10.88,9.86,10.51,,57330531.0,57330531.0,0.5700000000000001,0.0325593220338983,10.163068553459118

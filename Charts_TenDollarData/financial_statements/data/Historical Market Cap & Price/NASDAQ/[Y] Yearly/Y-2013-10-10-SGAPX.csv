@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,SGAPX,Virtus SGA Global Growth I Class,NASDAQ,2013-10-10,,13.09,13.84,13.09,13.78,11.733991,0.0,0.0,0.0,0.0,
+2014-01-01,SGAPX,Virtus SGA Global Growth I Class,NASDAQ,2013-10-10,,13.61,14.11,12.78,13.52,11.858686,0.0,0.0,0.0,0.0,
+2015-01-01,SGAPX,Virtus SGA Global Growth I Class,NASDAQ,2013-10-10,,13.5,15.05,13.07,14.34,12.774319,0.0,0.0,0.0,0.0,
+2016-01-01,SGAPX,Virtus SGA Global Growth I Class,NASDAQ,2013-10-10,,13.99,16.27,12.56,14.38,13.291183,0.0,0.0,0.0,0.0,
+2017-01-01,SGAPX,Virtus SGA Global Growth I Class,NASDAQ,2013-10-10,,14.47,19.09,14.47,18.450001,17.648439,0.0,0.0,0.0,0.0,
+2018-01-01,SGAPX,Virtus SGA Global Growth I Class,NASDAQ,2013-10-10,,18.66,20.42,16.23,17.09,17.086966,0.0,0.0,0.0,0.0,
+2019-01-01,SGAPX,Virtus SGA Global Growth I Class,NASDAQ,2013-10-10,,17.040001,22.780001,16.76,22.629999,22.629999,0.0,0.0,0.0,0.0,
+2020-01-01,SGAPX,Virtus SGA Global Growth I Class,NASDAQ,2013-10-10,,22.889999,28.139999,16.959999,26.75,26.75,0.0,0.0,0.0,0.0,

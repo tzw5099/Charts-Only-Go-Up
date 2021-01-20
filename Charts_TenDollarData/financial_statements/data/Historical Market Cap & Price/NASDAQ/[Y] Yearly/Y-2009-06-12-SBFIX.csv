@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,14.06,16.32,13.47,15.96,10.608663,0.0,0.0,0.0,0.0,
+2010-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,16.209999,17.77,14.75,17.73,11.807781,0.0,0.0,0.0,0.0,
+2011-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,17.9,18.93,16.030001,17.030001,11.499452,0.0,0.0,0.0,0.0,
+2012-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,17.030001,19.190001,17.030001,18.559999,12.905279,0.0,0.0,0.0,0.0,
+2013-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,18.85,21.76,18.799999,19.469999,15.339496,0.0,0.0,0.0,0.0,
+2014-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,19.280001,20.440001,18.35,18.35,15.952898,0.0,0.0,0.0,0.0,
+2015-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,18.309999,19.370001,17.08,17.35,15.290751,0.0,0.0,0.0,0.0,
+2016-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,17.17,18.129999,15.97,17.58,15.835083,0.0,0.0,0.0,0.0,
+2017-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,17.65,20.4,17.65,20.27,18.583143,0.0,0.0,0.0,0.0,
+2018-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,20.42,21.42,17.450001,17.530001,17.036489,0.0,0.0,0.0,0.0,
+2019-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,17.530001,20.49,17.34,20.139999,20.073027,0.0,0.0,0.0,0.0,
+2020-01-01,SBFIX,Federated Global Allocation Fund Institutional Shares,NASDAQ,2009-06-12,,20.24,21.24,15.27,20.690001,20.690001,0.0,0.0,0.0,0.0,

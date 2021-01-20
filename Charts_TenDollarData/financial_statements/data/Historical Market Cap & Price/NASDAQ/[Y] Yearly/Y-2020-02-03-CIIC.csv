@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CIIC,CIIG Merger Corp.,NASDAQ,2020-02-03,324084389.80696875,9.95,10.4,9.3,10.0200004578,10.0200004578,7263651.0,7263651.0,-0.011599999999999944,0.00244915254237289,9.22644322033898

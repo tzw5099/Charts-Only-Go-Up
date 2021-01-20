@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,MNCLW,Monocle Acquisition Corporation,NASDAQ,2020-07-21,,0.79,0.76,0.2537,0.6288,0.6288,7804442.0,7804442.0,-13.754700000000001,-50.869200000000006,0.43914433333333325

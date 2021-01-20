@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,JHQPX,JPMorgan Hedged Equity Fund Class R5,NASDAQ,2014-05-30,,15.7,16.49,15.42,16.49,15.416986,0.0,0.0,0.0,0.0,
+2015-01-01,JHQPX,JPMorgan Hedged Equity Fund Class R5,NASDAQ,2014-05-30,,16.49,16.99,15.49,16.059999,15.221212,0.0,0.0,0.0,0.0,
+2016-01-01,JHQPX,JPMorgan Hedged Equity Fund Class R5,NASDAQ,2014-05-30,,15.98,17.370001,15.01,17.35,16.711458,0.0,0.0,0.0,0.0,
+2017-01-01,JHQPX,JPMorgan Hedged Equity Fund Class R5,NASDAQ,2014-05-30,,17.43,19.360001,17.43,19.360001,18.872154,0.0,0.0,0.0,0.0,
+2018-01-01,JHQPX,JPMorgan Hedged Equity Fund Class R5,NASDAQ,2014-05-30,,19.440001,20.24,18.709999,19.02,18.773748,0.0,0.0,0.0,0.0,
+2019-01-01,JHQPX,JPMorgan Hedged Equity Fund Class R5,NASDAQ,2014-05-30,,18.969999,21.33,18.780001,21.299999,21.246347,0.0,0.0,0.0,0.0,
+2020-01-01,JHQPX,JPMorgan Hedged Equity Fund Class R5,NASDAQ,2014-05-30,,21.4,23.049999,17.860001,22.940001,22.940001,0.0,0.0,0.0,0.0,

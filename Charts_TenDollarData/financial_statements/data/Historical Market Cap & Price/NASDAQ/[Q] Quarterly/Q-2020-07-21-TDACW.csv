@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,TDACW,Trident Acquisitions Corp. Warrants ,NASDAQ,2020-07-21,2942842.2399999998,0.3,0.45,0.1801,0.41,0.41,1808634.0,1808634.0,-0.5373,-5.596750000000001,0.28469625

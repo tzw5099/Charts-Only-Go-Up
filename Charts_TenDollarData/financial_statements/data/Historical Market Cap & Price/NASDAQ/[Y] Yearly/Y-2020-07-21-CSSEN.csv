@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CSSEN,,NASDAQ,2020-07-21,,24.01,25.5,23.0,24.892,24.892,249532.0,249532.0,0.1752,0.014571428571428577,23.309218333333337

@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,20.0,21.07,19.17,20.809999,11.530483,0.0,0.0,0.0,0.0,
+2011-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,20.860001,21.41,19.049999,20.43,12.072256,0.0,0.0,0.0,0.0,
+2012-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,20.49,22.18,20.49,22.07,13.998097,0.0,0.0,0.0,0.0,
+2013-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,22.129999,23.02,21.83,22.620001,15.371517,0.0,0.0,0.0,0.0,
+2014-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,22.67,23.1,20.610001,21.280001,15.423532,0.0,0.0,0.0,0.0,
+2015-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,21.26,21.780001,18.16,18.209999,14.049106,0.0,0.0,0.0,0.0,
+2016-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,18.120001,20.52,17.190001,20.35,16.951832,0.0,0.0,0.0,0.0,
+2017-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,20.4,20.879999,20.059999,20.18,17.997366,0.0,0.0,0.0,0.0,
+2018-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,20.18,20.290001,18.84,18.889999,17.889015,0.0,0.0,0.0,0.0,
+2019-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,18.91,20.26,18.889999,20.18,19.891262,0.0,0.0,0.0,0.0,
+2020-01-01,NCOIX,Nuveen Symphony High Yield Income Fund Class I,NASDAQ,2010-04-28,,20.200001,20.34,15.54,18.75,18.75,0.0,0.0,0.0,0.0,

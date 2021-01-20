@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,AREVX,American Century Investments One Choice 2055 Portfolio Investor Class,NASDAQ,2019-04-26,,14.82,14.94,14.12,14.91,13.853605,0.0,0.0,0.0,0.0,
+2019-07-01,AREVX,American Century Investments One Choice 2055 Portfolio Investor Class,NASDAQ,2019-04-26,,15.0,15.18,14.43,15.03,13.965102,0.0,0.0,0.0,0.0,
+2019-10-01,AREVX,American Century Investments One Choice 2055 Portfolio Investor Class,NASDAQ,2019-04-26,,14.89,16.09,14.68,14.91,14.91,0.0,0.0,0.0,0.0,
+2020-01-01,AREVX,American Century Investments One Choice 2055 Portfolio Investor Class,NASDAQ,2019-04-26,,15.01,15.42,10.77,12.19,12.19,0.0,0.0,0.0,0.0,
+2020-04-01,AREVX,American Century Investments One Choice 2055 Portfolio Investor Class,NASDAQ,2019-04-26,,11.75,14.87,11.74,14.46,14.46,0.0,0.0,0.0,0.0,
+2020-07-01,AREVX,American Century Investments One Choice 2055 Portfolio Investor Class,NASDAQ,2019-04-26,,14.51,16.190001,14.51,15.69,15.69,0.0,0.0,0.0,0.0,

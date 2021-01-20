@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,SCACW,Saban Capital Acquisition Corp Warrants,delisted,2016-11-15,,0.4,0.9498,0.3,0.9498,,58320.0,58320.0,0.9498,7.622466666666668,0.6617036666666666
+2017-01-01,SCACW,Saban Capital Acquisition Corp Warrants,delisted,2016-11-15,,1.0,1.54,0.99,1.23,,2342175.0,2342175.0,0.2802000000000001,0.3499752066115702,1.1871370689655176
+2018-01-01,SCACW,Saban Capital Acquisition Corp Warrants,delisted,2016-11-15,,1.24,1.6,0.47,0.6,,3690414.0,3690414.0,-0.6300000000000002,-0.3280582524271844,1.0833702772277227
+2019-01-01,SCACW,Saban Capital Acquisition Corp Warrants,delisted,2016-11-15,,0.53,0.8,0.0013,0.005,,8469056.0,8469056.0,-0.5950000000000002,3.8464666666666667,0.23632847619047628

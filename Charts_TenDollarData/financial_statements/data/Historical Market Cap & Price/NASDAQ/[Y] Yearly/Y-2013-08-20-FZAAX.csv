@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,FZAAX,Fidelity Advisor Balanced Fund Class Z,NASDAQ,2013-08-20,,18.23,19.08,18.09,19.08,13.816116,0.0,0.0,0.0,0.0,
+2014-01-01,FZAAX,Fidelity Advisor Balanced Fund Class Z,NASDAQ,2013-08-20,,18.969999,20.469999,18.440001,19.459999,15.227058,0.0,0.0,0.0,0.0,
+2015-01-01,FZAAX,Fidelity Advisor Balanced Fund Class Z,NASDAQ,2013-08-20,,19.469999,20.23,18.32,18.52,15.287997,0.0,0.0,0.0,0.0,
+2016-01-01,FZAAX,Fidelity Advisor Balanced Fund Class Z,NASDAQ,2013-08-20,,18.33,19.719999,16.92,19.49,16.416491,0.0,0.0,0.0,0.0,
+2017-01-01,FZAAX,Fidelity Advisor Balanced Fund Class Z,NASDAQ,2013-08-20,,19.620001,21.99,19.620001,21.24,19.128885,0.0,0.0,0.0,0.0,
+2018-01-01,FZAAX,Fidelity Advisor Balanced Fund Class Z,NASDAQ,2013-08-20,,21.379999,22.76,18.209999,18.959999,18.358501,0.0,0.0,0.0,0.0,
+2019-01-01,FZAAX,Fidelity Advisor Balanced Fund Class Z,NASDAQ,2013-08-20,,19.01,22.879999,18.73,22.809999,22.688141,0.0,0.0,0.0,0.0,
+2020-01-01,FZAAX,Fidelity Advisor Balanced Fund Class Z,NASDAQ,2013-08-20,,22.98,25.879999,17.629999,25.01,25.01,0.0,0.0,0.0,0.0,

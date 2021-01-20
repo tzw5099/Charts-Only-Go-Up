@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,NBQFX,Nuveen International Growth Fund Class R6,NASDAQ,2016-07-05,,36.040001,38.299999,35.040001,35.450001,33.406712,0.0,0.0,0.0,0.0,
+2017-01-01,NBQFX,Nuveen International Growth Fund Class R6,NASDAQ,2016-07-05,,35.689999,49.07,35.689999,48.77,46.101639,0.0,0.0,0.0,0.0,
+2018-01-01,NBQFX,Nuveen International Growth Fund Class R6,NASDAQ,2016-07-05,,49.5,52.98,36.130001,37.09,36.882957,0.0,0.0,0.0,0.0,
+2019-01-01,NBQFX,Nuveen International Growth Fund Class R6,NASDAQ,2016-07-05,,36.950001,48.009998,36.049999,47.630001,47.630001,0.0,0.0,0.0,0.0,
+2020-01-01,NBQFX,Nuveen International Growth Fund Class R6,NASDAQ,2016-07-05,,48.049999,51.470001,33.32,50.34,50.34,0.0,0.0,0.0,0.0,

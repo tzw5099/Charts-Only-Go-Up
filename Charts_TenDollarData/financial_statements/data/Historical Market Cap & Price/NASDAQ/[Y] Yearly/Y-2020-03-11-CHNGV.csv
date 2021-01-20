@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CHNGV,Change Healthcare Inc.,NASDAQ,2020-03-11,,12.5,12.5,9.52,9.9,9.9,11362.0,11362.0,-1.33,-5.583,10.838335

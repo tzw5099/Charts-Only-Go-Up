@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,DELT,Delta Technology Holdings Limited,NASDAQ,2019-02-15,,,,,1.1,,20.0,20.0,1.1,0.0,

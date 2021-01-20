@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,KAAC,Kayne Anderson Acquisition Corp.,NASDAQ,2017-05-02,,9.75,10.005,9.64,9.71,,8004395.0,8004395.0,9.710000000000003,0.0010438596491228057,9.71342777777778
+2018-01-01,KAAC,Kayne Anderson Acquisition Corp.,NASDAQ,2017-05-02,,9.73,10.34,9.26,9.64,,43905422.0,43905422.0,-0.07000000000000015,-0.003100591715976346,9.943314102564106

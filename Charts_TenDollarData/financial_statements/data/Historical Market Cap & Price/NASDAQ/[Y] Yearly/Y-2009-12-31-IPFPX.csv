@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,25.0,25.0,25.0,25.0,17.333429,0.0,0.0,0.0,0.0,
+2010-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,25.360001,28.629999,23.35,28.52,19.970116,0.0,0.0,0.0,0.0,
+2011-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,28.870001,31.530001,23.450001,26.940001,19.073519,0.0,0.0,0.0,0.0,
+2012-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,27.52,31.35,26.379999,30.99,22.317312,0.0,0.0,0.0,0.0,
+2013-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,31.799999,44.299999,31.75,43.07,32.59853,0.0,0.0,0.0,0.0,
+2014-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,42.669998,49.080002,41.07,44.240002,35.90284,0.0,0.0,0.0,0.0,
+2015-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,44.349998,46.84,38.0,40.84,33.449684,0.0,0.0,0.0,0.0,
+2016-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,40.43,52.490002,35.040001,50.470001,42.235531,0.0,0.0,0.0,0.0,
+2017-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,50.98,52.389999,46.82,51.259998,45.124653,0.0,0.0,0.0,0.0,
+2018-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,51.720001,54.610001,35.09,37.34,36.714825,0.0,0.0,0.0,0.0,
+2019-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,37.459999,44.720001,36.830002,44.66,44.66,0.0,0.0,0.0,0.0,
+2020-01-01,IPFPX,Poplar Forest Partners Fund Institutional Class,NASDAQ,2009-12-31,,44.66,44.900002,25.110001,36.509998,36.509998,0.0,0.0,0.0,0.0,

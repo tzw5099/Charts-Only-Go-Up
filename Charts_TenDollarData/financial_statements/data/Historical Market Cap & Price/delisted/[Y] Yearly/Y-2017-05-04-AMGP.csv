@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,AMGP,Antero Midstream GP LP of Beneficial Interests,delisted,2017-05-04,,21.2463,21.9369,16.0138,19.0007,,102725107.0,102725107.0,19.000625999999993,-0.05100000000000003,19.072281437125753
+2018-01-01,AMGP,Antero Midstream GP LP of Beneficial Interests,delisted,2017-05-04,,19.0296,21.5733,10.0002,11.0476,,168903575.0,168903575.0,-7.953113999999999,-0.19557370517928288,17.203498406374486
+2019-01-01,AMGP,Antero Midstream GP LP of Beneficial Interests,delisted,2017-05-04,,10.8895,14.56,10.7413,12.54,,73379491.0,73379491.0,1.4923819999999999,0.28975,12.891185416666664

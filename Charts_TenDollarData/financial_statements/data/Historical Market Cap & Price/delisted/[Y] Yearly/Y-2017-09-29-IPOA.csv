@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,IPOA,Social Capital Hedosophia Holdings Corp Class A par value 00001,delisted,2017-09-29,,10.5,10.85,9.85,10.09,10.09,7188400.0,7188400.0,-2.160000000000001,-0.33095312499999996,10.105885468749996
+2018-01-01,IPOA,Social Capital Hedosophia Holdings Corp Class A par value 00001,delisted,2017-09-29,,10.14,10.29,9.83,10.0,10.0,30534100.0,30534100.0,-1.0000000000000002,-0.03912749003984062,9.9991769322709
+2019-01-01,IPOA,Social Capital Hedosophia Holdings Corp Class A par value 00001,delisted,2017-09-29,,9.98,11.81,9.98,11.79,11.79,173985739.0,173985739.0,-0.34000000000000075,-0.014144927536231906,10.323124057971013

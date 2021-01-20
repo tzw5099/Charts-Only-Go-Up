@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,10.0,10.0,10.0,10.0,7.077904,0.0,0.0,0.0,0.0,
+2010-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,10.0,12.67,9.51,12.66,8.960627,0.0,0.0,0.0,0.0,
+2011-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,12.82,14.21,10.26,12.51,9.01533,0.0,0.0,0.0,0.0,
+2012-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,12.59,17.52,12.51,17.52,12.85847,0.0,0.0,0.0,0.0,
+2013-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,17.91,22.25,17.91,22.25,16.345924,0.0,0.0,0.0,0.0,
+2014-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,22.17,26.139999,21.440001,25.92,19.061613,0.0,0.0,0.0,0.0,
+2015-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,25.91,27.32,23.040001,24.24,18.168955,0.0,0.0,0.0,0.0,
+2016-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,23.790001,24.459999,19.18,23.67,17.804373,0.0,0.0,0.0,0.0,
+2017-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,23.790001,30.389999,23.790001,29.58,23.334356,0.0,0.0,0.0,0.0,
+2018-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,29.610001,30.77,19.58,20.77,18.146029,0.0,0.0,0.0,0.0,
+2019-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,20.66,28.66,20.360001,26.18,26.18,0.0,0.0,0.0,0.0,
+2020-01-01,BREFX,Baron Real Estate Fund Retail Shares,NASDAQ,2009-12-31,,26.24,32.650002,17.4,31.1,31.1,0.0,0.0,0.0,0.0,

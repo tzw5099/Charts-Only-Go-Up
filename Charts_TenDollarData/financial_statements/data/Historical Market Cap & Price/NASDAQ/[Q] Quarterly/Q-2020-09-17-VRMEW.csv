@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,VRMEW,,NASDAQ,2020-09-17,2742215.46,1.17,1.4307,0.9201,1.1,1.1,315003.0,315003.0,0.6109,2.4533548387096773,1.1127183870967743

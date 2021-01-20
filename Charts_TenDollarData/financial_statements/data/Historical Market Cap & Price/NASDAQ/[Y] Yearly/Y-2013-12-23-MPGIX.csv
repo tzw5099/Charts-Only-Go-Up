@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,MPGIX,Meritage Growth Equity Fund Institutional Shares,NASDAQ,2013-12-23,,10.01,10.13,10.01,10.13,8.361856,0.0,0.0,0.0,0.0,
+2014-01-01,MPGIX,Meritage Growth Equity Fund Institutional Shares,NASDAQ,2013-12-23,,10.02,11.47,9.52,11.23,9.369512,0.0,0.0,0.0,0.0,
+2015-01-01,MPGIX,Meritage Growth Equity Fund Institutional Shares,NASDAQ,2013-12-23,,11.2,12.04,10.74,11.2,9.541756,0.0,0.0,0.0,0.0,
+2016-01-01,MPGIX,Meritage Growth Equity Fund Institutional Shares,NASDAQ,2013-12-23,,11.0,12.72,9.97,12.34,10.63927,0.0,0.0,0.0,0.0,
+2017-01-01,MPGIX,Meritage Growth Equity Fund Institutional Shares,NASDAQ,2013-12-23,,12.39,15.68,12.39,14.52,13.405355,0.0,0.0,0.0,0.0,
+2018-01-01,MPGIX,Meritage Growth Equity Fund Institutional Shares,NASDAQ,2013-12-23,,14.73,16.74,12.75,12.88,12.88,0.0,0.0,0.0,0.0,
+2019-01-01,MPGIX,Meritage Growth Equity Fund Institutional Shares,NASDAQ,2013-12-23,,12.82,17.18,12.41,17.110001,17.110001,0.0,0.0,0.0,0.0,
+2020-01-01,MPGIX,Meritage Growth Equity Fund Institutional Shares,NASDAQ,2013-12-23,,17.33,19.07,11.18,11.18,11.18,0.0,0.0,0.0,0.0,

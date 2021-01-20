@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,14.48,14.99,14.22,14.47,9.327969,0.0,0.0,0.0,0.0,
+2013-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,14.83,17.02,12.64,13.18,8.496382,0.0,0.0,0.0,0.0,
+2014-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,13.08,13.92,12.1,12.67,8.964059,0.0,0.0,0.0,0.0,
+2015-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,12.65,13.48,10.86,11.73,9.332942,0.0,0.0,0.0,0.0,
+2016-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,11.54,12.83,10.47,12.64,10.284799,0.0,0.0,0.0,0.0,
+2017-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,12.73,15.49,12.73,14.88,12.801583,0.0,0.0,0.0,0.0,
+2018-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,15.0,15.96,11.98,12.77,12.104172,0.0,0.0,0.0,0.0,
+2019-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,12.79,15.66,12.43,15.6,15.6,0.0,0.0,0.0,0.0,
+2020-01-01,CLCRX,Columbia Select Large Cap Equity Fund Institutional 2 Class,NASDAQ,2012-11-09,,15.75,17.209999,11.13,16.27,16.27,0.0,0.0,0.0,0.0,

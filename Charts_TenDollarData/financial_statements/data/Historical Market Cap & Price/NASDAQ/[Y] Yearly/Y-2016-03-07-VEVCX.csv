@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,VEVCX,Victory Sycamore Established Value Fund Class C,NASDAQ,2016-03-07,,30.33,36.610001,29.889999,35.549999,30.060852,0.0,0.0,0.0,0.0,
+2017-01-01,VEVCX,Victory Sycamore Established Value Fund Class C,NASDAQ,2016-03-07,,35.759998,40.740002,35.75,39.779999,34.500446,0.0,0.0,0.0,0.0,
+2018-01-01,VEVCX,Victory Sycamore Established Value Fund Class C,NASDAQ,2016-03-07,,39.959999,42.419998,30.66,32.32,30.686602,0.0,0.0,0.0,0.0,
+2019-01-01,VEVCX,Victory Sycamore Established Value Fund Class C,NASDAQ,2016-03-07,,32.220001,40.639999,31.809999,39.099998,38.990585,0.0,0.0,0.0,0.0,
+2020-01-01,VEVCX,Victory Sycamore Established Value Fund Class C,NASDAQ,2016-03-07,,39.139999,39.619999,23.32,34.849998,34.849998,0.0,0.0,0.0,0.0,

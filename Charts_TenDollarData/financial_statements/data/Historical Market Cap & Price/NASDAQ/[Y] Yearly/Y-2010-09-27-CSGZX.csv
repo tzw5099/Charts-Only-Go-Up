@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,19.280001,21.110001,19.190001,20.91,11.556752,0.0,0.0,0.0,0.0,
+2011-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,21.129999,22.299999,17.49,19.5,10.77746,0.0,0.0,0.0,0.0,
+2012-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,19.709999,24.049999,19.65,21.07,11.645184,0.0,0.0,0.0,0.0,
+2013-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,21.700001,26.08,21.280001,26.08,14.751419,0.0,0.0,0.0,0.0,
+2014-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,25.84,32.82,25.360001,29.01,18.493484,0.0,0.0,0.0,0.0,
+2015-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,28.889999,33.41,27.690001,29.49,20.359772,0.0,0.0,0.0,0.0,
+2016-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,28.99,34.91,25.07,31.84,23.783121,0.0,0.0,0.0,0.0,
+2017-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,32.09,45.849998,32.09,40.009998,32.069042,0.0,0.0,0.0,0.0,
+2018-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,40.919998,46.349998,30.15,32.560001,29.352741,0.0,0.0,0.0,0.0,
+2019-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,32.779999,48.389999,31.24,45.580002,45.580002,0.0,0.0,0.0,0.0,
+2020-01-01,CSGZX,Columbia Seligman Global Technology Fund Institutional Class,NASDAQ,2010-09-27,,46.380001,55.540001,31.040001,51.580002,51.580002,0.0,0.0,0.0,0.0,

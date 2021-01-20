@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,KTOVW,Kitov Pharamceuti WT,NASDAQ,2020-07-21,,0.0499,0.13,0.0611,0.0621,0.0621,2032409.0,2032409.0,0.5013000000000002,26.343965517241372,0.08696103448275865

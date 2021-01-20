@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,THISX,T. Rowe Price Health Sciences Fund I Class,NASDAQ,2016-03-24,,59.700001,66.620003,58.259998,59.07,48.516373,0.0,0.0,0.0,0.0,
+2017-01-01,THISX,T. Rowe Price Health Sciences Fund I Class,NASDAQ,2016-03-24,,59.639999,75.919998,59.639999,70.339996,62.190666,0.0,0.0,0.0,0.0,
+2018-01-01,THISX,T. Rowe Price Health Sciences Fund I Class,NASDAQ,2016-03-24,,71.559998,84.639999,62.290001,67.0,62.938431,0.0,0.0,0.0,0.0,
+2019-01-01,THISX,T. Rowe Price Health Sciences Fund I Class,NASDAQ,2016-03-24,,66.190002,84.779999,64.860001,81.419998,81.419998,0.0,0.0,0.0,0.0,
+2020-01-01,THISX,T. Rowe Price Health Sciences Fund I Class,NASDAQ,2016-03-24,,81.379997,92.639999,60.389999,92.110001,92.110001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,GRNVR,GreenVision Acquisition Corp.,NASDAQ,2020-07-14,,0.34,0.5999,0.22,0.51,0.51,1282889.0,1282889.0,0.019599999999999992,1.8775217391304344,0.37549391304347823

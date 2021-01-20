@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTF,iShares iBonds Dec 2025 Term Treasury ETF,NASDAQ,2020-02-28,,25.1869,26.2749,25.1869,26.200001,26.200001,687779.0,687779.0,-0.8568000000000005,-0.02516793893129771,25.62807900763357

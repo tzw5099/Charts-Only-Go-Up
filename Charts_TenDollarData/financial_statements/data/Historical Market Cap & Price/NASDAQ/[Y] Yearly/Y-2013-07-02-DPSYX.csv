@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,DPSYX,BNY Mellon Structured MidCap Fund Class Y,NASDAQ,2013-07-02,,26.34,30.559999,26.34,30.559999,18.353857,0.0,0.0,0.0,0.0,
+2014-01-01,DPSYX,BNY Mellon Structured MidCap Fund Class Y,NASDAQ,2013-07-02,,30.280001,34.369999,28.18,29.639999,20.470922,0.0,0.0,0.0,0.0,
+2015-01-01,DPSYX,BNY Mellon Structured MidCap Fund Class Y,NASDAQ,2013-07-02,,29.6,31.540001,26.52,26.52,19.995157,0.0,0.0,0.0,0.0,
+2016-01-01,DPSYX,BNY Mellon Structured MidCap Fund Class Y,NASDAQ,2013-07-02,,26.08,30.950001,23.370001,30.07,23.008909,0.0,0.0,0.0,0.0,
+2017-01-01,DPSYX,BNY Mellon Structured MidCap Fund Class Y,NASDAQ,2013-07-02,,30.24,35.27,30.24,32.0,27.035477,0.0,0.0,0.0,0.0,
+2018-01-01,DPSYX,BNY Mellon Structured MidCap Fund Class Y,NASDAQ,2013-07-02,,32.23,33.73,22.370001,23.879999,22.781164,0.0,0.0,0.0,0.0,
+2019-01-01,DPSYX,BNY Mellon Structured MidCap Fund Class Y,NASDAQ,2013-07-02,,23.799999,28.23,23.35,27.040001,26.954105,0.0,0.0,0.0,0.0,
+2020-01-01,DPSYX,BNY Mellon Structured MidCap Fund Class Y,NASDAQ,2013-07-02,,27.139999,27.610001,15.74,24.01,24.01,0.0,0.0,0.0,0.0,

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TGGAX,Touchstone International Growth Opportunities Fund Class A,NASDAQ,2016-08-15,,18.74,19.190001,17.6,17.67,14.927487,0.0,0.0,0.0,0.0,
+2017-01-01,TGGAX,Touchstone International Growth Opportunities Fund Class A,NASDAQ,2016-08-15,,17.870001,25.51,17.870001,24.85,21.385103,0.0,0.0,0.0,0.0,
+2018-01-01,TGGAX,Touchstone International Growth Opportunities Fund Class A,NASDAQ,2016-08-15,,25.32,27.4,16.559999,17.219999,17.219999,0.0,0.0,0.0,0.0,
+2019-01-01,TGGAX,Touchstone International Growth Opportunities Fund Class A,NASDAQ,2016-08-15,,17.18,22.59,16.68,22.450001,22.450001,0.0,0.0,0.0,0.0,
+2020-01-01,TGGAX,Touchstone International Growth Opportunities Fund Class A,NASDAQ,2016-08-15,,22.780001,26.68,16.059999,25.469999,25.469999,0.0,0.0,0.0,0.0,

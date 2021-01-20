@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,22.0,24.110001,19.559999,23.889999,18.923042,0.0,0.0,0.0,0.0,
+2013-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,24.25,26.620001,22.450001,23.6,19.222975,0.0,0.0,0.0,0.0,
+2014-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,23.26,24.690001,21.209999,23.059999,19.118713,0.0,0.0,0.0,0.0,
+2015-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,22.98,24.950001,20.48,20.780001,17.545639,0.0,0.0,0.0,0.0,
+2016-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,20.26,23.709999,18.9,20.959999,18.269062,0.0,0.0,0.0,0.0,
+2017-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,21.110001,28.68,21.110001,28.469999,25.155233,0.0,0.0,0.0,0.0,
+2018-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,29.01,31.129999,19.620001,20.07,20.07,0.0,0.0,0.0,0.0,
+2019-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,20.07,22.700001,19.809999,22.370001,22.370001,0.0,0.0,0.0,0.0,
+2020-01-01,GEDIX,GMO Emerging Domestic Opportunities Fund Class IV,NASDAQ,2012-05-02,,22.370001,22.370001,22.370001,22.370001,22.370001,0.0,0.0,0.0,0.0,

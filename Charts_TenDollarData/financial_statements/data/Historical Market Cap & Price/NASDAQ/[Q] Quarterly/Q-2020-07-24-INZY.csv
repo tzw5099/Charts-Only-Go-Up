@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,INZY,,NASDAQ,2020-07-24,27587526.931704,20.8,31.65,16.1,24.4,24.4,6289853.0,6289853.0,2.8199999999999985,0.4344102564102566,25.24995743589744

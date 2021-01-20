@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GMBLW,"Esports Entertainment Group, Inc.",NASDAQ,2020-07-21,,0.0,3.72,2.75,3.3,3.3,110240.0,110240.0,0.0,0.0,3.139125
+2020-08-01,GMBLW,"Esports Entertainment Group, Inc.",NASDAQ,2020-07-21,,0.0,3.36,2.45,2.49,2.49,350243.0,350243.0,0.0,0.0,3.002919285714287
+2020-09-01,GMBLW,"Esports Entertainment Group, Inc.",NASDAQ,2020-07-21,,0.0,2.8,1.98,2.3,2.3,384817.0,384817.0,0.0,0.0,2.3805574999999997

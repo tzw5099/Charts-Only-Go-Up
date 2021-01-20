@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-09-15,SNOW,Intrawest Resorts Holdings Inc,delisted,2020-09-15,,0.0,0.0,0.0,1e-05,1e-05,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTG,iShares iBonds Dec 2026 Term Treasury ETF,NASDAQ,2020-02-28,,25.192,28.1504,25.1022,26.325001,26.325001,1040525.0,1040525.0,-1.891,-0.054969696969696974,25.93290272727273

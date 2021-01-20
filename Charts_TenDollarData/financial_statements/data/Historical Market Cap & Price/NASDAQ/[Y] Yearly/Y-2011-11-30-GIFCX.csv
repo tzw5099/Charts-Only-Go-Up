@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,25.0,25.0,24.84,24.940001,18.456383,0.0,0.0,0.0,0.0,
+2012-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,25.02,26.370001,25.02,26.360001,20.345764,0.0,0.0,0.0,0.0,
+2013-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,26.379999,26.98,26.379999,26.76,21.606428,0.0,0.0,0.0,0.0,
+2014-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,26.77,26.889999,25.860001,26.02,21.973675,0.0,0.0,0.0,0.0,
+2015-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,26.02,26.370001,25.200001,25.23,22.056011,0.0,0.0,0.0,0.0,
+2016-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,25.209999,26.049999,24.76,26.049999,23.512115,0.0,0.0,0.0,0.0,
+2017-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,26.059999,26.129999,25.969999,25.98,24.125051,0.0,0.0,0.0,0.0,
+2018-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,25.98,26.08,24.790001,24.790001,23.85491,0.0,0.0,0.0,0.0,
+2019-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,24.77,25.559999,24.77,25.309999,25.0805,0.0,0.0,0.0,0.0,
+2020-01-01,GIFCX,Guggenheim Floating Rate Strategies Fund Class C,NASDAQ,2011-11-30,,25.32,25.440001,20.450001,24.25,24.25,0.0,0.0,0.0,0.0,

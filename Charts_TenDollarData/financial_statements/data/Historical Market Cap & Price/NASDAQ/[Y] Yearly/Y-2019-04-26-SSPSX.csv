@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,SSPSX,State Street Institutional Premier Growth Equity Fund Service Class,NASDAQ,2019-04-26,,15.29,17.209999,11.51,11.53,8.63551,0.0,0.0,0.0,0.0,
+2020-01-01,SSPSX,State Street Institutional Premier Growth Equity Fund Service Class,NASDAQ,2019-04-26,,11.7,12.59,6.37,10.34,10.34,0.0,0.0,0.0,0.0,

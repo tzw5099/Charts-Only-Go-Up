@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,APDGX,Artisan Global Value Fund Advisor Class,NASDAQ,2015-04-01,,15.6,16.299999,14.01,14.21,12.552629,0.0,0.0,0.0,0.0,
+2016-01-01,APDGX,Artisan Global Value Fund Advisor Class,NASDAQ,2015-04-01,,13.97,15.51,12.72,15.22,13.823975,0.0,0.0,0.0,0.0,
+2017-01-01,APDGX,Artisan Global Value Fund Advisor Class,NASDAQ,2015-04-01,,15.34,18.26,15.34,18.129999,16.833941,0.0,0.0,0.0,0.0,
+2018-01-01,APDGX,Artisan Global Value Fund Advisor Class,NASDAQ,2015-04-01,,18.219999,19.32,14.29,14.87,14.647834,0.0,0.0,0.0,0.0,
+2019-01-01,APDGX,Artisan Global Value Fund Advisor Class,NASDAQ,2015-04-01,,14.9,18.23,14.71,18.16,18.16,0.0,0.0,0.0,0.0,
+2020-01-01,APDGX,Artisan Global Value Fund Advisor Class,NASDAQ,2015-04-01,,18.35,18.58,11.16,16.68,16.68,0.0,0.0,0.0,0.0,

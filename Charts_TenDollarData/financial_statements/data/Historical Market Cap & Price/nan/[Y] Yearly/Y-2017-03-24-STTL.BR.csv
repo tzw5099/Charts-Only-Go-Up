@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,STTL.BR,STTL Stock BR,,2017-03-24,,0.0,0.0,0.0,13.52,13.52,0.0,0.0,0.0,0.0,0.0
+2018-01-01,STTL.BR,STTL Stock BR,,2017-03-24,,,,,,,0.0,0.0,0.0,,
+2019-01-01,STTL.BR,STTL Stock BR,,2017-03-24,,,,,,,0.0,0.0,0.0,,
+2020-01-01,STTL.BR,STTL Stock BR,,2017-03-24,,13.52,13.52,13.52,13.52,13.52,0.0,0.0,0.0,0.0,0.0

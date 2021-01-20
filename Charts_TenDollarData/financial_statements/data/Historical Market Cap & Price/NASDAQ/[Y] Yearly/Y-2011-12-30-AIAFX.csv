@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,13.91,13.91,13.91,13.91,10.002161,0.0,0.0,0.0,0.0,
+2012-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,14.17,16.84,13.96,16.65,12.457278,0.0,0.0,0.0,0.0,
+2013-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,16.860001,19.49,16.85,18.879999,14.903822,0.0,0.0,0.0,0.0,
+2014-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,18.690001,21.15,18.15,19.299999,15.904815,0.0,0.0,0.0,0.0,
+2015-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,19.379999,20.790001,16.02,16.459999,14.106686,0.0,0.0,0.0,0.0,
+2016-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,16.25,18.469999,14.74,17.360001,15.500949,0.0,0.0,0.0,0.0,
+2017-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,17.4,21.030001,17.4,20.889999,19.396446,0.0,0.0,0.0,0.0,
+2018-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,21.110001,21.559999,17.6,18.24,17.54257,0.0,0.0,0.0,0.0,
+2019-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,18.25,22.48,18.24,22.469999,22.226151,0.0,0.0,0.0,0.0,
+2020-01-01,AIAFX,Aberdeen Global Infrastructure Fund Class A,NASDAQ,2011-12-30,,22.5,23.26,14.18,20.1,20.1,0.0,0.0,0.0,0.0,

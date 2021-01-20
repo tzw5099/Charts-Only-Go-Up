@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,FSTLX,Federated MDT Large Cap Value Fund Class R6,NASDAQ,2016-07-05,,25.059999,27.940001,25.059999,27.219999,21.81604,0.0,0.0,0.0,0.0,
+2017-01-01,FSTLX,Federated MDT Large Cap Value Fund Class R6,NASDAQ,2016-07-05,,27.52,30.59,27.25,28.18,24.94952,0.0,0.0,0.0,0.0,
+2018-01-01,FSTLX,Federated MDT Large Cap Value Fund Class R6,NASDAQ,2016-07-05,,28.389999,30.120001,22.559999,23.860001,23.16432,0.0,0.0,0.0,0.0,
+2019-01-01,FSTLX,Federated MDT Large Cap Value Fund Class R6,NASDAQ,2016-07-05,,23.950001,28.049999,23.540001,28.040001,27.856993,0.0,0.0,0.0,0.0,
+2020-01-01,FSTLX,Federated MDT Large Cap Value Fund Class R6,NASDAQ,2016-07-05,,28.129999,28.68,17.620001,26.07,26.07,0.0,0.0,0.0,0.0,

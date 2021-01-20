@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,BDFIX,Baron Discovery Fund Institutional Shares,NASDAQ,2013-10-03,,9.92,11.67,9.65,11.67,10.536863,0.0,0.0,0.0,0.0,
+2014-01-01,BDFIX,Baron Discovery Fund Institutional Shares,NASDAQ,2013-10-03,,11.56,13.45,11.08,13.28,11.990535,0.0,0.0,0.0,0.0,
+2015-01-01,BDFIX,Baron Discovery Fund Institutional Shares,NASDAQ,2013-10-03,,13.16,14.7,10.98,11.35,10.247934,0.0,0.0,0.0,0.0,
+2016-01-01,BDFIX,Baron Discovery Fund Institutional Shares,NASDAQ,2013-10-03,,11.1,13.97,9.25,13.5,12.481433,0.0,0.0,0.0,0.0,
+2017-01-01,BDFIX,Baron Discovery Fund Institutional Shares,NASDAQ,2013-10-03,,13.56,18.5,13.56,18.299999,16.954695,0.0,0.0,0.0,0.0,
+2018-01-01,BDFIX,Baron Discovery Fund Institutional Shares,NASDAQ,2013-10-03,,18.51,24.700001,15.87,17.09,17.066797,0.0,0.0,0.0,0.0,
+2019-01-01,BDFIX,Baron Discovery Fund Institutional Shares,NASDAQ,2013-10-03,,17.09,21.74,16.65,21.65,21.65,0.0,0.0,0.0,0.0,
+2020-01-01,BDFIX,Baron Discovery Fund Institutional Shares,NASDAQ,2013-10-03,,21.65,29.4,14.67,27.65,27.65,0.0,0.0,0.0,0.0,

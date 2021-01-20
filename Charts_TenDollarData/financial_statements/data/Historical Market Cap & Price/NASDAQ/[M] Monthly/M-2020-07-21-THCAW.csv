@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,THCAW,Tuscan Holdings Corp. II Warrant,NASDAQ,2020-07-21,2068918.0,0.55,0.51,0.37,0.4,0.4,34351.0,34351.0,-0.37,-16.81825,0.4550075
+2020-08-01,THCAW,Tuscan Holdings Corp. II Warrant,NASDAQ,2020-07-21,2482701.6,0.55,0.4999,0.35,0.48,0.48,25414.0,25414.0,-1.3707000000000003,-20.76816666666667,0.4384216666666667
+2020-09-01,THCAW,Tuscan Holdings Corp. II Warrant,NASDAQ,2020-07-21,2586147.5,0.55,0.5,0.45,0.5,0.5,75345.0,75345.0,-0.34,-7.954428571428572,0.4757185714285715

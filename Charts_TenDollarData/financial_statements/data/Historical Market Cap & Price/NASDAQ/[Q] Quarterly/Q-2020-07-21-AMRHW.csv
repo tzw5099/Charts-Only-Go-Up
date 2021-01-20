@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,AMRHW,Ameri Holdings Inc. Warrant,NASDAQ,2020-07-21,,0.0796,0.072,0.0404,0.0579,0.0579,247477.0,247477.0,-0.5525000000000001,-26.752961538461538,0.05805038461538462

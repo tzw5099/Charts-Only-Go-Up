@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,WSG,Wanda Sports Group Company Limited,NASDAQ,2014-11-24,106616208.4,0.52,0.52,0.52,0.52,0.52,1250.0,1250.0,0.0,0.0,0.52
+2015-01-01,WSG,Wanda Sports Group Company Limited,NASDAQ,2014-11-24,157874000.9,0.77,0.77,0.77,0.77,0.77,8000.0,8000.0,0.0,0.0,0.77
+2016-01-01,WSG,Wanda Sports Group Company Limited,NASDAQ,2014-11-24,,,,,,,0.0,0.0,0.0,,
+2017-01-01,WSG,Wanda Sports Group Company Limited,NASDAQ,2014-11-24,,,,,,,0.0,0.0,0.0,,
+2018-01-01,WSG,Wanda Sports Group Company Limited,NASDAQ,2014-11-24,,,,,,,0.0,0.0,0.0,,
+2019-01-01,WSG,Wanda Sports Group Company Limited,NASDAQ,2014-11-24,502326366.5,6.2,6.24,2.45,2.45,2.45,46905000.0,46905000.0,-5.293000000000001,-1.1188363636363636,3.800788181818183
+2020-01-01,WSG,Wanda Sports Group Company Limited,NASDAQ,2014-11-24,405961716.6,2.52,4.85,1.36,1.97,1.97,37660700.0,37660700.0,-2.069,-0.42778770949720707,2.5139123463687163

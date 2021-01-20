@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,BRPAW,Big Rock Partners Acquisition Corp. Warrant,NASDAQ,2020-07-21,639450.83,0.29,0.34,0.1599,0.23,0.23,144642.0,144642.0,-0.5972000000000001,-19.37325,0.28082875
+2020-08-01,BRPAW,Big Rock Partners Acquisition Corp. Warrant,NASDAQ,2020-07-21,695055.25,0.38,0.25,0.16,0.25,0.25,375235.0,375235.0,-2.2007999999999996,-44.550615384615384,0.21
+2020-09-01,BRPAW,Big Rock Partners Acquisition Corp. Warrant,NASDAQ,2020-07-21,667253.0399999999,0.38,0.26,0.183,0.24,0.24,118731.0,118731.0,-1.2259000000000002,-33.3223,0.23658800000000002

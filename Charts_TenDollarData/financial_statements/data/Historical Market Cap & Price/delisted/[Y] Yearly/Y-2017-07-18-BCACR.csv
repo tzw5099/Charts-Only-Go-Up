@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,BCACR,Bison Capital Acquisition Corp Rights,delisted,2017-07-18,,0.35,0.379,0.25,0.379,,2149466.0,2149466.0,0.3790000000000001,0.40614754098360667,0.3119620508474577
+2018-01-01,BCACR,Bison Capital Acquisition Corp Rights,delisted,2017-07-18,,0.35,0.63,0.251,0.28,,1959834.0,1959834.0,-0.09899999999999998,0.024509433962264092,0.41634051485148516
+2019-01-01,BCACR,Bison Capital Acquisition Corp Rights,delisted,2017-07-18,,0.28,0.5,0.1473,0.4247,,4319097.0,4319097.0,0.14470000000000002,1.168772727272727,0.31893492424242437

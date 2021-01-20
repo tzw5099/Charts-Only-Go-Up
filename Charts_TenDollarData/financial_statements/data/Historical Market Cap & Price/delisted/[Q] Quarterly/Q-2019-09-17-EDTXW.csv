@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,EDTXW,EdtechX Holdings Acquisition Corp Warrant,delisted,2019-09-17,,0.21,0.24,0.2,0.24,0.24,21902.0,21902.0,0.04,6.349333333333333,0.22111
+2019-10-01,EDTXW,EdtechX Holdings Acquisition Corp Warrant,delisted,2019-09-17,,0.23,0.48,0.16,0.36,0.36,1781072.0,1781072.0,0.13999999999999999,1.9766800000000007,0.2569332000000001
+2020-01-01,EDTXW,EdtechX Holdings Acquisition Corp Warrant,delisted,2019-09-17,,0.43,0.69,0.15,0.58,0.58,1672317.0,1672317.0,-1.2300000000000004,-4.445880000000002,0.3853330000000001

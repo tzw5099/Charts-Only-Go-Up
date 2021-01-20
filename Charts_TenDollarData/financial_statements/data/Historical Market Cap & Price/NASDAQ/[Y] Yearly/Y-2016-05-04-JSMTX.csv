@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,JSMTX,Jackson Square SMID-Cap Growth Fund Institutional Class,NASDAQ,2016-05-04,,17.790001,19.08,16.84,18.09,15.147902,0.0,0.0,0.0,0.0,
+2017-01-01,JSMTX,Jackson Square SMID-Cap Growth Fund Institutional Class,NASDAQ,2016-05-04,,18.190001,21.82,18.190001,21.65,18.230146,0.0,0.0,0.0,0.0,
+2018-01-01,JSMTX,Jackson Square SMID-Cap Growth Fund Institutional Class,NASDAQ,2016-05-04,,21.780001,26.49,19.23,19.42,18.610962,0.0,0.0,0.0,0.0,
+2019-01-01,JSMTX,Jackson Square SMID-Cap Growth Fund Institutional Class,NASDAQ,2016-05-04,,19.33,25.709999,18.799999,24.27,24.27,0.0,0.0,0.0,0.0,
+2020-01-01,JSMTX,Jackson Square SMID-Cap Growth Fund Institutional Class,NASDAQ,2016-05-04,,24.42,31.690001,16.639999,29.690001,29.690001,0.0,0.0,0.0,0.0,

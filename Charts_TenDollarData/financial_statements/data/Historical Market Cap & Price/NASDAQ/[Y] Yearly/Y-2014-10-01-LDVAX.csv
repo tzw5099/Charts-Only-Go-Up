@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,LDVAX,Leland Thomson Reuters Venture Capital Index Fund Class A,NASDAQ,2014-10-01,,10.0,11.12,9.08,10.55,7.616613,0.0,0.0,0.0,0.0,
+2015-01-01,LDVAX,Leland Thomson Reuters Venture Capital Index Fund Class A,NASDAQ,2014-10-01,,10.51,12.64,9.87,11.27,8.847553,0.0,0.0,0.0,0.0,
+2016-01-01,LDVAX,Leland Thomson Reuters Venture Capital Index Fund Class A,NASDAQ,2014-10-01,,10.91,11.7,8.86,10.63,8.957376,0.0,0.0,0.0,0.0,
+2017-01-01,LDVAX,Leland Thomson Reuters Venture Capital Index Fund Class A,NASDAQ,2014-10-01,,10.78,16.860001,10.78,14.5,13.551855,0.0,0.0,0.0,0.0,
+2018-01-01,LDVAX,Leland Thomson Reuters Venture Capital Index Fund Class A,NASDAQ,2014-10-01,,14.86,19.98,12.85,14.3,14.3,0.0,0.0,0.0,0.0,
+2019-01-01,LDVAX,Leland Thomson Reuters Venture Capital Index Fund Class A,NASDAQ,2014-10-01,,14.34,21.709999,13.68,21.370001,21.370001,0.0,0.0,0.0,0.0,
+2020-01-01,LDVAX,Leland Thomson Reuters Venture Capital Index Fund Class A,NASDAQ,2014-10-01,,22.0,36.029999,15.83,29.77,29.77,0.0,0.0,0.0,0.0,

@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,LIVKU,LIV Capital Acquisition Corp.,NASDAQ,2019-12-11,,10.01,10.1,10.0,10.061,10.061,2529200.0,2529200.0,0.001999999999999995,0.0020833333333333376,10.041054166666667
+2020-01-01,LIVKU,LIV Capital Acquisition Corp.,NASDAQ,2019-12-11,,10.051,11.17,9.8,10.14,10.14,1086600.0,1086600.0,-0.708,-0.06479569892473118,6.835924623655916

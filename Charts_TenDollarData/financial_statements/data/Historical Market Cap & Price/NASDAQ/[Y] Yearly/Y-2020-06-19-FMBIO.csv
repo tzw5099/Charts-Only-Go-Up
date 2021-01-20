@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FMBIO,,NASDAQ,2020-06-19,,24.4769,26.59,23.7798,26.200001,26.200001,2953914.0,2953914.0,-0.8990999999999998,-0.05449206349206349,25.25509174603175

@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,LSSNX,Loomis Sayles Small Cap Growth Fund Class N,NASDAQ,2013-02-01,,20.219999,27.34,19.85,26.01,15.298339,0.0,0.0,0.0,0.0,
+2014-01-01,LSSNX,Loomis Sayles Small Cap Growth Fund Class N,NASDAQ,2013-02-01,,25.700001,27.639999,22.67,22.77,15.48302,0.0,0.0,0.0,0.0,
+2015-01-01,LSSNX,Loomis Sayles Small Cap Growth Fund Class N,NASDAQ,2013-02-01,,22.549999,26.0,21.370001,21.370001,15.682862,0.0,0.0,0.0,0.0,
+2016-01-01,LSSNX,Loomis Sayles Small Cap Growth Fund Class N,NASDAQ,2013-02-01,,20.799999,23.299999,17.370001,22.620001,16.600203,0.0,0.0,0.0,0.0,
+2017-01-01,LSSNX,Loomis Sayles Small Cap Growth Fund Class N,NASDAQ,2013-02-01,,22.75,28.959999,22.75,25.540001,21.085634,0.0,0.0,0.0,0.0,
+2018-01-01,LSSNX,Loomis Sayles Small Cap Growth Fund Class N,NASDAQ,2013-02-01,,25.65,32.310001,21.209999,23.02,21.155722,0.0,0.0,0.0,0.0,
+2019-01-01,LSSNX,Loomis Sayles Small Cap Growth Fund Class N,NASDAQ,2013-02-01,,22.870001,29.030001,22.23,26.809999,26.809999,0.0,0.0,0.0,0.0,
+2020-01-01,LSSNX,Loomis Sayles Small Cap Growth Fund Class N,NASDAQ,2013-02-01,,26.99,30.35,17.5,28.6,28.6,0.0,0.0,0.0,0.0,

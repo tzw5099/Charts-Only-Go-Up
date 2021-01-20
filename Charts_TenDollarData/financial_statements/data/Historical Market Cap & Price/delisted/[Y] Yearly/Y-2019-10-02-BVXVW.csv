@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,BVXVW,BiondVax Pharmaceuticals Ltd Wt Pur ADR Sponsored Exp 05012019,delisted,2019-10-02,,0.62,2.6,0.41,2.6,2.6,71302.0,71302.0,3.4600000000000004,21.312357142857145,1.0983321428571429
+2020-01-01,BVXVW,BiondVax Pharmaceuticals Ltd Wt Pur ADR Sponsored Exp 05012019,delisted,2019-10-02,,2.8,11.45,0.51,7.51,7.51,845745.0,845745.0,-0.650000000000003,17.335696202531658,3.3602955696202526

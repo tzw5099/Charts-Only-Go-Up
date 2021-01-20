@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,10.12,10.25,7.56,9.24,7.620011,0.0,0.0,0.0,0.0,
+2012-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,9.35,10.87,9.18,10.75,8.898571,0.0,0.0,0.0,0.0,
+2013-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,11.0,14.6,10.99,14.43,12.179186,0.0,0.0,0.0,0.0,
+2014-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,14.26,16.15,13.74,15.59,13.516454,0.0,0.0,0.0,0.0,
+2015-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,15.56,16.209999,13.91,14.48,12.703594,0.0,0.0,0.0,0.0,
+2016-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,14.28,17.82,12.73,17.389999,15.323331,0.0,0.0,0.0,0.0,
+2017-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,17.469999,20.110001,17.440001,19.370001,17.78513,0.0,0.0,0.0,0.0,
+2018-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,19.559999,20.389999,14.67,15.26,15.120757,0.0,0.0,0.0,0.0,
+2019-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,15.27,19.42,15.05,19.34,19.34,0.0,0.0,0.0,0.0,
+2020-01-01,MYIMX,Victory Integrity Mid-Cap Value Fund Class Y,NASDAQ,2011-07-05,,19.34,19.67,10.74,17.02,17.02,0.0,0.0,0.0,0.0,

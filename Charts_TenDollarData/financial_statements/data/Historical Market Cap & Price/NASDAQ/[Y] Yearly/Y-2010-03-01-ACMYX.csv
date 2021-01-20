@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,8.48,10.0,8.0,9.91,6.733027,0.0,0.0,0.0,0.0,
+2011-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,10.05,10.96,8.17,9.79,6.749291,0.0,0.0,0.0,0.0,
+2012-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,9.92,11.43,9.76,10.66,7.830757,0.0,0.0,0.0,0.0,
+2013-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,10.93,14.58,10.9,13.91,10.946974,0.0,0.0,0.0,0.0,
+2014-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,13.75,15.11,12.98,14.54,11.87324,0.0,0.0,0.0,0.0,
+2015-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,14.51,15.49,13.0,13.09,11.412972,0.0,0.0,0.0,0.0,
+2016-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,12.94,15.74,11.13,15.18,13.415809,0.0,0.0,0.0,0.0,
+2017-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,15.31,17.780001,15.31,17.26,15.782837,0.0,0.0,0.0,0.0,
+2018-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,17.370001,18.26,12.15,12.84,12.642737,0.0,0.0,0.0,0.0,
+2019-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,12.91,16.139999,12.76,16.0,16.0,0.0,0.0,0.0,0.0,
+2020-01-01,ACMYX,American Beacon Mid-Cap Value Fund Class Y,NASDAQ,2010-03-01,,16.030001,16.309999,8.03,13.33,13.33,0.0,0.0,0.0,0.0,

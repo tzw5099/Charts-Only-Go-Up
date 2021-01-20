@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-10-01,RXII,RXi Pharmaceuticals Corporation,NASDAQ,2018-11-15,,0.315,0.335,0.31,0.3302,,1409229.0,1409229.0,0.3302,0.0305,0.322662

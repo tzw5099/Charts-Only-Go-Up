@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,JVTNX,Janus Henderson Venture Fund Class N,NASDAQ,2019-04-26,,82.540001,83.769997,77.669998,82.870003,79.79821,0.0,0.0,0.0,0.0,
+2019-07-01,JVTNX,Janus Henderson Venture Fund Class N,NASDAQ,2019-04-26,,83.230003,84.849998,78.470001,80.150002,77.179031,0.0,0.0,0.0,0.0,
+2019-10-01,JVTNX,Janus Henderson Venture Fund Class N,NASDAQ,2019-04-26,,78.559998,86.470001,77.550003,83.599998,83.599998,0.0,0.0,0.0,0.0,
+2020-01-01,JVTNX,Janus Henderson Venture Fund Class N,NASDAQ,2019-04-26,,84.080002,86.25,54.509998,62.049999,62.049999,0.0,0.0,0.0,0.0,
+2020-04-01,JVTNX,Janus Henderson Venture Fund Class N,NASDAQ,2019-04-26,,58.630001,83.050003,58.029999,80.5,80.5,0.0,0.0,0.0,0.0,
+2020-07-01,JVTNX,Janus Henderson Venture Fund Class N,NASDAQ,2019-04-26,,80.910004,90.480003,79.739998,87.050003,87.050003,0.0,0.0,0.0,0.0,

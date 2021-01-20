@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,TRPIX,T. Rowe Price Value Fund I Class,NASDAQ,2015-08-28,,33.040001,34.830002,30.59,31.25,25.001541,0.0,0.0,0.0,0.0,
+2016-01-01,TRPIX,T. Rowe Price Value Fund I Class,NASDAQ,2015-08-28,,30.83,35.259998,27.6,33.639999,27.772188,0.0,0.0,0.0,0.0,
+2017-01-01,TRPIX,T. Rowe Price Value Fund I Class,NASDAQ,2015-08-28,,33.900002,40.27,33.740002,37.32,33.076958,0.0,0.0,0.0,0.0,
+2018-01-01,TRPIX,T. Rowe Price Value Fund I Class,NASDAQ,2015-08-28,,37.529999,39.689999,28.85,30.559999,29.997496,0.0,0.0,0.0,0.0,
+2019-01-01,TRPIX,T. Rowe Price Value Fund I Class,NASDAQ,2015-08-28,,30.540001,38.029999,30.059999,37.91,37.91,0.0,0.0,0.0,0.0,
+2020-01-01,TRPIX,T. Rowe Price Value Fund I Class,NASDAQ,2015-08-28,,38.169998,39.16,24.030001,36.150002,36.150002,0.0,0.0,0.0,0.0,

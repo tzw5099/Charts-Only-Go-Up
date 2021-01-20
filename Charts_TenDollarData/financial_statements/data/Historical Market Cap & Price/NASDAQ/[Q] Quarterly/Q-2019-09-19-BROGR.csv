@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,BROGR,Twelve Seas Investment Company,NASDAQ,2019-09-19,9889730.0,0.33,0.37,0.28,0.37,0.37,84649.0,84649.0,-0.01,-1.6415,0.32999999999999996
+2019-10-01,BROGR,Twelve Seas Investment Company,NASDAQ,2019-09-19,25125260.0,0.3,1.0,0.33,0.94,0.94,14356573.0,14356573.0,0.6400000000000001,2.818843137254903,0.5653594117647059

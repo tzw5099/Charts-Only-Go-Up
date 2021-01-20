@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,EGOHX,Wells Fargo Large Cap Core Fund - Class R,NASDAQ,2015-09-30,,14.66,16.07,14.66,15.21,10.839139,0.0,0.0,0.0,0.0,
+2016-01-01,EGOHX,Wells Fargo Large Cap Core Fund - Class R,NASDAQ,2015-09-30,,15.01,16.639999,13.02,16.33,11.707063,0.0,0.0,0.0,0.0,
+2017-01-01,EGOHX,Wells Fargo Large Cap Core Fund - Class R,NASDAQ,2015-09-30,,16.41,19.959999,16.389999,19.74,14.400084,0.0,0.0,0.0,0.0,
+2018-01-01,EGOHX,Wells Fargo Large Cap Core Fund - Class R,NASDAQ,2015-09-30,,19.93,21.540001,14.84,15.89,13.102888,0.0,0.0,0.0,0.0,
+2019-01-01,EGOHX,Wells Fargo Large Cap Core Fund - Class R,NASDAQ,2015-09-30,,15.88,19.93,15.45,16.68,16.68,0.0,0.0,0.0,0.0,
+2020-01-01,EGOHX,Wells Fargo Large Cap Core Fund - Class R,NASDAQ,2015-09-30,,16.799999,17.129999,10.99,15.88,15.88,0.0,0.0,0.0,0.0,

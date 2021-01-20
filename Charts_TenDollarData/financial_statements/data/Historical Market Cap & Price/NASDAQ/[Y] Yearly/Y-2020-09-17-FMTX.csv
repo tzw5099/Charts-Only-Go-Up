@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FMTX,,NASDAQ,2020-09-17,1837524822.98382,40.0,50.0,31.450001,43.880001,43.880001,11461610.0,11461610.0,2.6640000000000015,0.19171428571428553,39.97343603174604

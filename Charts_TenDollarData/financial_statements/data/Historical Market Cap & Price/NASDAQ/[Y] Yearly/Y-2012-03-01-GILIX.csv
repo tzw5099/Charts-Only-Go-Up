@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,20.84,21.809999,19.129999,20.940001,8.678791,0.0,0.0,0.0,0.0,
+2013-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,21.49,26.290001,21.379999,22.290001,11.134969,0.0,0.0,0.0,0.0,
+2014-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,22.09,25.790001,21.1,22.190001,12.791737,0.0,0.0,0.0,0.0,
+2015-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,22.18,23.25,19.59,19.98,12.969929,0.0,0.0,0.0,0.0,
+2016-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,19.68,22.32,17.83,21.969999,14.702539,0.0,0.0,0.0,0.0,
+2017-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,22.16,27.0,22.16,22.540001,17.993576,0.0,0.0,0.0,0.0,
+2018-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,22.73,24.809999,15.99,16.9,16.597994,0.0,0.0,0.0,0.0,
+2019-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,17.08,21.889999,16.639999,21.75,21.75,0.0,0.0,0.0,0.0,
+2020-01-01,GILIX,Guggenheim StylePlus - Large Core Fund Institutional,NASDAQ,2012-03-01,,21.93,24.23,14.63,22.959999,22.959999,0.0,0.0,0.0,0.0,

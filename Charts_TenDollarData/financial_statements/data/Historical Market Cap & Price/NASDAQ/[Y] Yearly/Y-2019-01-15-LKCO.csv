@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,LKCO,Luokung Technology Corp.,NASDAQ,2019-01-15,,24.0,24.0,1.23,1.63,1.63,61583200.0,61583200.0,-29.435999999999975,-0.9538925619834707,6.294025082644621
+2020-01-01,LKCO,Luokung Technology Corp.,NASDAQ,2019-01-15,,1.63,1.75,0.34,0.4,0.4,203734567.0,203734567.0,-2.685599999999999,-1.7543240223463683,0.705679888268157

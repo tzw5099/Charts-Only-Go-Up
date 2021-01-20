@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,EAGLU,Platinum Eagle Acquisition Corp. Unit,NASDAQ,2018-01-12,,10.06,11.0,8.0,10.59,,10492271.0,10492271.0,10.58999999999998,0.032005405405405404,10.187847798742139
+2019-01-01,EAGLU,Platinum Eagle Acquisition Corp. Unit,NASDAQ,2018-01-12,,10.6,10.895,8.79,10.3,,226405.0,226405.0,-0.29000000000000004,-0.0876774193548387,10.495782608695652

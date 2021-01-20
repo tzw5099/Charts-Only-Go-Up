@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ORIC,"ORIC Pharmaceuticals, Inc.",NASDAQ,2020-09-17,655046399.47554,26.0,40.67,19.85,21.65,21.65,22966224.0,22966224.0,-13.260000000000002,-0.3672254901960784,27.910199313725485

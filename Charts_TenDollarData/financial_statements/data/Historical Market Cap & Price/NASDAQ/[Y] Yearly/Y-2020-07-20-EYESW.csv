@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,EYESW,Second Sight Medical Products Inc. Warrants,NASDAQ,2020-07-20,,0.15,0.1149,0.0254,0.07,0.07,314484.0,314484.0,-2.0272,-48.26657142857143,0.07881535714285712

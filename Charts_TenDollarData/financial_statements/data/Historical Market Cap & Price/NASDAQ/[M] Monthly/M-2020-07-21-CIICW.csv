@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,CIICW,CIIG Merger Corp.,NASDAQ,2020-07-21,,0.0,1.15,0.8999,1.04,1.04,122796.0,122796.0,0.0,0.0,1.0311016666666666
+2020-08-01,CIICW,CIIG Merger Corp.,NASDAQ,2020-07-21,,0.0,1.1,0.77,0.95,0.95,63323.0,63323.0,0.0,0.0,0.91028875
+2020-09-01,CIICW,CIIG Merger Corp.,NASDAQ,2020-07-21,,0.0,1.03,0.9,1.0,1.0,219468.0,219468.0,0.0,0.0,0.9881522222222223

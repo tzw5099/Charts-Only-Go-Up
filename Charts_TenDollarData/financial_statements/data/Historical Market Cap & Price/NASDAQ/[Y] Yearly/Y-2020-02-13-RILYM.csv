@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,RILYM,"B. Riley Financial, Inc. - 6.37",NASDAQ,2020-02-13,,24.0407,24.3821,6.9461,23.940001,23.940001,5740708.0,5740708.0,3.1578999999999997,0.2726333333333334,21.001872800000008

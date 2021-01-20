@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,21.27,21.540001,16.629999,19.52,13.601912,0.0,0.0,0.0,0.0,
+2012-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,19.66,22.42,19.51,22.120001,15.66731,0.0,0.0,0.0,0.0,
+2013-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,22.51,27.780001,22.459999,26.49,19.582634,0.0,0.0,0.0,0.0,
+2014-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,26.27,28.48,25.280001,26.549999,21.150637,0.0,0.0,0.0,0.0,
+2015-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,26.4,27.42,24.73,25.129999,20.32058,0.0,0.0,0.0,0.0,
+2016-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,24.73,30.85,23.1,30.059999,24.626461,0.0,0.0,0.0,0.0,
+2017-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,30.33,35.91,30.33,33.830002,29.479937,0.0,0.0,0.0,0.0,
+2018-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,33.959999,38.330002,24.77,26.09,26.09,0.0,0.0,0.0,0.0,
+2019-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,26.139999,32.810001,25.799999,32.68,32.68,0.0,0.0,0.0,0.0,
+2020-01-01,FOVAX,First Trust/Confluence Small Cap Value Fund Class A,NASDAQ,2011-03-01,,32.68,33.529999,20.25,26.98,26.98,0.0,0.0,0.0,0.0,

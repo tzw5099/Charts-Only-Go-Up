@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,MULE,MuleSoft Inc. Class A,delisted,2017-03-17,,24.25,29.0,19.4,23.26,,210590382.0,210590382.0,23.259999999999994,0.0071000000000000195,23.070012000000002
+2018-01-01,MULE,MuleSoft Inc. Class A,delisted,2017-03-17,,23.37,44.75,21.7,44.57,,257669217.0,257669217.0,21.310000000000006,0.8551927710843373,33.56817951807229

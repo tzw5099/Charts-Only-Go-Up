@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,CMSSR,CM Seven Star Acquisition Corp Tradeable Rights Nov 2017,delisted,2017-11-06,,0.33,0.4025,0.2501,0.32,,4919859.0,4919859.0,0.32,-0.15946875000000016,0.28476225806451616
+2018-01-01,CMSSR,CM Seven Star Acquisition Corp Tradeable Rights Nov 2017,delisted,2017-11-06,,0.3,0.6538,0.0131,0.4,,7545715.0,7545715.0,0.07999999999999999,0.5899166666666665,0.363332274509804
+2019-01-01,CMSSR,CM Seven Star Acquisition Corp Tradeable Rights Nov 2017,delisted,2017-11-06,,0.4,0.41,0.21,0.271,,10423332.0,10423332.0,-0.12900000000000003,-0.3945686274509802,0.30143232000000003

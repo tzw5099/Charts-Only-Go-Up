@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TIGR,UP Fintech Holding Limited,NASDAQ,2019-03-20,,8.11,23.89,3.25,3.55,3.55,293947800.0,293947800.0,-10.189999999999994,-0.755025125628141,6.231489195979899
+2020-01-01,TIGR,UP Fintech Holding Limited,NASDAQ,2019-03-20,,3.51,7.6,2.03,4.93,4.93,155947338.0,155947338.0,-1.7250000000000005,-0.12873184357541903,4.004446983240226

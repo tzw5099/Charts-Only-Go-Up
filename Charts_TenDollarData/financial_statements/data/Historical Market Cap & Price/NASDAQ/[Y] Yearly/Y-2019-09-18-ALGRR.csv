@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,ALGRR,Allegro Merger Corp. RT,NASDAQ,2019-09-18,,0.25,0.5,0.2,0.32,0.32,5495005.0,5495005.0,0.14,1.5245833333333334,0.3109725
+2020-01-01,ALGRR,Allegro Merger Corp. RT,NASDAQ,2019-09-18,299000000.0,0.36,0.45,0.0,0.02,0.02,86942383.0,86942383.0,-0.39000000000000007,-2.584233333333333,0.21405549999999993

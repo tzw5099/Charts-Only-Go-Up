@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ADCT,ADC TELECOMMUNICATIONS INC,delisted,2020-05-18,,30.0,56.59,29.73,42.4900016785,42.4900016785,16397395.0,16397395.0,14.51,0.5034352941176471,42.098596

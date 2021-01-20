@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,TRAIX,T. Rowe Price Capital Appreciation Fund I Class,NASDAQ,2015-12-17,,24.950001,25.290001,24.690001,25.059999,19.880217,0.0,0.0,0.0,0.0,
+2016-01-01,TRAIX,T. Rowe Price Capital Appreciation Fund I Class,NASDAQ,2015-12-17,,24.82,27.33,23.42,26.209999,21.533138,0.0,0.0,0.0,0.0,
+2017-01-01,TRAIX,T. Rowe Price Capital Appreciation Fund I Class,NASDAQ,2015-12-17,,26.33,30.299999,26.33,28.290001,24.85932,0.0,0.0,0.0,0.0,
+2018-01-01,TRAIX,T. Rowe Price Capital Appreciation Fund I Class,NASDAQ,2015-12-17,,28.290001,30.559999,25.43,26.549999,25.049311,0.0,0.0,0.0,0.0,
+2019-01-01,TRAIX,T. Rowe Price Capital Appreciation Fund I Class,NASDAQ,2015-12-17,,26.469999,32.73,26.049999,31.24,31.24,0.0,0.0,0.0,0.0,
+2020-01-01,TRAIX,T. Rowe Price Capital Appreciation Fund I Class,NASDAQ,2015-12-17,,31.469999,34.130001,23.879999,33.490002,33.490002,0.0,0.0,0.0,0.0,

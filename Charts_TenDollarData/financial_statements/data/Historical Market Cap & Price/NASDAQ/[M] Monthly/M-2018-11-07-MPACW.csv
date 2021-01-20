@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-11-01,MPACW,Matlin & Partners Acquisition Corporation Warrants,NASDAQ,2018-11-07,,0.7,0.73,0.67,0.73,,1627052.0,1627052.0,0.73,1.9323333333333332,0.6936243333333333

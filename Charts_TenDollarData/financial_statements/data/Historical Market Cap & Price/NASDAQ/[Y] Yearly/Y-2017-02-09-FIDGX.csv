@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,FIDGX,Fidelity Advisor Small Cap Growth Fund Class Z,NASDAQ,2017-02-09,,21.799999,25.120001,21.799999,24.809999,21.101492,0.0,0.0,0.0,0.0,
+2018-01-01,FIDGX,Fidelity Advisor Small Cap Growth Fund Class Z,NASDAQ,2017-02-09,,24.93,31.0,19.74,21.290001,20.162548,0.0,0.0,0.0,0.0,
+2019-01-01,FIDGX,Fidelity Advisor Small Cap Growth Fund Class Z,NASDAQ,2017-02-09,,21.18,27.83,20.629999,27.530001,27.530001,0.0,0.0,0.0,0.0,
+2020-01-01,FIDGX,Fidelity Advisor Small Cap Growth Fund Class Z,NASDAQ,2017-02-09,,27.629999,30.91,18.4,28.209999,28.209999,0.0,0.0,0.0,0.0,

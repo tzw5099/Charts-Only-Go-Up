@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,AFHBL,Atlas Financial Holdings Inc. 6.625% Senior Unsecured Notes Due 2022,NASDAQ,2019-06-19,,9.88,9.9,9.86,9.03,9.03,5.0,5.0,-0.85,-8.603,9.59667
+2019-07-01,AFHBL,Atlas Financial Holdings Inc. 6.625% Senior Unsecured Notes Due 2022,NASDAQ,2019-06-19,,7.91,8.08,7.22,7.22,7.22,11870.0,11870.0,-0.27,-1.1493333333333333,7.42889
+2019-10-01,AFHBL,Atlas Financial Holdings Inc. 6.625% Senior Unsecured Notes Due 2022,NASDAQ,2019-06-19,,7.33,8.4,6.0,6.36,6.36,470162.0,470162.0,-1.5099999999999998,-0.2918064516129032,5.300859838709677
+2020-01-01,AFHBL,Atlas Financial Holdings Inc. 6.625% Senior Unsecured Notes Due 2022,NASDAQ,2019-06-19,,6.38,8.75,5.01,8.15,8.15,84800.0,84800.0,2.21,0.797016129032258,4.793924516129034
+2020-04-01,AFHBL,Atlas Financial Holdings Inc. 6.625% Senior Unsecured Notes Due 2022,NASDAQ,2019-06-19,,6.01,8.25,3.0,7.25,7.25,48000.0,48000.0,6.01,2.18352380952381,3.7193119047619043
+2020-07-01,AFHBL,Atlas Financial Holdings Inc. 6.625% Senior Unsecured Notes Due 2022,NASDAQ,2019-06-19,,7.25,9.95,6.03,6.5,6.5,32000.0,32000.0,6.295,1.8510377358490564,4.433616603773586

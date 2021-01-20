@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,NQWFX,Nuveen NWQ Flexible Income Fund Class R6,NASDAQ,2016-07-05,,21.190001,22.07,21.01,21.4,18.042173,0.0,0.0,0.0,0.0,
+2017-01-01,NQWFX,Nuveen NWQ Flexible Income Fund Class R6,NASDAQ,2016-07-05,,21.459999,22.360001,21.459999,22.049999,19.678764,0.0,0.0,0.0,0.0,
+2018-01-01,NQWFX,Nuveen NWQ Flexible Income Fund Class R6,NASDAQ,2016-07-05,,22.049999,22.24,19.950001,20.01,18.94092,0.0,0.0,0.0,0.0,
+2019-01-01,NQWFX,Nuveen NWQ Flexible Income Fund Class R6,NASDAQ,2016-07-05,,20.02,22.549999,19.99,22.379999,22.077221,0.0,0.0,0.0,0.0,
+2020-01-01,NQWFX,Nuveen NWQ Flexible Income Fund Class R6,NASDAQ,2016-07-05,,22.42,22.75,17.24,21.74,21.74,0.0,0.0,0.0,0.0,

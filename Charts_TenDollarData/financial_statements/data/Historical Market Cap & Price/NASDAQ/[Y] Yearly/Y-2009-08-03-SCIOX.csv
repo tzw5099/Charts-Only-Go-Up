@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,32.669998,38.48,32.009998,38.130001,17.355865,0.0,0.0,0.0,0.0,
+2010-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,38.650002,44.169998,34.41,43.889999,19.97768,0.0,0.0,0.0,0.0,
+2011-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,44.330002,47.91,36.900002,39.98,19.019012,0.0,0.0,0.0,0.0,
+2012-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,40.369999,49.419998,39.439999,40.240002,20.426069,0.0,0.0,0.0,0.0,
+2013-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,41.52,48.919998,40.32,48.919998,25.244562,0.0,0.0,0.0,0.0,
+2014-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,48.450001,62.389999,47.490002,54.41,31.832611,0.0,0.0,0.0,0.0,
+2015-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,54.169998,62.09,51.52,53.5,34.855526,0.0,0.0,0.0,0.0,
+2016-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,52.610001,62.799999,45.400002,57.02,40.317749,0.0,0.0,0.0,0.0,
+2017-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,57.459999,81.970001,57.459999,68.620003,54.187572,0.0,0.0,0.0,0.0,
+2018-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,70.209999,79.360001,52.259998,56.389999,49.901573,0.0,0.0,0.0,0.0,
+2019-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,56.779999,83.279999,54.16,77.129997,77.129997,0.0,0.0,0.0,0.0,
+2020-01-01,SCIOX,Columbia Seligman Communications and Information Fund Advisor Class,NASDAQ,2009-08-03,,78.470001,93.059998,52.41,84.25,84.25,0.0,0.0,0.0,0.0,

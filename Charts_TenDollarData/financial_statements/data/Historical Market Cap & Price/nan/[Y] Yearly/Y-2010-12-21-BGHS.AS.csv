@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,0.0,0.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0
+2011-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2012-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2013-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2014-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2015-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2016-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2017-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2018-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2019-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,,,,,,0.0,0.0,0.0,,
+2020-01-01,BGHS.AS,Boussard & Gavaudan Holding Limited,,2010-12-21,,1475.0,1600.0,15.0,1500.0,1500.0,3491.0,3491.0,0.0,0.0,112.93191939393938

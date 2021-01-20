@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,IEAWW,"Infrastructure and Energy Alternatives, Inc. Warrant",NASDAQ,2020-07-21,8667516.48,0.21,0.58,0.074,0.42,0.42,4052218.0,4052218.0,1.7125000000000004,30.646848484848487,0.21858151515151517

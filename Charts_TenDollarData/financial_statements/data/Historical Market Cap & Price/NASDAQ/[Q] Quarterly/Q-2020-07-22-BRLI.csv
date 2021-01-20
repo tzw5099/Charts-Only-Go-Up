@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,BRLI,,NASDAQ,2020-07-22,,9.81,9.95,9.74,9.77,9.77,712295.0,712295.0,-0.35300000000000004,-0.086609756097561,9.086600975609755

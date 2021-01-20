@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTJ,iShares iBonds Dec 2029 Term Treasury ETF,NASDAQ,2020-02-28,,25.2702,27.7898,24.9912,26.629999,26.629999,1081913.0,1081913.0,-2.4141999999999983,-0.06679411764705886,26.26931750000002

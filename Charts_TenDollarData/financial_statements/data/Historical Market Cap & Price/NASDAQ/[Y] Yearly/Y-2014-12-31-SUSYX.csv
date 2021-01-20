@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,SUSYX,SEI Institutional Managed Trust U.S. Managed Volatility Fund Class Y,NASDAQ,2014-12-31,,16.700001,16.700001,16.700001,16.700001,11.431762,0.0,0.0,0.0,0.0,
+2015-01-01,SUSYX,SEI Institutional Managed Trust U.S. Managed Volatility Fund Class Y,NASDAQ,2014-12-31,,16.700001,17.389999,15.64,15.82,11.572682,0.0,0.0,0.0,0.0,
+2016-01-01,SUSYX,SEI Institutional Managed Trust U.S. Managed Volatility Fund Class Y,NASDAQ,2014-12-31,,15.65,17.719999,14.87,16.98,12.996345,0.0,0.0,0.0,0.0,
+2017-01-01,SUSYX,SEI Institutional Managed Trust U.S. Managed Volatility Fund Class Y,NASDAQ,2014-12-31,,17.049999,19.209999,16.99,17.719999,14.857924,0.0,0.0,0.0,0.0,
+2018-01-01,SUSYX,SEI Institutional Managed Trust U.S. Managed Volatility Fund Class Y,NASDAQ,2014-12-31,,17.74,18.85,14.55,15.22,14.485368,0.0,0.0,0.0,0.0,
+2019-01-01,SUSYX,SEI Institutional Managed Trust U.S. Managed Volatility Fund Class Y,NASDAQ,2014-12-31,,15.14,18.379999,14.95,18.02,17.896004,0.0,0.0,0.0,0.0,
+2020-01-01,SUSYX,SEI Institutional Managed Trust U.S. Managed Volatility Fund Class Y,NASDAQ,2014-12-31,,18.030001,18.4,12.13,16.27,16.27,0.0,0.0,0.0,0.0,

@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,VGIVX,Vanguard Emerging Markets Government Bond Index Fund Institutional Shares,NASDAQ,2013-05-14,,30.0,30.02,27.860001,29.23,23.125925,0.0,0.0,0.0,0.0,
+2014-01-01,VGIVX,Vanguard Emerging Markets Government Bond Index Fund Institutional Shares,NASDAQ,2013-05-14,,29.25,31.879999,29.09,30.610001,24.403301,0.0,0.0,0.0,0.0,
+2015-01-01,VGIVX,Vanguard Emerging Markets Government Bond Index Fund Institutional Shares,NASDAQ,2013-05-14,,30.629999,31.85,29.68,29.76,24.796049,0.0,0.0,0.0,0.0,
+2016-01-01,VGIVX,Vanguard Emerging Markets Government Bond Index Fund Institutional Shares,NASDAQ,2013-05-14,,29.77,32.93,29.15,31.200001,27.255669,0.0,0.0,0.0,0.0,
+2017-01-01,VGIVX,Vanguard Emerging Markets Government Bond Index Fund Institutional Shares,NASDAQ,2013-05-14,,31.25,32.830002,31.25,32.299999,29.441883,0.0,0.0,0.0,0.0,
+2018-01-01,VGIVX,Vanguard Emerging Markets Government Bond Index Fund Institutional Shares,NASDAQ,2013-05-14,,32.290001,32.400002,29.610001,30.030001,28.641384,0.0,0.0,0.0,0.0,
+2019-01-01,VGIVX,Vanguard Emerging Markets Government Bond Index Fund Institutional Shares,NASDAQ,2013-05-14,,30.049999,32.82,30.049999,32.66,32.25605,0.0,0.0,0.0,0.0,
+2020-01-01,VGIVX,Vanguard Emerging Markets Government Bond Index Fund Institutional Shares,NASDAQ,2013-05-14,,32.709999,33.490002,26.4,32.400002,32.400002,0.0,0.0,0.0,0.0,

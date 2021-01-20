@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,16.85,18.48,15.87,18.379999,14.298946,0.0,0.0,0.0,0.0,
+2013-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,18.85,26.51,18.85,26.49,20.608221,0.0,0.0,0.0,0.0,
+2014-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,26.17,28.610001,25.540001,28.469999,22.148584,0.0,0.0,0.0,0.0,
+2015-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,28.190001,34.490002,26.389999,32.75,25.478268,0.0,0.0,0.0,0.0,
+2016-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,31.870001,42.540001,27.26,42.080002,32.73666,0.0,0.0,0.0,0.0,
+2017-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,42.0,48.310001,40.549999,46.279999,36.988728,0.0,0.0,0.0,0.0,
+2018-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,46.240002,51.189999,28.52,29.889999,29.75975,0.0,0.0,0.0,0.0,
+2019-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,30.049999,36.200001,29.76,36.16,36.16,0.0,0.0,0.0,0.0,
+2020-01-01,HSSIX,Emerald Banking and Finance Fund Institutional Class,NASDAQ,2012-03-19,,36.02,36.470001,18.66,28.469999,28.469999,0.0,0.0,0.0,0.0,

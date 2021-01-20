@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,19.85,20.540001,19.85,20.190001,18.062752,0.0,0.0,0.0,0.0,
+2013-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,20.620001,25.469999,20.209999,25.469999,22.78644,0.0,0.0,0.0,0.0,
+2014-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,25.120001,25.73,22.530001,23.040001,20.965416,0.0,0.0,0.0,0.0,
+2015-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,22.99,26.870001,22.27,24.6,22.577469,0.0,0.0,0.0,0.0,
+2016-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,24.16,24.860001,21.9,23.98,22.400358,0.0,0.0,0.0,0.0,
+2017-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,24.040001,28.82,24.040001,28.48,27.192345,0.0,0.0,0.0,0.0,
+2018-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,28.700001,30.49,22.75,23.07,22.282318,0.0,0.0,0.0,0.0,
+2019-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,22.940001,27.75,22.790001,26.709999,26.709999,0.0,0.0,0.0,0.0,
+2020-01-01,CAMYX,Cambiar International Equity Institutional,NASDAQ,2012-11-30,,26.889999,26.959999,17.02,24.57,24.57,0.0,0.0,0.0,0.0,

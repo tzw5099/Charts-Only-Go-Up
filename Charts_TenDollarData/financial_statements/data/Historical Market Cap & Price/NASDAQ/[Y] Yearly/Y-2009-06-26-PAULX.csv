@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,10.0,12.04,9.61,11.94,7.825205,0.0,0.0,0.0,0.0,
+2010-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,12.1,13.43,10.89,13.22,8.943787,0.0,0.0,0.0,0.0,
+2011-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,13.36,14.46,11.6,13.16,9.042092,0.0,0.0,0.0,0.0,
+2012-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,13.33,15.51,13.31,14.73,10.520418,0.0,0.0,0.0,0.0,
+2013-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,15.08,19.049999,15.03,18.440001,13.859429,0.0,0.0,0.0,0.0,
+2014-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,18.280001,20.700001,17.59,18.58,15.476603,0.0,0.0,0.0,0.0,
+2015-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,18.58,20.43,18.030001,19.049999,16.717115,0.0,0.0,0.0,0.0,
+2016-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,18.76,20.65,17.17,20.219999,17.847549,0.0,0.0,0.0,0.0,
+2017-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,20.360001,24.42,20.360001,23.809999,21.52849,0.0,0.0,0.0,0.0,
+2018-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,23.889999,26.049999,20.15,21.42,20.741753,0.0,0.0,0.0,0.0,
+2019-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,21.41,27.16,20.940001,26.790001,26.790001,0.0,0.0,0.0,0.0,
+2020-01-01,PAULX,T. Rowe Price U.S. Large-Cap Core Fund Advisor Class,NASDAQ,2009-06-26,,27.040001,29.23,18.66,27.809999,27.809999,0.0,0.0,0.0,0.0,

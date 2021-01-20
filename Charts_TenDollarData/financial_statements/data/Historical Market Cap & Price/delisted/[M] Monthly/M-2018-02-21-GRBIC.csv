@@ -1,0 +1,15 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-02-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,99.9885,99.9885,99.9885,99.9885,,101500.0,101500.0,99.9885,0.0,99.9885
+2018-03-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,99.9985,99.9985,99.9985,99.9985,,1957.0,1957.0,0.009995,0.002,99.9985
+2018-04-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,99.9385,99.9385,99.9385,99.9385,,202.0,202.0,-0.059969,-0.015,99.9385
+2018-05-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,,,0.0,0.0,0.0,,
+2018-06-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,99.9385,,2.0,2.0,0.0,0.0,
+2018-07-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,,,0.0,0.0,0.0,,
+2018-08-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,99.9385,,72.0,72.0,0.0,0.0,
+2018-09-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,,,0.0,0.0,0.0,,
+2018-10-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,,,0.0,0.0,0.0,,
+2018-11-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,,,0.0,0.0,0.0,,
+2018-12-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,99.9385,,25.0,25.0,-5e-06,0.0,
+2019-01-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,99.99,99.99,99.99,99.99,,11470.0,11470.0,0.0515,0.026,99.99
+2019-02-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,100.05,100.05,99.99,99.99,,43904.0,43904.0,0.0,0.0,100.014
+2019-03-01,GRBIC,Gabelli NextShares Trust Gabelli RBI NextShares,delisted,2018-02-21,,,,,99.99,,3.0,3.0,0.0,0.0,

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,MMSRX,Victory Munder Mid-Cap Core Growth Fund Class R,NASDAQ,2019-04-26,,20.940001,21.309999,19.879999,21.16,10.266924,0.0,0.0,0.0,0.0,
+2019-07-01,MMSRX,Victory Munder Mid-Cap Core Growth Fund Class R,NASDAQ,2019-04-26,,21.32,21.959999,20.49,21.07,10.223255,0.0,0.0,0.0,0.0,
+2019-10-01,MMSRX,Victory Munder Mid-Cap Core Growth Fund Class R,NASDAQ,2019-04-26,,20.74,21.790001,12.04,12.16,10.656196,0.0,0.0,0.0,0.0,
+2020-01-01,MMSRX,Victory Munder Mid-Cap Core Growth Fund Class R,NASDAQ,2019-04-26,,12.24,12.96,6.83,8.15,8.15,0.0,0.0,0.0,0.0,
+2020-04-01,MMSRX,Victory Munder Mid-Cap Core Growth Fund Class R,NASDAQ,2019-04-26,,7.74,10.52,7.65,9.98,9.98,0.0,0.0,0.0,0.0,
+2020-07-01,MMSRX,Victory Munder Mid-Cap Core Growth Fund Class R,NASDAQ,2019-04-26,,10.01,11.42,9.94,10.96,10.96,0.0,0.0,0.0,0.0,

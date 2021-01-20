@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,LMFAW,Lm Funding WT ,NASDAQ,2020-07-21,200447.86,0.1601,0.1299,0.0261,0.062,0.062,475097.0,475097.0,-5.1567,-70.96029999999999,0.07201366666666666

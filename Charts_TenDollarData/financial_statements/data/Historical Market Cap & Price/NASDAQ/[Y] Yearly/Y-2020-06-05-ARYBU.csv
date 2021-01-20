@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ARYBU,,NASDAQ,2020-06-05,,10.6,13.46,10.5,11.5,11.5,8435370.0,8435370.0,-1.2739999999999996,-0.10501369863013674,11.304311095890414

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,ATISW,"Attis Industries, Inc.",NASDAQ,2019-09-23,,0.02,0.12,0.02,0.12,0.12,802.0,802.0,0.09,150.0,0.055
+2019-10-01,ATISW,"Attis Industries, Inc.",NASDAQ,2019-09-23,,0.03,0.17,0.01,0.12,0.12,26085.0,26085.0,0.28,74.87055,0.06283350000000001
+2020-01-01,ATISW,"Attis Industries, Inc.",NASDAQ,2019-09-23,,0.12,0.12,0.04,0.04,0.04,9495.0,9495.0,0.009999999999999998,0.3810000000000002,0.07300000000000002

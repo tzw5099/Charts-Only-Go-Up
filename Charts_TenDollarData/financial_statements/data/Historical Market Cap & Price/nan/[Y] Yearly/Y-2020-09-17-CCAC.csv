@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CCAC,CITIC Capital Acquisition Corp.,,2020-09-17,343965000.0,9.75,10.58,9.51,9.95,9.95,7643530.0,7643530.0,-1.706999999999999,-0.22860273972602752,9.709561369863016

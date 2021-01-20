@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,JFK,8i Enterprises Acquisition Corp.,NASDAQ,2019-05-16,74423550.0,9.83,11.5,9.19,10.02,10.02,3530000.0,3530000.0,-0.5919999999999997,-0.049300884955752224,9.96409991150443
+2020-01-01,JFK,8i Enterprises Acquisition Corp.,NASDAQ,2019-05-16,62316725.00000001,10.02,13.0,7.36,8.39,8.39,4621763.0,4621763.0,-11.437000000000001,-0.7417862068965516,10.16042227586206

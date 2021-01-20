@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,MLACU,,NASDAQ,2020-07-15,,10.1,10.15,9.85,9.92,9.92,6732897.0,6732897.0,-0.534,-0.11604347826086957,9.084574130434783

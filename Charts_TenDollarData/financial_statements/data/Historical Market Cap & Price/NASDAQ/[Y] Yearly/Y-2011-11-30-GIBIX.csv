@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,25.0,25.139999,25.0,25.139999,18.063429,0.0,0.0,0.0,0.0,
+2012-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,25.190001,27.059999,25.16,27.02,20.321444,0.0,0.0,0.0,0.0,
+2013-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,27.0,27.67,25.92,26.18,20.689825,0.0,0.0,0.0,0.0,
+2014-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,26.209999,27.18,26.209999,26.98,22.4053,0.0,0.0,0.0,0.0,
+2015-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,27.0,27.25,26.07,26.09,22.685308,0.0,0.0,0.0,0.0,
+2016-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,26.110001,27.299999,25.93,26.450001,24.095921,0.0,0.0,0.0,0.0,
+2017-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,26.450001,27.27,26.440001,27.219999,25.660637,0.0,0.0,0.0,0.0,
+2018-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,27.16,27.190001,26.41,26.559999,25.873331,0.0,0.0,0.0,0.0,
+2019-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,26.639999,27.700001,26.48,27.120001,26.968853,0.0,0.0,0.0,0.0,
+2020-01-01,GIBIX,Guggenheim Total Return Bond Fund Institutional Class,NASDAQ,2011-11-30,,27.16,30.059999,27.120001,29.9,29.9,0.0,0.0,0.0,0.0,

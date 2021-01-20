@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NWKCX,Nationwide Geneva Small Cap Growth Fund Class R6,NASDAQ,2013-09-19,,43.09,46.400002,42.139999,45.040001,35.523438,0.0,0.0,0.0,0.0,
+2014-01-01,NWKCX,Nationwide Geneva Small Cap Growth Fund Class R6,NASDAQ,2013-09-19,,44.490002,45.509998,38.959999,41.110001,34.522102,0.0,0.0,0.0,0.0,
+2015-01-01,NWKCX,Nationwide Geneva Small Cap Growth Fund Class R6,NASDAQ,2013-09-19,,40.720001,48.470001,39.470001,43.16,38.039192,0.0,0.0,0.0,0.0,
+2016-01-01,NWKCX,Nationwide Geneva Small Cap Growth Fund Class R6,NASDAQ,2013-09-19,,42.07,49.490002,37.080002,47.790001,42.18745,0.0,0.0,0.0,0.0,
+2017-01-01,NWKCX,Nationwide Geneva Small Cap Growth Fund Class R6,NASDAQ,2013-09-19,,47.790001,59.259998,47.73,55.889999,51.621056,0.0,0.0,0.0,0.0,
+2018-01-01,NWKCX,Nationwide Geneva Small Cap Growth Fund Class R6,NASDAQ,2013-09-19,,56.18,70.849998,48.860001,52.290001,51.20903,0.0,0.0,0.0,0.0,
+2019-01-01,NWKCX,Nationwide Geneva Small Cap Growth Fund Class R6,NASDAQ,2013-09-19,,51.880001,66.970001,50.540001,65.809998,65.809998,0.0,0.0,0.0,0.0,
+2020-01-01,NWKCX,Nationwide Geneva Small Cap Growth Fund Class R6,NASDAQ,2013-09-19,,66.190002,74.949997,46.18,69.839996,69.839996,0.0,0.0,0.0,0.0,

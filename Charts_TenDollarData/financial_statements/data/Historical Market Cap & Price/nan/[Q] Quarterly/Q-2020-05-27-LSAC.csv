@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-04-01,LSAC,LifeSci Acquisition Corp. Common Stock,,2020-05-27,,9.35,11.0,9.35,9.96,9.96,40500.0,40500.0,-0.25300000000000006,-0.1180769230769231,9.884103076923076
+2020-07-01,LSAC,LifeSci Acquisition Corp. Common Stock,,2020-05-27,,10.08,10.39,9.8,10.1599998474,10.1599998474,307720.0,307720.0,-0.383,-0.07653191489361702,8.336283829787233

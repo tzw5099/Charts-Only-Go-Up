@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,AKRSX,Akre Focus Fund Supra Institutional Class,NASDAQ,2015-09-02,,22.92,24.18,21.969999,23.440001,22.472925,0.0,0.0,0.0,0.0,
+2016-01-01,AKRSX,Akre Focus Fund Supra Institutional Class,NASDAQ,2015-09-02,,23.120001,25.940001,20.690001,25.43,24.424505,0.0,0.0,0.0,0.0,
+2017-01-01,AKRSX,Akre Focus Fund Supra Institutional Class,NASDAQ,2015-09-02,,25.639999,33.529999,25.639999,33.099998,31.983732,0.0,0.0,0.0,0.0,
+2018-01-01,AKRSX,Akre Focus Fund Supra Institutional Class,NASDAQ,2015-09-02,,33.080002,38.860001,32.779999,34.790001,33.791607,0.0,0.0,0.0,0.0,
+2019-01-01,AKRSX,Akre Focus Fund Supra Institutional Class,NASDAQ,2015-09-02,,34.720001,46.93,34.07,45.799999,45.799999,0.0,0.0,0.0,0.0,
+2020-01-01,AKRSX,Akre Focus Fund Supra Institutional Class,NASDAQ,2015-09-02,,46.150002,55.400002,34.810001,52.27,52.27,0.0,0.0,0.0,0.0,

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PFPMX,Parnassus Mid Cap Fund Institutional Shares,NASDAQ,2015-04-30,,27.58,28.030001,25.280001,25.57,21.901396,0.0,0.0,0.0,0.0,
+2016-01-01,PFPMX,Parnassus Mid Cap Fund Institutional Shares,NASDAQ,2015-04-30,,25.23,29.6,23.33,28.9,25.467072,0.0,0.0,0.0,0.0,
+2017-01-01,PFPMX,Parnassus Mid Cap Fund Institutional Shares,NASDAQ,2015-04-30,,29.18,32.869999,29.17,32.110001,29.556602,0.0,0.0,0.0,0.0,
+2018-01-01,PFPMX,Parnassus Mid Cap Fund Institutional Shares,NASDAQ,2015-04-30,,32.189999,34.259998,27.52,28.9,27.659128,0.0,0.0,0.0,0.0,
+2019-01-01,PFPMX,Parnassus Mid Cap Fund Institutional Shares,NASDAQ,2015-04-30,,28.639999,36.130001,28.200001,35.68,35.68,0.0,0.0,0.0,0.0,
+2020-01-01,PFPMX,Parnassus Mid Cap Fund Institutional Shares,NASDAQ,2015-04-30,,35.700001,37.18,23.299999,35.950001,35.950001,0.0,0.0,0.0,0.0,

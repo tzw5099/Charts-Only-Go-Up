@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,MCMJW,Merida Merger Corp. I,NASDAQ,2020-07-20,,0.7499,0.77,0.623,0.623,0.623,26140.0,26140.0,-0.4164,-13.88175,0.661375
+2020-08-01,MCMJW,Merida Merger Corp. I,NASDAQ,2020-07-20,,0.7499,0.8,0.61,0.61,0.61,7539.0,7539.0,-0.4095,-10.9216,0.67078
+2020-09-01,MCMJW,Merida Merger Corp. I,NASDAQ,2020-07-20,,0.7499,0.8,0.63,0.63,0.63,41275.0,41275.0,-0.009500000000000008,-0.25340000000000024,0.746334

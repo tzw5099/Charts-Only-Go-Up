@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,HYMCW,,NASDAQ,2020-07-21,,1.561,4.02,1.25,2.16,2.16,10307952.0,10307952.0,16.408000000000005,33.708588235294116,1.9161970588235295

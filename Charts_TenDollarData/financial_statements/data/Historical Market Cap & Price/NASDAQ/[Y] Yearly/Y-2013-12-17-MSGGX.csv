@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,MSGGX,Meridian Small Cap Growth Fund Legacy Class,NASDAQ,2013-12-17,,9.97,10.45,9.97,10.45,8.031188,0.0,0.0,0.0,0.0,
+2014-01-01,MSGGX,Meridian Small Cap Growth Fund Legacy Class,NASDAQ,2013-12-17,,10.3,12.44,9.91,12.26,9.666118,0.0,0.0,0.0,0.0,
+2015-01-01,MSGGX,Meridian Small Cap Growth Fund Legacy Class,NASDAQ,2013-12-17,,12.13,13.37,11.1,11.26,9.020701,0.0,0.0,0.0,0.0,
+2016-01-01,MSGGX,Meridian Small Cap Growth Fund Legacy Class,NASDAQ,2013-12-17,,11.09,13.88,9.6,13.56,10.863296,0.0,0.0,0.0,0.0,
+2017-01-01,MSGGX,Meridian Small Cap Growth Fund Legacy Class,NASDAQ,2013-12-17,,13.6,16.59,13.6,15.99,13.347813,0.0,0.0,0.0,0.0,
+2018-01-01,MSGGX,Meridian Small Cap Growth Fund Legacy Class,NASDAQ,2013-12-17,,16.1,19.57,13.43,14.27,13.40103,0.0,0.0,0.0,0.0,
+2019-01-01,MSGGX,Meridian Small Cap Growth Fund Legacy Class,NASDAQ,2013-12-17,,14.29,16.92,13.99,16.08,16.08,0.0,0.0,0.0,0.0,
+2020-01-01,MSGGX,Meridian Small Cap Growth Fund Legacy Class,NASDAQ,2013-12-17,,16.02,16.309999,9.71,16.309999,16.309999,0.0,0.0,0.0,0.0,

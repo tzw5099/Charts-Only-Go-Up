@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ARTLW,"Artelo Biosciences, Inc.",NASDAQ,2020-07-21,291909.8392,0.14,0.19,0.085,0.0854,0.0854,47718.0,47718.0,-0.61952,-21.643105263157896,0.11075947368421053

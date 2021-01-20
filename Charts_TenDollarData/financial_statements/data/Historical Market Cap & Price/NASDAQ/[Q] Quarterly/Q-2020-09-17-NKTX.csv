@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,NKTX,,NASDAQ,2020-09-17,984026643.6000001,54.45,58.69,22.459999,30.530001,30.530001,10872269.0,10872269.0,-25.669999999999998,-1.2162857142857146,29.341612244897952

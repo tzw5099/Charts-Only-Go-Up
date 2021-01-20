@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,PRPLW,,NASDAQ,2020-07-21,325174110.0,4.5,7.56,3.66,5.73,5.73,12322655.0,12322655.0,2.5749999999999997,1.7386585365853662,5.202256829268292

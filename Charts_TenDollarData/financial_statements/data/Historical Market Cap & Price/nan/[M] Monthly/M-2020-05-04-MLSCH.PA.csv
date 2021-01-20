@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-05-01,MLSCH.PA,Schobrunn Paris,,2020-05-04,,40.0,40.0,30.0,30.0,30.0,1.0,1.0,0.0,0.0,1.5
+2020-06-01,MLSCH.PA,Schobrunn Paris,,2020-05-04,,30.0,30.0,30.0,30.0,30.0,2.0,2.0,0.0,0.0,1.3636363636363635
+2020-07-01,MLSCH.PA,Schobrunn Paris,,2020-05-04,,30.0,30.0,30.0,30.0,30.0,0.0,0.0,0.0,0.0,0.0
+2020-08-01,MLSCH.PA,Schobrunn Paris,,2020-05-04,,30.0,30.0,30.0,30.0,30.0,0.0,0.0,0.0,0.0,0.0
+2020-09-01,MLSCH.PA,Schobrunn Paris,,2020-05-04,,30.0,30.0,30.0,30.0,30.0,0.0,0.0,0.0,0.0,0.0

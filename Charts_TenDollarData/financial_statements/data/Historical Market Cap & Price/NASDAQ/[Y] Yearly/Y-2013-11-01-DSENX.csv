@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,DSENX,DoubleLine Shiller Enhanced CAPE Class N,NASDAQ,2013-11-01,,10.01,10.36,9.94,10.36,7.11432,0.0,0.0,0.0,0.0,
+2014-01-01,DSENX,DoubleLine Shiller Enhanced CAPE Class N,NASDAQ,2013-11-01,,10.26,12.11,9.84,12.05,8.48507,0.0,0.0,0.0,0.0,
+2015-01-01,DSENX,DoubleLine Shiller Enhanced CAPE Class N,NASDAQ,2013-11-01,,11.88,12.53,11.0,11.9,8.734679,0.0,0.0,0.0,0.0,
+2016-01-01,DSENX,DoubleLine Shiller Enhanced CAPE Class N,NASDAQ,2013-11-01,,11.72,13.96,10.88,13.72,10.485084,0.0,0.0,0.0,0.0,
+2017-01-01,DSENX,DoubleLine Shiller Enhanced CAPE Class N,NASDAQ,2013-11-01,,13.81,16.280001,13.81,15.26,12.72174,0.0,0.0,0.0,0.0,
+2018-01-01,DSENX,DoubleLine Shiller Enhanced CAPE Class N,NASDAQ,2013-11-01,,15.39,17.049999,12.1,12.83,12.183554,0.0,0.0,0.0,0.0,
+2019-01-01,DSENX,DoubleLine Shiller Enhanced CAPE Class N,NASDAQ,2013-11-01,,12.82,16.42,12.52,16.26,16.159439,0.0,0.0,0.0,0.0,
+2020-01-01,DSENX,DoubleLine Shiller Enhanced CAPE Class N,NASDAQ,2013-11-01,,16.299999,17.139999,10.1,16.65,16.65,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ITOS,,NASDAQ,2020-07-24,10132902.9,25.55,34.330002,17.5,28.93,28.93,11204769.0,11204769.0,-3.3170000000000006,-0.11433333333333333,27.453679743589745

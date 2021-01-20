@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,FCAZX,Franklin Corefolio Allocation Fund Advisor Class,NASDAQ,2013-06-26,,14.92,17.75,14.92,17.639999,12.437172,0.0,0.0,0.0,0.0,
+2014-01-01,FCAZX,Franklin Corefolio Allocation Fund Advisor Class,NASDAQ,2013-06-26,,17.48,18.9,16.92,18.030001,13.279795,0.0,0.0,0.0,0.0,
+2015-01-01,FCAZX,Franklin Corefolio Allocation Fund Advisor Class,NASDAQ,2013-06-26,,17.98,19.200001,16.290001,16.82,13.149571,0.0,0.0,0.0,0.0,
+2016-01-01,FCAZX,Franklin Corefolio Allocation Fund Advisor Class,NASDAQ,2013-06-26,,16.530001,17.65,14.52,17.08,14.200164,0.0,0.0,0.0,0.0,
+2017-01-01,FCAZX,Franklin Corefolio Allocation Fund Advisor Class,NASDAQ,2013-06-26,,17.23,20.219999,17.23,19.709999,17.101519,0.0,0.0,0.0,0.0,
+2018-01-01,FCAZX,Franklin Corefolio Allocation Fund Advisor Class,NASDAQ,2013-06-26,,19.91,21.23,16.879999,17.35,15.926618,0.0,0.0,0.0,0.0,
+2019-01-01,FCAZX,Franklin Corefolio Allocation Fund Advisor Class,NASDAQ,2013-06-26,,17.35,20.809999,17.049999,20.08,20.08,0.0,0.0,0.0,0.0,
+2020-01-01,FCAZX,Franklin Corefolio Allocation Fund Advisor Class,NASDAQ,2013-06-26,,20.26,20.959999,14.1,20.07,20.07,0.0,0.0,0.0,0.0,

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ANDAR,Andina Acquisition Corp. III,NASDAQ,2020-07-21,,0.405,0.46,0.3,0.3,0.3,1275687.0,1275687.0,-0.10690000000000001,-3.3427499999999997,0.36184875000000005
+2020-08-01,ANDAR,Andina Acquisition Corp. III,NASDAQ,2020-07-21,,0.32,0.39,0.2821,0.39,0.39,44912.0,44912.0,0.0806,3.0320000000000005,0.350812
+2020-09-01,ANDAR,Andina Acquisition Corp. III,NASDAQ,2020-07-21,,0.39,0.42,0.3112,0.42,0.42,76809.0,76809.0,0.06742,2.4314,0.380206

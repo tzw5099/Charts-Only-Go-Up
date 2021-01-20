@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,JUEPX,JPMorgan U.S. Equity Fund Class R3,NASDAQ,2016-09-09,,14.11,15.32,13.96,14.54,10.695077,0.0,0.0,0.0,0.0,
+2017-01-01,JUEPX,JPMorgan U.S. Equity Fund Class R3,NASDAQ,2016-09-09,,14.67,17.370001,14.67,16.190001,12.943845,0.0,0.0,0.0,0.0,
+2018-01-01,JUEPX,JPMorgan U.S. Equity Fund Class R3,NASDAQ,2016-09-09,,16.34,17.92,12.51,13.37,12.137265,0.0,0.0,0.0,0.0,
+2019-01-01,JUEPX,JPMorgan U.S. Equity Fund Class R3,NASDAQ,2016-09-09,,13.4,17.030001,13.09,15.99,15.962636,0.0,0.0,0.0,0.0,
+2020-01-01,JUEPX,JPMorgan U.S. Equity Fund Class R3,NASDAQ,2016-09-09,,16.15,18.879999,11.43,17.870001,17.870001,0.0,0.0,0.0,0.0,

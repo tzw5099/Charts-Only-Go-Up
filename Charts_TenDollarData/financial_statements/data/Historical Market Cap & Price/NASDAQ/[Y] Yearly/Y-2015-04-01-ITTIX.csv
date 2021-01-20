@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,ITTIX,Hartford Multi-Asset Income and Growth Fund Class I,NASDAQ,2015-04-01,,21.049999,21.5,19.48,20.389999,15.249619,0.0,0.0,0.0,0.0,
+2016-01-01,ITTIX,Hartford Multi-Asset Income and Growth Fund Class I,NASDAQ,2015-04-01,,20.200001,21.540001,19.08,21.26,16.166521,0.0,0.0,0.0,0.0,
+2017-01-01,ITTIX,Hartford Multi-Asset Income and Growth Fund Class I,NASDAQ,2015-04-01,,21.379999,24.299999,21.379999,24.17,18.655218,0.0,0.0,0.0,0.0,
+2018-01-01,ITTIX,Hartford Multi-Asset Income and Growth Fund Class I,NASDAQ,2015-04-01,,24.27,25.34,20.6,21.08,17.715723,0.0,0.0,0.0,0.0,
+2019-01-01,ITTIX,Hartford Multi-Asset Income and Growth Fund Class I,NASDAQ,2015-04-01,,21.09,23.5,20.440001,20.440001,20.262627,0.0,0.0,0.0,0.0,
+2020-01-01,ITTIX,Hartford Multi-Asset Income and Growth Fund Class I,NASDAQ,2015-04-01,,20.48,20.82,16.74,19.969999,19.969999,0.0,0.0,0.0,0.0,

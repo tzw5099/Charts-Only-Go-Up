@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,DSKEW,"Daseke, Inc. Warrant",NASDAQ,2020-07-21,,0.05,0.265,0.0653,0.17,0.17,6161703.0,6161703.0,3.3535999999999997,173.3464242424242,0.15763848484848483

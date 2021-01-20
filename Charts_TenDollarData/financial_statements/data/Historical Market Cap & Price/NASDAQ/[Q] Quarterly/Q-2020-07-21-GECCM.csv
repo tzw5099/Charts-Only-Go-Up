@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GECCM,Great Elm Capital Corp. 6.75% Notes Due 2025,NASDAQ,2020-07-21,,20.8799,22.45,18.05,21.110001,21.110001,107058.0,107058.0,-16.056799999999992,-2.4030937500000005,20.344187187500005

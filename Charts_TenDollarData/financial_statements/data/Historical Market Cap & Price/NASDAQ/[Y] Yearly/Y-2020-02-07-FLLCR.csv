@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FLLCR,Fellazo Inc.,NASDAQ,2020-02-07,,0.17,0.2,0.14,0.15,0.15,74461.0,74461.0,0.0,0.0,0.18285714285714283

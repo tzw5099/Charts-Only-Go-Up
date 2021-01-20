@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,OPESW,Opes Acquisition Corp WT,NASDAQ,2020-07-21,11798976.540000001,4.17,3.65,1.35,2.99,2.99,11336372.0,11336372.0,-61.93,-45.61824242424242,2.228495454545455

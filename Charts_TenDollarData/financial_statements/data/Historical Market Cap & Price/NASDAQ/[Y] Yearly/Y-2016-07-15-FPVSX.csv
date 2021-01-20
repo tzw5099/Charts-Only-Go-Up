@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,FPVSX,Frontier Phocas Small Cap Value Fund Service Class,NASDAQ,2016-07-15,,34.66,40.439999,33.290001,39.619999,29.482836,0.0,0.0,0.0,0.0,
+2017-01-01,FPVSX,Frontier Phocas Small Cap Value Fund Service Class,NASDAQ,2016-07-15,,39.799999,42.150002,36.619999,38.700001,31.788641,0.0,0.0,0.0,0.0,
+2018-01-01,FPVSX,Frontier Phocas Small Cap Value Fund Service Class,NASDAQ,2016-07-15,,38.93,41.900002,25.030001,26.41,26.214756,0.0,0.0,0.0,0.0,
+2019-01-01,FPVSX,Frontier Phocas Small Cap Value Fund Service Class,NASDAQ,2016-07-15,,26.530001,32.869999,26.190001,32.639999,32.639999,0.0,0.0,0.0,0.0,
+2020-01-01,FPVSX,Frontier Phocas Small Cap Value Fund Service Class,NASDAQ,2016-07-15,,32.580002,33.029999,17.84,24.57,24.57,0.0,0.0,0.0,0.0,

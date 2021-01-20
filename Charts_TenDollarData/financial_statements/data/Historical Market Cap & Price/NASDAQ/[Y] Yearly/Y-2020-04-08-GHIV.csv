@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,GHIV,"Gores Holdings IV, Inc.",NASDAQ,2020-04-08,,9.6,10.98,9.6,10.89,10.89,6823746.0,6823746.0,0.05490000000000019,0.004989361702127676,10.178375638297874

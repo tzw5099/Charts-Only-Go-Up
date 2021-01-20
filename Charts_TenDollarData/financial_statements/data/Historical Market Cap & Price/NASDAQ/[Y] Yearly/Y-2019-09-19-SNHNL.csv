@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,SNHNL,Senior Housing Properties Trust 6.25% Senior Notes Due 2046,NASDAQ,2019-09-19,,25.77,26.5,25.0,25.87,25.87,1380773.0,1380773.0,1.09,0.06446268656716418,25.720249104477617

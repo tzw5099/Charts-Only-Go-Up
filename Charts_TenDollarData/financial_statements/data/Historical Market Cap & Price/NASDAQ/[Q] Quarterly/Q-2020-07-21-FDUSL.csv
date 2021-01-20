@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,FDUSL,Fidus Investment Corporation 5.875% Notes due 2023,NASDAQ,2020-07-21,,23.76,25.049999,23.32,24.799999,24.799999,124400.0,124400.0,25.351699999999994,3.4480967741935475,24.563273548387095

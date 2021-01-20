@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,DISIX,BNY Mellon Small Cap Stock Index Fund Class I,NASDAQ,2016-08-31,,28.690001,32.77,26.84,30.07,22.453848,0.0,0.0,0.0,0.0,
+2017-01-01,DISIX,BNY Mellon Small Cap Stock Index Fund Class I,NASDAQ,2016-08-31,,30.27,34.16,29.32,31.469999,25.295549,0.0,0.0,0.0,0.0,
+2018-01-01,DISIX,BNY Mellon Small Cap Stock Index Fund Class I,NASDAQ,2016-08-31,,31.700001,37.16,24.870001,25.27,23.260452,0.0,0.0,0.0,0.0,
+2019-01-01,DISIX,BNY Mellon Small Cap Stock Index Fund Class I,NASDAQ,2016-08-31,,25.379999,31.059999,24.91,28.52,28.494339,0.0,0.0,0.0,0.0,
+2020-01-01,DISIX,BNY Mellon Small Cap Stock Index Fund Class I,NASDAQ,2016-08-31,,28.51,29.09,16.67,24.9,24.9,0.0,0.0,0.0,0.0,

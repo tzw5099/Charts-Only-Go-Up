@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,ZIONW,Zions Bancorporation Warrants,delisted,2016-09-08,948532000.0,3.92,4.64,3.65,4.64,4.64,234031.0,234031.0,0.14,0.15536363636363648,4.057576818181818
+2017-01-01,ZIONW,Zions Bancorporation Warrants,delisted,2016-09-08,,,,,,,0.0,0.0,0.0,,
+2018-01-01,ZIONW,Zions Bancorporation Warrants,delisted,2016-09-08,,,,,,,0.0,0.0,0.0,,
+2019-01-01,ZIONW,Zions Bancorporation Warrants,delisted,2016-09-08,3618177.6,14.05,19.63,0.0,19.4,19.4,15935921.0,15935921.0,2.4699999999999984,0.2538761061946901,12.624808407079644
+2020-01-01,ZIONW,Zions Bancorporation Warrants,delisted,2016-09-08,3730.08,19.5,19.98,0.01,0.02,0.02,43768668.0,43768668.0,-33.339999999999996,-17.864166666666666,5.964132083333332

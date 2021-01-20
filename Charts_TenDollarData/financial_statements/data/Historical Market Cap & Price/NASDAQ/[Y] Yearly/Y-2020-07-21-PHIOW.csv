@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,PHIOW,Phio Pharmaceuticals Corp.,NASDAQ,2020-07-21,,0.1972,0.3,0.1304,0.1781,0.1781,223779.0,223779.0,-0.07230000000000003,-1.357851851851852,0.19650222222222222

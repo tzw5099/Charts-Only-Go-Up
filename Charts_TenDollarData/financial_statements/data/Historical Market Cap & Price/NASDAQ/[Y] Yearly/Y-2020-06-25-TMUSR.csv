@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,TMUSR,,NASDAQ,2020-06-25,127911567069000,0.41,0.53,0.0695,0.121,0.121,347151489.0,347151489.0,-0.2884999999999999,-2.8517727272727282,0.18263636363636362

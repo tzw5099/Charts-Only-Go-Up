@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,HCACW,Hennessy Capital Acquisition Corp. IV,NASDAQ,2020-07-21,94247100,0.97,3.75,1.215,3.14,3.14,36430181.0,36430181.0,31.339999999999996,91.5469393939394,2.0137533333333337

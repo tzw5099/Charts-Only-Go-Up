@@ -1,0 +1,20 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-11-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,95.8965,95.8965,95.8965,95.8965,,140115.0,140115.0,95.8965,0.0,95.8965
+2017-12-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,96.5487,97.1913,96.5487,97.1913,,722.0,722.0,1.2948620000000002,0.3365,96.82685000000001
+2018-01-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,99.9303,102.1032,99.9303,102.1032,,300.0,300.0,4.911899999999999,1.664,101.01675
+2018-02-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,102.1032,,86.0,86.0,0.0,0.0,
+2018-03-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,102.1032,,101.0,101.0,0.0,0.0,
+2018-04-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,102.1032,,207.0,207.0,-1e-05,0.0,
+2018-05-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,98.1846,98.1846,98.1846,98.1846,,125.0,125.0,-3.9187,-0.7676000000000001,98.1846
+2018-06-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,98.1846,,1.0,1.0,0.0,0.0,
+2018-07-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,98.1845,,4.0,4.0,-2.8e-05,0.0,
+2018-08-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,,,0.0,0.0,0.0,,
+2018-09-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,98.1845,,1.0,1.0,0.0,0.0,
+2018-10-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,97.0135,97.1581,97.0135,97.06,,429.0,429.0,-1.1245,-0.12722222222222224,97.0772
+2018-11-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,97.06,,1.0,1.0,0.0,0.0,
+2018-12-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,97.06,,28.0,28.0,0.0,0.0,
+2019-01-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,87.0338,87.2873,87.0338,87.2873,,321.0,321.0,-9.772724,-3.3463333333333334,87.16055
+2019-02-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,89.2204,89.2204,89.2204,89.2204,,319.0,319.0,1.9331,0.44299999999999995,89.2204
+2019-03-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,,,0.0,0.0,0.0,,
+2019-04-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,,,,89.2204,,10.0,10.0,6.4e-05,0.0,
+2019-05-01,PXUS,Principal International Multi-Factor Index ETF,NASDAQ,2017-11-09,,94.7011,94.7011,93.3821,93.3821,,4373.0,4373.0,4.161588,1.1864999999999999,94.13779999999998

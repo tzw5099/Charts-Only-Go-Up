@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GFNSL,General Finance Corporation Senior Notes due 2021,NASDAQ,2020-07-21,790720703.946216,25.12,25.55,24.95,25.299999,25.299999,145906.0,145906.0,0.47070000000000006,0.061933333333333326,25.20553733333333

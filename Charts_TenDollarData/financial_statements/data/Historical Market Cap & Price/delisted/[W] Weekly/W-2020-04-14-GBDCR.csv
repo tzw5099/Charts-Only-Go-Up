@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-04-13,GBDCR,Golub Capital BDC Inc Rights expiring 562020,delisted,2020-04-14,,1.28,1.28,0.52,0.61,0.61,1193310.0,1193310.0,-0.16000000000000003,0.4037499999999996,0.7850025
+2020-04-20,GBDCR,Golub Capital BDC Inc Rights expiring 562020,delisted,2020-04-14,,0.56,0.67,0.4,0.52,0.52,2689189.0,2689189.0,0.13,4.9232000000000005,0.549334
+2020-04-27,GBDCR,Golub Capital BDC Inc Rights expiring 562020,delisted,2020-04-14,,0.54,0.72,0.43,0.53,0.53,3664806.0,3664806.0,0.37999999999999995,16.891599999999997,0.568
+2020-05-04,GBDCR,Golub Capital BDC Inc Rights expiring 562020,delisted,2020-04-14,,0.49,1.0,0.3,0.51,0.51,4060363.0,4060363.0,0.04999999999999999,6.784,0.5133333333333333

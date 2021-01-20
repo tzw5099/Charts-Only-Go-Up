@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,14.44,16.200001,13.77,15.78,12.186072,0.0,0.0,0.0,0.0,
+2013-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,16.120001,21.219999,16.059999,21.219999,16.698524,0.0,0.0,0.0,0.0,
+2014-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,21.030001,24.27,19.879999,23.66,18.998592,0.0,0.0,0.0,0.0,
+2015-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,23.68,24.77,21.559999,22.530001,18.708334,0.0,0.0,0.0,0.0,
+2016-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,22.25,26.690001,20.139999,25.82,21.661449,0.0,0.0,0.0,0.0,
+2017-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,26.040001,29.860001,25.75,28.309999,25.005283,0.0,0.0,0.0,0.0,
+2018-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,28.559999,30.219999,21.08,22.41,21.584621,0.0,0.0,0.0,0.0,
+2019-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,22.51,27.83,22.120001,26.92,26.92,0.0,0.0,0.0,0.0,
+2020-01-01,BWLAX,American Beacon Bridgeway Large Cap Value Fund A Class,NASDAQ,2012-02-06,,27.02,27.23,15.74,22.879999,22.879999,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ERESU,,NASDAQ,2020-07-23,,9.96,11.02,9.86,10.1,10.1,17193427.0,17193427.0,-0.304,-0.07512500000000003,9.998753000000002

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,DFHTU,,NASDAQ,2020-07-17,,10.7,11.75,10.25,10.55,10.55,4436919.0,4436919.0,-0.5577000000000001,-0.11472727272727277,10.284182045454545

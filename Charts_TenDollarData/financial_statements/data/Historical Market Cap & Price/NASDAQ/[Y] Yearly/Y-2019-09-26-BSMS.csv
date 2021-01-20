@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,BSMS,Invesco BulletShares (R) 2028 Municipal Bond ETF,NASDAQ,2019-09-26,,25.05,25.05,24.74,24.99,24.99,199634.0,199634.0,0.031,0.0047692307692307695,24.920896153846154
+2020-01-01,BSMS,Invesco BulletShares (R) 2028 Municipal Bond ETF,NASDAQ,2019-09-26,,25.01,26.219999,22.11,25.715,25.715,276312.0,276312.0,-4.131,-0.15345283018867922,23.861091886792476

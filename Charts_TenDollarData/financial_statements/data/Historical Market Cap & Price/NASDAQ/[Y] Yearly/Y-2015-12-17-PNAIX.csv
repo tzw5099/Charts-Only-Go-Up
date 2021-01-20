@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PNAIX,T. Rowe Price New America Growth Fund I Class,NASDAQ,2015-12-17,,42.09,42.689999,41.369999,41.959999,29.112595,0.0,0.0,0.0,0.0,
+2016-01-01,PNAIX,T. Rowe Price New America Growth Fund I Class,NASDAQ,2015-12-17,,40.880001,43.189999,34.66,40.07,29.5457,0.0,0.0,0.0,0.0,
+2017-01-01,PNAIX,T. Rowe Price New America Growth Fund I Class,NASDAQ,2015-12-17,,40.389999,54.099998,40.389999,48.02,39.799583,0.0,0.0,0.0,0.0,
+2018-01-01,PNAIX,T. Rowe Price New America Growth Fund I Class,NASDAQ,2015-12-17,,48.59,57.110001,40.560001,43.459999,40.35828,0.0,0.0,0.0,0.0,
+2019-01-01,PNAIX,T. Rowe Price New America Growth Fund I Class,NASDAQ,2015-12-17,,43.5,57.369999,42.380001,54.75,54.75,0.0,0.0,0.0,0.0,
+2020-01-01,PNAIX,T. Rowe Price New America Growth Fund I Class,NASDAQ,2015-12-17,,55.540001,73.330002,41.740002,68.220001,68.220001,0.0,0.0,0.0,0.0,

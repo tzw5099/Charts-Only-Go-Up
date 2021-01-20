@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,SHIPZ,Seanergy Maritime Holdings Corp.,NASDAQ,2020-07-21,,0.06,0.069,0.0421,0.045,0.045,221385.0,221385.0,-0.0566,-11.791625,0.05461375
+2020-08-01,SHIPZ,Seanergy Maritime Holdings Corp.,NASDAQ,2020-07-21,,0.06,0.06,0.0203,0.0269,0.0269,372943.0,372943.0,-0.33770000000000006,-43.294923076923084,0.034523846153846155
+2020-09-01,SHIPZ,Seanergy Maritime Holdings Corp.,NASDAQ,2020-07-21,,0.06,0.035,0.012,0.0261,0.0261,670059.0,670059.0,-0.3538,-53.60618181818183,0.027362727272727275

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,CLRBZ,Cellectar Biosciences Inc. Series A Warrants,NASDAQ,2020-07-21,1055995.2155,0.06,0.175,0.0751,0.0911,0.0911,258209.0,258209.0,1.5361999999999996,98.47426923076924,0.11814884615384612

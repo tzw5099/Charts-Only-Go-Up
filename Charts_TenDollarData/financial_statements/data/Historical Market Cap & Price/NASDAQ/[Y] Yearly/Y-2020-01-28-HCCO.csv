@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,HCCO,Healthcare Merger Corp.,NASDAQ,2020-01-28,331321496.34492004,9.95,12.08,9.2,10.3699998856,10.3699998856,39012799.0,39012799.0,-2.3903000000000003,-0.1876842105263158,10.102828421052637

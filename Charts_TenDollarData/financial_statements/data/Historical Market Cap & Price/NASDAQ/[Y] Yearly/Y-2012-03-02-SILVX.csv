@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,9.98,10.49,9.53,10.2,7.564284,0.0,0.0,0.0,0.0,
+2013-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,10.38,12.81,10.36,12.72,9.660088,0.0,0.0,0.0,0.0,
+2014-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,12.61,14.67,12.04,14.01,11.100667,0.0,0.0,0.0,0.0,
+2015-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,14.04,14.77,13.29,13.57,11.50733,0.0,0.0,0.0,0.0,
+2016-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,13.41,15.07,12.78,14.4,12.527293,0.0,0.0,0.0,0.0,
+2017-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,14.49,16.780001,14.36,15.62,14.585637,0.0,0.0,0.0,0.0,
+2018-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,15.67,18.059999,14.16,15.01,14.612764,0.0,0.0,0.0,0.0,
+2019-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,14.95,18.77,14.63,18.559999,18.559999,0.0,0.0,0.0,0.0,
+2020-01-01,SILVX,SGI U.S. Large Cap Equity Fund Class I,NASDAQ,2012-03-02,,18.57,19.940001,13.46,18.809999,18.809999,0.0,0.0,0.0,0.0,

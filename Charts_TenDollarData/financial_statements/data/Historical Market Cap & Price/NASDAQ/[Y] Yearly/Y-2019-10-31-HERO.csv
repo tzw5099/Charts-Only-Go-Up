@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,HERO,Global X Video Games &amp; Esports ETF,NASDAQ,2019-10-31,,15.03,16.515,15.03,16.373,16.373,78600.0,78600.0,-0.8970000000000002,-0.15181081081081085,15.844243513513515
+2020-01-01,HERO,Global X Video Games &amp; Esports ETF,NASDAQ,2019-10-31,,16.62,28.33,13.977,27.110001,27.110001,23855909.0,23855909.0,-6.267000000000002,-0.1445977653631285,20.370063631284925

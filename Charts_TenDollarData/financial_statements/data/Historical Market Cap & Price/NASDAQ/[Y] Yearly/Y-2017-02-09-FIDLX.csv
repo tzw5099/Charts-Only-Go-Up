@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,FIDLX,Fidelity Advisor Large Cap Fund Class Z,NASDAQ,2017-02-09,,32.450001,37.509998,32.310001,34.759998,12.708129,0.0,0.0,0.0,0.0,
+2018-01-01,FIDLX,Fidelity Advisor Large Cap Fund Class Z,NASDAQ,2017-02-09,,35.169998,38.189999,26.639999,26.969999,11.652564,0.0,0.0,0.0,0.0,
+2019-01-01,FIDLX,Fidelity Advisor Large Cap Fund Class Z,NASDAQ,2017-02-09,,27.15,35.689999,26.700001,32.779999,32.779999,0.0,0.0,0.0,0.0,
+2020-01-01,FIDLX,Fidelity Advisor Large Cap Fund Class Z,NASDAQ,2017-02-09,,33.110001,33.509998,20.940001,30.139999,30.139999,0.0,0.0,0.0,0.0,

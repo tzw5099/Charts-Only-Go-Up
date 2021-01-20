@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,12.76,13.0,12.76,13.0,10.862949,0.0,0.0,0.0,0.0,
+2013-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,13.1,15.49,12.56,15.14,12.651157,0.0,0.0,0.0,0.0,
+2014-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,15.14,18.120001,14.25,16.530001,14.547419,0.0,0.0,0.0,0.0,
+2015-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,16.620001,17.879999,14.62,14.92,13.685808,0.0,0.0,0.0,0.0,
+2016-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,14.58,16.26,13.22,13.79,12.992888,0.0,0.0,0.0,0.0,
+2017-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,13.85,18.83,13.85,18.76,18.271833,0.0,0.0,0.0,0.0,
+2018-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,18.889999,19.77,13.66,14.06,14.027947,0.0,0.0,0.0,0.0,
+2019-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,14.0,16.93,13.9,16.93,16.93,0.0,0.0,0.0,0.0,
+2020-01-01,WESJX,William Blair Emerging Markets Small Cap Growth Fund R6 Class,NASDAQ,2012-12-24,,17.09,19.9,11.95,19.379999,19.379999,0.0,0.0,0.0,0.0,

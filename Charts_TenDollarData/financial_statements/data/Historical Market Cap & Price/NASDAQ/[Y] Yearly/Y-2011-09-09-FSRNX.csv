@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,9.68,10.42,8.58,10.27,7.883517,0.0,0.0,0.0,0.0,
+2012-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,10.36,12.2,10.18,11.77,9.231382,0.0,0.0,0.0,0.0,
+2013-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,11.9,13.9,11.36,11.59,9.360323,0.0,0.0,0.0,0.0,
+2014-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,11.57,15.09,11.57,14.83,12.455781,0.0,0.0,0.0,0.0,
+2015-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,15.05,16.25,13.45,15.07,13.00032,0.0,0.0,0.0,0.0,
+2016-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,14.88,17.34,13.36,15.45,13.853765,0.0,0.0,0.0,0.0,
+2017-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,15.49,15.95,14.93,15.58,14.37461,0.0,0.0,0.0,0.0,
+2018-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,15.54,16.25,13.64,14.32,13.768102,0.0,0.0,0.0,0.0,
+2019-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,13.95,17.77,13.95,16.940001,16.929607,0.0,0.0,0.0,0.0,
+2020-01-01,FSRNX,Fidelity Real Estate Index Fund,NASDAQ,2011-09-09,,16.66,17.879999,9.96,13.87,13.87,0.0,0.0,0.0,0.0,

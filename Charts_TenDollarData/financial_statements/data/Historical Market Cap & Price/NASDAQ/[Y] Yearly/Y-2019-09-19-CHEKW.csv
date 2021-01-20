@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,CHEKW,Check-Cap Ltd A WT,NASDAQ,2019-09-19,,0.05,0.12,0.01,0.03,0.03,462062.0,462062.0,0.10000000000000002,42.47410869565218,0.027246086956521743
+2020-01-01,CHEKW,Check-Cap Ltd A WT,NASDAQ,2019-09-19,,0.02,0.03,0.01,0.01,0.01,90320.0,90320.0,0.01,12.878772727272725,0.010909090909090913

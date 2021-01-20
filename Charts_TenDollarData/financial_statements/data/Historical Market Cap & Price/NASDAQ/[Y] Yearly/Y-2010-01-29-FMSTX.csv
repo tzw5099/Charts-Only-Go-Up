@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,20.129999,22.51,18.59,22.43,10.106339,0.0,0.0,0.0,0.0,
+2011-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,22.73,25.459999,18.84,19.799999,10.353996,0.0,0.0,0.0,0.0,
+2012-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,20.17,23.469999,19.700001,22.059999,12.442061,0.0,0.0,0.0,0.0,
+2013-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,22.59,29.9,22.4,27.15,17.417223,0.0,0.0,0.0,0.0,
+2014-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,26.9,30.75,25.75,28.6,19.925863,0.0,0.0,0.0,0.0,
+2015-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,28.58,29.809999,24.43,24.9,18.947336,0.0,0.0,0.0,0.0,
+2016-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,24.639999,27.93,21.610001,27.209999,21.849953,0.0,0.0,0.0,0.0,
+2017-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,27.52,30.58,27.25,28.17,24.974316,0.0,0.0,0.0,0.0,
+2018-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,28.379999,30.1,22.540001,23.84,23.160555,0.0,0.0,0.0,0.0,
+2019-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,23.93,28.030001,23.52,28.01,27.833345,0.0,0.0,0.0,0.0,
+2020-01-01,FMSTX,Federated MDT Large Cap Value Fund Institutional Shares,NASDAQ,2010-01-29,,28.1,28.66,17.6,26.040001,26.040001,0.0,0.0,0.0,0.0,

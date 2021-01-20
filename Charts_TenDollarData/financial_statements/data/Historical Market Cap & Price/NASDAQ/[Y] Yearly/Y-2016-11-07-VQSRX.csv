@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,VQSRX,Virtus KAR Small-Cap Value Fund Class R6,NASDAQ,2016-11-07,,15.24,17.57,15.24,16.85,15.385088,0.0,0.0,0.0,0.0,
+2017-01-01,VQSRX,Virtus KAR Small-Cap Value Fund Class R6,NASDAQ,2016-11-07,,16.93,19.360001,16.790001,18.950001,18.316391,0.0,0.0,0.0,0.0,
+2018-01-01,VQSRX,Virtus KAR Small-Cap Value Fund Class R6,NASDAQ,2016-11-07,,19.040001,20.059999,14.74,15.55,15.411405,0.0,0.0,0.0,0.0,
+2019-01-01,VQSRX,Virtus KAR Small-Cap Value Fund Class R6,NASDAQ,2016-11-07,,15.56,19.469999,15.29,19.26,19.26,0.0,0.0,0.0,0.0,
+2020-01-01,VQSRX,Virtus KAR Small-Cap Value Fund Class R6,NASDAQ,2016-11-07,,19.26,21.469999,12.68,20.370001,20.370001,0.0,0.0,0.0,0.0,

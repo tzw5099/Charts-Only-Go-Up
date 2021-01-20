@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,NEWTI,Newtek Business Services Corp. 6.25% Notes Due 2023,NASDAQ,2020-07-21,,24.7,25.797,24.62,25.219999,25.219999,129908.0,129908.0,11.254900000000003,1.4699032258064515,24.264216129032256

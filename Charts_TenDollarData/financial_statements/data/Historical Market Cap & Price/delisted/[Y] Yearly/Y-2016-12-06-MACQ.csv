@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,MACQ,M I Acquisitions Inc,delisted,2016-12-06,,9.8018,10.04,9.8,10.0,,76154.0,76154.0,10.0,0.40859999999999996,9.92296
+2017-01-01,MACQ,M I Acquisitions Inc,delisted,2016-12-06,,10.04,10.3,9.93,10.19,,650312.0,650312.0,0.19000000000000006,0.024951219512195113,10.104499999999998
+2018-01-01,MACQ,M I Acquisitions Inc,delisted,2016-12-06,,10.2152,11.41,8.34,11.1,,6541447.0,6541447.0,0.9100000000000001,0.0875,10.472174725274725

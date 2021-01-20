@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,10.88,16.26,9.67,16.030001,10.257657,0.0,0.0,0.0,0.0,
+2010-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,16.360001,18.620001,14.41,18.58,11.972626,0.0,0.0,0.0,0.0,
+2011-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,18.790001,20.450001,15.85,17.25,11.129669,0.0,0.0,0.0,0.0,
+2012-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,17.57,20.309999,17.24,20.219999,13.170053,0.0,0.0,0.0,0.0,
+2013-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,20.67,25.74,20.549999,24.42,17.286253,0.0,0.0,0.0,0.0,
+2014-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,24.190001,25.629999,21.48,22.1,17.312763,0.0,0.0,0.0,0.0,
+2015-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,22.059999,24.42,21.139999,22.0,17.874302,0.0,0.0,0.0,0.0,
+2016-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,21.540001,22.709999,19.030001,21.610001,17.710993,0.0,0.0,0.0,0.0,
+2017-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,21.68,27.9,21.68,26.139999,22.873898,0.0,0.0,0.0,0.0,
+2018-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,26.360001,29.52,21.67,22.85,21.776619,0.0,0.0,0.0,0.0,
+2019-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,22.77,28.32,22.33,28.0,28.0,0.0,0.0,0.0,0.0,
+2020-01-01,FWAFX,Fidelity Advisor Worldwide Fund Class A,NASDAQ,2009-02-19,,28.290001,34.380001,20.299999,32.169998,32.169998,0.0,0.0,0.0,0.0,

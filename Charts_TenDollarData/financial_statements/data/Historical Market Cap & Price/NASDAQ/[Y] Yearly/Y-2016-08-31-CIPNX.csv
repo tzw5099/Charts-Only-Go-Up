@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,CIPNX,Champlain Small Company Fund Institutional Class,NASDAQ,2016-08-31,,18.360001,20.68,17.82,19.780001,14.74698,0.0,0.0,0.0,0.0,
+2017-01-01,CIPNX,Champlain Small Company Fund Institutional Class,NASDAQ,2016-08-31,,19.85,22.129999,19.690001,19.98,16.339417,0.0,0.0,0.0,0.0,
+2018-01-01,CIPNX,Champlain Small Company Fund Institutional Class,NASDAQ,2016-08-31,,20.08,24.6,16.01,17.08,15.825701,0.0,0.0,0.0,0.0,
+2019-01-01,CIPNX,Champlain Small Company Fund Institutional Class,NASDAQ,2016-08-31,,17.07,21.379999,16.700001,19.84,19.84,0.0,0.0,0.0,0.0,
+2020-01-01,CIPNX,Champlain Small Company Fund Institutional Class,NASDAQ,2016-08-31,,19.879999,20.91,12.97,19.73,19.73,0.0,0.0,0.0,0.0,

@@ -12,5 +12,5 @@ charts/test data/*
 *.ttf
 *.woff*
 *.xlsx
-*.csv
+# *.csv
 

@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,8.3,9.88,8.3,9.85,7.107265,0.0,0.0,0.0,0.0,
+2011-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,9.99,10.84,8.04,9.68,7.036481,0.0,0.0,0.0,0.0,
+2012-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,9.81,11.18,9.6,10.43,8.06961,0.0,0.0,0.0,0.0,
+2013-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,10.7,14.12,10.67,13.49,11.151977,0.0,0.0,0.0,0.0,
+2014-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,13.33,14.57,12.57,14.01,11.95183,0.0,0.0,0.0,0.0,
+2015-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,13.99,14.85,12.5,12.58,11.365644,0.0,0.0,0.0,0.0,
+2016-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,12.43,14.98,10.68,14.57,13.225039,0.0,0.0,0.0,0.0,
+2017-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,14.69,16.889999,14.69,16.52,15.401045,0.0,0.0,0.0,0.0,
+2018-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,16.620001,17.459999,11.62,12.29,12.217686,0.0,0.0,0.0,0.0,
+2019-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,12.35,15.32,12.21,15.29,15.29,0.0,0.0,0.0,0.0,
+2020-01-01,AMCCX,American Beacon Mid-Cap Value Fund C Class,NASDAQ,2010-09-01,,15.33,15.59,7.66,12.66,12.66,0.0,0.0,0.0,0.0,

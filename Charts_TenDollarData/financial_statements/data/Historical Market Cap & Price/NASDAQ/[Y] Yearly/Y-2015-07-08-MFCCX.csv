@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,MFCCX,Meridian Contrarian Fund Class C,NASDAQ,2015-07-08,,39.48,40.419998,31.299999,33.779999,22.517342,0.0,0.0,0.0,0.0,
+2016-01-01,MFCCX,Meridian Contrarian Fund Class C,NASDAQ,2015-07-08,,31.469999,37.279999,27.9,36.630001,24.537708,0.0,0.0,0.0,0.0,
+2017-01-01,MFCCX,Meridian Contrarian Fund Class C,NASDAQ,2015-07-08,,36.970001,44.950001,36.889999,40.810001,30.336842,0.0,0.0,0.0,0.0,
+2018-01-01,MFCCX,Meridian Contrarian Fund Class C,NASDAQ,2015-07-08,,41.240002,46.540001,28.23,29.73,27.676645,0.0,0.0,0.0,0.0,
+2019-01-01,MFCCX,Meridian Contrarian Fund Class C,NASDAQ,2015-07-08,,29.959999,36.110001,29.549999,33.869999,33.869999,0.0,0.0,0.0,0.0,
+2020-01-01,MFCCX,Meridian Contrarian Fund Class C,NASDAQ,2015-07-08,,33.950001,34.869999,20.18,33.27,33.27,0.0,0.0,0.0,0.0,

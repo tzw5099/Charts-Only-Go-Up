@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,18.450001,23.110001,18.309999,21.959999,11.235695,0.0,0.0,0.0,0.0,
+2013-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,22.299999,24.459999,19.940001,20.139999,11.483757,0.0,0.0,0.0,0.0,
+2014-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,20.120001,21.629999,19.43,19.9,12.454927,0.0,0.0,0.0,0.0,
+2015-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,20.02,21.799999,18.360001,18.370001,12.639831,0.0,0.0,0.0,0.0,
+2016-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,18.09,19.76,16.17,17.870001,13.436554,0.0,0.0,0.0,0.0,
+2017-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,17.91,19.540001,17.91,18.9,15.590453,0.0,0.0,0.0,0.0,
+2018-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,18.950001,19.299999,15.53,15.72,14.096084,0.0,0.0,0.0,0.0,
+2019-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,15.56,19.049999,15.56,18.360001,17.975939,0.0,0.0,0.0,0.0,
+2020-01-01,JACRX,James Alpha Global Real Estate Investments Portfolio Class C Shares,NASDAQ,2012-01-05,,18.24,19.309999,11.47,15.9,15.9,0.0,0.0,0.0,0.0,

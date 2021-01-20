@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,MREO,Mereo BioPharma Group plc,NASDAQ,2019-04-24,,4.82,8.48,1.08,3.28,3.28,13570500.0,13570500.0,-3.5520000000000023,-0.27039428571428553,3.2428954285714293
+2020-01-01,MREO,Mereo BioPharma Group plc,NASDAQ,2019-04-24,,3.05,4.25,0.69,3.02,3.02,42235827.0,42235827.0,-0.9039999999999995,-0.06127932960893823,2.122843463687152

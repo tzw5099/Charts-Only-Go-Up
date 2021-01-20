@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,KBLMR,KBL Merger Corp. IV Right,NASDAQ,2020-07-21,,0.165,0.33,0.15,0.329,0.329,2206251.0,2206251.0,0.33161000000000007,5.42553125,0.21145624999999998

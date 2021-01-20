@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ALIVA.PA,Ivalis SA,,2020-06-17,,22.0,29.0,10.1,10.3,10.3,663.0,663.0,0.0,0.0,0.9746031746031747

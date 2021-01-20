@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,SSPGX,State Street Institutional Premier Growth Equity Fund Investment Class,NASDAQ,2019-04-26,,15.51,15.57,14.21,15.56,7.823761,0.0,0.0,0.0,0.0,
+2019-07-01,SSPGX,State Street Institutional Premier Growth Equity Fund Investment Class,NASDAQ,2019-04-26,,15.72,16.1,15.05,15.51,7.798621,0.0,0.0,0.0,0.0,
+2019-10-01,SSPGX,State Street Institutional Premier Growth Equity Fund Investment Class,NASDAQ,2019-04-26,,15.38,17.49,11.75,11.78,8.885457,0.0,0.0,0.0,0.0,
+2020-01-01,SSPGX,State Street Institutional Premier Growth Equity Fund Investment Class,NASDAQ,2019-04-26,,11.95,12.86,6.56,7.58,7.58,0.0,0.0,0.0,0.0,
+2020-04-01,SSPGX,State Street Institutional Premier Growth Equity Fund Investment Class,NASDAQ,2019-04-26,,7.25,9.75,7.25,9.59,9.59,0.0,0.0,0.0,0.0,
+2020-07-01,SSPGX,State Street Institutional Premier Growth Equity Fund Investment Class,NASDAQ,2019-04-26,,9.69,11.58,9.69,10.51,10.51,0.0,0.0,0.0,0.0,

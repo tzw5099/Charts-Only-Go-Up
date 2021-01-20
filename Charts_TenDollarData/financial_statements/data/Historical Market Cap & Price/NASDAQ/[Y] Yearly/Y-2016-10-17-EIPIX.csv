@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,EIPIX,EIP Growth and Income Fund Class I,NASDAQ,2016-10-17,,15.75,15.9,15.27,15.82,14.531367,0.0,0.0,0.0,0.0,
+2017-01-01,EIPIX,EIP Growth and Income Fund Class I,NASDAQ,2016-10-17,,15.87,16.26,14.84,15.44,14.432304,0.0,0.0,0.0,0.0,
+2018-01-01,EIPIX,EIP Growth and Income Fund Class I,NASDAQ,2016-10-17,,15.61,15.87,12.6,13.2,12.747156,0.0,0.0,0.0,0.0,
+2019-01-01,EIPIX,EIP Growth and Income Fund Class I,NASDAQ,2016-10-17,,13.18,15.88,13.18,15.69,15.484592,0.0,0.0,0.0,0.0,
+2020-01-01,EIPIX,EIP Growth and Income Fund Class I,NASDAQ,2016-10-17,,15.6,16.190001,9.07,12.27,12.27,0.0,0.0,0.0,0.0,

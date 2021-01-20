@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BEAM,Beam Therapeutics Inc.,NASDAQ,2020-02-06,1422599478.6301398,24.0,31.8,13.0,28.780001,28.780001,66874864.0,66874864.0,-17.095000000000006,-0.3333548387096777,22.645997806451604

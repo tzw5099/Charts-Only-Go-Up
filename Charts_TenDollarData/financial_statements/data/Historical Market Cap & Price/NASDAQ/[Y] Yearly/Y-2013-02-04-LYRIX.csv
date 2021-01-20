@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,LYRIX,Lyrical U.S. Value Equity Fund Institutional Class,NASDAQ,2013-02-04,,10.0,14.57,10.0,14.54,11.17167,0.0,0.0,0.0,0.0,
+2014-01-01,LYRIX,Lyrical U.S. Value Equity Fund Institutional Class,NASDAQ,2013-02-04,,14.37,16.48,13.6,16.200001,12.722713,0.0,0.0,0.0,0.0,
+2015-01-01,LYRIX,Lyrical U.S. Value Equity Fund Institutional Class,NASDAQ,2013-02-04,,16.15,17.040001,14.16,14.76,11.905502,0.0,0.0,0.0,0.0,
+2016-01-01,LYRIX,Lyrical U.S. Value Equity Fund Institutional Class,NASDAQ,2013-02-04,,14.58,17.110001,12.53,16.42,13.64378,0.0,0.0,0.0,0.0,
+2017-01-01,LYRIX,Lyrical U.S. Value Equity Fund Institutional Class,NASDAQ,2013-02-04,,16.57,19.76,16.57,18.620001,16.561876,0.0,0.0,0.0,0.0,
+2018-01-01,LYRIX,Lyrical U.S. Value Equity Fund Institutional Class,NASDAQ,2013-02-04,,18.799999,19.84,12.91,13.67,13.293207,0.0,0.0,0.0,0.0,
+2019-01-01,LYRIX,Lyrical U.S. Value Equity Fund Institutional Class,NASDAQ,2013-02-04,,13.78,16.639999,13.41,16.42,16.42,0.0,0.0,0.0,0.0,
+2020-01-01,LYRIX,Lyrical U.S. Value Equity Fund Institutional Class,NASDAQ,2013-02-04,,16.52,16.91,7.93,14.42,14.42,0.0,0.0,0.0,0.0,

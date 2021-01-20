@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,EBON,,NASDAQ,2020-06-26,,4.6,14.95,3.8,10.59,10.59,65152692.0,65152692.0,4.0200000000000005,1.1481724137931033,5.555373620689655

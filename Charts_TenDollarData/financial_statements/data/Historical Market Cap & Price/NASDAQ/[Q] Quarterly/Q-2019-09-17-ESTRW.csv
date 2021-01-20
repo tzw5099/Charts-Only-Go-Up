@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,ESTRW,Estre Ambiental Inc. Warrants,NASDAQ,2019-09-17,,0.01,0.04,0.02,0.04,0.04,12000.0,12000.0,0.04,200.0,0.03
+2019-10-01,ESTRW,Estre Ambiental Inc. Warrants,NASDAQ,2019-09-17,,0.03,0.03,0.0,0.01,0.01,712575.0,712575.0,-0.02,-1.5873095238095238,0.0069830952380952405
+2020-01-01,ESTRW,Estre Ambiental Inc. Warrants,NASDAQ,2019-09-17,,0.01,0.03,0.01,0.01,0.01,2116944.0,2116944.0,-0.03,-0.9259444444444446,0.01222166666666667

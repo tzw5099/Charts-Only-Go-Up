@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,10.0,17.1,9.78,15.67,8.991171,0.0,0.0,0.0,0.0,
+2010-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,15.93,19.209999,14.38,17.450001,11.166643,0.0,0.0,0.0,0.0,
+2011-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,17.68,18.83,13.67,15.25,9.758815,0.0,0.0,0.0,0.0,
+2012-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,15.61,18.860001,15.36,17.879999,11.797009,0.0,0.0,0.0,0.0,
+2013-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,18.25,24.84,18.16,22.969999,16.670727,0.0,0.0,0.0,0.0,
+2014-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,22.77,24.17,21.200001,21.200001,17.31032,0.0,0.0,0.0,0.0,
+2015-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,21.16,22.950001,19.889999,21.02,17.739393,0.0,0.0,0.0,0.0,
+2016-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,20.59,21.49,17.93,20.049999,16.92078,0.0,0.0,0.0,0.0,
+2017-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,20.17,26.34,20.17,24.15,22.253391,0.0,0.0,0.0,0.0,
+2018-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,24.34,27.85,22.73,24.08,22.727041,0.0,0.0,0.0,0.0,
+2019-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,23.99,32.43,23.389999,30.879999,30.879999,0.0,0.0,0.0,0.0,
+2020-01-01,HGGAX,Harbor Global Leaders Fund Institutional Class,NASDAQ,2009-03-02,,31.200001,36.080002,21.940001,33.98,33.98,0.0,0.0,0.0,0.0,

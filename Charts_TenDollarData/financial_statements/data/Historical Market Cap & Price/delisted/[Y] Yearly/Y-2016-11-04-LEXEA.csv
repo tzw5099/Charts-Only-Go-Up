@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,LEXEA,Liberty Expedia Holdings Inc Series A Common Stock When Issued,delisted,2016-11-04,,44.0,45.43,39.05,39.67,,16492927.0,16492927.0,39.669999999999995,-0.30528205128205127,42.4746717948718
+2017-01-01,LEXEA,Liberty Expedia Holdings Inc Series A Common Stock When Issued,delisted,2016-11-04,,35.96,58.2,35.96,44.33,,65607242.0,65607242.0,4.659999999999992,0.05628286852589638,49.11504900398405
+2018-01-01,LEXEA,Liberty Expedia Holdings Inc Series A Common Stock When Issued,delisted,2016-11-04,,44.39,50.82,35.8901,39.11,,97755894.0,97755894.0,-5.220000000000006,-0.02992430278884465,43.223556972111574
+2019-01-01,LEXEA,Liberty Expedia Holdings Inc Series A Common Stock When Issued,delisted,2016-11-04,,38.5,50.89,37.2,50.33,,81321308.85925786,81320023.06141421,10.130000000000017,0.09437450447972683,43.9554972656251
+2020-01-01,LEXEA,Liberty Expedia Holdings Inc Series A Common Stock When Issued,delisted,2016-11-04,,50.33,50.33,50.33,50.33,,1520892.0,1521152.0,0.0,0.0,44.4812

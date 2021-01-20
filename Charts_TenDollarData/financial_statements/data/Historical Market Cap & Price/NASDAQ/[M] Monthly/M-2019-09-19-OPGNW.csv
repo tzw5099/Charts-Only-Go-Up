@@ -1,0 +1,28 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-09-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,6001041.55,20.05,18.9,5.65,8.05,8.05,38.0,38.0,1.5,21.669,13.075
+2019-10-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,5963768.0,5.4,17.95,7.86,8.0,8.0,225.0,225.0,17.27,106.78966666666666,12.564446666666667
+2019-11-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,3718959.7,12.23,12.23,1.75,2.3,2.3,130.0,130.0,-10.46,-27.081,6.206667500000001
+2019-12-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,2263714.6,2.28,2.76,1.4,1.4,1.4,463.0,463.0,-1.04,-14.207666666666666,2.1911099999999997
+2020-01-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,2457747.28,2.44,1.52,1.52,1.52,1.52,6.0,6.0,-0.92,-37.705,1.52
+2020-02-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,37779415.52,2.44,5.78,2.5,5.11,5.11,2750.0,2750.0,3.01,44.9065,3.1533325
+2020-03-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,158880555.68,5.25,65.0,2.86,21.49,21.49,23792.0,23792.0,-0.78,8.692846153846151,13.550256153846156
+2020-04-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,188527416.0,19.52,25.5,6.22,25.5,25.5,2587.0,2587.0,9.620000000000001,8.194272727272727,16.368182727272725
+2020-05-01,OPGNW,"OpGen, Inc. Warrant
+Data is currently not available
+",NASDAQ,2019-09-19,231403270.5,25.5,26.0,16.05,20.25,20.25,772.0,772.0,-15.169999999999998,-29.541999999999998,19.333334999999998

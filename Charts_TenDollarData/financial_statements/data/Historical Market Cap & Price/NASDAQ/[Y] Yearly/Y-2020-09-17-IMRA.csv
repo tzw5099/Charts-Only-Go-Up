@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IMRA,IMARA Inc.,NASDAQ,2020-09-17,395136504.0,14.0,62.71,13.4,24.4,24.4,9724016.0,9724016.0,-3.803500000000012,0.25916666666666677,24.544565909090913

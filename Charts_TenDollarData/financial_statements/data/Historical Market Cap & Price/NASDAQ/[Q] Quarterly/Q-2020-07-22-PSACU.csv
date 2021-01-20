@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,PSACU,,NASDAQ,2020-07-22,,10.04,10.1,9.85,10.0600004196,10.0600004196,14170992.0,14170992.0,-0.26000000000000006,-0.06485000000000002,9.960616750000002

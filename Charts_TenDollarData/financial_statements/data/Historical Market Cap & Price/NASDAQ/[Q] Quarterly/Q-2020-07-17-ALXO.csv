@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ALXO,,NASDAQ,2020-07-17,125765581.72941999,37.5,52.0,28.01,38.220001,38.220001,7235700.0,7235700.0,-5.570000000000001,-0.14102272727272727,39.75959113636364

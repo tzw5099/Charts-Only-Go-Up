@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,OXBRW,Oxbridge Re Holdings Limited Warrant,NASDAQ,2020-07-21,454100.09040000004,0.08,0.35,0.041,0.0792,0.0792,7338610.0,7338610.0,0.36550000000000005,15.34090625,0.09240656250000001

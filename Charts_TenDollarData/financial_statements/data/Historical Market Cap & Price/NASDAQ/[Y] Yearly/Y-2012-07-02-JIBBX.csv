@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,15.0,15.56,14.92,15.42,12.612993,0.0,0.0,0.0,0.0,
+2013-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,15.53,16.32,15.29,16.32,13.612655,0.0,0.0,0.0,0.0,
+2014-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,16.16,16.9,15.92,16.51,14.174418,0.0,0.0,0.0,0.0,
+2015-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,16.52,16.940001,15.89,16.030001,14.073838,0.0,0.0,0.0,0.0,
+2016-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,15.93,16.950001,15.39,16.549999,14.880345,0.0,0.0,0.0,0.0,
+2017-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,16.6,18.059999,16.6,17.9,16.450335,0.0,0.0,0.0,0.0,
+2018-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,17.950001,18.360001,16.09,16.27,15.809522,0.0,0.0,0.0,0.0,
+2019-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,16.27,18.18,16.23,18.01,17.907495,0.0,0.0,0.0,0.0,
+2020-01-01,JIBBX,JPMorgan SmartRetirement Blend Income Fund Class R5,NASDAQ,2012-07-02,,18.08,18.66,15.29,18.450001,18.450001,0.0,0.0,0.0,0.0,

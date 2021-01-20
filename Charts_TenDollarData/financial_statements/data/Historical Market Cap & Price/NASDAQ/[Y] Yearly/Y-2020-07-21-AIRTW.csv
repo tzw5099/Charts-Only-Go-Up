@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,AIRTW,"Air T, Inc.",NASDAQ,2020-07-21,60233.799999999996,0.08,0.1331,0.0209,0.0209,0.0209,1426889.0,1426889.0,-0.9976999999999999,-41.86245454545455,0.04506272727272729

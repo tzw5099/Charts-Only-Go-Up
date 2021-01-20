@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,28.139999,29.950001,26.99,28.4,16.782326,0.0,0.0,0.0,0.0,
+2012-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,28.75,34.389999,28.66,31.27,19.785292,0.0,0.0,0.0,0.0,
+2013-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,31.9,44.23,31.9,40.75,28.441822,0.0,0.0,0.0,0.0,
+2014-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,40.490002,53.540001,40.34,48.970001,36.504642,0.0,0.0,0.0,0.0,
+2015-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,49.130001,59.209999,46.290001,47.950001,40.328522,0.0,0.0,0.0,0.0,
+2016-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,47.02,48.82,40.23,43.810001,37.761219,0.0,0.0,0.0,0.0,
+2017-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,44.279999,55.080002,44.279999,52.59,46.949577,0.0,0.0,0.0,0.0,
+2018-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,53.310001,63.209999,49.049999,52.459999,50.513836,0.0,0.0,0.0,0.0,
+2019-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,51.84,63.75,50.57,63.080002,63.080002,0.0,0.0,0.0,0.0,
+2020-01-01,BHSRX,BlackRock Health Sciences Opportunities Portfolio Class R,NASDAQ,2011-09-09,,63.139999,70.849998,46.990002,69.230003,69.230003,0.0,0.0,0.0,0.0,

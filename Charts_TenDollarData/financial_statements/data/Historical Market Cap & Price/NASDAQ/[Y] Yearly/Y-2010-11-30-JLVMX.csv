@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,10.19,10.99,10.19,10.98,5.697358,0.0,0.0,0.0,0.0,
+2011-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,11.13,11.79,8.87,10.33,5.444437,0.0,0.0,0.0,0.0,
+2012-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,10.57,12.04,10.2,11.88,6.351526,0.0,0.0,0.0,0.0,
+2013-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,12.2,15.41,12.16,15.41,8.655846,0.0,0.0,0.0,0.0,
+2014-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,15.28,17.5,14.06,14.78,9.940774,0.0,0.0,0.0,0.0,
+2015-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,14.77,15.36,12.37,12.55,9.749582,0.0,0.0,0.0,0.0,
+2016-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,12.38,15.51,10.97,14.47,11.928609,0.0,0.0,0.0,0.0,
+2017-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,14.62,16.68,14.53,15.56,14.061348,0.0,0.0,0.0,0.0,
+2018-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,15.73,16.59,11.49,12.17,11.96137,0.0,0.0,0.0,0.0,
+2019-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,12.27,15.32,12.08,15.28,15.221722,0.0,0.0,0.0,0.0,
+2020-01-01,JLVMX,JPMorgan Large Cap Value Fund Class R6,NASDAQ,2010-11-30,,15.35,15.52,8.82,13.78,13.78,0.0,0.0,0.0,0.0,

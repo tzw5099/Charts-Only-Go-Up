@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NOVSW,,,2020-07-21,,0.0,1.5,0.6,1.5,1.5,1386234.0,1386234.0,0.0,0.0,0.9349013793103448

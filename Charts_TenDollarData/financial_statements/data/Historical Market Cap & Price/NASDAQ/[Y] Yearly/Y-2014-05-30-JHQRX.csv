@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,JHQRX,JPMorgan Hedged Equity Fund Class R6,NASDAQ,2014-05-30,,15.7,16.49,15.42,16.49,15.374417,0.0,0.0,0.0,0.0,
+2015-01-01,JHQRX,JPMorgan Hedged Equity Fund Class R6,NASDAQ,2014-05-30,,16.5,16.99,15.49,16.059999,15.187656,0.0,0.0,0.0,0.0,
+2016-01-01,JHQRX,JPMorgan Hedged Equity Fund Class R6,NASDAQ,2014-05-30,,15.98,17.370001,15.01,17.35,16.681763,0.0,0.0,0.0,0.0,
+2017-01-01,JHQRX,JPMorgan Hedged Equity Fund Class R6,NASDAQ,2014-05-30,,17.43,19.35,17.43,19.35,18.838072,0.0,0.0,0.0,0.0,
+2018-01-01,JHQRX,JPMorgan Hedged Equity Fund Class R6,NASDAQ,2014-05-30,,19.440001,20.24,18.700001,19.02,18.758221,0.0,0.0,0.0,0.0,
+2019-01-01,JHQRX,JPMorgan Hedged Equity Fund Class R6,NASDAQ,2014-05-30,,18.969999,21.34,18.780001,21.309999,21.250984,0.0,0.0,0.0,0.0,
+2020-01-01,JHQRX,JPMorgan Hedged Equity Fund Class R6,NASDAQ,2014-05-30,,21.4,23.059999,17.870001,22.950001,22.950001,0.0,0.0,0.0,0.0,

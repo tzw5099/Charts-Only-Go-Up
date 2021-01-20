@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,IUESX,JPMorgan International Unconstrained Equity Fund Class I,NASDAQ,2013-05-31,,18.459999,20.93,17.35,19.389999,16.649679,0.0,0.0,0.0,0.0,
+2014-01-01,IUESX,JPMorgan International Unconstrained Equity Fund Class I,NASDAQ,2013-05-31,,19.09,20.049999,16.549999,16.889999,15.962387,0.0,0.0,0.0,0.0,
+2015-01-01,IUESX,JPMorgan International Unconstrained Equity Fund Class I,NASDAQ,2013-05-31,,16.870001,19.360001,16.059999,17.26,16.312065,0.0,0.0,0.0,0.0,
+2016-01-01,IUESX,JPMorgan International Unconstrained Equity Fund Class I,NASDAQ,2013-05-31,,16.92,18.33,14.8,16.969999,16.418633,0.0,0.0,0.0,0.0,
+2017-01-01,IUESX,JPMorgan International Unconstrained Equity Fund Class I,NASDAQ,2013-05-31,,17.110001,21.74,17.110001,21.629999,21.09173,0.0,0.0,0.0,0.0,
+2018-01-01,IUESX,JPMorgan International Unconstrained Equity Fund Class I,NASDAQ,2013-05-31,,21.889999,23.66,17.120001,17.66,17.621914,0.0,0.0,0.0,0.0,
+2019-01-01,IUESX,JPMorgan International Unconstrained Equity Fund Class I,NASDAQ,2013-05-31,,17.559999,22.93,17.32,22.84,22.84,0.0,0.0,0.0,0.0,
+2020-01-01,IUESX,JPMorgan International Unconstrained Equity Fund Class I,NASDAQ,2013-05-31,,23.1,23.879999,15.49,23.030001,23.030001,0.0,0.0,0.0,0.0,

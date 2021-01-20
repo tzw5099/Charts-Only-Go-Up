@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,FZABX,Fidelity Advisor Diversified International Fund Class Z,NASDAQ,2013-08-20,,18.26,20.26,17.75,20.26,17.882214,0.0,0.0,0.0,0.0,
+2014-01-01,FZABX,Fidelity Advisor Diversified International Fund Class Z,NASDAQ,2013-08-20,,20.01,21.299999,18.57,19.360001,17.36779,0.0,0.0,0.0,0.0,
+2015-01-01,FZABX,Fidelity Advisor Diversified International Fund Class Z,NASDAQ,2013-08-20,,19.27,22.059999,18.68,19.98,18.115993,0.0,0.0,0.0,0.0,
+2016-01-01,FZABX,Fidelity Advisor Diversified International Fund Class Z,NASDAQ,2013-08-20,,19.610001,20.65,17.33,19.15,17.660971,0.0,0.0,0.0,0.0,
+2017-01-01,FZABX,Fidelity Advisor Diversified International Fund Class Z,NASDAQ,2013-08-20,,19.209999,24.200001,19.209999,23.98,22.443039,0.0,0.0,0.0,0.0,
+2018-01-01,FZABX,Fidelity Advisor Diversified International Fund Class Z,NASDAQ,2013-08-20,,24.120001,25.66,18.66,19.35,19.02483,0.0,0.0,0.0,0.0,
+2019-01-01,FZABX,Fidelity Advisor Diversified International Fund Class Z,NASDAQ,2013-08-20,,19.26,24.809999,18.99,24.73,24.73,0.0,0.0,0.0,0.0,
+2020-01-01,FZABX,Fidelity Advisor Diversified International Fund Class Z,NASDAQ,2013-08-20,,24.92,27.18,17.25,26.879999,26.879999,0.0,0.0,0.0,0.0,

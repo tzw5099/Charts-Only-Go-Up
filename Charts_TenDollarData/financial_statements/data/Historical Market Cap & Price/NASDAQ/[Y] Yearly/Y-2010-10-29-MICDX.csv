@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,11.87,12.5,11.87,12.17,7.730043,0.0,0.0,0.0,0.0,
+2011-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,12.3,12.6,9.61,10.06,6.628262,0.0,0.0,0.0,0.0,
+2012-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,10.16,12.34,10.08,12.34,8.473306,0.0,0.0,0.0,0.0,
+2013-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,12.51,13.91,11.69,13.74,9.631429,0.0,0.0,0.0,0.0,
+2014-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,13.67,14.34,12.74,13.37,9.739612,0.0,0.0,0.0,0.0,
+2015-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,13.38,17.799999,12.23,13.79,10.688225,0.0,0.0,0.0,0.0,
+2016-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,13.44,15.34,11.72,14.09,11.319959,0.0,0.0,0.0,0.0,
+2017-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,14.15,19.25,14.15,17.610001,15.588081,0.0,0.0,0.0,0.0,
+2018-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,17.959999,19.370001,14.02,14.32,14.063717,0.0,0.0,0.0,0.0,
+2019-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,14.17,17.219999,13.94,16.200001,16.200001,0.0,0.0,0.0,0.0,
+2020-01-01,MICDX,Matthews China Dividend Fund Institutional Class,NASDAQ,2010-10-29,,16.48,18.299999,13.09,17.940001,17.940001,0.0,0.0,0.0,0.0,

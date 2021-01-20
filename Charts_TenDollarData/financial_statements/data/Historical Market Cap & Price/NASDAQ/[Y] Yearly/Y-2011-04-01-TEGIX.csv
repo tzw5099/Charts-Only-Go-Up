@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,25.299999,25.92,18.370001,19.16,10.082865,0.0,0.0,0.0,0.0,
+2012-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,19.42,23.120001,19.389999,21.559999,12.13116,0.0,0.0,0.0,0.0,
+2013-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,22.07,28.34,22.030001,26.280001,16.403202,0.0,0.0,0.0,0.0,
+2014-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,26.059999,29.59,25.040001,26.219999,18.601376,0.0,0.0,0.0,0.0,
+2015-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,26.23,28.309999,23.99,24.4,18.798908,0.0,0.0,0.0,0.0,
+2016-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,24.0,26.15,20.610001,25.0,19.735558,0.0,0.0,0.0,0.0,
+2017-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,25.09,30.99,25.09,28.370001,24.578056,0.0,0.0,0.0,0.0,
+2018-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,28.6,32.700001,23.68,25.42,23.740608,0.0,0.0,0.0,0.0,
+2019-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,25.299999,35.279999,24.610001,33.84,33.84,0.0,0.0,0.0,0.0,
+2020-01-01,TEGIX,Touchstone Mid Cap Growth Fund Institutional Class,NASDAQ,2011-04-01,,34.240002,37.310001,22.5,35.619999,35.619999,0.0,0.0,0.0,0.0,

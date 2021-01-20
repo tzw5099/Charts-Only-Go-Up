@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,RINPX,Royce International Premier Fund Consultant Class,NASDAQ,2016-02-29,,11.57,13.43,11.57,12.27,12.247114,0.0,0.0,0.0,0.0,
+2017-01-01,RINPX,Royce International Premier Fund Consultant Class,NASDAQ,2016-02-29,,12.23,16.99,12.23,16.99,16.99,0.0,0.0,0.0,0.0,
+2018-01-01,RINPX,Royce International Premier Fund Consultant Class,NASDAQ,2016-02-29,,17.059999,18.08,14.03,14.71,14.71,0.0,0.0,0.0,0.0,
+2019-01-01,RINPX,Royce International Premier Fund Consultant Class,NASDAQ,2016-02-29,,14.68,19.610001,14.58,19.59,19.59,0.0,0.0,0.0,0.0,
+2020-01-01,RINPX,Royce International Premier Fund Consultant Class,NASDAQ,2016-02-29,,19.620001,20.059999,13.01,19.959999,19.959999,0.0,0.0,0.0,0.0,

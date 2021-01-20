@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,DFBHU,DFB Healthcare Acquisitions Corp Units 1 Ord 13 War,delisted,2018-02-16,,10.0,10.59,10.0,10.1,10.1,5455600.0,5455600.0,1.02,0.046205479452054804,3.4692084474885854
+2019-01-01,DFBHU,DFB Healthcare Acquisitions Corp Units 1 Ord 13 War,delisted,2018-02-16,,10.1,11.88,10.05,10.05,10.05,1284222.0,1284222.0,0.34,0.014485943775100407,2.5092905622489954

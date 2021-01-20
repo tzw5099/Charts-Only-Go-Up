@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,METXW,,NASDAQ,2020-07-21,,0.58,0.5,0.0601,0.3969,0.3969,398321.0,398321.0,-6.2503,-39.065357142857145,0.33242785714285716

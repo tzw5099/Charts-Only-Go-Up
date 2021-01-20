@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,PBFS,"Pioneer Bancorp, Inc.",NASDAQ,2019-07-18,382923462.3,14.1,15.35,12.12,15.31,15.31,13366500.0,13366500.0,2.378,0.1463534482758621,13.735520258620685
+2020-01-01,PBFS,"Pioneer Bancorp, Inc.",NASDAQ,2019-07-18,213141687.6,15.3,15.33,8.02,8.52,8.52,4444968.0,4444968.0,-10.081999999999997,-0.49970949720670393,10.634999944134076

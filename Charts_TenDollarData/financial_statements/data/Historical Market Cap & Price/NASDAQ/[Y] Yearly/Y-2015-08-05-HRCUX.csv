@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,HRCUX,Carillon ClariVest Capital Appreciation Fund Class R6,NASDAQ,2015-08-05,,41.630001,42.32,35.32,35.849998,28.11096,0.0,0.0,0.0,0.0,
+2016-01-01,HRCUX,Carillon ClariVest Capital Appreciation Fund Class R6,NASDAQ,2015-08-05,,35.27,38.130001,31.6,35.209999,29.405109,0.0,0.0,0.0,0.0,
+2017-01-01,HRCUX,Carillon ClariVest Capital Appreciation Fund Class R6,NASDAQ,2015-08-05,,35.529999,46.849998,35.529999,43.68,38.794418,0.0,0.0,0.0,0.0,
+2018-01-01,HRCUX,Carillon ClariVest Capital Appreciation Fund Class R6,NASDAQ,2015-08-05,,44.099998,49.349998,34.189999,36.759998,36.075253,0.0,0.0,0.0,0.0,
+2019-01-01,HRCUX,Carillon ClariVest Capital Appreciation Fund Class R6,NASDAQ,2015-08-05,,36.759998,47.959999,35.650002,47.68,47.68,0.0,0.0,0.0,0.0,
+2020-01-01,HRCUX,Carillon ClariVest Capital Appreciation Fund Class R6,NASDAQ,2015-08-05,,48.279999,60.330002,35.23,55.209999,55.209999,0.0,0.0,0.0,0.0,

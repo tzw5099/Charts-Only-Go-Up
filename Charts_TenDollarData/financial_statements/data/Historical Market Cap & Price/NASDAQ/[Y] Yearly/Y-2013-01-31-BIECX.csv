@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,BIECX,Brandes International Equity Fund Class C,NASDAQ,2013-01-31,,14.3,16.85,13.75,16.799999,15.052005,0.0,0.0,0.0,0.0,
+2014-01-01,BIECX,Brandes International Equity Fund Class C,NASDAQ,2013-01-31,,16.5,18.1,15.12,15.58,13.970544,0.0,0.0,0.0,0.0,
+2015-01-01,BIECX,Brandes International Equity Fund Class C,NASDAQ,2013-01-31,,15.5,17.870001,14.46,15.0,13.638815,0.0,0.0,0.0,0.0,
+2016-01-01,BIECX,Brandes International Equity Fund Class C,NASDAQ,2013-01-31,,14.72,16.030001,13.26,15.6,14.61667,0.0,0.0,0.0,0.0,
+2017-01-01,BIECX,Brandes International Equity Fund Class C,NASDAQ,2013-01-31,,15.75,17.57,15.75,17.57,16.667685,0.0,0.0,0.0,0.0,
+2018-01-01,BIECX,Brandes International Equity Fund Class C,NASDAQ,2013-01-31,,17.73,18.99,15.17,15.42,14.934205,0.0,0.0,0.0,0.0,
+2019-01-01,BIECX,Brandes International Equity Fund Class C,NASDAQ,2013-01-31,,15.41,17.09,14.58,16.93,16.865948,0.0,0.0,0.0,0.0,
+2020-01-01,BIECX,Brandes International Equity Fund Class C,NASDAQ,2013-01-31,,17.030001,17.030001,10.22,13.91,13.91,0.0,0.0,0.0,0.0,

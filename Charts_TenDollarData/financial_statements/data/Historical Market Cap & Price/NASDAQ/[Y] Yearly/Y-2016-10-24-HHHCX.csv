@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HHHCX,Hartford Schroders Emerging Markets Equity Fund Class C,NASDAQ,2016-10-24,,12.78,12.78,11.67,11.9,11.641419,0.0,0.0,0.0,0.0,
+2017-01-01,HHHCX,Hartford Schroders Emerging Markets Equity Fund Class C,NASDAQ,2016-10-24,,12.04,16.68,12.04,16.530001,16.240301,0.0,0.0,0.0,0.0,
+2018-01-01,HHHCX,Hartford Schroders Emerging Markets Equity Fund Class C,NASDAQ,2016-10-24,,16.940001,18.209999,13.45,13.75,13.580706,0.0,0.0,0.0,0.0,
+2019-01-01,HHHCX,Hartford Schroders Emerging Markets Equity Fund Class C,NASDAQ,2016-10-24,,13.73,16.65,13.49,16.43,16.43,0.0,0.0,0.0,0.0,
+2020-01-01,HHHCX,Hartford Schroders Emerging Markets Equity Fund Class C,NASDAQ,2016-10-24,,16.73,17.110001,11.51,17.0,17.0,0.0,0.0,0.0,0.0,

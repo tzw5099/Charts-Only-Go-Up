@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,53.150002,54.0,53.150002,54.0,54.0,1750.0,1750.0,0.85,0.011421428571428572,0.3836905

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FATBW,,NASDAQ,2020-09-17,16747.98,1.15,3.47,0.9,1.55,1.55,454079.0,454079.0,0.9397000000000001,2.8975999999999997,1.2223016666666666

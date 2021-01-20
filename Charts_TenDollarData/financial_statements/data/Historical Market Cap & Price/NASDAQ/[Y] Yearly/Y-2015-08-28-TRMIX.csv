@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,TRMIX,T. Rowe Price Mid-Cap Value Fund I Class,NASDAQ,2015-08-28,,28.01,28.950001,24.450001,24.93,18.769217,0.0,0.0,0.0,0.0,
+2016-01-01,TRMIX,T. Rowe Price Mid-Cap Value Fund I Class,NASDAQ,2015-08-28,,24.68,31.709999,22.67,29.049999,23.355728,0.0,0.0,0.0,0.0,
+2017-01-01,TRMIX,T. Rowe Price Mid-Cap Value Fund I Class,NASDAQ,2015-08-28,,29.26,32.41,29.049999,30.389999,26.095623,0.0,0.0,0.0,0.0,
+2018-01-01,TRMIX,T. Rowe Price Mid-Cap Value Fund I Class,NASDAQ,2015-08-28,,30.75,32.16,23.370001,24.389999,23.346169,0.0,0.0,0.0,0.0,
+2019-01-01,TRMIX,T. Rowe Price Mid-Cap Value Fund I Class,NASDAQ,2015-08-28,,24.450001,28.74,24.27,27.950001,27.950001,0.0,0.0,0.0,0.0,
+2020-01-01,TRMIX,T. Rowe Price Mid-Cap Value Fund I Class,NASDAQ,2015-08-28,,27.93,28.360001,17.190001,26.84,26.84,0.0,0.0,0.0,0.0,

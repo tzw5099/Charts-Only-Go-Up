@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,EDUT,,NASDAQ,2020-07-15,,14.91,17.25,14.69,16.198099,16.198099,802472.0,802472.0,-2.235999999999999,-0.28291304347826096,15.759820652173916

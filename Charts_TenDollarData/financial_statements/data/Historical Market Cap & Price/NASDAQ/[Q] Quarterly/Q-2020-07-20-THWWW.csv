@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,THWWW,Target Hospitality Corp.,NASDAQ,2020-07-20,5861107.1337,0.15,0.0999,0.0499,0.0611,0.0611,293334.0,293334.0,-1.6237000000000001,-49.22826086956522,0.06947913043478261

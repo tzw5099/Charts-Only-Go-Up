@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-07-01,GLACU,Greenland Acquisition Corp Units 1Ord 1Rts 1 War,delisted,2018-07-25,,10.17,11.17,10.08,10.33,10.33,1855800.0,1855800.0,-0.8300000000000003,-0.15597872340425534,6.940142127659575
+2018-10-01,GLACU,Greenland Acquisition Corp Units 1Ord 1Rts 1 War,delisted,2018-07-25,,10.4,10.4,10.1,10.27,10.27,23200.0,23200.0,-0.08,-0.012396825396825397,3.904973650793651
+2019-01-01,GLACU,Greenland Acquisition Corp Units 1Ord 1Rts 1 War,delisted,2018-07-25,,10.27,11.37,10.0,10.44,10.44,93200.0,93200.0,-1.09,-0.1580983606557377,4.105464590163933
+2019-04-01,GLACU,Greenland Acquisition Corp Units 1Ord 1Rts 1 War,delisted,2018-07-25,,10.42,10.73,10.4,10.57,10.57,54400.0,54400.0,-0.05000000000000003,-0.006904761904761904,4.346984126984128
+2019-07-01,GLACU,Greenland Acquisition Corp Units 1Ord 1Rts 1 War,delisted,2018-07-25,,10.57,11.1,10.5,11.1,11.1,26210.0,26210.0,0.23,0.03396875,4.20958328125
+2019-10-01,GLACU,Greenland Acquisition Corp Units 1Ord 1Rts 1 War,delisted,2018-07-25,,10.8,11.99,9.61,9.62,9.62,36720.0,36720.0,1.54,0.7181,7.0009999999999994

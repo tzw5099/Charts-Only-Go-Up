@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,16.200001,17.43,15.87,16.459999,12.046588,0.0,0.0,0.0,0.0,
+2013-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,16.92,22.26,16.879999,22.0,16.101152,0.0,0.0,0.0,0.0,
+2014-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,21.83,24.639999,20.82,23.82,17.897184,0.0,0.0,0.0,0.0,
+2015-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,23.809999,24.58,20.68,21.49,16.89373,0.0,0.0,0.0,0.0,
+2016-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,21.27,26.190001,18.59,23.99,20.394268,0.0,0.0,0.0,0.0,
+2017-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,24.18,28.51,24.02,27.549999,24.549562,0.0,0.0,0.0,0.0,
+2018-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,27.74,29.379999,21.82,23.139999,21.57724,0.0,0.0,0.0,0.0,
+2019-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,23.26,28.469999,22.780001,27.42,27.42,0.0,0.0,0.0,0.0,
+2020-01-01,CSERX,Columbia Select Large Cap Value Fund Advisor Class,NASDAQ,2012-11-09,,27.57,27.719999,16.23,25.540001,25.540001,0.0,0.0,0.0,0.0,

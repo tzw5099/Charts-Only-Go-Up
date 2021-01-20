@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NKLAW,,NASDAQ,2020-06-05,,15.0,41.0,13.5,27.5,27.5,77654505.0,77654505.0,97.34,8.997472727272728,27.23061872727273

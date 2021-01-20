@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,10.14,11.58,9.85,11.32,9.179922,0.0,0.0,0.0,0.0,
+2013-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,11.54,14.63,11.5,14.63,12.179047,0.0,0.0,0.0,0.0,
+2014-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,14.45,15.63,13.85,14.61,12.718349,0.0,0.0,0.0,0.0,
+2015-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,14.58,16.059999,13.84,14.66,12.819793,0.0,0.0,0.0,0.0,
+2016-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,14.44,16.18,12.91,15.61,13.90994,0.0,0.0,0.0,0.0,
+2017-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,15.72,18.629999,15.72,18.41,16.741629,0.0,0.0,0.0,0.0,
+2018-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,18.530001,19.75,14.06,14.75,14.537925,0.0,0.0,0.0,0.0,
+2019-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,14.77,17.280001,14.53,17.27,17.27,0.0,0.0,0.0,0.0,
+2020-01-01,BPGIX,Boston Partners Global Equity Institutional Class,NASDAQ,2012-01-03,,17.370001,17.48,10.44,15.25,15.25,0.0,0.0,0.0,0.0,

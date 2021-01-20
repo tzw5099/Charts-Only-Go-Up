@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,NVMM,Novume Solutions Inc.,NASDAQ,2019-04-02,,0.6867,0.72,0.590129,0.69,,555096.0,555096.0,0.6900000000000002,0.45721052631578946,0.6706187368421055

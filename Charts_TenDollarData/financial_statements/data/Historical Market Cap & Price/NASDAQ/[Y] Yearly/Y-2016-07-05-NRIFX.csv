@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,NRIFX,Nuveen Real Asset Income Fund Class R6,NASDAQ,2016-07-05,,23.469999,24.290001,22.27,22.83,19.229239,0.0,0.0,0.0,0.0,
+2017-01-01,NRIFX,Nuveen Real Asset Income Fund Class R6,NASDAQ,2016-07-05,,22.9,24.540001,22.9,24.24,21.641193,0.0,0.0,0.0,0.0,
+2018-01-01,NRIFX,Nuveen Real Asset Income Fund Class R6,NASDAQ,2016-07-05,,24.26,24.32,21.280001,21.559999,20.33633,0.0,0.0,0.0,0.0,
+2019-01-01,NRIFX,Nuveen Real Asset Income Fund Class R6,NASDAQ,2016-07-05,,21.57,25.110001,21.57,24.889999,24.553896,0.0,0.0,0.0,0.0,
+2020-01-01,NRIFX,Nuveen Real Asset Income Fund Class R6,NASDAQ,2016-07-05,,24.82,25.5,15.91,21.370001,21.370001,0.0,0.0,0.0,0.0,

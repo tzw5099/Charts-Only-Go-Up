@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,10.0,10.81,9.85,10.81,9.828729,0.0,0.0,0.0,0.0,
+2013-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,10.93,12.65,10.68,12.65,11.672496,0.0,0.0,0.0,0.0,
+2014-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,12.56,13.2,11.6,12.25,11.362323,0.0,0.0,0.0,0.0,
+2015-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,12.23,13.75,11.66,12.89,12.044232,0.0,0.0,0.0,0.0,
+2016-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,12.54,13.97,11.04,12.88,12.149975,0.0,0.0,0.0,0.0,
+2017-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,12.84,16.709999,12.84,16.370001,15.751085,0.0,0.0,0.0,0.0,
+2018-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,16.459999,17.620001,13.32,13.8,13.752874,0.0,0.0,0.0,0.0,
+2019-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,13.65,18.17,13.52,18.08,18.08,0.0,0.0,0.0,0.0,
+2020-01-01,WILNX,William Blair International Leaders Fund Class N Shares,NASDAQ,2012-08-16,,18.219999,20.700001,12.68,20.24,20.24,0.0,0.0,0.0,0.0,

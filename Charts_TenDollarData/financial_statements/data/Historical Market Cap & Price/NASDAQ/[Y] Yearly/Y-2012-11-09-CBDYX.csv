@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,28.290001,29.110001,27.940001,28.940001,23.144173,0.0,0.0,0.0,0.0,
+2013-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,29.450001,34.75,29.379999,34.75,27.790594,0.0,0.0,0.0,0.0,
+2014-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,34.57,38.139999,33.560001,36.57,30.397081,0.0,0.0,0.0,0.0,
+2015-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,36.549999,37.91,34.740002,35.82,31.016438,0.0,0.0,0.0,0.0,
+2016-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,35.549999,38.040001,33.73,37.52,33.058952,0.0,0.0,0.0,0.0,
+2017-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,37.720001,42.0,37.720001,41.689999,37.819244,0.0,0.0,0.0,0.0,
+2018-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,41.919998,43.57,35.93,37.259998,35.689205,0.0,0.0,0.0,0.0,
+2019-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,37.349998,44.380001,36.880001,43.959999,43.756599,0.0,0.0,0.0,0.0,
+2020-01-01,CBDYX,Columbia Balanced Fund Institutional 3 Class,NASDAQ,2012-11-09,,44.259998,48.889999,35.169998,47.200001,47.200001,0.0,0.0,0.0,0.0,

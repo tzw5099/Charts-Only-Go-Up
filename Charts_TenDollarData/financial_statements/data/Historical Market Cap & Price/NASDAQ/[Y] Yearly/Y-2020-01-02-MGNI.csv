@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,MGNI,,NASDAQ,2020-01-02,696762600.0,8.43,13.11,5.57,6.25,6.25,192215884.0,192215884.0,-1.3400000000000019,-0.25128571428571433,8.301734897959184

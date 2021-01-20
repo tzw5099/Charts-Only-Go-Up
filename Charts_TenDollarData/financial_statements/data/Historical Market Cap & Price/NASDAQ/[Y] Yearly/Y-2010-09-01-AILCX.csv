@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,14.82,16.969999,14.82,16.549999,12.816366,0.0,0.0,0.0,0.0,
+2011-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,16.700001,18.540001,13.31,13.84,11.208968,0.0,0.0,0.0,0.0,
+2012-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,14.22,16.629999,13.03,16.280001,13.45866,0.0,0.0,0.0,0.0,
+2013-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,16.57,19.83,16.299999,19.83,16.551273,0.0,0.0,0.0,0.0,
+2014-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,19.549999,20.629999,17.76,17.879999,15.206171,0.0,0.0,0.0,0.0,
+2015-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,17.82,20.059999,16.58,17.110001,14.772524,0.0,0.0,0.0,0.0,
+2016-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,16.799999,17.4,14.71,16.629999,14.643723,0.0,0.0,0.0,0.0,
+2017-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,16.700001,20.360001,16.700001,20.09,18.082794,0.0,0.0,0.0,0.0,
+2018-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,20.24,21.4,14.9,15.28,14.944232,0.0,0.0,0.0,0.0,
+2019-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,15.19,18.049999,15.11,17.700001,17.700001,0.0,0.0,0.0,0.0,
+2020-01-01,AILCX,American Beacon International Equity Fund Class C,NASDAQ,2010-09-01,,17.799999,17.799999,10.69,15.53,15.53,0.0,0.0,0.0,0.0,

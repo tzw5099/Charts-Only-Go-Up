@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,DOTAU,Draper Oakwood Technology Acquisition Inc. Unit,delisted,2017-09-15,,10.07,10.8,10.07,10.5347,,2190412.0,2190412.0,10.534699999999994,0.07776470588235292,10.339595555555555
+2018-01-01,DOTAU,Draper Oakwood Technology Acquisition Inc. Unit,delisted,2017-09-15,,10.56,13.5,10.0,10.25,,252866.0,252866.0,-0.28469999999999984,-0.00995384615384613,10.815627450980392

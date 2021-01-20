@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,15.74,16.51,12.26,12.8,10.751945,0.0,0.0,0.0,0.0,
+2012-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,13.16,14.36,11.77,13.68,11.924685,0.0,0.0,0.0,0.0,
+2013-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,13.93,16.91,13.75,16.870001,14.705372,0.0,0.0,0.0,0.0,
+2014-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,16.57,18.219999,15.23,15.7,13.696781,0.0,0.0,0.0,0.0,
+2015-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,15.62,18.01,14.59,15.11,13.470277,0.0,0.0,0.0,0.0,
+2016-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,14.83,16.18,13.37,15.75,14.545819,0.0,0.0,0.0,0.0,
+2017-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,15.91,17.780001,15.91,17.780001,16.712452,0.0,0.0,0.0,0.0,
+2018-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,17.940001,19.23,15.42,15.67,15.092095,0.0,0.0,0.0,0.0,
+2019-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,15.66,17.41,14.83,17.23,17.123947,0.0,0.0,0.0,0.0,
+2020-01-01,BIEAX,Brandes International Equity Fund A,NASDAQ,2011-01-31,,17.34,17.34,10.31,13.9,13.9,0.0,0.0,0.0,0.0,

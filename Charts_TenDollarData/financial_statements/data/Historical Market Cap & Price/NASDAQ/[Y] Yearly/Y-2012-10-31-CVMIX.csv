@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,12.0,12.57,11.64,12.57,10.905988,0.0,0.0,0.0,0.0,
+2013-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,12.77,14.26,11.78,13.17,12.147464,0.0,0.0,0.0,0.0,
+2014-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,12.98,14.39,11.88,12.55,12.022347,0.0,0.0,0.0,0.0,
+2015-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,12.61,13.89,10.72,11.48,11.13461,0.0,0.0,0.0,0.0,
+2016-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,11.22,13.25,10.2,12.16,11.895749,0.0,0.0,0.0,0.0,
+2017-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,12.28,17.549999,12.28,17.549999,17.215281,0.0,0.0,0.0,0.0,
+2018-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,17.870001,19.1,14.02,14.7,14.594194,0.0,0.0,0.0,0.0,
+2019-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,14.69,17.92,14.42,17.9,17.9,0.0,0.0,0.0,0.0,
+2020-01-01,CVMIX,Calvert Emerging Markets Equity Fund Class I,NASDAQ,2012-10-31,,18.200001,19.23,12.32,18.879999,18.879999,0.0,0.0,0.0,0.0,

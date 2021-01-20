@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,ZSCIX,Zacks Small-Cap Core Fund Institutional Class,NASDAQ,2014-02-28,,23.09,24.129999,21.34,23.33,18.574802,0.0,0.0,0.0,0.0,
+2015-01-01,ZSCIX,Zacks Small-Cap Core Fund Institutional Class,NASDAQ,2014-02-28,,23.08,25.58,22.290001,23.01,18.320026,0.0,0.0,0.0,0.0,
+2016-01-01,ZSCIX,Zacks Small-Cap Core Fund Institutional Class,NASDAQ,2014-02-28,,22.389999,28.34,20.360001,27.92,22.352234,0.0,0.0,0.0,0.0,
+2017-01-01,ZSCIX,Zacks Small-Cap Core Fund Institutional Class,NASDAQ,2014-02-28,,28.030001,33.169998,27.26,28.200001,25.545614,0.0,0.0,0.0,0.0,
+2018-01-01,ZSCIX,Zacks Small-Cap Core Fund Institutional Class,NASDAQ,2014-02-28,,28.440001,31.98,21.27,22.549999,22.461874,0.0,0.0,0.0,0.0,
+2019-01-01,ZSCIX,Zacks Small-Cap Core Fund Institutional Class,NASDAQ,2014-02-28,,22.6,27.629999,22.059999,27.299999,27.275209,0.0,0.0,0.0,0.0,
+2020-01-01,ZSCIX,Zacks Small-Cap Core Fund Institutional Class,NASDAQ,2014-02-28,,27.27,28.129999,14.46,22.190001,22.190001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,16 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-10-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.33,0.4586,0.3,0.4,,1423048.0,1423048.0,0.4,3.253,0.382231
+2017-11-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.42,0.55,0.42,0.4322,,239548.0,239548.0,0.03219999999999999,0.8285000000000002,0.4772744615384615
+2017-12-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.47,0.58,0.41,0.5,,337605.0,337605.0,0.0678,1.855625,0.46641150000000003
+2018-01-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.4975,0.6499,0.49,0.62,,115086.0,115086.0,0.11999999999999998,2.7533333333333334,0.5815014444444445
+2018-02-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.64,0.64,0.55,0.58,,8186.0,8186.0,-0.039999999999999994,-0.6270000000000001,0.591462
+2018-03-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.565,0.57,0.53,0.57,,704.0,704.0,-0.009999999999999998,-0.34019999999999995,0.5575
+2018-04-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.57,0.5898,0.55,0.5817,,6399.0,6399.0,0.0117,0.4346,0.5661586000000001
+2018-05-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.61,0.6368,0.5,0.53,,703352.0,703352.0,-0.051699999999999996,-0.6122307692307692,0.5576857692307693
+2018-06-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.5,0.59,0.45,0.59,,89972.0,89972.0,0.06,2.2115714285714287,0.5094152857142856
+2018-07-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.56,0.59,0.4505,0.54,,256300.0,256300.0,-0.05,-1.6762000000000001,0.5639881999999999
+2018-08-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.5,0.5986,0.5,0.5986,,300.0,300.0,0.05859999999999999,6.156499999999999,0.5493
+2018-09-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.6499,0.65,0.45,0.51,,1884602.0,1884602.0,-0.08860000000000001,-1.3818,0.5057598000000001
+2018-10-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.49,0.525,0.34,0.4501,,142600.0,142600.0,-0.05990000000000002,-0.8881666666666669,0.46946825000000003
+2018-11-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.43,0.49,0.2538,0.38,,72926.0,72926.0,-0.0701,-0.7964,0.37195133333333336
+2018-12-01,DOTAR,Draper Oakwood Technology Acquisition Inc Tradeable Rights Oct 2017,delisted,2017-10-12,,0.35,0.43,0.168,0.2587,,504226.0,504226.0,-0.12130000000000002,-1.584454545454545,0.2691095454545454

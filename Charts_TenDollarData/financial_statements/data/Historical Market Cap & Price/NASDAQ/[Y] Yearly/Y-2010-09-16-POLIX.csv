@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,10.0,11.54,10.0,11.39,9.57036,0.0,0.0,0.0,0.0,
+2011-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,11.51,12.58,10.28,12.12,10.18457,0.0,0.0,0.0,0.0,
+2012-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,12.23,14.16,12.23,13.45,11.34965,0.0,0.0,0.0,0.0,
+2013-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,13.8,16.219999,13.69,16.219999,13.893205,0.0,0.0,0.0,0.0,
+2014-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,16.07,18.879999,15.36,17.6,16.161869,0.0,0.0,0.0,0.0,
+2015-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,17.549999,20.82,17.059999,19.35,18.517311,0.0,0.0,0.0,0.0,
+2016-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,18.91,20.040001,17.290001,19.48,18.643602,0.0,0.0,0.0,0.0,
+2017-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,19.68,24.73,19.68,24.23,23.578117,0.0,0.0,0.0,0.0,
+2018-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,24.49,30.01,23.790001,25.440001,25.404221,0.0,0.0,0.0,0.0,
+2019-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,25.43,35.119999,24.799999,34.889999,34.889999,0.0,0.0,0.0,0.0,
+2020-01-01,POLIX,Polen Growth Fund Institutional Class,NASDAQ,2010-09-16,,35.349998,45.540001,26.620001,41.5,41.5,0.0,0.0,0.0,0.0,

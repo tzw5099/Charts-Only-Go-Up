@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,17.299999,18.799999,16.76,18.110001,12.063073,0.0,0.0,0.0,0.0,
+2013-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,18.559999,23.93,18.530001,23.83,16.490881,0.0,0.0,0.0,0.0,
+2014-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,23.58,25.77,22.27,23.68,18.137589,0.0,0.0,0.0,0.0,
+2015-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,23.49,26.219999,21.82,22.24,18.387453,0.0,0.0,0.0,0.0,
+2016-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,21.84,25.190001,18.93,23.91,20.347176,0.0,0.0,0.0,0.0,
+2017-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,24.030001,30.530001,24.030001,28.969999,25.888685,0.0,0.0,0.0,0.0,
+2018-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,29.23,34.639999,23.99,25.629999,24.586744,0.0,0.0,0.0,0.0,
+2019-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,25.51,33.060001,24.879999,31.620001,31.620001,0.0,0.0,0.0,0.0,
+2020-01-01,JGMNX,Janus Henderson Triton Fund Class N,NASDAQ,2012-05-31,,31.879999,32.889999,19.52,31.450001,31.450001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,13.84,24.459999,13.84,24.299999,19.190493,0.0,0.0,0.0,0.0,
+2010-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,24.91,28.780001,20.84,28.23,22.29414,0.0,0.0,0.0,0.0,
+2011-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,28.59,30.07,16.870001,17.42,17.096153,0.0,0.0,0.0,0.0,
+2012-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,17.92,20.58,17.09,20.129999,19.755774,0.0,0.0,0.0,0.0,
+2013-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,20.58,21.059999,17.24,19.940001,19.569305,0.0,0.0,0.0,0.0,
+2014-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,19.57,22.129999,18.42,19.450001,19.285185,0.0,0.0,0.0,0.0,
+2015-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,19.49,21.07,15.91,16.690001,16.548573,0.0,0.0,0.0,0.0,
+2016-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,16.27,19.360001,14.55,17.75,17.599588,0.0,0.0,0.0,0.0,
+2017-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,17.879999,24.530001,17.879999,24.469999,24.262644,0.0,0.0,0.0,0.0,
+2018-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,25.01,26.540001,18.790001,19.51,19.344675,0.0,0.0,0.0,0.0,
+2019-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,19.360001,23.129999,19.1,23.0,23.0,0.0,0.0,0.0,0.0,
+2020-01-01,DBECX,BNY Mellon Diversified Emerging Markets Fund Class C,NASDAQ,2009-03-31,,23.34,24.629999,15.74,24.58,24.58,0.0,0.0,0.0,0.0,

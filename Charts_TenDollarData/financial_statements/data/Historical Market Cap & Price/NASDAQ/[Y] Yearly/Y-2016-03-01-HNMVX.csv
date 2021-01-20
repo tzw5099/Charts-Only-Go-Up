@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HNMVX,Harbor Mid Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,18.360001,22.969999,18.190001,21.82,18.784492,0.0,0.0,0.0,0.0,
+2017-01-01,HNMVX,Harbor Mid Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,22.040001,24.25,21.690001,23.530001,21.055407,0.0,0.0,0.0,0.0,
+2018-01-01,HNMVX,Harbor Mid Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,23.75,24.98,16.870001,17.879999,17.316973,0.0,0.0,0.0,0.0,
+2019-01-01,HNMVX,Harbor Mid Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,17.99,21.85,17.76,21.309999,21.309999,0.0,0.0,0.0,0.0,
+2020-01-01,HNMVX,Harbor Mid Cap Value Fund Retirement Class,NASDAQ,2016-03-01,,21.280001,21.450001,10.88,16.870001,16.870001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,FONE,First Trust NASDAQ Smartphone Index Fund,NASDAQ,2019-05-29,,45.7272,45.91,45.7272,45.91,,496.0,496.0,45.91,0.0,45.8668

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,MIIIW,M III Acquisition Corp. Warrant,delisted,2016-08-30,,0.24,0.2699,0.18,0.24,,1781963.0,1781963.0,0.24,0.40003225806451626,0.20878188461538463
+2017-01-01,MIIIW,M III Acquisition Corp. Warrant,delisted,2016-08-30,,0.25,0.83,0.1801,0.79,,10911566.0,10911566.0,0.5499999999999998,0.6902831050228311,0.46190122935779837
+2018-01-01,MIIIW,M III Acquisition Corp. Warrant,delisted,2016-08-30,,0.82,1.05,0.66,0.88,,5036255.0,5036255.0,0.08999999999999998,0.2864745762711863,0.8962088813559324

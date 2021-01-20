@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ADXN,Addex Therapeutics Ltd,NASDAQ,2020-01-29,,14.5,37.52,6.19,11.78,11.78,239216.0,239216.0,-10.408000000000001,-1.250162162162162,10.698076891891894

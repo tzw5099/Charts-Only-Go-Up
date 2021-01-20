@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,PLRX,,NASDAQ,2020-09-17,939169036.79865,25.0,35.63,21.05,27.620001,27.620001,14122734.0,14122734.0,-4.515999999999999,-0.11940000000000008,25.650066400000004

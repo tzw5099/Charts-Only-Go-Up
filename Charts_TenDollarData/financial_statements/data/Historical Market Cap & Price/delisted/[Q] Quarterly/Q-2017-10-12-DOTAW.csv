@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-10-01,DOTAW,Draper Oakwood Technology Acquisition Inc Warrants 19092023,delisted,2017-10-12,,0.41,0.6972,0.41,0.67,,1143442.0,1143442.0,0.6699999999999998,2.0684800000000005,0.5371640454545455
+2018-01-01,DOTAW,Draper Oakwood Technology Acquisition Inc Warrants 19092023,delisted,2017-10-12,,0.54,0.92,0.54,0.845,,146623.0,146623.0,0.17499999999999993,1.7096500000000003,0.7747485625000001
+2018-04-01,DOTAW,Draper Oakwood Technology Acquisition Inc Warrants 19092023,delisted,2017-10-12,,0.79,0.8499,0.55,0.73,,132730.0,132730.0,-0.11499999999999999,-0.44533333333333336,0.6690397500000002
+2018-07-01,DOTAW,Draper Oakwood Technology Acquisition Inc Warrants 19092023,delisted,2017-10-12,,0.66,0.93,0.45,0.59,,601089.0,601089.0,-0.13999999999999999,-0.338,0.641784875
+2018-10-01,DOTAW,Draper Oakwood Technology Acquisition Inc Warrants 19092023,delisted,2017-10-12,,0.5,0.5998,0.0508,0.1982,,613138.0,613138.0,-0.39180000000000004,-1.34942,0.35603611999999996

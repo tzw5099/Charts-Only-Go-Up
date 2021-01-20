@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,TCMPX,AMG TimesSquare International Small Cap Fund Class N,NASDAQ,2013-01-03,,9.98,12.18,9.91,11.99,10.513722,0.0,0.0,0.0,0.0,
+2014-01-01,TCMPX,AMG TimesSquare International Small Cap Fund Class N,NASDAQ,2013-01-03,,11.89,13.0,11.38,11.79,10.703581,0.0,0.0,0.0,0.0,
+2015-01-01,TCMPX,AMG TimesSquare International Small Cap Fund Class N,NASDAQ,2013-01-03,,11.73,13.39,11.36,12.65,12.043118,0.0,0.0,0.0,0.0,
+2016-01-01,TCMPX,AMG TimesSquare International Small Cap Fund Class N,NASDAQ,2013-01-03,,12.42,13.69,11.12,12.35,11.977826,0.0,0.0,0.0,0.0,
+2017-01-01,TCMPX,AMG TimesSquare International Small Cap Fund Class N,NASDAQ,2013-01-03,,12.41,16.99,12.41,16.99,16.605125,0.0,0.0,0.0,0.0,
+2018-01-01,TCMPX,AMG TimesSquare International Small Cap Fund Class N,NASDAQ,2013-01-03,,17.120001,18.5,12.32,12.72,12.531151,0.0,0.0,0.0,0.0,
+2019-01-01,TCMPX,AMG TimesSquare International Small Cap Fund Class N,NASDAQ,2013-01-03,,12.66,16.309999,12.48,16.24,16.24,0.0,0.0,0.0,0.0,
+2020-01-01,TCMPX,AMG TimesSquare International Small Cap Fund Class N,NASDAQ,2013-01-03,,16.42,16.440001,10.1,15.79,15.79,0.0,0.0,0.0,0.0,

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,VLAIX,Value Line Asset Allocation Fund Institutional Class,NASDAQ,2015-10-30,,28.809999,29.17,27.68,27.719999,24.551582,0.0,0.0,0.0,0.0,
+2016-01-01,VLAIX,Value Line Asset Allocation Fund Institutional Class,NASDAQ,2015-10-30,,27.379999,29.799999,25.9,28.700001,26.032564,0.0,0.0,0.0,0.0,
+2017-01-01,VLAIX,Value Line Asset Allocation Fund Institutional Class,NASDAQ,2015-10-30,,28.799999,33.150002,28.799999,31.610001,29.991133,0.0,0.0,0.0,0.0,
+2018-01-01,VLAIX,Value Line Asset Allocation Fund Institutional Class,NASDAQ,2015-10-30,,31.67,35.23,29.91,31.27,30.665527,0.0,0.0,0.0,0.0,
+2019-01-01,VLAIX,Value Line Asset Allocation Fund Institutional Class,NASDAQ,2015-10-30,,31.040001,39.200001,30.59,38.549999,38.549999,0.0,0.0,0.0,0.0,
+2020-01-01,VLAIX,Value Line Asset Allocation Fund Institutional Class,NASDAQ,2015-10-30,,38.82,42.970001,31.219999,41.48,41.48,0.0,0.0,0.0,0.0,

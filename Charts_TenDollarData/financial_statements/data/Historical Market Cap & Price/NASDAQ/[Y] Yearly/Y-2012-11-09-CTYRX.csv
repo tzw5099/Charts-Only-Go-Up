@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,10.75,11.52,10.47,11.44,9.665856,0.0,0.0,0.0,0.0,
+2013-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,11.81,16.780001,11.62,16.780001,14.177714,0.0,0.0,0.0,0.0,
+2014-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,16.610001,19.84,16.24,18.77,16.586893,0.0,0.0,0.0,0.0,
+2015-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,18.76,21.43,18.0,20.389999,18.327906,0.0,0.0,0.0,0.0,
+2016-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,19.98,23.43,17.139999,22.950001,20.699898,0.0,0.0,0.0,0.0,
+2017-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,23.129999,34.23,23.129999,31.780001,29.687536,0.0,0.0,0.0,0.0,
+2018-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,32.349998,38.330002,27.629999,29.709999,29.314743,0.0,0.0,0.0,0.0,
+2019-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,29.74,42.049999,28.51,41.790001,41.790001,0.0,0.0,0.0,0.0,
+2020-01-01,CTYRX,Columbia Global Technology Growth Fund Advisor Class,NASDAQ,2012-11-09,,42.59,57.669998,32.41,52.669998,52.669998,0.0,0.0,0.0,0.0,

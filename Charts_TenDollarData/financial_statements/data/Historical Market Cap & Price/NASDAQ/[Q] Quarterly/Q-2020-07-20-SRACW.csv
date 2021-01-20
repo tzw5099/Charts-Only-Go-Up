@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,SRACW,Stable Road Acquisition Corp.,NASDAQ,2020-07-20,,0.5,0.87,0.4713,0.4713,0.4713,206829.0,206829.0,1.8112999999999997,27.866153846153846,0.5901946153846154

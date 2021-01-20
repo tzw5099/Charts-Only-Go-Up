@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HFDTX,Hartford Schroders US MidCap Opportunities Fund Class R5,NASDAQ,2016-10-24,,12.54,13.51,12.18,13.01,12.399522,0.0,0.0,0.0,0.0,
+2017-01-01,HFDTX,Hartford Schroders US MidCap Opportunities Fund Class R5,NASDAQ,2016-10-24,,13.06,15.02,13.06,14.79,14.314353,0.0,0.0,0.0,0.0,
+2018-01-01,HFDTX,Hartford Schroders US MidCap Opportunities Fund Class R5,NASDAQ,2016-10-24,,14.88,15.69,12.24,12.86,12.747163,0.0,0.0,0.0,0.0,
+2019-01-01,HFDTX,Hartford Schroders US MidCap Opportunities Fund Class R5,NASDAQ,2016-10-24,,12.85,16.34,12.65,16.299999,16.299999,0.0,0.0,0.0,0.0,
+2020-01-01,HFDTX,Hartford Schroders US MidCap Opportunities Fund Class R5,NASDAQ,2016-10-24,,16.360001,16.9,10.02,15.33,15.33,0.0,0.0,0.0,0.0,

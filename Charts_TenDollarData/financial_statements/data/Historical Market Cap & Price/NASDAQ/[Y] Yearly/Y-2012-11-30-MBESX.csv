@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,15.11,15.15,14.14,14.29,10.437288,0.0,0.0,0.0,0.0,
+2013-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,14.49,16.639999,14.46,15.26,11.145768,0.0,0.0,0.0,0.0,
+2014-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,15.18,16.75,14.9,15.23,12.182059,0.0,0.0,0.0,0.0,
+2015-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,15.23,15.92,14.78,15.05,12.460664,0.0,0.0,0.0,0.0,
+2016-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,14.9,15.75,14.15,15.59,13.056808,0.0,0.0,0.0,0.0,
+2017-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,15.66,17.98,15.66,17.190001,15.10989,0.0,0.0,0.0,0.0,
+2018-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,17.26,18.530001,15.51,15.6,14.695485,0.0,0.0,0.0,0.0,
+2019-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,15.61,17.85,15.43,17.219999,17.117807,0.0,0.0,0.0,0.0,
+2020-01-01,MBESX,AMG Chicago Equity Partners Balanced Fund Class I,NASDAQ,2012-11-30,,17.290001,18.09,13.39,17.620001,17.620001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,BDSIX,BlackRock Advantage Small Cap Core Fund Institutional Shares,NASDAQ,2013-03-15,,10.0,12.15,9.54,11.66,9.105372,0.0,0.0,0.0,0.0,
+2014-01-01,BDSIX,BlackRock Advantage Small Cap Core Fund Institutional Shares,NASDAQ,2013-03-15,,11.55,12.66,10.17,11.1,9.588738,0.0,0.0,0.0,0.0,
+2015-01-01,BDSIX,BlackRock Advantage Small Cap Core Fund Institutional Shares,NASDAQ,2013-03-15,,11.07,12.21,10.15,10.28,9.365849,0.0,0.0,0.0,0.0,
+2016-01-01,BDSIX,BlackRock Advantage Small Cap Core Fund Institutional Shares,NASDAQ,2013-03-15,,10.05,12.87,8.66,12.65,11.614467,0.0,0.0,0.0,0.0,
+2017-01-01,BDSIX,BlackRock Advantage Small Cap Core Fund Institutional Shares,NASDAQ,2013-03-15,,12.69,13.94,12.32,13.63,12.867164,0.0,0.0,0.0,0.0,
+2018-01-01,BDSIX,BlackRock Advantage Small Cap Core Fund Institutional Shares,NASDAQ,2013-03-15,,13.75,15.67,11.09,11.84,11.731622,0.0,0.0,0.0,0.0,
+2019-01-01,BDSIX,BlackRock Advantage Small Cap Core Fund Institutional Shares,NASDAQ,2013-03-15,,11.88,15.57,11.67,15.5,15.5,0.0,0.0,0.0,0.0,
+2020-01-01,BDSIX,BlackRock Advantage Small Cap Core Fund Institutional Shares,NASDAQ,2013-03-15,,15.48,15.89,9.0,14.05,14.05,0.0,0.0,0.0,0.0,

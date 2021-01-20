@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ONTXW,Onconova Therapeutics Inc. Warrants,NASDAQ,2020-07-21,,0.0,0.2,0.079,0.1738,0.1738,2041588.0,2041588.0,0.0,0.0,0.12599625
+2020-08-01,ONTXW,Onconova Therapeutics Inc. Warrants,NASDAQ,2020-07-21,,0.0,0.1738,0.0201,0.1,0.1,1278312.0,1278312.0,0.0,0.0,0.09922142857142859
+2020-09-01,ONTXW,Onconova Therapeutics Inc. Warrants,NASDAQ,2020-07-21,,0.0,0.0967,0.0502,0.0602,0.0602,235687.0,235687.0,0.0,0.0,0.07237999999999999

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,PSTX,,NASDAQ,2020-09-17,603323086.4,16.9,17.62,7.63,9.5,9.5,33391130.0,33391130.0,-4.13,-0.3618367346938778,11.808755102040816

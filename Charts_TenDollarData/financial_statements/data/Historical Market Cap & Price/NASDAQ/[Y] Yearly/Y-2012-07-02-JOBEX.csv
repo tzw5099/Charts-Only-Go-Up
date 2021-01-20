@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,15.0,16.040001,14.62,15.85,13.183788,0.0,0.0,0.0,0.0,
+2013-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,16.129999,18.92,16.040001,18.92,15.980198,0.0,0.0,0.0,0.0,
+2014-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,18.639999,20.18,17.799999,19.690001,16.996696,0.0,0.0,0.0,0.0,
+2015-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,19.67,20.66,18.16,19.02,16.754889,0.0,0.0,0.0,0.0,
+2016-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,18.74,20.620001,17.129999,20.219999,18.185175,0.0,0.0,0.0,0.0,
+2017-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,20.34,24.040001,20.34,23.780001,21.815865,0.0,0.0,0.0,0.0,
+2018-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,23.959999,25.18,19.889999,20.540001,20.021965,0.0,0.0,0.0,0.0,
+2019-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,20.51,24.969999,20.26,24.73,24.679176,0.0,0.0,0.0,0.0,
+2020-01-01,JOBEX,JPMorgan SmartRetirement Blend 2040 Fund Class I,NASDAQ,2012-07-02,,24.91,25.469999,17.559999,24.83,24.83,0.0,0.0,0.0,0.0,

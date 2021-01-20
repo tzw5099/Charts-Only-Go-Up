@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ESSCR,East Stone Acquisition Corporation,,2020-07-21,,0.2,0.22,0.18,0.18,0.18,105119.0,105119.0,-0.1096,-7.453857142857143,0.19261142857142857
+2020-08-01,ESSCR,East Stone Acquisition Corporation,,2020-07-21,,0.18,0.21,0.176,0.2099,0.2099,462522.0,462522.0,0.0787,3.4827692307692315,0.18961307692307688
+2020-09-01,ESSCR,East Stone Acquisition Corporation,,2020-07-21,,0.185,0.28,0.1761,0.2292,0.2292,548151.0,548151.0,-0.00715,0.27072727272727265,0.20609909090909087

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TGIPX,T. Rowe Price Personal Strategy Growth Fund I Class,NASDAQ,2016-03-24,,27.4,30.09,26.950001,29.16,25.273987,0.0,0.0,0.0,0.0,
+2017-01-01,TGIPX,T. Rowe Price Personal Strategy Growth Fund I Class,NASDAQ,2016-03-24,,29.34,35.450001,29.34,33.959999,30.846325,0.0,0.0,0.0,0.0,
+2018-01-01,TGIPX,T. Rowe Price Personal Strategy Growth Fund I Class,NASDAQ,2016-03-24,,33.959999,36.060001,28.690001,29.870001,29.026268,0.0,0.0,0.0,0.0,
+2019-01-01,TGIPX,T. Rowe Price Personal Strategy Growth Fund I Class,NASDAQ,2016-03-24,,29.85,36.130001,29.459999,35.959999,35.959999,0.0,0.0,0.0,0.0,
+2020-01-01,TGIPX,T. Rowe Price Personal Strategy Growth Fund I Class,NASDAQ,2016-03-24,,36.27,38.84,26.18,37.630001,37.630001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-04-01,DMYT,"dMY Technology Group, Inc.",,2020-09-17,288362500.0,9.8,10.18,9.51,10.03,10.03,314100.0,314100.0,-0.7390000000000001,-0.2737407407407408,9.77358037037037
+2020-07-01,DMYT,"dMY Technology Group, Inc.",,2020-09-17,402500000.0,10.19,14.38,10.01,14.22,14.22,40408647.0,40408647.0,-1.640000000000001,-0.27640000000000003,11.139117272727274

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-05-18,LSXMR,Liberty Media Corporation Right,delisted,2020-05-21,438000000,6.0,7.62,5.38,7.3,7.3,1823642.0,1823642.0,1.4700000000000002,11.7195,6.765000000000001
+2020-05-25,LSXMR,Liberty Media Corporation Right,delisted,2020-05-21,652200000,7.04,11.86,7.01,10.87,10.87,6435618.0,6435618.0,3.2099999999999995,9.874,10.0466675
+2020-06-01,LSXMR,Liberty Media Corporation Right,delisted,2020-05-21,809400000,11.01,15.94,11.01,13.49,13.49,2957914.0,2957914.0,2.53,4.684,12.924665999999998

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TGTIX,T. Rowe Price Growth and Income Fund I Class,NASDAQ,2016-11-29,,30.049999,30.469999,25.120001,25.120001,19.888973,0.0,0.0,0.0,0.0,
+2017-01-01,TGTIX,T. Rowe Price Growth and Income Fund I Class,NASDAQ,2016-11-29,,25.299999,30.23,25.299999,28.450001,24.09984,0.0,0.0,0.0,0.0,
+2018-01-01,TGTIX,T. Rowe Price Growth and Income Fund I Class,NASDAQ,2016-11-29,,28.549999,31.08,22.9,24.35,23.349958,0.0,0.0,0.0,0.0,
+2019-01-01,TGTIX,T. Rowe Price Growth and Income Fund I Class,NASDAQ,2016-11-29,,24.34,30.58,23.809999,30.309999,30.211908,0.0,0.0,0.0,0.0,
+2020-01-01,TGTIX,T. Rowe Price Growth and Income Fund I Class,NASDAQ,2016-11-29,,30.59,32.950001,21.120001,30.9,30.9,0.0,0.0,0.0,0.0,

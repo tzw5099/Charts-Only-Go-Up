@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PRUFX,T. Rowe Price Growth Stock Fund I Class,NASDAQ,2015-08-28,,55.779999,58.709999,51.689999,53.689999,41.343224,0.0,0.0,0.0,0.0,
+2016-01-01,PRUFX,T. Rowe Price Growth Stock Fund I Class,NASDAQ,2015-08-28,,52.470001,55.330002,44.700001,53.279999,41.991344,0.0,0.0,0.0,0.0,
+2017-01-01,PRUFX,T. Rowe Price Growth Stock Fund I Class,NASDAQ,2015-08-28,,53.740002,71.800003,53.740002,62.700001,56.178272,0.0,0.0,0.0,0.0,
+2018-01-01,PRUFX,T. Rowe Price Growth Stock Fund I Class,NASDAQ,2015-08-28,,63.52,72.980003,53.18,57.150002,55.670326,0.0,0.0,0.0,0.0,
+2019-01-01,PRUFX,T. Rowe Price Growth Stock Fund I Class,NASDAQ,2015-08-28,,57.169998,73.980003,55.650002,73.389999,73.389999,0.0,0.0,0.0,0.0,
+2020-01-01,PRUFX,T. Rowe Price Growth Stock Fund I Class,NASDAQ,2015-08-28,,74.660004,96.690002,54.799999,88.449997,88.449997,0.0,0.0,0.0,0.0,

@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TSCIX,AMG TimesSquare Small Cap Growth Fund Class Z,NASDAQ,2019-04-26,,15.85,16.33,14.18,14.55,14.55,0.0,0.0,0.0,0.0,
+2020-01-01,TSCIX,AMG TimesSquare Small Cap Growth Fund Class Z,NASDAQ,2019-04-26,,14.63,16.379999,9.32,15.43,15.43,0.0,0.0,0.0,0.0,

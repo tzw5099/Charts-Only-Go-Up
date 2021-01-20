@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,SHSKX,BlackRock Health Sciences Opportunities Portfolio Class K,NASDAQ,2016-06-13,,48.630001,51.630001,45.66,46.540001,39.937943,0.0,0.0,0.0,0.0,
+2017-01-01,SHSKX,BlackRock Health Sciences Opportunities Portfolio Class K,NASDAQ,2016-06-13,,47.049999,58.900002,47.049999,56.18,50.010723,0.0,0.0,0.0,0.0,
+2018-01-01,SHSKX,BlackRock Health Sciences Opportunities Portfolio Class K,NASDAQ,2016-06-13,,56.950001,67.879997,52.700001,56.380001,54.18808,0.0,0.0,0.0,0.0,
+2019-01-01,SHSKX,BlackRock Health Sciences Opportunities Portfolio Class K,NASDAQ,2016-06-13,,55.709999,68.959999,54.349998,68.129997,68.129997,0.0,0.0,0.0,0.0,
+2020-01-01,SHSKX,BlackRock Health Sciences Opportunities Portfolio Class K,NASDAQ,2016-06-13,,68.199997,76.889999,50.84,75.150002,75.150002,0.0,0.0,0.0,0.0,

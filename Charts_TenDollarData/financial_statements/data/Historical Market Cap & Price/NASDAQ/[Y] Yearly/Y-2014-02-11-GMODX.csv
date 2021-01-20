@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,GMODX,GMO Opportunistic Income Fund Class VI,NASDAQ,2014-02-11,,24.15,25.040001,24.15,24.690001,20.895311,0.0,0.0,0.0,0.0,
+2015-01-01,GMODX,GMO Opportunistic Income Fund Class VI,NASDAQ,2014-02-11,,24.690001,25.030001,24.66,24.68,21.244154,0.0,0.0,0.0,0.0,
+2016-01-01,GMODX,GMO Opportunistic Income Fund Class VI,NASDAQ,2014-02-11,,24.700001,25.809999,24.559999,25.299999,22.336525,0.0,0.0,0.0,0.0,
+2017-01-01,GMODX,GMO Opportunistic Income Fund Class VI,NASDAQ,2014-02-11,,25.309999,26.77,25.299999,26.219999,23.767979,0.0,0.0,0.0,0.0,
+2018-01-01,GMODX,GMO Opportunistic Income Fund Class VI,NASDAQ,2014-02-11,,26.23,26.98,26.040001,26.129999,24.72179,0.0,0.0,0.0,0.0,
+2019-01-01,GMODX,GMO Opportunistic Income Fund Class VI,NASDAQ,2014-02-11,,26.139999,26.92,25.66,25.67,25.67,0.0,0.0,0.0,0.0,
+2020-01-01,GMODX,GMO Opportunistic Income Fund Class VI,NASDAQ,2014-02-11,,25.68,26.17,23.870001,26.0,26.0,0.0,0.0,0.0,0.0,

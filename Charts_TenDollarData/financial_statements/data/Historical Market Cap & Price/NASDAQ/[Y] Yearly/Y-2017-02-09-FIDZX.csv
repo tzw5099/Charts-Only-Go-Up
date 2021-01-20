@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,FIDZX,Fidelity Advisor International Capital Appreciation Fund Class Z,NASDAQ,2017-02-09,,16.43,21.08,16.43,21.08,20.807207,0.0,0.0,0.0,0.0,
+2018-01-01,FIDZX,Fidelity Advisor International Capital Appreciation Fund Class Z,NASDAQ,2017-02-09,,21.200001,22.540001,17.49,18.280001,18.161512,0.0,0.0,0.0,0.0,
+2019-01-01,FIDZX,Fidelity Advisor International Capital Appreciation Fund Class Z,NASDAQ,2017-02-09,,18.16,24.290001,17.799999,24.15,24.15,0.0,0.0,0.0,0.0,
+2020-01-01,FIDZX,Fidelity Advisor International Capital Appreciation Fund Class Z,NASDAQ,2017-02-09,,24.35,27.040001,17.370001,26.17,26.17,0.0,0.0,0.0,0.0,

@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,CPEIX,Catalyst Dynamic Alpha Fund Class I,NASDAQ,2014-06-06,,15.3,17.309999,14.63,15.61,12.616832,0.0,0.0,0.0,0.0,
+2015-01-01,CPEIX,Catalyst Dynamic Alpha Fund Class I,NASDAQ,2014-06-06,,15.61,17.24,14.9,16.48,13.500995,0.0,0.0,0.0,0.0,
+2016-01-01,CPEIX,Catalyst Dynamic Alpha Fund Class I,NASDAQ,2014-06-06,,16.040001,18.25,13.75,17.82,14.59877,0.0,0.0,0.0,0.0,
+2017-01-01,CPEIX,Catalyst Dynamic Alpha Fund Class I,NASDAQ,2014-06-06,,17.860001,22.620001,17.860001,22.15,18.574116,0.0,0.0,0.0,0.0,
+2018-01-01,CPEIX,Catalyst Dynamic Alpha Fund Class I,NASDAQ,2014-06-06,,22.24,25.34,16.639999,17.889999,17.813131,0.0,0.0,0.0,0.0,
+2019-01-01,CPEIX,Catalyst Dynamic Alpha Fund Class I,NASDAQ,2014-06-06,,17.780001,20.200001,17.32,19.84,19.84,0.0,0.0,0.0,0.0,
+2020-01-01,CPEIX,Catalyst Dynamic Alpha Fund Class I,NASDAQ,2014-06-06,,19.99,23.299999,14.0,20.940001,20.940001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,TOTAW,Tottenham Acquisition I Limited WT EXP 050625,NASDAQ,2020-07-21,1748729.5399999998,0.0959,0.89,0.12,0.82,0.82,2645214.0,2645214.0,2.4831,53.326153846153844,0.28048653846153854

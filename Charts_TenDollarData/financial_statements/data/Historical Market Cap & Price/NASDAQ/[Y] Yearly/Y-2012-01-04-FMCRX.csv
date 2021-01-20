@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,20.200001,23.5,20.200001,22.68,8.957417,0.0,0.0,0.0,0.0,
+2013-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,23.26,27.83,23.26,27.66,11.966448,0.0,0.0,0.0,0.0,
+2014-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,27.360001,30.09,26.08,27.290001,13.103409,0.0,0.0,0.0,0.0,
+2015-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,27.26,29.219999,22.85,23.25,12.767049,0.0,0.0,0.0,0.0,
+2016-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,22.92,27.360001,20.6,25.01,15.382078,0.0,0.0,0.0,0.0,
+2017-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,25.15,28.76,24.25,24.59,17.805265,0.0,0.0,0.0,0.0,
+2018-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,24.799999,26.629999,16.549999,17.57,15.794226,0.0,0.0,0.0,0.0,
+2019-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,17.52,21.52,17.24,19.85,19.738691,0.0,0.0,0.0,0.0,
+2020-01-01,FMCRX,Federated Mid-Cap Index Fund Institutional Shares,NASDAQ,2012-01-04,,19.879999,20.299999,11.77,18.34,18.34,0.0,0.0,0.0,0.0,

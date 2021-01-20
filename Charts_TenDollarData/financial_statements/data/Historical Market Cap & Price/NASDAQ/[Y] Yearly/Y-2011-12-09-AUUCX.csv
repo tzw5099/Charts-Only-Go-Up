@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,10.15,10.29,9.84,10.24,5.929723,0.0,0.0,0.0,0.0,
+2012-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,10.36,12.02,10.36,11.48,6.836568,0.0,0.0,0.0,0.0,
+2013-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,11.78,14.6,11.75,14.58,8.88219,0.0,0.0,0.0,0.0,
+2014-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,14.49,16.4,13.76,15.07,9.96468,0.0,0.0,0.0,0.0,
+2015-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,15.04,15.81,13.8,14.04,10.018436,0.0,0.0,0.0,0.0,
+2016-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,13.8,15.38,12.61,14.68,10.854823,0.0,0.0,0.0,0.0,
+2017-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,14.79,17.700001,14.76,16.0,13.169386,0.0,0.0,0.0,0.0,
+2018-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,16.129999,17.57,12.68,13.51,12.427014,0.0,0.0,0.0,0.0,
+2019-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,13.51,16.860001,13.17,16.02,16.02,0.0,0.0,0.0,0.0,
+2020-01-01,AUUCX,AB Select US Equity Portfolio Class C,NASDAQ,2011-12-09,,16.18,17.23,11.2,16.51,16.51,0.0,0.0,0.0,0.0,

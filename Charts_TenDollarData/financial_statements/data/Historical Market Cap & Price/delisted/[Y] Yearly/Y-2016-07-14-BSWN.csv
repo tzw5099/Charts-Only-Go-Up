@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,BSWN,UBS AG VelocityShares VIX Tail Risk ETN linked to the S&P 500 VIX Futures Tail Risk Index Short Term due July 18 2046,delisted,2016-07-14,,24.95,26.08,22.53,22.6527,,130507.0,130507.0,22.652699999999996,-0.11013636363636362,24.675925675675682
+2017-01-01,BSWN,UBS AG VelocityShares VIX Tail Risk ETN linked to the S&P 500 VIX Futures Tail Risk Index Short Term due July 18 2046,delisted,2016-07-14,,22.51,24.96,17.73,17.8568,,3187784.0,3187784.0,-4.795900000000001,-0.1107238095238095,20.4895314917127
+2018-01-01,BSWN,UBS AG VelocityShares VIX Tail Risk ETN linked to the S&P 500 VIX Futures Tail Risk Index Short Term due July 18 2046,delisted,2016-07-14,,17.83,24.95,9.0201,10.69,,1438821.0,1438821.0,-7.1668,0.016009174311926572,13.275343023255811

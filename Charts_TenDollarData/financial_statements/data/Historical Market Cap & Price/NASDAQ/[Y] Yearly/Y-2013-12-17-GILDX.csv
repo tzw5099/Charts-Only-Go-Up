@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,GILDX,Guggenheim Limited Duration Fund A-Class,NASDAQ,2013-12-17,,25.0,25.01,24.99,24.99,21.594604,0.0,0.0,0.0,0.0,
+2014-01-01,GILDX,Guggenheim Limited Duration Fund A-Class,NASDAQ,2013-12-17,,24.99,26.92,24.76,24.809999,21.828911,0.0,0.0,0.0,0.0,
+2015-01-01,GILDX,Guggenheim Limited Duration Fund A-Class,NASDAQ,2013-12-17,,24.82,24.889999,24.43,24.440001,22.21036,0.0,0.0,0.0,0.0,
+2016-01-01,GILDX,Guggenheim Limited Duration Fund A-Class,NASDAQ,2013-12-17,,24.43,24.73,24.139999,24.66,23.056936,0.0,0.0,0.0,0.0,
+2017-01-01,GILDX,Guggenheim Limited Duration Fund A-Class,NASDAQ,2013-12-17,,24.67,24.879999,24.67,24.780001,23.722702,0.0,0.0,0.0,0.0,
+2018-01-01,GILDX,Guggenheim Limited Duration Fund A-Class,NASDAQ,2013-12-17,,24.780001,24.790001,24.610001,24.620001,24.068357,0.0,0.0,0.0,0.0,
+2019-01-01,GILDX,Guggenheim Limited Duration Fund A-Class,NASDAQ,2013-12-17,,24.620001,24.76,24.57,24.58,24.471172,0.0,0.0,0.0,0.0,
+2020-01-01,GILDX,Guggenheim Limited Duration Fund A-Class,NASDAQ,2013-12-17,,24.59,25.58,23.940001,25.58,25.58,0.0,0.0,0.0,0.0,

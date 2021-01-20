@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,WHGIX,Westwood Income Opportunity Fund Institutional Class,NASDAQ,2019-04-26,,15.36,15.65,15.16,15.46,11.941748,0.0,0.0,0.0,0.0,
+2019-07-01,WHGIX,Westwood Income Opportunity Fund Institutional Class,NASDAQ,2019-04-26,,15.49,15.95,15.39,15.88,12.333441,0.0,0.0,0.0,0.0,
+2019-10-01,WHGIX,Westwood Income Opportunity Fund Institutional Class,NASDAQ,2019-04-26,,15.79,15.97,12.47,12.75,12.663225,0.0,0.0,0.0,0.0,
+2020-01-01,WHGIX,Westwood Income Opportunity Fund Institutional Class,NASDAQ,2019-04-26,,12.8,13.13,9.96,11.02,11.02,0.0,0.0,0.0,0.0,
+2020-04-01,WHGIX,Westwood Income Opportunity Fund Institutional Class,NASDAQ,2019-04-26,,10.77,12.75,10.77,12.44,12.44,0.0,0.0,0.0,0.0,
+2020-07-01,WHGIX,Westwood Income Opportunity Fund Institutional Class,NASDAQ,2019-04-26,,12.44,13.39,12.44,13.11,13.11,0.0,0.0,0.0,0.0,

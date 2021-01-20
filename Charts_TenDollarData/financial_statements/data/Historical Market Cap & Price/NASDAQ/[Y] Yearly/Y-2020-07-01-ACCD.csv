@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ACCD,,NASDAQ,2020-07-01,,0.55,42.2,0.55,32.439999,32.439999,28648097.0,28648097.0,-7.259999999999999,-0.25534545454545454,34.06609709090909

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,LGHLW,,NASDAQ,2020-07-21,,0.1701,0.1894,0.09,0.1,0.1,3398527.0,3398527.0,0.0014000000000000204,0.6224411764705879,0.12179382352941177

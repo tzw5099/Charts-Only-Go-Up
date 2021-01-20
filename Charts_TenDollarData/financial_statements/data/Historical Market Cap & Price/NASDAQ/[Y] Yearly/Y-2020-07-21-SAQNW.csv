@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,SAQNW,Software Acquisition Group Inc.,NASDAQ,2020-07-21,5728571.25,1.1,2.49,0.77,1.23,1.23,2952443.0,2952443.0,1.0324000000000004,3.0275483870967737,1.149534193548387

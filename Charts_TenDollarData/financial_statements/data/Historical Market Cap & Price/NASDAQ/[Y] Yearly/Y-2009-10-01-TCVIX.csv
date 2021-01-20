@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,10.0,10.82,9.77,10.58,6.508513,0.0,0.0,0.0,0.0,
+2010-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,10.75,13.25,10.12,13.15,8.231987,0.0,0.0,0.0,0.0,
+2011-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,13.3,14.37,10.48,11.75,7.892313,0.0,0.0,0.0,0.0,
+2012-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,11.91,13.5,11.58,13.25,9.103031,0.0,0.0,0.0,0.0,
+2013-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,13.58,17.25,13.54,16.139999,12.157146,0.0,0.0,0.0,0.0,
+2014-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,15.97,17.639999,15.18,16.940001,13.322487,0.0,0.0,0.0,0.0,
+2015-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,16.93,17.65,15.16,15.49,13.059864,0.0,0.0,0.0,0.0,
+2016-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,15.29,18.98,13.79,17.940001,15.809553,0.0,0.0,0.0,0.0,
+2017-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,18.08,20.379999,18.08,19.209999,18.036476,0.0,0.0,0.0,0.0,
+2018-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,19.389999,20.02,14.47,15.16,15.011585,0.0,0.0,0.0,0.0,
+2019-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,15.17,19.5,14.97,19.48,19.42646,0.0,0.0,0.0,0.0,
+2020-01-01,TCVIX,Touchstone Mid Cap Value Institutional Class,NASDAQ,2009-10-01,,19.42,20.030001,11.64,17.059999,17.059999,0.0,0.0,0.0,0.0,

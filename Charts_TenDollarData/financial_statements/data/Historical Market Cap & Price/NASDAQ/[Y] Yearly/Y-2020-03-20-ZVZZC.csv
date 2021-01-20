@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ZVZZC,NextShares,NASDAQ,2020-03-20,,0.0,100.1,0.0,100.099998,100.099998,0.0,0.0,0.0,0.0,0.0

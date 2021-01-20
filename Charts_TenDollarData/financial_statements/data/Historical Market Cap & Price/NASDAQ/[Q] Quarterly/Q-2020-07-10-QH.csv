@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,QH,,NASDAQ,2020-07-10,,15.31,22.99,6.52,7.7100000381,7.7100000381,11852960.0,11852960.0,-6.259000000000002,-0.960354166666667,8.817298125000002

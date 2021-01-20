@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,WIMI,WiMi Hologram Cloud Inc.,NASDAQ,2020-04-01,,6.0,29.5,3.205,6.71,6.71,363013792.0,363013792.0,-1.3200000000000018,-0.7324067796610169,6.3892627966101685

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,EVSIW,"Envision Solar International, Inc.",NASDAQ,2020-07-21,42080628.81,2.9,8.9,6.55,8.03,8.03,378927.0,378927.0,43.2775,220.154875,7.86708875
+2020-08-01,EVSIW,"Envision Solar International, Inc.",NASDAQ,2020-07-21,40613309.25,2.2705,10.0,4.77,7.75,7.75,744977.0,744977.0,64.333,202.38785714285717,6.840201428571428
+2020-09-01,EVSIW,"Envision Solar International, Inc.",NASDAQ,2020-07-21,32333434.59,2.2705,8.42,5.0,6.17,6.17,406138.0,406138.0,37.3075,168.42166666666668,6.740372222222223

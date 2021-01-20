@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,SOLOW,Electrameccanica Vehicles Corp. WT EXP 080323,NASDAQ,2020-07-21,,0.8,1.99,1.0,1.1,1.1,728603.0,728603.0,14.435000000000006,62.2198275862069,1.3023706896551723

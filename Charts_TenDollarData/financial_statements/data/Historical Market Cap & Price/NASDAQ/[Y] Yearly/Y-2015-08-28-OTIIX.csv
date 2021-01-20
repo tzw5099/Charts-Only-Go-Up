@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,OTIIX,T. Rowe Price Small-Cap Stock Fund I Class,NASDAQ,2015-08-28,,43.07,45.02,37.900002,38.610001,29.512178,0.0,0.0,0.0,0.0,
+2016-01-01,OTIIX,T. Rowe Price Small-Cap Stock Fund I Class,NASDAQ,2015-08-28,,37.849998,46.900002,33.200001,44.939999,35.038387,0.0,0.0,0.0,0.0,
+2017-01-01,OTIIX,T. Rowe Price Small-Cap Stock Fund I Class,NASDAQ,2015-08-28,,45.18,52.009998,45.099998,47.709999,40.411167,0.0,0.0,0.0,0.0,
+2018-01-01,OTIIX,T. Rowe Price Small-Cap Stock Fund I Class,NASDAQ,2015-08-28,,47.990002,56.080002,38.830002,41.279999,39.099369,0.0,0.0,0.0,0.0,
+2019-01-01,OTIIX,T. Rowe Price Small-Cap Stock Fund I Class,NASDAQ,2015-08-28,,41.18,54.48,40.580002,52.310001,52.310001,0.0,0.0,0.0,0.0,
+2020-01-01,OTIIX,T. Rowe Price Small-Cap Stock Fund I Class,NASDAQ,2015-08-28,,52.450001,54.060001,33.619999,52.810001,52.810001,0.0,0.0,0.0,0.0,

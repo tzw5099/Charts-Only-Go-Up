@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TKKSW,Glory Star New Media Group Holdings Limited,NASDAQ,2019-09-18,,0.1,0.1,0.03,0.06,0.06,1266924.0,1266924.0,0.010000000000000004,1.1353170731707318,0.07130097560975608
+2020-01-01,TKKSW,Glory Star New Media Group Holdings Limited,NASDAQ,2019-09-18,,0.07,0.09,0.05,0.08,0.08,678969.0,678969.0,0.06,13.5397,0.07266700000000001

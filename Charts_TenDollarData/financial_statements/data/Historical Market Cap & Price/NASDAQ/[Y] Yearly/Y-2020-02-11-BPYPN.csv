@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BPYPN,Brookfield Property Partners L.P.,NASDAQ,2020-02-11,,24.4783,24.8374,7.5902,19.0,19.0,10332780.0,10332780.0,-19.0803,-0.5565555555555558,18.184847908496742

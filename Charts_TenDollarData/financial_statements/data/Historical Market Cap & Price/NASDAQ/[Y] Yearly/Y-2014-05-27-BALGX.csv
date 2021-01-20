@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,BALGX,BMO Large-Cap Growth Fund Class A,NASDAQ,2014-05-27,,16.809999,18.82,15.38,15.96,10.019331,0.0,0.0,0.0,0.0,
+2015-01-01,BALGX,BMO Large-Cap Growth Fund Class A,NASDAQ,2014-05-27,,15.95,17.52,14.34,14.54,10.588201,0.0,0.0,0.0,0.0,
+2016-01-01,BALGX,BMO Large-Cap Growth Fund Class A,NASDAQ,2014-05-27,,14.27,15.69,12.98,14.85,11.505141,0.0,0.0,0.0,0.0,
+2017-01-01,BALGX,BMO Large-Cap Growth Fund Class A,NASDAQ,2014-05-27,,14.96,18.91,14.96,17.940001,14.723514,0.0,0.0,0.0,0.0,
+2018-01-01,BALGX,BMO Large-Cap Growth Fund Class A,NASDAQ,2014-05-27,,18.07,21.02,14.22,15.26,14.552255,0.0,0.0,0.0,0.0,
+2019-01-01,BALGX,BMO Large-Cap Growth Fund Class A,NASDAQ,2014-05-27,,15.27,19.129999,14.92,18.559999,18.559999,0.0,0.0,0.0,0.0,
+2020-01-01,BALGX,BMO Large-Cap Growth Fund Class A,NASDAQ,2014-05-27,,18.780001,22.83,13.55,21.01,21.01,0.0,0.0,0.0,0.0,

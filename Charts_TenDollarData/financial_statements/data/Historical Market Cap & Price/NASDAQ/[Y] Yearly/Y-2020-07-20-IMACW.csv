@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IMACW,"IMAC Holdings, Inc.",NASDAQ,2020-07-20,1875627.9835,0.3,0.33,0.1301,0.1895,0.1895,84731.0,84731.0,-1.9452,-25.92872000000001,0.2158492

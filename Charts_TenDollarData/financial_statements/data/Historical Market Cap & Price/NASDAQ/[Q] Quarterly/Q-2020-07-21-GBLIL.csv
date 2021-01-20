@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GBLIL,Global Indemnity Limited 7.875% Subordinated Notes due 2047,NASDAQ,2020-07-21,,25.4809,26.799999,24.52,26.6,26.6,356142.0,356142.0,0.4214,0.05696969696969696,25.96107484848485

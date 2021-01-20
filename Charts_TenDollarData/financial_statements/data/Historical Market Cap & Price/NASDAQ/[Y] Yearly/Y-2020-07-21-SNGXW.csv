@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,SNGXW,Soligenix Inc. Warrant,NASDAQ,2020-07-21,,0.3999,0.9,0.4,0.62,0.62,362753.0,362753.0,4.873000000000001,60.92775,0.6435275

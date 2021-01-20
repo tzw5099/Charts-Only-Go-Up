@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-02-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,53.150002,54.0,53.150002,54.0,52.777,1750.0,1750.0,0.85,1.599,53.71667
+2020-03-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,54.0,54.0,54.0,54.0,54.0,0.0,0.0,0.0,0.0,0.0
+2020-04-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,54.0,54.0,54.0,54.0,54.0,0.0,0.0,0.0,0.0,0.0
+2020-05-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,54.0,54.0,54.0,54.0,54.0,0.0,0.0,0.0,0.0,0.0
+2020-06-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,54.0,54.0,54.0,54.0,53.384998,0.0,0.0,0.0,0.0,0.0
+2020-07-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,54.0,54.0,54.0,54.0,54.0,0.0,0.0,0.0,0.0,0.0
+2020-08-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,54.0,54.0,54.0,54.0,54.0,0.0,0.0,0.0,0.0,0.0
+2020-09-01,VERIZ.BR,Verizon Communications Inc.,,2020-02-28,,54.0,54.0,54.0,54.0,54.0,0.0,0.0,0.0,0.0,0.0

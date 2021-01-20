@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TQAIX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund I Class,NASDAQ,2016-03-24,,24.4,29.309999,24.4,28.639999,26.281504,0.0,0.0,0.0,0.0,
+2017-01-01,TQAIX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund I Class,NASDAQ,2016-03-24,,28.799999,35.139999,28.799999,34.939999,32.132412,0.0,0.0,0.0,0.0,
+2018-01-01,TQAIX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund I Class,NASDAQ,2016-03-24,,35.220001,40.779999,29.18,31.209999,29.957155,0.0,0.0,0.0,0.0,
+2019-01-01,TQAIX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund I Class,NASDAQ,2016-03-24,,31.030001,41.0,30.299999,39.82,39.82,0.0,0.0,0.0,0.0,
+2020-01-01,TQAIX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund I Class,NASDAQ,2016-03-24,,39.990002,41.970001,25.99,40.459999,40.459999,0.0,0.0,0.0,0.0,

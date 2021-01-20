@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,11.31,11.31,11.26,11.26,6.744428,0.0,0.0,0.0,0.0,
+2011-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,11.41,12.9,9.0,9.84,6.443116,0.0,0.0,0.0,0.0,
+2012-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,9.94,11.62,9.68,9.87,7.374423,0.0,0.0,0.0,0.0,
+2013-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,10.15,13.44,10.13,11.68,10.243459,0.0,0.0,0.0,0.0,
+2014-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,11.58,12.35,10.39,10.95,10.481309,0.0,0.0,0.0,0.0,
+2015-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,10.92,12.37,10.56,11.2,10.720609,0.0,0.0,0.0,0.0,
+2016-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,10.87,12.69,8.85,12.15,11.629946,0.0,0.0,0.0,0.0,
+2017-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,12.24,15.99,12.24,15.56,15.035313,0.0,0.0,0.0,0.0,
+2018-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,15.65,23.02,15.21,17.67,17.21822,0.0,0.0,0.0,0.0,
+2019-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,17.32,23.4,16.74,21.440001,21.440001,0.0,0.0,0.0,0.0,
+2020-01-01,AGOZX,Alger Small Cap Focus Fund Class Z,NASDAQ,2010-12-29,,21.57,28.57,16.32,26.07,26.07,0.0,0.0,0.0,0.0,

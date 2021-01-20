@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,EYEGW,"Eyegate Pharmaceuticals, Inc. Warrants",NASDAQ,2019-09-19,,0.03,0.03,0.02,0.02,0.02,10850.0,10850.0,0.0,0.0,0.025
+2019-10-01,EYEGW,"Eyegate Pharmaceuticals, Inc. Warrants",NASDAQ,2019-09-19,,0.02,0.09,0.01,0.05,0.05,525779.0,525779.0,-0.03,3.701625,0.0338546875
+2020-01-01,EYEGW,"Eyegate Pharmaceuticals, Inc. Warrants",NASDAQ,2019-09-19,,0.07,0.05,0.02,0.03,0.03,155029.0,155029.0,-0.09999999999999999,-1.9642954545454545,0.027272954545454545
+2020-04-01,EYEGW,"Eyegate Pharmaceuticals, Inc. Warrants",NASDAQ,2019-09-19,,0.03,0.14,0.02,0.04,0.04,372713.0,372713.0,-0.14,3.3673095238095216,0.043332857142857145
+2020-07-01,EYEGW,"Eyegate Pharmaceuticals, Inc. Warrants",NASDAQ,2019-09-19,,0.06,0.1,0.02,0.0252,0.0252,452572.0,452572.0,-0.3656,-29.015904761904764,0.043646190476190484

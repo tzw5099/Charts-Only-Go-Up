@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,QUERX,AQR Large Cap Defensive Style Fund Class R6,NASDAQ,2014-09-03,,14.14,15.23,13.54,14.44,12.629578,0.0,0.0,0.0,0.0,
+2015-01-01,QUERX,AQR Large Cap Defensive Style Fund Class R6,NASDAQ,2014-09-03,,14.44,15.63,14.14,14.48,13.458445,0.0,0.0,0.0,0.0,
+2016-01-01,QUERX,AQR Large Cap Defensive Style Fund Class R6,NASDAQ,2014-09-03,,14.26,16.4,13.5,15.95,15.128224,0.0,0.0,0.0,0.0,
+2017-01-01,QUERX,AQR Large Cap Defensive Style Fund Class R6,NASDAQ,2014-09-03,,16.01,19.65,16.01,19.030001,18.490091,0.0,0.0,0.0,0.0,
+2018-01-01,QUERX,AQR Large Cap Defensive Style Fund Class R6,NASDAQ,2014-09-03,,19.030001,21.25,18.129999,18.67,18.451679,0.0,0.0,0.0,0.0,
+2019-01-01,QUERX,AQR Large Cap Defensive Style Fund Class R6,NASDAQ,2014-09-03,,18.549999,24.030001,18.18,23.77,23.77,0.0,0.0,0.0,0.0,
+2020-01-01,QUERX,AQR Large Cap Defensive Style Fund Class R6,NASDAQ,2014-09-03,,23.860001,26.08,17.290001,24.959999,24.959999,0.0,0.0,0.0,0.0,

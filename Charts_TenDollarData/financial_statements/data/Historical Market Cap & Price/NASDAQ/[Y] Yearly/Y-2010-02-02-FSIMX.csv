@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,FSIMX,Salient Select Income Advisor,NASDAQ,2010-02-02,,20.639999,23.610001,20.42,23.24,13.888696,0.0,0.0,0.0,0.0,
+2011-01-01,FSIMX,Salient Select Income Advisor,NASDAQ,2010-02-02,,23.25,24.049999,20.450001,22.0,14.35494,0.0,0.0,0.0,0.0,
+2012-01-01,FSIMX,Salient Select Income Advisor,NASDAQ,2010-02-02,,22.129999,24.690001,22.110001,24.379999,17.163937,0.0,0.0,0.0,0.0,
+2013-01-01,FSIMX,Salient Select Income Advisor,NASDAQ,2010-02-02,,24.51,26.719999,23.450001,23.52,17.976765,0.0,0.0,0.0,0.0,
+2014-01-01,FSIMX,Salient Select Income Advisor,NASDAQ,2010-02-02,,23.559999,26.16,23.559999,25.42,21.052296,0.0,0.0,0.0,0.0,
+2015-01-01,FSIMX,Salient Select Income Advisor,NASDAQ,2010-02-02,,25.52,26.32,21.99,22.35,20.875603,0.0,0.0,0.0,0.0,
+2016-01-01,FSIMX,Salient Select Income Advisor,NASDAQ,2010-02-02,,22.209999,25.059999,20.33,23.719999,23.454559,0.0,0.0,0.0,0.0,
+2017-01-01,FSIMX,Salient Select Income Advisor,NASDAQ,2010-02-02,,23.870001,24.309999,23.540001,23.57,23.57,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CHEKZ,Check-Cap Ltd. Series C Warrant,NASDAQ,2020-07-21,,0.08,0.1002,0.0301,0.04,0.04,940797.0,940797.0,-0.7756000000000002,-30.296875,0.05605093750000001

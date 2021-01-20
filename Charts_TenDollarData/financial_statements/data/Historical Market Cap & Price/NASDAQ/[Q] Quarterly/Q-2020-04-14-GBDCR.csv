@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-04-01,GBDCR,"Golub Capital BDC, Inc.",NASDAQ,2020-04-14,,1.28,1.28,0.3,0.51,0.51,11607668.0,11607668.0,0.3999999999999999,7.708294117647059,0.6039223529411766

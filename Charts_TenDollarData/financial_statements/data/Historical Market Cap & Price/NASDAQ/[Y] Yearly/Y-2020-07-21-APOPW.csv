@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,APOPW,Cellect Biotechnology Ltd. Warrants to Purchase ADR (1 WT and $7.50 to purchase 1 ADS),NASDAQ,2020-07-21,,0.08,0.099,0.0423,0.06,0.06,75970.0,75970.0,-0.09210000000000002,-4.605,0.0747476

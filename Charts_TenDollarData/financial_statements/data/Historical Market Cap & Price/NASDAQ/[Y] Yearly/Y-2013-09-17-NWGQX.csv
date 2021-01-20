@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NWGQX,Nationwide WCM Focused Small Cap Fund Class C,NASDAQ,2013-09-17,,24.68,27.0,24.299999,26.959999,12.814242,0.0,0.0,0.0,0.0,
+2014-01-01,NWGQX,Nationwide WCM Focused Small Cap Fund Class C,NASDAQ,2013-09-17,,26.690001,30.09,25.5,29.790001,14.159359,0.0,0.0,0.0,0.0,
+2015-01-01,NWGQX,Nationwide WCM Focused Small Cap Fund Class C,NASDAQ,2013-09-17,,29.620001,31.35,26.530001,27.299999,13.360252,0.0,0.0,0.0,0.0,
+2016-01-01,NWGQX,Nationwide WCM Focused Small Cap Fund Class C,NASDAQ,2013-09-17,,26.559999,34.080002,23.07,33.299999,16.318987,0.0,0.0,0.0,0.0,
+2017-01-01,NWGQX,Nationwide WCM Focused Small Cap Fund Class C,NASDAQ,2013-09-17,,33.299999,37.599998,32.91,34.389999,18.403769,0.0,0.0,0.0,0.0,
+2018-01-01,NWGQX,Nationwide WCM Focused Small Cap Fund Class C,NASDAQ,2013-09-17,,34.630001,38.060001,16.530001,17.540001,16.649168,0.0,0.0,0.0,0.0,
+2019-01-01,NWGQX,Nationwide WCM Focused Small Cap Fund Class C,NASDAQ,2013-09-17,,17.540001,22.25,17.08,21.24,21.24,0.0,0.0,0.0,0.0,
+2020-01-01,NWGQX,Nationwide WCM Focused Small Cap Fund Class C,NASDAQ,2013-09-17,,21.32,22.0,11.79,17.450001,17.450001,0.0,0.0,0.0,0.0,

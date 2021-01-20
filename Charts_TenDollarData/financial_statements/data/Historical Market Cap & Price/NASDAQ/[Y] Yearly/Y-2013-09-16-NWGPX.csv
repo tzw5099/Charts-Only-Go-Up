@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NWGPX,Nationwide WCM Focused Small Cap Fund Class A,NASDAQ,2013-09-16,,25.4,28.040001,25.200001,28.0,14.27608,0.0,0.0,0.0,0.0,
+2014-01-01,NWGPX,Nationwide WCM Focused Small Cap Fund Class A,NASDAQ,2013-09-16,,27.73,31.459999,26.620001,31.15,15.882139,0.0,0.0,0.0,0.0,
+2015-01-01,NWGPX,Nationwide WCM Focused Small Cap Fund Class A,NASDAQ,2013-09-16,,30.969999,32.889999,27.9,28.76,15.098416,0.0,0.0,0.0,0.0,
+2016-01-01,NWGPX,Nationwide WCM Focused Small Cap Fund Class A,NASDAQ,2013-09-16,,27.98,36.16,24.32,35.349998,18.582083,0.0,0.0,0.0,0.0,
+2017-01-01,NWGPX,Nationwide WCM Focused Small Cap Fund Class A,NASDAQ,2013-09-16,,35.349998,40.200001,34.950001,36.98,21.114405,0.0,0.0,0.0,0.0,
+2018-01-01,NWGPX,Nationwide WCM Focused Small Cap Fund Class A,NASDAQ,2013-09-16,,37.23,41.130001,18.98,20.129999,19.245535,0.0,0.0,0.0,0.0,
+2019-01-01,NWGPX,Nationwide WCM Focused Small Cap Fund Class A,NASDAQ,2013-09-16,,20.129999,25.709999,19.6,24.75,24.75,0.0,0.0,0.0,0.0,
+2020-01-01,NWGPX,Nationwide WCM Focused Small Cap Fund Class A,NASDAQ,2013-09-16,,24.84,25.65,13.76,20.440001,20.440001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TSNIX,T. Rowe Price Science and Technology Fund I Class,NASDAQ,2016-03-24,,32.73,40.150002,32.529999,36.950001,22.87364,0.0,0.0,0.0,0.0,
+2017-01-01,TSNIX,T. Rowe Price Science and Technology Fund I Class,NASDAQ,2016-03-24,,37.299999,52.080002,37.299999,45.470001,31.922081,0.0,0.0,0.0,0.0,
+2018-01-01,TSNIX,T. Rowe Price Science and Technology Fund I Class,NASDAQ,2016-03-24,,46.360001,52.970001,29.6,31.370001,29.556257,0.0,0.0,0.0,0.0,
+2019-01-01,TSNIX,T. Rowe Price Science and Technology Fund I Class,NASDAQ,2016-03-24,,31.59,44.450001,30.540001,43.150002,43.150002,0.0,0.0,0.0,0.0,
+2020-01-01,TSNIX,T. Rowe Price Science and Technology Fund I Class,NASDAQ,2016-03-24,,44.07,56.349998,31.809999,52.959999,52.959999,0.0,0.0,0.0,0.0,

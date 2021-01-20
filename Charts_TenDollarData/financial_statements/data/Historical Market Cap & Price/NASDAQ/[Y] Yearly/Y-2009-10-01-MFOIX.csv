@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,9.71,10.91,9.7,10.81,4.813394,0.0,0.0,0.0,0.0,
+2010-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,10.97,12.49,9.67,12.46,5.55894,0.0,0.0,0.0,0.0,
+2011-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,12.68,13.71,10.02,11.22,5.021373,0.0,0.0,0.0,0.0,
+2012-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,11.48,13.68,11.46,13.12,5.911942,0.0,0.0,0.0,0.0,
+2013-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,13.47,17.15,13.44,16.190001,7.913907,0.0,0.0,0.0,0.0,
+2014-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,16.049999,18.309999,14.38,15.0,8.806596,0.0,0.0,0.0,0.0,
+2015-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,14.97,16.309999,13.52,13.81,8.861607,0.0,0.0,0.0,0.0,
+2016-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,13.56,14.97,11.8,14.01,9.847755,0.0,0.0,0.0,0.0,
+2017-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,14.14,18.440001,14.14,16.629999,13.026658,0.0,0.0,0.0,0.0,
+2018-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,16.82,18.620001,12.22,13.08,12.203191,0.0,0.0,0.0,0.0,
+2019-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,13.11,16.43,12.78,15.8,15.8,0.0,0.0,0.0,0.0,
+2020-01-01,MFOIX,BNY Mellon Focused Equity Opportunities Fund Investor Shares,NASDAQ,2009-10-01,,16.0,18.059999,10.64,16.809999,16.809999,0.0,0.0,0.0,0.0,

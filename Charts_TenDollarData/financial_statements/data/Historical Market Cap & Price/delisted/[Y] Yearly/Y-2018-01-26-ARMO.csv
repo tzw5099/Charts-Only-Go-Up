@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,ARMO,ARMO BioSciences Inc,delisted,2018-01-26,,28.0,57.19,25.1,49.98,,38185132.0,38185132.0,49.979999999999976,0.752490196078431,41.141614705882354

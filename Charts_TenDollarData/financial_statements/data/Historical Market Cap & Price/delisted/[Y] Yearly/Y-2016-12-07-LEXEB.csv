@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,LEXEB,Liberty Expedia Holdings Inc Series B Common Stock,delisted,2016-12-07,,41.0,41.0,41.0,41.0,,444.0,444.0,41.0,0.0,41.0
+2017-01-01,LEXEB,Liberty Expedia Holdings Inc Series B Common Stock,delisted,2016-12-07,,46.927,57.52,45.02,45.02,,7506.0,7506.0,4.02,0.12165048543689316,51.732042857142865
+2018-01-01,LEXEB,Liberty Expedia Holdings Inc Series B Common Stock,delisted,2016-12-07,,47.0,50.51,39.1672,39.63,,4684.0,4684.0,-5.390000000000001,-0.12120588235294116,44.54064444444444
+2019-01-01,LEXEB,Liberty Expedia Holdings Inc Series B Common Stock,delisted,2016-12-07,,40.45,47.0016,40.17,42.56,,13916.0,13916.0,2.93,0.2274102564102565,44.42955624999999

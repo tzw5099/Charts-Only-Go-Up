@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,AGNCP,American Capital Agency Corp,delisted,2020-02-05,,24.5457,25.0557,8.6205,22.860001,22.860001,44140448.0,44140448.0,-0.8823999999999986,0.1078726114649682,21.327062993630566

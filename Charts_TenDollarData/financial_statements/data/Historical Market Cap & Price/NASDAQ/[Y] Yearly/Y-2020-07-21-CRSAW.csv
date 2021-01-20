@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CRSAW,Crescent Acquisition Corp.,NASDAQ,2020-07-21,6250000.0,1.4,1.41,0.57,1.0,1.0,2005830.0,2005830.0,-16.424400000000002,-35.55069696969697,0.9021436363636364

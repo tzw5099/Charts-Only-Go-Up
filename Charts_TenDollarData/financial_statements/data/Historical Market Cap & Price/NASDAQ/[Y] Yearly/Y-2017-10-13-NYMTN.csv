@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,NYMTN,New York Mortgage Trust Inc. 8.00% Series D Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,NASDAQ,2017-10-13,,19.6276,20.0023,18.4745,19.8608,19.8608,3388896.0,3388896.0,0.10319999999999982,0.012169811320754717,19.45598735849057
+2018-01-01,NYMTN,New York Mortgage Trust Inc. 8.00% Series D Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,NASDAQ,2017-10-13,,19.9491,20.6735,17.6717,19.21,19.21,6423400.0,6423400.0,-4.649099999999998,-0.0906175298804781,19.609698286852606
+2019-01-01,NYMTN,New York Mortgage Trust Inc. 8.00% Series D Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,NASDAQ,2017-10-13,,19.1544,23.9846,19.1544,23.9217,23.9217,6405500.0,6405500.0,-0.3528000000000016,-0.00047222222222222343,22.04028825396826
+2020-01-01,NYMTN,New York Mortgage Trust Inc. 8.00% Series D Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,NASDAQ,2017-10-13,,23.9783,25.108,3.3839,20.940001,20.940001,8625529.0,8625529.0,-1.4950000000000019,0.2370893854748603,19.020309050279337

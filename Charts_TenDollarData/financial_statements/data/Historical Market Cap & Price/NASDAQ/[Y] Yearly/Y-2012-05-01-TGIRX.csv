@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,27.139999,28.200001,23.74,28.07,16.021957,0.0,0.0,0.0,0.0,
+2013-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,28.74,32.0,27.139999,32.0,18.560946,0.0,0.0,0.0,0.0,
+2014-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,31.73,31.73,26.799999,27.34,17.560652,0.0,0.0,0.0,0.0,
+2015-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,27.41,32.470001,23.969999,24.65,18.799896,0.0,0.0,0.0,0.0,
+2016-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,24.07,24.5,21.309999,23.6,18.363113,0.0,0.0,0.0,0.0,
+2017-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,23.67,28.9,23.67,25.18,23.072891,0.0,0.0,0.0,0.0,
+2018-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,25.440001,27.16,19.219999,19.82,18.522896,0.0,0.0,0.0,0.0,
+2019-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,19.68,24.870001,19.48,24.049999,24.049999,0.0,0.0,0.0,0.0,
+2020-01-01,TGIRX,Thornburg International Value Fund Class R6,NASDAQ,2012-05-01,,24.23,26.65,17.07,26.219999,26.219999,0.0,0.0,0.0,0.0,

@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,15.88,16.530001,15.59,16.35,11.386847,0.0,0.0,0.0,0.0,
+2013-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,16.809999,21.65,16.77,20.870001,14.53477,0.0,0.0,0.0,0.0,
+2014-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,20.700001,23.77,19.59,21.950001,16.422575,0.0,0.0,0.0,0.0,
+2015-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,21.9,23.42,20.559999,21.370001,16.961111,0.0,0.0,0.0,0.0,
+2016-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,21.08,23.530001,19.16,22.84,18.451317,0.0,0.0,0.0,0.0,
+2017-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,23.040001,27.530001,23.040001,26.280001,22.494358,0.0,0.0,0.0,0.0,
+2018-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,26.540001,28.24,20.559999,21.870001,20.517979,0.0,0.0,0.0,0.0,
+2019-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,21.940001,28.200001,21.4,27.43,27.43,0.0,0.0,0.0,0.0,
+2020-01-01,COFYX,Columbia Contrarian Core Fund Institutional 3 Class,NASDAQ,2012-11-09,,27.700001,31.33,19.52,29.690001,29.690001,0.0,0.0,0.0,0.0,

@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,RIVBX,Riverbridge Growth Fund Institutional Class,NASDAQ,2013-01-02,,10.31,13.69,10.28,13.69,11.580811,0.0,0.0,0.0,0.0,
+2014-01-01,RIVBX,Riverbridge Growth Fund Institutional Class,NASDAQ,2013-01-02,,13.51,14.16,12.59,13.8,11.94789,0.0,0.0,0.0,0.0,
+2015-01-01,RIVBX,Riverbridge Growth Fund Institutional Class,NASDAQ,2013-01-02,,13.76,15.09,13.33,14.1,12.473864,0.0,0.0,0.0,0.0,
+2016-01-01,RIVBX,Riverbridge Growth Fund Institutional Class,NASDAQ,2013-01-02,,13.81,15.28,12.25,14.42,13.180042,0.0,0.0,0.0,0.0,
+2017-01-01,RIVBX,Riverbridge Growth Fund Institutional Class,NASDAQ,2013-01-02,,14.54,18.190001,14.54,18.07,16.529852,0.0,0.0,0.0,0.0,
+2018-01-01,RIVBX,Riverbridge Growth Fund Institutional Class,NASDAQ,2013-01-02,,18.190001,22.32,16.299999,17.450001,17.206675,0.0,0.0,0.0,0.0,
+2019-01-01,RIVBX,Riverbridge Growth Fund Institutional Class,NASDAQ,2013-01-02,,17.34,22.700001,16.870001,22.42,22.42,0.0,0.0,0.0,0.0,
+2020-01-01,RIVBX,Riverbridge Growth Fund Institutional Class,NASDAQ,2013-01-02,,22.690001,30.219999,17.799999,28.209999,28.209999,0.0,0.0,0.0,0.0,

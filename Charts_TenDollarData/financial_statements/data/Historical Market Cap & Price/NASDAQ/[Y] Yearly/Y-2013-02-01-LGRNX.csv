@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,LGRNX,Loomis Sayles Growth Fund Class N,NASDAQ,2013-02-01,,7.58,9.49,7.48,9.49,7.984667,0.0,0.0,0.0,0.0,
+2014-01-01,LGRNX,Loomis Sayles Growth Fund Class N,NASDAQ,2013-02-01,,9.39,10.7,9.04,10.49,8.873242,0.0,0.0,0.0,0.0,
+2015-01-01,LGRNX,Loomis Sayles Growth Fund Class N,NASDAQ,2013-02-01,,10.46,11.85,10.23,11.47,9.762357,0.0,0.0,0.0,0.0,
+2016-01-01,LGRNX,Loomis Sayles Growth Fund Class N,NASDAQ,2013-02-01,,11.22,12.81,10.11,11.98,10.352003,0.0,0.0,0.0,0.0,
+2017-01-01,LGRNX,Loomis Sayles Growth Fund Class N,NASDAQ,2013-02-01,,12.12,16.040001,12.12,15.52,13.742449,0.0,0.0,0.0,0.0,
+2018-01-01,LGRNX,Loomis Sayles Growth Fund Class N,NASDAQ,2013-02-01,,15.7,17.26,13.44,14.29,13.403683,0.0,0.0,0.0,0.0,
+2019-01-01,LGRNX,Loomis Sayles Growth Fund Class N,NASDAQ,2013-02-01,,14.32,18.75,13.99,18.33,18.33,0.0,0.0,0.0,0.0,
+2020-01-01,LGRNX,Loomis Sayles Growth Fund Class N,NASDAQ,2013-02-01,,18.57,23.93,14.5,22.24,22.24,0.0,0.0,0.0,0.0,

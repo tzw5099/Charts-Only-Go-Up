@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,PPD,"PPD, Inc.",NASDAQ,2020-02-06,11241834000.0,30.99,34.990002,10.61,32.25,32.25,214808961.0,214808961.0,-7.824999999999996,-0.12633548387096774,27.191843096774193

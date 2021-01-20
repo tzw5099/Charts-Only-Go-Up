@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,13.48,15.13,13.45,15.07,9.823437,0.0,0.0,0.0,0.0,
+2011-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,15.26,16.799999,12.6,14.48,9.766936,0.0,0.0,0.0,0.0,
+2012-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,14.73,17.209999,14.16,16.299999,11.515402,0.0,0.0,0.0,0.0,
+2013-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,16.75,22.030001,16.709999,21.77,15.896648,0.0,0.0,0.0,0.0,
+2014-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,21.6,24.379999,20.610001,23.559999,17.666653,0.0,0.0,0.0,0.0,
+2015-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,23.559999,24.309999,20.459999,21.25,16.680307,0.0,0.0,0.0,0.0,
+2016-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,21.030001,25.9,18.379999,23.700001,20.136948,0.0,0.0,0.0,0.0,
+2017-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,23.889999,28.17,23.73,27.200001,24.238806,0.0,0.0,0.0,0.0,
+2018-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,27.389999,29.0,21.530001,22.83,21.301737,0.0,0.0,0.0,0.0,
+2019-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,22.950001,28.09,22.48,27.030001,27.030001,0.0,0.0,0.0,0.0,
+2020-01-01,CSVZX,Columbia Select Large Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,27.18,27.33,16.0,25.18,25.18,0.0,0.0,0.0,0.0,

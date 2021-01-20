@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,BWMCU,Boxwood Merger Corp Units 1 Ord Class A 1 Warr,delisted,2018-11-16,61967966.4,10.0,10.02,9.35,9.93,9.93,9219800.0,9219800.0,-0.04,-0.0133448275862069,9.26885103448276
+2019-01-01,BWMCU,Boxwood Merger Corp Units 1 Ord Class A 1 Warr,delisted,2018-11-16,62218739.8,9.97,11.24,8.69,9.8,9.8,9126341.0,9126341.0,1.28,0.056984126984126984,6.6602646031745945
+2020-01-01,BWMCU,Boxwood Merger Corp Units 1 Ord Class A 1 Warr,delisted,2018-11-16,65459331.699999996,9.8,11.35,9.8,11.35,11.35,12738.0,12738.0,0.49000000000000005,0.12934285714285715,1.2264762857142857

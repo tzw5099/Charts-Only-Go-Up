@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,JFKKW,8i Enterprises Acquisition Corp.,NASDAQ,2020-07-21,6759025.0,0.467,2.19,0.3662,1.38,1.38,2274885.0,2274885.0,18.0041,128.50886666666668,1.0845559999999999

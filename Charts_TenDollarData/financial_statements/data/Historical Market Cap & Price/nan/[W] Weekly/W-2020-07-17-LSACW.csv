@@ -1,0 +1,21 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-13,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,1.25,0.8,0.8,0.8,60.0,60.0,0.0,0.0,0.95
+2020-07-20,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,1.0501,0.8,0.8,0.8,17526.0,17526.0,0.0,0.0,0.9095000000000001
+2020-07-27,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,0.979,0.9,0.9,0.9,10205.0,10205.0,0.0,0.0,0.913165
+2020-08-03,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,0.95,0.82,0.8222,0.8222,28384.0,28384.0,0.0,0.0,0.8393100000000001
+2020-08-10,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,0.75,0.75,0.75,0.75,46657.0,46657.0,0.0,0.0,0.75
+2020-08-17,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,0.7102,0.7,0.7,0.7,15835.0,15835.0,0.0,0.0,0.7033666666666667
+2020-08-24,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,0.73,0.65,0.67,0.67,18722.0,18722.0,0.0,0.0,0.6787500000000001
+2020-08-31,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,1.25,0.67,0.92,0.92,52093.0,52093.0,0.0,0.0,0.8633333333333333
+2020-09-07,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,1.05,0.89,0.99,0.99,4984.0,4984.0,0.0,0.0,0.463335
+2020-09-14,LSACW,"LifeSci Acquisition Corp. Warrant
+",,2020-07-17,,0.0,1.05,0.89,1.0,1.0,41219.0,41219.0,0.0,0.0,0.9842500000000001

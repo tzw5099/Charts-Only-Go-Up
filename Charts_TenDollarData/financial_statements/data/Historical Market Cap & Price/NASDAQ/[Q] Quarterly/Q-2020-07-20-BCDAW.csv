@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,BCDAW,"BioCardia, Inc.",NASDAQ,2020-07-20,5899641.5888,0.8,0.9796,0.5524,0.7726,0.7726,7233.0,7233.0,-1.3996000000000002,-14.579250000000004,0.621425

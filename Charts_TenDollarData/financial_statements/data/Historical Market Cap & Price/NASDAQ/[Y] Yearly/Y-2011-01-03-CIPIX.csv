@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,11.08,12.43,9.73,10.91,6.564179,0.0,0.0,0.0,0.0,
+2012-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,11.04,12.37,10.98,11.65,7.341284,0.0,0.0,0.0,0.0,
+2013-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,11.92,15.58,11.92,14.73,10.09832,0.0,0.0,0.0,0.0,
+2014-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,14.56,16.209999,13.78,14.36,10.908158,0.0,0.0,0.0,0.0,
+2015-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,14.32,15.58,13.12,13.41,11.050926,0.0,0.0,0.0,0.0,
+2016-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,13.22,16.139999,11.8,15.27,13.117119,0.0,0.0,0.0,0.0,
+2017-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,15.38,18.360001,15.38,17.379999,15.673252,0.0,0.0,0.0,0.0,
+2018-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,17.52,20.700001,15.85,16.9,16.244724,0.0,0.0,0.0,0.0,
+2019-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,16.77,21.440001,16.440001,20.559999,20.559999,0.0,0.0,0.0,0.0,
+2020-01-01,CIPIX,Champlain Mid Cap Fund Institutional Class,NASDAQ,2011-01-03,,20.65,23.700001,14.31,22.48,22.48,0.0,0.0,0.0,0.0,

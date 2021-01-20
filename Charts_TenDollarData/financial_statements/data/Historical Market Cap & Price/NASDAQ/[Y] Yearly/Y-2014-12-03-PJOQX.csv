@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,PJOQX,PGIM Jennison Focused Value Fund- Class R6,NASDAQ,2014-12-03,,22.549999,22.68,19.620001,20.59,12.022264,0.0,0.0,0.0,0.0,
+2015-01-01,PJOQX,PGIM Jennison Focused Value Fund- Class R6,NASDAQ,2014-12-03,,20.559999,22.08,18.07,18.610001,11.782732,0.0,0.0,0.0,0.0,
+2016-01-01,PJOQX,PGIM Jennison Focused Value Fund- Class R6,NASDAQ,2014-12-03,,18.389999,21.91,15.69,19.959999,13.627416,0.0,0.0,0.0,0.0,
+2017-01-01,PJOQX,PGIM Jennison Focused Value Fund- Class R6,NASDAQ,2014-12-03,,20.24,22.879999,19.82,20.25,15.845444,0.0,0.0,0.0,0.0,
+2018-01-01,PJOQX,PGIM Jennison Focused Value Fund- Class R6,NASDAQ,2014-12-03,,20.52,21.780001,14.01,14.84,13.678904,0.0,0.0,0.0,0.0,
+2019-01-01,PJOQX,PGIM Jennison Focused Value Fund- Class R6,NASDAQ,2014-12-03,,14.99,17.58,14.7,16.51,16.51,0.0,0.0,0.0,0.0,
+2020-01-01,PJOQX,PGIM Jennison Focused Value Fund- Class R6,NASDAQ,2014-12-03,,16.6,16.84,10.71,15.17,15.17,0.0,0.0,0.0,0.0,

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,DMIDX,BNY Mellon MidCap Index Fund Class I,NASDAQ,2016-08-31,,36.389999,39.599998,34.419998,34.970001,24.886032,0.0,0.0,0.0,0.0,
+2017-01-01,DMIDX,BNY Mellon MidCap Index Fund Class I,NASDAQ,2016-08-31,,35.16,40.610001,35.119999,37.130001,28.862974,0.0,0.0,0.0,0.0,
+2018-01-01,DMIDX,BNY Mellon MidCap Index Fund Class I,NASDAQ,2016-08-31,,37.450001,40.349998,28.26,28.67,25.77961,0.0,0.0,0.0,0.0,
+2019-01-01,DMIDX,BNY Mellon MidCap Index Fund Class I,NASDAQ,2016-08-31,,28.58,36.080002,28.120001,32.459999,32.411022,0.0,0.0,0.0,0.0,
+2020-01-01,DMIDX,BNY Mellon MidCap Index Fund Class I,NASDAQ,2016-08-31,,32.5,33.189999,19.219999,29.440001,29.440001,0.0,0.0,0.0,0.0,

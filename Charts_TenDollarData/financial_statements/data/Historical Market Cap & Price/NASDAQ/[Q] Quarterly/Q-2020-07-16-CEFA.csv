@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,CEFA,,NASDAQ,2020-07-16,,25.76,26.9238,25.3381,26.6576,26.6576,19327.0,19327.0,-0.09470000000000009,-0.013272727272727295,25.137946363636356

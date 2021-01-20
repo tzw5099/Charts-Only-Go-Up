@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ACAMW,Acamar Partners Acquisition Corp.,NASDAQ,2020-07-20,36057639.96,1.0,1.42,0.85,1.18,1.18,630852.0,630852.0,7.451999999999999,33.5953448275862,1.028016551724138

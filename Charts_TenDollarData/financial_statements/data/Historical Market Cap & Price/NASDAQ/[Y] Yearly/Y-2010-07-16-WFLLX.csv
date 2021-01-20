@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,7.22,8.5,6.96,8.47,5.765339,0.0,0.0,0.0,0.0,
+2011-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,8.55,9.33,7.26,8.4,5.773725,0.0,0.0,0.0,0.0,
+2012-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,8.54,10.23,8.54,9.72,6.753012,0.0,0.0,0.0,0.0,
+2013-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,9.96,13.43,9.93,13.43,9.408898,0.0,0.0,0.0,0.0,
+2014-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,13.32,15.52,12.79,15.33,10.791507,0.0,0.0,0.0,0.0,
+2015-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,15.3,16.57,14.12,15.18,10.837933,0.0,0.0,0.0,0.0,
+2016-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,14.98,16.76,13.0,16.450001,11.747489,0.0,0.0,0.0,0.0,
+2017-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,16.530001,20.17,16.51,19.92,14.499113,0.0,0.0,0.0,0.0,
+2018-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,20.110001,21.790001,15.0,16.059999,13.239101,0.0,0.0,0.0,0.0,
+2019-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,16.049999,20.209999,15.62,16.91,16.91,0.0,0.0,0.0,0.0,
+2020-01-01,WFLLX,Wells Fargo Large Cap Core Fund - Class Admin,NASDAQ,2010-07-16,,17.040001,17.379999,11.16,16.15,16.15,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,GMHIW,"Gores Metropoulos, Inc.",NASDAQ,2020-07-21,,1.75,5.0,1.59,4.15,4.15,10828411.0,10828411.0,25.059999999999995,41.7716875,2.693655625

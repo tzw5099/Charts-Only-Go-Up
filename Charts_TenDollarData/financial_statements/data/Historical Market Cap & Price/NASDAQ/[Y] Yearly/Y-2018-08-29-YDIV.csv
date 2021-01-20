@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,YDIV,First Trust International Multi-Asset Diversified Income Index Fund,NASDAQ,2018-08-29,,17.36,17.56,17.36,17.478,,5785.0,5785.0,17.478,0.0,17.4994

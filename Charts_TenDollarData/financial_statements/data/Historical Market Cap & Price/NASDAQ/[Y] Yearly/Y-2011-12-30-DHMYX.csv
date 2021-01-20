@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,11.78,11.78,11.78,11.78,9.136519,0.0,0.0,0.0,0.0,
+2012-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,11.97,13.8,11.56,13.2,10.237867,0.0,0.0,0.0,0.0,
+2013-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,13.51,18.43,13.51,17.870001,14.523293,0.0,0.0,0.0,0.0,
+2014-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,17.67,19.35,16.889999,18.49,15.640172,0.0,0.0,0.0,0.0,
+2015-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,18.4,20.02,17.76,18.48,15.858674,0.0,0.0,0.0,0.0,
+2016-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,18.24,22.139999,16.5,21.42,18.761192,0.0,0.0,0.0,0.0,
+2017-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,21.549999,23.290001,21.469999,22.49,20.402704,0.0,0.0,0.0,0.0,
+2018-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,22.530001,23.690001,17.969999,18.799999,17.86047,0.0,0.0,0.0,0.0,
+2019-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,18.870001,23.450001,18.620001,22.84,22.84,0.0,0.0,0.0,0.0,
+2020-01-01,DHMYX,Diamond Hill Small-Mid Cap Fund Class Y,NASDAQ,2011-12-30,,22.870001,22.870001,12.48,19.09,19.09,0.0,0.0,0.0,0.0,

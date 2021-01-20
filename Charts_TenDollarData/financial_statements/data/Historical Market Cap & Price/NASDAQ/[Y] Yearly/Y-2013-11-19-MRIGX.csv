@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,MRIGX,Meridian Growth Fund Investor Class,NASDAQ,2013-11-19,,35.32,37.23,35.32,37.23,21.530132,0.0,0.0,0.0,0.0,
+2014-01-01,MRIGX,Meridian Growth Fund Investor Class,NASDAQ,2013-11-19,,36.810001,40.240002,34.73,36.240002,23.555857,0.0,0.0,0.0,0.0,
+2015-01-01,MRIGX,Meridian Growth Fund Investor Class,NASDAQ,2013-11-19,,35.880001,38.509998,30.07,30.51,22.234247,0.0,0.0,0.0,0.0,
+2016-01-01,MRIGX,Meridian Growth Fund Investor Class,NASDAQ,2013-11-19,,30.139999,36.549999,26.559999,35.240002,25.82476,0.0,0.0,0.0,0.0,
+2017-01-01,MRIGX,Meridian Growth Fund Investor Class,NASDAQ,2013-11-19,,35.419998,44.02,35.419998,41.290001,32.428352,0.0,0.0,0.0,0.0,
+2018-01-01,MRIGX,Meridian Growth Fund Investor Class,NASDAQ,2013-11-19,,41.57,47.450001,30.809999,32.830002,30.044594,0.0,0.0,0.0,0.0,
+2019-01-01,MRIGX,Meridian Growth Fund Investor Class,NASDAQ,2013-11-19,,32.790001,41.830002,31.99,38.349998,38.349998,0.0,0.0,0.0,0.0,
+2020-01-01,MRIGX,Meridian Growth Fund Investor Class,NASDAQ,2013-11-19,,38.380001,39.720001,23.23,39.09,39.09,0.0,0.0,0.0,0.0,

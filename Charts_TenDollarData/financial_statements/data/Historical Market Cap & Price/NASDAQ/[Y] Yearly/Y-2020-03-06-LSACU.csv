@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,LSACU,LifeSci Acquisition Corp.,NASDAQ,2020-03-06,,10.1,11.0,8.82,11.0,11.0,1317368.0,1317368.0,3.2859000000000003,0.3290891089108911,8.996628019801976

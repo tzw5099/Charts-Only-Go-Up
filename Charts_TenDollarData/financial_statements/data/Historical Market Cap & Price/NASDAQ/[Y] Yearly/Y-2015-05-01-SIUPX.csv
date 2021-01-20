@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,SIUPX,Guggenheim Investment Grade Bond Fund Class P,NASDAQ,2015-05-01,,18.450001,18.450001,17.870001,17.879999,15.950618,0.0,0.0,0.0,0.0,
+2016-01-01,SIUPX,Guggenheim Investment Grade Bond Fund Class P,NASDAQ,2015-05-01,,17.9,18.6,17.77,18.129999,16.759968,0.0,0.0,0.0,0.0,
+2017-01-01,SIUPX,Guggenheim Investment Grade Bond Fund Class P,NASDAQ,2015-05-01,,18.139999,18.700001,18.110001,18.67,17.819693,0.0,0.0,0.0,0.0,
+2018-01-01,SIUPX,Guggenheim Investment Grade Bond Fund Class P,NASDAQ,2015-05-01,,18.620001,18.65,18.129999,18.35,17.94758,0.0,0.0,0.0,0.0,
+2019-01-01,SIUPX,Guggenheim Investment Grade Bond Fund Class P,NASDAQ,2015-05-01,,18.4,19.120001,18.290001,18.74,18.653217,0.0,0.0,0.0,0.0,
+2020-01-01,SIUPX,Guggenheim Investment Grade Bond Fund Class P,NASDAQ,2015-05-01,,18.76,20.74,18.76,20.629999,20.629999,0.0,0.0,0.0,0.0,

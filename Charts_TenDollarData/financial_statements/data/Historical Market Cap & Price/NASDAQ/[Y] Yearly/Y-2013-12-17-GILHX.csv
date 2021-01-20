@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,GILHX,Guggenheim Limited Duration Fund Institutional Class,NASDAQ,2013-12-17,,25.0,25.01,24.99,24.99,21.291821,0.0,0.0,0.0,0.0,
+2014-01-01,GILHX,Guggenheim Limited Duration Fund Institutional Class,NASDAQ,2013-12-17,,24.99,26.91,24.75,24.809999,21.555012,0.0,0.0,0.0,0.0,
+2015-01-01,GILHX,Guggenheim Limited Duration Fund Institutional Class,NASDAQ,2013-12-17,,24.809999,24.889999,24.42,24.43,21.981676,0.0,0.0,0.0,0.0,
+2016-01-01,GILHX,Guggenheim Limited Duration Fund Institutional Class,NASDAQ,2013-12-17,,24.42,24.719999,24.139999,24.66,22.886026,0.0,0.0,0.0,0.0,
+2017-01-01,GILHX,Guggenheim Limited Duration Fund Institutional Class,NASDAQ,2013-12-17,,24.66,24.870001,24.66,24.780001,23.607048,0.0,0.0,0.0,0.0,
+2018-01-01,GILHX,Guggenheim Limited Duration Fund Institutional Class,NASDAQ,2013-12-17,,24.780001,24.780001,24.610001,24.610001,23.999788,0.0,0.0,0.0,0.0,
+2019-01-01,GILHX,Guggenheim Limited Duration Fund Institutional Class,NASDAQ,2013-12-17,,24.620001,24.75,24.57,24.58,24.456196,0.0,0.0,0.0,0.0,
+2020-01-01,GILHX,Guggenheim Limited Duration Fund Institutional Class,NASDAQ,2013-12-17,,24.58,25.58,23.93,25.57,25.57,0.0,0.0,0.0,0.0,

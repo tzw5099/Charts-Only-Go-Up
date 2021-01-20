@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-06,DKNGZ,DraftKings Inc Warrant,delisted,2020-07-06,6895491601.896,10.02,249.899994,10.02,28.959999,28.959999,4434.0,4434.0,-160.83999999999997,70.86133333333333,23.49555666666667

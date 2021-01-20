@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,10.0,10.21,9.97,10.18,9.144495,0.0,0.0,0.0,0.0,
+2010-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,10.24,12.21,9.87,12.16,10.923089,0.0,0.0,0.0,0.0,
+2011-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,12.23,13.59,11.23,13.51,12.167203,0.0,0.0,0.0,0.0,
+2012-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,13.5,15.74,13.47,15.39,14.16811,0.0,0.0,0.0,0.0,
+2013-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,15.71,21.0,15.71,21.0,19.722132,0.0,0.0,0.0,0.0,
+2014-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,20.9,23.379999,19.92,22.799999,21.856182,0.0,0.0,0.0,0.0,
+2015-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,22.799999,24.639999,21.65,23.43,22.460104,0.0,0.0,0.0,0.0,
+2016-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,23.120001,25.91,20.68,25.4,24.392231,0.0,0.0,0.0,0.0,
+2017-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,25.610001,33.470001,25.610001,33.040001,31.921581,0.0,0.0,0.0,0.0,
+2018-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,33.009998,38.75,32.689999,34.689999,33.690594,0.0,0.0,0.0,0.0,
+2019-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,34.610001,46.759998,33.970001,45.610001,45.610001,0.0,0.0,0.0,0.0,
+2020-01-01,AKRIX,Akre Focus Fund Institutional Class,NASDAQ,2009-08-31,,45.959999,55.139999,34.66,53.23,53.23,0.0,0.0,0.0,0.0,

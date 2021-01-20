@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PRZIX,T. Rowe Price Emerging Markets Stock Fund I Class,NASDAQ,2015-08-28,,28.93,30.84,27.35,28.51,27.334385,0.0,0.0,0.0,0.0,
+2016-01-01,PRZIX,T. Rowe Price Emerging Markets Stock Fund I Class,NASDAQ,2015-08-28,,27.709999,34.98,25.07,31.66,30.644415,0.0,0.0,0.0,0.0,
+2017-01-01,PRZIX,T. Rowe Price Emerging Markets Stock Fund I Class,NASDAQ,2015-08-28,,32.080002,45.66,32.080002,44.959999,43.836807,0.0,0.0,0.0,0.0,
+2018-01-01,PRZIX,T. Rowe Price Emerging Markets Stock Fund I Class,NASDAQ,2015-08-28,,46.040001,49.27,36.25,37.490002,36.835579,0.0,0.0,0.0,0.0,
+2019-01-01,PRZIX,T. Rowe Price Emerging Markets Stock Fund I Class,NASDAQ,2015-08-28,,37.57,47.07,36.91,46.91,46.91,0.0,0.0,0.0,0.0,
+2020-01-01,PRZIX,T. Rowe Price Emerging Markets Stock Fund I Class,NASDAQ,2015-08-28,,47.639999,48.59,32.93,46.32,46.32,0.0,0.0,0.0,0.0,

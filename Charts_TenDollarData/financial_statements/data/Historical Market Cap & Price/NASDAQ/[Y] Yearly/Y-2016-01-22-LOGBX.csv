@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,LOGBX,Scharf Multi-Asset Opportunity Fund Retail Class,NASDAQ,2016-01-22,,28.110001,31.110001,27.209999,29.790001,25.562105,0.0,0.0,0.0,0.0,
+2017-01-01,LOGBX,Scharf Multi-Asset Opportunity Fund Retail Class,NASDAQ,2016-01-22,,29.950001,32.84,29.950001,32.16,28.133747,0.0,0.0,0.0,0.0,
+2018-01-01,LOGBX,Scharf Multi-Asset Opportunity Fund Retail Class,NASDAQ,2016-01-22,,32.380001,33.790001,28.35,29.299999,27.312023,0.0,0.0,0.0,0.0,
+2019-01-01,LOGBX,Scharf Multi-Asset Opportunity Fund Retail Class,NASDAQ,2016-01-22,,29.27,35.240002,28.969999,32.950001,32.950001,0.0,0.0,0.0,0.0,
+2020-01-01,LOGBX,Scharf Multi-Asset Opportunity Fund Retail Class,NASDAQ,2016-01-22,,33.110001,34.669998,26.73,33.889999,33.889999,0.0,0.0,0.0,0.0,

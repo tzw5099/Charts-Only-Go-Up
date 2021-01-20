@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ANDAW,Andina Acquisition Corp. III,NASDAQ,2020-07-21,,0.421,0.74,0.197,0.44,0.44,4333357.0,4333357.0,-3.8527199999999997,-27.731090909090913,0.30616333333333334

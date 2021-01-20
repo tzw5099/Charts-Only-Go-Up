@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,10.0,11.07,9.49,10.86,9.047013,0.0,0.0,0.0,0.0,
+2012-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,10.92,12.72,10.89,12.38,10.453167,0.0,0.0,0.0,0.0,
+2013-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,12.63,15.16,12.58,15.16,12.894371,0.0,0.0,0.0,0.0,
+2014-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,15.16,16.84,14.37,16.700001,14.364328,0.0,0.0,0.0,0.0,
+2015-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,16.66,17.18,15.31,15.5,13.698005,0.0,0.0,0.0,0.0,
+2016-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,15.34,17.84,14.18,17.370001,15.496335,0.0,0.0,0.0,0.0,
+2017-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,17.459999,19.92,17.459999,19.120001,17.80011,0.0,0.0,0.0,0.0,
+2018-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,19.24,21.27,17.23,18.0,17.374306,0.0,0.0,0.0,0.0,
+2019-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,17.959999,22.030001,17.59,21.540001,21.478657,0.0,0.0,0.0,0.0,
+2020-01-01,DGIFX,The Disciplined Growth Investors Fund,NASDAQ,2011-08-12,,21.639999,23.15,15.54,22.17,22.17,0.0,0.0,0.0,0.0,

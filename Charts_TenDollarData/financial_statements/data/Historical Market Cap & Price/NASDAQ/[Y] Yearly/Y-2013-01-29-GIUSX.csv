@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,GIUSX,Guggenheim Investment Grade Bond Fund Institutional Class,NASDAQ,2013-01-29,,18.01,18.370001,17.59,17.84,14.840972,0.0,0.0,0.0,0.0,
+2014-01-01,GIUSX,Guggenheim Investment Grade Bond Fund Institutional Class,NASDAQ,2013-01-29,,17.860001,18.620001,17.85,18.49,15.523155,0.0,0.0,0.0,0.0,
+2015-01-01,GIUSX,Guggenheim Investment Grade Bond Fund Institutional Class,NASDAQ,2013-01-29,,18.52,18.59,17.83,17.84,15.723088,0.0,0.0,0.0,0.0,
+2016-01-01,GIUSX,Guggenheim Investment Grade Bond Fund Institutional Class,NASDAQ,2013-01-29,,17.860001,18.559999,17.73,18.09,16.567497,0.0,0.0,0.0,0.0,
+2017-01-01,GIUSX,Guggenheim Investment Grade Bond Fund Institutional Class,NASDAQ,2013-01-29,,18.09,18.66,18.07,18.620001,17.662626,0.0,0.0,0.0,0.0,
+2018-01-01,GIUSX,Guggenheim Investment Grade Bond Fund Institutional Class,NASDAQ,2013-01-29,,18.58,18.610001,18.09,18.309999,17.85471,0.0,0.0,0.0,0.0,
+2019-01-01,GIUSX,Guggenheim Investment Grade Bond Fund Institutional Class,NASDAQ,2013-01-29,,18.360001,19.08,18.25,18.690001,18.589632,0.0,0.0,0.0,0.0,
+2020-01-01,GIUSX,Guggenheim Investment Grade Bond Fund Institutional Class,NASDAQ,2013-01-29,,18.719999,20.690001,18.719999,20.559999,20.559999,0.0,0.0,0.0,0.0,

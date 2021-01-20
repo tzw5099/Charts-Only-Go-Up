@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,20.940001,20.940001,20.889999,20.9,20.78945,0.0,0.0,0.0,0.0,
+2019-05-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,20.91,20.99,20.889999,20.98,20.917858,0.0,0.0,0.0,0.0,
+2019-06-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,20.98,21.299999,20.98,21.25,21.25,0.0,0.0,0.0,0.0,
+2019-07-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,21.27,21.389999,21.27,21.379999,21.379999,0.0,0.0,0.0,0.0,
+2019-08-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,21.379999,21.379999,21.379999,21.379999,21.379999,0.0,0.0,0.0,0.0,
+2019-09-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,21.379999,21.379999,21.379999,21.379999,21.379999,0.0,0.0,0.0,0.0,
+2019-10-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,21.379999,21.379999,21.379999,21.379999,21.379999,0.0,0.0,0.0,0.0,
+2019-11-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,21.379999,21.379999,21.379999,21.379999,21.379999,0.0,0.0,0.0,0.0,
+2019-12-01,SSIYX,Sierra Tactical Core Income Fund Class Y,NASDAQ,2019-04-26,,21.379999,21.379999,21.379999,21.379999,21.379999,0.0,0.0,0.0,0.0,

@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,41.619999,46.91,41.400002,46.619999,22.887102,0.0,0.0,0.0,0.0,
+2011-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,47.09,50.91,39.310001,42.77,21.882244,0.0,0.0,0.0,0.0,
+2012-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,43.189999,52.919998,42.529999,43.380001,23.574516,0.0,0.0,0.0,0.0,
+2013-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,44.759998,52.82,43.470001,52.82,29.146236,0.0,0.0,0.0,0.0,
+2014-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,52.310001,67.360001,51.27,59.34,36.760616,0.0,0.0,0.0,0.0,
+2015-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,59.080002,67.709999,56.189999,58.889999,40.247818,0.0,0.0,0.0,0.0,
+2016-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,57.91,69.129997,49.98,63.25,46.551479,0.0,0.0,0.0,0.0,
+2017-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,63.740002,90.93,63.740002,77.0,62.570473,0.0,0.0,0.0,0.0,
+2018-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,78.779999,89.050003,59.439999,64.139999,57.650982,0.0,0.0,0.0,0.0,
+2019-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,64.580002,94.720001,61.599998,89.080002,89.080002,0.0,0.0,0.0,0.0,
+2020-01-01,CCIZX,Columbia Seligman Communications and Information Fund Institutional Class,NASDAQ,2010-09-27,,90.629997,107.480003,60.540001,97.300003,97.300003,0.0,0.0,0.0,0.0,

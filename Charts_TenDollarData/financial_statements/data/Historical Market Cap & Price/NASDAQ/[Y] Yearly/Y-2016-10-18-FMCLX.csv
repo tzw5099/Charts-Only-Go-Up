@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,FMCLX,Federated Mid-Cap Index Fund Class R6 Shares,NASDAQ,2016-10-18,,25.440001,27.370001,24.610001,25.030001,15.400004,0.0,0.0,0.0,0.0,
+2017-01-01,FMCLX,Federated Mid-Cap Index Fund Class R6 Shares,NASDAQ,2016-10-18,,25.17,28.790001,24.27,24.610001,17.824011,0.0,0.0,0.0,0.0,
+2018-01-01,FMCLX,Federated Mid-Cap Index Fund Class R6 Shares,NASDAQ,2016-10-18,,24.83,26.66,16.57,17.59,15.813918,0.0,0.0,0.0,0.0,
+2019-01-01,FMCLX,Federated Mid-Cap Index Fund Class R6 Shares,NASDAQ,2016-10-18,,17.540001,21.549999,17.26,19.879999,19.768711,0.0,0.0,0.0,0.0,
+2020-01-01,FMCLX,Federated Mid-Cap Index Fund Class R6 Shares,NASDAQ,2016-10-18,,19.91,20.33,11.79,18.370001,18.370001,0.0,0.0,0.0,0.0,

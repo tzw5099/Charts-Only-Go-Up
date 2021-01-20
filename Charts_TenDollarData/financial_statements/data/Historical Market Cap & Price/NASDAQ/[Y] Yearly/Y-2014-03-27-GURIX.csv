@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,GURIX,Guggenheim Risk Managed Real Estate Fund Institutional,NASDAQ,2014-03-27,,25.0,31.0,24.969999,30.48,21.608349,0.0,0.0,0.0,0.0,
+2015-01-01,GURIX,Guggenheim Risk Managed Real Estate Fund Institutional,NASDAQ,2014-03-27,,30.790001,33.02,27.120001,27.120001,22.442472,0.0,0.0,0.0,0.0,
+2016-01-01,GURIX,Guggenheim Risk Managed Real Estate Fund Institutional,NASDAQ,2014-03-27,,26.780001,30.620001,24.15,28.42,24.594582,0.0,0.0,0.0,0.0,
+2017-01-01,GURIX,Guggenheim Risk Managed Real Estate Fund Institutional,NASDAQ,2014-03-27,,28.5,31.24,28.02,29.709999,27.106636,0.0,0.0,0.0,0.0,
+2018-01-01,GURIX,Guggenheim Risk Managed Real Estate Fund Institutional,NASDAQ,2014-03-27,,29.57,30.559999,27.07,27.969999,26.293894,0.0,0.0,0.0,0.0,
+2019-01-01,GURIX,Guggenheim Risk Managed Real Estate Fund Institutional,NASDAQ,2014-03-27,,27.059999,35.450001,27.059999,32.68,32.486374,0.0,0.0,0.0,0.0,
+2020-01-01,GURIX,Guggenheim Risk Managed Real Estate Fund Institutional,NASDAQ,2014-03-27,,32.279999,35.560001,23.709999,31.59,31.59,0.0,0.0,0.0,0.0,

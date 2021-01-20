@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NBACR,Newborn Acquisition Corp.,NASDAQ,2020-07-21,,0.1801,0.2425,0.1601,0.2425,0.2425,198985.0,198985.0,-0.08779999999999999,-1.34096,0.1937488

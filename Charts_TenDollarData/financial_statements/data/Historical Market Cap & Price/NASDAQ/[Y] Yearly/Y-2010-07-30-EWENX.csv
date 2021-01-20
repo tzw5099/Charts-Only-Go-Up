@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,13.8,15.6,13.13,15.54,9.545018,0.0,0.0,0.0,0.0,
+2011-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,15.65,17.07,13.73,15.46,9.607612,0.0,0.0,0.0,0.0,
+2012-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,15.79,18.549999,15.65,18.42,11.662418,0.0,0.0,0.0,0.0,
+2013-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,18.799999,22.700001,18.700001,22.48,14.43776,0.0,0.0,0.0,0.0,
+2014-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,22.18,23.51,20.879999,22.030001,14.537104,0.0,0.0,0.0,0.0,
+2015-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,22.0,24.0,19.280001,19.280001,14.529818,0.0,0.0,0.0,0.0,
+2016-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,18.959999,20.379999,16.559999,19.120001,15.360895,0.0,0.0,0.0,0.0,
+2017-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,19.26,23.879999,19.26,22.049999,19.301697,0.0,0.0,0.0,0.0,
+2018-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,22.26,23.92,17.33,18.0,17.8328,0.0,0.0,0.0,0.0,
+2019-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,17.98,22.5,17.719999,22.26,22.26,0.0,0.0,0.0,0.0,
+2020-01-01,EWENX,Wells Fargo Intrinsic World Equity Fund - Class Inst,NASDAQ,2010-07-30,,22.43,22.82,14.44,21.51,21.51,0.0,0.0,0.0,0.0,

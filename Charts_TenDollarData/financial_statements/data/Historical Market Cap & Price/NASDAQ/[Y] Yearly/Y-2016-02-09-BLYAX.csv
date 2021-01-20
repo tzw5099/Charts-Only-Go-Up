@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,BLYAX,American Beacon Bridgeway Large Cap Growth Fund A Class,NASDAQ,2016-02-09,,20.040001,25.01,20.040001,24.389999,19.181551,0.0,0.0,0.0,0.0,
+2017-01-01,BLYAX,American Beacon Bridgeway Large Cap Growth Fund A Class,NASDAQ,2016-02-09,,24.549999,31.209999,24.549999,29.75,24.358471,0.0,0.0,0.0,0.0,
+2018-01-01,BLYAX,American Beacon Bridgeway Large Cap Growth Fund A Class,NASDAQ,2016-02-09,,30.17,34.189999,23.389999,25.120001,22.729799,0.0,0.0,0.0,0.0,
+2019-01-01,BLYAX,American Beacon Bridgeway Large Cap Growth Fund A Class,NASDAQ,2016-02-09,,25.02,32.380001,24.4,29.51,29.51,0.0,0.0,0.0,0.0,
+2020-01-01,BLYAX,American Beacon Bridgeway Large Cap Growth Fund A Class,NASDAQ,2016-02-09,,29.870001,36.560001,20.780001,34.080002,34.080002,0.0,0.0,0.0,0.0,

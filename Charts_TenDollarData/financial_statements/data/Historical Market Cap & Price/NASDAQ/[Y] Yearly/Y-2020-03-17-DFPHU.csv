@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,DFPHU,DFP Healthcare Acquisitions Corp.,NASDAQ,2020-03-17,247480005.2647,10.18,11.36,9.25,10.7600002289,10.7600002289,11038925.0,11038925.0,2.2611,0.20019469026548672,9.03887787610619

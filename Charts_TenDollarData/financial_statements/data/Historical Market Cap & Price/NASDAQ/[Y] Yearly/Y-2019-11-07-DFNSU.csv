@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,DFNSU,LGL Systems Acquisition Corp.,NASDAQ,2019-11-07,54033755.4,10.03,10.25,10.03,10.2,10.2,5266321.0,5266321.0,-0.18,-0.047567567567567574,8.724954864864864
+2020-01-01,DFNSU,LGL Systems Acquisition Corp.,NASDAQ,2019-11-07,52974270.0,10.13,10.55,9.51,10.0,10.0,5709294.0,5709294.0,0.6299999999999999,0.09483582089552241,8.678109850746269

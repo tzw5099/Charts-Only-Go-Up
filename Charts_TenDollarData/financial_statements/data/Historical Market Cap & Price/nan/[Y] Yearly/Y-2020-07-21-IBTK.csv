@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTK,,,2020-07-21,,25.1,25.25,24.855,24.961,24.961,1322.0,1322.0,-0.4413,-0.22,18.7777125

@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,LKM,NQ Mobile Inc. American Depositary Shares each representing five Class A,delisted,2018-02-28,,2.28,2.435,1.56,1.66,,8206447.0,8206447.0,1.660000000000001,-1.195318181818182,2.1396454545454544
+2018-04-01,LKM,NQ Mobile Inc. American Depositary Shares each representing five Class A,delisted,2018-02-28,,1.64,2.205,0.552,1.14,,38038691.0,38038691.0,-0.5200000000000001,-0.06254687500000006,1.4459271875
+2018-07-01,LKM,NQ Mobile Inc. American Depositary Shares each representing five Class A,delisted,2018-02-28,,1.15,1.25,0.573,0.66,,14899121.0,14899121.0,-0.4799999999999999,-0.7464285714285714,0.9837893015873017
+2018-10-01,LKM,NQ Mobile Inc. American Depositary Shares each representing five Class A,delisted,2018-02-28,,0.641,0.72,0.1539,0.1539,,30181347.0,30181347.0,-0.5061000000000001,-2.138982456140351,0.41629614035087714

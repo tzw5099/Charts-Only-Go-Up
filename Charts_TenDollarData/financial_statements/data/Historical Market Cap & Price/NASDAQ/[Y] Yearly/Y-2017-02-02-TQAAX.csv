@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,TQAAX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund Advisor Class,NASDAQ,2017-02-02,,29.34,34.98,29.34,34.790001,32.136368,0.0,0.0,0.0,0.0,
+2018-01-01,TQAAX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund Advisor Class,NASDAQ,2017-02-02,,35.060001,40.490002,29.07,31.1,29.841373,0.0,0.0,0.0,0.0,
+2019-01-01,TQAAX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund Advisor Class,NASDAQ,2017-02-02,,30.91,40.68,30.190001,39.48,39.48,0.0,0.0,0.0,0.0,
+2020-01-01,TQAAX,T. Rowe Price QM U.S. Small-Cap Growth Equity Fund Advisor Class,NASDAQ,2017-02-02,,39.639999,41.48,25.74,39.98,39.98,0.0,0.0,0.0,0.0,

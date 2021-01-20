@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HFDYX,Hartford Schroders US MidCap Opportunities Fund Class Y,NASDAQ,2016-10-24,,12.54,13.52,12.18,13.01,12.377951,0.0,0.0,0.0,0.0,
+2017-01-01,HFDYX,Hartford Schroders US MidCap Opportunities Fund Class Y,NASDAQ,2016-10-24,,13.06,15.03,13.06,14.8,14.304606,0.0,0.0,0.0,0.0,
+2018-01-01,HFDYX,Hartford Schroders US MidCap Opportunities Fund Class Y,NASDAQ,2016-10-24,,14.89,15.7,12.25,12.87,12.745568,0.0,0.0,0.0,0.0,
+2019-01-01,HFDYX,Hartford Schroders US MidCap Opportunities Fund Class Y,NASDAQ,2016-10-24,,12.86,16.370001,12.66,16.32,16.32,0.0,0.0,0.0,0.0,
+2020-01-01,HFDYX,Hartford Schroders US MidCap Opportunities Fund Class Y,NASDAQ,2016-10-24,,16.370001,16.91,10.03,15.34,15.34,0.0,0.0,0.0,0.0,

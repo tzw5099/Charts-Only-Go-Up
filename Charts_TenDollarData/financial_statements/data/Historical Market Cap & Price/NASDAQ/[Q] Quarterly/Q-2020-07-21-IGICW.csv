@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,IGICW,International General Insurance Holdings Ltd.,NASDAQ,2020-07-21,,0.4,0.65,0.37,0.65,0.65,1370421.0,1370421.0,2.873700000000001,26.60833333333333,0.4655262962962964

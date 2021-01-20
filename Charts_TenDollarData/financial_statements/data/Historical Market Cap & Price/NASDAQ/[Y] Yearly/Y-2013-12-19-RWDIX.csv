@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,RWDIX,Redwood Managed Volatility Fund Class I,NASDAQ,2013-12-19,,15.0,15.01,14.99,15.01,12.27059,0.0,0.0,0.0,0.0,
+2014-01-01,RWDIX,Redwood Managed Volatility Fund Class I,NASDAQ,2013-12-19,,15.02,15.63,14.97,14.97,12.529455,0.0,0.0,0.0,0.0,
+2015-01-01,RWDIX,Redwood Managed Volatility Fund Class I,NASDAQ,2013-12-19,,14.98,15.14,13.99,13.99,11.842743,0.0,0.0,0.0,0.0,
+2016-01-01,RWDIX,Redwood Managed Volatility Fund Class I,NASDAQ,2013-12-19,,13.99,15.84,13.87,15.07,13.423308,0.0,0.0,0.0,0.0,
+2017-01-01,RWDIX,Redwood Managed Volatility Fund Class I,NASDAQ,2013-12-19,,15.11,16.01,15.11,15.31,14.395874,0.0,0.0,0.0,0.0,
+2018-01-01,RWDIX,Redwood Managed Volatility Fund Class I,NASDAQ,2013-12-19,,15.34,15.43,14.55,14.55,14.031408,0.0,0.0,0.0,0.0,
+2019-01-01,RWDIX,Redwood Managed Volatility Fund Class I,NASDAQ,2013-12-19,,14.55,15.43,14.5,15.3,15.3,0.0,0.0,0.0,0.0,
+2020-01-01,RWDIX,Redwood Managed Volatility Fund Class I,NASDAQ,2013-12-19,,15.33,15.39,13.91,14.6,14.6,0.0,0.0,0.0,0.0,

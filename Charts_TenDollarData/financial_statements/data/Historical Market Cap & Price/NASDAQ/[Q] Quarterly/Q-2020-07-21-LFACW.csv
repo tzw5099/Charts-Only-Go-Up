@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,LFACW,LF Capital Acquisition Corp. WT EXP 062220,NASDAQ,2020-07-21,,1.02,1.83,0.5,1.76,1.76,4238553.0,4238553.0,2.2848999999999995,6.788151515151518,1.0857281818181819

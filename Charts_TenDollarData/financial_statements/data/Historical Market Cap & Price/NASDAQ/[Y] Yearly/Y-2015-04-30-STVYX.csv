@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,STVYX,SEI Institutional Managed Trust Tax-Managed Managed Volatility Fund Class Y,NASDAQ,2015-04-30,,14.25,14.77,13.46,13.67,11.473433,0.0,0.0,0.0,0.0,
+2016-01-01,STVYX,SEI Institutional Managed Trust Tax-Managed Managed Volatility Fund Class Y,NASDAQ,2015-04-30,,13.53,15.22,12.88,14.66,12.85233,0.0,0.0,0.0,0.0,
+2017-01-01,STVYX,SEI Institutional Managed Trust Tax-Managed Managed Volatility Fund Class Y,NASDAQ,2015-04-30,,14.72,16.709999,14.71,16.209999,14.840888,0.0,0.0,0.0,0.0,
+2018-01-01,STVYX,SEI Institutional Managed Trust Tax-Managed Managed Volatility Fund Class Y,NASDAQ,2015-04-30,,16.209999,17.32,14.37,15.04,14.455813,0.0,0.0,0.0,0.0,
+2019-01-01,STVYX,SEI Institutional Managed Trust Tax-Managed Managed Volatility Fund Class Y,NASDAQ,2015-04-30,,14.94,18.18,14.73,17.969999,17.819925,0.0,0.0,0.0,0.0,
+2020-01-01,STVYX,SEI Institutional Managed Trust Tax-Managed Managed Volatility Fund Class Y,NASDAQ,2015-04-30,,18.01,18.59,12.39,16.559999,16.559999,0.0,0.0,0.0,0.0,

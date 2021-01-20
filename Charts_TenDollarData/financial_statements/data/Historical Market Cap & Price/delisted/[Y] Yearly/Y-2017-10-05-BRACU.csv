@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,BRACU,Black Ridge Acquisition Corp Units 1 Ord 1 Rts 1 War,delisted,2017-10-05,,10.09,10.22,9.97,10.138,,4793748.0,4793748.0,10.138000000000003,-0.0017692307692307686,10.075416666666666
+2018-01-01,BRACU,Black Ridge Acquisition Corp Units 1 Ord 1 Rts 1 War,delisted,2017-10-05,,10.15,11.35,10.1,10.5,,639536.0,639536.0,0.36200000000000015,0.06980701754385964,10.37967608695652
+2019-01-01,BRACU,Black Ridge Acquisition Corp Units 1 Ord 1 Rts 1 War,delisted,2017-10-05,,10.47,11.47,10.4259,10.7993,,28887.0,28887.0,0.2992999999999999,0.19926315789473684,10.728518181818183

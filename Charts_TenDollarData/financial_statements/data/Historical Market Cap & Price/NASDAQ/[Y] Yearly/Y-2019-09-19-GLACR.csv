@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,GLACR,Greenland Acquisition Corporati,NASDAQ,2019-09-19,,0.48,0.83,0.44,0.69,0.69,6297701.0,6297701.0,0.06999999999999999,1.0323636363636362,0.5733336363636364

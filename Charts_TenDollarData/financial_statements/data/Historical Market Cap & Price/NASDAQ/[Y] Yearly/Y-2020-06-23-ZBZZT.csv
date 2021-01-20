@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ZBZZT,ZBZZT,NASDAQ,2020-06-23,,0.0,200000.0,200000.0,199999.9844,199999.9844,200.0,200.0,0.0,0.0,199999.9948

@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,HFDCX,Hartford Schroders US MidCap Opportunities Fund Class C,NASDAQ,2016-10-24,,12.54,13.49,12.17,12.98,12.452082,0.0,0.0,0.0,0.0,
+2017-01-01,HFDCX,Hartford Schroders US MidCap Opportunities Fund Class C,NASDAQ,2016-10-24,,13.04,14.85,13.04,14.64,14.244161,0.0,0.0,0.0,0.0,
+2018-01-01,HFDCX,Hartford Schroders US MidCap Opportunities Fund Class C,NASDAQ,2016-10-24,,14.73,15.41,11.98,12.63,12.546177,0.0,0.0,0.0,0.0,
+2019-01-01,HFDCX,Hartford Schroders US MidCap Opportunities Fund Class C,NASDAQ,2016-10-24,,12.63,15.91,12.43,15.91,15.91,0.0,0.0,0.0,0.0,
+2020-01-01,HFDCX,Hartford Schroders US MidCap Opportunities Fund Class C,NASDAQ,2016-10-24,,15.96,16.459999,9.75,14.85,14.85,0.0,0.0,0.0,0.0,

@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,14.09,14.49,13.96,14.18,10.883337,0.0,0.0,0.0,0.0,
+2013-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,14.33,15.49,14.32,14.46,11.098238,0.0,0.0,0.0,0.0,
+2014-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,14.46,15.22,14.46,14.74,11.669608,0.0,0.0,0.0,0.0,
+2015-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,14.75,15.06,14.15,14.18,11.706638,0.0,0.0,0.0,0.0,
+2016-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,14.13,14.72,13.62,14.46,12.264024,0.0,0.0,0.0,0.0,
+2017-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,14.48,14.97,14.46,14.5,12.956507,0.0,0.0,0.0,0.0,
+2018-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,14.5,14.6,13.57,13.72,12.981182,0.0,0.0,0.0,0.0,
+2019-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,13.72,15.65,13.72,14.96,14.96,0.0,0.0,0.0,0.0,
+2020-01-01,CYYYX,Columbia Thermostat Fund Institutional 3 Class,NASDAQ,2012-11-09,,15.0,18.33,13.7,17.780001,17.780001,0.0,0.0,0.0,0.0,

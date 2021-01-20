@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,QLSGX,Federated MDT Small Cap Growth Fund Class R6,NASDAQ,2016-07-05,,16.790001,20.450001,16.790001,19.77,16.99947,0.0,0.0,0.0,0.0,
+2017-01-01,QLSGX,Federated MDT Small Cap Growth Fund Class R6,NASDAQ,2016-07-05,,19.870001,24.6,19.84,23.52,21.27956,0.0,0.0,0.0,0.0,
+2018-01-01,QLSGX,Federated MDT Small Cap Growth Fund Class R6,NASDAQ,2016-07-05,,23.790001,29.27,19.209999,20.66,20.61993,0.0,0.0,0.0,0.0,
+2019-01-01,QLSGX,Federated MDT Small Cap Growth Fund Class R6,NASDAQ,2016-07-05,,20.74,25.17,20.190001,25.049999,25.049999,0.0,0.0,0.0,0.0,
+2020-01-01,QLSGX,Federated MDT Small Cap Growth Fund Class R6,NASDAQ,2016-07-05,,25.02,26.370001,15.08,24.559999,24.559999,0.0,0.0,0.0,0.0,

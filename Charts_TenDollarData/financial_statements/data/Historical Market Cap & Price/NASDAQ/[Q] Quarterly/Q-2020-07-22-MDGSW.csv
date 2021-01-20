@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,MDGSW,Medigus Ltd. WT C EXP 072323,NASDAQ,2020-07-22,,0.245,0.26,0.16,0.16,0.16,39751.0,39751.0,-0.4237,-13.303,0.21210076923076926

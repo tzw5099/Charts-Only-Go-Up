@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,15.0,15.65,11.52,14.3,10.455595,0.0,0.0,0.0,0.0,
+2012-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,14.52,16.91,14.33,16.799999,12.49332,0.0,0.0,0.0,0.0,
+2013-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,17.35,23.76,17.299999,23.610001,17.944435,0.0,0.0,0.0,0.0,
+2014-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,23.219999,24.09,21.309999,23.280001,18.536253,0.0,0.0,0.0,0.0,
+2015-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,23.02,25.48,22.23,22.9,18.233685,0.0,0.0,0.0,0.0,
+2016-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,22.280001,28.120001,20.26,27.690001,22.170578,0.0,0.0,0.0,0.0,
+2017-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,27.809999,32.830002,27.030001,27.870001,25.284588,0.0,0.0,0.0,0.0,
+2018-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,28.09,31.549999,20.93,22.200001,22.177702,0.0,0.0,0.0,0.0,
+2019-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,22.24,27.200001,21.709999,26.879999,26.872244,0.0,0.0,0.0,0.0,
+2020-01-01,ZSCCX,Zacks Small-Cap Core Fund Investor Class,NASDAQ,2011-06-30,,26.85,27.690001,14.23,21.809999,21.809999,0.0,0.0,0.0,0.0,

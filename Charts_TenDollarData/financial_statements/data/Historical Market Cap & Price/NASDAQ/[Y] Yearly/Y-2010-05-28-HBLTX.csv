@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,9.75,10.75,9.62,10.62,7.132377,0.0,0.0,0.0,0.0,
+2011-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,10.65,11.31,10.37,11.2,7.777253,0.0,0.0,0.0,0.0,
+2012-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,11.25,12.42,11.24,12.16,8.789847,0.0,0.0,0.0,0.0,
+2013-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,12.28,13.24,12.26,13.12,9.867634,0.0,0.0,0.0,0.0,
+2014-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,13.06,13.96,12.86,13.56,10.63872,0.0,0.0,0.0,0.0,
+2015-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,13.58,13.85,12.75,12.96,10.624935,0.0,0.0,0.0,0.0,
+2016-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,12.88,14.21,12.4,13.9,11.843912,0.0,0.0,0.0,0.0,
+2017-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,13.95,15.16,13.89,14.69,13.229211,0.0,0.0,0.0,0.0,
+2018-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,14.7,15.03,12.86,13.05,12.590009,0.0,0.0,0.0,0.0,
+2019-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,13.06,15.13,13.0,15.02,14.901392,0.0,0.0,0.0,0.0,
+2020-01-01,HBLTX,The Hartford Balanced Income Fund Class R5,NASDAQ,2010-05-28,,15.06,15.35,11.79,15.08,15.08,0.0,0.0,0.0,0.0,

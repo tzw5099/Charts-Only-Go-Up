@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-09-16,GLACR,Greenland Acquisition Corp Tradeable Rights,delisted,2019-09-19,,0.48,0.53,0.48,0.53,0.53,106964.0,106964.0,0.05,10.417,0.51333
+2019-09-23,GLACR,Greenland Acquisition Corp Tradeable Rights,delisted,2019-09-19,,0.62,0.63,0.59,0.6,0.6,25000.0,25000.0,-0.02,-3.226,0.60667
+2019-09-30,GLACR,Greenland Acquisition Corp Tradeable Rights,delisted,2019-09-19,,0.59,0.6,0.48,0.51,0.51,150436.0,150436.0,0.010000000000000002,0.36080000000000007,0.530002
+2019-10-07,GLACR,Greenland Acquisition Corp Tradeable Rights,delisted,2019-09-19,,0.52,0.55,0.46,0.49,0.49,564831.0,564831.0,0.020000000000000004,0.8016000000000002,0.509998
+2019-10-14,GLACR,Greenland Acquisition Corp Tradeable Rights,delisted,2019-09-19,,0.49,0.77,0.44,0.69,0.69,2723176.0,2723176.0,0.13,5.251200000000001,0.572002
+2019-10-21,GLACR,Greenland Acquisition Corp Tradeable Rights,delisted,2019-09-19,,0.69,0.83,0.62,0.72,0.72,2207358.0,2207358.0,-0.09,-3.0949999999999998,0.6858325000000001
+2019-10-28,GLACR,Greenland Acquisition Corp Tradeable Rights,delisted,2019-09-19,,0.72,0.72,0.66,0.69,0.69,519936.0,519936.0,-0.03,-4.167,0.69

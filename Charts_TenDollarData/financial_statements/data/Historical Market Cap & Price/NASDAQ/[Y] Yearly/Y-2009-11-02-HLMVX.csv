@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,20.43,21.620001,20.43,21.379999,14.123794,0.0,0.0,0.0,0.0,
+2010-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,21.809999,24.59,19.76,24.48,16.171679,0.0,0.0,0.0,0.0,
+2011-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,24.709999,26.059999,20.639999,22.139999,14.839675,0.0,0.0,0.0,0.0,
+2012-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,22.139999,26.299999,22.139999,25.879999,17.346468,0.0,0.0,0.0,0.0,
+2013-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,26.43,30.860001,26.15,30.860001,20.863691,0.0,0.0,0.0,0.0,
+2014-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,30.530001,33.419998,28.879999,31.5,23.203285,0.0,0.0,0.0,0.0,
+2015-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,31.25,33.580002,29.23,31.040001,23.572968,0.0,0.0,0.0,0.0,
+2016-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,30.110001,33.43,26.82,32.119999,24.787416,0.0,0.0,0.0,0.0,
+2017-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,32.310001,42.040001,32.310001,37.23,32.795422,0.0,0.0,0.0,0.0,
+2018-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,37.610001,40.360001,28.23,29.440001,29.255123,0.0,0.0,0.0,0.0,
+2019-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,29.59,38.0,28.92,37.869999,37.869999,0.0,0.0,0.0,0.0,
+2020-01-01,HLMVX,Harding Loevner Global Equity Portfolio Institutional Class,NASDAQ,2009-11-02,,38.369999,45.880001,27.5,43.790001,43.790001,0.0,0.0,0.0,0.0,

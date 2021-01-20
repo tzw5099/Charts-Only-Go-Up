@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,13.76,14.21,13.66,14.21,12.599764,0.0,0.0,0.0,0.0,
+2013-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,14.37,18.77,14.37,18.77,16.698734,0.0,0.0,0.0,0.0,
+2014-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,18.77,21.73,17.790001,19.07,17.094553,0.0,0.0,0.0,0.0,
+2015-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,19.08,19.68,16.66,16.9,15.232195,0.0,0.0,0.0,0.0,
+2016-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,16.82,17.809999,15.04,17.309999,15.763887,0.0,0.0,0.0,0.0,
+2017-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,17.549999,20.52,17.540001,20.52,18.687176,0.0,0.0,0.0,0.0,
+2018-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,20.66,22.02,15.24,15.62,14.647981,0.0,0.0,0.0,0.0,
+2019-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,15.62,17.83,15.54,17.15,17.15,0.0,0.0,0.0,0.0,
+2020-01-01,MFMPX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class A",NASDAQ,2012-09-14,,17.209999,17.629999,11.39,17.1,17.1,0.0,0.0,0.0,0.0,

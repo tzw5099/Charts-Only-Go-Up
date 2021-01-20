@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ZCMD,Zhongchao Inc.,NASDAQ,2020-02-24,,4.34,5.25,1.59,1.75,1.75,26765504.0,26765504.0,-6.415,-1.552924137931035,2.3428256551724136

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,GTEC,Greenland Technologies Holding Corporation,NASDAQ,2018-08-08,,9.68,9.9,9.63,9.9,9.9,2337500.0,2337500.0,-0.031000000000000014,-0.006934782608695651,9.704558260869563
+2019-01-01,GTEC,Greenland Technologies Holding Corporation,NASDAQ,2018-08-08,39662850.0,9.9,10.58,4.733,5.0,5.0,4342400.0,4342400.0,-6.5310000000000015,-0.4447298850574716,9.113283390804586
+2020-01-01,GTEC,Greenland Technologies Holding Corporation,NASDAQ,2018-08-08,27057078.0,5.0,5.01,1.12,2.7,2.7,4634518.0,4634518.0,-9.032,-1.5627272727272739,2.7716515909090917

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,LEVB,Level Brands Inc,delisted,2019-04-29,,5.71,6.17,5.31,6.08,,695667.0,695667.0,6.08,4.775,5.75645

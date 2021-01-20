@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TFIFX,T. Rowe Price Financial Services Fund I Class,NASDAQ,2016-11-29,,23.610001,25.08,23.610001,24.610001,20.166014,0.0,0.0,0.0,0.0,
+2017-01-01,TFIFX,T. Rowe Price Financial Services Fund I Class,NASDAQ,2016-11-29,,24.76,29.559999,24.370001,27.99,24.064194,0.0,0.0,0.0,0.0,
+2018-01-01,TFIFX,T. Rowe Price Financial Services Fund I Class,NASDAQ,2016-11-29,,27.959999,30.09,21.379999,22.540001,21.670691,0.0,0.0,0.0,0.0,
+2019-01-01,TFIFX,T. Rowe Price Financial Services Fund I Class,NASDAQ,2016-11-29,,22.66,29.059999,22.389999,28.16,28.16,0.0,0.0,0.0,0.0,
+2020-01-01,TFIFX,T. Rowe Price Financial Services Fund I Class,NASDAQ,2016-11-29,,28.280001,28.9,16.52,23.51,23.51,0.0,0.0,0.0,0.0,

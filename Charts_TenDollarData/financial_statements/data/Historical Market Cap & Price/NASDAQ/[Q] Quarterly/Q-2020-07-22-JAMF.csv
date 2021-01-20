@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,JAMF,,NASDAQ,2020-07-22,3758505403.6376,46.0,51.0,31.4475,33.07,33.07,80683816.0,80683816.0,-12.739999999999998,-0.7143170731707317,38.10645146341464

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,HTLFP,,NASDAQ,2020-09-17,996101600.0,25.09,27.23,24.9,27.16,27.16,1976685.0,1976685.0,-0.5909999999999997,-0.035596491228070175,25.920815087719294

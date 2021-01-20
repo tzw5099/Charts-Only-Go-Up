@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,KCAPL,KCAP Financial Inc. 6.125% Notes due 2022,NASDAQ,2020-07-21,,24.0842,24.8,23.6,24.5,24.5,131102.0,131102.0,2.7978,0.36425,24.383946562500004

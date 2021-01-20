@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,TGGCX,Touchstone International Growth Opportunities Fund Class C,NASDAQ,2016-08-18,,18.77,19.17,17.559999,17.620001,14.840437,0.0,0.0,0.0,0.0,
+2017-01-01,TGGCX,Touchstone International Growth Opportunities Fund Class C,NASDAQ,2016-08-18,,17.82,25.27,17.82,24.59,21.101624,0.0,0.0,0.0,0.0,
+2018-01-01,TGGCX,Touchstone International Growth Opportunities Fund Class C,NASDAQ,2016-08-18,,25.059999,27.1,16.219999,16.860001,16.860001,0.0,0.0,0.0,0.0,
+2019-01-01,TGGCX,Touchstone International Growth Opportunities Fund Class C,NASDAQ,2016-08-18,,16.83,21.959999,16.33,21.82,21.82,0.0,0.0,0.0,0.0,
+2020-01-01,TGGCX,Touchstone International Growth Opportunities Fund Class C,NASDAQ,2016-08-18,,22.139999,25.799999,15.58,24.629999,24.629999,0.0,0.0,0.0,0.0,

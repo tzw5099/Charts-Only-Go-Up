@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,DRIOW,"DarioHealth Corp. Warrant
+",NASDAQ,2020-07-20,,0.0642,0.25,0.0291,0.07,0.07,625113.0,625113.0,0.8165000000000001,50.87232000000001,0.09503280000000001

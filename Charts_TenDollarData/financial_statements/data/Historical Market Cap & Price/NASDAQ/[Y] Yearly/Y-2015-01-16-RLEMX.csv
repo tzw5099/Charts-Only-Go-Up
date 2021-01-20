@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,RLEMX,Lazard Emerging Markets Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,17.26,18.26,13.33,13.44,12.390074,0.0,0.0,0.0,0.0,
+2016-01-01,RLEMX,Lazard Emerging Markets Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,13.08,16.91,11.96,15.96,14.930303,0.0,0.0,0.0,0.0,
+2017-01-01,RLEMX,Lazard Emerging Markets Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,16.139999,20.02,16.139999,20.02,19.114515,0.0,0.0,0.0,0.0,
+2018-01-01,RLEMX,Lazard Emerging Markets Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,20.299999,21.950001,15.72,16.059999,15.653735,0.0,0.0,0.0,0.0,
+2019-01-01,RLEMX,Lazard Emerging Markets Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,16.139999,18.6,15.94,18.469999,18.469999,0.0,0.0,0.0,0.0,
+2020-01-01,RLEMX,Lazard Emerging Markets Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,18.68,18.74,11.71,15.27,15.27,0.0,0.0,0.0,0.0,

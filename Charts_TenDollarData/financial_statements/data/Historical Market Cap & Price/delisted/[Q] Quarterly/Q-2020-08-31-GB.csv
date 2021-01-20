@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GB,Greatbatch Inc,delisted,2020-08-31,,8.0,15.0,6.67,7.83,7.83,1823955.0,1823955.0,-0.1879999999999998,0.2046153846153846,7.803540769230769

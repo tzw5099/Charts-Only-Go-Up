@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,EXPCW,Experience Investment Corp.,NASDAQ,2020-07-22,,0.0,1.15,0.77,0.94,0.94,6248.0,6248.0,0.0,0.0,0.99511
+2020-08-01,EXPCW,Experience Investment Corp.,NASDAQ,2020-07-22,,0.0,1.25,0.89,1.07,1.07,127840.0,127840.0,0.0,0.0,1.0672042857142858
+2020-09-01,EXPCW,Experience Investment Corp.,NASDAQ,2020-07-22,,0.0,1.2,0.9997,1.11,1.11,99163.0,99163.0,0.0,0.0,1.1017100000000002

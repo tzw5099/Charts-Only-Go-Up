@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,23.700001,28.049999,22.389999,26.16,14.211605,0.0,0.0,0.0,0.0,
+2011-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,26.459999,28.82,21.860001,25.34,14.281318,0.0,0.0,0.0,0.0,
+2012-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,25.6,28.6,25.360001,27.48,16.071447,0.0,0.0,0.0,0.0,
+2013-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,28.209999,36.580002,28.139999,34.41,21.678909,0.0,0.0,0.0,0.0,
+2014-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,34.0,38.77,32.57,33.669998,24.376289,0.0,0.0,0.0,0.0,
+2015-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,33.599998,36.060001,30.42,30.42,24.640446,0.0,0.0,0.0,0.0,
+2016-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,30.049999,37.279999,27.690001,36.16,29.812536,0.0,0.0,0.0,0.0,
+2017-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,36.389999,41.639999,36.389999,40.59,34.588875,0.0,0.0,0.0,0.0,
+2018-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,40.779999,43.41,31.459999,33.060001,31.111643,0.0,0.0,0.0,0.0,
+2019-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,32.959999,41.68,32.540001,40.07,39.821457,0.0,0.0,0.0,0.0,
+2020-01-01,VEVIX,Victory Sycamore Established Value Fund Class I,NASDAQ,2010-03-01,,40.110001,40.619999,23.959999,36.639999,36.639999,0.0,0.0,0.0,0.0,

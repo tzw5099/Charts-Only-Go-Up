@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GHIVW,"Gores Holdings IV, Inc.",,2020-07-21,,0.0,3.2399,1.3395,2.44,2.44,325148.0,325148.0,0.0,0.0,1.9875718749999998

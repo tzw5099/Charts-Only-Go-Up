@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IMVTW,,delisted,2020-02-10,486525616.29,2.07,8.01,0.39,6.87,6.87,4715457.0,4715457.0,1.9899999999999989,2.790011627906976,3.2877129069767443

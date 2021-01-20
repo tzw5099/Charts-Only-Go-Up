@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,AMTI,,NASDAQ,2020-09-17,1020943536.2,25.51,34.34,17.045,33.009998,33.009998,28725368.0,28725368.0,-10.150000000000006,-0.28801369863013726,24.05178054794521

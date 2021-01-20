@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,PASG,"Passage Bio, Inc.",NASDAQ,2020-09-17,777921308.01369,22.27,38.23,8.09,16.59,16.59,36076878.0,36076878.0,-16.382000000000005,-0.43963120567375885,19.617941063829807

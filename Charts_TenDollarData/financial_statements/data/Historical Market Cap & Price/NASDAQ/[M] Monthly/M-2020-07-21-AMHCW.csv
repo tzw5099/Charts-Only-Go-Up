@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,AMHCW,Amplitude Healthcare Acquisition Corporation,NASDAQ,2020-07-21,10550000.0,1.2356,1.24,1.03,1.055,1.055,37198.0,37198.0,-0.583,-9.4368,1.136668
+2020-08-01,AMHCW,Amplitude Healthcare Acquisition Corporation,NASDAQ,2020-07-21,9600000.0,1.2356,1.05,0.62,0.96,0.96,20788.0,20788.0,-2.981,-24.1259,0.9140599999999999
+2020-09-01,AMHCW,Amplitude Healthcare Acquisition Corporation,NASDAQ,2020-07-21,12500000.0,1.2356,1.25,0.814,1.25,1.25,63457.0,63457.0,-2.3000999999999996,-18.6154,0.9983090000000001

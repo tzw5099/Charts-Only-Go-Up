@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,BDSKX,BlackRock Advantage Small Cap Core Fund Class K,NASDAQ,2016-03-28,,9.88,12.88,9.88,12.65,11.499576,0.0,0.0,0.0,0.0,
+2017-01-01,BDSKX,BlackRock Advantage Small Cap Core Fund Class K,NASDAQ,2016-03-28,,12.69,13.94,12.33,13.63,12.743529,0.0,0.0,0.0,0.0,
+2018-01-01,BDSKX,BlackRock Advantage Small Cap Core Fund Class K,NASDAQ,2016-03-28,,13.75,15.67,11.1,11.84,11.621827,0.0,0.0,0.0,0.0,
+2019-01-01,BDSKX,BlackRock Advantage Small Cap Core Fund Class K,NASDAQ,2016-03-28,,11.88,15.58,11.67,15.51,15.51,0.0,0.0,0.0,0.0,
+2020-01-01,BDSKX,BlackRock Advantage Small Cap Core Fund Class K,NASDAQ,2016-03-28,,15.48,15.89,9.01,14.55,14.55,0.0,0.0,0.0,0.0,

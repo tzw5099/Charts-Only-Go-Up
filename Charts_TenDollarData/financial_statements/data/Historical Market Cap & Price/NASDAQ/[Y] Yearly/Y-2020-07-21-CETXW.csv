@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CETXW,Cemtrex Inc. Series 1 Warrant,NASDAQ,2020-07-21,358089.25,0.1159,0.1,0.05,0.05,0.05,1111523.0,1111523.0,-1.3558999999999999,-36.64633333333334,0.07015363636363638

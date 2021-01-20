@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-10-01,EVFTC,Eaton Vance NextShares Trust II,delisted,2017-11-30,,99.2231,99.2231,99.2231,99.2231,,49549.0,49549.0,99.2231,0.0,99.2231
+2018-01-01,EVFTC,Eaton Vance NextShares Trust II,delisted,2017-11-30,,99.2557,99.32,99.2557,99.32,,1411.0,1411.0,0.09690599999999999,0.007,99.27713333333334
+2018-04-01,EVFTC,Eaton Vance NextShares Trust II,delisted,2017-11-30,,,,,99.3559,,115.0,115.0,0.035891,0.0045,
+2018-07-01,EVFTC,Eaton Vance NextShares Trust II,delisted,2017-11-30,,,,,99.3559,,105.0,105.0,-6.1000000000000005e-05,0.0,
+2018-10-01,EVFTC,Eaton Vance NextShares Trust II,delisted,2017-11-30,,99.5471,99.5882,99.5285,99.6675,,3456.0,3456.0,0.311597,0.03925,99.55460000000001
+2019-01-01,EVFTC,Eaton Vance NextShares Trust II,delisted,2017-11-30,,99.831,99.9106,99.831,99.9106,,6573.0,6573.0,0.243149,0.0244,99.87165
+2019-04-01,EVFTC,Eaton Vance NextShares Trust II,delisted,2017-11-30,,,,,99.9106,,51.0,51.0,-1.2000000000000002e-05,0.0,

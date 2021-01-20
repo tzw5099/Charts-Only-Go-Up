@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FCNCP,"First Citizens BancShares, Inc.",NASDAQ,2020-03-06,,25.33,26.709999,16.3361,26.299999,26.299999,13087736.0,13087736.0,-10.664199999999997,-0.34491791044776127,24.16931276119403

@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,15.74,15.86,11.02,13.35,8.093746,0.0,0.0,0.0,0.0,
+2012-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,13.45,16.450001,13.39,13.83,9.506239,0.0,0.0,0.0,0.0,
+2013-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,14.18,20.07,14.15,19.040001,14.240255,0.0,0.0,0.0,0.0,
+2014-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,18.879999,21.110001,16.84,18.98,16.374435,0.0,0.0,0.0,0.0,
+2015-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,18.860001,22.549999,18.18,18.68,16.51823,0.0,0.0,0.0,0.0,
+2016-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,18.190001,21.26,14.98,20.639999,18.251404,0.0,0.0,0.0,0.0,
+2017-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,20.719999,26.52,20.66,26.35,23.30061,0.0,0.0,0.0,0.0,
+2018-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,26.52,30.75,19.139999,20.76,20.45569,0.0,0.0,0.0,0.0,
+2019-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,20.799999,26.440001,20.299999,26.25,26.25,0.0,0.0,0.0,0.0,
+2020-01-01,FFGRX,Emerald Growth Fund Investor Class,NASDAQ,2011-05-02,,26.299999,29.959999,16.459999,27.719999,27.719999,0.0,0.0,0.0,0.0,

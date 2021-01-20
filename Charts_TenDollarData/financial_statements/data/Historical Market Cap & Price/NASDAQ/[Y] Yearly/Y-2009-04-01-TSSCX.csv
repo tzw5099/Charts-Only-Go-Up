@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,11.94,13.94,11.91,13.5,10.389485,0.0,0.0,0.0,0.0,
+2010-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,13.5,14.28,13.17,13.3,10.638618,0.0,0.0,0.0,0.0,
+2011-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,13.31,14.3,12.9,14.3,11.924977,0.0,0.0,0.0,0.0,
+2012-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,14.3,15.44,14.3,15.19,13.052943,0.0,0.0,0.0,0.0,
+2013-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,15.19,15.35,14.17,14.3,12.649455,0.0,0.0,0.0,0.0,
+2014-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,14.31,15.4,14.31,15.3,13.865367,0.0,0.0,0.0,0.0,
+2015-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,15.32,15.5,15.01,15.28,14.133607,0.0,0.0,0.0,0.0,
+2016-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,15.31,15.73,14.79,14.92,14.038666,0.0,0.0,0.0,0.0,
+2017-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,14.92,15.27,14.83,15.15,14.536035,0.0,0.0,0.0,0.0,
+2018-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,15.15,15.15,14.72,14.88,14.576588,0.0,0.0,0.0,0.0,
+2019-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,14.89,15.48,14.89,15.31,15.232575,0.0,0.0,0.0,0.0,
+2020-01-01,TSSCX,Thornburg Strategic Municipal Income Fund Class C,NASDAQ,2009-04-01,,15.33,15.71,14.08,15.37,15.37,0.0,0.0,0.0,0.0,

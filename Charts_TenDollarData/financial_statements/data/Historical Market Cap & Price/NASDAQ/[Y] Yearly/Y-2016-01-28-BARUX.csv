@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,BARUX,Baron Asset Fund Class R6,NASDAQ,2016-01-28,,52.27,63.73,49.810001,59.560001,47.863281,0.0,0.0,0.0,0.0,
+2017-01-01,BARUX,Baron Asset Fund Class R6,NASDAQ,2016-01-28,,59.939999,75.980003,59.939999,70.459999,65.088066,0.0,0.0,0.0,0.0,
+2018-01-01,BARUX,Baron Asset Fund Class R6,NASDAQ,2016-01-28,,70.599998,85.379997,62.27,66.290001,65.16198,0.0,0.0,0.0,0.0,
+2019-01-01,BARUX,Baron Asset Fund Class R6,NASDAQ,2016-01-28,,65.620003,90.629997,63.939999,89.93,89.93,0.0,0.0,0.0,0.0,
+2020-01-01,BARUX,Baron Asset Fund Class R6,NASDAQ,2016-01-28,,90.910004,108.559998,64.07,103.07,103.07,0.0,0.0,0.0,0.0,

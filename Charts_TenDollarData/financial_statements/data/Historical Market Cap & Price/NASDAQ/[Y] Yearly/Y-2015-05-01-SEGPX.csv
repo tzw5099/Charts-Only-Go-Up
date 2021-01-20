@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,SEGPX,Guggenheim Large Cap Value Fund Class P,NASDAQ,2015-05-01,,43.639999,44.23,36.75,37.860001,28.936506,0.0,0.0,0.0,0.0,
+2016-01-01,SEGPX,Guggenheim Large Cap Value Fund Class P,NASDAQ,2015-05-01,,37.040001,44.23,33.259998,43.450001,34.760971,0.0,0.0,0.0,0.0,
+2017-01-01,SEGPX,Guggenheim Large Cap Value Fund Class P,NASDAQ,2015-05-01,,43.849998,49.970001,43.419998,46.240002,40.07317,0.0,0.0,0.0,0.0,
+2018-01-01,SEGPX,Guggenheim Large Cap Value Fund Class P,NASDAQ,2015-05-01,,46.580002,49.080002,36.919998,39.09,36.045704,0.0,0.0,0.0,0.0,
+2019-01-01,SEGPX,Guggenheim Large Cap Value Fund Class P,NASDAQ,2015-05-01,,39.220001,47.0,38.59,44.02,44.02,0.0,0.0,0.0,0.0,
+2020-01-01,SEGPX,Guggenheim Large Cap Value Fund Class P,NASDAQ,2015-05-01,,44.18,44.389999,27.280001,38.48,38.48,0.0,0.0,0.0,0.0,

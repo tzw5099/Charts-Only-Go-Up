@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,DMXF,,NASDAQ,2020-06-18,,51.64,56.563999,51.063,56.290001,56.290001,39014.0,39014.0,0.7039999999999997,0.026959183673469386,47.71087040816325

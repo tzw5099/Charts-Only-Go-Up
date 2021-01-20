@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,MSRFX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class IS",NASDAQ,2015-02-27,,19.280001,19.799999,16.73,16.969999,15.635883,0.0,0.0,0.0,0.0,
+2016-01-01,MSRFX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class IS",NASDAQ,2015-02-27,,16.889999,17.93,15.11,17.379999,16.24259,0.0,0.0,0.0,0.0,
+2017-01-01,MSRFX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class IS",NASDAQ,2015-02-27,,17.629999,20.68,17.610001,20.68,19.326632,0.0,0.0,0.0,0.0,
+2018-01-01,MSRFX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class IS",NASDAQ,2015-02-27,,20.82,22.209999,15.26,15.64,15.184058,0.0,0.0,0.0,0.0,
+2019-01-01,MSRFX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class IS",NASDAQ,2015-02-27,,15.64,17.9,15.57,17.1,17.1,0.0,0.0,0.0,0.0,
+2020-01-01,MSRFX,"Morgan Stanley Institutional Fund, Inc. Frontier Markets Portfolio Class IS",NASDAQ,2015-02-27,,17.15,17.620001,11.37,17.07,17.07,0.0,0.0,0.0,0.0,

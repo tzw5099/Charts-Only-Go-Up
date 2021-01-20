@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,32.310001,32.310001,32.18,32.18,16.758087,0.0,0.0,0.0,0.0,
+2012-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,32.77,38.529999,32.720001,36.93,19.618584,0.0,0.0,0.0,0.0,
+2013-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,37.84,48.080002,37.720001,48.080002,25.90793,0.0,0.0,0.0,0.0,
+2014-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,47.610001,53.889999,45.509998,47.48,28.764791,0.0,0.0,0.0,0.0,
+2015-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,47.389999,50.599998,42.23,42.98,29.730469,0.0,0.0,0.0,0.0,
+2016-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,42.330002,47.950001,38.73,46.509998,33.275677,0.0,0.0,0.0,0.0,
+2017-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,46.84,54.25,46.84,50.459999,39.011906,0.0,0.0,0.0,0.0,
+2018-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,50.82,54.549999,36.75,39.110001,35.92881,0.0,0.0,0.0,0.0,
+2019-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,39.119999,50.939999,38.27,47.599998,47.599998,0.0,0.0,0.0,0.0,
+2020-01-01,OMSIX,Invesco Oppenheimer Main Street Fund Class R6,NASDAQ,2011-12-29,,47.970001,52.470001,32.869999,49.82,49.82,0.0,0.0,0.0,0.0,

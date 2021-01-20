@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,15.0,16.309999,14.77,16.17,10.99413,0.0,0.0,0.0,0.0,
+2010-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,16.4,19.85,15.26,19.709999,13.401009,0.0,0.0,0.0,0.0,
+2011-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,20.030001,21.209999,17.08,18.620001,13.238756,0.0,0.0,0.0,0.0,
+2012-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,18.9,22.549999,18.799999,22.15,15.74857,0.0,0.0,0.0,0.0,
+2013-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,22.66,29.35,22.6,29.35,21.351862,0.0,0.0,0.0,0.0,
+2014-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,29.24,32.759998,27.74,31.16,23.429888,0.0,0.0,0.0,0.0,
+2015-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,31.110001,35.139999,30.08,31.01,25.199512,0.0,0.0,0.0,0.0,
+2016-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,30.25,31.74,25.92,29.15,24.553637,0.0,0.0,0.0,0.0,
+2017-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,29.530001,40.759998,29.530001,39.259998,34.0317,0.0,0.0,0.0,0.0,
+2018-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,39.970001,44.32,32.419998,34.73,32.315598,0.0,0.0,0.0,0.0,
+2019-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,34.689999,45.75,33.57,44.139999,44.139999,0.0,0.0,0.0,0.0,
+2020-01-01,DSMLX,Touchstone Large Company Growth Fund Class Institutional,NASDAQ,2009-08-31,,44.889999,57.220001,33.849998,52.43,52.43,0.0,0.0,0.0,0.0,

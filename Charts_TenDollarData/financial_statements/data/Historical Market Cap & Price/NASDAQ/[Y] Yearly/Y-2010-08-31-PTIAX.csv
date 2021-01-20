@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,20.0,20.879999,20.0,20.73,14.271918,0.0,0.0,0.0,0.0,
+2011-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,20.719999,21.360001,20.719999,20.969999,14.437153,0.0,0.0,0.0,0.0,
+2012-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,20.969999,23.190001,20.969999,22.9,16.468046,0.0,0.0,0.0,0.0,
+2013-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,22.91,23.290001,21.76,21.98,16.469007,0.0,0.0,0.0,0.0,
+2014-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,22.0,23.09,21.99,22.870001,17.934963,0.0,0.0,0.0,0.0,
+2015-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,22.91,23.17,22.450001,22.549999,18.558821,0.0,0.0,0.0,0.0,
+2016-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,22.58,23.09,22.209999,22.35,19.415331,0.0,0.0,0.0,0.0,
+2017-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,22.360001,22.940001,22.33,22.65,20.791115,0.0,0.0,0.0,0.0,
+2018-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,22.629999,22.639999,21.889999,22.1,21.207739,0.0,0.0,0.0,0.0,
+2019-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,22.129999,23.290001,22.1,22.77,22.597868,0.0,0.0,0.0,0.0,
+2020-01-01,PTIAX,Performance Trust Strategic Bond Fund,NASDAQ,2010-08-31,,22.809999,23.76,21.16,22.98,22.98,0.0,0.0,0.0,0.0,

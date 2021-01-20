@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,NHLDW,National Holdings Corporation Warrants,NASDAQ,2020-07-21,,0.1003,0.1998,0.0703,0.0892,0.0892,258517.0,258517.0,0.13829999999999998,5.303346153846151,0.10623230769230771

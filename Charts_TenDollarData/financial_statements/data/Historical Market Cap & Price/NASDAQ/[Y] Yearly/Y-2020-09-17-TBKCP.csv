@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,TBKCP,,NASDAQ,2020-09-17,619024038.36,24.15,25.99,23.6,25.48,25.48,1368444.0,1368444.0,-0.23500000000000004,-0.01225,25.015505833333332

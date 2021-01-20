@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,ECOW,Pacer Emerging Markets Cash Cows 100 ETF,NASDAQ,2019-05-06,,22.7809,25.1423,21.0565,25.1423,25.1423,192300.0,192300.0,-2.334,-0.1228690476190476,22.7550169047619
+2020-01-01,ECOW,Pacer Emerging Markets Cash Cows 100 ETF,NASDAQ,2019-05-06,,25.6062,25.7362,15.2624,21.85,21.85,110257.0,110257.0,-0.6140000000000001,-0.02371304347826087,18.67116356521739

@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,15.56,18.379999,15.15,18.24,9.945045,0.0,0.0,0.0,0.0,
+2010-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,18.559999,21.1,16.860001,20.9,11.516534,0.0,0.0,0.0,0.0,
+2011-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,21.120001,22.290001,17.5,19.49,10.73958,0.0,0.0,0.0,0.0,
+2012-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,19.700001,24.040001,19.639999,21.09,11.621229,0.0,0.0,0.0,0.0,
+2013-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,21.719999,26.15,21.299999,26.15,14.745523,0.0,0.0,0.0,0.0,
+2014-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,25.91,32.970001,25.440001,29.110001,18.520418,0.0,0.0,0.0,0.0,
+2015-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,28.99,33.549999,27.790001,29.610001,20.424688,0.0,0.0,0.0,0.0,
+2016-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,29.110001,35.080002,25.17,31.98,23.884846,0.0,0.0,0.0,0.0,
+2017-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,32.23,46.080002,32.23,40.200001,32.223637,0.0,0.0,0.0,0.0,
+2018-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,41.119999,46.580002,30.309999,32.73,29.507069,0.0,0.0,0.0,0.0,
+2019-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,32.959999,48.68,31.42,45.860001,45.860001,0.0,0.0,0.0,0.0,
+2020-01-01,SGTTX,Columbia Seligman Global Technology Fund Institutional 2 Class,NASDAQ,2009-08-03,,46.66,55.91,31.23,51.919998,51.919998,0.0,0.0,0.0,0.0,

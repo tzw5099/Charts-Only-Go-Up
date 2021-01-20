@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,HUIZ,Huize Holding Limited,NASDAQ,2020-02-12,,10.75,14.8,4.83,8.66,8.66,10976718.0,10976718.0,-1.8714999999999995,0.0013112582781455795,8.208978013245032

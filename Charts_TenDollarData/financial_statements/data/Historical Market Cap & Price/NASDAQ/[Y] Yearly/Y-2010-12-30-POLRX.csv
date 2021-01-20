@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,11.44,11.44,11.39,11.39,9.593581,0.0,0.0,0.0,0.0,
+2011-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,11.51,12.57,10.27,12.09,10.184011,0.0,0.0,0.0,0.0,
+2012-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,12.21,14.12,12.21,13.38,11.318192,0.0,0.0,0.0,0.0,
+2013-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,13.73,16.129999,13.61,16.129999,13.82649,0.0,0.0,0.0,0.0,
+2014-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,15.98,18.73,15.27,17.459999,16.038054,0.0,0.0,0.0,0.0,
+2015-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,17.41,20.610001,16.92,19.139999,18.329737,0.0,0.0,0.0,0.0,
+2016-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,18.709999,19.780001,17.1,19.23,18.415924,0.0,0.0,0.0,0.0,
+2017-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,19.43,24.35,19.43,23.85,23.229109,0.0,0.0,0.0,0.0,
+2018-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,24.1,29.48,23.41,24.959999,24.959242,0.0,0.0,0.0,0.0,
+2019-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,24.950001,34.369999,24.33,34.150002,34.150002,0.0,0.0,0.0,0.0,
+2020-01-01,POLRX,Polen Growth Fund Investor Class,NASDAQ,2010-12-30,,34.599998,44.5,26.040001,41.060001,41.060001,0.0,0.0,0.0,0.0,

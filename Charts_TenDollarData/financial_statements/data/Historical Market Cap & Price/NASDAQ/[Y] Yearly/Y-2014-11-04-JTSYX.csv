@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,JTSYX,JPMorgan SmartRetirement 2050 Fund Class R6,NASDAQ,2014-11-04,,18.9,19.41,18.51,18.559999,14.433845,0.0,0.0,0.0,0.0,
+2015-01-01,JTSYX,JPMorgan SmartRetirement 2050 Fund Class R6,NASDAQ,2014-11-04,,18.549999,19.59,17.209999,17.709999,14.220607,0.0,0.0,0.0,0.0,
+2016-01-01,JTSYX,JPMorgan SmartRetirement 2050 Fund Class R6,NASDAQ,2014-11-04,,17.43,19.01,15.61,18.33,15.190942,0.0,0.0,0.0,0.0,
+2017-01-01,JTSYX,JPMorgan SmartRetirement 2050 Fund Class R6,NASDAQ,2014-11-04,,18.33,22.02,18.33,21.5,18.55477,0.0,0.0,0.0,0.0,
+2018-01-01,JTSYX,JPMorgan SmartRetirement 2050 Fund Class R6,NASDAQ,2014-11-04,,21.690001,22.92,18.07,18.469999,16.764971,0.0,0.0,0.0,0.0,
+2019-01-01,JTSYX,JPMorgan SmartRetirement 2050 Fund Class R6,NASDAQ,2014-11-04,,18.440001,22.51,18.190001,20.969999,20.929695,0.0,0.0,0.0,0.0,
+2020-01-01,JTSYX,JPMorgan SmartRetirement 2050 Fund Class R6,NASDAQ,2014-11-04,,21.110001,21.91,14.46,21.26,21.26,0.0,0.0,0.0,0.0,

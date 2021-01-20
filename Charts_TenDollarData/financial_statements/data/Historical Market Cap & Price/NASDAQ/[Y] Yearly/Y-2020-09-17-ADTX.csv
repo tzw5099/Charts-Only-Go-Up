@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ADTX,,NASDAQ,2020-09-17,7777887.6,5.5,9.58,1.81,1.98,1.98,120025489.0,120025489.0,-4.7959999999999985,-1.8630178571428575,3.7872385714285732

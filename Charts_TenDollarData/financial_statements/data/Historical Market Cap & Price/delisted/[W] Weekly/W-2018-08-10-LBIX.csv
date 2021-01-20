@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-08-06,LBIX,Leading Brands Inc USA,delisted,2018-08-10,,1.2,1.22,1.15,1.15,,34435.0,34435.0,1.15,0.0,1.1733

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,SGLBW,Sigma Labs Inc. Warrant,NASDAQ,2020-07-21,,0.28,0.3999,0.1101,0.18,0.18,297778.0,297778.0,-0.924,-20.286849999999994,0.1892555

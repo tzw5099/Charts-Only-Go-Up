@@ -1,0 +1,27 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-09-17,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.45,0.5,0.41,0.41,0.41,2900.0,2900.0,-0.04,-8.889,0.44
+2019-09-27,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.41,0.41,0.41,0.41,0.41,50300.0,50300.0,0.0,0.0,0.41
+2019-09-30,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.4,0.4,0.4,0.4,0.4,300.0,300.0,0.0,0.0,0.4
+2019-10-01,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.39,0.39,0.35,0.35,0.35,20300.0,20300.0,-0.04,-10.256,0.36333
+2019-10-02,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.39,0.34,0.3,0.34,0.34,42400.0,42400.0,-0.05,-12.821,0.32667
+2019-10-03,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.3,0.34,0.16,0.33,0.33,200.0,200.0,0.03,10.0,0.27667
+2019-10-07,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.38,0.31,0.26,0.27,0.27,101600.0,101600.0,-0.11,-28.947,0.28
+2019-10-08,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.38,0.39,0.25,0.36,0.36,319408.0,319408.0,-0.02,-5.263,0.33333
+2019-10-09,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.38,0.45,0.41,0.41,0.41,5300.0,5300.0,0.03,7.895,0.42333
+2019-10-10,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.38,0.39,0.25,0.4,0.4,319408.0,319408.0,0.02,5.263,0.34667
+2019-10-14,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.45,0.38,0.38,0.41,0.41,200.0,200.0,-0.04,-8.889,0.39
+2019-10-15,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.45,0.45,0.45,0.45,0.45,984.0,984.0,0.0,0.0,0.45
+2019-10-16,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.45,0.45,0.45,0.37,0.37,984.0,984.0,-0.08,-17.778,0.42333
+2019-10-18,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.45,0.4,0.4,0.4,0.4,85300.0,85300.0,-0.05,-11.111,0.4
+2019-10-21,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.39,0.41,0.38,0.39,0.39,138600.0,138600.0,0.0,0.0,0.39333
+2019-10-22,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.38,0.38,0.38,0.4,0.4,200.0,200.0,0.02,5.263,0.38667
+2019-10-24,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.39,0.39,0.39,0.39,0.39,300.0,300.0,0.0,0.0,0.39
+2019-10-28,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.31,0.4,0.34,0.4,0.4,374566.0,374566.0,0.09,29.032,0.38
+2019-10-29,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.4,0.42,0.39,0.39,0.39,25400.0,25400.0,-0.01,-2.5,0.4
+2019-10-30,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.38,0.38,0.35,0.35,0.35,30266.0,30266.0,-0.03,-7.895,0.36
+2019-10-31,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.35,0.39,0.35,0.37,0.37,30300.0,30300.0,0.02,5.714,0.37
+2019-11-01,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.35,0.37,0.3,0.35,0.35,126200.0,126200.0,0.0,0.0,0.34
+2019-11-04,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.15,0.33,0.15,0.31,0.31,187911.0,187911.0,0.16,106.667,0.26333
+2019-11-05,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.15,0.35,0.26,0.3,0.3,11430.0,11430.0,0.15,100.0,0.30333
+2019-11-06,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.15,0.02,0.0,0.01,0.01,2212719.0,2212719.0,-0.14,-93.333,0.01
+2019-11-07,STNLW,Sentinel Energy Services Inc Warrant,delisted,2019-09-17,,0.01,0.0,0.0,0.0,0.0,512729.0,512729.0,0.0,0.0,0.0

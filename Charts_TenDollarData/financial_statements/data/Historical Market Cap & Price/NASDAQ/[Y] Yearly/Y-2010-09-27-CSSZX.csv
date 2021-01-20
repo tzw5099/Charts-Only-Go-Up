@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,14.61,17.120001,14.61,17.01,9.518403,0.0,0.0,0.0,0.0,
+2011-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,17.200001,18.75,12.56,14.67,8.660972,0.0,0.0,0.0,0.0,
+2012-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,14.9,17.309999,14.65,16.549999,10.028229,0.0,0.0,0.0,0.0,
+2013-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,16.99,24.09,16.99,23.1,14.891332,0.0,0.0,0.0,0.0,
+2014-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,22.76,24.76,20.629999,21.99,15.69869,0.0,0.0,0.0,0.0,
+2015-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,21.889999,24.24,18.639999,19.07,15.119715,0.0,0.0,0.0,0.0,
+2016-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,18.709999,21.809999,15.82,20.450001,17.096508,0.0,0.0,0.0,0.0,
+2017-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,20.690001,23.26,20.059999,20.629999,19.306013,0.0,0.0,0.0,0.0,
+2018-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,20.91,22.4,15.86,16.82,16.709658,0.0,0.0,0.0,0.0,
+2019-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,16.879999,20.09,16.620001,19.950001,19.950001,0.0,0.0,0.0,0.0,
+2020-01-01,CSSZX,Columbia Select Small Cap Value Fund Institutional Class,NASDAQ,2010-09-27,,19.959999,20.59,10.8,17.92,17.92,0.0,0.0,0.0,0.0,

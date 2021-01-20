@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,10.0,10.71,9.62,10.58,7.711271,0.0,0.0,0.0,0.0,
+2011-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,10.75,11.84,8.53,9.5,6.929927,0.0,0.0,0.0,0.0,
+2012-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,9.68,11.13,9.54,10.85,7.974644,0.0,0.0,0.0,0.0,
+2013-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,11.09,13.62,11.05,13.23,10.258689,0.0,0.0,0.0,0.0,
+2014-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,13.12,13.63,11.55,11.55,10.031457,0.0,0.0,0.0,0.0,
+2015-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,11.49,12.58,11.12,11.72,10.216655,0.0,0.0,0.0,0.0,
+2016-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,11.5,12.9,10.29,12.75,11.114535,0.0,0.0,0.0,0.0,
+2017-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,12.83,16.57,12.83,15.34,14.467171,0.0,0.0,0.0,0.0,
+2018-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,15.46,16.889999,12.65,13.26,12.870419,0.0,0.0,0.0,0.0,
+2019-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,13.24,16.82,13.04,16.43,16.43,0.0,0.0,0.0,0.0,
+2020-01-01,ENTIX,ERShares Global Fund Institutional Class,NASDAQ,2010-11-11,,16.59,20.040001,11.71,19.1,19.1,0.0,0.0,0.0,0.0,

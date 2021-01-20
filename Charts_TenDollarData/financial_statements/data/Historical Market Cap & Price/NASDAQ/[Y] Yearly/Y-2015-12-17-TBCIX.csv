@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,TBCIX,T. Rowe Price Blue Chip Growth Fund I Class,NASDAQ,2015-12-17,,72.410004,73.699997,71.209999,72.379997,67.654915,0.0,0.0,0.0,0.0,
+2016-01-01,TBCIX,T. Rowe Price Blue Chip Growth Fund I Class,NASDAQ,2015-12-17,,70.650002,74.580002,60.400002,72.620003,68.420517,0.0,0.0,0.0,0.0,
+2017-01-01,TBCIX,T. Rowe Price Blue Chip Growth Fund I Class,NASDAQ,2015-12-17,,73.339996,99.790001,73.339996,96.330002,93.529396,0.0,0.0,0.0,0.0,
+2018-01-01,TBCIX,T. Rowe Price Blue Chip Growth Fund I Class,NASDAQ,2015-12-17,,97.720001,115.019997,89.080002,96.120003,95.525925,0.0,0.0,0.0,0.0,
+2019-01-01,TBCIX,T. Rowe Price Blue Chip Growth Fund I Class,NASDAQ,2015-12-17,,96.050003,125.540001,93.18,124.470001,124.470001,0.0,0.0,0.0,0.0,
+2020-01-01,TBCIX,T. Rowe Price Blue Chip Growth Fund I Class,NASDAQ,2015-12-17,,126.610001,167.75,94.839996,152.580002,152.580002,0.0,0.0,0.0,0.0,

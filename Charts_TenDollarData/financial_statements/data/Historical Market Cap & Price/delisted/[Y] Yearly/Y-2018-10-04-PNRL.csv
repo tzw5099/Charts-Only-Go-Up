@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,PNRL,Paringa Resources Ltd,delisted,2018-10-04,,10.1,10.38,6.55,7.6,7.6,4700.0,4700.0,-0.61,-0.13554999999999998,1.1804445
+2019-01-01,PNRL,Paringa Resources Ltd,delisted,2018-10-04,,7.6,9.02,1.4,1.44,1.44,13967970.0,13967970.0,-2.0599999999999983,0.5403095238095238,1.9497354365079353
+2020-01-01,PNRL,Paringa Resources Ltd,delisted,2018-10-04,,1.44,1.44,0.01,0.05,0.05,1263395.0,1263395.0,2.42861286636753e-17,13.19797014925373,0.021891044776119403

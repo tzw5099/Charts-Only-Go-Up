@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,SAMAW,Schultze Special Purpose Acquisition Corp.,NASDAQ,2020-07-21,,1.55,0.85,0.296,0.68,0.68,5005361.0,5005361.0,-31.956299999999995,-62.47578787878789,0.5835596969696969

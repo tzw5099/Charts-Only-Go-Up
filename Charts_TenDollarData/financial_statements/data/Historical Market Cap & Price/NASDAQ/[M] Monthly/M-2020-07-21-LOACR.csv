@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,LOACR,Longevity Acquisition Corporation RT,NASDAQ,2020-07-21,,0.2013,0.2915,0.2005,0.2005,0.2005,4590.0,4590.0,-0.05759999999999999,-4.593999999999999,0.21479999999999996
+2020-08-01,LOACR,Longevity Acquisition Corporation RT,NASDAQ,2020-07-21,,0.2308,0.27,0.18,0.24,0.24,11715.0,11715.0,0.0967,8.001833333333332,0.23270666666666665
+2020-09-01,LOACR,Longevity Acquisition Corporation RT,NASDAQ,2020-07-21,,0.24,0.28,0.2154,0.227,0.227,18681.0,18681.0,-0.0124,-0.5991250000000001,0.2343425

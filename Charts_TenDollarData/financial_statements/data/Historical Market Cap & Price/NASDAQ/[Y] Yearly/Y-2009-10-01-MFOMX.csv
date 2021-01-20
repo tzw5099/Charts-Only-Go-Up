@@ -1,0 +1,13 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2009-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,9.71,10.93,9.71,10.82,4.76183,0.0,0.0,0.0,0.0,
+2010-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,10.98,12.5,9.68,12.47,5.510334,0.0,0.0,0.0,0.0,
+2011-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,12.69,13.72,10.03,11.23,4.981433,0.0,0.0,0.0,0.0,
+2012-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,11.49,13.72,11.47,13.14,5.880077,0.0,0.0,0.0,0.0,
+2013-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,13.49,17.219999,13.46,16.24,7.892371,0.0,0.0,0.0,0.0,
+2014-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,16.1,18.42,14.46,15.09,8.811352,0.0,0.0,0.0,0.0,
+2015-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,15.06,16.43,13.61,13.9,8.885791,0.0,0.0,0.0,0.0,
+2016-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,13.65,15.11,11.88,14.12,9.903378,0.0,0.0,0.0,0.0,
+2017-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,14.25,18.620001,14.25,16.780001,13.130767,0.0,0.0,0.0,0.0,
+2018-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,16.969999,18.82,12.36,13.24,12.339456,0.0,0.0,0.0,0.0,
+2019-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,13.26,16.66,12.94,16.0,16.0,0.0,0.0,0.0,0.0,
+2020-01-01,MFOMX,BNY Mellon Focused Equity Opportunities Fund Class M Shares,NASDAQ,2009-10-01,,16.209999,18.33,10.79,17.059999,17.059999,0.0,0.0,0.0,0.0,

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,SGRHX,Wells Fargo Growth Fund - Class R6,NASDAQ,2015-09-30,,48.970001,53.450001,44.990002,46.009998,23.422304,0.0,0.0,0.0,0.0,
+2016-01-01,SGRHX,Wells Fargo Growth Fund - Class R6,NASDAQ,2015-09-30,,45.09,48.59,38.119999,38.669998,23.318449,0.0,0.0,0.0,0.0,
+2017-01-01,SGRHX,Wells Fargo Growth Fund - Class R6,NASDAQ,2015-09-30,,39.080002,52.200001,39.080002,41.119999,31.558546,0.0,0.0,0.0,0.0,
+2018-01-01,SGRHX,Wells Fargo Growth Fund - Class R6,NASDAQ,2015-09-30,,41.599998,50.52,32.369999,34.98,31.793364,0.0,0.0,0.0,0.0,
+2019-01-01,SGRHX,Wells Fargo Growth Fund - Class R6,NASDAQ,2015-09-30,,35.02,47.919998,33.91,43.759998,43.759998,0.0,0.0,0.0,0.0,
+2020-01-01,SGRHX,Wells Fargo Growth Fund - Class R6,NASDAQ,2015-09-30,,44.380001,58.689999,32.209999,53.959999,53.959999,0.0,0.0,0.0,0.0,

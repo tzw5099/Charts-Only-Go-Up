@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,FSTRX,Federated MDT Large Cap Value Fund Class A,NASDAQ,2014-05-01,,28.469999,30.73,27.26,28.6,20.130859,0.0,0.0,0.0,0.0,
+2015-01-01,FSTRX,Federated MDT Large Cap Value Fund Class A,NASDAQ,2014-05-01,,28.58,29.790001,24.43,24.889999,19.097532,0.0,0.0,0.0,0.0,
+2016-01-01,FSTRX,Federated MDT Large Cap Value Fund Class A,NASDAQ,2014-05-01,,24.639999,27.91,21.6,27.209999,21.982992,0.0,0.0,0.0,0.0,
+2017-01-01,FSTRX,Federated MDT Large Cap Value Fund Class A,NASDAQ,2014-05-01,,27.51,30.57,27.24,28.16,25.07448,0.0,0.0,0.0,0.0,
+2018-01-01,FSTRX,Federated MDT Large Cap Value Fund Class A,NASDAQ,2014-05-01,,28.370001,30.08,22.530001,23.83,23.199692,0.0,0.0,0.0,0.0,
+2019-01-01,FSTRX,Federated MDT Large Cap Value Fund Class A,NASDAQ,2014-05-01,,23.92,28.01,23.51,28.0,27.847187,0.0,0.0,0.0,0.0,
+2020-01-01,FSTRX,Federated MDT Large Cap Value Fund Class A,NASDAQ,2014-05-01,,28.09,28.639999,17.59,26.030001,26.030001,0.0,0.0,0.0,0.0,

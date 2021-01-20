@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-04-01,BCSF-R,Bain Capital Specialty Finance Inc. Rights When Issued expiring 652020,delisted,2020-05-21,,0.0,0.31,0.15,0.29,0.29,12930279.0,12930279.0,0.0,0.0,0.20166599999999998

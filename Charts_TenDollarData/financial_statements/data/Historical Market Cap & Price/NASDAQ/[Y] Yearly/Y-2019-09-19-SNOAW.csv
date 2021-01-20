@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,SNOAW,Sonoma Pharmaceuticals Inc,NASDAQ,2019-09-19,,0.01,0.02,0.0,0.0,0.0,3161443.0,3161443.0,0.0,0.0,0.0061538461538461564
+2020-01-01,SNOAW,Sonoma Pharmaceuticals Inc,NASDAQ,2019-09-19,,0.01,0.01,0.0,0.0,0.0,1995667.0,1995667.0,0.0,0.0,0.002142857142857143

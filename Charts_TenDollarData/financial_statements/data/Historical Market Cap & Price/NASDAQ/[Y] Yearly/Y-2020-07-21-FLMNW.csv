@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,FLMNW,Falcon Minerals Corporation WT EXP 072122,NASDAQ,2020-07-21,,0.155,0.1327,0.07,0.098,0.098,251805.0,251805.0,-1.1827,-34.68327272727274,0.09576272727272728

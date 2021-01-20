@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,CREXW,"Creative Realities, Inc. WT EXP 110922",NASDAQ,2020-07-21,,0.46,0.39,0.15,0.2496,0.2496,29769.0,29769.0,-4.250900000000001,-49.05244444444444,0.22187944444444443

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTD,iShares iBonds Dec 2023 Term Treasury ETF,NASDAQ,2020-03-03,,25.36,27.94,25.2708,25.745001,25.745001,763495.0,763495.0,-1.3247999999999998,-0.04156451612903223,25.711672177419363

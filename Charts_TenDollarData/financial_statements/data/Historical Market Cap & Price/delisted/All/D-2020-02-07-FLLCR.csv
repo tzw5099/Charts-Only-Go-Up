@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-02-07,FLLCR,Fellazo Inc Rts 05262026,delisted,2020-02-07,,0.17,0.17,0.14,0.17,0.17,26288.0,26288.0,0.0,0.0,0.16
+2020-02-11,FLLCR,Fellazo Inc Rts 05262026,delisted,2020-02-07,,0.19,0.19,0.19,0.19,0.19,10000.0,10000.0,0.0,0.0,0.19
+2020-02-18,FLLCR,Fellazo Inc Rts 05262026,delisted,2020-02-07,,0.2,0.2,0.2,0.2,0.2,16018.0,16018.0,0.0,0.0,0.2
+2020-02-21,FLLCR,Fellazo Inc Rts 05262026,delisted,2020-02-07,,0.2,0.2,0.2,0.2,0.2,3200.0,3200.0,0.0,0.0,0.2
+2020-02-24,FLLCR,Fellazo Inc Rts 05262026,delisted,2020-02-07,,0.2,0.2,0.2,0.2,0.2,500.0,500.0,0.0,0.0,0.2
+2020-02-28,FLLCR,Fellazo Inc Rts 05262026,delisted,2020-02-07,,0.18,0.18,0.18,0.18,0.18,15850.0,15850.0,0.0,0.0,0.18
+2020-03-04,FLLCR,Fellazo Inc Rts 05262026,delisted,2020-02-07,,0.15,0.15,0.15,0.15,0.15,2605.0,2605.0,0.0,0.0,0.15

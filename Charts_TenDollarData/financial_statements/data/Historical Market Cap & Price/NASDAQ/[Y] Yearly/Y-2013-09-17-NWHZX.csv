@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,NWHZX,Nationwide Geneva Small Cap Growth Fund Class A,NASDAQ,2013-09-17,,42.259998,45.830002,41.639999,44.450001,34.678032,0.0,0.0,0.0,0.0,
+2014-01-01,NWHZX,Nationwide Geneva Small Cap Growth Fund Class A,NASDAQ,2013-09-17,,43.900002,44.900002,38.330002,40.369999,33.570221,0.0,0.0,0.0,0.0,
+2015-01-01,NWHZX,Nationwide Geneva Small Cap Growth Fund Class A,NASDAQ,2013-09-17,,39.98,47.490002,38.759998,42.169998,36.844692,0.0,0.0,0.0,0.0,
+2016-01-01,NWHZX,Nationwide Geneva Small Cap Growth Fund Class A,NASDAQ,2013-09-17,,41.099998,48.189999,36.209999,46.52,40.712383,0.0,0.0,0.0,0.0,
+2017-01-01,NWHZX,Nationwide Geneva Small Cap Growth Fund Class A,NASDAQ,2013-09-17,,46.52,57.490002,46.450001,54.119999,49.823769,0.0,0.0,0.0,0.0,
+2018-01-01,NWHZX,Nationwide Geneva Small Cap Growth Fund Class A,NASDAQ,2013-09-17,,54.400002,68.43,47.029999,50.330002,49.245113,0.0,0.0,0.0,0.0,
+2019-01-01,NWHZX,Nationwide Geneva Small Cap Growth Fund Class A,NASDAQ,2013-09-17,,49.939999,64.239998,48.650002,63.049999,63.049999,0.0,0.0,0.0,0.0,
+2020-01-01,NWHZX,Nationwide Geneva Small Cap Growth Fund Class A,NASDAQ,2013-09-17,,63.419998,71.639999,44.209999,66.75,66.75,0.0,0.0,0.0,0.0,

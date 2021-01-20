@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,KBLMW,KBL Merger Corp. IV Warrant,NASDAQ,2020-07-21,1251239.9200000002,0.2,0.33,0.141,0.28,0.28,4735450.0,4735450.0,0.23499999999999993,3.6324242424242437,0.21157454545454546

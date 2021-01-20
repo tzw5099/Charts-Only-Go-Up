@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,QMORX,AQR Large Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,22.110001,22.98,20.23,20.65,12.97731,0.0,0.0,0.0,0.0,
+2015-01-01,QMORX,AQR Large Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,20.65,22.110001,19.41,19.57,13.356422,0.0,0.0,0.0,0.0,
+2016-01-01,QMORX,AQR Large Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,19.219999,20.809999,17.120001,18.950001,14.003455,0.0,0.0,0.0,0.0,
+2017-01-01,QMORX,AQR Large Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,19.07,23.690001,19.07,21.51,17.362974,0.0,0.0,0.0,0.0,
+2018-01-01,QMORX,AQR Large Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,21.700001,24.99,17.52,18.41,16.678841,0.0,0.0,0.0,0.0,
+2019-01-01,QMORX,AQR Large Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,18.34,23.799999,17.799999,21.57,21.57,0.0,0.0,0.0,0.0,
+2020-01-01,QMORX,AQR Large Cap Momentum Style Fund Class R6,NASDAQ,2014-07-14,,21.76,26.02,15.71,24.08,24.08,0.0,0.0,0.0,0.0,

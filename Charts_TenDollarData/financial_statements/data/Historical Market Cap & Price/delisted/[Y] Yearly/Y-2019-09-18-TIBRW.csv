@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,TIBRW,Tiberius Acquisition Corp Warrants 28022021,delisted,2019-09-18,,0.55,1.26,0.52,1.14,1.14,3208090.0,3208090.0,3.3399999999999994,10.340392857142858,1.0507739285714284
+2020-01-01,TIBRW,Tiberius Acquisition Corp Warrants 28022021,delisted,2019-09-18,,1.14,2.01,0.72,0.72,0.72,2114112.0,2114112.0,-0.07000000000000035,0.07528205128205183,1.233077692307692

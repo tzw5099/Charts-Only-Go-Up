@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,MMDMU,Modern Media Acquisition Corp. Unit,NASDAQ,2017-05-12,,10.09,12.5,10.09,10.5124,,6019107.0,6019107.0,10.5124,0.0432,10.316127999999999
+2018-01-01,MMDMU,Modern Media Acquisition Corp. Unit,NASDAQ,2017-05-12,,10.42,11.0,9.52,10.38,,944311.0,944311.0,-0.13240000000000002,-0.01888524590163934,10.60616
+2019-01-01,MMDMU,Modern Media Acquisition Corp. Unit,NASDAQ,2017-05-12,,10.58,11.1119,10.41,10.7,,9278.0,9278.0,0.32,0.24569230769230768,10.7174125

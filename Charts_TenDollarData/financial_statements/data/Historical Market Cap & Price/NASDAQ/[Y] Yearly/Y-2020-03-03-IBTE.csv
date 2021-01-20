@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTE,iShares iBonds Dec 2024 Term Treasury ETF,NASDAQ,2020-03-03,,25.3077,26.8476,25.268,25.99,25.99,480201.0,480201.0,-1.2567,-0.0400909090909091,25.241122314049576

@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,GNRSW,Greenrose Acquisition Corp. Warrant,NASDAQ,2020-09-17,1129394.99,0.24,0.35,0.2,0.23,0.23,272425.0,272425.0,0.27,16.071285714285715,0.27095714285714284
+2020-08-01,GNRSW,Greenrose Acquisition Corp. Warrant,NASDAQ,2020-09-17,982082.6000000001,0.24,0.2725,0.18,0.2,0.2,181827.0,181827.0,-0.1901,-5.657642857142856,0.22276428571428572
+2020-09-01,GNRSW,Greenrose Acquisition Corp. Warrant,NASDAQ,2020-09-17,1325811.51,0.24,0.2782,0.2,0.26,0.26,306236.0,306236.0,-0.167,-6.9584,0.225047

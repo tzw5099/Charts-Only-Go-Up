@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,15.6,15.6,15.6,15.6,6.669127,0.0,0.0,0.0,0.0,
+2012-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,15.73,18.629999,15.49,17.709999,7.878616,0.0,0.0,0.0,0.0,
+2013-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,17.950001,20.82,16.73,17.34,8.021837,0.0,0.0,0.0,0.0,
+2014-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,17.32,22.540001,17.32,21.99,10.533443,0.0,0.0,0.0,0.0,
+2015-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,22.33,24.059999,19.780001,21.73,10.888184,0.0,0.0,0.0,0.0,
+2016-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,21.41,24.85,18.780001,22.24,11.738629,0.0,0.0,0.0,0.0,
+2017-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,22.34,23.799999,21.879999,22.780001,13.037498,0.0,0.0,0.0,0.0,
+2018-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,22.68,22.83,13.59,14.24,12.022194,0.0,0.0,0.0,0.0,
+2019-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,13.82,18.09,13.82,15.33,15.097845,0.0,0.0,0.0,0.0,
+2020-01-01,AIAGX,Aberdeen Realty Income & Growth Fund Class A,NASDAQ,2011-12-30,,15.1,16.370001,9.17,12.95,12.95,0.0,0.0,0.0,0.0,

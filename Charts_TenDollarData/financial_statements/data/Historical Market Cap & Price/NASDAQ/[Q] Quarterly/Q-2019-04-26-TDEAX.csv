@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,TDEAX,Touchstone Dynamic Equity Fund Class A,NASDAQ,2019-04-26,,15.46,15.68,14.88,15.57,12.803547,0.0,0.0,0.0,0.0,
+2019-07-01,TDEAX,Touchstone Dynamic Equity Fund Class A,NASDAQ,2019-04-26,,15.68,15.92,15.14,15.58,12.81177,0.0,0.0,0.0,0.0,
+2019-10-01,TDEAX,Touchstone Dynamic Equity Fund Class A,NASDAQ,2019-04-26,,15.46,16.049999,13.17,13.27,13.27,0.0,0.0,0.0,0.0,
+2020-01-01,TDEAX,Touchstone Dynamic Equity Fund Class A,NASDAQ,2019-04-26,,13.35,13.77,9.71,10.89,10.89,0.0,0.0,0.0,0.0,
+2020-04-01,TDEAX,Touchstone Dynamic Equity Fund Class A,NASDAQ,2019-04-26,,10.62,11.98,10.62,11.98,11.98,0.0,0.0,0.0,0.0,
+2020-07-01,TDEAX,Touchstone Dynamic Equity Fund Class A,NASDAQ,2019-04-26,,12.02,13.14,12.02,12.78,12.78,0.0,0.0,0.0,0.0,

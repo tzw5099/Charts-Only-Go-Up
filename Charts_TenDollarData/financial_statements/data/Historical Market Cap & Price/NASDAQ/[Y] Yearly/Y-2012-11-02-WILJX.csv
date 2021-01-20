@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,10.24,10.8,9.96,10.8,9.604967,0.0,0.0,0.0,0.0,
+2013-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,10.93,12.65,10.7,12.65,11.467235,0.0,0.0,0.0,0.0,
+2014-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,12.56,13.22,11.64,12.24,11.201156,0.0,0.0,0.0,0.0,
+2015-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,12.22,13.76,11.67,12.9,11.909657,0.0,0.0,0.0,0.0,
+2016-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,12.55,14.02,11.05,12.92,12.057745,0.0,0.0,0.0,0.0,
+2017-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,12.88,16.82,12.88,16.43,15.683376,0.0,0.0,0.0,0.0,
+2018-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,16.530001,17.700001,13.34,13.83,13.744639,0.0,0.0,0.0,0.0,
+2019-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,13.68,18.209999,13.55,18.120001,18.120001,0.0,0.0,0.0,0.0,
+2020-01-01,WILJX,William Blair International Leaders Fund R6 Class Shares,NASDAQ,2012-11-02,,18.27,20.790001,12.72,20.33,20.33,0.0,0.0,0.0,0.0,

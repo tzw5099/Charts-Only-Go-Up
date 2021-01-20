@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,BFYT,Benefytt Technologies Inc - Class A,delisted,2019-09-09,195667406.0,17.19,27.95,15.95,17.9,17.9,29204500.0,29204500.0,-0.10999999999999832,0.07125454545454556,23.681636727272732
+2020-01-01,BFYT,Benefytt Technologies Inc - Class A,delisted,2019-09-09,377834820.0,25.08,31.42,15.6,31.0,31.0,80774779.0,80774779.0,1.3499999999999985,0.11613445378151253,23.609033445378138

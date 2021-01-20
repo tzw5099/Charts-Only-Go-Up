@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,GTLIX,Glenmede Quantitative U.S. Large Cap Core Equity Portfolio Institutional Shares,NASDAQ,2015-06-30,,22.280001,22.85,20.27,21.629999,17.405235,0.0,0.0,0.0,0.0,
+2016-01-01,GTLIX,Glenmede Quantitative U.S. Large Cap Core Equity Portfolio Institutional Shares,NASDAQ,2015-06-30,,21.33,24.24,19.190001,23.76,19.375202,0.0,0.0,0.0,0.0,
+2017-01-01,GTLIX,Glenmede Quantitative U.S. Large Cap Core Equity Portfolio Institutional Shares,NASDAQ,2015-06-30,,23.940001,29.280001,23.940001,28.209999,24.21945,0.0,0.0,0.0,0.0,
+2018-01-01,GTLIX,Glenmede Quantitative U.S. Large Cap Core Equity Portfolio Institutional Shares,NASDAQ,2015-06-30,,28.42,30.469999,22.16,23.610001,22.335989,0.0,0.0,0.0,0.0,
+2019-01-01,GTLIX,Glenmede Quantitative U.S. Large Cap Core Equity Portfolio Institutional Shares,NASDAQ,2015-06-30,,23.629999,28.5,23.18,27.59,27.468018,0.0,0.0,0.0,0.0,
+2020-01-01,GTLIX,Glenmede Quantitative U.S. Large Cap Core Equity Portfolio Institutional Shares,NASDAQ,2015-06-30,,27.74,28.16,17.42,25.389999,25.389999,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,SRAC,Stable Road Acquisition Corp.,NASDAQ,2020-01-02,220411775.0,9.85,10.15,9.2,9.97,9.97,14705500.0,14705500.0,-0.1029999999999999,-0.009381443298969063,9.458340309278352

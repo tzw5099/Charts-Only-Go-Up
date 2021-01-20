@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,LVOLX,SGI U.S. Large Cap Equity Fund Class A,NASDAQ,2015-11-04,,14.7,14.7,13.41,13.58,11.574986,0.0,0.0,0.0,0.0,
+2016-01-01,LVOLX,SGI U.S. Large Cap Equity Fund Class A,NASDAQ,2015-11-04,,13.41,15.06,12.78,14.4,12.568911,0.0,0.0,0.0,0.0,
+2017-01-01,LVOLX,SGI U.S. Large Cap Equity Fund Class A,NASDAQ,2015-11-04,,14.48,16.74,14.35,15.66,14.590861,0.0,0.0,0.0,0.0,
+2018-01-01,LVOLX,SGI U.S. Large Cap Equity Fund Class A,NASDAQ,2015-11-04,,15.71,18.09,14.22,15.07,14.584356,0.0,0.0,0.0,0.0,
+2019-01-01,LVOLX,SGI U.S. Large Cap Equity Fund Class A,NASDAQ,2015-11-04,,15.01,18.799999,14.69,18.629999,18.629999,0.0,0.0,0.0,0.0,
+2020-01-01,LVOLX,SGI U.S. Large Cap Equity Fund Class A,NASDAQ,2015-11-04,,18.639999,19.99,13.5,18.85,18.85,0.0,0.0,0.0,0.0,

@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2014-01-01,CCSGX,Conestoga SMid Cap Fund Institutional Class,NASDAQ,2014-12-15,,8.92,9.35,8.9,9.2,8.96559,0.0,0.0,0.0,0.0,
+2015-01-01,CCSGX,Conestoga SMid Cap Fund Institutional Class,NASDAQ,2014-12-15,,9.09,9.83,8.53,9.21,8.975335,0.0,0.0,0.0,0.0,
+2016-01-01,CCSGX,Conestoga SMid Cap Fund Institutional Class,NASDAQ,2014-12-15,,8.94,10.45,7.7,10.19,9.930364,0.0,0.0,0.0,0.0,
+2017-01-01,CCSGX,Conestoga SMid Cap Fund Institutional Class,NASDAQ,2014-12-15,,10.25,13.78,10.24,13.65,13.345767,0.0,0.0,0.0,0.0,
+2018-01-01,CCSGX,Conestoga SMid Cap Fund Institutional Class,NASDAQ,2014-12-15,,13.69,17.530001,12.67,13.54,13.363785,0.0,0.0,0.0,0.0,
+2019-01-01,CCSGX,Conestoga SMid Cap Fund Institutional Class,NASDAQ,2014-12-15,,13.4,18.290001,13.05,17.879999,17.879999,0.0,0.0,0.0,0.0,
+2020-01-01,CCSGX,Conestoga SMid Cap Fund Institutional Class,NASDAQ,2014-12-15,,18.059999,20.219999,12.44,19.129999,19.129999,0.0,0.0,0.0,0.0,

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,PHUNW,Phunware Inc.,NASDAQ,2020-07-21,,0.2185,0.4,0.15,0.16,0.16,66024.0,66024.0,-0.0972,-2.118333333333333,0.21457428571428575

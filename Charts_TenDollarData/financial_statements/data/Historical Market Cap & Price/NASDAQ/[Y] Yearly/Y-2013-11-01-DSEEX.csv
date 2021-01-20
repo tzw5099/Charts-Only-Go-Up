@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,DSEEX,DoubleLine Shiller Enhanced CAPE Class I,NASDAQ,2013-11-01,,10.01,10.36,9.94,10.36,7.010945,0.0,0.0,0.0,0.0,
+2014-01-01,DSEEX,DoubleLine Shiller Enhanced CAPE Class I,NASDAQ,2013-11-01,,10.26,12.12,9.84,12.06,8.389525,0.0,0.0,0.0,0.0,
+2015-01-01,DSEEX,DoubleLine Shiller Enhanced CAPE Class I,NASDAQ,2013-11-01,,11.89,12.53,11.01,11.91,8.65782,0.0,0.0,0.0,0.0,
+2016-01-01,DSEEX,DoubleLine Shiller Enhanced CAPE Class I,NASDAQ,2013-11-01,,11.73,13.97,10.89,13.73,10.417357,0.0,0.0,0.0,0.0,
+2017-01-01,DSEEX,DoubleLine Shiller Enhanced CAPE Class I,NASDAQ,2013-11-01,,13.82,16.299999,13.82,15.27,12.669606,0.0,0.0,0.0,0.0,
+2018-01-01,DSEEX,DoubleLine Shiller Enhanced CAPE Class I,NASDAQ,2013-11-01,,15.4,17.059999,12.12,12.84,12.164224,0.0,0.0,0.0,0.0,
+2019-01-01,DSEEX,DoubleLine Shiller Enhanced CAPE Class I,NASDAQ,2013-11-01,,12.83,16.440001,12.53,16.280001,16.16913,0.0,0.0,0.0,0.0,
+2020-01-01,DSEEX,DoubleLine Shiller Enhanced CAPE Class I,NASDAQ,2013-11-01,,16.32,17.16,10.11,16.67,16.67,0.0,0.0,0.0,0.0,

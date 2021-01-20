@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,TILHX,TIAA-CREF Large Cap Growth Fund Advisor Class,NASDAQ,2015-12-04,,16.719999,16.719999,15.5,15.79,12.601538,0.0,0.0,0.0,0.0,
+2016-01-01,TILHX,TIAA-CREF Large Cap Growth Fund Advisor Class,NASDAQ,2015-12-04,,15.45,16.15,13.47,15.4,12.508376,0.0,0.0,0.0,0.0,
+2017-01-01,TILHX,TIAA-CREF Large Cap Growth Fund Advisor Class,NASDAQ,2015-12-04,,15.57,20.719999,15.57,19.84,16.799509,0.0,0.0,0.0,0.0,
+2018-01-01,TILHX,TIAA-CREF Large Cap Growth Fund Advisor Class,NASDAQ,2015-12-04,,20.1,23.75,16.24,17.459999,16.708059,0.0,0.0,0.0,0.0,
+2019-01-01,TILHX,TIAA-CREF Large Cap Growth Fund Advisor Class,NASDAQ,2015-12-04,,17.469999,22.139999,16.940001,21.85,21.85,0.0,0.0,0.0,0.0,
+2020-01-01,TILHX,TIAA-CREF Large Cap Growth Fund Advisor Class,NASDAQ,2015-12-04,,22.190001,29.99,16.98,27.16,27.16,0.0,0.0,0.0,0.0,

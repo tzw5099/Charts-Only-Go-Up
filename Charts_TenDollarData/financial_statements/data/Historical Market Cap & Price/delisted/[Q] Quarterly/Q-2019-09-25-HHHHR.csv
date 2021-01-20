@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,HHHHR,Wealthbridge Acquisition Limited Tradeable Rights March 2019,delisted,2019-09-25,489466.34,0.25,0.25,0.22,0.22,0.22,700.0,700.0,-0.03,-6.0,0.24
+2019-10-01,HHHHR,Wealthbridge Acquisition Limited Tradeable Rights March 2019,delisted,2019-09-25,751247.97,0.23,0.41,0.19,0.33,0.33,384741.0,384741.0,0.12000000000000001,1.3502432432432432,0.307117027027027
+2020-01-01,HHHHR,Wealthbridge Acquisition Limited Tradeable Rights March 2019,delisted,2019-09-25,1132512.18,0.33,0.6,0.2,0.46,0.46,720601.0,720601.0,0.06999999999999999,2.9016363636363645,0.34868727272727273
+2020-04-01,HHHHR,Wealthbridge Acquisition Limited Tradeable Rights March 2019,delisted,2019-09-25,2412743.34,0.4,0.99,0.35,0.98,0.98,2767618.0,2767618.0,0.5,5.3101666666666665,0.44555611111111104

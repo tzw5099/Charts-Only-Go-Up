@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,HCYIX,Hilton Tactical Income Fund Institutional Class,NASDAQ,2013-09-16,,15.0,15.64,14.8,15.58,12.453517,0.0,0.0,0.0,0.0,
+2014-01-01,HCYIX,Hilton Tactical Income Fund Institutional Class,NASDAQ,2013-09-16,,15.48,16.49,15.16,15.74,13.079148,0.0,0.0,0.0,0.0,
+2015-01-01,HCYIX,Hilton Tactical Income Fund Institutional Class,NASDAQ,2013-09-16,,15.79,15.93,14.68,15.07,13.052193,0.0,0.0,0.0,0.0,
+2016-01-01,HCYIX,Hilton Tactical Income Fund Institutional Class,NASDAQ,2013-09-16,,14.98,15.94,14.35,15.94,14.373522,0.0,0.0,0.0,0.0,
+2017-01-01,HCYIX,Hilton Tactical Income Fund Institutional Class,NASDAQ,2013-09-16,,15.92,16.84,15.88,16.790001,15.616123,0.0,0.0,0.0,0.0,
+2018-01-01,HCYIX,Hilton Tactical Income Fund Institutional Class,NASDAQ,2013-09-16,,16.75,17.07,15.35,15.68,15.181749,0.0,0.0,0.0,0.0,
+2019-01-01,HCYIX,Hilton Tactical Income Fund Institutional Class,NASDAQ,2013-09-16,,15.62,17.59,15.59,17.59,17.385511,0.0,0.0,0.0,0.0,
+2020-01-01,HCYIX,Hilton Tactical Income Fund Institutional Class,NASDAQ,2013-09-16,,17.58,18.129999,13.43,16.08,16.08,0.0,0.0,0.0,0.0,

@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,GIBLX,Guggenheim Total Return Bond Fund Class P,NASDAQ,2015-05-01,,26.98,26.98,26.040001,26.059999,22.930658,0.0,0.0,0.0,0.0,
+2016-01-01,GIBLX,Guggenheim Total Return Bond Fund Class P,NASDAQ,2015-05-01,,26.08,27.27,25.889999,26.42,24.286757,0.0,0.0,0.0,0.0,
+2017-01-01,GIBLX,Guggenheim Total Return Bond Fund Class P,NASDAQ,2015-05-01,,26.42,27.24,26.41,27.190001,25.779161,0.0,0.0,0.0,0.0,
+2018-01-01,GIBLX,Guggenheim Total Return Bond Fund Class P,NASDAQ,2015-05-01,,27.129999,27.16,26.389999,26.530001,25.917206,0.0,0.0,0.0,0.0,
+2019-01-01,GIBLX,Guggenheim Total Return Bond Fund Class P,NASDAQ,2015-05-01,,26.610001,27.67,26.450001,27.09,26.958326,0.0,0.0,0.0,0.0,
+2020-01-01,GIBLX,Guggenheim Total Return Bond Fund Class P,NASDAQ,2015-05-01,,27.129999,30.02,27.09,29.860001,29.860001,0.0,0.0,0.0,0.0,

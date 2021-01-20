@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,ANPC,"AnPac Bio-Medical Science Co., Ltd.",NASDAQ,2020-01-31,,10.99,12.0,4.3,4.9000001,4.9000001,20583039.0,20583039.0,-12.544,-0.8877687074829933,7.32338278911565

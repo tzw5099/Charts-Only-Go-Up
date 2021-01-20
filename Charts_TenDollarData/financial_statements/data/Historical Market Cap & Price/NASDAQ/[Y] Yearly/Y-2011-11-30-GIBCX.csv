@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2011-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,25.0,25.129999,25.0,25.129999,19.6479,0.0,0.0,0.0,0.0,
+2012-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,25.17,27.030001,25.15,26.99,21.890261,0.0,0.0,0.0,0.0,
+2013-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,26.98,27.639999,25.889999,26.16,22.050135,0.0,0.0,0.0,0.0,
+2014-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,26.18,27.15,26.18,26.950001,23.613302,0.0,0.0,0.0,0.0,
+2015-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,26.969999,27.219999,26.040001,26.059999,23.653173,0.0,0.0,0.0,0.0,
+2016-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,26.08,27.27,25.9,26.42,24.848032,0.0,0.0,0.0,0.0,
+2017-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,26.42,27.25,26.41,27.200001,26.179064,0.0,0.0,0.0,0.0,
+2018-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,27.139999,27.17,26.389999,26.540001,26.121855,0.0,0.0,0.0,0.0,
+2019-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,26.620001,27.68,26.459999,27.1,27.018019,0.0,0.0,0.0,0.0,
+2020-01-01,GIBCX,Guggenheim Total Return Bond Fund Class C,NASDAQ,2011-11-30,,27.139999,30.030001,27.1,29.879999,29.879999,0.0,0.0,0.0,0.0,

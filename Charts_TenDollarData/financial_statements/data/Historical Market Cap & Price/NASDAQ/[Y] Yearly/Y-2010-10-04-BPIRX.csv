@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,10.0,10.72,10.0,10.69,9.207345,0.0,0.0,0.0,0.0,
+2011-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,10.75,11.45,10.0,10.96,9.521232,0.0,0.0,0.0,0.0,
+2012-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,11.09,12.4,11.07,12.3,10.795014,0.0,0.0,0.0,0.0,
+2013-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,12.46,14.43,12.42,14.43,12.713465,0.0,0.0,0.0,0.0,
+2014-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,14.37,15.5,14.03,15.29,13.652719,0.0,0.0,0.0,0.0,
+2015-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,15.24,15.83,14.74,14.91,13.826931,0.0,0.0,0.0,0.0,
+2016-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,14.83,15.64,13.86,15.47,14.346252,0.0,0.0,0.0,0.0,
+2017-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,15.52,17.059999,15.52,17.01,15.774386,0.0,0.0,0.0,0.0,
+2018-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,17.09,17.85,13.97,14.43,14.103812,0.0,0.0,0.0,0.0,
+2019-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,14.48,16.02,14.35,15.88,15.88,0.0,0.0,0.0,0.0,
+2020-01-01,BPIRX,Boston Partners Long/Short Research Fund Institutional Class,NASDAQ,2010-10-04,,15.93,15.93,11.49,13.39,13.39,0.0,0.0,0.0,0.0,

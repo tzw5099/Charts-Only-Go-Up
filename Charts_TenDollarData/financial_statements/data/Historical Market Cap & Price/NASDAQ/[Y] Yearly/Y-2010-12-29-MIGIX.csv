@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,10.05,10.05,10.01,10.01,6.09171,0.0,0.0,0.0,0.0,
+2011-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,10.14,11.08,9.05,9.97,6.108591,0.0,0.0,0.0,0.0,
+2012-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,10.16,12.23,10.09,11.37,7.506514,0.0,0.0,0.0,0.0,
+2013-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,11.6,14.01,11.57,13.56,9.739303,0.0,0.0,0.0,0.0,
+2014-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,13.47,13.82,12.29,12.74,9.816156,0.0,0.0,0.0,0.0,
+2015-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,12.71,13.94,11.8,12.36,10.201812,0.0,0.0,0.0,0.0,
+2016-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,12.06,12.88,10.62,12.12,10.222962,0.0,0.0,0.0,0.0,
+2017-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,12.18,17.049999,12.18,15.43,14.485519,0.0,0.0,0.0,0.0,
+2018-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,15.63,17.389999,12.94,13.96,13.654868,0.0,0.0,0.0,0.0,
+2019-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,13.89,18.549999,13.54,17.959999,17.959999,0.0,0.0,0.0,0.0,
+2020-01-01,MIGIX,"Morgan Stanley Institutional Fund, Inc. Global Advantage Portfolio Class I",NASDAQ,2010-12-29,,18.23,29.620001,14.03,26.709999,26.709999,0.0,0.0,0.0,0.0,

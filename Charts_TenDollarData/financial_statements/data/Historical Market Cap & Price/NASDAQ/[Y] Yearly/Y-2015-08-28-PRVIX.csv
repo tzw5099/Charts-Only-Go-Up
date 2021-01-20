@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,PRVIX,T. Rowe Price Small-Cap Value Fund I Class,NASDAQ,2015-08-28,,44.459999,47.529999,35.849998,36.310001,29.327406,0.0,0.0,0.0,0.0,
+2016-01-01,PRVIX,T. Rowe Price Small-Cap Value Fund I Class,NASDAQ,2015-08-28,,35.580002,47.560001,32.490002,45.119999,37.847328,0.0,0.0,0.0,0.0,
+2017-01-01,PRVIX,T. Rowe Price Small-Cap Value Fund I Class,NASDAQ,2015-08-28,,45.240002,51.82,44.299999,49.060001,42.958736,0.0,0.0,0.0,0.0,
+2018-01-01,PRVIX,T. Rowe Price Small-Cap Value Fund I Class,NASDAQ,2015-08-28,,49.299999,54.349998,37.75,39.84,38.022511,0.0,0.0,0.0,0.0,
+2019-01-01,PRVIX,T. Rowe Price Small-Cap Value Fund I Class,NASDAQ,2015-08-28,,39.93,49.540001,39.48,47.889999,47.889999,0.0,0.0,0.0,0.0,
+2020-01-01,PRVIX,T. Rowe Price Small-Cap Value Fund I Class,NASDAQ,2015-08-28,,47.84,48.450001,28.610001,42.669998,42.669998,0.0,0.0,0.0,0.0,

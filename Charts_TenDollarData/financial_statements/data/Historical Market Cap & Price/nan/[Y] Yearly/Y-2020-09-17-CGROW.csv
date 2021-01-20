@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,CGROW,,,2020-09-17,3291412.0,0.88,1.16,0.4446,0.78,0.78,1064539.0,1064539.0,0.9197999999999997,4.833199999999999,0.7386743333333334

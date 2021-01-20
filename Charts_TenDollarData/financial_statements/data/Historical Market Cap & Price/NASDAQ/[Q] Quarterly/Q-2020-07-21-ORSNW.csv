@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,ORSNW,Orisun Acquisition Corp.,NASDAQ,2020-07-21,605740.93,0.405,0.47,0.145,0.31,0.31,1824893.0,1824893.0,-6.0306000000000015,-38.51275757575758,0.2880433333333333

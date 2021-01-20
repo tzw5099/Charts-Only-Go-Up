@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,NHMFX,Nuveen High Yield Municipal Bond Fund Class R6,NASDAQ,2016-07-05,,18.01,18.01,16.24,16.459999,14.015957,0.0,0.0,0.0,0.0,
+2017-01-01,NHMFX,Nuveen High Yield Municipal Bond Fund Class R6,NASDAQ,2016-07-05,,16.450001,17.559999,16.450001,17.469999,15.722151,0.0,0.0,0.0,0.0,
+2018-01-01,NHMFX,Nuveen High Yield Municipal Bond Fund Class R6,NASDAQ,2016-07-05,,17.469999,17.49,16.709999,16.889999,16.045572,0.0,0.0,0.0,0.0,
+2019-01-01,NHMFX,Nuveen High Yield Municipal Bond Fund Class R6,NASDAQ,2016-07-05,,16.91,18.16,16.870001,18.0,17.773691,0.0,0.0,0.0,0.0,
+2020-01-01,NHMFX,Nuveen High Yield Municipal Bond Fund Class R6,NASDAQ,2016-07-05,,18.02,18.84,14.64,16.92,16.92,0.0,0.0,0.0,0.0,

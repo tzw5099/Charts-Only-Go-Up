@@ -1,0 +1,10 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2012-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,16.93,19.0,16.879999,18.360001,12.851655,0.0,0.0,0.0,0.0,
+2013-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,18.780001,23.969999,18.780001,22.92,17.089132,0.0,0.0,0.0,0.0,
+2014-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,22.790001,24.52,22.209999,22.639999,18.377958,0.0,0.0,0.0,0.0,
+2015-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,22.6,24.200001,19.469999,19.870001,17.518452,0.0,0.0,0.0,0.0,
+2016-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,19.6,22.049999,17.719999,21.629999,19.211882,0.0,0.0,0.0,0.0,
+2017-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,21.9,24.27,21.9,23.879999,21.796127,0.0,0.0,0.0,0.0,
+2018-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,24.1,25.52,19.25,20.01,19.013184,0.0,0.0,0.0,0.0,
+2019-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,20.200001,24.9,19.870001,23.9,23.9,0.0,0.0,0.0,0.0,
+2020-01-01,DROYX,Diamond Hill Research Opportunities Fund Class Y,NASDAQ,2012-01-03,,24.01,24.219999,15.17,22.17,22.17,0.0,0.0,0.0,0.0,

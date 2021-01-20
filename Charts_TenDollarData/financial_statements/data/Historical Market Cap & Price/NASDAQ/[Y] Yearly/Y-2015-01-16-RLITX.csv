@@ -1,0 +1,7 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-01-01,RLITX,Lazard International Strategic Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,13.7,15.21,12.73,13.34,11.668067,0.0,0.0,0.0,0.0,
+2016-01-01,RLITX,Lazard International Strategic Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,13.12,13.69,11.8,12.45,11.064642,0.0,0.0,0.0,0.0,
+2017-01-01,RLITX,Lazard International Strategic Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,12.5,15.78,12.5,15.71,14.143751,0.0,0.0,0.0,0.0,
+2018-01-01,RLITX,Lazard International Strategic Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,15.85,16.969999,12.55,12.9,12.661963,0.0,0.0,0.0,0.0,
+2019-01-01,RLITX,Lazard International Strategic Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,12.81,15.59,12.67,15.39,15.39,0.0,0.0,0.0,0.0,
+2020-01-01,RLITX,Lazard International Strategic Equity Portfolio R6 Shares,NASDAQ,2015-01-16,,15.51,15.73,10.06,15.11,15.11,0.0,0.0,0.0,0.0,

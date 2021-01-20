@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BSBK,Bogota Financial Corp.,NASDAQ,2020-01-16,99561402.5,11.4,11.97,6.07,7.87,7.87,6784169.0,6784169.0,3.6783999999999994,0.3680532544378698,8.634977928994084

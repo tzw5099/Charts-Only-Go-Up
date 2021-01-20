@@ -1,0 +1,15 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-07-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,8.7e-05,8.7e-05,8.7e-05,8.7e-05,,8503.0,8503.0,8.7e-05,0.0,8.7e-05
+2015-10-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,,,,,,0.0,0.0,0.0,,
+2016-01-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,8.7e-05,8.7e-05,8.7e-05,8.7e-05,,2500.0,2500.0,0.0,0.0,8.7e-05
+2016-04-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,,,,,,0.0,0.0,0.0,,
+2016-07-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,,,,,,0.0,0.0,0.0,,
+2016-10-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,,,,,,0.0,0.0,0.0,,
+2017-01-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,,,,,,0.0,0.0,0.0,,
+2017-04-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,,,,,,0.0,0.0,0.0,,
+2017-07-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,,,,,,0.0,0.0,0.0,,
+2017-10-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,15.6584,16.4825,14.0265,14.1773,,19856954.0,19856954.0,14.177188000000005,548416.2895625003,15.193121875000003
+2018-01-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,14.0087,15.6843,12.8021,15.3527,,43972282.0,43972282.0,1.1754219999999997,0.14360655737704925,14.20200983606557
+2018-04-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,15.3981,15.7797,14.4663,14.6445,,23746236.0,23746236.0,-0.708254,-0.06976562499999998,15.195479687499997
+2018-07-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,14.5695,16.1258,14.5695,14.6829,,20915156.0,20915156.0,0.03843900000000028,0.008015873015872935,15.429966666666667
+2018-10-01,CCT,Corporate Capital Trust Inc,delisted,2015-08-21,,14.731,14.808,12.32,12.35,,29079492.0,29079492.0,-2.3328970000000004,-0.3007678571428571,13.700617857142856

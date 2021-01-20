@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,PNFPP,,NASDAQ,2020-06-04,,25.4618,26.99,24.7116,26.690001,26.690001,4830868.0,4830868.0,-2.400800000000001,-0.12844444444444436,25.76008680555556

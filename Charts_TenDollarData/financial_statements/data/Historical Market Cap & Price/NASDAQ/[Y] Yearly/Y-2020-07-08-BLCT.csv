@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,BLCT,,NASDAQ,2020-07-08,,20.45,35.89,10.6,10.74,10.74,19481147.0,19481147.0,-7.86,-0.7602941176470589,15.264777843137258

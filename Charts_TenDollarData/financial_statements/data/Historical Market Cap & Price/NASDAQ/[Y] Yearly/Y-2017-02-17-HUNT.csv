@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-01-01,HUNT,Hunter Maritime Acquisition Corp.,NASDAQ,2017-02-17,,9.8,10.5,7.99,9.76,,4970448.0,4970448.0,9.760000000000002,0.04350862068965515,9.790403
+2018-01-01,HUNT,Hunter Maritime Acquisition Corp.,NASDAQ,2017-02-17,,9.759,10.9,9.71,9.93,,4324236.0,4324236.0,0.17,0.01283552631578947,9.890753636363636
+2019-01-01,HUNT,Hunter Maritime Acquisition Corp.,NASDAQ,2017-02-17,,10.1,103.9,9.14,95.0,,3566912.0,3566912.0,85.07000000000001,10.571020833333334,11.362504761904765

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,TCFCP,TCF Financial Corporation,NASDAQ,2020-01-21,,25.4944,26.59,11.3215,26.451,26.451,2583600.0,2583600.0,7.258300000000003,0.24933734939759028,24.101198253012047

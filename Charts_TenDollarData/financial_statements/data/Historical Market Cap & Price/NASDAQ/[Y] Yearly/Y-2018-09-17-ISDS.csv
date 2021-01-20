@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,ISDS,Invesco RAFI Strategic Developed ex-US Small Company ETF,NASDAQ,2018-09-17,,25.28,25.72,20.49,21.05,20.7,15052.0,15052.0,0.03,-0.0008219178082191817,7.252739589041097
+2019-01-01,ISDS,Invesco RAFI Strategic Developed ex-US Small Company ETF,NASDAQ,2018-09-17,,21.05,24.9,21.05,24.9,24.9,138300.0,138300.0,-1.79,-0.030607142857142857,6.934312222222221
+2020-01-01,ISDS,Invesco RAFI Strategic Developed ex-US Small Company ETF,NASDAQ,2018-09-17,,24.9,24.9,15.26,22.02,22.02,137500.0,137500.0,-0.03999999999999986,0.001429447852760731,8.936237423312884

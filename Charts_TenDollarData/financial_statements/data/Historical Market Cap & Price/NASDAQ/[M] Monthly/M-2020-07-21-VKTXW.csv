@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,VKTXW,"Viking Therapeutics, Inc. Warrant",NASDAQ,2020-07-21,,6.21,6.25,5.1265,6.24,6.24,60252.0,60252.0,-2.74,-11.030500000000002,5.4829925
+2020-08-01,VKTXW,"Viking Therapeutics, Inc. Warrant",NASDAQ,2020-07-21,,6.21,6.7,5.2002,5.28,5.28,34601.0,34601.0,-1.08,-1.5810000000000002,6.091257272727273
+2020-09-01,VKTXW,"Viking Therapeutics, Inc. Warrant",NASDAQ,2020-07-21,,6.21,5.45,4.24,4.83,4.83,46268.0,46268.0,-14.05,-25.13877777777778,4.674088888888889

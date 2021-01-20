@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,JMPNZ,JMP Group LLC - 6.875% Senior N,NASDAQ,2020-01-02,420866640.0,23.0,24.421,10.0,21.52,21.52,1267220.0,1267220.0,-6.7109999999999985,-0.12038738738738727,21.35438414414415

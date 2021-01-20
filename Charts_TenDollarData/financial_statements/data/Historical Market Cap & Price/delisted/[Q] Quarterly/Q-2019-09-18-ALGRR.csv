@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-07-01,ALGRR,Allegro Merger Corp Tradeable Rights Aug 2018,delisted,2019-09-18,,0.25,0.26,0.25,0.26,0.26,1200.0,1200.0,0.0,0.0,0.255
+2019-10-01,ALGRR,Allegro Merger Corp Tradeable Rights Aug 2018,delisted,2019-09-18,,0.25,0.5,0.2,0.32,0.32,5493805.0,5493805.0,0.14,1.5908695652173914,0.31340608695652167
+2020-01-01,ALGRR,Allegro Merger Corp Tradeable Rights Aug 2018,delisted,2019-09-18,,0.36,0.45,0.05,0.08,0.08,2103336.0,2103336.0,-0.35000000000000003,-0.8167659574468086,0.2692908510638298
+2020-04-01,ALGRR,Allegro Merger Corp Tradeable Rights Aug 2018,delisted,2019-09-18,299000000.0,0.01,0.07,0.0,0.02,0.02,84839047.0,84839047.0,-0.04,-8.974307692307692,0.014358461538461535

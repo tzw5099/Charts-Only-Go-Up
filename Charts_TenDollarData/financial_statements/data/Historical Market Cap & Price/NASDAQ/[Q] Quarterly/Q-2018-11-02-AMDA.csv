@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-10-01,AMDA,Amedica Corporation,NASDAQ,2018-11-02,,0.2685,0.3163,0.2647,0.29,,481327.0,481327.0,0.29,0.0,0.289113

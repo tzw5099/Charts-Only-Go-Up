@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,10.0,12.15,8.92,12.07,9.923821,0.0,0.0,0.0,0.0,
+2011-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,12.24,13.1,10.49,11.63,9.592458,0.0,0.0,0.0,0.0,
+2012-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,11.85,14.0,11.7,13.81,11.505488,0.0,0.0,0.0,0.0,
+2013-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,14.04,17.129999,13.64,17.01,14.426072,0.0,0.0,0.0,0.0,
+2014-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,16.959999,18.290001,16.24,17.58,15.160868,0.0,0.0,0.0,0.0,
+2015-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,17.559999,18.940001,15.65,17.65,15.221237,0.0,0.0,0.0,0.0,
+2016-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,17.209999,19.51,14.64,17.68,15.24711,0.0,0.0,0.0,0.0,
+2017-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,17.85,24.530001,17.85,24.41,21.098337,0.0,0.0,0.0,0.0,
+2018-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,24.790001,28.02,20.290001,21.700001,20.471252,0.0,0.0,0.0,0.0,
+2019-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,21.66,28.049999,21.17,26.59,26.59,0.0,0.0,0.0,0.0,
+2020-01-01,SCGVX,Sands Capital Global Growth Fund Investor Shares,NASDAQ,2010-03-31,,26.9,35.66,20.290001,33.650002,33.650002,0.0,0.0,0.0,0.0,

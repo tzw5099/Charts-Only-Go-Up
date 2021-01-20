@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-01-01,RLUEX,Lazard US Equity Concentrated Portfolio R6 Shares,NASDAQ,2016-11-15,,14.77,15.04,14.18,14.18,11.826533,0.0,0.0,0.0,0.0,
+2017-01-01,RLUEX,Lazard US Equity Concentrated Portfolio R6 Shares,NASDAQ,2016-11-15,,14.3,16.469999,14.3,15.34,13.662129,0.0,0.0,0.0,0.0,
+2018-01-01,RLUEX,Lazard US Equity Concentrated Portfolio R6 Shares,NASDAQ,2016-11-15,,15.52,16.370001,12.21,12.92,12.815696,0.0,0.0,0.0,0.0,
+2019-01-01,RLUEX,Lazard US Equity Concentrated Portfolio R6 Shares,NASDAQ,2016-11-15,,12.9,16.969999,12.54,16.889999,16.889999,0.0,0.0,0.0,0.0,
+2020-01-01,RLUEX,Lazard US Equity Concentrated Portfolio R6 Shares,NASDAQ,2016-11-15,,17.040001,17.799999,11.4,16.799999,16.799999,0.0,0.0,0.0,0.0,

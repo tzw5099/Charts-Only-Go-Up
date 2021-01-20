@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-01-01,DISHV,DISH Network Corporation,NASDAQ,2019-11-22,,2.5,2.94,2.5,2.76,2.76,386673.0,386673.0,0.26,10.4,2.73333

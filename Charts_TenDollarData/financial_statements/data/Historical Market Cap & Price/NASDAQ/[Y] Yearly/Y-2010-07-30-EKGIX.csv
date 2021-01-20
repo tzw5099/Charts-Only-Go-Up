@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2010-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,28.370001,36.0,26.9,36.0,20.22201,0.0,0.0,0.0,0.0,
+2011-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,36.279999,39.150002,26.9,29.41,16.649374,0.0,0.0,0.0,0.0,
+2012-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,30.209999,35.759998,29.59,35.669998,20.415192,0.0,0.0,0.0,0.0,
+2013-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,36.389999,45.34,36.27,45.029999,26.052078,0.0,0.0,0.0,0.0,
+2014-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,44.599998,48.130001,36.810001,38.18,26.187946,0.0,0.0,0.0,0.0,
+2015-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,37.869999,41.330002,35.68,35.869999,25.969433,0.0,0.0,0.0,0.0,
+2016-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,35.200001,42.959999,32.150002,39.900002,30.932123,0.0,0.0,0.0,0.0,
+2017-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,40.139999,49.0,39.990002,44.200001,38.542248,0.0,0.0,0.0,0.0,
+2018-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,44.459999,46.779999,34.43,35.790001,34.245579,0.0,0.0,0.0,0.0,
+2019-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,35.860001,43.509998,35.459999,42.790001,42.790001,0.0,0.0,0.0,0.0,
+2020-01-01,EKGIX,Wells Fargo Global Small Cap Fund Class Inst,NASDAQ,2010-07-30,,42.950001,43.060001,28.51,39.939999,39.939999,0.0,0.0,0.0,0.0,

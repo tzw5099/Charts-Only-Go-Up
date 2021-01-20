@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,IMTXW,,NASDAQ,2020-07-21,,3.03,4.0,2.63,2.65,2.65,296912.0,296912.0,-2.9637000000000007,-2.4380625,3.1376803125

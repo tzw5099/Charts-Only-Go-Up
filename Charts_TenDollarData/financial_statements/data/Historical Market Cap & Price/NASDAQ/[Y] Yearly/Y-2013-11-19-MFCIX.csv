@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,MFCIX,Meridian Contrarian Fund Investor Class,NASDAQ,2013-11-19,,42.189999,43.950001,42.189999,43.950001,20.805103,0.0,0.0,0.0,0.0,
+2014-01-01,MFCIX,Meridian Contrarian Fund Investor Class,NASDAQ,2013-11-19,,43.43,46.48,38.139999,38.799999,22.15126,0.0,0.0,0.0,0.0,
+2015-01-01,MFCIX,Meridian Contrarian Fund Investor Class,NASDAQ,2013-11-19,,38.639999,41.91,31.4,32.029999,21.307829,0.0,0.0,0.0,0.0,
+2016-01-01,MFCIX,Meridian Contrarian Fund Investor Class,NASDAQ,2013-11-19,,31.57,37.720001,28.030001,37.07,24.781052,0.0,0.0,0.0,0.0,
+2017-01-01,MFCIX,Meridian Contrarian Fund Investor Class,NASDAQ,2013-11-19,,37.41,45.799999,37.34,41.700001,30.870274,0.0,0.0,0.0,0.0,
+2018-01-01,MFCIX,Meridian Contrarian Fund Investor Class,NASDAQ,2013-11-19,,42.139999,47.82,29.120001,30.67,28.405642,0.0,0.0,0.0,0.0,
+2019-01-01,MFCIX,Meridian Contrarian Fund Investor Class,NASDAQ,2013-11-19,,30.91,37.599998,30.49,35.099998,35.099998,0.0,0.0,0.0,0.0,
+2020-01-01,MFCIX,Meridian Contrarian Fund Investor Class,NASDAQ,2013-11-19,,35.189999,36.18,20.959999,34.709999,34.709999,0.0,0.0,0.0,0.0,

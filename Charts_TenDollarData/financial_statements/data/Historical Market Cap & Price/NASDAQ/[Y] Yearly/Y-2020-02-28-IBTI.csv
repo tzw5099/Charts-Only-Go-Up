@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,IBTI,iShares iBonds Dec 2028 Term Treasury ETF,NASDAQ,2020-02-28,,25.3467,28.0473,25.1475,26.610001,26.610001,626747.0,626747.0,-2.2869999999999995,-0.07367796610169489,25.298494067796597

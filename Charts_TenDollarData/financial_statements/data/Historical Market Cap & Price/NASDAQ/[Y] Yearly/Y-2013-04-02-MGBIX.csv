@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,MGBIX,AMG Managers Loomis Sayles Bond Fund Class I,NASDAQ,2013-04-02,,28.190001,28.559999,26.75,27.33,21.249777,0.0,0.0,0.0,0.0,
+2014-01-01,MGBIX,AMG Managers Loomis Sayles Bond Fund Class I,NASDAQ,2013-04-02,,27.35,28.540001,27.35,27.870001,22.501888,0.0,0.0,0.0,0.0,
+2015-01-01,MGBIX,AMG Managers Loomis Sayles Bond Fund Class I,NASDAQ,2013-04-02,,27.879999,28.120001,26.17,26.190001,22.040361,0.0,0.0,0.0,0.0,
+2016-01-01,MGBIX,AMG Managers Loomis Sayles Bond Fund Class I,NASDAQ,2013-04-02,,26.18,27.76,25.77,26.24,23.205248,0.0,0.0,0.0,0.0,
+2017-01-01,MGBIX,AMG Managers Loomis Sayles Bond Fund Class I,NASDAQ,2013-04-02,,26.24,27.370001,26.24,26.969999,24.801842,0.0,0.0,0.0,0.0,
+2018-01-01,MGBIX,AMG Managers Loomis Sayles Bond Fund Class I,NASDAQ,2013-04-02,,26.93,27.02,25.43,25.49,24.378252,0.0,0.0,0.0,0.0,
+2019-01-01,MGBIX,AMG Managers Loomis Sayles Bond Fund Class I,NASDAQ,2013-04-02,,25.540001,27.33,25.540001,27.139999,26.913197,0.0,0.0,0.0,0.0,
+2020-01-01,MGBIX,AMG Managers Loomis Sayles Bond Fund Class I,NASDAQ,2013-04-02,,27.18,27.860001,24.440001,27.58,27.58,0.0,0.0,0.0,0.0,

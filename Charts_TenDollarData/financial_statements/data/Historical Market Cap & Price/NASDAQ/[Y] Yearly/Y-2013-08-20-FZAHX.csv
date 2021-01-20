@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2013-01-01,FZAHX,Fidelity Advisor Growth Opportunities Fund Class Z,NASDAQ,2013-08-20,,51.959999,58.93,51.41,58.93,37.385983,0.0,0.0,0.0,0.0,
+2014-01-01,FZAHX,Fidelity Advisor Growth Opportunities Fund Class Z,NASDAQ,2013-08-20,,58.52,66.980003,56.709999,66.089996,41.928379,0.0,0.0,0.0,0.0,
+2015-01-01,FZAHX,Fidelity Advisor Growth Opportunities Fund Class Z,NASDAQ,2013-08-20,,66.0,72.68,61.759998,63.080002,44.23251,0.0,0.0,0.0,0.0,
+2016-01-01,FZAHX,Fidelity Advisor Growth Opportunities Fund Class Z,NASDAQ,2013-08-20,,61.91,63.900002,51.400002,55.389999,44.411449,0.0,0.0,0.0,0.0,
+2017-01-01,FZAHX,Fidelity Advisor Growth Opportunities Fund Class Z,NASDAQ,2013-08-20,,55.82,75.739998,55.82,69.639999,60.041626,0.0,0.0,0.0,0.0,
+2018-01-01,FZAHX,Fidelity Advisor Growth Opportunities Fund Class Z,NASDAQ,2013-08-20,,70.550003,89.910004,68.43,71.760002,69.196442,0.0,0.0,0.0,0.0,
+2019-01-01,FZAHX,Fidelity Advisor Growth Opportunities Fund Class Z,NASDAQ,2013-08-20,,71.879997,101.919998,69.620003,97.43,97.43,0.0,0.0,0.0,0.0,
+2020-01-01,FZAHX,Fidelity Advisor Growth Opportunities Fund Class Z,NASDAQ,2013-08-20,,99.019997,147.100006,72.580002,136.529999,136.529999,0.0,0.0,0.0,0.0,

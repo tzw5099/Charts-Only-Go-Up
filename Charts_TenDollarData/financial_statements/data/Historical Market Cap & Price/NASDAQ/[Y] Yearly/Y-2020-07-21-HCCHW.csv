@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-01-01,HCCHW,HL Acquisition Corp. WT EXP 062123,NASDAQ,2020-07-21,,2.2,2.4777,0.5801,2.1,2.1,4946063.0,4946063.0,-25.480000000000004,-34.30581818181817,1.480912727272727
