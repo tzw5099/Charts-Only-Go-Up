@@ -46,10 +46,12 @@
         <!-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script> -->
         <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
         <!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
-
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script> -->
+<script>$(".sasa").html(function(i, h){
+    return h.replace(/\(([^\)]+)\)/, "(<b>$1</b>)");
+});</script>
         <!-- <script src="{{ url_for('static', filename='../static/js/typeahead.bundle.min.js') }}"></script> -->
-        <!-- <script src="{{ url_for('static', filename='../static/js/toms_typeahead.bundle.min.js') }}"></script> -->
+        <script src="{{ url_for('static', filename='../static/js/toms_typeahead.bundle.min.js') }}"></script>
         {% block charts_quarter_head %}
         {% endblock %}
         </head>
@@ -91,6 +93,75 @@
 
 
 
+
+
+
+
+<!-- <div class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="https://tendollardata.com">
+                                Home
+                            </a>
+                        </li>
+</ul>
+</div> -->
+
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <!-- <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="https://tendollardata.com">
+                                Home
+                            </a>
+                        </li> -->
+                        <!-- <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Second Item
+                            </a>
+                        </li> -->
+                    </ul>
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a
+                                class="dropdown-toggle nav-link"
+                                data-toggle="dropdown"
+                                aria-expanded="false"
+                                href="#"
+                            >
+                                Datasets for $10
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-minute-data-historical-intraday-data-dataset-all-us-equities-etfs-sp-500-tech-stocks/">⭐ Intraday Price Data  (1991 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-market-cap-dataset-historical-daily-price-price-dataset-all-us-equities-sp-500-tech-stocks/">⭐ Daily Price &amp; Market Cap (1970 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">⭐ Financial Statements   (1994 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-earnings-dataset-all-us-equities-sp-500-tech-stocks/">Earnings Data (2002 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-dividends-data-dataset-all-us-equities-etfs-funds-mutual-index-sp-500-tech-stocks/">Dividends Data (1990 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-ipos-data-dataset-all-us-stocks-etfs-and-other-funds-2004-present/">IPOs Data (2004 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-13f-data-dataset-all-quarterly-portfolio-filings-by-hedge-funds-2013-present/">13Fs (hedge fund holdings) (2013 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-options-data-dataset-all-us-equities-sp-500-tech-stocks/">Options Volume (2018 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-analyst-grades-ratings-data-dataset-all-us-equities-sp-500-tech-stocks/">Analyst Grades (1990 – Present)</a>
+                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-stock-splits-data-dataset-all-us-equities-1990-present/">Stock Splits Data (1990 – Present)</a>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="#">
+                                Support Uss
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Link 2
+                            </a>
+                        </li> -->
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#">
+                                Link 3
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
                     <ul class="nav navbar-nav">
                         <li class="nav-item" role="presentation">
 
@@ -113,12 +184,12 @@
                                                 <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
                                             </div>
                                             <div class="input-group-append">
-                                                <button class="btn btn-primary py-0" type="button">
+                                                <span class="search_btn search_btn-primary btn btn-primary py-0">
                                                     <!-- <!- - <i class="fas fa-search"></i> - -> -->
                                                     <i class="material-icons typeahead_icon">
                                                         search
                                                     </i>
-                                                </button>
+                                                </span>
                                             </div>
                                         </div>
                                     </form>
@@ -126,111 +197,6 @@
                             </form>
                         </li>
                     </ul>
-
-
-
-<div class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="https://tendollardata.com">
-                                Home
-                            </a>
-                        </li>
-</ul>
-</div>
-
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="https://tendollardata.com">
-                                Home
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="#">
-                                Second Item
-                            </a>
-                        </li> -->
-                        <li class="nav-item dropdown">
-                            <a
-                                class="dropdown-toggle nav-link"
-                                data-toggle="dropdown"
-                                aria-expanded="false"
-                                href="#"
-                            >
-                                Datasets for $10
-                            </a>
-                            <div class="dropdown-menu" role="menu">
-                                <!-- <a class="dropdown-item" role="presentation" href="#">
-                                    First Item
-                                </a> -->
-                                <!-- <a class="dropdown-item" role="presentation" href="#">
-                                    Second Item
-                                </a> -->
-                                <!-- <a class="dropdown-item" role="presentation" href="#">
-                                    Third Item
-                                </a> -->
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-minute-data-historical-intraday-data-dataset-all-us-equities-etfs-sp-500-tech-stocks/">⭐ Intraday Price Data  (1991 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-market-cap-dataset-historical-daily-price-price-dataset-all-us-equities-sp-500-tech-stocks/">⭐ Daily Price &amp; Market Cap (1970 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">⭐ Financial Statements   (1994 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-earnings-dataset-all-us-equities-sp-500-tech-stocks/">Earnings Data (2002 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-dividends-data-dataset-all-us-equities-etfs-funds-mutual-index-sp-500-tech-stocks/">Dividends Data (1990 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-ipos-data-dataset-all-us-stocks-etfs-and-other-funds-2004-present/">IPOs Data (2004 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-13f-data-dataset-all-quarterly-portfolio-filings-by-hedge-funds-2013-present/">13Fs (hedge fund holdings) (2013 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-options-data-dataset-all-us-equities-sp-500-tech-stocks/">Options Volume (2018 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-analyst-grades-ratings-data-dataset-all-us-equities-sp-500-tech-stocks/">Analyst Grades (1990 – Present)</a>
-                                <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-stock-splits-data-dataset-all-us-equities-1990-present/">Stock Splits Data (1990 – Present)</a>
-                            </div>
-                        </li>
-                        <!-- <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="#">
-                                Third Item
-                            </a>
-                        </li> -->
-                    </ul>
-                    <!-- <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation">
-                            <form class="form-inline mr-auto" target="_self">
-                                <div class="form-group">
-                                    <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                                        <div class="input-group">
-                                            <div class="lazytype">
-
-                                                <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
-                                            </div>
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary py-0" type="button">
-                                                    <!- - <i class="fas fa-search"></i> - ->
-                                                    <i class="material-icons typeahead_icon">
-                                                        search
-                                                    </i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </form>
-                        </li>
-                    </ul> -->
-                    <ul class="nav navbar-nav mx-auto">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="#">
-                                Support Us
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="#">
-                                Link 2
-                            </a>
-                        </li> -->
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="#">
-                                Link 3
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
             </div>
         </nav>
 <script>
@@ -271,12 +237,15 @@
 
                         // empty: ['<div class="empty-message">', 'Try TSLA, AAPL, SPY,...', '</div>'].join('\n'),
                         suggestion: function (data) {
-                            return stringToHTML('<p class="sasa"><a href="https://charts.tendollardata.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Cash</strong>' + '</a></p>' + '<p class="dada"><a href="https://charts.tendollardata.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Net Revenue</strong>'  + '</a></p>')
+                            return stringToHTML('<p class="sasa"><a href="https://charts.tendollardata.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Cash</strong>' + '</a></p>' + '<p class="dada"><a href="https://charts.tendollardata.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Net Revenue</strong>'  + '</a></p>'+'<li class="nav-item dropdown"> <a class="dropdown-toggle search nav-link" data-toggle="dropdown" aria-expanded="false" href="#" > Balance Sheet </a><ul class="dropdown-menu search" role="menu"><li><a class="dropdown-item" role="presentation" href="s">⭐ s</a></li><li><a class="dropdown-item" role="presentation" href="s">⭐ s</a></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" >Balance Sheet</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Submenu</a></li><li><a class="dropdown-item" href="#">Submenu0</a></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Subsubmenu1</a></li><li><a class="dropdown-item" href="#">Subsubmenu1</a></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Subsubmenu2</a></li><li><a class="dropdown-item" href="#">Subsubmenu2</a></li></ul></li></ul></li></ul></li>')
                             // return "<p class='sasa'><a href=\"https://charts.tendollardata.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>\
                             // <p><a href=\"https://charts.tendollardata.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>"
                         }
                     }
                 });
+
+
+// <li class="nav-item dropdown"> <a class="dropdown-toggle search nav-link cursor_default" id="cursor_default" data-toggle="dropdown" aria-expanded="false" href="#" > Balance Sheet </a><ul class="dropdown-menu search" role="menu"><li><a class="dropdown-item" role="presentation" href="s">⭐ s</a></li><li><a class="dropdown-item" role="presentation" href="s">⭐ s</a></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" >Balance Sheet</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Submenu</a></li><li><a class="dropdown-item" href="#">Submenu0</a></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Subsubmenu1</a></li><li><a class="dropdown-item" href="#">Subsubmenu1</a></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Subsubmenu2</a></li><li><a class="dropdown-item" href="#">Subsubmenu2</a></li></ul></li></ul></li></ul></li>
 
     // js highlight characters same as characters typed
     // https://stackoverflow.com/questions/15951214/highlight-text-of-a-div-as-user-types-characters-in-an-input-field
@@ -295,10 +264,14 @@
 // console.log(this.value);
 
             // });
+            // $("#cursor_default *").prop('disabled',true);
         </script>
+
 <script>
-
-
+// $(".cursor_default").attr('disabled','disabled');
+// This will disable just the div
+// document.getElementById("cursor_default").disabled = true;
+// $("#cursor_default *").prop('disabled',true);
 </script>
 
             {% block quarterly_body %}
@@ -324,6 +297,8 @@
 });
 </script>
 
-
+<script>$(".sasa").html(function(i, h){
+    return h.replace(/\(([^\)]+)\)/, "(<b>$1</b>)");
+});</script>
         </body>
 </html>
