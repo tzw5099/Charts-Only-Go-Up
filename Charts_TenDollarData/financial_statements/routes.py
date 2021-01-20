@@ -1105,7 +1105,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     import json
     from urllib.request import urlopen
     try:
-        fmp_url = "https://financialmodelingprep.com/api/v3/quote/{}?apikey=4b5cd112b74ca86811fd1ccddd4ad9c1".format(url_symbol.upper())
+        fmp_url = ""#"https://financialmodelingprep.com/api/v3/quote/{}?apikey=4b5cd112b74ca86811fd1ccddd4ad9c1".format(url_symbol.upper())
         fmp_json = json.loads(urlopen(fmp_url, timeout=0.001).read().decode('utf-8'))
         last_price = np.round(fmp_json[0]['price'],2)
         last_pct_change = fmp_json[0]['changesPercentage']
