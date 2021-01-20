@@ -1,0 +1,801 @@
+/* Page and overlay */
+body.ui-overlay-a,
+body .ui-page-theme-a,
+body .ui-page-theme-a .ui-panel-wrapper {
+	background-color: 			#ccc /*{a-page-background-color}*/;
+}
+
+/* Big Logo */
+.banner_nav {
+	background-image: url("../images/SCI_NewLogo_CC.jpg");
+    background-repeat: no-repeat;
+    background-position: 10px 12px;
+}
+
+@media (max-width: 730px) {
+	/* Medium Logo */
+	.banner_nav {
+		background-position: 40px -6px;
+		background-image: url("../images/SCI_NewLogo_CC.jpg");
+	}
+	
+	.banner_nav.no_menu{
+		background-position: 10px -6px;
+	}
+}
+
+@media (max-width: 458px) {
+	/* Small Logo */
+	.banner_nav {
+		background-position: 40px 0px;
+		background-size: auto 99%;
+	}
+	
+	.banner_nav.no_menu{
+		background-position: 10px 0px;
+	}	
+}
+
+@media (max-width: 380px) {
+	/* Smaller Logo */
+	.banner_nav {
+		background-position: 40px 4px;
+		background-size: auto 82%;
+	}
+	
+	.banner_nav.no_menu{
+		background-position: 10px 4px;
+	}	
+}
+
+@media (max-width: 300px) {
+	/* Even Smaller Logo */
+	.banner_nav {
+		background-position: 40px 9px;
+		background-size: auto 60%;
+	}
+	
+	.banner_nav.no_menu{
+		background-position: 10px 9px;
+	}	
+}
+
+.login_title_1 {
+    color: #0187bd;
+}
+
+h1, h2, h3 {
+   color: #0187bd;
+}
+
+.modalDialog.ui-popup {
+	border: 4px solid #0187bd;
+}
+
+/*****************/
+/** SCI buttons **/
+/*****************/
+.primary_button,
+.modalContent .primary_button {
+	padding: 5px 15px 9px 15px;
+	border: 2px solid #fff;
+	border-radius:0.666666em;
+	-webkit-border-radius:0.666666em;
+	-moz-border-radius:0.666666em;	
+}
+.ui-page-theme-a .ui-btn,
+.modalContent .primary_button {
+	border: 2px solid #fff;
+	border-radius:0.666666em;
+	-webkit-border-radius:0.666666em;
+	-moz-border-radius:0.666666em;
+	text-decoration: none;
+	color: #444;
+	border-color:#999;
+}
+.primary_button.emphasis_button,
+body.LPM .ui-page-theme-a div.select_all .ui-btn,
+body.SFIG .ui-page-theme-a div.select_all .ui-btn,
+body.LPM div.modalDialog.responseMessage button.primary_button.closeButton.ui-btn,
+body.SFIG div.modalDialog.responseMessage button.primary_button.closeButton.ui-btn,
+body.LPM .ui-page-theme-a.ManageMyProfile .ui-btn.ui-btn-inline.dialog-link,
+body.SFIG .ui-page-theme-a.ManageMyProfile .ui-btn.ui-btn-inline.dialog-link,
+body.LPM button#changeCardNumberButon.ui-btn,
+body.SFIG button#changeCardNumberButon.ui-btn {
+	background:#d3e1e7; /* Old browsers */
+	background-color:#d3e1e7;
+	background: -ms-linear-gradient(top, #f6f9fa 0%, #cadbe2 100%);
+	background: -moz-linear-gradient(top, #f6f9fa 0%, #cadbe2 100%);
+	background: -o-linear-gradient(top, #f6f9fa 0%, #cadbe2 100%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f9fa), to(#cadbe2));
+	background: -webkit-linear-gradient(top, #f6f9fa 0%, #cadbe2 100%); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f9fa', endColorstr='#cadbe2')";
+	background: linear-gradient(top, #f6f9fa 0%, #cadbe2 100%);
+	border: 2px solid #fff;
+	border-radius:0.666666em;
+	-webkit-border-radius:0.666666em;
+	-moz-border-radius:0.666666em;
+	text-decoration: none;
+	color: #444;
+	
+	/* button.default */
+	color:#000;
+	background:#f5833c; /* Old browsers */
+	background: -ms-linear-gradient(top, #f8ae80 0%, #f5833c 100%);
+	background: -moz-linear-gradient(top, #f8ae80 0%, #f5833c 100%);
+	background: -o-linear-gradient(top, #f8ae80 0%, #f5833c 100%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f8ae80), to(#f5833c));
+	background: -webkit-linear-gradient(top, #f8ae80 0%, #f5833c 100%); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8ae80', endColorstr='#f5833c')";
+	background: linear-gradient(top, #f8ae80 0%, #f5833c 100%);
+	border-color:#d57037;
+	
+	text-shadow: 0 1px rgba(255, 255, 255, .5);
+
+}
+
+.ui-page-theme-a .ui-btn.primary_button.emphasis_button:hover,
+body.LPM .ui-page-theme-a div.select_all .ui-btn:hover,
+body.SFIG .ui-page-theme-a div.select_all .ui-btn:hover,
+body.LPM div.modalDialog.responseMessage button.primary_button.closeButton.ui-btn:hover,
+body.SFIG div.modalDialog.responseMessage button.primary_button.closeButton.ui-btn:hover,
+body.LPM .ui-page-theme-a.ManageMyProfile .ui-btn.ui-btn-inline.dialog-link:hover,
+body.SFIG .ui-page-theme-a.ManageMyProfile .ui-btn.ui-btn-inline.dialog-link:hover,
+body.LPM button#changeCardNumberButon.ui-btn:hover,
+body.SFIG button#changeCardNumberButon.ui-btn:hover {
+	background:#f8ae80; /* Old browsers */
+	background-color:#f8ae80;
+	background: -ms-linear-gradient(top, #f5833c 0%, #f8ae80 100%);
+	background: -moz-linear-gradient(top, #f5833c 0%, #f8ae80 100%);
+	background: -o-linear-gradient(top, #f5833c 0%, #f8ae80 100%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f5833c), to(#f8ae80));
+	background: -webkit-linear-gradient(top, #f5833c 0%, #f8ae80 100%); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5833c', endColorstr='#f8ae80')";
+	background: linear-gradient(top, #f5833c 0%, #f8ae80 100%);
+	border-color:#d57037;
+	color: #000;
+}
+
+.left_side_links_header {
+   color: #0187bd;
+}
+
+.left_side_table_title {
+   color: #0187bd;
+}
+
+.left_side_nav_title {
+   color: #0187bd;
+}
+
+.secondary_button {
+   color: #0187bd;
+}
+
+.ui-progressbar-value {
+      background: #0187bd;
+}
+
+/* Active button */
+.ui-page-theme-c .ui-btn.ui-btn-active,
+html .ui-bar-c .ui-btn.ui-btn-active,
+html .ui-body-c .ui-btn.ui-btn-active,
+html body .ui-group-theme-c .ui-btn.ui-btn-active,
+html head + body .ui-btn.ui-btn-c.ui-btn-active,
+/* Active checkbox icon */
+.ui-page-theme-c .ui-checkbox-on:after,
+html .ui-bar-c .ui-checkbox-on:after,
+html .ui-body-c .ui-checkbox-on:after,
+html body .ui-group-theme-c .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-c:after,
+/* Active flipswitch background */
+.ui-page-theme-c .ui-flipswitch-active,
+html .ui-bar-c .ui-flipswitch-active,
+html .ui-body-c .ui-flipswitch-active,
+html body .ui-group-theme-c .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-c.ui-flipswitch-active,
+/* Active slider track */
+.ui-page-theme-a .ui-slider-track .ui-btn-active,
+.ui-page-theme-c .ui-slider-track .ui-btn-active,
+html .ui-bar-c .ui-slider-track .ui-btn-active,
+html .ui-body-c .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-c .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-c .ui-btn-active {
+	background-color: #0187bd /*{c-active-background-color}*/;
+	border-color: #0187bd /*{c-active-border}*/;
+}
+
+/* Active radio button icon */
+.ui-page-theme-c .ui-radio-on:after,
+html .ui-bar-c .ui-radio-on:after,
+html .ui-body-c .ui-radio-on:after,
+html body .ui-group-theme-c .ui-radio-on:after,
+.ui-btn.ui-radio-on.ui-btn-c:after {
+	border-color: #0187bd /*{c-active-background-color}*/;
+}
+
+.ui-slider-switch .ui-slider-label-a {
+	background-color: #0187bd /*{c-active-background-color}*/;
+}
+
+/* Active button */
+.ui-page-theme-d .ui-btn.ui-btn-active,
+html .ui-bar-d .ui-btn.ui-btn-active,
+html .ui-body-d .ui-btn.ui-btn-active,
+html body .ui-group-theme-d .ui-btn.ui-btn-active,
+html head + body .ui-btn.ui-btn-d.ui-btn-active,
+/* Active checkbox icon */
+.ui-page-theme-d .ui-checkbox-on:after,
+html .ui-bar-d .ui-checkbox-on:after,
+html .ui-body-d .ui-checkbox-on:after,
+html body .ui-group-theme-d .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-d:after,
+/* Active flipswitch background */
+.ui-page-theme-d .ui-flipswitch-active,
+html .ui-bar-d .ui-flipswitch-active,
+html .ui-body-d .ui-flipswitch-active,
+html body .ui-group-theme-d .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-d.ui-flipswitch-active,
+/* Active slider track */
+.ui-page-theme-d .ui-slider-track .ui-btn-active,
+html .ui-bar-d .ui-slider-track .ui-btn-active,
+html .ui-body-d .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-d .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-d .ui-btn-active {
+	background-color: #0187bd /*{d-active-background-color}*/;
+	border-color: #0187bd /*{d-active-border}*/;
+}
+/* Active radio button icon */
+.ui-page-theme-d .ui-radio-on:after,
+html .ui-bar-d .ui-radio-on:after,
+html .ui-body-d .ui-radio-on:after,
+html body .ui-group-theme-d .ui-radio-on:after,
+.ui-btn.ui-radio-on.ui-btn-d:after {
+	border-color: #0187bd /*{d-active-background-color}*/;
+}
+/* Links */
+.ui-page-theme-e a,
+html .ui-bar-e a,
+html .ui-body-e a,
+html body .ui-group-theme-e a {
+	color: #0187bd /*{e-link-color}*/;
+}
+.ui-page-theme-e a:visited,
+html .ui-bar-e a:visited,
+html .ui-body-e a:visited,
+html body .ui-group-theme-e a:visited {
+    color: #0187bd /*{e-link-visited}*/;
+}
+.ui-page-theme-e a:hover,
+html .ui-bar-e a:hover,
+html .ui-body-e a:hover,
+html body .ui-group-theme-e a:hover {
+	color: #0187bd /*{e-link-hover}*/;
+}
+.ui-page-theme-e a:active,
+html .ui-bar-e a:active,
+html .ui-body-e a:active,
+html body .ui-group-theme-e a:active {
+	color: #0187bd /*{e-link-active}*/;
+}
+
+/* Button down */
+.ui-page-theme-e .ui-btn:active,
+html .ui-bar-e .ui-btn:active,
+html .ui-body-e .ui-btn:active,
+html body .ui-group-theme-e .ui-btn:active,
+html head + body .ui-btn.ui-btn-e:active {
+	color: #0187bd /*{e-bdown-color}*/;
+}
+/* Active button */
+.ui-page-theme-e .ui-btn.ui-btn-active,
+html .ui-bar-e .ui-btn.ui-btn-active,
+html .ui-body-e .ui-btn.ui-btn-active,
+html body .ui-group-theme-e .ui-btn.ui-btn-active,
+html head + body .ui-btn.ui-btn-e.ui-btn-active,
+/* Active checkbox icon */
+.ui-page-theme-e .ui-checkbox-on:after,
+html .ui-bar-e .ui-checkbox-on:after,
+html .ui-body-e .ui-checkbox-on:after,
+html body .ui-group-theme-e .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-e:after,
+/* Active flipswitch background */
+.ui-page-theme-e .ui-flipswitch-active,
+html .ui-bar-e .ui-flipswitch-active,
+html .ui-body-e .ui-flipswitch-active,
+html body .ui-group-theme-e .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-e.ui-flipswitch-active,
+/* Active slider track */
+.ui-page-theme-e .ui-slider-track .ui-btn-active,
+html .ui-bar-e .ui-slider-track .ui-btn-active,
+html .ui-body-e .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-e .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-e .ui-btn-active {
+	background-color: #0187bd /*{e-active-background-color}*/;
+	border-color: #0187bd /*{e-active-border}*/;
+	color: #0187bd /*{e-active-color}*/;
+	text-shadow: 0 /*{e-active-shadow-x}*/ 1px /*{e-active-shadow-y}*/ 0 /*{e-active-shadow-radius}*/ #0187bd /*{e-active-shadow-color}*/;
+}
+/* Active radio button icon */
+.ui-page-theme-e .ui-radio-on:after,
+html .ui-bar-e .ui-radio-on:after,
+html .ui-body-e .ui-radio-on:after,
+html body .ui-group-theme-e .ui-radio-on:after,
+.ui-btn.ui-radio-on.ui-btn-e:after {
+	border-color: #0187bd /*{e-active-background-color}*/;
+}
+
+/* Accordion Button */
+.ui-page-theme-a .accordion_title .ui-btn,
+html .ui-bar-a .accordion_title .ui-btn,
+html .ui-body-a .accordion_title .ui-btn,
+html body .ui-group-theme-a .accordion_title .ui-btn,
+html head + body .accordion_title .ui-btn.ui-btn-a,
+/* Button hover */
+.ui-page-theme-a .accordion_title .ui-btn:hover,
+html .ui-bar-a .accordion_title .ui-btn:hover,
+html .ui-body-a .accordion_title .ui-btn:hover,
+html body .ui-group-theme-a .accordion_title .ui-btn:hover,
+html head + body .accordion_title .ui-btn.ui-btn-a:hover,
+/* Button visited */
+.ui-page-theme-a .accordion_title .ui-btn:visited,
+html .ui-bar-a .accordion_title .ui-btn:visited,
+html .ui-body-a .accordion_title .ui-btn:visited,
+html body .ui-group-theme-a .accordion_title .ui-btn:visited,
+html head + body .accordion_title .ui-btn.ui-btn-a:visited,
+/* Button down */
+.ui-page-theme-a .accordion_title .ui-btn:active,
+html .ui-bar-a .accordion_title .ui-btn:active,
+html .ui-body-a .accordion_title .ui-btn:active,
+html body .ui-group-theme-a .accordion_title .ui-btn:active,
+html head + body .accordion_title .ui-btn.ui-btn-a:active,
+/* Active button (on press) */
+.ui-page-theme-a .accordion_title .ui-btn.ui-btn-active,
+html .ui-bar-a .accordion_title .ui-btn.ui-btn-active,
+html .ui-body-a .accordion_title .ui-btn.ui-btn-active,
+html body .ui-group-theme-a .accordion_title .ui-btn.ui-btn-active,
+html head + body .accordion_title .ui-btn.ui-btn-a.ui-btn-active,
+.ui-page-theme-a .accordion_title .ui-btn:focus,
+html .ui-bar-a .accordion_title .ui-btn:focus,
+html .ui-body-a .accordion_title .ui-btn:focus,
+html body .ui-group-theme-a .accordion_title .ui-btn:focus,
+html head + body .accordion_title .ui-btn.ui-btn-a:focus {
+	color: 					#0187bd /*{a-bhover-color}*/;
+}
+
+div.accordion_header{
+	color: #0187bd;
+}
+/* End of Red buttons */
+
+/************************************/
+/* Top Bar and Slide Bar Navigation */
+/************************************/
+
+/* Background color of entire bar */
+.top_bar_nav, .slide_nav_bar {
+   background-color: #81c5e5;
+}
+
+a.top_bar_nav_link.ui-link{
+	color: #000;
+	
+}
+
+ul.top_bar_nav>li:hover a.top_bar_nav_link.ui-link,
+ul.top_bar_nav.PayMyBills>li.PayMyBills a.top_bar_nav_link.ui-link,
+ul.top_bar_nav.ManageMyAccounts>li.ManageMyAccounts a.top_bar_nav_link.ui-link,
+ul.top_bar_nav.ViewMyPayments>li.ViewMyPayments a.top_bar_nav_link.ui-link,
+ul.top_bar_nav.ManageMyProfile>li.ManageMyProfile a.top_bar_nav_link.ui-link,
+ul.slide_nav_bar>li:hover a.top_bar_nav_link.ui-link,
+ul.slide_nav_bar.ViewMyPayments>li.ViewMyPayments a.top_bar_nav_link.ui-link,
+ul.slide_nav_bar.ManageMyAccounts>li.ManageMyAccounts a.top_bar_nav_link.ui-link,
+ul.slide_nav_bar.ManageMyProfile>li.ManageMyProfile a.top_bar_nav_link.ui-link,
+ul.slide_nav_bar.PayMyBills>li.PayMyBills a.top_bar_nav_link.ui-link {
+	font-weight: bold;	
+}
+
+/* Hover/selected color of nav bar menu items */
+ul.top_bar_nav>li:hover,
+ul.top_bar_nav.PayMyBills>li.PayMyBills,
+ul.top_bar_nav.ManageMyAccounts>li.ManageMyAccounts,
+ul.top_bar_nav.ViewMyPayments>li.ViewMyPayments,
+ul.top_bar_nav.ManageMyProfile>li.ManageMyProfile,
+ul.slide_nav_bar>li:hover,
+ul.slide_nav_bar.ViewMyPayments>li.ViewMyPayments,
+ul.slide_nav_bar.ManageMyAccounts>li.ManageMyAccounts,
+ul.slide_nav_bar.ManageMyProfile>li.ManageMyProfile,
+ul.slide_nav_bar.PayMyBills>li.PayMyBills {
+   background: #b3dcf0;
+   font-weight: bold;
+}
+
+/* Parent menu text when child menu is open */
+.top_bar_nav .top_bar_nav_link_menu_selected,
+.slide_nav_bar .top_bar_nav_link_menu_selected a {
+	color: #000 !important;
+	font-weight: bold !important;
+}
+
+ html .ui-body-e .ui-btn:hover {
+ 	color: #000;
+ 	font-weight: bold;
+ }
+ 
+/* Slide bar background color of entire bar */
+.ui-panel{
+	background: #81c5e5;
+}
+
+/* Slide bar - welcome message */
+.slide_nav_bar li.welcomeMessage,
+.slide_nav_bar li.welcomeMessage:hover,
+.slide_nav_bar li.lastLogin,
+.slide_nav_bar li.lastLogin:hover {
+	background-color: #81c5e5;
+}
+
+/* Hover of child menu items */
+ul.slide_nav_bar>li.menu_child:hover {
+	background-color: #b3dcf0;
+}
+
+ul.slide_nav_bar>li.menu_child a:hover {
+    color: #000;
+}
+
+.slide_nav_bar a,
+.slide_nav_bar a:hover,
+.slide_nav_bar a:visited {
+	color: #000;
+}
+
+.slide_nav_bar li.welcomeMessage,
+.slide_nav_bar li.welcomeMessage:hover,
+.slide_nav_bar li.lastLogin,
+.slide_nav_bar li.lastLogin:hover {
+	color: #000;
+}
+
+
+/*****End**********/
+
+/* Button hover - popup menus */
+.ui-page-theme-e .ui-btn:hover,
+html .ui-bar-e .ui-btn:hover,
+html .ui-body-e .ui-btn:hover,
+html body .ui-group-theme-e .ui-btn:hover,
+html head + body .ui-btn.ui-btn-e:hover {
+	background-color: #b3dcf0 /*{e-bhover-background-color}*/;
+}
+
+body.SCI div.addAccountImg{
+	background-image: url("../images/Bill-graphic-SCI.jpg");
+    background-repeat: no-repeat;	
+	background-size: 100% 46px;
+	height: 46px;
+	width: 100%;
+	max-width: 559px;
+	margin-top: 8px;
+}
+
+span.contract_info{
+	position: absolute;
+	left: 100px;
+}
+
+div.EnrollStep1 span.contract_info,
+body.qpay span.contract_info {
+	left: 130px;
+}
+
+.workspace_component.document_summary .ui-grid-a .ui-grid-a .ui-block-a{
+	width: 30%;
+}
+
+.workspace_component.document_summary .form_field_display{
+	font-weight: bold;
+}
+
+div.workspace_message.info_page h4 {
+	font-weight: bold;
+	color: #0187bd;
+}
+
+div.workspace_message.info_page label{
+	font-weight: normal;
+	color: #444;
+	padding-top: 5px;
+}
+
+div.workspace_message.info_page ul{
+	margin-left:20px;	
+}
+
+div.workspace_message.info_page{
+	padding-bottom: 10px;
+}
+
+body .workspace_component {
+	margin-bottom: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom: 0px;
+}
+
+form.add_account_form .workspace_message {
+	display: none;
+}
+
+/* From SCI's css */
+#footer {
+	padding:0 0 10px;
+	border-top:1px solid #aaa;
+	background-color:#e5e5e5;
+	-moz-border-radius:0 0 0.4em 0.4em;
+	-webkit-border-radius:0 0 0.4em 0.4em;
+	border-radius:0 0 0.4em 0.4em;
+}
+
+#footer .navbar {
+	font-size:1.166666em;
+	font-weight:bold;
+	position:relative;
+	background:#000;
+	background: -ms-linear-gradient(top, #666666, #000000);
+	background: -moz-linear-gradient(top, #666666, #000000);
+	background: -o-linear-gradient(top, #666666, #000000);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#666666), to(#000000));
+	background: -webkit-linear-gradient(top, #666666, #000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#000000')";
+}
+#footer .navbar.bottom {
+	font-size:0.916666em;
+	font-weight:normal;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled='false')";
+	background:#999;
+}
+#footer .navbar ul {
+	margin:0;
+}
+#footer .navlist li {font-size: 0.92em;}
+#footer .navbar li {
+	display:inline;
+	float:left;
+	margin:0;
+}
+
+#footer .navbar a:hover, #footer .navbar a:active, #footer .navbar a.active {
+	color:#000;
+	background-color:#b39e3c;
+	background: -ms-linear-gradient(top, #d1c58a 0%, #b39e3c 100%);
+	background: -moz-linear-gradient(top, #d1c58a 0%, #b39e3c 100%);
+	background: -o-linear-gradient(top, #d1c58a 0%, #b39e3c 100%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#d1c58a), to(#b39e3c));
+	background: -webkit-linear-gradient(top, #d1c58a 0%, #b39e3c 100%); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1c58a', endColorstr='#b39e3c)";
+	background: linear-gradient(top, #d1c58a 0%, #b39e3c 100%);
+	font-size:11px;
+	font-weight: bold;
+	line-height: 15.4px;
+}
+#footer .navbar {
+	min-height: 23px;
+}
+
+#footer .navbar a {
+	color:#fff;
+	display:inline-block;
+	text-decoration:none;
+	padding:0.5em 0.75em;
+	font-size:11px;
+	text-shadow: none;
+	font-weight: bold;
+	line-height: 15.4px;
+}
+
+#footer .navbar.bottom a {
+	padding:0.4em 1em;
+}
+
+#footer .navbar.bottom a:hover, #footer .navbar.bottom a:active {
+	color:#fff;
+	background:none;
+	text-decoration:underline;
+}
+
+#footer .container .columns{
+	/* float: left;*/ 
+	/* display: inline;*/ 
+	margin-left: 10px; 
+	margin-right: 10px; 
+}
+
+#footer .footnote, #copyright {
+	color:#555;
+	font-size:10px;
+	font-weight: normal;
+	text-shadow: none;
+	margin-bottom: 5px;
+	line-height: 12px;
+}
+
+#copyright {
+	padding-top: 9.96px;
+	text-align:left;
+	margin-left:18px;	
+	padding-bottom: 10px;
+	box-shadow: none;
+}
+
+#footer .footnote a, #footer .footnote a:visited {
+	color: #3366CC;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 10px;
+	line-height: 12px; 
+}
+#footer .footnote a:hover {
+	text-decoration: underline;
+}
+
+#footer .navbar.bottom a#pull {
+	display: none;
+}
+
+.container.full_screen{
+	display:block;
+}
+
+.container.mobile_screen{
+	display:none;
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	.container.full_screen{
+		display:none;
+	}
+	
+	.container.mobile_screen{
+		display:block;
+	}	
+	#footer .navbar {
+		min-height: 29.25px;
+	}
+	#footer .navbar ul {  
+		display: none;  
+		height: auto;  
+	}  
+	#footer .navbar.bottom a#pull {  
+		display:block;
+		width:auto;  
+		position:relative;
+		padding-left:2.8em;
+		background:#000;
+		background: -ms-linear-gradient(top, #666666, #000000);
+		background: -moz-linear-gradient(top, #666666, #000000);
+		background: -o-linear-gradient(top, #666666, #000000);
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(#666666), to(#000000));
+		background: -webkit-linear-gradient(top, #666666, #000000);
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#000000')";
+		font-size: 12.833px;
+		line-height: 19.6px;
+	}
+	#footer .navbar.bottom a#pull:hover {  
+		color:#fff;
+	}
+	#footer .navbar.bottom a#pull {  
+		padding-left:3.2em;
+		background:#999;
+	} 
+	#footer .navbar.bottom a#pull:after {  
+		content:"";  
+		background:url('../images/menu_icon.png') no-repeat;
+		width:30px;  
+		height:30px;  
+		display:inline-block;  
+		position:absolute;  
+		left:1.2em;  
+		top:0.5em;  
+	}
+	#footer .navbar.bottom a#pull:after {  
+		top:0.38em;  
+	}
+	#footer .navbar li {  
+		display:block;
+		background-color:#434343; 
+		float:none;  
+		width:100%;
+		position:relative;
+	}
+	#footer .navbar.bottom li {  
+		background-color:#777; 
+	}  
+	#footer .navbar li a {  
+		border-top:1px solid #666;
+		display:block;
+		padding-left:1.2em;
+	}
+	#footer .navbar a:hover, #footer .navbar a:active, #footer .navbar a.active, #footer .navbar a{
+		font-size: 12.833px;	
+	}
+	
+	#footer .navbar.bottom li a {  
+		border-color:#999;
+		padding-left:1.3em;
+	}
+	#footer .navbar li a:after {  
+		content:"";  
+		background:url('../images/arrows16.png') no-repeat;
+		background-position: -32px -16px; 
+		width:16px;  
+		height:16px;  
+		display:inline-block;  
+		position:absolute;  
+		right:1em;  
+		top:0.7em;  
+	}
+	#footer .navbar a:hover:after {
+		background-position: -32px -48px;
+	}
+	.themeB #footer .navbar a:hover:after, #footer .navbar.bottom a:hover:after {
+		background-position: -32px -16px;
+	}
+	#footer .navbar.bottom a:hover, #footer .navbar.bottom a:active {
+		background-color:#666;
+		text-decoration:none;
+	}
+	#footer {
+		-moz-border-radius:0;
+		-webkit-border-radius:0;
+		border-radius:0;
+	}
+	#copyright {
+		width:100%;
+		min-width:300px;
+	}
+	.sublinks {text-align:left;}
+	.hide-mobile {display:none;}
+	.right-mobile-left {float:none;}
+
+}
+
+/* Active button checkbox */
+label.ui-btn.ui-corner-all.ui-btn-d.ui-btn-icon-left.ui-checkbox-off,
+.ui-page-theme-d .ui-checkbox .ui-btn,
+html .ui-bar-d .ui-checkbox .ui-btn,
+html .ui-body-d .ui-checkbox .ui-btn,
+html body .ui-group-theme-d .ui-checkbox .ui-btn,
+html head + body .ui-checkbox .ui-btn.ui-btn-d,
+/* Button hover */
+.ui-page-theme-a .ui-checkbox .ui-btn:hover,
+html .ui-bar-a .ui-checkbox .ui-btn:hover,
+html .ui-body-a .ui-checkbox .ui-btn:hover,
+html body .ui-group-theme-a .ui-checkbox .ui-btn:hover,
+html head + body .ui-checkbox .ui-btn.ui-btn-a:hover {
+	color: 					#777 /*{a-active-color}*/;
+	text-shadow: none;
+	font-weight: bold;
+}
+
+/* Button hover */
+.ui-page-theme-d .ui-btn:hover,
+html .ui-bar-d .ui-btn:hover,
+html .ui-body-d .ui-btn:hover,
+html body .ui-group-theme-d .ui-btn:hover,
+html head + body .ui-btn.ui-btn-d:hover {
+	color: #777 /*{d-bhover-color}*/;
+	text-shadow: none;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+

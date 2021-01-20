@@ -29,4 +29,5 @@ app = create_app()
 
 if __name__ == '__main__':
 	# http.serve_forever()
-    app.run(debug=True, EXPLAIN_TEMPLATE_LOADING=true, port=5001, threaded=True)
+    # app.run(debug=True, EXPLAIN_TEMPLATE_LOADING=true, port=5001, threaded=True)
+    app.run(debug=True)

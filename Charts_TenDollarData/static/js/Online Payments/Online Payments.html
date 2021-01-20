@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://secure3.billerweb.com/sci/JustPayIt/jpt.do -->
+<html class="ui-mobile"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><!--<base href="https://secure3.billerweb.com/sci/JustPayIt/jpt.do">--><base href=".">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="format-detection" content="telephone=no">
+
+		<link rel="stylesheet" href="./Online Payments_files/FISReset-min.css" type="text/css">
+		<link rel="stylesheet" href="./Online Payments_files/jquery.mobile-1.4.5.min.css" type="text/css">
+		<link rel="stylesheet" href="./Online Payments_files/jquery.ui.all.css" type="text/css">
+		<link rel="stylesheet" href="./Online Payments_files/jquery-ui-1.11.4.min.css" type="text/css">
+		<link rel="stylesheet" href="./Online Payments_files/jqm-datebox-1.4.5.min.css">
+		<link rel="stylesheet" href="./Online Payments_files/fis.ui.menu-min.css" type="text/css">
+		<link rel="stylesheet" href="./Online Payments_files/NavModelCC.css" type="text/css">
+			<link rel="stylesheet" href="./Online Payments_files/NavModelCC_sci.css">
+
+<script async="" src="./Online Payments_files/analytics.js.download"></script><script src="./Online Payments_files/jquery-1.7.2.min.js.download"></script>
+		<script type="text/javascript" src="./Online Payments_files/jquery-ui-1.11.4.min.js.download"></script>
+		<script type="text/javascript" src="./Online Payments_files/jquery.mobile-1.4.5.min.js.download"></script>
+		<script type="text/javascript" src="./Online Payments_files/jqm-datebox-1.4.5.core.min.js.download"></script>
+		<script type="text/javascript" src="./Online Payments_files/jqm-datebox-1.4.5.mode.calbox.min.js.download"></script>
+		<script type="text/javascript" src="./Online Payments_files/jqm-datebox-1.4.5.mode.datebox.min.js.download"></script>
+		<script type="text/javascript" src="./Online Payments_files/jquery.formatCurrency.min.js.download"></script>
+		<script type="text/javascript" src="./Online Payments_files/jquery.PrintArea.js.download"></script>
+		<script type="text/javascript" src="./Online Payments_files/common.js.download"></script>
+
+		<script type="text/javascript">
+			var timers = new Array();
+	var states = new Array();
+
+		states['USA'] = new Array('AL:Alabama','AK:Alaska','AS:American Samoa','AZ:Arizona','AR:Arkansas','CA:California','CO:Colorado','CT:Connecticut','DE:Delaware','DC:District of Columbia','FL:Florida','GA:Georgia','GU:Guam','HI:Hawaii','ID:Idaho','IL:Illinois','IN:Indiana','IA:Iowa','KS:Kansas','KY:Kentucky','LA:Louisiana','ME:Maine','MD:Maryland','MA:Massachusetts','MI:Michigan','MN:Minnesota','MS:Mississippi','MO:Missouri','MT:Montana','NE:Nebraska','NV:Nevada','NH:New Hampshire','NJ:New Jersey','NM:New Mexico','NY:New York','NC:North Carolina','ND:North Dakota','MP:Northern Mariana Islands','OH:Ohio','OK:Oklahoma','OR:Oregon','PA:Pennsylvania','PR:Puerto Rico','RI:Rhode Island','SC:South Carolina','SD:South Dakota','TN:Tennessee','TX:Texas','UT:Utah','VT:Vermont','VA:Virginia','VI:Virgin Islands','WA:Washington','WV:West Virginia','WI:Wisconsin','WY:Wyoming');
+		states['CAN'] = new Array('AB:Alberta','BC:British Columbia','MB:Manitoba','NB:New Brunswick','NL:Newfoundland and Labrador','NT:Northwest Territories','NS:Nova Scotia','NU:Nunavut','ON:Ontario','PE:Prince Edward Island','QC:Quebec','SK:Saskatchewan','YT:Yukon Territory');
+
+	function setStates(countryValue, stateElementName) {
+		stateList = states[countryValue];
+		changeStateSelect(stateElementName, stateList);
+	}
+
+	function changeStateSelect(fieldName, newOptions) {
+		var selectField	= $("select[name='" + fieldName+ "']");
+		selectField.children('option').remove();
+		var stateArray;
+
+		for (i=0; i<newOptions.length; i++) {
+			stateArray = newOptions[i].split(":");
+			var option = new Option(stateArray[1], stateArray[0]);
+			selectField.append($(option));
+			if (i == 0) {
+				var firstStateProvince	= stateArray[0];
+			}
+	  	}
+
+	  	selectField.val(firstStateProvince).change();
+	}
+		</script>
+
+<script type="text/javascript">
+	function openRelatedLink(link) {
+	    window.open(link,'RelatedLinks','fullscreen=no,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,directories=no,location=yes,width=720,height=520');
+	}
+                         
+
+	function openRelated(link, winProperty) {
+	    if (winProperty==null){
+	      winProperty = 'fullscreen=no,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,directories=no,location=no,width=720,height=520';
+	    }
+	    
+	    if (link.indexOf("/") == 0) {
+	    	link	= ".." + link;
+	    }
+	    
+		window.open(link,'RelatedLinks',winProperty);
+	}
+    
+                          
+   
+
+	function table_row_mouseover(row) {
+	 	row.style.cursor	= "hand";
+		row.className		= "table_row_highlight";
+	}
+
+	function table_row_mouseout(row, style) {
+		row.className		= style;
+		row.style.cursor	="pointer";
+	}
+    
+                     
+   
+
+	var payOnAccountsParm		= "n";
+	var multipleAccountsParm	= "y";
+
+	function saveDisplayOptions() {
+		payOnAccountsParm		= $("#payOnAccountsSelect").val();
+		multipleAccountsParm	= $("#multipleAccountsSelect").val();
+		$('#customizeDisplayDialog').dialog('close');
+		refreshDisplay();
+	}
+
+	function refreshDisplay() {
+		if (payOnAccountsParm == "y") {
+			$("#payOnAccountsOption").show();
+                                                 
+                                                       
+		} else {
+			$("#payOnAccountsOption").hide();
+                                                
+                                                      
+			$("payOnSelect").val("bills");
+			changePayOn($("payOnSelect"));
+		}
+
+		if (multipleAccountsParm == "y") {
+			$(".multiple_accounts").show();
+			$(".bill").show();
+		} else {
+			$(".multiple_accounts").hide();
+			$(".bill").hide();
+			$(".account-1922888374009586").show();
+		}
+	}
+    
+                                 
+   
+
+ 	function initializeActionLinks() {
+		$(".action").click(function(event) {
+	 		$(event.target).css("z-index", 110);
+ 			$("#" + event.target.id + "submenu").show();
+	 	});
+                               
+	 	$(".submenu").click(function() {
+	 		$(".submenu").hide();
+			return false
+	 	});
+                      
+	 	$(document).mouseup(function() {
+	 		$(".submenu").hide();
+	 		$(".action").css("z-index", 0);
+	 	});
+	}
+                                        
+                         
+                                       
+
+	function doNext(nextPos) {
+		var parms		= "&newBean=&operation=next&startPos=" + nextPos;
+		var urlParms	= buildParms(service[currActyTopBar], workspace[currActyTopBar], parms, true);
+		loadWorkspace(urlParms);
+	}
+
+	function doPrevious(prevPos) {
+		var parms		= "&newBean=&operation=previous&startPos=" + prevPos;
+		var urlParms	= buildParms(service[currActyTopBar], workspace[currActyTopBar], parms, true);
+		loadWorkspace(urlParms);
+    }
+                                        
+                     
+                                       
+
+	var primaryDialog		= "primary_dialog";
+
+	function openDialog(id, width) {
+		$("#" + id).dialog({
+			modal 		: true,
+			autoOpen 	: false,
+			title 		: "",
+			width 		: width,
+			dialogClass : "modalDialog",
+			resizable 	: false,
+		    open		: function(event, ui) {
+		    				unbindMouseDownUp();
+		    			  },
+			close 		: function(event, ui) {
+						  }
+		});
+		$("#" + id).dialog("open");
+	}
+                                                      
+	function unbindMouseDownUp(){
+        window.setTimeout(function() {
+            jQuery(document).unbind('mousedown.dialog-overlay')
+                            .unbind('mouseup.dialog-overlay');
+        }, 100);
+	}
+
+	function signOut() {
+		alert("Sign Out");
+	}
+    
+                                                                                
+   
+
+	var tabIndexBase	= 0;
+	var currentRow		= 1;
+
+	function setTabIndexBase(tabIndexBaseParm) {
+		tabIndexBase	= tabIndexBaseParm;
+	}
+
+	function getTabIndexBase() {
+		return tabIndexBase;
+	}
+
+	function getTabIndex(column, row) {
+		var tabIndexValue	= getTabIndexBase() + parseInt(column + row);
+		return tabIndexValue;
+	}
+
+	function getRequiredAsterisk(required) {
+		var asterisk	= "";
+		if (required=="y") {
+			asterisk	= "<em>*</em>";
+		}
+		return asterisk;
+	}
+
+	function getLabelValue(label, asterisk) {
+		var labelValue	= "";
+		if (label != "") {
+			labelValue = label + ":" + asterisk;
+		}
+		return labelValue;
+	}
+	
+		                                           
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                                                                                
+				 var gaTrackingId = "";
+                                                              
+				 var commonGATrackingId = "UA-117592899-2";
+				 var billerTLA = "sci";
+				 if(gaTrackingId){
+                                                                                                      
+					ga('create', gaTrackingId, 'auto');
+				 }
+                                                              
+				 if(commonGATrackingId) {
+				 	ga('create', commonGATrackingId, 'auto',{'name':'common'});
+				 }
+				                                      
+</script>
+
+
+
+				<title>Online Payments</title>
+
+                                                                                                                
+<script type="text/javascript">
+	var urlAddress			= "/sci/JustPayIt/jpt.do";
+	var submitPayment 		= false;
+	var currentWorkflow		= "";
+	var payActionList		= ["QuickPay-Authenticate", "QuickPay-Back-To-Enter-Payment-Info", 
+						   	   "QuickPay-Verify", "QuickPay-Confirm"];
+	var enrollActionList	= ["EnrollmentMenu-II", "AuthorizeEnrollment-II"]; 
+	var addBmapActionList	= ["PaymentInfoAPR", "PaymentBillListAchAPR", "CreateBillerManagedAPR"]; 
+	var	flowControl			= "";
+	var prefillDone			= false;
+	var prefillStatesDone	= false;
+	var saveAddressState	= "";
+	 
+	function doEnroll() {
+		flowControl		= false;
+		currentWorkflow	= "enroll";
+		startLoadStepProcess();
+		setTimeout(
+			function() {
+				selectStep("WizardService", "EnrollmentMenu-II", false);
+			}, 1000);
+	}
+		
+	function doAddBmap(url) {
+		var target = url;
+		if(target == null) {
+			target = "PaymentInfoAPR";
+		}
+		currentWorkflow	= "addBmap";
+		startLoadStepProcess();
+		setTimeout(
+			function() {
+				selectStep("WizardService", target, false);
+			}, 1000);
+	}
+	
+	function initPay() {
+		currentWorkflow	= "pay";
+		startLoadStepProcess();
+		setTimeout(
+			function() {
+				selectStep("WizardService", "QuickPay-Authenticate", true);
+			}, 1000);
+	}
+	
+	function startOver() {
+		parent.location.replace("index.html?unitCode=SCI");
+	}
+	
+	function verifyAddBmap() {
+		continueOnClick("WizardService", "PaymentBillListAchAPR", false);
+	}
+
+	function confirmAddBmap() {
+		continueOnClick("WizardService", "CreateBillerManagedAPR", false);
+	}
+
+	function continueOnClick(requestType, action, startSession ) {
+		startLoadStepProcess();
+		setTimeout(
+			function() {
+				selectStep(requestType, action, startSession);
+			}, 1000);
+	}
+		
+	function selectStep(requestType, action, startSession) {
+		var urlParms	= null;
+                                                   
+		if (startSession) {
+			var sessionHandle	= "OZwQBHjF70369kbG6Bi-fyLg3oe9zBs/pyJh2AU29HMeKj8OY2w9NzE5MDMwOTAw";
+			var client			= "719030900";
+			var sessionTimeout	= "";
+			urlParms			= "&sessionHandle=" + sessionHandle +						  	  	
+								  "&sessionTimeout=" + sessionTimeout +
+								  "&flowControl=" + flowControl +						  	  	
+						  	  	  "&action=" + action + 
+						  	  	  "&client=" + client +
+						  	  	  "&newBean=true" +
+						  	  	  "&quickPay=Y";
+			if (requestType != null) {
+				urlParms = urlParms + "&type=" + requestType;
+			}
+
+			loadStep(urlParms);
+		} else {
+			urlParms	= $(".pageForm").serialize() + "&action=" + action;
+			if (requestType != null) {
+				urlParms = urlParms + "&type=" + requestType;
+			}				
+			loadStep(urlParms);
+		}		
+	}
+
+	function finishLoadStep(stepNumber) {
+		if (currentWorkflow == "pay") {
+			switchSteps(stepNumber, payActionList);
+		} else if (currentWorkflow == "enroll") {
+			switchSteps(stepNumber, enrollActionList);
+		} else if (currentWorkflow == "addBmap") {
+			switchSteps(stepNumber, addBmapActionList);
+		}
+		$(document.body).show();
+		endLoadStepProcess();
+	}
+	
+	function switchSteps(currentStep, actionList) {
+		var numberOfSteps	= actionList.length;
+		var absoluteStep	= parseInt(currentStep) + 1;
+                                                                                        
+                                                                  
+
+		if (flowControl) {
+			numberOfSteps	= numberOfSteps - 1;
+			absoluteStep	= absoluteStep - 1;
+		}
+		
+		$("#progressbar").progressbar({
+		    value: ((absoluteStep/numberOfSteps) * 100)
+		});
+
+		for (i = 0; i < numberOfSteps; i++) {
+			var stepType	= null;
+                           
+			if (i < currentStep) {
+				if (currentStep == numberOfSteps - 1) {
+					stepType	= "step-done";				
+				} else if (currentStep + 1 == numberOfSteps) {
+					stepType	= "step-next";
+				} else {
+					stepType	= "step-prev";
+				} 		
+			} else {
+				if (i == currentStep){
+					stepType	= "step-current";
+				} else {
+					stepType	= "step-next";
+				}
+			}
+                                        
+			$("#step" + i).attr("class", stepType);
+			if (stepType == "step-prev" && currentStep < numberOfSteps) {
+				var command	= null; 
+				if (i == 0) {
+					if (currentWorkflow == "addBmap") {
+						command	= "doAddBmap();";
+					} else if (currentWorkflow == "enroll") {
+						command = "doEnroll();";
+					} else {
+						command = "startOver();";
+					}
+				} else {
+					command	= "continueOnClick('WizardService', " + "'" + actionList[i] + "'" + ');';
+				}
+				
+				$("#step" + i).attr("onclick", command);
+			} else {
+				$("#step" + i).attr("onclick", "");
+			}			
+		}
+	}
+	
+	function startLoadStepProcess() {
+                                                                                  
+                                                                           
+		$(".block-input").height($(document).height()).width($(document).width()).show();
+                                                                                                   
+		$("button[type=\"submit\"]").attr("disabled", true);
+                                     
+		$.mobile.loading("show");
+	}
+
+	function endLoadStepProcess() {
+                                    
+		$.mobile.loading("hide");
+                                        
+		$(".block-input").hide();
+	}
+	
+	function displayPaymentMethod() {
+		var paymentMethod	= $("#paymentMethod").val();
+
+		if (paymentMethod == "B") {
+			$("#paymentMethodCard").hide();
+			$(".paymentMethodCard").hide();
+			$("#billingInfo").hide();
+			$(".paymentMethodBank").show();
+		} else {
+			$(".paymentMethodBank").hide();
+			$("#paymentMethodCard").show();
+			$(".paymentMethodCard").show();
+			if ($("#showBillingInfo").val() == "n") {
+				$("#billingInfo").hide();
+			} else {
+				if (prefillDone && !prefillStatesDone) {
+					prefillStatesDone	= true;
+					if (saveAddressState == "") {
+						$("select[name='billingInfo.address.state']").val($("select[name='billingInfo.address.state'] option:first").val());
+					} else {
+						$("select[name='billingInfo.address.state']").val(saveAddressState).change();
+					}
+				}
+				$("#billingInfo").show();
+			}
+		}
+	}
+	
+	function cardNumberOnChange(cardNumberField) {
+		if (cardNumberField.value != "") {
+			$(".card_field").show();
+		} else {
+			$(".card_field").hide();
+		}
+	}
+	
+	function cardNumberOnBlur(cardNumberField) {
+		if (cardNumberField.value != "") {
+			$(".card_field").show();
+		} else {
+			$(".card_field").hide();
+		}
+	}	
+	
+	function verifyAndSubmit() {
+		var paymentMethod	= $("#paymentMethod").val();
+		if (paymentMethod.toLowerCase() == "c") {
+			copyInfo();
+		}
+
+		if ($('select[name="accountType"]').length != 0) {
+			if ($('select[name="accountType"]').val() == "1") {
+				$('input[name="contactInfo.businessName"]').val("");
+				$('input[name="contactInfo.contactName"]').val("");
+			} else if ($('select[name="accountType"]').val() == "2") {
+				$('input[name="contactInfo.firstName"]').val("");
+				$('input[name="contactInfo.lastName"]').val("");
+			}
+		}
+				
+		var success	= verifyPaymentInformation();		
+		if (success == true) {
+			continueOnClick('WizardService', 'QuickPay-Verify');
+		}
+	}
+
+	function loadStep(urlParms) {
+		var stepNumber	= null;
+                       
+		$.ajax({
+			url: urlAddress,
+			data: urlParms,
+			type: "POST",
+			async: true,
+			success:
+				function(response){
+                       
+					$("#quickpay_workspace")
+						.html(response)
+						.enhanceWithin();
+					stepNumber	= $("#stepNumber").val();
+                         
+					window.scrollTo(0,0);
+					finishLoadStep(stepNumber);
+                                        
+					makeGACall();
+				},
+		    error:
+		    	function(request, error) {
+			    	alert("AJAX request failed - " + error);
+				}
+		});
+	}
+          
+                                                                                
+   
+	 
+	var tabIndexBase	= 0;
+	var currentRow		= 1;
+	
+	function setTabIndexBase(tabIndexBaseParm) {
+		tabIndexBase	= tabIndexBaseParm;
+	}
+	
+	function getTabIndexBase() {
+		return tabIndexBase;
+	}
+	
+	function getTabIndex(column, row) {
+		var tabIndexValue	= getTabIndexBase() + parseInt(column + row);
+		return tabIndexValue;
+	}
+	
+	function getRequiredAsterisk(required) {
+		var asterisk	= "";
+		if (required=="y") {
+			asterisk	= "<em>*</em>";
+		}
+		return asterisk;
+	}
+
+	function getLabelValue(label, asterisk) {
+		var labelValue	= "";
+		if (label != "") {
+			labelValue = label + ":" + asterisk;
+		}
+		return labelValue;
+	}
+
+	function printWindow() {
+		window.print();
+	}	
+
+	function openRelatedLink(link) {
+	    window.open(link,'RelatedLinks','fullscreen=no,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,directories=no,location=yes,width=720,height=520');
+	}
+	
+	function verifyCardNumber(cardNumberFieldName, type, action, wizform) {
+		var target	= "#card-info";
+		var url		= "/sci/JustPayIt/jpt.do?type=" + type + "&action=" + action + "&client=719030900" +
+					  "&" + cardNumberFieldName + "=" + $("#cardNumber").val() + 
+					  "&sessionHandle=" + $("input[name='sessionHandle']").val();
+		$(target)
+			.load(url, function() {
+				$(target)
+					.enhanceWithin();
+				$(".continue").removeClass("ui-btn-active");		 
+				displayPaymentMethod();
+				prefillInfo();		
+			});
+	}
+
+	function replaceAll(source, stringToFind, stringToReplace) {
+		var temp 	= source;
+		var index 	= temp.indexOf(stringToFind);
+    	while(index != -1){
+        	temp 	= temp.replace(stringToFind, stringToReplace);
+        	index 	= temp.indexOf(stringToFind);
+    	}
+    	return temp;
+	}
+	
+	function getFlowControl() {
+		return flowControl;
+	}
+                                
+	function makeGACall(){
+		var title = $(document).find("title").text();
+                                                
+		var subTitle =$(".step-current").text().trim();
+		
+		if(subTitle == ""){
+			subTitle =  $(".step-next").first().text().trim();
+		}
+		title = title + " - "+ subTitle;
+		
+		trackGAPage(title);
+	}
+	
+	function setATMExpiryDate(showDate) {
+		ATMExpiryDate	= showDate;
+	}
+
+	function getATMExpiryDate() {
+		return ATMExpiryDate;
+	}
+
+</script>
+	<style id="72d72ed3-ea4b-42f9-89e8-a98d0cb67226">.select-text-inside-a-link{ -moz-user-select: text!important; }</style><style id="d1c97374-0b72-4545-8cf0-88b9065394fa">#smgm_bgdiv{ text-align: center;position:fixed;top:0px;left:0px;z-index:9991;width:100%;height:100%;background-color:black;opacity:0.7;display:block;visibility:visible;}</style><style id="d63cf12b-b2f5-42ca-95fa-618374e97432">#smgm_dialogbox { vertical-align:middle;left:40px;top:15px;border:3px solid #000 !important;text-align:center !important;background-color:#fff !important;color:#000 !important;font-family:arial,verdana !important;z-Index:9999;position:fixed;width:18%;height:50%;margin-left:auto;margin-right:auto;display:block;visibility:visible;}</style><style id="005cbbbf-6078-402b-993e-198f9e1fac71">.smgm_buttons { color:#000 !important;font: 90% 'arial','trebuchet ms',helvetica,sans-serif !important;background-color:#B2CCFF !important;border:2px solid !important;border-color: #E0EBFF #000 #000 #E0EBFF !important;vertical-align: top !important;}</style><style id="7f30b41f-ccf2-4401-8913-12d5a7031b7c">.smgm_table { margin-bottom:10px !important;border:0px !important;border-collapse:collapse !important;margin-left:auto;margin-right:auto; }</style></head>
+
+	<body onload="initPay();" class="body_bkg qpay SCI ui-mobile-viewport ui-overlay-a vsc-initialized service-EMPLOYERSLIC" style="" cz-shortcut-listen="true">
+		<div class="block-input" style="height: 1117px; width: 1645px; display: none;"></div>
+	<div data-role="page" data-url="/sci/JustPayIt/jpt.do" tabindex="0" class="ui-page ui-page-theme-a ui-page-active" style="min-height: 1060px;">
+		<div data-role="panel" id="slide_panel" data-display="push" data-theme="none" class="slide_panel ui-panel ui-panel-position-left ui-panel-display-push ui-panel-closed ui-body-none ui-panel-animate">
+			<div class="ui-panel-inner"><label class="panelMenu">Menu</label><ul class="slide_nav_bar slide_nav_bar_links">
+				<li id="banner_link1_li" class="banner-link">
+					<a id="banner_link1" class="banner-link ui-link" href="https://secure3.billerweb.com/sci/contactus.html" target="_blank">Contact us</a>
+				</li>
+					<li class="divider_vertical_nav_pad divider_vertical_nav">|</li>
+				<li id="banner_link2_li" class="banner-link">
+					<a id="banner_link2" class="banner-link ui-link" href="javascript: doExit(&#39;JPIExitUrl&#39;)">Exit</a>
+				</li>
+	</ul></div>
+	
+		</div>
+		<div class="ui-panel-wrapper"><div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<div class="nav-toggle">
+	</div>
+	<div class="header">
+		<div id="banner" class="banner_nav banner_nav_login">
+	<ul class="banner-navigation">
+				<li id="banner_link1_li" class="banner-link">
+					<a id="banner_link1" class="banner-link ui-link" href="https://secure3.billerweb.com/sci/contactus.html" target="_blank">Contact us</a>
+				</li>
+					<li class="divider_vertical_nav_pad divider_vertical_nav">|</li>
+				<li id="banner_link2_li" class="banner-link">
+					<a id="banner_link2" class="banner-link ui-link" href="javascript: doExit(&#39;JPIExitUrl&#39;)">Exit</a>
+				</li>
+	</ul>
+		</div>
+	</div>
+		</div><div id="quickpay_workspace" class="ui-content workspace_component">
+                                                                                                                
+
+
+
+
+	<div>
+		<div id="progressbar" class="ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><div class="ui-progressbar-value ui-widget-header ui-corner-left ui-corner-right" style="width: 100%;"></div></div>
+		<div id="progressbarSteps">
+	    	<table width="100%" style="margin-bottom: 10px;">
+	        	<tbody><tr>
+							<td align="center">
+	        					<label id="step0" class="step-done" onclick="">Authenticate</label>
+							</td>
+							<td align="center">
+	        					<label id="step1" class="step-done" onclick="">Enter</label>
+							</td>
+							<td align="center">
+	        					<label id="step2" class="step-done" onclick="">Verify</label>
+							</td>
+							<td align="center">
+	        					<label id="step3" class="step-current" onclick="">Confirm</label>
+							</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+	
+
+	<div class="printArea">
+		<div class="printAreaOnly">
+		</div>
+		<h2 class="workspace_title">
+						Payment Request Submitted
+
+		</h2>
+		<div class="workspace_message">
+<p>Thank you for your payment.</p><p>The following payment request has been submitted.</p><div class="screenOnly"><p>For further assistance or questions please contact us. You may click on the link provided, on the top or bottom of the screen, for information on how to contact us.</p><p>Please <a href="https://secure3.billerweb.com/sci/JustPayIt/jpt.do#" class="printPaymentConfirmation instructional_link ui-link">print this page</a> or please refer to the Reference ID when communicating with us regarding this transaction.</p></div><p></p>	    </div>
+	
+	<form class="pageForm" name="wizForm" method="post" action="https://secure3.billerweb.com/sci/JustPayIt/jpt.do">
+		<div>
+			<input type="hidden" name="sessionHandle" value="MuPfBBYwzRvIFvTqfEuUmyLg3oe9zBs/pyJh2AU29HMeKj8OY2w9NzE5MDMwOTAw">
+			<input type="hidden" name="type" value="WizardService">
+			<input type="hidden" name="action" value="">
+			<input type="hidden" name="client" value="719030900">
+			<input type="hidden" name="logoutUrl">
+<input type="hidden" name="stepNumber" value="3" id="stepNumber">	<hr class="horizontal_divider_1">
+	
+	<div class="section">
+				<h3>Payment Details</h3>
+			    <div class="ui-grid-a">
+			        <div class="ui-block-a">
+		<div class="ui-grid-a display-field">
+			<div class="ui-block-a">
+				<div class="label_text">Reference ID:</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="form_field_display wordwrap">355364334052</div>
+			</div>
+		</div>
+
+				
+							
+		<div class="ui-grid-a display-field">
+			<div class="ui-block-a">
+				<div class="label_text">Date and time:</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="form_field_display wordwrap">01/20/2021 12:55:46 (CST)</div>
+			</div>
+		</div>
+
+										
+		<div class="ui-grid-a display-field">
+			<div class="ui-block-a">
+				<div class="label_text">Policy:</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="form_field_display wordwrap">0070412000970918200000</div>
+			</div>
+		</div>
+
+										
+
+
+<input type="hidden" name="accountType" value="1" id="accountType">						
+		<div class="ui-grid-a display-field">
+			<div class="ui-block-a">
+				<div class="label_text">Payment date:</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="form_field_display wordwrap">01/20/2021</div>
+			</div>
+		</div>
+
+		<div class="ui-grid-a display-field">
+			<div class="ui-block-a">
+				<div class="label_text">Customer name:</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="form_field_display wordwrap">Thomas Wong</div>
+			</div>
+		</div>
+
+
+		<div class="ui-grid-a display-field">
+			<div class="ui-block-a">
+				<div class="label_text">Email address:</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="form_field_display wordwrap">thomaswong93@gmail.com</div>
+			</div>
+		</div>
+
+				
+													
+				
+				
+	
+		<div class="ui-grid-a display-field">
+			<div class="ui-block-a">
+				<div class="label_text">Payment method:</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="form_field_display wordwrap">Checking Personal *****2084 - *****9453</div>
+			</div>
+		</div>
+
+				
+		<div class="ui-grid-a display-field">
+			<div class="ui-block-a">
+				<div class="label_text">Payment amount:</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="form_field_display wordwrap">$76.86</div>
+			</div>
+		</div>
+
+		<input type="hidden" name="strPaymentAmount" size="8" maxlength="8" value="76.86">
+				
+<input type="hidden" name="restart" value="true"><input type="hidden" name="enrollmentAccount" value="0070412000970918200000" id="enrollmentAccount"><input type="hidden" name="enrollmentInvoice" id="enrollmentInvoice">				    </div>
+				</div>
+			<div class="workspaceDivider">
+				<hr class="horizontal_divider_1">
+			</div>
+	</div>
+		</div>
+	</form>
+
+	
+	</div>
+
+	<div class="workspace_message">
+		<span style="FONT: bold 14px arial,sans-serif; COLOR: #404040">
+			Activate Online Payments?
+		</span>
+		<p>
+-&nbsp;&nbsp;Receive your bill notifications by e-mail<br>-&nbsp;&nbsp;Save money by eliminating stamps<br>-&nbsp;&nbsp;Store your payment account details online<br>-&nbsp;&nbsp;Your payment information will be used to pre-fill your sign up<br>		</p>
+	<div class="button-set">
+<button name="" type="button" class="primary_button primary_button ui-btn ui-btn-inline ui-shadow ui-corner-all" data-inline="true" onclick="doEnroll();">Sign Up Now!</button>	</div>
+	</div>
+	<hr class="horizontal_divider_1">
+	
+  	
+	
+
+	<div class="button-set">
+<button name="" type="button" class="primary_button emphasis hideIfNoAuth ui-btn ui-btn-inline ui-shadow ui-corner-all" data-inline="true" onclick="startOver();">Make Another Payment</button><button name="" type="button" class="primary_button primary_button ui-btn ui-btn-inline ui-shadow ui-corner-all" data-inline="true" onclick="doExit(&#39;JPIExitUrl&#39;)">Exit</button>	</div>
+	
+	    
+
+</div><div data-role="footer" role="contentinfo" class="ui-footer ui-bar-inherit">
+	
+	<div id="footer">
+		<div class="navbar bottom"> 
+			<div class="container full_screen"> 
+				<ul>
+					<li><a href="http://www.securian.com/Securian/About+Us/Securian+Financial+Group" target="_blank" class="ui-link">About us</a></li>
+					<li><a href="https://secure3.billerweb.com/sci/contactus.html" target="_blank" class="ui-link">Contact us</a></li>
+					<li><a href="http://www.securian.com/Securian/Legal+information" target="_blank" class="ui-link">Legal information</a></li> 
+					<li><a href="https://web1.lifebenefits.com/sites/lbwcm/pd/onlinepayments/Privacy" target="_blank" class="ui-link">Privacy policy</a></li> 
+				</ul>  
+			</div>  
+			<div class="container mobile_screen"> 
+				<ul class="mobile_footer_menu">
+					<li><a href="http://www.securian.com/Securian/About+Us/Securian+Financial+Group" target="_blank" class="ui-link">About us</a></li>
+					<li><a href="https://secure3.billerweb.com/sci/contactus.html" target="_blank" class="ui-link">Contact us</a></li>
+					<li><a href="http://www.securian.com/Securian/Legal+information" target="_blank" class="ui-link">Legal information</a></li> 
+					<li><a href="https://web1.lifebenefits.com/sites/lbwcm/pd/onlinepayments/Privacy" target="_blank" class="ui-link">Privacy policy</a></li> 
+				</ul>  
+				<a href="https://secure3.billerweb.com/sci/JustPayIt/jpt.do#" id="pull" onclick="$(&#39;.mobile_footer_menu&#39;).toggle({duration: 500})" class="ui-link">Resources</a>
+			</div>  		
+		</div>
+			
+		<div class="container">
+			<div class="sixteen columns" style="height: 21px"><img src="./Online Payments_files/curveshadowlt_940.png" alt="shadow" style="padding-bottom:6px;" class="scale-with-grid block">
+			</div>
+			<div class="sixteen columns">
+				<img src="./Online Payments_files/cobranded_logo.png" alt="Financial security for the long run" class="half-bottom" style="float: left;margin-bottom: 9.96px;padding-top: 11px">
+				<span style="float:right; font-size: 10px;margin-bottom: 9.96px">Powered by&nbsp;&nbsp;<img src="./Online Payments_files/FIS_Logo.gif"></span>
+				<div style="clear: both"></div>
+				<p class="footnote">Insurance products are issued by Minnesota Life Insurance Company or Securian Life Insurance Company, a New York authorized insurer. Both companies are headquartered in Saint Paul, MN. Product availability and features may vary by state. Each insurer is solely responsible for the financial obligations under the policies or contracts it issues. Securities offered through Securian Financial Services, Inc., Member FINRA / SIPC.</p>
+			</div>
+		</div>
+	</div>
+		</div></div>
+	
+		
+    <div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit"></div><div class="ui-popup-container ui-popup-hidden ui-popup-truncate"><div data-role="popup" class="ui-content ui-popup ui-body-e ui-overlay-shadow ui-corner-all tooltip-transitNumber" data-theme="e" style="max-width:350px;" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-transition="none" data-position-to="#tooltip-transitNumber">
+					<span class="spanTooltip spanTooltip-transitNumber" style="width:350px;">
+						<img src="./Online Payments_files/image_cheque_04.gif" style="width: 100%;">
+					</span>
+	</div></div><div class="ui-screen-hidden ui-popup-screen ui-overlay-inherit"></div><div class="ui-popup-container ui-popup-hidden ui-popup-truncate"><div data-role="popup" class="ui-content ui-popup ui-body-e ui-overlay-shadow ui-corner-all tooltip-fiAccountNumber" data-theme="e" style="max-width:350px;" aria-disabled="false" data-disabled="false" data-shadow="true" data-corners="true" data-transition="none" data-position-to="#tooltip-fiAccountNumber">
+					<span class="spanTooltip spanTooltip-fiAccountNumber" style="width:350px;">
+						<img src="./Online Payments_files/image_cheque_04.gif" style="width: 100%;">
+					</span>
+	</div></div><div class="ui-screen-hidden ui-popup-screen ui-overlay-b"></div><div class="ui-popup-container ui-popup-hidden ui-popup-truncate"><div class="modalDialog authCheckBoxesNotChecked ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all" data-role="popup" data-overlay-theme="b" data-history="false" data-dismissible="false">
+		<div class="modalContent" style="margin-top: 5px">
+			<div class="userMessage">
+	<div class="page-warn-message">
+		<p>		All authorization check box(es) must be selected to contimue.
+</p>
+	</div>
+			</div>
+			<hr class="horizontal_divider_2">
+			<div class="dialog_buttons">
+				<button class="primary_button closeButton ui-btn ui-btn-inline ui-shadow ui-corner-all" data-inline="true" type="button">Close</button>
+			</div>
+		</div>
+	</div></div></div>
+			<script>
+	function doExit(target) {
+		var wform = document.wizForm;
+		if(typeof(target) != 'undefined')
+			wform.logoutUrl.value = target;
+		wform.type.value = 'SignonService';
+		wform.action.value = 'SignoutAction';
+		wform.submit();
+	}
+					$(document).ready(function() {
+        
+                                                                                               
+                                                                      
+        
+						$(document).on("click", ".nav-toggle", function() {
+							$('.slide_panel:visible').panel('open');
+						});
+					});
+				
+			</script>
+    
+	
+<div class="ui-panel-dismiss"></div><div><div style="display: none; position: fixed; top: 30px; width: auto; max-width: 100%; text-align: center; left: 50%; transform: translateX(-50%); z-index: 99999999;"><div style="display: inline-block; font-size: 14px; font-weight: bold; border: 1px solid rgb(240, 195, 109); background-color: rgb(249, 237, 190); padding: 0px 10px; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;"></div></div></div><div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div></body></html>

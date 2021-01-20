@@ -1,0 +1,2512 @@
+//
+//  Before Bills, Accounts, Payments, or Profile page shows, get the cookie for whether to
+//  show or hide the instructions.  The default is show, so if the cookie indicates hide,
+//  toggle the control.
+//
+$(document).on("pagecontainerbeforeshow", function (event, ui) {
+	$(".help[data-cookie]", ui.toPage).each(function () {
+		var n = $(this).data("cookie");
+		var c = readCookie(n);
+		if (c.length > 0) {
+			// jQuery 1.7.2 toggle function has a bug. The following is a crude emulation of it.
+			$(this).children().each(function() {
+				var elem = $(this);
+				if (elem.css("display" ) === "none")
+					elem.show();
+				else
+					elem.hide();
+			});
+		}
+	})
+
+	if (serviceStartTime > 0) {
+		endService();
+	}
+});
+
+//changes for Google analytics start
+
+//pagecreate called on each page
+$(document).on("pagecreate", function(e) {
+	var title = $(e.target).data("title");
+	if(typeof(title) == "undefined" || title == null){
+		title = $(document).find("title").text();
+		if(title=="")
+			title = $(".workspace_title").text();
+	}
+
+	//We don't want to trigger trackGAPage function in qpay and one time payment flow in new BC.
+	//trackGAPage handled separately in quickpay.ftl
+	if(filterGAPage()) {
+		trackGAPage(title);
+	}
+});
+
+// popupafteropen called on pop of each dialog
+$(document).on("popupafteropen", "#commonDialog", function(e) {
+
+	if($("#commonDialog #web_dialog_title_h2").children().length == 0){
+	    var title = $("#commonDialog #web_dialog_title_h2").text();
+	    	if($("#commonDialog #web_dialog_title_h2").attr('data-gaattr') != ""){
+		    	title = $("#commonDialog #web_dialog_title_h2").attr('data-gaattr');
+	    	}
+
+	}
+	else{
+		var title = $("#commonDialog #web_dialog_title_h2").children(":first").text();
+		if($("#commonDialog #web_dialog_title_h2").attr('data-gaattr') != ""){
+			 title = $("#commonDialog #web_dialog_title_h2").attr('data-gaattr');
+    	}
+	}
+
+	trackGAPage(title);
+});
+
+//used to track pay invoice
+$(document).on("popupafteropen", "#payVerifyDialog", function(e) {
+
+	if($("#payVerifyDialog #web_dialog_title_h2").children().length == 0){
+	    var title = $("#payVerifyDialog #web_dialog_title_h2").text();
+	}
+	else{
+		var title = $("#payVerifyDialog #web_dialog_title_h2").children(":first").text();
+	}
+
+	trackGAPage(title);
+});
+
+//used to track cancel payment pop up
+$(document).on("popupafteropen", "#confirmPaymentCancelDialog", function(e) {
+
+	if($("#confirmPaymentCancelDialog #web_dialog_title_h2").children().length == 0){
+	    var title = $("#confirmPaymentCancelDialog #web_dialog_title_h2").text();
+	    if($("#confirmPaymentCancelDialog #web_dialog_title_h2").attr('data-gaattr') != ""){
+	    	title = $("#confirmPaymentCancelDialog #web_dialog_title_h2").attr('data-gaattr');
+    	}
+	}
+	else{
+		var title = $("#confirmPaymentCancelDialog #web_dialog_title_h2").children(":first").text();
+		if($("#confirmPaymentCancelDialog #web_dialog_title_h2").attr('data-gaattr') != ""){
+	    	title = $("#confirmPaymentCancelDialog #web_dialog_title_h2").attr('data-gaattr');
+    	}
+	}
+
+	trackGAPage(title);
+});
+
+//used to track paperless billing events
+$(document).on("click", "#paperCopy-label a, #disablePaperDocuments-label a", function (e) {
+	trackGAEvent(e);
+
+});
+
+//used to track footer and header links
+$(document).on("click", "[data-role=\"footer\"] a,[data-role=\"header\"] .banner-navigation a", function (e) {
+	trackGAEvent(e);
+
+});
+
+//used to track add new bank account storage terms and conditions
+$(document).on("click", "[class=\"workspace_message\"] a", function (e) {
+	if($(e.target).attr("class") != undefined && $(e.target).attr("class").toString().indexOf("instructional_link") < 0) {
+		trackGAEvent(e);
+	}
+
+
+});
+
+
+//used to track view invoice, archive invoice and activate invoice
+$(document).on("click", "a.view-bill,a.instructional_link,a.move_bill", function (e) {
+	trackGAEvent(e);
+});
+
+//used to track view/delete button on reporting tab on new BC
+$(document).on("click", ".reports-list-table a.primary_button", function (e) {
+	trackGAEvent(e);
+});
+
+//used to track view invoice for biller console 5.0
+$(document).on("click", "a[class*='view-bill-BC-II']", function (e) {
+	trackGAEvent(e);
+});
+
+//used to track bill presentment for biller console 5.0
+$(document).on("click", "#commonDialog tr[class*='table_row_color'] a[class*='ui-btn']", function(e) {
+    if (typeof($(e.target).attr("onclick")) != "undefined" && $(e.target).attr("onclick").toString().indexOf("ViewDocument") > -1) {
+        trackGAEvent(e);
+    }
+});
+
+
+//used to track Exit Just Pay It event
+$(document).on("click", "#quickpay_workspace div.button-set button", function (e) {
+	if (typeof($(e.target).attr("onclick")) != "undefined" && $(e.target).attr("onclick").toString().indexOf("doExit") > -1) {
+	    trackGAEvent(e);
+	}//used to track sign-up event
+	else if (typeof($(e.target).attr("onclick")) != "undefined" && $(e.target).attr("onclick").toString().indexOf("doEnroll") > -1) {
+	    trackGAEvent(e);
+	}
+});
+
+//common function to track all the pages
+function trackGAPage(title){
+	if(typeof(title) != "undefined" && title != null){
+		title=title.trim();
+		//handling excpetion in case GA is not initialized
+		try{
+		      ga('send', 'pageview', {
+				  'page': title,
+				  'title': title
+				  });
+			//Added for PBI#87586(common tracking id for all billers)
+		      if(commonGATrackingId) {
+			   ga('common.send', 'pageview', {
+				   'page': billerTLA+"/"+title,
+				   'title': title
+			   });
+			}
+		}catch(err){
+			//donothing
+		}
+	}
+
+}
+
+//common function to track all the events
+function trackGAEvent(e){
+	if(typeof($(e.target).text()) != "undefined" && $(e.target).text() != null){
+		var title=$(e.target).text().trim();
+		//handling excpetion in case GA is not initialized
+		try{
+			ga('send', {
+				hitType: 'event',
+			    eventCategory: title,
+			    eventAction: 'Click',
+			    eventLabel: title,
+			    page: title
+			});
+
+			//Added for PBI#87586(common tracking id for all billers)
+			if(commonGATrackingId) {
+				ga('common.send', {
+					hitType: 'event',
+				    eventCategory: "/"+billerTLA+"/"+title,
+				    eventAction: 'Click',
+				    eventLabel: title,
+				    page: title
+				});
+			}
+
+		}catch(err){
+			//donothing
+		}
+	}
+}
+
+//function to filter qpay flow and one time payment flow from new BC.
+//We don't want to trigger trackGAPage function in above mentioned flow.
+//trackGAPage handled separately in quickpay.ftl
+function filterGAPage() {
+	var url = window.location.href;
+	// check for MakeoneTimePayment Flow. Prevent Deafult Page create GA call
+   if (url.indexOf("MakeOneTimePayment") > -1) {
+       return false;
+   }// check for JPI Flow. Prevent Deafult Page create GA call
+	 else if (url.indexOf("JustPayIt") > -1) {
+       return false;
+   }
+   return true;
+}
+// changes for Google analytics end.
+
+//
+//  Set the progress bar to indicate the current step in the Forget Password and Enroll User work flows.
+//
+$(document).on("pagecreate", function (event, ui) {
+	var steps 		= $(".progressbarSteps", event.target).find("label");
+	var current 	= $(".progressbarSteps .step-current", event.target);
+	var currentIdx 	= steps.index(current);
+	currentIdx++;
+	$(".progressbar", event.target).progressbar({
+	    value: (currentIdx/steps.length) * 100
+	});
+});
+
+$(function () {
+	//
+	// Disable caching for all AJAX responses.
+	//
+	$.ajaxSetup ({
+	    cache: false
+	});
+
+	//
+	//  Make sure no page contents are cached.  Always go the server to refresh a page.
+	//
+	$(":mobile-pagecontainer").on( "pagecontainershow", function(event, ui) {
+		ui.prevPage.remove();
+	});
+
+	//
+	//  Save the state of whether to show or hide the instructions for this page.
+	//
+	$(document).on("click", ".hideShow", function(event) {
+		var t = $(event.target);
+		t.toggle();
+		t.siblings().toggle();
+		var n = $(".help").data("cookie");
+		if (n) {
+			if (t.hasClass("hideInstructions")) {
+				createCookie(n, true, 365);
+			} else {
+				createCookie(n, true, -1);
+			}
+		}
+	});
+
+	//
+	//  Save the state of whether to show or hide the instructions for this page.
+	//
+	$(document).on("click", ".hide-show-content0", function(event) {
+		var t = $(event.target);
+		t.toggle();
+		t.siblings().toggle();
+	});
+
+	$(document).on("click", ".hide-show-content1", function(event) {
+		var t = $(event.target);
+		t.toggle();
+		t.siblings().toggle();
+	});
+
+	//
+	//  This is needed to ensure the end service function is called even if the page is not
+	//  loaded because it is already in the browser's history.
+	//
+	$("body").on("pagecontainerchange", function(event, ui ) {
+		if (serviceStartTime > 0) {
+			endService();
+		}
+	});
+
+	//
+	//  Process a clicked link to a workspace or dialog containing a list that needs to pass page size.
+	//
+	$(document).on("click", ".paginateList", function(event) {
+		var target		= $(event.target);
+		var cookieName	= target.data("cookie");
+		var pageSize	= getPageSize(cookieName);
+		var url			= target.data("href") + "&pageSize=" + pageSize;
+		refreshWorkspace(url, true);
+	});
+
+	//
+	//  Process a clicked link to a non-list workspace (i.e. Profile User Information).
+	//
+	$(document).on("click", ".noPaginateList", function(event) {
+		var target		= $(event.target);
+		var url			= target.data("href");
+		refreshWorkspace(url, true);
+	});
+
+	//
+	//  Process a change in the pagination drop down to display the selected item range.
+	//
+	$(document).on("change", ".itemRange", function(event) {
+		var select		= $(event.target);
+		var url 		= select.data("href") + "&startPos=" + select.val();
+		var dialogId	= select.data("dialog-id");
+
+		if (typeof dialogId != "undefined") {
+			refreshDialog(url, dialogId);
+		} else {
+			refreshWorkspace(url, false);
+		}
+	});
+
+	//
+	//  Process a change in the page size drop down and:
+	//  -  Determine which list it's associated with (accounts, payments, rules, methods, or bills
+	//  -  Save the new value in the appropriate cookie
+	//  -  Refresh the workspace/dialog
+	//
+	$(document).on("change", ".selectPageSize", function(event) {
+		var select		= $(event.target);
+		var pageSize	= select.val();
+		var cookieName	= select.data("cookie");
+		setPageSize(cookieName, pageSize);
+
+		var url 		= select.data("href") + "&operation=search&startPos=0&pageSize=" + pageSize;
+		var dialogId	= select.data("dialog-id");
+
+		if (typeof dialogId != "undefined") {
+			refreshDialog(url, dialogId);
+		} else {
+			refreshWorkspace(url, true);
+		}
+	});
+
+	//
+	//  Open a popup dialog for any link with a class of dialog-link.
+	//
+	$(document).on("click", ".dialog-link:not(.move_bill, .view-bill)", function(event) {
+		var parms	= "";
+		var e		= $(event.target);
+		e.parents("[data-role=\"popup\"]").popup("close");
+		e.parents("[data-role=\"collapsible\"]").collapsible("collapse");
+
+		var	pageSizeCookie	= e.data("cookie");
+		if (pageSizeCookie != "undefined") {
+			var pageSize	= getPageSize(pageSizeCookie);
+			parms			= "&pageSize=" + pageSize;
+		}
+		var url 			= e.data("href") + parms;
+		var target 			= e.attr("href");
+
+		startService(url);
+		$(target)
+			.popup("destroy")
+			.empty()
+			.load(url, function() {
+				$(target)
+					.enhanceWithin()
+					.popup({afteropen: function( event, ui ) {
+						$('input').placeholder();
+					}})
+					.popup("open");
+				endService();
+			});
+	});
+
+	//
+	//  Open up a new browser window to display a invoice.
+	//
+	$(document).on("click", ".view-bill", function(event) {
+		var e 		= $(event.currentTarget);
+		var url 	= e.data("url");
+		var w 		= 850;
+		var h 		= 640;
+		var wleft 	= (screen.width - w) / 2;
+		var wtop 	= (screen.height - h) / 2;
+		if (wleft < 0) {
+			w 		= screen.width;
+			wleft	= 0;
+		}
+		if (wtop < 0) {
+			h 		= screen.height;
+			wtop 	= 0;
+		}
+		e.parents("[data-role=\"popup\"]").popup("close");
+		billWindow	= window.open(url,'DocumentWindow', 'width=' + w + ', height=' + h + ', ' +
+		    					  'left=' + wleft + ', top=' + wtop + ', ' +'location=0,resizable=1,scrollbars=1');
+		window.setTimeout(function() {
+        	billWindow.focus();
+        }, 100);
+
+		return false;
+	});
+
+	//
+	//  Initiate the Add an Auto Pay Rule dialog.
+	//
+	$(document).on("click", ".addAutoPayButton", function(event) {
+		var e 			= $(event.target);
+		e.parents("[data-role=\"popup\"]").popup("close");
+		e.parents("[data-role=\"collapsible\"]").collapsible("collapse");
+		var url 		= e.data("url");
+		var target 		= e.attr("href");
+		var stopFlag 	= $("#listAutoRuleDropDown").find(':selected').attr('data-stopFlag');
+		if ($("#listAutoRuleDropDown").val() != "allActiveAccounts" && stopFlag=="false") {
+			url = url + "&accountId=" + $("#listAutoRuleDropDown").val();
+		}
+
+		startService(url);
+		$(target)
+			.popup("destroy")
+			.empty()
+			.load(url, function() {
+				$(target)
+					.enhanceWithin()
+					.popup()
+					.popup("open");
+				endService();
+			});
+	});
+
+	//
+	//  This event is triggered from an account's payment summary action.  It loads the expanded accordion
+	//  with the payment summary for the selected payment.
+	//
+	$(document).on("collapsibleexpand", ".accordion-contents", function(event, ui) {
+		var e 		= $(event.target);
+		var url 	= e.data("url");
+		var target 	= e.data("target");
+
+		//  If undefined, this is an accordion in the details section of the main payment accordion,
+		//  so don't do anything.
+		if (typeof url == "undefined") {
+			return;
+		}
+
+		startService(url);
+		$(target)
+			.load(url, function() {
+				$(target)
+					.enhanceWithin();
+				endService();
+			});
+	});
+
+	//
+	//  Encode security sensitive fields.
+	//
+	$("input[name=\"deviceFootprint\"]").each(function() {
+		$(this).val(encode_deviceprint());
+	});
+
+	//
+	//  Initialize the common dialog.
+	//
+	$("#commonDialog").popup();
+
+	//
+	//  Confirm a cancel payment request from the payment list.
+	//
+	$(document).on("click", ".confirmCancelPaymentButton", function (event) {
+		var cancelButton		= $(event.target);
+		var referenceNumber 	= cancelButton.data("referenceId");
+		var feeId 				= cancelButton.data("feeId");
+		currentCancelPaymentUrl	= cancelButton.data("cancelUrl");
+		var aprPayment 			= cancelButton.data("aprPayment");
+		var target 				= "#confirmPaymentCancelDialog";
+		var titleText			= $("#titleText").val() + " " + referenceNumber;
+
+		if (feeId != "0") {
+			titleText	= titleText + ", " + $("#feeLabel").val() + " " + feeId;
+		}
+
+		if (aprPayment == "Y") {
+			$("#aprWarningMessage").show();
+		} else {
+			$("#aprWarningMessage").hide();
+		}
+
+		$("#web_dialog_title_h2").html(titleText);
+
+		startService("ConfirmCancelPayment");
+		$(target).popup("open");
+		endService();
+ 	});
+
+	//
+	//  Cancel a payment from the payment list.
+	//
+	$(document).on("click", ".cancelPaymentButton", function (event) {
+		var cancelButton	= $(event.target);
+		var target 			= "#commonDialog";
+
+		$("#confirmPaymentCancelDialog").popup("close");
+		startService("CancelPayment");
+		$(target)
+			.popup("destroy")
+			.empty()
+			.load(currentCancelPaymentUrl, function() {
+				$(target)
+					.enhanceWithin()
+					.popup()
+					.popup("open");
+				endService();
+			});
+ 	});
+
+	//
+	//  Process a change in the account drop down on the payment list page.
+	//
+	$(document).on("change", ".ViewMyPayments .account-selection", function(event) {
+		var select 		= $(event.target);
+		var input   	= $(".ViewMyPayments input[name=\"invoiceNumber\"]");
+		var pageSize	= getPageSize("PaymentsPageSize");
+
+		if (input.length == 0) {
+			var url = select.data("href") + "&accountSelection=" + select.val() + "&pageSize=" + pageSize;
+			refreshWorkspace(url, false);
+		}
+	});
+
+	//
+	//  Perform an account/invoice payment search for billers who have invoice filtering turned on.
+	//
+	$(document).on("click", ".ViewMyPayments .invoiceSearchButton", function(event) {
+		var input   	= $(".ViewMyPayments input[name=\"invoiceNumber\"]");
+		var value		= input.val();
+		var invoiceParm	= "";
+		var pageSize	= getPageSize("PaymentsPageSize");
+
+		if (value != "") {
+			invoiceParm	= "&invoiceNumber=" + value;
+		}
+
+		var href = "";
+		var accountId = "";
+		var select	= $(".ViewMyPayments select.account-selection[data-href]");
+
+		if (select.length > 0){
+			href = select.data("href");
+			accountId = select.val();
+		} else {
+			var accountIdData = $(".invoiceAccountId");
+			href = accountIdData.data("href");
+			accountId = accountIdData.val();
+		}
+
+		var url 	= href + "&accountSelection=" + accountId + invoiceParm +
+					  "&pageSize=" + pageSize;
+		refreshWorkspace(url, false);
+	});
+
+	//
+	//  Process a change in the account drop down on the auto pay rules page.
+	//
+	$(document).on("change", ".ViewMyPayments .account-selection-for-rules", function(event) {
+		var select 		= $(event.target);
+		var pageSize	= getPageSize("RulesPageSize");
+    	var url 		= select.data("href") + "&accountSelection=" + select.val() + "&pageSize=" + pageSize;
+    	refreshWorkspace(url, false);
+	});
+
+	//
+	//  Process a change in the account dropdown for the Bills work space.
+	//
+	$(document).on("change", ".PayMyBills .account-selection", function(event) {
+		var input	= $(".PayMyBills select[name=\"documentSetId\"]");
+	    if (input.length == 0) {
+			var accountSelection = "allActiveAccounts";
+			if ( $("select.account-selection").length > 0 ){
+				accountSelection = $("select.account-selection").find("option:selected").val();
+			}
+			var url				= $(".filterUrl").val();
+			var documentSetId	= "1";
+			var parms 			= "&accountSelection=" + accountSelection + "&documentSetId=" + documentSetId;
+			url 				= url + parms;
+			refreshWorkspace(url, false);
+	    }
+	});
+
+	//
+	//  Perform a bill search by account and bill type.
+	//
+	$(document).on("click", ".payFilter", function(event) {
+		if ($("body").hasClass("bc")) {
+			var accountSelection	= "allAccounts";
+		} else {
+			var accountSelection	= "allActiveAccounts";
+		}
+
+		if ( $("select.account-selection").length > 0 ) {
+			accountSelection = $("select.account-selection").find("option:selected").val();
+		}
+		var url				= $(".filterUrl").val();
+		var documentSetId	= $("select.document-set").find("option:selected").val();
+		var parms 			= "&accountSelection=" + accountSelection + "&documentSetId=" + documentSetId;
+		url 				= url + parms;
+		refreshWorkspace(url, false);
+	});
+
+	//
+	//  Perform an auto pay rule search account and status.
+	//
+	$(document).on("click", ".autoPayRuleFilter", function(event) {
+		var accountSelection = "allActiveAccounts";
+		if ( $("select.auto-pay-rule-account").length > 0 ){
+			accountSelection = $("select.auto-pay-rule-account").find("option:selected").val();
+		}
+		var url			= $(".autoPayRuleUrl").val();
+		var statusId	= $("select.status-id").find("option:selected").val();
+		var parms 		= "&accountSelection=" + accountSelection + "&statusId=" + statusId;
+		url 			= url + parms;
+		refreshWorkspace(url, false);
+	});
+
+	//
+	//  For payment details that have related transactions, take the selected transaction
+	//  from the dropdown and refresh the dialog with it's contents.
+	//
+	$(document).on("change", "select[name=\"relatedTransactions\"]", function(event) {
+		var e			= $(event.target);
+		var url 		= e.data("href") + "&referenceNumber=" + e.val();
+
+		startService(url);
+
+		//  If there is an accordion with a target, this request came from the Payments Summary dialog.
+		//  In this case, the target is the paragraph tag in the accordion.  Otherwise, it's the
+		//  standard Payment Detail dialog, so the whole dialog is replaced.
+		var accordion	= e.closest('.accordion');
+		var target		= accordion.data("target");
+		if (typeof target == "undefined") {
+			target	= $("#commonDialog");
+			$(target)
+				.load(url, function() {
+					$(target)
+						.enhanceWithin()
+						.popup({positionTo: "origin", y: 40})
+					endService();
+				});
+		} else {
+			url	= url + "&justContent=y";
+			$(target)
+				.load(url, function() {
+					$(target)
+						.enhanceWithin();
+					endService();
+				});
+		}
+
+	});
+
+	//
+	//  This event is part of the workflow when changing a credit card in the Methods of Payment workspace.
+	//  It is fired when clicking the Change Card Number on the View/Update Credit Card dialog.
+	//
+	$(document).on("click", "#changeCardNumberButon", function(event) {
+		$("input:hidden[name=service]").val("PaymentMethodService");
+		$("input:hidden[name=action]").val("ShowOnlyCardNumber");
+		$("input:hidden[name=id]").val("");
+		$("input:hidden[name=newCardNumber]").val("");
+		$("#paymentMethodCreditForm").submit();
+	});
+
+	//
+	//  This event is triggered when switching between card types when making a one time payment in Quick Pay.
+	//
+	$(document).on("change", "input:radio[name=\"paymentMethodInfo.cardInfo.cardType\"]", function(event) {
+		if($(this).attr("id") == "creditRadioOptionId" || getATMExpiryDate()) {
+			$("#expiryDateDiv").show();
+			$(".cardCVVDiv").show();
+		} else {
+			$("#expiryDateDiv").hide();
+			$(".cardCVVDiv").hide();
+		}
+
+	});
+
+	//
+	//  This event is triggered when switching between card types when adding a credit card method of payment from the Method of Payment workspace.
+	//
+	$(document).on("change", "input:radio[name=\"cardType\"]", function(event) {
+		if($(this).attr("id") == "creditRadioOptionId") {
+			$("#expiryDateDiv").show();
+		} else {
+			$("#expiryDateDiv").hide();
+		}
+
+	});
+
+	//
+	//  This event is triggered when switching between card types when adding a credit card method of payment to an
+	//  Auto Pay Rule or Account.
+	//
+	$(document).on("change", "input:radio[name=\"paymInst.cardInfo.cardType\"]", function(event) {
+		if($(this).attr("id") == "creditRadioOptionId") {
+			$("#expiryDateDiv").show();
+		} else {
+			$("#expiryDateDiv").hide();
+		}
+
+	});
+
+	//
+	//  This event is triggered when switching between card types when adding a credit card method of payment while
+	//  paying a invoice or on account.
+	//
+	$(document).on("change", "input:radio[name=\"newPaymInst.cardInfo.cardType\"]", function(event) {
+		if($(this).attr("id") == "creditRadioOptionId") {
+			$("#expiryDateDiv").show();
+		} else {
+			$("#expiryDateDiv").hide();
+		}
+
+	});
+
+	//
+	//  Triggered when changing payment method type to credit card when adding a new method of payment from the Method of Payment workspace.
+	//
+	$(document).on("change", "#paymentMethodSelection", function(event) {
+		if ($("#paymentMethodSelection").val() == "-99")
+			return false;
+
+		var e		= $(event.target);
+		var url 	= e.data("href");
+		var target 	= $("#commonDialog");
+
+		startService(url);
+		$(target)
+			.load(url, function() {
+				$("#commonDialog").popup("close");
+				$(target)
+					.enhanceWithin()
+					.popup("open")
+					endService();
+			});
+	});
+
+	//
+	//  Perform a popup close whenever a close button is clicked on a popup.
+	//
+	$(document).on("click", "[data-role=\"popup\"] .closeButton", function (event) {
+		$(event.target).parents("[data-role=\"popup\"]").popup("close");
+	});
+
+	//
+	//  Perform a popup close whenever a cancel button is clicked on a popup.
+	//
+	$(document).on("click", "[data-role=\"popup\"] .cancelButton", function (event) {
+		$(event.target).parents("[data-role=\"popup\"]").popup("close");
+	});
+
+	//
+	//  Perform a pop up close whenever a close button is clicked on a popup that requires a refresh of the workspace.
+	//  This seems to be only called when deleting an APR that has a scheduled payment and the payment is
+	//  deleted as well.
+	//
+	$(document).on("click", "[data-role=\"popup\"]:not(#payVerifyDialog) .closeAndRefreshButton", function (event) {
+		$(event.target).parents("[data-role=\"popup\"]").popup("close");
+		refreshWorkspaceList();
+	});
+
+	$(document).on("click", "#payVerifyDialog[data-role=\"popup\"] .closeAndRefreshButton", function (event) {
+		// Don't close; popup has been destroyed
+		refreshWorkspaceList();
+	});
+
+	//
+	//  Triggered when a user maks a payment and the result is an "invalid state".
+	//
+	$(document).on("click", "[data-role=\"popup\"] .closeAndSignoutButton", function (event) {
+		$(event.target).parents("[data-role=\"popup\"]").popup("close");
+		startService("Signout");
+		window.location = $('li.signOut a:first').attr('href');
+	});
+
+	//
+	//  Perform a window print whenever a print button is clicked.
+	//
+	$(document).on("click", ".printButton", function() {
+		window.print();
+	});
+
+	//
+	//  Slide the navigation panel to be shown or hidden when the screen size warrants having
+	//  the horizontal page tabs controlled by the "hamburger" link.
+	//
+	$(document).on("click", ".nav-toggle", function() {
+		$('.slide_panel').panel('open');
+	});
+
+	//
+	//  When a form is submitted, put the focus on the submit button.
+	//
+	$(document).on("submit", "form", function(event) {
+		$("button[type=\"submit\"]", event.target).focus();
+	});
+
+	//
+	// Show spinner on non-ajax links.
+	//
+	$(document).on("click", "a[data-ajax=\"false\"]", function(event) {
+		startService("NonAjaxLink");
+	});
+
+	//
+	// Show spinner on non-ajax forms.
+	//
+	$(document).on("submit", "form[data-ajax=\"false\"]", function(event) {
+		startService("NonAjaxForm");
+	});
+
+	//
+	//  The event triggered when the user attempts to log in.
+	//
+	$(".login_form").on("submit", function(event) {
+		startService("Login");
+
+		// Make sure cookies are turned on if needed before logging in.
+		var cookiesRequired	= $('input[name="cookiesRequired"]').val();
+		if (cookiesRequired) {
+			var cookieName	= "test-cookie-support";
+			var cookieValue	= "yes";
+			createCookie(cookieName, cookieValue, 1);
+			var result		= readCookie(cookieName);
+			if (result.length > 0 && result == cookieValue) {
+				createCookie(cookieName, cookieValue, -1);
+			} else {
+				$('input[name="loginid"]').val("");
+				$('input[name="password"]').val("");
+				$(".cookies-required-error-message").show();
+				$('input[name="loginid"]').focus();
+				endService();
+				event.preventDefault();
+				return false;
+			}
+		}
+		return true;
+	});
+
+	//
+	//  Some forgot password error dialogs that Brian can expound on.
+	//
+	$(document).on("click", "#fp_step3", function() {
+		if ( $("input.passwd1").val() !=
+		     $("input.passwd2").val()){
+			$(".invalidPasswd1").popup("open");
+			return false;
+		}
+
+		var canPrint = /^[^\x00-\x1F\xB0-\xFF\x20]*$/.test($("input.passwd2").val());
+
+		if (!canPrint) {
+			$(".invalidPasswd2").popup("open");
+			return false;
+		}
+
+		return true;
+	});
+
+	//
+	// For selected forms suppress the destination from the browser's history
+	//
+	$(document).on("submit", "form[data-history=\"false\"]", function(event) {
+		$("body").one("pagecontainerbeforechange", function(event, ui) {
+			ui.options.changeHash = false;
+		});
+	});
+
+	//
+	//  This event handles selecting a service when enrolling or adding an account.
+	//
+	$(document).on("change", ".selectAService", function(event) {
+		$(".hideAuthFields").hide();
+		var optionSelected = $(this).find("option:selected").val();
+		if (parseInt(optionSelected)<0){
+			$(".hideAuthFields_shared").hide();
+		} else {
+			$(".hideAuthFields_" + optionSelected).show();
+			$(".hideAuthFields_shared").show();
+			$(".slider_div.hideAuthFields_shared, .slider_div.hideAuthFields_" + optionSelected).css("display", "table");
+			if ($(".hideAuthFields_" + optionSelected).hasClass("multiAssoc")){
+				$(".allUserMessage").show();
+			} else {
+				$(".allUserMessage").hide();
+			}
+		}
+	});
+
+	//
+	//  Confirmation dialog is closed and the workspace needs to be reloaded.  This is for workspaces
+	//  that have no pagination.
+	//
+	$(document).on("click", ".responseMessage.noPagination > .modalContent > .dialog_buttons > .closeButton", function (event) {
+		startService("RefreshWorkspace");
+		location.reload();
+ 	});
+
+
+	//
+	//  Confirmation dialog is closed and the workspace needs to be reloaded.  This is for workspaces
+	//  that have pagination.
+	//
+	$(document).on("click", ".responseMessage.pagination > .modalContent > .dialog_buttons > .closeButton", function (event) {
+		refreshWorkspaceList();
+ 	});
+
+	//
+	//  Refresh workspace list when a user cancels out of adding an auto pay rule.
+	//
+	$(document).on("click", ".add_cmap_form .closeButton, .add_cmap_close_icon", function (event) {
+		refreshWorkspaceList();
+ 	});
+
+	//
+	//  Refresh workspace list when a user finishes updates to the payment method for a biller managed APR and
+	//  clicks the Close button or the X to close the dialog.
+	//
+	$(document).on("click", ".update_bmap.closeButton, .update_bmap_close_icon", function (event) {
+		refreshWorkspaceList();
+ 	});
+
+	$(document).on("click", ".editAccount", function() {
+		$(".menu-popup").popup("close");
+		var target 	= $("#commonDialog");
+		var url = $(this).attr("url");
+		startService(url);
+		$(target)
+			.popup("destroy")
+			.empty()
+			.load(url, function() {
+				$(target)
+					.enhanceWithin()
+					.popup({positionTo: "window"})
+					.popup("reposition", {positionTo: "window"})
+					.popup("open");
+				endService();
+			});
+	});
+
+	//
+	//  This event is triggered when the user clicks on the Archive Bill or Activate Bill Action menu selection
+	//  for a selected item on the Bills/Invoices workspace.  It displays a verification dialog.
+	//
+	$(document).on("click", ".move_bill", function(event) {
+		var e = $(event.target);
+		$(".yesNoDialog").data("href", $(this).data("href"));
+		var actionMenu = e.parents("[data-role=\"popup\"]").first();
+		actionMenu.one("popupafterclose", function() {
+			$(".yesNoDialog").popup("open");
+		});
+		actionMenu.popup("close");
+	});
+
+	//
+	//  This event handles a Yes selection from the event above.  It either activates an archived invoice,
+	//  or archives an activated invoice.
+	//
+	$(document).on("click", ".move_bill_confirmed", function(event) {
+		var e	= $(event.target);
+		var url = $(".yesNoDialog").data("href");
+		startService(url);
+		$.ajax({
+			url: url,
+			dataType: "html"
+		})
+		.done(function(response, textStatus, jqXHR) {
+			var html 			= $( "<div>" + response + "</div>" );
+			var successMessage 	= $("#return_message", html).html();
+			e.parents("[data-role=\"popup\"]").popup("close");
+			if (successMessage){
+				$(".userMessage").html(successMessage);
+				$(".responseMessage").popup("open");
+			} else {
+				alert("error");
+			}
+		})
+		.fail(function() {
+			alert("error");
+		})
+		.always(function() {
+			endService();
+		});
+	});
+
+	//
+	//  This event is triggered when the user clicks on any delete row button in the Biller Console.
+	//  It displays a verification dialog.
+	//
+	$(document).on("click", ".delete_row", function(event) {
+		var e = $(event.target);
+		e.parents("[data-role=\"popup\"]").popup("close");
+		$(".yesNoDialog").data("href", $(this).data("href"));
+		$(".yesNoDialog").popup("open");
+	});
+
+	//
+	//  This event handles a Yes selection from the event above.  It confirms the deletion of the row.
+	//
+	$(document).on("click", ".delete_row_confirmed", function(event) {
+		var e	= $(event.target);
+		var url = $(".yesNoDialog").data("href");
+		startService(url);
+
+		$.ajax({
+			url: url,
+			dataType: "html"
+		})
+		.done(function(response, textStatus, jqXHR) {
+			var html 			= $( "<div>" + response + "</div>" );
+			var successMessage 	= $("#return_message", html).html();
+			e.parents("[data-role=\"popup\"]").popup("close");
+			if (successMessage){
+				$(".userMessage").html(successMessage);
+				$(".responseMessage").popup("open");
+			} else {
+				alert("error");
+			}
+		})
+		.fail(function() {
+			alert("error");
+		})
+		.always(function() {
+			endService();
+		});
+	});
+
+	//
+	//  This event handles  configuration update.
+	//
+	$(document).on("submit", "#confForm", function(event) {
+		event.preventDefault();
+		event.stopImmediatePropagation();
+		startService("UpdateBillerConfig");
+		var submitForm = $(event.target);
+
+		$.ajax({
+			url: "inetSrv",
+			data: $(submitForm).serialize(),
+			dataType: "html"
+		})
+		.done(function(response, textStatus, jqXHR) {
+			var html 			= $( "<div>" + response + "</div>" );
+			var successMessage 	= $("#return_message", html).html();
+			if (successMessage){
+				$(".userMessage").html(successMessage);
+				$(".responseMessage").popup("open");
+			} else {
+				alert("error");
+			}
+		})
+		.fail(function() {
+			alert("error");
+		})
+		.always(function() {
+			endService();
+		});
+	});
+
+
+	//  This event is triggered when a user tries to delete an auto pay rule.
+	//  If there is an error, display the response message dialog.
+	//  If usccessful, then show the show the success dialog.
+	$(document).on("click", ".delete_apr", function(event) {
+		var e	= $(event.target);
+		var url = e.data("href");
+		startService(url);
+		$.ajax({
+			url: url,
+			dataType: "html"
+		})
+		.done(function(response, textStatus, jqXHR) {
+			var html 			= $( "<div>" + response + "</div>" );
+			var errorMessage 	= $("#return_message", html).html();
+			e.parents("[data-role=\"popup\"]").popup("close");
+			if (errorMessage){
+				$(".userMessage").html(errorMessage);
+				$(".responseMessage").popup("open");
+			} else {
+				$("#commonDialog")
+					.html(response)
+					.enhanceWithin()
+					.popup("open");
+			}
+		})
+		.fail(function() {
+			alert("error");
+		})
+		.always(function() {
+			endService();
+		});
+	});
+
+	//  This event is triggered when a user tries to view/update an auto pay rule.
+	//  If there is an error, display the response message dialog.
+	//  If successful, then show the show the success dialog.
+	$(document).on("click", ".view_update_apr", function(event) {
+		var e	= $(event.target);
+		var url = e.data("href");
+		startService(url);
+		$.ajax({
+			url: url,
+			dataType: "html"
+		})
+		.done(function(response, textStatus, jqXHR) {
+			var html 			= $( "<div>" + response + "</div>" );
+			var errorMessage 	= $("#return_message", html).html();
+			e.parents("[data-role=\"popup\"]").popup("close");
+			if (errorMessage){
+				$(".userMessage").html(errorMessage);
+				$(".responseMessage").popup("open");
+			} else {
+				$("#commonDialog")
+					.html(response)
+					.enhanceWithin()
+					.popup("open");
+			}
+		})
+		.fail(function() {
+			alert("error");
+		})
+		.always(function() {
+			endService();
+		});
+	});
+
+	// This "special" handler must be registered ahead of the following "generic" one
+	$(document).on("submit", "#creditFormMultiPay, #achFormMultiPay", function(event) {
+		event.preventDefault();
+		event.stopImmediatePropagation();
+		startService("AddPaymentMethodPayBills");
+		var submitForm = $(event.target);
+
+		$.ajax({
+			url: "inetSrv",
+			data: $(submitForm).serialize(),
+			dataType: "html"
+		})
+		.done(function(response, textStatus, jqXHR) {
+			var html = $( "<div>" + response + "</div>" );
+			var successMessage = $("#return_message", html).html();
+			$("#commonDialog").popup("close");
+			if (successMessage){
+				var paymentInstrumentType = $("#paymentInstrumentType", html).val();
+				var paymentInstrumentID = $("#paymentInstrumentID", html).val();
+				var paymentInstrumentText = $("#paymentInstrumentText", html).val();
+
+				$("select.payment_pay_method").each(function(index) {
+					if (((paymentInstrumentType == "C") && ($(this).data("show-credit") == "Y")) ||
+							((paymentInstrumentType == "B") && ($(this).data("show-debit") == "Y")) ||
+							((paymentInstrumentType == "A") && ($(this).data("show-atm") == "Y"))){
+						if ( $('option[value="-1"]', this).length > 0 ){
+							$('option[value="-1"]', this).before($("<option></option>").val(paymentInstrumentID).html(paymentInstrumentText));
+						} else if ( $('option[value="-2"]', this).length > 0 ){
+							$('option[value="-2"]', this).before($("<option></option>").val(paymentInstrumentID).html(paymentInstrumentText));
+						}
+						if ($(this).attr('id') == $("#paymentMethodInFocus").val()){
+							$(this).val(paymentInstrumentID);
+						}
+						$(this).selectmenu('refresh', true);
+					}
+				});
+
+				var defaultPaymentMethod = $("select.default_pay_method");
+				if ( $('option[value="-1"]', defaultPaymentMethod).length > 0 ){
+					$('option[value="-1"]', defaultPaymentMethod).before($("<option></option>").val(paymentInstrumentID).html(paymentInstrumentText));
+				} else if ( $('option[value="-2"]', defaultPaymentMethod).length > 0 ){
+					$('option[value="-2"]', defaultPaymentMethod).before($("<option></option>").val(paymentInstrumentID).html(paymentInstrumentText));
+				}
+
+				$(defaultPaymentMethod).selectmenu('refresh', true);
+
+				if ($(defaultPaymentMethod).attr('id') == $("#paymentMethodInFocus").val()){
+					$(defaultPaymentMethod).val(paymentInstrumentID);
+				}
+
+				$(".addPaymentMethodMessage .userMessage").html(successMessage);
+				$(".addPaymentMethodMessage").popup("open");
+			} else {
+				$("#commonDialog")
+					.html(response)
+					.enhanceWithin()
+					.popup("open");
+			}
+		})
+		.fail(function() {
+			alert("error");
+		})
+		.always(function() {
+			endService();
+		});
+	});
+
+	$(document).on("submit", "#commonDialog form:not(.edit_security_form, .edit_login_form)", function(event) {
+		event.preventDefault();
+		dialogAjaxCall(this);
+		return false;
+	});
+
+	$(document).on("popupafterclose", ".addPaymentMethodMessage", function (event, ui) {
+		var defaultPaymentMethod = $("select.default_pay_method");
+		if ($(defaultPaymentMethod).attr('id') == $("#paymentMethodInFocus").val()){
+			$(defaultPaymentMethod).change();
+		}
+	});
+
+	$(document).on("click", ".addPaymentMethod .closeButton, .addPaymentMethod #btnClose", function (event) {
+		var paymentMethodId = $("#paymentMethodInFocus").val();
+		var paymentMethodObject = $("#" + paymentMethodId);
+		paymentMethodObject.val("0");
+		paymentMethodObject.selectmenu('refresh', true);
+	});
+
+	$(document).on("submit", "form.pay_verify_form", function(event) {
+		event.preventDefault();
+		var dataParms	= $(this).serialize();
+		startService(dataParms);
+		$.ajax({
+			url: "inetSrv",
+			data: dataParms,
+			dataType: "html"
+		})
+		.done(function(response, textStatus, jqXHR) {
+			$("#payVerifyDialog").empty();
+			// Can't chain this with the above command; causes issue
+			$("#payVerifyDialog").html(response).enhanceWithin().popup().popup("open");
+			//used to track payment submitted page
+			if($("#payVerifyDialog #web_dialog_title_h2").children().length == 0){
+			    var title = $("#payVerifyDialog #web_dialog_title_h2").text();
+			}
+			else{
+				var title = $("#payVerifyDialog #web_dialog_title_h2").children(":first").text();
+			}
+			trackGAPage(title);
+			//ends
+		})
+		.fail(function() {
+			alert("error");
+		})
+		.always(function() {
+			endService();
+		});
+		return false;
+	});
+
+	$(document).on("submit", "#commonDialog form.edit_security_form", function(event) {
+		event.preventDefault();
+		var valid = true;
+		var errorClassName = "";
+		var firstError = true;
+		$(".challengeAnswer").each(function(index) {
+			$(this).val($.trim($(this).val()));
+			if ($(this).val().length == 0){
+				if (firstError){
+					firstError=false;
+					$(".error-message").hide();
+					$(".page-error-message").hide();
+					$(".error").removeClass("error");
+				}
+				errorClassName = "." + $(this).attr("name").replace("[","").replace("]","");
+				labelClassName = errorClassName + "Label";
+				$(".page-error-message-hidden").show();
+				$(errorClassName).show();
+				$(labelClassName).addClass("error");
+				valid = false;
+			}
+		});
+
+		if (valid == true){
+			$(".challengeAnswer").each(function(index) {
+				$(this).val($.trim($(this).val()));
+				if ($(this).val() == "******"){
+					$(this).val("");
+				}
+			});
+			dialogAjaxCall(this);
+		}
+
+		return false;
+	});
+
+	$(document).on("submit", "form.pay_bills_form", function(event) {
+		event.preventDefault();
+		var valid = true;
+		if ($("input:hidden[name=action]").val() != "Refresh-Bills-Workspace" && $('.select-one').length > 0){
+			var atLeastOneIsChecked = $('.select-one:checkbox:checked').length > 0;
+			if(!atLeastOneIsChecked){
+				endService();
+				$(".noPaymentsSelected").popup("open");
+				return false;
+			}
+		}
+
+		$(".pay_bills_action").remove();
+		var target 		= $(".pay-bills-accounts-section");
+		var dataParms	= $(this).serialize();
+		startService(dataParms);
+		$.post("inetSrv", dataParms, function(data, textStatus, jqXHR) {
+			$(target).html(data);
+			$(target).enhanceWithin();
+			endService();
+			if (textStatus != "success"){
+				alert("Error loading page.");
+			}
+		});
+
+		return false;
+	});
+
+	$(document).on("click", "#multiPayAddFormMorePaymOptions", function(event) {
+		$("#showMultiPayLimitedPaymentOptions").val("false");
+		$("input:hidden[name=action]").val("Refresh-Bills-Workspace");
+		$("input:hidden[name=stepCount]").val("0");
+		$("#multiPaymentForm").submit();
+	});
+
+	$(document).on("submit", "#commonDialog form.edit_login_form", function(event) {
+		event.preventDefault();
+
+		$(".ivrPin").each(function(index) {
+			$(this).val($.trim($(this).val()));
+			if ($(this).val() == "******"){
+				$(this).val("");
+			}
+		});
+
+		dialogAjaxCall(this);
+		return false;
+	});
+
+	$(document).on("focus", ".challengeAnswer", function(event) {
+		$(this).select();
+	});
+
+	$(document).on("mouseup", ".challengeAnswer", function(event) {
+		event.preventDefault();
+	});
+
+	$(document).on("change", ".challengeQuestion", function() {
+		var fieldName = $(this).attr("name");
+		fieldName = fieldName.replace("questionSelection","providedAnswer");
+		$(".challengeAnswer[name='" + fieldName + "']").val("");
+	});
+
+	$(document).on("change", "#ruleType", function() {
+		setFieldsBasedOnRule($('#ruleType').val());
+	});
+
+	$(document).on("change", "#frequency", function() {
+		var optionSelected = $(this).find("option:selected");
+		var fieldValue = optionSelected.val();
+		if(fieldValue == 0)
+		$(".daysPriorPost").show();
+		else
+			$(".daysPriorPost").hide();
+		});
+
+
+	//
+	//  Process a change in the select to pay all invoices checkbox when creating an APR.
+	//
+	$(document).on("change", ".pay-all-invoices", function(event) {
+	    if ($(this).is(":checked")){
+	    	$('.pay-invoice').prop('checked', true).checkboxradio('refresh').change();
+	    } else {
+	    	$('.pay-invoice').prop('checked', false).checkboxradio('refresh').change();
+			}
+		});
+
+
+	$(document).on("change", ".select-all", function(event) {
+	    if ($(this).is(":checked")){
+	    	$('.select-one').prop('checked', true).checkboxradio('refresh').change();
+	    } else {
+	    	$('.select-one').prop('checked', false).checkboxradio('refresh').change();
+	    	$(".payBills_paymentMethodDiv").hide();
+		}
+	});
+
+	$(document).on("change", ".select-one", function(event) {
+		var checkboxName = $(this).attr("name");
+		var divName = "pay_bill_content_" + checkboxName.replace("chkbox[","").replace("]","");
+		var numberChecked = $(".pay_bill_content:visible").length;
+		if ($(this).is(':checked')) {
+			var fieldName = checkboxName.replace("chkbox","paymentList") + ".continueFlag";
+			$("input[name=\"" + fieldName + "\"]").val("true");
+			$("." + divName).show("slow");
+			numberChecked++;
+		} else {
+			$(".select-all").prop('checked', false).checkboxradio('refresh');
+			var fieldName = checkboxName.replace("chkbox","paymentList") + ".continueFlag";
+			$("input[name=\"" + fieldName + "\"]").val("false");
+			$("." + divName).hide("slow");
+			numberChecked--;
+		}
+		if(numberChecked > 1){
+			$(".payBills_paymentMethodDiv").show();
+		} else {
+			$(".payBills_paymentMethodDiv").hide();
+		}
+	});
+
+	$(document).on("change", "select.default_pay_method", function(event) {
+		var optionSelected = $(this).find("option:selected").val();
+		var optionInAllDropdowns = true;
+		var found = false;
+
+		if ((optionSelected != -1) && (optionSelected != -2)){
+			$('select.payment_pay_method').each(function() {
+				found = false;
+				for (i = 0; i < this.length; ++i){
+				    if (this.options[i].value == optionSelected){
+				    	$(this).val(optionSelected);
+				    	found = true;
+				    }
+				}
+				if (found==false){
+					optionInAllDropdowns = false;
+				}
+			});
+
+			$("select.payment_pay_method").selectmenu( "refresh" );
+
+			if ((optionSelected != -1) && (optionSelected != -2) && (optionInAllDropdowns == false)){
+				$(".paymentMethodNotInDropdown").popup("open");
+			}
+		}
+	});
+
+	$(document).on("change", "select.payment_pay_method, select.default_pay_method", function(event) {
+		var optionSelected = $(this).find("option:selected").val();
+		var fieldName = $(this).attr("name");
+		var paymentIndex = -1;
+		var startStr = fieldName.indexOf('[');
+		var endStr = fieldName.indexOf(']');
+
+		if (startStr > -1)
+			paymentIndex = fieldName.substring(startStr + 1, endStr);
+		if ((optionSelected == -1) || (optionSelected == -2)){
+			$("#paymentMethodInFocus").val($(this).attr('id'));
+			var e		= $(event.target);
+			var url 	= e.data("href") + "&paymentIndex=" + paymentIndex + "&newPaymInst.cardInfo.cardNumber=";
+
+			if (optionSelected == -2)
+				url = url.replace("AddPaymentMethodBank-II", "AddPaymentMethodCard-II");
+			var target 	= $("#commonDialog");
+			target.addClass("addPaymentMethod");
+			startService(url);
+			$(target)
+				.popup("destroy")
+				.empty()
+				.load(url, function() {
+					$(target)
+						.enhanceWithin()
+						.popup()
+						.popup("open");
+					endService();
+				});
+		}
+	});
+
+	$(document).on("click", ".pay-selected-2", function(event) {
+		$(".pay-selected > .primary_button").click();
+	});
+
+	$(document).on("click", "#cmapAddFormMorePaymOptions", function(event) {
+		$("#showLimitedPaymentOptions").val("false");
+		$("input:hidden[name=action]").val("RefreshAutomaticPaymentRuleAddScreen");
+		$("#cmapAddForm").submit();
+	});
+
+	$(document).on("click", "#cmapUpdateFormMorePaymOptions", function(event) {
+		$("#showLimitedPaymentOptions").val("false");
+		$("input:hidden[name=action]").val("RefreshAutomaticPaymentRuleViewUpdateScreen");
+		$("#cmapUpdateForm").submit();
+	});
+
+	$(document).on("click", "#cmapAccountSelectionSubmit", function(event) {
+		var form = $("#cmapAccountSelectionForm");
+		var type = $("#cmapAccountSelectionForm input:hidden[name=type]");
+		var action = $("#cmapAccountSelectionForm input:hidden[name=action]");
+		type.val("UserService");
+		action.val("AutomaticPaymentRuleDefinitionAction");
+
+		if ($("#cmapAddFormPaymInst").val() == -1) {
+			action.val("AddPaymentMethodBank-II");
+		}
+		if ($("#cmapAddFormPaymInst").val() == -2) {
+			action.val("AddPaymentMethodCard-II");
+		}
+
+		form.submit();
+	});
+
+	$(document).on("click", "#cmapUpdateFormSubmit", function(event) {
+		if ($("#cmapUpdateFormPaymInst").val() == -1) {
+			$("input:hidden[name=type]").val("UserService");
+			$("input:hidden[name=action]").val("AddPaymentMethodBank");
+		}
+		if ($("#cmapUpdateFormPaymInst").val() == -2) {
+			$("input:hidden[name=type]").val("UserService");
+			$("input:hidden[name=action]").val("AddPaymentMethodCard");
+		}
+		$("#cmapUpdateForm").submit();
+	});
+
+	$(document).on("click", "#accountSearchSubmitButton", function(event) {
+		fillAccount($("#accountSearchSubmit"));
+		$("#accountSearchSubmit").submit();
+	});
+
+	//
+	//  Process a change in any pay invoice checkbox when creating an APR.
+	//
+	$(document).on("change", ".pay-invoice", function(event) {
+		var checkbox	= $(event.target);
+		var name		= $(checkbox).attr("name");
+		var position	= name.indexOf("_");
+		var index		= name.substring(position + 1);
+		var name		= "billList[" + index + "].first";
+		var hiddenField	= $("input[name=\"" + name + "\"]");
+
+		if ($(checkbox).is(':checked')) {
+			var documentId	= $(hiddenField).attr("id");
+			$(hiddenField).val(documentId);
+		} else {
+			$(hiddenField).val("0");
+			$(".pay-all-invoices").prop('checked', false).checkboxradio('refresh');
+		}
+	});
+
+	//
+	//  Format currency fields.
+	//
+	$(document).on("change", ".amount", function() {
+		$(this).formatCurrency({negativeFormat: '-%s%n'});
+		var fieldValue 	= $(this).val();
+		fieldValue		= replaceAll(fieldValue, ",", "");
+		fieldValue		= replaceAll(fieldValue, "$", "");
+
+		if (!$.isNumeric(fieldValue)) {
+			$(this).val("");
+		}
+		var hiddenFieldName = $(this).attr("name").replace("_display","");
+		$('input[name="' + hiddenFieldName + '"]').val(fieldValue);
+	});
+
+	$(document).on("mouseup", ".amount", function(event) {
+		event.preventDefault();
+	});
+
+	$(document).on("blur", ".amount", function() {
+	    $(this).change();
+	});
+
+	// Special handling for some dialogs that are dynamically loaded
+	$(document).on("popupbeforeposition", "#commonDialog", function() {
+		$('#ruleType').trigger("change");
+		$(".selectAService").trigger("change");
+	});
+
+	$(document).on("popupafteropen", "#commonDialog", function() {
+		if ($('#existingRuleId').val() > 0) {
+			setFieldsBasedOnRule($('#ruleType').val());
+		}
+	});
+
+	$(document).on("popupafterclose", "#payVerifyDialog", function() {
+		// This is needed to fix Safari issue (QC2507)
+		$("#payVerifyDialog").popup("destroy");
+		$("#payVerifyDialog").hide();
+	});
+
+	$(document).on("change", ".customerType", function(event) {
+		var optionSelected = $(this).find("option:selected").val();
+		if (parseInt(optionSelected)==1){
+			$(".customerType2").hide();
+			$(".customerType1").show();
+		} else {
+			$(".customerType1").hide();
+			$(".customerType2").show();
+		}
+	});
+
+	$(document).on("change", ".country", function(event) {
+		var stateName	= event.target.name.replace('country', 'state');
+		setStates($(this).find("option:selected").val(), stateName);
+	});
+
+	$(document).on("change", ".phone", function(event) {
+		var phoneEntered	= $(this).val();
+		var phoneNumber		= unmaskPhoneNumber(phoneEntered);
+		$(".phoneAreaCode").val(phoneNumber.substring(0,3));
+		$(".phonePart1").val(phoneNumber.substring(3,6));
+		$(".phonePart2").val(phoneNumber.substring(6));
+		var phoneMasked	= maskPhoneNumber(phoneNumber);
+		$(this).val(phoneMasked);
+	});
+
+	$(document).on("change", ".phoneSignup", function(event) {
+		var phoneEntered	= $(this).val();
+		var phoneNumber		= unmaskPhoneNumber(phoneEntered);
+		$("input[name=\"contactInfo.phoneNumber\"]").val(phoneNumber);
+		var phoneMasked		= maskPhoneNumber(phoneNumber);
+		$(this).val(phoneMasked);
+	});
+
+	$(document).on("change", ".phoneString", function(event) {
+		var phoneEntered	= $(this).val();
+		var phoneNumber		= unmaskPhoneNumber(phoneEntered);
+		var name			= $(this).attr("name");
+		var position		= name.indexOf("-display");
+		name				= name.substring(0, position);
+		$("input[name=\"" + name + "\"]").val(phoneNumber);
+		var phoneMasked		= maskPhoneNumber(phoneNumber);
+		$(this).val(phoneMasked);
+	});
+
+	$(document).on("focus", ".phone", function(event) {
+		$(this).select();
+	});
+
+	$(document).on("mouseup", ".phone", function(event) {
+		event.preventDefault();
+	});
+
+	$(document).on("change", ".htmlEmail", function(event) {
+		var optionSelected = $(this).find("option:selected").val();
+		if (optionSelected == "true"){
+			$(".emailPreference").val("1");
+		} else {
+			$(".emailPreference").val("0");
+		}
+	});
+
+	$(document).on("change", ".reminderPref", function(event) {
+		var optionSelected = $(this).find("option:selected").val();
+		if (optionSelected == "true"){
+			$(".paymentReminderPref").val("1");
+		} else {
+			$(".paymentReminderPref").val("0");
+		}
+	});
+
+	$(document).on("change", ".ivrSignupCheckBox", function(event) {
+		var optionSelected = $(this).find("option:selected").val();
+		if (optionSelected == "true"){
+			$('.loginIvrFields').show();
+			$('.ivrSignUpDivider').hide();
+			$('.ivrSignup').val("true");
+		} else {
+			$('.loginIvrFields').hide();
+			$('.ivrSignUpDivider').show();
+			$('.ivrSignup').val("false");
+		}
+	});
+
+	$(document).on("change", ".moveDocFlag", function(event) {
+		var optionSelected = $(this).find("option:selected").val();
+		if (optionSelected == "true"){
+			$(".moveDocuments").val("true");
+		} else {
+			$(".moveDocuments").val("false");
+		}
+	});
+
+	$(document).on("click", ".slide_nav_bar > #topBarNavLink1.top_bar_nav_link_menu > #topBarNavLinkControl1", function(event) {
+		$(".topBarNavLink2child").hide();
+		$(".slide_nav_bar > #topBarNavLink2").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink3child").hide();
+		$(".slide_nav_bar > #topBarNavLink3").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink4child").hide();
+		$(".slide_nav_bar > #topBarNavLink4").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink6child").hide();
+		$(".slide_nav_bar > #topBarNavLink6").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+
+        $(".slide_nav_bar > #topBarNavLink1").toggleClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").toggleClass("top_bar_nav_link_menu_selected");
+
+        if ($(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowClosed").is(":visible")) {
+	        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowClosed").hide();
+	        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowOpened").show();
+			$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").addClass("top_bar_nav_link_opened");
+			$(".topBarNavLink1child").toggle();
+			adjustPageHeight("open-panel", this);
+        } else {
+	        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+	        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+			$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+			$(".topBarNavLink1child").toggle();
+			adjustPageHeight("close-panel");
+        }
+	});
+
+	$(document).on("click", ".slide_nav_bar > #topBarNavLink2.top_bar_nav_link_menu > #topBarNavLinkControl2", function(event) {
+		$(".topBarNavLink1child").hide();
+		$(".slide_nav_bar > #topBarNavLink1").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink3child").hide();
+		$(".slide_nav_bar > #topBarNavLink3").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink4child").hide();
+		$(".slide_nav_bar > #topBarNavLink4").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink6child").hide();
+		$(".slide_nav_bar > #topBarNavLink6").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+
+        $(".slide_nav_bar > #topBarNavLink2").toggleClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").toggleClass("top_bar_nav_link_menu_selected");
+
+        if ($(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowClosed").is(":visible")) {
+	        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowClosed").hide();
+	        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowOpened").show();
+			$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").addClass("top_bar_nav_link_opened");
+			$(".topBarNavLink2child").toggle();
+			adjustPageHeight("open-panel", this);
+        } else {
+	        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+	        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+			$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+			$(".topBarNavLink2child").toggle();
+			adjustPageHeight("close-panel");
+        }
+	});
+
+	$(document).on("click", ".slide_nav_bar > #topBarNavLink3.top_bar_nav_link_menu > #topBarNavLinkControl3", function(event) {
+		$(".topBarNavLink1child").hide();
+		$(".slide_nav_bar > #topBarNavLink1").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink2child").hide();
+		$(".slide_nav_bar > #topBarNavLink2").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink4child").hide();
+		$(".slide_nav_bar > #topBarNavLink4").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink6child").hide();
+		$(".slide_nav_bar > #topBarNavLink6").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+        $(".slide_nav_bar > #topBarNavLink3").toggleClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").toggleClass("top_bar_nav_link_menu_selected");
+        if ($(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowClosed").is(":visible")) {
+	        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowClosed").hide();
+	        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowOpened").show();
+			$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").addClass("top_bar_nav_link_opened");
+	        $(".topBarNavLink3child").toggle();
+			adjustPageHeight("open-panel", this);
+        } else {
+	        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+	        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+			$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+	        $(".topBarNavLink3child").toggle();
+			adjustPageHeight("close-panel");
+        }
+	});
+
+	$(document).on("click", ".slide_nav_bar > #topBarNavLink4.top_bar_nav_link_menu > #topBarNavLinkControl4", function(event) {
+		$(".topBarNavLink1child").hide();
+		$(".slide_nav_bar > #topBarNavLink1").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink2child").hide();
+		$(".slide_nav_bar > #topBarNavLink2").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink3child").hide();
+		$(".slide_nav_bar > #topBarNavLink3").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink6child").hide();
+		$(".slide_nav_bar > #topBarNavLink6").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+
+        $(".slide_nav_bar > #topBarNavLink4").toggleClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").toggleClass("top_bar_nav_link_menu_selected");
+        if ($(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowClosed").is(":visible")) {
+	        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowClosed").hide();
+	        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowOpened").show();
+			$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").addClass("top_bar_nav_link_opened");
+			$(".topBarNavLink4child").toggle();
+			adjustPageHeight("open-panel", this);
+        } else {
+	        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+	        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+			$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+			$(".topBarNavLink4child").toggle();
+			adjustPageHeight("close-panel");
+        }
+	});
+
+	$(document).on("click", ".slide_nav_bar > #topBarNavLink6.top_bar_nav_link_menu > #topBarNavLinkControl6", function(event) {
+		$(".topBarNavLink1child").hide();
+		$(".slide_nav_bar > #topBarNavLink1").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink1 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink2child").hide();
+		$(".slide_nav_bar > #topBarNavLink2").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink2 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink3child").hide();
+		$(".slide_nav_bar > #topBarNavLink3").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink3 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+		$(".topBarNavLink4child").hide();
+		$(".slide_nav_bar > #topBarNavLink4").removeClass("top_bar_nav_link_menu_selected");
+		$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+		$(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+        $(".slide_nav_bar > #topBarNavLink4 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+
+        $(".slide_nav_bar > #topBarNavLink6").toggleClass("top_bar_nav_link_menu_selected");
+        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").toggleClass("top_bar_nav_link_menu_selected");
+        if ($(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowClosed").is(":visible")) {
+	        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowClosed").hide();
+	        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowOpened").show();
+			$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").addClass("top_bar_nav_link_opened");
+			$(".topBarNavLink6child").toggle();
+			adjustPageHeight("open-panel", this);
+        } else {
+	        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowOpened").hide();
+	        $(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link .menuArrowClosed").show();
+			$(".slide_nav_bar > #topBarNavLink6 > a.top_bar_nav_link.ui-link").removeClass("top_bar_nav_link_opened");
+			$(".topBarNavLink6child").toggle();
+			adjustPageHeight("close-panel");
+        }
+	});
+
+	//  Trap scroll wheel clicks on objects with url's and prevent them from opening a new tab.
+	//  all navigation should be controlled within our code.
+	$(document).click(function(event) {
+		if (event.which == 2) {
+	        event.preventDefault();
+		    return false;
+		}
+	});
+
+	//  This event captures all the key presses through out the workflow and triggers the click
+	//  event on the primary "emphasis" button whenever the Enter key is pressed.
+	$(window).keypress(function(event){
+		var keyCode = (event.keyCode ? event.keyCode : event.which);
+
+		if (keyCode == 13) {
+			if ($(event.target).hasClass("form_textarea")) {
+				var cursorPosition 	= $(event.target).getCursorPosition();
+				var textValue		= $(event.target).val();
+				var textToCursor	= textValue.substr(0, cursorPosition);
+				var textAfterCursor	= textValue.substr(cursorPosition);
+				$(event.target).val(textToCursor + "\n" + textAfterCursor);
+				event.preventDefault();
+			} else if ($(event.target).hasClass("ui-btn")) {
+				$(event.target).trigger("click");
+				event.preventDefault();
+				return false;
+			} else if ($(".ui-popup-active .emphasis_button").length > 0) {
+				$(".ui-popup-active .emphasis_button").trigger("click");
+				event.preventDefault();
+				return false;
+			}
+		}
+	});
+
+	//////////////////////////////////////////////////////////
+	//
+	//  New Biller Console events.
+	//
+	//////////////////////////////////////////////////////////
+
+	//
+	//  Process a change in the Association Status drop down on either Accounts tab for a customer in focus.
+	//
+	$(document).on("change", "select[name=\"associationStatus\"]", function(event) {
+		var select 		= $(event.target);
+		var input   	= $("select[name=\"associationStatus\"]");
+		var pageSize	= getPageSize("ManageMyAccounts");
+    	var url 		= select.data("href") + "&pageSize=" + pageSize;
+		if (!select.val() == "") {
+	    	url	= url + "&associationStatus=" + select.val();
+		}
+		refreshWorkspace(url, false);
+	});
+
+});
+
+//  Global variables.
+
+//  Default page size for lists (invoices, accounts, APR's, payments, methods of payment).
+var defaultPageSize			= 5;
+
+//  Used to save the appropriate service URL to use after the verification dialog when canceling a payment.
+var currentCancelPaymentUrl	= "";
+
+//  Browser window variable used when viewing an invoice.
+var billWindow				= null;
+
+//  Variables captured by the startService and endService functions.
+var serviceAction			= "";
+var serviceStartTime		= 0;
+var serviceEndTime			= 0;
+
+//  True indicates a row in the list was just deleted.
+var listItemRemoved			= false;
+
+//  Whether or not to show the card expiration date when using the debit network.
+var ATMExpiryDate			= false;
+
+//
+//  Get the page size for a particular list (invoices, accounts, APR's, payments, methods of payment).
+//  If none has been set, go with the default.
+//
+function getPageSize(cookieName) {
+	var cookieValue = readCookie(cookieName);
+	if (cookieValue.length > 0) {
+		var pageSize	= cookieValue;
+	} else {
+		var pageSize	= defaultPageSize;
+	}
+
+	return pageSize;
+}
+
+//
+//  Set the page size for a particular list (invoices, accounts, APR's, payments, methods of payment).
+//
+function setPageSize(cookieName, pageSize) {
+	createCookie(cookieName, pageSize, 365);
+}
+
+//
+//  Mask a phone number for display.  It changes 4145551212 to (414) 555-1212.
+//
+function maskPhoneNumber(phoneNumber) {
+    var phoneMasked	= "";
+    if (phoneNumber != "" && phoneNumber != null) {
+    	phoneMasked	= phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+    }
+	return phoneMasked;
+}
+
+//
+//  Unmask a phone number for display.  It changes (414) 555-1212 to 4145551212.
+//
+function unmaskPhoneNumber(phoneMasked) {
+	var phoneNumber	= replaceAll(phoneMasked, "(", "");
+	phoneNumber		= replaceAll(phoneNumber, ")", "");
+	phoneNumber		= replaceAll(phoneNumber, "-", "");
+	phoneNumber		= replaceAll(phoneNumber, "_", "");
+	phoneNumber		= replaceAll(phoneNumber, " ", "");
+	phoneNumber		= replaceAll(phoneNumber, "ext.", "");
+	phoneNumber		= replaceAll(phoneNumber, "x", "");
+	return phoneNumber;
+}
+
+//
+//  General purpose replace all function.
+//
+function replaceAll(source, stringToFind, stringToReplace) {
+	var temp 	= source;
+	var index 	= temp.indexOf(stringToFind);
+	while(index != -1){
+		temp 	= temp.replace(stringToFind, stringToReplace);
+		index 	= temp.indexOf(stringToFind);
+	}
+	return temp;
+}
+
+//
+//  This function is called whenever there is a need to refresh the workspace, such as:
+//  -  Page filter change by
+//     *  Account (numerous workspaces)
+//     *  Invoice (Payment Activity)
+//     *  Invoice Type (Active/Archived) (Invoice workspace)
+//  -  Pagination change
+//     *  Change is View setting (5, 10, or 25 items in list)
+//     *  Next or Previous request
+//     *  Selection on item range from the dropdown list
+//
+function refreshWorkspace(url, changeHash) {
+	startService(url);
+	$("body").pagecontainer("change", url, {reload: false, changeHash: changeHash});
+}
+
+//
+//  This function is called whenever there is a pagination change to a list in a dialog such as:
+//  -  Change is View setting (5, 10, or 25 items in list)
+//  -  Next or Previous request
+//  -  Selection on item range from the dropdown list
+//
+function refreshDialog(url, dialogId) {
+	var target 	= $("#" + dialogId);
+	startService(url);
+	$(target)
+		.load(url, function() {
+			$(target)
+				.enhanceWithin();
+			endService();
+		});
+}
+
+//
+//  This function is called when submitting forms from a dialog.  The service returns a formatted response that is
+//  inserted into a response message popup and displayed.  If there is an error, the original dialog is displayed
+//  with the appropriate error messages.
+//
+function dialogAjaxCall(dialog) {
+	var postData	= $(dialog).serialize();
+	startService(postData);
+
+	$.ajax({
+		url: "inetSrv",
+		type: "POST",
+		data: postData,
+		dataType: "html"
+	})
+	.done(function(response, textStatus, jqXHR) {
+		var html = $( "<div>" + response + "</div>" );
+		var successMessage = $("#return_message", html).html();
+		$("#commonDialog").popup("close");
+		if (successMessage){
+			if ($("#return_message.signOut", html).length > 0){
+				// In dialogs where a 'current password' is needed, the response may include
+				// a 'signOut' class because the user exceeded max password retries.
+				$(location).attr('href',$("#return_message", html).text());
+			} else {
+			$(".userMessage").html(successMessage);
+			$(".responseMessage").popup("open");
+			}
+		} else {
+			$("#commonDialog")
+				.html(response)
+				.enhanceWithin()
+				.popup("open");
+		}
+	})
+	.fail(function() {
+		alert("error");
+	})
+	.always(function() {
+		endService();
+	});
+}
+
+//
+//  This function is called anytime a service is invoked.  This could be a:
+//  -  Login/logout request
+//  -  Change (or refresh of) a workspace
+//  -  Opening of a dialog from a workspace command button or Action menu item
+//  -  Any step in a dialog workflow
+//
+//  It allows for:
+//  -  Showing the page loading spinner
+//  -  Blocking any other page interaction until the service is complete (see endService function)
+//  -  Capturing the services requested and the elapsed time involved for tuning and user interaction tracking
+//
+function startService(service) {
+	//  This displays an invisible div over the entire page that will trap all input
+	//  so no additional requests will be processed until the page is loaded.
+	$(".block-input").show();
+
+	//  Disable all submit buttons so the user can't hold the Enter key down and re-submit the form.
+	$("button[type=\"submit\"]").attr("disabled", true);
+
+	//  Show the page loading spinner.
+	$.mobile.loading("show");
+
+	var action	= "NoneSpecified";
+	if (service != null) {
+		var startPos	= service.indexOf('&action=');
+		if (startPos > -1) {
+			var work	= service.substring(startPos + 8);
+			var endPos	= work.indexOf('&');
+			if (endPos == -1) {
+				action	= work;
+			} else {
+				action	= work.substring(0, endPos);
+			}
+		} else {
+			action	= service;
+		}
+	}
+
+	serviceAction		= action;
+	serviceStartTime	= $.now();
+}
+
+//
+//  This function is called anytime a service has completed.  It:
+//  -  Unblocks page input
+//  -  Hides the page loading spinner
+//  -  Captures the service requested and the elapsed time for future (TODO) uploading to the application log
+//
+function endService() {
+	serviceEndTime		= $.now();
+	var totalTime		= serviceEndTime - serviceStartTime;
+//	alert("Service Action = " + serviceAction + "  Total Time =  " + totalTime);
+	serviceStartTime	= 0;
+	serviceEndTime		= 0;
+	serviceAction		= "";
+
+	//  Hide the page loading spinner.
+	$.mobile.loading("hide");
+
+	//  Hide the div that blocks input.
+	$(".block-input").hide();
+
+	//  Re-enable all submit buttons.
+	$("button[type=\"submit\"]").attr("disabled", false);
+
+	//  Close the hamburger menu panel.
+	$('.slide_panel').panel('close');
+}
+
+function setListItemRemoved(value) {
+	listItemRemoved	= value;
+}
+
+function getListItemRemoved() {
+	return listItemRemoved;
+}
+
+function setFieldsBasedOnRule(ruleId) {
+	if (ruleId == 2) {
+		$(".invoiceRule").hide();
+		$(".daysPriorPost").hide();
+		$("#invoiceBasedSection").hide();
+		if ($(".invoiceRule #frequency").length > 0)
+			$(".invoiceRule #frequency").selectmenu("disable");
+		else
+			$("#invoiceRuleHiddenFrequency").attr("disabled", true);
+
+		$(".recurringRule").show();
+		$("#paymentComponentSection").show();
+
+		if ($(".recurringRule #frequency").length > 0)
+			$(".recurringRule #frequency").selectmenu("enable");
+		else
+			$("#recurringRuleHiddenFrequency").attr("disabled", false);
+	} else if (ruleId == 0) {
+		$(".invoiceRule").hide();
+		$(".daysPriorPost").hide();
+		$("#invoiceBasedSection").show();
+
+		if ($(".invoiceRule #frequency").length > 0)
+			$(".invoiceRule #frequency").selectmenu("disable");
+		else
+			$("#invoiceRuleHiddenFrequency").attr("disabled", true);
+
+		$(".recurringRule").show();
+		$("#paymentComponentSection").hide();
+
+		if ($(".recurringRule #frequency").length > 0)
+			$(".recurringRule #frequency").selectmenu("enable");
+		else
+			$("#recurringRuleHiddenFrequency").attr("disabled", false);
+	} else {
+		$(".invoiceRule").show();
+		if($("#invoiceRuleHiddenFrequency").val() == 0 || $(".invoiceRule #frequency option:selected").val() == 0)
+			$(".daysPriorPost").show();
+		else
+			$(".daysPriorPost").hide();
+		$("#invoiceBasedSection").show();
+
+		if ($(".invoiceRule #frequency").length > 0)
+		$(".invoiceRule #frequency").selectmenu("enable");
+		else
+			$("#invoiceRuleHiddenFrequency").attr("disabled", false);
+
+		$(".recurringRule").hide();
+		$("#paymentComponentSection").hide();
+
+		if ($(".recurringRule #frequency").length > 0)
+		$(".recurringRule #frequency").selectmenu("disable");
+		else
+			$("#recurringRuleHiddenFrequency").attr("disabled", true);
+	}
+}
+
+//
+//  The following functions are used to control the hamburger menu panel.  They ensure that
+//  as the panel changes in height, the page height adjusts accordingly if necessary.  When the user:
+//  -  Opens a menu option, the page height adjusts so it is at least as big as the menu panel so
+//     all options are available.
+//  -  Closes a menu option, the page height adjusts back to it's original size if it was changed.
+//
+
+var originalPageHeight	= 0;
+var openPanelMenu		= null;
+
+function adjustPageHeight(action, panel) {
+	if (action	== "open-panel") {
+		setOpenPanelMenu(panel);
+		var panelHeight	= $(".slide_panel").height();
+		if (getOriginalPageHeight() == 0) {
+			var pageHeight	= $(".ui-page").height();
+		} else {
+			var pageHeight	= getOriginalPageHeight();
+		}
+		if (panelHeight > pageHeight) {
+			setOriginalPageHeight(pageHeight);
+			$(".ui-page").height(panelHeight);
+		} else {
+			$(".ui-page").height(pageHeight);
+		}
+	} else {
+		if (getOriginalPageHeight() > 0) {
+			$(".ui-page").height(getOriginalPageHeight());
+			setOriginalPageHeight(0);
+		}
+		setOpenPanelMenu(null);
+	}
+}
+
+//
+//  If there is an open menu option in the slide panel, trigger the close so the page can resize if necessary.
+//
+
+function restoreSlidePanel() {
+	if (getOpenPanelMenu() != null) {
+		$(getOpenPanelMenu()).trigger("click");
+	}
+}
+
+//
+//  Getters and setters.
+//
+
+function setOriginalPageHeight(height) {
+	originalPageHeight	= height;
+}
+
+function getOriginalPageHeight() {
+	return originalPageHeight;
+}
+
+function setOpenPanelMenu(panelMenu) {
+	openPanelMenu	= panelMenu;
+}
+
+function getOpenPanelMenu() {
+	return openPanelMenu;
+}
+
+
+
+function setATMExpiryDate(showDate) {
+	ATMExpiryDate	= showDate;
+}
+
+function getATMExpiryDate() {
+	return ATMExpiryDate;
+}
+
+function limitText(limitField, id) {
+	$("#"+id).text(" "+limitField.value.length);
+}
+
+
+	function setFieldName(type){
+
+		if (type == "1") {
+
+			$('input[name="contactInfo.businessName"]').val("");
+			$('input[name="contactInfo.contactName"]').val("");
+
+				disabledBusinessCustomerFields();
+				enabledIndividualCustomerFields();
+
+		} else if (type == "2") {
+
+		    $('input[name="contactInfo.firstName"]').val("");
+		    $('input[name="contactInfo.middleInitial"]').val("");
+		     $('input[name="contactInfo.lastName"]').val("");
+
+				 disabledIndividualCustomerFields();
+		    	 enabledBusinessCustomerFields()
+		}
+	}
+
+// code to disabled businessName and customerName fields for business customer
+function disabledBusinessCustomerFields(){
+
+		$('input[name="contactInfo.businessName"]').prop('disabled',true);
+		$('input[name="contactInfo.contactName"]').prop('disabled',true);
+	}
+// Code to enable businessName and customerName fields for business customer
+function enabledBusinessCustomerFields(){
+		$('input[name="contactInfo.businessName"]').prop('disabled',false);
+		$('input[name="contactInfo.contactName"]').prop('disabled',false);
+}
+//code to disabled firstName,middleName,and lastName fields for individual customer.
+function disabledIndividualCustomerFields(){
+  		$('input[name="contactInfo.firstName"]').prop('disabled',true);
+		$('input[name="contactInfo.middleInitial"]').prop('disabled',true);
+		$('input[name="contactInfo.lastName"]').prop('disabled',true);
+
+}
+//code to enabled firstName,middleName,and lastName fields for individual customer.
+function enabledIndividualCustomerFields(){
+		$('input[name="contactInfo.firstName"]').prop('disabled',false);
+		$('input[name="contactInfo.middleInitial"]').prop('disabled',false);
+		$('input[name="contactInfo.lastName"]').prop('disabled',false);
+	}
+
+$(document).on("click", ".unverified-mail", function(event) {
+	var e = $(event.target);
+	e.parents("[data-role=\"popup\"]").popup("close");
+	$(".yesNoDialog").data("href", $(this).data("href"));
+	$(".yesNoDialog").popup("open");
+});
+$(document).on("click", ".sendEmail", function(event) {
+	var e	= $(event.target);
+	var url = $(".yesNoDialog").data("href");
+	startService(url);
+	$.ajax({
+		url: url,
+		dataType: "html"
+	})
+	.done(function(response, textStatus, jqXHR) {
+		var html 			= $( "<div>" + response + "</div>" );
+		var successMessage 	= $("#return_message", html).html();
+		e.parents("[data-role=\"popup\"]").popup("close");
+		if (successMessage){
+			$(".userMessage").html(successMessage);
+			$(".responseMessage").popup("open");
+		} else {
+			alert("error");
+		}
+	})
+	.fail(function() {
+		alert("error");
+	})
+	.always(function() {
+		endService();
+	});
+});
+
+// The following popup enhancement was taken from jQuery Mobile popup demo.
+( function( $, undefined ) {
+	// Eventually, the real handleLink function should pass the coordinates and
+	// size of the rectangle representing the origin into popup's "open" method, or
+	// maybe the origin itself, instead of merely the midpoint of it. Here, the
+	// origin (link) is saved in lastLink, and appended to the options in the
+	// overridden version of open. Thankfully, JS is not multithreaded. Hooray!
+	var lastLink,
+		origHandleLink = $.mobile.popup.handleLink,
+		handleLink = function( link ) {
+			lastLink = link;
+			return origHandleLink.apply( this, arguments );
+		};
+	$.mobile.popup.handleLink = handleLink;
+	$.widget( "mobile.popup", $.mobile.popup, {
+		options: {
+			align: "0.5,0.5"
+		},
+		open: function( options ) {
+			this._ui.link = lastLink;
+			return this._super( options );
+		},
+		_closePrereqsDone: function() {
+			this._ui.link = null;
+			this._superApply( arguments );
+		},
+		_alignmentToCoeffs: function( alignment ) {
+			return {
+				originCoeff:
+					alignment < 0 ? 0 :
+					alignment <= 1 ? alignment :
+					1,
+				popupCoeff:
+					alignment < 0 ? alignment :
+					alignment <= 1 ? -alignment :
+					alignment - 2
+			};
+		},
+		_getAlignment: function() {
+			var ar, align;
+			if ( this.options.align ) {
+				ar = this.options.align.split( "," );
+			}
+			if ( ar && ar.length > 0 ) {
+				align = {
+					x: parseFloat( ar[ 0 ] ),
+					y: ar.length > 1 ? parseFloat( ar[ 1 ] ) : align.x
+				};
+			}
+			if ( align && !( isNaN( align.x ) || isNaN( align.y ) ) ) {
+				return {
+					x: this._alignmentToCoeffs( align.x ),
+					y: this._alignmentToCoeffs( align.y )
+				};
+			}
+		},
+		_setOptions: function( options ) {
+			var linkOffset, linkSize;
+			this._super( options );
+			if ( this._isOpen &&
+				options.align !== undefined &&
+				this._ui.link !== null &&
+				( this._ui.link.jqmData( "position-to" ) === "origin" ||
+					this.options.positionTo === "origin" ) ) {
+				linkOffset = this._ui.link.offset();
+				linkSize = {
+					cx: this._ui.link.outerWidth(),
+					cy: this._ui.link.outerHeight()
+				};
+				this._reposition({
+					x: linkOffset.left + linkSize.cx / 2,
+					y: linkOffset.top + linkSize.cy / 2,
+					positionTo: "origin"
+				});
+			}
+		},
+		_alignedCoord: function( start, coeffs, originSize, popupSize ) {
+			return (
+				// Start at the origin
+				start +
+				// Apply lignment
+				coeffs.originCoeff * originSize + coeffs.popupCoeff * popupSize +
+				// Resulting coordinate needs to be that of the middle of the popup, so
+				// add half a popup width
+				popupSize / 2 );
+		},
+		_desiredCoords: function( options ) {
+			var linkBox, offset, clampInfo,
+				alignment = this._getAlignment();
+			if ( alignment && options.positionTo === "origin" && this._ui.link ) {
+				// Grab the size of the popup and the offset and size of the link
+				clampInfo = this._clampPopupWidth( true );
+				clampInfo.menuSize.cx = Math.min( clampInfo.menuSize.cx, clampInfo.rc.cx );
+				offset = this._ui.link.offset();
+				linkBox = {
+					x: offset.left,
+					y: offset.top,
+					cx: this._ui.link.outerWidth(),
+					cy: this._ui.link.outerHeight()
+				};
+				// Determine the desired coordinates of the middle of the popup
+				options.x = this._alignedCoord( linkBox.x, alignment.x, linkBox.cx, clampInfo.menuSize.cx );
+				options.y = this._alignedCoord( linkBox.y, alignment.y, linkBox.cy, clampInfo.menuSize.cy );
+			}
+			return this._super( options );
+		}
+	});
+})( jQuery );
