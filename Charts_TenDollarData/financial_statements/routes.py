@@ -55,7 +55,7 @@ def get_linenumber():
     return cf.f_back.f_lineno
 # print(get_linenumber())
 sys.path.append(os.path.join(os.path.dirname(__file__)))
-from functions.pandas_extraction import FS
+# from functions.pandas_extraction import FS
 import numpy as np
 import functools
 from datetime import datetime
@@ -1073,7 +1073,12 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     df['date'] = pd.to_datetime(df['date']).values.astype(np.int64) // 10 ** 6
     df['date'] = df['date'].apply(lambda x: int(x))
     try:
-        market_cap_path = glob.glob("D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*\\[M*/M-*-{}.csv".format(url_symbol.upper()))[0]
+        print("beep",glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ/[[]M[]] Monthly/*")[0:5])
+        print("market cap path1", "Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))
+        market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))[0]
+        print("market cap path",market_cap_path, "Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))
+        market_cap_df = pd.read_csv(market_cap_path)
+        print("mcappy", market_cap_df.head(5))
         market_cap_df = pd.read_csv(market_cap_path)
         market_cap_df['timestamp'] = pd.to_datetime(market_cap_df.datetime).values.astype(np.int64)// 10 ** 6
         closest_list = []
@@ -1572,29 +1577,29 @@ def page_not_found(e):
 #      values=FS("IS","AAPL").df_price(),
 #      place_name=url_symbol, max=17000,
 #      )
-@charts.route('/test/<some_place>', methods=['POST', 'GET'])
-# @cache.cached(timeout=5)
-def fin_test(some_place):
-    # values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
-    return render_template('financial_statements.html',
-    # return render_template('fin_statements_bootstrapped.html',
-    # return render_template('fin_statements_bootstrapped_w_comments.html',
-    # FS("IS","AAPL").df_values()['df_table']
-    # FS("IS","AAPL").df_values()['df_table_pct']
-    # FS("IS","AAPL").df_values()['chart_x_dates']
-    # FS("IS","AAPL").df_values()['chart_y_revenue']
-    # FS("IS","AAPL").df_values()['df_json']
-    # FS("IS","AAPL").df_values()['df_titles']
-     tables=FS("IS","AAPL").df_values()['df_table'],
-     table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
-     df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
-     df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
-     df_json = FS("IS","AAPL").df_values()['df_json'],
-     titles=FS("IS","AAPL").df_values()['df_titles'],
-     labels = FS("IS","AAPL").df_labels(),
-     values=FS("IS","AAPL").df_price(),
-     place_name=some_place, max=17000,
-     )
+# @charts.route('/test/<some_place>', methods=['POST', 'GET'])
+# # @cache.cached(timeout=5)
+# def fin_test(some_place):
+#     # values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
+#     return render_template('financial_statements.html',
+#     # return render_template('fin_statements_bootstrapped.html',
+#     # return render_template('fin_statements_bootstrapped_w_comments.html',
+#     # FS("IS","AAPL").df_values()['df_table']
+#     # FS("IS","AAPL").df_values()['df_table_pct']
+#     # FS("IS","AAPL").df_values()['chart_x_dates']
+#     # FS("IS","AAPL").df_values()['chart_y_revenue']
+#     # FS("IS","AAPL").df_values()['df_json']
+#     # FS("IS","AAPL").df_values()['df_titles']
+#      tables=FS("IS","AAPL").df_values()['df_table'],
+#      table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
+#      df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
+#      df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
+#      df_json = FS("IS","AAPL").df_values()['df_json'],
+#      titles=FS("IS","AAPL").df_values()['df_titles'],
+#      labels = FS("IS","AAPL").df_labels(),
+#      values=FS("IS","AAPL").df_price(),
+#      place_name=some_place, max=17000,
+#      )
 # https://github.com/nvdv/vprof/blob/master/examples/guestbook.py
 # http://pramodkumbhar.com/2019/05/summary-of-python-profiling-tools-part-i/
 # @charts.route('/<url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
