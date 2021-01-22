@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-06-01,NTEST,Tick Pilot Test Sym-Control,NYSE,2020-06-19,,25.03,25.0,25.0,25.03,25.03,8680.0,8680.0,0.0,0.0,25.01
+2020-07-01,NTEST,Tick Pilot Test Sym-Control,NYSE,2020-06-19,,25.05,25.0,25.0,25.05,25.05,36500.0,36500.0,0.0,0.0,25.01667
+2020-08-01,NTEST,Tick Pilot Test Sym-Control,NYSE,2020-06-19,,25.05,25.0,25.0,25.02,25.02,73000.0,73000.0,0.0,0.0,25.011670000000002
+2020-09-01,NTEST,Tick Pilot Test Sym-Control,NYSE,2020-06-19,,25.059999,25.0,25.0,25.059999,25.059999,36500.0,36500.0,0.0,0.0,25.02

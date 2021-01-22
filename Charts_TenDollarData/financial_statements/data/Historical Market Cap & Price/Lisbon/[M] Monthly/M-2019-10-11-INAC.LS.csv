@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-10-01,INAC.LS,"Inapa - Investimentos, Participacoes e Gestao, S.A.",Lisbon,2019-10-11,,0.05,0.05,0.05,0.05,0.05,1000.0,1000.0,0.0,0.0,0.05

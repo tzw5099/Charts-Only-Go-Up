@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-03-01,STB.TO,Student Transportation Inc,YHD,2018-03-15,,9.74,9.84,9.63,9.64,9.64,3064161.0,3064161.0,0.019999999999999997,0.018636363636363628,9.727879999999999
+2018-04-01,STB.TO,Student Transportation Inc,YHD,2018-03-15,,9.64,9.69,9.37,9.6,9.6,5358677.0,5358677.0,-0.019999999999999962,-0.009523809523809535,9.528096666666668
+2018-05-01,STB.TO,Student Transportation Inc,YHD,2018-03-15,,9.6,9.67,9.6,9.63,9.63,215536.0,215536.0,0.03,0.313,9.63333

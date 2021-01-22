@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-02-01,FDL.TO,First Asset Canadian Dividend Low Volatility Index ETF,Toronto,2018-02-02,,20.32,20.32,19.57,19.69,19.49,17800.0,17800.0,0.08,0.02272222222222222,4.371296111111111
+2018-03-01,FDL.TO,First Asset Canadian Dividend Low Volatility Index ETF,Toronto,2018-02-02,,19.69,19.69,19.69,19.69,19.69,0.0,0.0,0.0,0.0,0.0
+2018-04-01,FDL.TO,First Asset Canadian Dividend Low Volatility Index ETF,Toronto,2018-02-02,,19.69,19.69,19.6,19.65,19.65,900.0,900.0,0.0,0.0,1.869047619047619
+2018-05-01,FDL.TO,First Asset Canadian Dividend Low Volatility Index ETF,Toronto,2018-02-02,,19.65,19.89,19.65,19.89,19.89,100.0,100.0,0.0,0.0,0.9040909090909092
+2018-06-01,FDL.TO,First Asset Canadian Dividend Low Volatility Index ETF,Toronto,2018-02-02,,19.89,19.89,19.78,19.78,19.78,200.0,200.0,0.0,0.0,3.296666666666667

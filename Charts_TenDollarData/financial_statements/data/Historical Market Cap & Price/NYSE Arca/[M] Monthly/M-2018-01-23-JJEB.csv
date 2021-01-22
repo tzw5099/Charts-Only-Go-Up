@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-01-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,50.47,50.88,50.43,50.88,,303.0,303.0,50.88,0.29733333333333334,50.45
+2018-02-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,49.18,49.18,45.05,45.05,,300.0,300.0,-5.83,-5.8695,47.114999999999995
+2018-03-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,,,,45.05,,40.0,40.0,0.0,0.0,
+2018-04-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,,,,45.05,,268.0,268.0,0.0,0.0,
+2018-05-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,51.56,52.88,50.8268,52.88,,584.0,584.0,7.83,2.812,51.97765
+2018-06-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,51.86,53.44,51.35,53.44,,2215.0,2215.0,0.56,0.16428571428571428,52.066
+2018-07-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,53.28,53.28,53.28,53.28,,5160.0,5160.0,-0.16,-0.049833333333333334,53.28
+2018-08-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,,,,53.28,,50.0,50.0,0.0,0.0,
+2018-09-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,52.38,53.72,52.38,53.65,,2625.0,2625.0,0.3699999999999998,0.10828571428571429,53.18335
+2018-10-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,57.315,57.315,57.315,57.315,,230.0,230.0,3.665,6.831,57.315
+2018-11-01,JJEB,iPathA Series B Bloomberg Energy Subindex Total Return ETN,NYSE Arca,2018-01-23,,53.13,56.01,51.74,51.74,,4995.0,4995.0,-5.574999999999999,-1.8963999999999999,54.0871

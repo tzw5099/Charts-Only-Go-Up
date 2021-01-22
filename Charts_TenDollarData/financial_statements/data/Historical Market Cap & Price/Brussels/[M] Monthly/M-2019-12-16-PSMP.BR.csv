@@ -1,0 +1,9 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-12-01,PSMP.BR,ProSiebenSat.1 Media SE,Brussels,2019-12-16,,14.35,15.15,14.1,14.1,14.1,520.0,520.0,0.8,2.7875,14.491665000000001
+2020-01-01,PSMP.BR,ProSiebenSat.1 Media SE,Brussels,2019-12-16,,14.1,14.1,13.3,13.3,13.3,5845.0,5845.0,0.0,0.0,13.7
+2020-02-01,PSMP.BR,ProSiebenSat.1 Media SE,Brussels,2019-12-16,,,,,,,0.0,0.0,0.0,,
+2020-03-01,PSMP.BR,ProSiebenSat.1 Media SE,Brussels,2019-12-16,,,,,,,0.0,0.0,0.0,,
+2020-04-01,PSMP.BR,ProSiebenSat.1 Media SE,Brussels,2019-12-16,,,,,,,0.0,0.0,0.0,,
+2020-05-01,PSMP.BR,ProSiebenSat.1 Media SE,Brussels,2019-12-16,,11.2,11.2,10.4,10.4,10.4,120.0,120.0,-0.8,-7.143,10.66667
+2020-06-01,PSMP.BR,ProSiebenSat.1 Media SE,Brussels,2019-12-16,,12.28,12.28,12.28,12.28,12.28,180.0,180.0,0.0,0.0,12.28
+2020-07-01,PSMP.BR,ProSiebenSat.1 Media SE,Brussels,2019-12-16,,11.04,12.28,12.28,11.04,11.04,180.0,180.0,0.0,0.0,11.86667

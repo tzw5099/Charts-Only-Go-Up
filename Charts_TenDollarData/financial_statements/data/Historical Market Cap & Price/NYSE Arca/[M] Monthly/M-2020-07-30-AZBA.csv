@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,AZBA,,NYSE Arca,2020-07-30,,25.469,24.86,24.86,25.845,25.845,0.0,0.0,0.376,1.476,0.0

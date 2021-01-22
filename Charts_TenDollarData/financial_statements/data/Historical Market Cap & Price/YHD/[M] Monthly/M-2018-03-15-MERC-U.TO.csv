@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-03-01,MERC-U.TO,Mercer International Inc USD,YHD,2018-03-15,,14.01,14.01,14.01,14.01,14.01,0.0,0.0,0.0,0.0,0.0
+2018-04-01,MERC-U.TO,Mercer International Inc USD,YHD,2018-03-15,,14.01,14.01,13.5,13.5,13.5,1000.0,1000.0,0.0,0.0,0.6428571428571429
+2018-05-01,MERC-U.TO,Mercer International Inc USD,YHD,2018-03-15,,13.5,16.1,13.5,16.1,16.1,77100.0,77100.0,-0.17,-0.05327272727272727,4.010757727272727
+2018-06-01,MERC-U.TO,Mercer International Inc USD,YHD,2018-03-15,,16.1,16.1,16.1,16.1,16.1,0.0,0.0,0.0,0.0,0.0

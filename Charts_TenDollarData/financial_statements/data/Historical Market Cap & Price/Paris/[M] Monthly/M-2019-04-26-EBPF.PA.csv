@@ -1,0 +1,19 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,96.0,96.0,96.0,96.0,96.0,0.0,0.0,0.0,0.0,0.0
+2019-05-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,96.0,96.0,96.0,96.0,96.0,0.0,0.0,0.0,0.0,0.0
+2019-06-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,96.0,96.0,96.0,96.0,96.0,0.0,0.0,0.0,0.0,0.0
+2019-07-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,96.0,96.0,96.0,96.0,96.0,0.0,0.0,0.0,0.0,0.0
+2019-08-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,96.0,129.98,96.0,129.98,129.98,1.0,1.0,0.0,0.0,5.908181818181817
+2019-09-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,129.98,129.98,96.0,104.0,104.0,29.0,29.0,0.0,0.0,9.523809523809524
+2019-10-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,104.0,104.0,104.0,104.0,104.0,0.0,0.0,0.0,0.0,0.0
+2019-11-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,104.0,104.0,104.0,104.0,104.0,0.0,0.0,0.0,0.0,0.0
+2019-12-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,104.0,104.0,104.0,104.0,104.0,0.0,0.0,0.0,0.0,0.0
+2020-01-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,104.0,105.0,104.0,105.0,105.0,91.0,91.0,0.0,0.0,4.757575909090909
+2020-02-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,105.0,105.0,105.0,105.0,105.0,0.0,0.0,0.0,0.0,0.0
+2020-03-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,105.0,105.0,105.0,105.0,105.0,0.0,0.0,0.0,0.0,0.0
+2020-04-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,105.0,105.0,105.0,105.0,105.0,0.0,0.0,0.0,0.0,0.0
+2020-05-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,105.0,105.0,105.0,105.0,105.0,0.0,0.0,0.0,0.0,0.0
+2020-06-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,105.0,105.0,86.0,92.0,92.0,484.0,484.0,0.0,0.0,16.63590909090909
+2020-07-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,92.0,99.0,92.0,99.0,99.0,24.0,24.0,0.0,0.0,4.5
+2020-08-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,99.0,99.0,93.0,93.0,93.0,20.0,20.0,0.0,0.0,4.428571428571429
+2020-09-01,EBPF.PA,Financiere et Immobiliere de l'Etang de Berre et de la Mediterranee S.A.,Paris,2019-04-26,,93.0,93.0,93.0,93.0,93.0,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,15 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-11-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,31.6,31.6,31.6,31.6,29.88,3.0,3.0,0.0,0.0,2.430769230769231
+2018-12-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,31.6,40.0,31.6,40.0,37.82,153.0,153.0,0.0,0.0,7.43157894736842
+2019-01-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,40.0,45.0,25.2,45.0,42.55,243.0,243.0,0.0,0.0,10.290909090909093
+2019-02-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,45.0,45.0,32.6,32.6,30.82,11.0,11.0,0.0,0.0,1.6300000000000001
+2019-03-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,32.6,32.6,32.6,32.6,30.82,0.0,0.0,0.0,0.0,0.0
+2019-04-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,35.0,40.0,35.0,40.0,37.82,108.0,108.0,0.0,0.0,3.75
+2019-05-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,40.0,50.0,32.4,50.0,47.28,168.0,168.0,0.0,0.0,7.381818181818182
+2019-06-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,50.0,63.5,50.0,61.5,58.15,207.0,207.0,0.0,0.0,12.35
+2019-07-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,67.5,67.5,60.0,62.5,62.5,231.0,231.0,0.0,0.0,13.804347826086957
+2019-08-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,62.5,63.0,41.8,63.0,63.0,304.0,304.0,0.0,0.0,12.854545454545455
+2019-09-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,63.0,63.0,31.0,32.2,32.2,310.0,310.0,0.0,0.0,10.805000000000001
+2019-10-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,32.2,32.2,32.2,32.2,32.2,0.0,0.0,0.0,0.0,0.0
+2019-11-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,32.2,32.2,32.2,32.2,32.2,0.0,0.0,0.0,0.0,0.0
+2019-12-01,MLSEC.PA,Securinfor Societe anonyme,Paris,2018-11-14,,32.2,32.2,32.2,32.2,32.2,0.0,0.0,0.0,0.0,0.0

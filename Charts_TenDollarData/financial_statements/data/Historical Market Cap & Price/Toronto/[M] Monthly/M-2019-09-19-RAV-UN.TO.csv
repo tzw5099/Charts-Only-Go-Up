@@ -1,0 +1,14 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-09-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,17.51,20.0,17.51,19.45,19.45,5300.0,5300.0,0.16,0.3456666666666666,18.698886666666667
+2019-10-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,18.99,18.99,17.09,17.9,17.9,6450.0,6450.0,-0.25,-0.33,18.2908325
+2019-11-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,17.84,17.85,17.84,17.85,17.85,800.0,800.0,0.02,0.028,17.848335
+2019-12-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,,,,,,0.0,0.0,0.0,,
+2020-01-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,17.95,18.0,17.95,18.0,18.0,200.0,200.0,0.0,0.0,17.975
+2020-02-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,18.0,18.0,17.5,17.5,17.5,5200.0,5200.0,0.0,0.0,17.714
+2020-03-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,17.32,17.32,16.0,16.0,16.0,900.0,900.0,0.0,0.0,16.44
+2020-04-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,15.44,15.44,14.75,14.75,14.75,12100.0,12100.0,-0.69,-4.469,14.98
+2020-05-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,14.5,14.5,14.5,14.5,14.5,800.0,800.0,0.0,0.0,14.5
+2020-06-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,15.25,15.25,13.65,15.0,15.0,2083.0,2083.0,-1.6,-3.4973333333333336,14.727776666666665
+2020-07-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,,,,,,0.0,0.0,0.0,,
+2020-08-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,,,,,,0.0,0.0,0.0,,
+2020-09-01,RAV-UN.TO,Ravensource Fund,Toronto,2019-09-19,,15.0,0.0,0.0,15.0,15.0,400.0,400.0,0.0,0.0,5.0

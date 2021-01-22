@@ -1,0 +1,3 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-09-01,EURBT.PA,EUROPLASMA BSB,Paris,2019-09-20,,0.0,0.0,0.0,0.0,0.0,1079649.0,1079649.0,0.0,0.0,0.0
+2019-10-01,EURBT.PA,EUROPLASMA BSB,Paris,2019-09-20,,0.0,0.0,0.0,0.0,0.0,1160011.0,1160011.0,0.0,0.0,0.0

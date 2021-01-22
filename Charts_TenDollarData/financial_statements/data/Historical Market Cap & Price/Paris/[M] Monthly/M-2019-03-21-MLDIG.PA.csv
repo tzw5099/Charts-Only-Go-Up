@@ -1,0 +1,8 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-03-01,MLDIG.PA,Digitech,Paris,2019-03-21,,1.26,1.26,1.26,1.26,1.26,0.0,0.0,0.0,0.0,0.0
+2019-04-01,MLDIG.PA,Digitech,Paris,2019-03-21,,1.26,1.26,1.26,1.26,1.26,0.0,0.0,0.0,0.0,0.0
+2019-05-01,MLDIG.PA,Digitech,Paris,2019-03-21,,1.26,1.26,1.26,1.26,1.26,0.0,0.0,0.0,0.0,0.0
+2019-06-01,MLDIG.PA,Digitech,Paris,2019-03-21,,1.26,1.26,1.26,1.26,1.26,77.0,77.0,0.0,0.0,0.063
+2019-07-01,MLDIG.PA,Digitech,Paris,2019-03-21,,1.26,1.26,1.26,1.26,1.26,0.0,0.0,0.0,0.0,0.0
+2019-08-01,MLDIG.PA,Digitech,Paris,2019-03-21,,1.26,1.26,1.26,1.26,1.26,0.0,0.0,0.0,0.0,0.0
+2019-09-01,MLDIG.PA,Digitech,Paris,2019-03-21,,1.26,1.26,1.26,1.26,1.26,0.0,0.0,0.0,0.0,0.0

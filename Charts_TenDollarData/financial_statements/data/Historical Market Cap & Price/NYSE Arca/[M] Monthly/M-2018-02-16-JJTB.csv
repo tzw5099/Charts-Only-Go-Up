@@ -1,0 +1,11 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-02-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,53.06,53.06,52.92,52.92,,201.0,201.0,52.92,0.0,52.99
+2018-03-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,51.69,51.69,51.69,51.69,,401.0,401.0,-1.23,-1.162,51.69
+2018-04-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,52.14,53.26,51.45,52.11,,2300.0,2300.0,0.4200000000000004,0.1252857142857143,52.23408571428571
+2018-05-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,51.64,51.64,50.86,50.86,,5600.0,5600.0,-1.25,-0.8033333333333333,51.3452
+2018-06-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,52.31,52.36,48.94,48.94,,2738.0,2738.0,-1.92,-0.923,50.62966666666667
+2018-07-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,48.2,49.53,47.87,49.53,,13312.0,13312.0,0.5899999999999999,0.11163636363636362,48.69656
+2018-08-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,48.68,48.68,45.53,47.48,,11404.0,11404.0,-2.05,-0.2882142857142856,47.21801818181819
+2018-09-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,46.58,47.2,46.58,47.01,,1300.0,1300.0,-0.4700000000000001,-0.1932,46.971999999999994
+2018-10-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,47.57,47.57,47.41,47.41,,1312.0,1312.0,0.4,0.17099999999999999,47.4957
+2018-11-01,JJTB,iPathA Series B Bloomberg Tin Subindex Total Return ETN,NYSE Arca,2018-02-16,,47.27,47.88,47.27,47.88,,655.0,655.0,0.47,0.2475,47.5975

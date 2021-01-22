@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-06-01,TDG.TO,Trinidad Drilling Ltd,Toronto,2019-06-28,,1.67,1.68,1.67,1.68,1.68,14970.0,14970.0,0.01,0.599,1.67667

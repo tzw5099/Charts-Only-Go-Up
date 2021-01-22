@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-09-01,AHY-UN.TO,Advantaged Canadian High Yield Bond Fund,Toronto,2019-09-13,,7.35,7.52,7.32,7.37,7.37,17800.0,17800.0,0.15000000000000002,0.6783333333333333,7.443336666666667
+2019-10-01,AHY-UN.TO,Advantaged Canadian High Yield Bond Fund,Toronto,2019-09-13,,7.48,7.51,7.34,7.34,7.34,9201.0,9201.0,0.07,0.188,7.445334
+2019-11-01,AHY-UN.TO,Advantaged Canadian High Yield Bond Fund,Toronto,2019-09-13,,7.35,7.35,7.32,7.35,7.35,13600.0,13600.0,0.0,0.0,7.3420000000000005
+2019-12-01,AHY-UN.TO,Advantaged Canadian High Yield Bond Fund,Toronto,2019-09-13,,7.4,7.4,7.23,7.31,7.31,39724.0,39724.0,-0.05000000000000001,-0.084125,7.31541625

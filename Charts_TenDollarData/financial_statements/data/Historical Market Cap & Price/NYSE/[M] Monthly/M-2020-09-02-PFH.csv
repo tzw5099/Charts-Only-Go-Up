@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-09-01,PFH,Cabco Tr Jcp 7.625,NYSE,2020-09-02,,25.540001,25.9,0.66,25.77,25.77,4359040.0,4359040.0,24.610000000000003,237.44936363636364,24.087636363636364

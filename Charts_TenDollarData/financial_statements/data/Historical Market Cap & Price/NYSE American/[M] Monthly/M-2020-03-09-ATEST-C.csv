@@ -1,0 +1,6 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-03-01,ATEST-C,Atest C,NYSE American,2020-03-09,,25.03,0.0,0.0,25.02,25.02,32320.0,32320.0,0.0,0.0,8.34
+2020-04-01,ATEST-C,Atest C,NYSE American,2020-03-09,,,,,,,0.0,0.0,0.0,,
+2020-05-01,ATEST-C,Atest C,NYSE American,2020-03-09,,,,,,,0.0,0.0,0.0,,
+2020-06-01,ATEST-C,Atest C,NYSE American,2020-03-09,,0.0,25.02,0.0,25.02,25.02,14390.0,14390.0,0.0,0.0,6.672
+2020-07-01,ATEST-C,Atest C,NYSE American,2020-03-09,,0.0,25.02,25.02,25.02,25.02,11900.0,11900.0,0.0,0.0,25.02

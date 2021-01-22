@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2018-12-01,FSIC,FS Investment Corporation,NYSE,2018-12-06,,5.8309,5.97,5.32,5.36,,19446040.0,19446040.0,5.360041999999999,-0.9292,5.73481

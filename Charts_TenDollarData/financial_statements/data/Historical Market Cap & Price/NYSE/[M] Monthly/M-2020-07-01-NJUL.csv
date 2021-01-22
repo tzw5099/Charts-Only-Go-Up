@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,NJUL,,NYSE,2020-07-01,,40.950001,41.009998,40.810001,41.009998,41.009998,21396.0,21396.0,0.06,0.147,40.94333

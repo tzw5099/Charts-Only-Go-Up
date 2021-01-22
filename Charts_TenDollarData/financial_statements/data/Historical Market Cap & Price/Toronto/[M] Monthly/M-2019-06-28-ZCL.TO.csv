@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-06-01,ZCL.TO,ZCL Composites Inc.,Toronto,2019-06-28,,9.99,10.0,9.99,10.0,10.0,53617.0,53617.0,0.01,0.1,9.99667

@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-03-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,20.46,20.63,20.36,20.63,20.53,10400.0,10400.0,0.05,0.014294117647058823,2.4101958823529412
+2016-04-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,20.94,20.99,20.94,20.99,20.89,3300.0,3300.0,0.0,0.0,1.9966666666666666
+2016-05-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,20.99,20.99,20.32,20.32,20.22,2000.0,2000.0,0.0,0.0,1.9438095238095239
+2016-06-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,20.32,20.32,20.32,20.32,20.27,0.0,0.0,0.0,0.0,0.0
+2016-07-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,20.32,20.32,20.32,20.32,20.27,0.0,0.0,0.0,0.0,0.0
+2016-08-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,20.32,20.32,20.32,20.32,20.27,0.0,0.0,0.0,0.0,0.0
+2016-09-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,20.32,21.52,20.32,21.52,21.48,1500.0,1500.0,0.0,0.0,1.0247619047619048
+2016-10-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,21.52,21.52,21.52,21.52,21.48,0.0,0.0,0.0,0.0,0.0
+2016-11-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,21.52,22.27,21.52,22.25,22.21,8300.0,8300.0,-0.02,-0.00409090909090909,2.016666818181818
+2016-12-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,21.95,21.95,21.95,21.95,21.95,100.0,100.0,0.0,0.0,1.0975
+2017-01-01,FGM.TO,First Asset Fund Corp. - First Asset Global Momentum (CAD hedged) Class ETF,Toronto,2016-03-08,,21.95,22.33,21.95,22.33,22.33,15400.0,15400.0,0.01,0.005,2.480741111111111

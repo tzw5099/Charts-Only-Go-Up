@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-06-01,EPS.TO,Epsilon Energy Ltd.,Toronto,2019-06-28,,5.46,5.46,5.45,5.46,5.46,2150.0,2150.0,0.0,0.0,5.45667

@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-03-01,DDEZ,WisdomTree Dynamic Currency Hedged Europe Equity Fund,BATS,2019-03-28,,28.2262,28.2262,28.2262,28.2262,,8.0,8.0,28.2262,0.0,

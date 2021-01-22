@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-02-01,ECR,Eclipse Resources Corporation,NYSE,2019-02-13,,1.04,1.2,0.9954,1.17,,8937734.0,8937734.0,1.1700000000000002,1.105909090909091,1.1195636363636365

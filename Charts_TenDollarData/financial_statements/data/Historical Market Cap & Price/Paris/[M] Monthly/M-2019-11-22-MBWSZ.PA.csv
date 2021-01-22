@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-11-01,MBWSZ.PA,MBWS BSAR 2023,Paris,2019-11-22,,0.58,0.58,0.58,0.58,0.58,2951.0,2951.0,0.0,0.0,0.58

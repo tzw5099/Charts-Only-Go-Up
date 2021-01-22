@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-03-01,YPG-DB.TO,YP DIGITAL AND MEDIA SOL 8 PCT ,Toronto,2019-03-28,,109.5,99.75,99.75,99.75,99.75,1000.0,1000.0,-9.75,-8.904,99.75

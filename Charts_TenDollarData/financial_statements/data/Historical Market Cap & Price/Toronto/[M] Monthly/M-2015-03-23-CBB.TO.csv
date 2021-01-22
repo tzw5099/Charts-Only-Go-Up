@@ -1,0 +1,24 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2015-03-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,20.1,20.1,20.08,20.08,19.25,4325.0,4325.0,-0.02,-0.1,20.08667
+2015-04-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,,,,,,0.0,0.0,0.0,,
+2015-05-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,,,,,,0.0,0.0,0.0,,
+2015-06-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,,,,,,0.0,0.0,0.0,,
+2015-07-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.89,18.89,18.89,18.89,18.11,255.0,255.0,0.0,0.0,6.296666666666667
+2015-08-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,19.25,19.25,18.2,18.77,18.04,800.0,800.0,0.0,0.0,0.9574999999999999
+2015-09-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.77,18.77,18.3,18.3,17.64,0.0,0.0,0.0,0.0,0.0
+2015-10-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.26,19.2,18.26,19.2,18.57,0.0,0.0,0.0,0.0,0.0
+2015-11-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.63,18.63,18.56,18.56,18.0,900.0,900.0,0.0,0.0,0.8838095238095237
+2015-12-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.56,18.56,18.3,18.3,17.81,0.0,0.0,0.0,0.0,0.0
+2016-01-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.3,18.3,18.3,18.3,17.86,0.0,0.0,0.0,0.0,0.0
+2016-02-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.3,18.3,18.02,18.02,17.63,0.0,0.0,0.0,0.0,0.0
+2016-03-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.02,18.55,18.02,18.55,18.15,0.0,0.0,0.0,0.0,0.0
+2016-04-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.55,18.55,18.49,18.49,18.13,0.0,0.0,0.0,0.0,0.0
+2016-05-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.49,18.66,18.49,18.66,18.34,1200.0,1200.0,0.0,0.0,0.8885714285714286
+2016-06-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.66,18.66,18.66,18.66,18.39,0.0,0.0,0.0,0.0,0.0
+2016-07-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,18.66,19.3,18.66,19.3,19.06,700.0,700.0,0.0,0.0,0.9650000000000001
+2016-08-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,19.3,19.49,19.3,19.3,19.11,2300.0,2300.0,0.0,0.0,2.6459090909090905
+2016-09-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,19.3,19.3,19.3,19.3,19.16,200.0,200.0,0.0,0.0,1.8380952380952382
+2016-10-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,19.3,19.3,19.3,19.3,19.2,0.0,0.0,0.0,0.0,0.0
+2016-11-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,19.3,19.3,19.05,19.05,19.0,300.0,300.0,0.0,0.0,0.865909090909091
+2016-12-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,19.05,19.05,19.05,19.05,19.05,0.0,0.0,0.0,0.0,0.0
+2017-01-01,CBB.TO,First Asset Core Balanced ETF,Toronto,2015-03-23,,19.05,19.08,19.05,19.08,19.08,1000.0,1000.0,0.0,0.0,2.1199999999999997

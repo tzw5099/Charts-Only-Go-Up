@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-06-01,PGLC.TO,Pershing Gold Corporation,Toronto,2019-06-28,,1.73,1.76,1.64,1.68,1.68,6500.0,6500.0,-0.05,-2.89,1.69333

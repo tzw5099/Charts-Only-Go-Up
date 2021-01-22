@@ -1,0 +1,19 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-04-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2019-05-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2019-06-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2019-07-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,50.0,50.0,0.0,0.0,0.6521739130434783
+2019-08-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2019-09-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2019-10-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2019-11-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2019-12-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2020-01-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2020-02-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,15.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0
+2020-03-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,15.0,15.0,8.6,8.6,8.6,240.0,240.0,0.0,0.0,0.9818181818181819
+2020-04-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,8.6,8.6,8.6,8.6,8.6,0.0,0.0,0.0,0.0,0.0
+2020-05-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,8.6,8.6,8.6,8.6,8.6,0.0,0.0,0.0,0.0,0.0
+2020-06-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,8.6,8.6,8.6,8.6,8.6,0.0,0.0,0.0,0.0,0.0
+2020-07-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,8.6,8.6,8.6,8.6,8.6,0.0,0.0,0.0,0.0,0.0
+2020-08-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,8.6,8.6,7.8,7.8,7.8,30.0,30.0,0.0,0.0,0.37142857142857144
+2020-09-01,CPA.LS,"COPAM - Companhia Portuguesa de Amidos, S.A.",Lisbon,2019-04-15,,7.8,7.8,7.8,7.8,7.8,0.0,0.0,0.0,0.0,0.0

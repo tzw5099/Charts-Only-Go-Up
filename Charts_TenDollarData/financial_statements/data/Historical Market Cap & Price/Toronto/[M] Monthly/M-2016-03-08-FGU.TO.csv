@@ -1,0 +1,12 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2016-03-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,21.0,21.0,21.0,21.0,20.83,300.0,300.0,0.0,0.0,2.4705882352941178
+2016-04-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,21.0,21.19,21.0,21.02,20.85,300.0,300.0,-0.17,-0.03819047619047619,1.0036509523809525
+2016-05-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,21.02,21.02,21.02,21.02,20.85,0.0,0.0,0.0,0.0,0.0
+2016-06-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,21.02,21.25,20.36,20.46,20.36,2300.0,2300.0,-0.08,-0.017454545454545455,5.69803
+2016-07-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,20.46,20.46,20.46,20.46,20.36,0.0,0.0,0.0,0.0,0.0
+2016-08-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,20.46,21.46,20.46,21.43,21.33,1000.0,1000.0,-0.05,-0.010727272727272726,3.867575909090909
+2016-09-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,21.43,21.8,21.43,21.8,21.75,100.0,100.0,0.0,0.0,1.0380952380952382
+2016-10-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,21.8,21.8,21.8,21.8,21.75,0.0,0.0,0.0,0.0,0.0
+2016-11-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,21.8,23.32,21.8,23.32,23.27,200.0,200.0,0.0,0.0,2.060909090909091
+2016-12-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,23.32,24.27,23.28,24.27,24.27,600.0,600.0,0.31,0.06625,3.587833
+2017-01-01,FGU.TO,First Asset Fund Corp. - First Asset Global Value Class ETF,Toronto,2016-03-08,,24.27,24.27,24.27,24.27,24.27,0.0,0.0,0.0,0.0,0.0

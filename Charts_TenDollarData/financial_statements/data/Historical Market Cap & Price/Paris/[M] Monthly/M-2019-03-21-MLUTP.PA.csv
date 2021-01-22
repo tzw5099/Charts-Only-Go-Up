@@ -1,0 +1,20 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-03-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,8.5,8.5,8.5,8.5,8.5,0.0,0.0,0.0,0.0,0.0
+2019-04-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,8.5,8.5,8.5,8.5,8.5,0.0,0.0,0.0,0.0,0.0
+2019-05-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,8.5,8.5,8.5,8.5,8.5,0.0,0.0,0.0,0.0,0.0
+2019-06-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,8.5,8.5,8.5,8.5,8.5,0.0,0.0,0.0,0.0,0.0
+2019-07-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,8.5,8.5,4.0,4.0,4.0,752.0,752.0,0.0,0.0,0.3695652173913043
+2019-08-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,4.0,4.0,4.0,4.0,4.0,125.0,125.0,0.0,0.0,0.36363636363636365
+2019-09-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,4.0,9.85,4.0,9.85,9.85,1214.0,1214.0,0.0,0.0,1.6047619047619048
+2019-10-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.85,9.85,8.0,8.0,8.0,120.0,120.0,0.0,0.0,1.0869565217391304
+2019-11-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,8.0,9.0,8.0,9.0,9.0,10.0,10.0,0.0,0.0,0.42857142857142855
+2019-12-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-01-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-02-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-03-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-04-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-05-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-06-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-07-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-08-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0
+2020-09-01,MLUTP.PA,Un Toit Pour Toi Societe anonyme,Paris,2019-03-21,,9.0,9.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0

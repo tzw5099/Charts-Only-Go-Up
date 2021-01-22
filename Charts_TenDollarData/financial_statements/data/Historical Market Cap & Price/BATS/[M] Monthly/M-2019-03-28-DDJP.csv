@@ -1,0 +1,2 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-03-01,DDJP,WisdomTree Dynamic Currency Hedged Japan Equity Fund,BATS,2019-03-28,,26.0663,26.0663,26.0663,26.0663,,0.0,0.0,26.0663,0.0,

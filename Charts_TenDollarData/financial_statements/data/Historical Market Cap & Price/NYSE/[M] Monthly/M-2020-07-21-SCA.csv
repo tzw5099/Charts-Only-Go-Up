@@ -1,0 +1,4 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2020-07-01,SCA,Stellus Capital Investment Corporation 5.75% Notes due 2022,NYSE,2020-07-21,,23.0,23.6,22.95,23.59,23.59,26962.0,26962.0,0.8209,0.44399999999999995,23.246205
+2020-08-01,SCA,Stellus Capital Investment Corporation 5.75% Notes due 2022,NYSE,2020-07-21,,23.53,25.14,23.75,24.82,24.82,78066.0,78066.0,1.3154,0.4211538461538462,24.708958461538465
+2020-09-01,SCA,Stellus Capital Investment Corporation 5.75% Notes due 2022,NYSE,2020-07-21,,24.8589,24.925,24.52,24.9,24.9,13608.0,13608.0,-0.257,-0.11388888888888887,24.761070000000004

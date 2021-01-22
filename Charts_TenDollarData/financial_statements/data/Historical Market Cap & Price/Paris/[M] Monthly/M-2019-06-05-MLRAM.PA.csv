@@ -1,0 +1,5 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2019-06-01,MLRAM.PA,Rapha??l Michel S.A.,Paris,2019-06-05,,13.0,13.0,13.0,13.0,13.0,0.0,0.0,0.0,0.0,0.0
+2019-07-01,MLRAM.PA,Rapha??l Michel S.A.,Paris,2019-06-05,,13.0,13.0,13.0,13.0,13.0,0.0,0.0,0.0,0.0,0.0
+2019-08-01,MLRAM.PA,Rapha??l Michel S.A.,Paris,2019-06-05,,13.0,13.0,13.0,13.0,13.0,0.0,0.0,0.0,0.0,0.0
+2019-09-01,MLRAM.PA,Rapha??l Michel S.A.,Paris,2019-06-05,,13.0,13.0,13.0,13.0,13.0,0.0,0.0,0.0,0.0,0.0

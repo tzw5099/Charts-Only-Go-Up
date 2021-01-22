@@ -1,0 +1,21 @@
+datetime,symbol,name,exchange,begin_date,marketCap,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap
+2017-04-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,53.82,53.82,53.82,53.82,,1100.0,1100.0,53.82,0.0,53.82
+2017-05-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,55.1,55.1,55.1,55.1,,600.0,600.0,1.28,2.378,55.1
+2017-06-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,49.24,49.24,46.12,49.19,,2000.0,2000.0,-5.91,-2.0824,48.041250000000005
+2017-07-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,46.7,48.25,46.68,47.09,,1500.0,1500.0,-2.1,-1.04425,47.3875
+2017-08-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,45.34,46.98,45.34,46.95,,1911.0,1911.0,-0.14000000000000012,-0.04375000000000007,46.100425
+2017-09-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,47.02,47.02,47.02,47.02,,326.0,326.0,0.07,0.024833333333333332,47.02
+2017-10-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,45.9,46.45,45.07,45.17,,2005.0,2005.0,-1.8499999999999999,-1.3103333333333331,45.373949999999994
+2017-11-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,,,,45.17,,65.0,65.0,0.0,0.0,
+2017-12-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,36.56,40.86,36.56,40.86,,554.0,554.0,-4.3100000000000005,-1.9032500000000003,38.059999999999995
+2018-01-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,42.17,44.7462,40.87,42.5473,,4405.0,4405.0,1.6873,0.45400000000000007,42.30835555555555
+2018-02-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,37.78,37.78,37.45,37.45,,862.0,862.0,-5.0973,-1.7257142857142858,37.6076
+2018-03-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,38.22,38.22,37.92,38.14,,725.0,725.0,0.69,0.30583333333333335,38.105000000000004
+2018-04-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,37.34,38.65,36.95,38.65,,1301.0,1301.0,0.5100000000000001,0.2892,37.69833333333333
+2018-05-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,37.79,40.03,37.79,40.03,,1072.0,1072.0,1.38,0.518,39.288199999999996
+2018-06-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,40.64,40.64,40.36,40.36,,679.0,679.0,0.33,0.13733333333333334,40.5
+2018-07-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,37.7936,37.7936,37.7936,37.7936,,186.0,186.0,-2.5664,-1.0598333333333334,37.7936
+2018-08-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,37.85,40.16,37.85,39.11,,1810.0,1810.0,1.3163999999999996,0.5141428571428571,39.278749999999995
+2018-09-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,38.2,41.18,38.2,40.99,,602.0,602.0,1.8800000000000003,0.8205,39.758750000000006
+2018-10-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,43.12,46.38,42.9,43.21,,20758.0,20758.0,2.2199999999999998,0.6183333333333334,44.09595
+2018-11-01,GAZB,Barclays Bank PLC iPath Series B Bloomberg Natural Gas Subindex Total Return ETN,NYSE Arca,2017-04-04,,43.61,67.17,43.61,53.83,,7106.0,7106.0,10.62,3.7038571428571427,52.15706666666667
