@@ -13,7 +13,7 @@ li:hover > ul.dropdown-menu {
 	pointer-events: auto;
 }
 body {
-	cursor: pointer;
+	/* cursor: pointer; */
 	z-index: 99999;
 }
 .dropdown-menu {
