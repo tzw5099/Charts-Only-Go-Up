@@ -103,6 +103,18 @@
       "isOrdered": true,
       "folders": {},
       "files": {}
+    },
+    "print csvs": {
+      "name": "print csvs",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "vendor": {
+      "name": "vendor",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
     }
   },
   "files": {}

@@ -55,7 +55,7 @@ def get_linenumber():
     return cf.f_back.f_lineno
 # print(get_linenumber())
 sys.path.append(os.path.join(os.path.dirname(__file__)))
-# from functions.pandas_extraction import FS
+from functions.pandas_extraction import FS
 import numpy as np
 import functools
 from datetime import datetime
@@ -76,62 +76,8 @@ import linecache
 import inspect
 # import d6tstack
 from inspect import currentframe, getframeinfo
-def PrintException():
-    callerframerecord = inspect.stack()[1]    # 0 represents this line
-                                            # 1 represents line at caller
-    exc_type, exc_obj, tb = sys.exc_info()
-    f = tb.tb_frame
-    lineno = tb.tb_lineno
-    frame = callerframerecord[0]
-    info = inspect.getframeinfo(frame)
-    error_function = info.function
-    filename = f.f_code.co_filename
-    linecache.checkcache(filename)
-#     line = linecache.getline(filename, lineno, f.f_globals,error_function)
-    line = linecache.getline(filename, lineno,error_function)
-    print("exception!", lineno, line.strip(), exc_obj)
-    return(lineno, line.strip(), exc_obj,)
-
-
-
-@charts.route("/json")
-def json_js_practice():
-    return render_template('json_js_practice.html')
-
-@charts.route('/<url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
-@charts.route('/<url_symbol>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
-@charts.route('/<url_symbol>/<url_fin_metric>', methods=['POST', 'GET'])
-@charts.route('/<url_symbol>', methods=['POST', 'GET'])
-@charts.route('/', methods=['POST', 'GET'])
-@charts.route('/random', methods=['POST', 'GET'])
-# @charts.route("/home")
-def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple", statement_or_ratio="income-statement", url_fin_metric= "revenue-sales"):
-    from route_imports.ratio_map import metric_to_url_map
-    from route_imports.ratio_map import url_to_var_name_map
-    from route_imports.ratio_map import url_to_name_map
-    from route_imports.ratio_map import fin_statement_raw_names
-    from route_imports.ratio_map import fin_statement_renamed_cols
-    from route_imports.ratio_map import fin_statement_renamed_titles
-    from route_imports.ratio_map import metric_to_formula_map
-    from route_imports.ratio_map import url_to_metric_map
-    from route_imports.ratio_map import url_to_equation_map
-    from route_imports.ratio_map import url_to_definition_map
-    from route_imports.ratio_map import fin_statement_title_links_dict
-    import scipy
-    from route_imports.ratio_map import fin_statement_title_statements_dict
-    from flask import Markup
-    domain = "http://127.0.0.1:5000"
-    subdomain = "http://127.0.0.1:5000"
-    start_time = time.time()
-    # titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
-    titles_list = ['Selling, General and Administrative (SG&A)','Selling General and Administrative (SG&A)', "EBITDA Margin", "Operating Margin" ,"Profit Margin"]
-    vars_drop = ['quarter_n_year',  's_g_n_a', "ebitda_margin", "operating_margin","profit_margin"]
-    def weird_division(n, d):
-        return n / d if d else 0
-    def replace(group, stds):
-        group[np.abs(group - group.mean()) > stds * group.std()] = np.nan
-        return group
-    def magnitude_num(number, currency_symbol):
+from flask import Markup
+def magnitude_num(number, currency_symbol):
         try:
             if len(str(number)) > 12 and number > 1000000000000:
                 magnitude = number/1000000000000
@@ -164,7 +110,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             magnitude = number
             magnitude_str = number
         return magnitude_str
-    def change_markup(change,percent_or_x,arrow_no_arrow = "arrow", css_class = "change_markup"):
+def change_markup(change,percent_or_x,arrow_no_arrow = "arrow", css_class = "change_markup",sign="yes"):
         try:
             if arrow_no_arrow == "arrow":
                 up_green_prefix = '<span class="up_green {}">'.format(css_class)
@@ -191,7 +137,10 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 if change==0:
                     change_html = "0%"
                 elif change>0:
-                    change_html = Markup("{}+{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
+                    if sign=="yes":
+                        change_html = Markup("{}+{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
+                    else:
+                        change_html = Markup("{}{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
                 elif change<0:
                     change_html = Markup("{}{}%{}".format(down_red_prefix, change_comma, down_red_suffix))
                 else:
@@ -200,7 +149,10 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 if change==0:
                     change_html = "0%"
                 elif change>0:
-                    change_html = Markup("{}+{}x{}".format(up_green_prefix, change, up_green_suffix))
+                    if sign=="yes":
+                        change_html = Markup("{}+{}x{}".format(up_green_prefix, change, up_green_suffix))
+                    else:
+                        change_html = Markup("{}{}x{}".format(up_green_prefix, change, up_green_suffix))
                 elif change<0:
                     change_html = Markup("{}{}x{}".format(down_red_prefix, change, down_red_suffix))
                 else:
@@ -210,6 +162,181 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         except Exception as e:
             change_html = '-'
         return change_html
+def PrintException():
+    callerframerecord = inspect.stack()[1]    # 0 represents this line
+                                            # 1 represents line at caller
+    exc_type, exc_obj, tb = sys.exc_info()
+    f = tb.tb_frame
+    lineno = tb.tb_lineno
+    frame = callerframerecord[0]
+    info = inspect.getframeinfo(frame)
+    error_function = info.function
+    filename = f.f_code.co_filename
+    linecache.checkcache(filename)
+#     line = linecache.getline(filename, lineno, f.f_globals,error_function)
+    line = linecache.getline(filename, lineno,error_function)
+    print("exception!", lineno, line.strip(), exc_obj)
+    return(lineno, line.strip(), exc_obj,)
+# import markdown
+# @charts.route('/mcap', methods=['POST', 'GET'])
+@charts.route('/')
+def market_caps_table():
+    df = pd.read_csv("reference_data/homepage_final.csv")
+    df_html = pd.read_csv("reference_data/homepage_final.csv")
+    #.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
+    # df_html['Market Cap'] = df_html.apply(lambda x: magnitude_num(x['marketCap'],"$"), axis=1)#.head(30)
+    # df_html['Market Cap'] = df_html.apply(lambda x: int(x['marketCap']), axis=1)#.head(30)
+    sum_mcap = sum(df_html['marketCap']) #('${:,.0f}'.format)
+    sum_01d_vol = sum(df_html['price'] * df_html['volume'])
+    sum_90d_vol = sum(df_html['price'] * df_html['avgVolume'])
+    dominance_top_10 = sum(df_html['marketCap'][0:10])
+    dominance_top_10_pct = 100*dominance_top_10/sum_mcap
+    sum_mcapx = magnitude_num(sum_mcap,"$") #f'${sum_mcap:,.0f}'
+    sum_01d_volx = magnitude_num(sum_01d_vol,"$") #f'${sum_01d_vol:,.0f}'
+    sum_90d_volx = magnitude_num(sum_90d_vol,"$") #f'${sum_90d_vol:,.0f}'
+    dominance_top_10x = magnitude_num(dominance_top_10,"$") #f'${dominance_top_10:,.0f}'
+    dominance_top_10_pctx = "{}{}".format(np.round(dominance_top_10_pct,2),"%")
+    # df_html['Market Cap ($MM)'] = df_html['marketCap']/1000000000
+    # df_html['Market Cap ($MM)'] = df_html.apply(lambda x: x['marketCap']/1000000, axis=1)
+    # df_html['Name'] = df_html.apply(lambda x: Markup('<div class="mcap_symbol">'+x['symbol']+'</div> <div class="mcap_name">'+x['name']+"</div>"),axis=1)
+    # df_html['Name'] = df_html.apply(lambda x: ('<div class="mcap_symbol">'+x['symbol']+'</div> <div class="mcap_name">'+x['name']+"</div>"),axis=1)
+    df_html['name'] = df_html.apply(lambda x: ('<table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy" data-original="http://127.0.0.1:5000/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(x['symbol'])+x['symbol']+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +x['name']+'</td></tr></thead></table>'),axis=1)
+    # df_html['symbol'] = df_html.apply(lambda x: ('<i class="material-icons icon_brand">show_chart</i>'+'<br/>'+x['symbol']+""),axis=1)
+    # df_html['Avg $ Vol'] = df_html.apply(lambda x: "{}".format(magnitude_num(x['avgVolume']*x['price'],"$")), axis=1)
+    df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
+    df_html['90D $ Vol'] = df_html['90D $ Vol'].map('${:,.0f}'.format)
+    df_html['24H $ Vol'] = df_html['price']*df_html['volume']
+    df_html['24H $ Vol'] = df_html['24H $ Vol'].map('${:,.0f}'.format)
+    df_html['avgVolumex'] = df_html['avgVolume'].map('{:,.0f}'.format)
+    df_html['volumex'] = df_html['volume'].map('{:,.0f}'.format)
+    # df_html['volume'] = df_html['volume']
+    # df_html['volume'] = df_html.apply(lambda x: strx['volume'] + " " + x['symbol'],axis=1)
+    #df_html['volume'].map('{:,.0f}'.format) + " shares"
+    df_html['24H $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['24H $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['volumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
+    df_html['90D $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['90D $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['avgVolumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
+    # df_html['price'] = df_html.apply(lambda x: Markup("$"+str(np.round(x['price'],2))), axis=1)
+    # df_html['price'] = df_html.apply(lambda x: ("$"+str(np.round(x['price'],2))), axis=1)
+    # df_html['pe'] = df_html.apply(lambda x: np.round(x['pe'],2), axis=1)
+    df_html['pe'] = df_html['pe'].map('{:,.2f}'.format)
+    # df_html['% Chg'] = df_html['changesPercentage'].map('{:,.2f}%'.format)
+    df_html['% Chg'] = df_html.apply(lambda x: change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change", sign="no"), axis=1)#.head(30)
+    # df_html['% Chg'] = df_html.apply(lambda x: x['changesPercentage'], axis=1)#change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change"), axis=1)#.head(30)
+    df_html['Shares Outstanding'] = df_html['sharesOutstanding'].map('{:,.0f}'.format)
+    # df_html['Shares Outstanding'] = df_html.apply(lambda x: ('<span class="mcap_shares_out">'+str(x['Shares Outstanding'])+'</span><br/><span class="mcap_pct_out">' + str(np.round((100*x['avgVolume']/x['sharesOutstanding']),3)) +"%</span>"),axis=1)
+    df_html['Shares Outstanding'] = df_html.apply(lambda x: ('<span class="mcap_shares_out">'+str(x['Shares Outstanding'])+'</span><br/><span class="mcap_pct_out">'+"</span>"),axis=1)
+    df_html['price'] = df_html['price'].map('${:,.2f}'.format)
+    df_html['Market Cap'] = df_html['marketCap'].map('${:,.0f}'.format)
+    df_html = df_html[['name','price','% Chg', 'Market Cap','24H $ Vol','90D $ Vol','pe',]][0:150]
+    df_html.columns = ['Name', 'Price', '% Chg', 'Market Cap','24H $ Vol', '90D $ Volume','P/E']
+    df_html = df_html.to_html().replace('<table','<table class="df_tableBoot" id="df_myTable"')
+    df_html = df_html.replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
+    # df_html = df_html.replace("[","")
+    # df_html = df_html.replace("_"," ")
+    # df_html = df_html.replace('.00','')
+    # df_html = df_html.replace('.0','')
+    # df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
+    # df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
+    # df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
+    df_html = df_html[0:].replace(">nan</td>",">-</td>")
+    df_html = df_html[0:].replace(">nan%</td>",">-</td>")
+    df_html = df_html[0:].replace("&lt;","<")
+    df_html = df_html[0:].replace("&gt;",">")
+    return render_template('market_caps_table.html',\
+        df_html = Markup(df_html),
+        df_test = list(df),
+        sum_mcapx = sum_mcapx,
+        sum_01d_volx = sum_01d_volx,
+        sum_90d_volx = sum_90d_volx,
+        dominance_top_10x = dominance_top_10x,
+        dominance_top_10_pctx = dominance_top_10_pctx
+    # df_html = [df_html],
+        )
+# sum_mcapx = f'${sum_mcap:,.0f}'
+# sum_01d_volx = f'${sum_01d_vol:,.0f}'
+# sum_90d_volx = f'${sum_90d_vol:,.0f}'
+# dominance_top_10x = f'${dominance_top_10:,.0f}'
+# dominance_top_10_pctx = f'{dominance_top_10_pct:,.2f}'+"%"
+# df_html = [df_html.replace('<th class="th_fin_statement_class fin_statement_class">YoY % Change</th>      <th class="th_fin_statement_class fin_statement_class">Stock Price</th>', '<th class="th_fin_statement_class fin_statement_class">YoY % Change{}</th>      <th class="th_fin_statement_class fin_statement_class">Stock Price</th>'.format(min_max_warning))],
+
+
+@charts.route('/test/<some_place>', methods=['POST', 'GET'])
+# @cache.cached(timeout=5)
+def fin_test(some_place):
+    # values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
+    return render_template('symbol_main_page.html',
+    # return render_template('fin_statements_bootstrapped.html',
+    # return render_template('fin_statements_bootstrapped_w_comments.html',
+    # FS("IS","AAPL").df_values()['df_table']
+    # FS("IS","AAPL").df_values()['df_table_pct']
+    # FS("IS","AAPL").df_values()['chart_x_dates']
+    # FS("IS","AAPL").df_values()['chart_y_revenue']
+    # FS("IS","AAPL").df_values()['df_json']
+    # FS("IS","AAPL").df_values()['df_titles']
+
+
+     tables=FS("IS","AAPL").df_values()['df_table'],
+     table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
+     df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
+     df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
+     df_json = FS("IS","AAPL").df_values()['df_json'],
+     titles=FS("IS","AAPL").df_values()['df_titles'],
+     labels = FS("IS","AAPL").df_labels(),
+     values=FS("IS","AAPL").df_price(),
+     place_name=some_place, max=17000,
+     
+     
+     
+    #  tables=FS("BS","AAPL").df_values()['df_table'],
+    #  table_pct = FS("BS","AAPL").df_values()['df_table_pct'],
+    #  df_date = FS("BS","AAPL").df_values()['chart_x_dates'],
+    #  df_rev = FS("BS","AAPL").df_values()['chart_y_revenue'],
+    #  df_json = FS("BS","AAPL").df_values()['df_json'],
+    #  titles=FS("BS","AAPL").df_values()['df_titles'],
+    #  labels = FS("BS","AAPL").df_labels(),
+    #  values=FS("BS","AAPL").df_price(),
+    #  place_name=some_place, max=17000,
+     )
+
+
+
+
+
+
+@charts.route("/json")
+def json_js_practice():
+    return render_template('json_js_practice.html')
+# @charts.route("/home")
+# @charts.route('/', methods=['POST', 'GET'])
+@charts.route('/<url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
+@charts.route('/<url_symbol>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
+@charts.route('/<url_symbol>/<url_fin_metric>', methods=['POST', 'GET'])
+@charts.route('/<url_symbol>', methods=['POST', 'GET'])
+@charts.route('/random', methods=['POST', 'GET'])
+def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple", statement_or_ratio="income-statement", url_fin_metric= "revenue-sales"):
+    from route_imports.ratio_map import metric_to_url_map
+    from route_imports.ratio_map import url_to_var_name_map
+    from route_imports.ratio_map import url_to_name_map
+    from route_imports.ratio_map import fin_statement_raw_names
+    from route_imports.ratio_map import fin_statement_renamed_cols
+    from route_imports.ratio_map import fin_statement_renamed_titles
+    from route_imports.ratio_map import metric_to_formula_map
+    from route_imports.ratio_map import url_to_metric_map
+    from route_imports.ratio_map import url_to_equation_map
+    from route_imports.ratio_map import url_to_definition_map
+    from route_imports.ratio_map import fin_statement_title_links_dict
+    import scipy
+    from route_imports.ratio_map import fin_statement_title_statements_dict
+    domain = "http://127.0.0.1:5000"
+    subdomain = "http://127.0.0.1:5000"
+    start_time = time.time()
+    # titles_list = ['Date','Symbol','Filing Date','Accepted Date','Period','SEC Filing Link']
+    titles_list = ['Selling, General and Administrative (SG&A)','Selling General and Administrative (SG&A)', "EBITDA Margin", "Operating Margin" ,"Profit Margin"]
+    vars_drop = ['quarter_n_year',  's_g_n_a', "ebitda_margin", "operating_margin","profit_margin"]
+    def weird_division(n, d):
+        return n / d if d else 0
+    def replace(group, stds):
+        group[np.abs(group - group.mean()) > stds * group.std()] = np.nan
+        return group
     fin_statements_list = ["balance-sheet","income-statement","cash-flow-statement"]
     company_profiles = pd.read_csv("reference_data/Company_Profiles.csv")
     try:
@@ -332,21 +459,16 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # xxx   if len_not_na_year_df + 2 > len(year_df_file):
         #         smart_data_warning = "*"
         #         smart_data_disclaimer = Markup('<span class="ruhroh disclaimer_zero">** The data has been enhanced for easier insights</span>')
-
         x = fin_metric_vars[0]
-
-
         if x=="accumulated_other_comprehensive_income_loss" or x=="other_total_stockholders_equity" or x=="other_income_other_expenses_net" or x=="accounts_receivable" or x=="investments_in_property_plant_and_equipment" or x=="acquisitions_net" or x=="purchases_of_investments" or x=="other_investing_activities" or x=="net_cash_used_for_investing_activities" or x=="debt_repayment" or x=="capital_expenditure" or x=="dividends_paid" or x=="common_stock_repurchased" or x=="capitalExpenditure":
             # df['{}'.format(x)] = df['{}'.format(x)].apply(lambda x: -1*x)
             if x=="dividends_paid" or x=="common_stock_repurchased" or x=="capitalExpenditure":
                 df['{}'.format(fin_metric_name)] = df['{}'.format(fin_metric_name)]*-1
-
             elif len(df[df['{}'.format(fin_metric_name)]<0]) > len(df[df['{}'.format(fin_metric_name)]>0]):
                 # pass
                 # print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
                 df['{}'.format(fin_metric_name)] = df['{}'.format(fin_metric_name)]*-1 #.apply(lambda x: -1*x)
                 # print("negative now", df[['{}'.format(fin_metric_name),"QQ-YYYY" ]])
-
             else:
                 pass
         else:
@@ -372,7 +494,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # df = df.drop(['index'],axis=1)
         # print(df.head(30))
         # print(list(df))
-
         def groupby_agg(df):
             if "{}".format(statement_or_ratio) == "income-statement":
                 df_grouped = df.groupby("Year").sum()
@@ -385,7 +506,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             return df_grouped
     else:
         fin_metric_definition_formula = ""
-
         metric_to_list_variables_map = {
                 'net_working_capital_ratio':['working_capital_math','total_assets',],
                 'book_value_per_share':['total_se','shares_outstanding_non',],
@@ -518,7 +638,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         fin_metric_vars_old = metric_to_list_variables_map[fin_metric_name] # NOTE: sdfsdf
         fin_metric_vars_old = list(set(fin_metric_vars_old))
         df_title = df_merge.copy()
-
         df_title.columns = fin_statement_renamed_titles
         df_yoy_cards = df_title.drop_duplicates(subset=['Date'])#.sort_values(by=["Date"])
         df_yoy_cards = df_yoy_cards.loc[:, 'Period':'QQ-YYYY']
@@ -534,7 +653,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[len_yoy-1:len_yoy].reset_index()
         else:
             df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[20:21].reset_index()
-
         df_yoy = (df_row_1.div(df_row_2))-1
         # print("sup10")
         # print("df_yoy_cards",df_yoy)
@@ -557,34 +675,24 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         yoy_cards_urls_dict = {}
         yoy_cards_html_list = []
         df_yoyx = df_yoyx.drop('index',axis=1)
-
         # del df_yoyx['index']
         df_yoyx = df_yoyx.dropna(axis=1, how='all')
         profiles_value = df_yoyx.values.tolist()[0]
-
-
-
         for n, profiles_col in enumerate(list(df_yoyx)):
-
             key = profiles_col
             value = df_yoyx[key][0]*100 # profiles_value[n]*100
             print("bling",n, key, value)
             current_value = 4*df_row_1[key][0] # profiles_current_value[n]
             current_value = magnitude_num(current_value,currency_symbol_original)
             value = change_markup(value,"percent","noarrow", "yoy_cards")
-
             yoy_cards_dict[key] = value
             yoy_cards_urls_dict[key] = fin_statement_title_links_dict[key]
             statement_url = fin_statement_title_statements_dict[key]
             # print("sup","key",key,"value",value,"link",fin_statement_title_links_dict[key],"statement",fin_statement_title_statements_dict[key])
             # yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(fin_statement_title_links_dict[key],profiles_col,value))
             yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}-{}/{}/{}/{}"><div class="item item1 s_card_{}"><span class="yoy_cards_metric">{}</span><span class="yoy_cards_current">{}</span><span class="yoy_cards_title">{}</span></div></a>'.format(subdomain,url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],n,value,current_value,profiles_col))
-
-
             yoy_cards_html_list.append(yoy_cards_html)
         yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
-
-
         yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
         df = df_merge.iloc[::-1]
         # print("df_merge", df_merge)
@@ -595,7 +703,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         df['working_capital_math']= df['total_current_assets'] - df['total_current_liabilities']
         df['quick_assets_math']=df['cash_non']+df['short_term_investments']+df['accounts_receivable']
         df['quick_ratio_math']=(df['total_current_assets'] - df['inventory'])/df['total_current_liabilities']
-
         fin_metric_vars = [fin_metric_title]
         # XXXXX
         # for n,x in enumerate(fin_metric_vars):
@@ -791,7 +898,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # print("sup821",list(df_yoy_cards))
         # print("df_yoy_cards",df_yoy_cards)
         df_yoy_cards =  df_yoy_cards.loc[:, ~df_yoy_cards.columns.str.contains('|'.join(L))]
-
         df_row_1 = (df_yoy_cards.select_dtypes(include=['float','int64']))[0:1].reset_index()
         # print("sup9x", df_yoy_cards)
         # df_yoy_cards.to_csv("yerp3.csv")
@@ -800,8 +906,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[len_yoy-1:len_yoy].reset_index()
         else:
             df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[20:21].reset_index()
-
-
         # df_row_2 = (df_yoy_cards.select_dtypes(include=['float','int64']))[4:5].reset_index()
         df_yoy = (df_row_1.div(df_row_2))-1
         df_yoy = df_yoy.drop(['index'],axis=1)
@@ -824,40 +928,27 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         yoy_cards_html_list = []
         profiles_current_value = df_row_1.values.tolist()[0]
         profiles_value = df_yoyx.values.tolist()[0]
-
         # print("sup13")
         # df_yoyx = df_yoyx.drop(['index'],axis=1)
         df_yoyx = df_yoyx.dropna(axis=1, how='all')
         # df_yoyx.to_csv("df_yoy_dropped_all_3.csv")
         # list_df_yoyx = [fin_metric_title] + list(df_yoyx)
         # df_yoyx = df_yoyx[ [fin_metric_title] + [ col for col in df_yoyx.columns if col != fin_metric_title ] ]
-
-
         for n, profiles_col in enumerate(list(df_yoyx)):
-
             key = profiles_col
             value = df_yoyx[key][0]*100 # profiles_value[n]*100
             print("bling",n, key, value)
             current_value = 4*df_row_1[key][0] # profiles_current_value[n]
             current_value = magnitude_num(current_value,currency_symbol)
             value = change_markup(value,"percent","noarrow", "yoy_cards")
-
             yoy_cards_dict[key] = value
             yoy_cards_urls_dict[key] = fin_statement_title_links_dict[key]
             statement_url = fin_statement_title_statements_dict[key]
             # print("sup","key",key,"value",value,"link",fin_statement_title_links_dict[key],"statement",fin_statement_title_statements_dict[key])
             # yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(fin_statement_title_links_dict[key],profiles_col,value))
             yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}-{}/{}/{}/{}"><div class="item item1 s_card_{}"><span class="yoy_cards_metric">{}</span><span class="yoy_cards_current">{}</span><span class="yoy_cards_title">{}</span></div></a>'.format(subdomain,url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],n,value,current_value,profiles_col))
-
-
             yoy_cards_html_list.append(yoy_cards_html)
         yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
-
-
-
-
-
-
         df = df[cols]
         # print("yo")
         # print("2try","fin metric title", fin_metric_title,"fin_metric_name",fin_metric_name, list(df))
@@ -1191,7 +1282,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         original_list = ["Year",'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']
         new_list = ["Year",'{}'.format(fin_metric_title),'YoY % Change',"Stock Price", 'YoY % Change (Stock Price)']
         # fin_metric_vars_old = ""
-
         for x in fin_metric_vars_old:
             # print("xfin_metric_vars_old", fin_metric_vars_old)
             df_tall[x] = df_tall[x].apply(lambda x: 4*x/1000000)
@@ -1533,7 +1623,6 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                             max_min_pct_diff_str = max_min_pct_diff_str,
                             df_bs_table_html = [df_table_html],
                             # df_html_tall = [df_html_tall],\
-                            df_html_tall = [df_html_tall.replace('<th class="th_fin_statement_class fin_statement_class">YoY % Change</th>      <th class="th_fin_statement_class fin_statement_class">Stock Price</th>', '<th class="th_fin_statement_class fin_statement_class">YoY % Change{}</th>      <th class="th_fin_statement_class fin_statement_class">Stock Price</th>'.format(min_max_warning))],
                             fin_metric_name = fin_metric_title,\
                             df_date = df['date'].to_list(),\
                             df_json  = df_json,\

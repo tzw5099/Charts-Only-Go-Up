@@ -1,0 +1,269 @@
+{% extends "base.html" %}
+
+
+{% block charts_quarter_head %}
+<style>
+    /* https://stackoverflow.com/questions/26023319/distribute-divs-evenly-in-a-horizontal-line */
+    .sum_market_titles{
+        font-weight: 700;
+
+
+    }
+    .sum_market_numbers{
+
+    }
+    .sum_market {
+    /* width:100%;
+    text-align:center; */
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    
+     justify-content: flex-start | flex-end | center | space-between | space-around;
+    }
+
+    .sum_market > div {
+    /* width: calc(100% / 5);   */
+    display: inline-block;
+    vertical-align: top;   
+    /* border:1px solid red; */
+    text-align:center;
+    margin:2%;    
+    padding:20px;
+    }
+
+</style>
+
+% extends "base.html" %
+% block charts_quarter_head %
+
+
+
+{{df_test}}
+
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" /> -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+
+
+
+<!-- enables CSV -->
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+<!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css">
+
+<!-- 
+https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css
+
+https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css -->
+
+{% endblock %}
+{% block quarterly_body %}
+% endblock %
+% block quarterly_body %
+<!-- <div class="row horizontal_scroll"> -->
+<!-- <div class="row horizontal_scroll"> -->
+    <div class="horizontal_grid-container">
+  <!-- <main class="horizontal_grid-item main"> -->
+<main class="main">
+    <div class="sum_market items">
+    <div class="item item1 s_card_2"><span class="sum_market_titles">Market Cap: </span>
+        <span class="sum_market_number">{{sum_mcapx}}</span>
+    </div>
+    <div class="item item1 s_card_2"><span class="sum_market_titles">24H Vol: </span>
+        <span class="sum_market_number">{{sum_01d_volx}}</span>
+    </div class="item item1 s_card_2">
+    <div class="item item1 s_card_2"><span class="sum_market_titles">90D Vol: </span>
+        <span class="sum_market_number">{{sum_90d_volx}}</span>
+    </div>
+    <div class="item item1 s_card_2"><span class="sum_market_titles">Top 10: </span>
+        <span class="sum_market_number">{{dominance_top_10_pctx}}</span>
+    </div>
+    <!-- <div><span class="sum_market_titles"></span><span class="sum_market_number">{{dominance_top_10_pctx}}</span></div> -->
+    </div>
+
+    </main>
+    </div>
+<!-- </div> -->
+
+
+      <script id="rendered-js" >
+const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
+    </script>
+
+<div class="mcap_table">
+{{df_html | safe}}
+</div>
+
+<script>
+    function checkForm() {
+        var rows = document.getElementsByClassName("item-row");
+        var arr = new Array();
+
+        for (i = 0; i < rows.length; i++) {
+            var cols = rows[i].getElementsByTagName("td");
+
+            for (j = 0; j < cols.length; j++) {
+                arr.push(cols[j].textContent);
+            }
+        }
+    }
+</script>
+
+
+<script>
+
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+<script>
+//<![CDATA[
+    // https://datatables.net/forums/discussion/22343/new-sorting-plugin-sort-by-any-number-ignore-text
+    function sortNumbersIgnoreText(a, b, high) { 
+        var reg = /[+-]?((\d+(\.\d*)?)|\.\d+)([eE][+-]?[0-9]+)?/;    
+        a = a.match(reg); 
+        a = a !== null ? parseFloat(a[0]) : high; 
+        b = b.match(reg); 
+        b = b !== null ? parseFloat(b[0]) : high; 
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));     
+    } 
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, { 
+        "sort-numbers-ignore-text-asc": function (a, b) { 
+            return sortNumbersIgnoreText(a, b, Number.POSITIVE_INFINITY); 
+        }, 
+        "sort-numbers-ignore-text-desc": function (a, b) { 
+            return sortNumbersIgnoreText(a, b, Number.NEGATIVE_INFINITY) * -1; 
+        } 
+    }); 
+
+
+
+    // $(document).ready(function () {
+        // $('table.df_tableBoot').DataTable();
+        var table = $('#df_myTable').DataTable({
+    // "fixedHeader": {
+    //     header: true,
+    // },
+   drawCallback: function(){
+        $("img.lazy").lazyload();
+   },
+
+    "columnDefs": [
+        { type: 'sort-numbers-ignore-text', targets : 3 },
+    { className: "mcap_col1", "targets": [ 0 ] },
+    { className: "mcap_col2", "targets": [ 1 ] },
+    { className: "mcap_col_numbers", "targets": [2, 3,4,5,6 ] }
+  ],
+
+
+
+                responsive: true,
+                "pageLength": 100,
+                // datatables.net image paginate load
+                // https://stackoverflow.com/questions/41075814/working-example-of-datatables-with-lazy-loading-of-images
+                deferRender: true,
+                
+                // paginate: true,
+                // fixedHeader: true,
+                // // "scrollX": true,
+                // columnDefs: [{
+                //         targets: [0],
+                //         orderData: [0, 1]
+                //     },
+                //     {
+                //         // "width": "100%" , "targets": [0,1,2,3,4,5,6],
+
+                //         // "width": "1000",
+                //         // "targets": "_all",
+                //         // render: function (data, type, full, meta) {
+                //         //     if (type === 'display' && !isNaN(data * 1) && data > 1000000000) {
+                //         //         $(td).addClass('td_fin_statement_class');
+                //         //         return ('$' + (data / 1000000000).toFixed(1) + 'B')
+                //         //     .toLocaleString();
+                //         //     } else if (type === 'display' && !isNaN(data * 1) && (data > 1000000 &&
+                //         //             data < 999999999)) {
+                //         //         $(td).addClass('td_fin_statement_class');
+                //         //         return ('$' + (data / 1000000).toFixed(1) + 'M').toLocaleString();
+                //         //     } else if (type === 'display' && !isNaN(data * 1) && (data > 1000 &&
+                //         //             data < 999999)) {
+                //         //         $(td).addClass('td_fin_statement_class');
+                //         //         return ('$' + (data / 1000).toFixed(1) + 'K').toLocaleString();
+                //         //     } else if (type === 'display' && !isNaN(data * 1) && (data > .01 &&
+                //         //             data < 2) && data != 1) {
+                //         //         return ((data * 100).toFixed(0) + '%').toLocaleString();
+                //         //     } else {
+                //         //         return data;
+                //         //     }
+                //         // }
+                //     },
+                //     // { "width": "1000" , targets: [0,1,2,3,4,5,6]},
+
+
+                // ],
+                // dom: 'Bfrtip',
+
+                // // "sScrollX": "100%",
+                // // "sScrollXInner": "110%",
+                // // "bScrollCollapse": true,
+                // colReorder: true,
+
+                // // scrollY: 300,
+                // buttons: [
+                //     // 'csv'
+                //     // 'csvHtml5'
+                //     // 'copy', 'csv', 'excel', 'pdf', 'print'
+                // ]
+                // // "order": [[ 3, "desc" ]]
+            }
+        );
+        new $.fn.dataTable.FixedHeader( table );
+    // });
+    
+     //]]>
+</script>
+
+<script>
+
+</script>
+
+
+{% endblock %}

@@ -163,7 +163,8 @@ class FS:
     
     def df_table(self):
         fs = FS(self.subject,self.symbol)
-        df_t = self.df.transpose()
+        df = self.df.drop(["Gross Profit (Income) Ratio","EBITDA Ratio","Operating Income Ratio","Income Before Tax Ratio","Net Income Ratio","SEC Filing","Date & Time Filing Accepted"], axis=1, errors='ignore')
+        df_t = df.transpose()
         df_t.columns = list(self.df['Quarter & Year'])
         df_t = df_t.iloc[1:]
         df_t['']=df_t.index
@@ -183,8 +184,16 @@ class FS:
         df_n_sum = df_n_sum[1:] #take the data less the header row
         df_n_sum.columns = new_header #set the header row as the df header
         df_n_sum.index = range(len(df_n_sum))
-        df_t = pd.merge(df_n_sum, df_t, left_index=True, right_index=True,suffixes=('Total: {} - {}'.format(fs.last(),fs.first()), 'Line Items'))
-        df_t = df_t[0:25]
+        df_t = pd.merge(df_n_sum, df_t, left_index=True, right_index=True,suffixes=('Total: {} - {}'.format(fs.last(),fs.first()), 'Line Item'))
+        df_t = df_t[1:25]
+        # df_t.rename(columns={ df_t.columns[0]: "Line Item" }, inplace = True)
+        df_t = df_t.iloc[:, 2:]
+        # df_t.rename(columns={"col1": "Line Item"})
+        df_t = df_t[~df_t.iloc[:, 0].str.contains("Gross Profit (Income) Ratio")]
+        
+        # df_t[~df_t['Line Item'].str.contains("Gross Profit (Income) Ratio")]
+        # "Gross Profit (Income) Ratio","EBITDA Ratio","Operating Income Ratio","Income Before Tax Ratio","Net Income Ratio")
+
 
         col_list = []
         n=0
@@ -197,6 +206,9 @@ class FS:
             n+=1
         col_list_str = ''.join(map(str, col_list))
         df_html = df_t.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
+        df_html = df_html.replace('NaN','')
+        
+        
 
 
         df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
