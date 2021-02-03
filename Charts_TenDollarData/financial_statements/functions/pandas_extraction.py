@@ -238,6 +238,7 @@ class FS:
         df_pct_chg_t = df_pct_chg.transpose()
         df_pct_chg_t.columns = list(df_pct_chg['Quarter & Year'])
         df_pct_chg_t = df_pct_chg_t.iloc[1:]
+
         df_pct_chg_t = df_pct_chg.transpose()
         df_pct_chg_t.columns = list(df_pct_chg['Quarter & Year'])
         df_pct_chg_t = df_pct_chg_t.iloc[1:]
@@ -276,6 +277,7 @@ class FS:
         cols = [cols[-1]] + cols[:-1]
         df_t = df_t[cols]
         # df_html = df_t.to_html().replace('<table','<table class="df_tableBoot" id="df_myTable2"')# dt-responsive" id="df_myTable"')
+
         df_n = self.df[self.df.applymap(FS.isnumber)]
         df_n[df_n < 2] = np.nan
         # pd.DataFrame(df_n.sum())#axis=0))
@@ -308,6 +310,9 @@ class FS:
         col_list_str = ''.join(map(str, col_list))
         df_html = df_t.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
         df_html = df_html.replace('NaN','')
+        
+        
+
 
         df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
         df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
@@ -321,6 +326,14 @@ class FS:
         df['Date'] = pd.to_datetime(df['Date']).values.astype(np.int64) // 10 ** 6
         df = df[['Date', 'Revenue (Sales)']].dropna().to_numpy().tolist()        
         return df
+
+    def df_labels(self):
+        df = self.df
+        df['Date'] = pd.to_datetime(df['Date']).values.astype(np.int64) // 10 ** 6
+        labels = df[['Date']].to_numpy().tolist(),
+        # labels = list(df['Date'])#[0:19]
+        # labels = list(df['Revenue (Sales)'])
+        return labels
 
     def df_values(self):
         fs = FS(self.subject,self.symbol)
@@ -353,8 +366,52 @@ class FS:
         # {'df_json': df_json, 'chart_x_dates':chart_x_dates,'chart_y_revenue':chart_y_revenue,'df_titles':df_titles }
         return {
             # 'df_table': fs.df_table(), 
-            'df_close':df_close, 
-                # 'df_table_pct':fs.df_table_pct(),
-                
+            'df_close':df_close,
+                'df_table_pct':fs.df_table_pct(),
                'chart_x_dates': chart_x_dates, 'chart_y_revenue':chart_y_revenue,
                'df_json': df_json, 'df_titles':df_titles}
+
+
+# def FS_csv(subject, symbol):
+#     csv_file = glob.glob("..\data\Historical Financial Statements\*\year\{}\*_{}_*".format(subject,symbol))[-1] #.format("NLOK"))[-1]
+#     df = pd.read_csv(csv_file)
+#     return(df)
+
+# def FS_first_year(df):
+#     earliest_year = list((df['date'].astype(str).str[0:4]))[-1]
+#     return(earliest_year)
+
+# def FS_latest_year(df):
+#     latest_year = list((df_bs['date'].astype(str).str[0:4]))[0]
+#     return(latest_year)
+
+# print(FS_first_year(FS_csv("Income Statement","AAPL")))
+
+
+# labels = list(FS("IS","AAPL")['Year'])[0:19]
+# values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
+
+# tables=FS("IS","AAPL").df_values()['df_table'], 
+
+# table_pct = FS("BS","AAPL").df_values()['df_table_pct'], 
+# df_date = FS("BS","AAPL").df_values()['chart_x_dates'], 
+# df_rev = FS("BS","AAPL").df_values()['chart_y_revenue'],
+# df_json = FS("BS","AAPL").df_values()['df_json'],
+# titles=FS("BS","AAPL").df_values()['df_titles']
+# print(str(df_json)[0:200])
+# print(FS("IS","AAPL").df_table_raw())
+# print(FS("IS","AAPL").last())
+
+# subject="Income Statement"
+# symbol="AAPL"
+# csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(subject,symbol))[-1]
+# csv_file = glob.glob("data\Historical Financial Statements\*\year\{}\*_{}_*".format(subject,symbol))[-1]
+# csv_file = glob.glob("data\Historical Financial Statements\*\year\*")
+
+# print(csv_file)
+
+print("up next")
+# print(pd.read_csv(csv_file))
+# print(str(df_json)[0:200])
+# print((FS("IS","AAPL").df_price()))
+# print(( FS("IS","AAPL").df_labels()))
