@@ -44,10 +44,6 @@ class FS:
         pd.set_option('display.float_format', '{:.2f}'.format)
         self.subject = subject
         self.symbol = symbol
-        
-        self.url_symbol = symbol
-        self.market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(self.url_symbol.upper()))[0]
-        self.df_price = pd.read_csv(self.market_cap_path)
         # "D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/functions"
         # csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
         csv_file = glob.glob("D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
@@ -57,163 +53,64 @@ class FS:
         df = self.year[0:].iloc[::-1]
         df['Quarter & Year'] = df['period']+" "+(df['date'].astype(str).str[0:4])#((df_bs['date'].astype(str).str[0:4].astype(int))-1).astype(str)
         df = df.drop([ 'Unnamed: 0','symbol','fillingDate','period','link'],axis=1)
-        # df.columns = [
-        #     'Date',
-        #     'Date & Time Filing Accepted',
-        #     'Revenue (Sales)',
-        #     'Cost of Revenue (Sales)',
-        #     'Gross Profit (Income)',
-        #     'Gross Profit (Income) Ratio',
-        #     'Research and Development (R&D) Expenses',
-        #     'Sales, General and Administrative (SG&A) Expenses',
-        #     'Selling and Marketing (S&M) Expenses',
-        #     'Other Expenses',
-        #     'Operating Expenses',
-        #     'Cost and Expenses',
-        #     'Interest Expense',
-        #     'Depreciation and Amortization (D&A)',
-        #     'EBITDA',
-        #     'EBITDA Ratio',
-        #     'Operating Income',
-        #     'Operating Income Ratio',
-        #     'Total Other Income Expenses (Net)',
-        #     'Income Before Tax',
-        #     'Income Before Tax Ratio',
-        #     'Income Tax Expense',
-        #     'Net Income',
-        #     'Net Income Ratio',
-        #     'EPS',
-        #     'EPS Diluted',
-        #     'Weighted Average Shares Outstanding',
-        #     'Weighted Average Shares Outstanding (Diluted)',
-        #     'SEC Filing', 
-        #     'Quarter & Year'
-        #                 ]
-
-
         df.columns = [
-                    'Date',
-                    'Date & Time Filing Accepted',
-                    'Cash and Cash Equivalents',
-                    'Short Term Investments',
-                    'Cash And Short-Term Investments',
-                    'Accounts Receivables',
-                    'Inventory',
-                    'Other Current Assets',
-                    'Total Current Assets',
-                    'PP&E',
-                    'Goodwill',
-                    'Intangible Assets',
-                    'Goodwill and Intangible Assets',
-                    'Long-term Investments',
-                    'Tax Assets',
-                    'Other Non-Current Assets',
-                    'Total Non-Current Assets',
-                    'Other Assets',
-                    'Total Assets',
-                    'Accounts Payables',
-                    'Short-term Debt',
-                    'Income Tax Payables',
-                    'Deferred Revenue',
-                    'Other Current Liabilities',
-                    'Total Current Liabilities',
-                    'Long-term Debt',
-                    'Deferred Revenue Non-Current',
-                    'Deferred Tax Liabilities Non-Current',
-                    'Other Non-Current Liabilities',
-                    'Total Non-Current Liabilities',
-                    'Other Liabilities',
-                    'Total Liabilities',
-                    'Common Stock',
-                    'Retained Earnings',
-                    'Accumulated Other Comprehensive Income Loss',
-                    'Other Shareholders Equity',
-                    'Total Shareholders Equity',
-                    'Total Liabilities & Stockholders Equity',
-                    'Total Investments',
-                    'Total Debt',
-                    'Net Debt',
-                    'SEC Filing',
-                    'Quarter & Year',
+            'Date',
+            'Date & Time Filing Accepted',
+            'Revenue (Sales)',
+            'Cost of Revenue (Sales)',
+            'Gross Profit (Income)',
+            'Gross Profit (Income) Ratio',
+            'Research and Development (R&D) Expenses',
+            'Sales, General and Administrative (SG&A) Expenses',
+            'Selling and Marketing (S&M) Expenses',
+            'Other Expenses',
+            'Operating Expenses',
+            'Cost and Expenses',
+            'Interest Expense',
+            'Depreciation and Amortization (D&A)',
+            'EBITDA',
+            'EBITDA Ratio',
+            'Operating Income',
+            'Operating Income Ratio',
+            'Total Other Income Expenses (Net)',
+            'Income Before Tax',
+            'Income Before Tax Ratio',
+            'Income Tax Expense',
+            'Net Income',
+            'Net Income Ratio',
+            'EPS',
+            'EPS Diluted',
+            'Weighted Average Shares Outstanding',
+            'Weighted Average Shares Outstanding (Diluted)',
+            'SEC Filing', 'Quarter & Year'
                         ]
 
-        cols = [ 
-                'Date',
-                'Quarter & Year',
-                'Cash and Cash Equivalents',
-                'Short Term Investments',
-                'Cash And Short-Term Investments',
-                'Accounts Receivables',
-                'Inventory',
-                'Other Current Assets',
-                'Total Current Assets',
-                'PP&E',
-                'Goodwill',
-                'Intangible Assets',
-                'Goodwill and Intangible Assets',
-                'Long-term Investments',
-                'Tax Assets',
-                'Other Non-Current Assets',
-                'Total Non-Current Assets',
-                'Other Assets',
-                'Total Assets',
-                'Accounts Payables',
-                'Short-term Debt',
-                'Income Tax Payables',
-                'Deferred Revenue',
-                'Other Current Liabilities',
-                'Total Current Liabilities',
-                'Long-term Debt',
-                'Deferred Revenue Non-Current',
-                'Deferred Tax Liabilities Non-Current',
-                'Other Non-Current Liabilities',
-                'Total Non-Current Liabilities',
-                'Other Liabilities',
-                'Total Liabilities',
-                'Common Stock',
-                'Retained Earnings',
-                'Accumulated Other Comprehensive Income Loss',
-                'Other Shareholders Equity',
-                'Total Shareholders Equity',
-                'Total Liabilities & Stockholders Equity',
-                'Total Investments',
-                'Total Debt',
-                'Net Debt',
-                'SEC Filing',
-                'Date & Time Filing Accepted'
-            ]
-
-        # cols = [ 
-        #         'Date',
-        #         'Quarter & Year', 
-        #         'Revenue (Sales)',
-        #     'Cost of Revenue (Sales)',
-        #     'Gross Profit (Income)',
-        #     'Gross Profit (Income) Ratio',
-        #     'Research and Development (R&D) Expenses',
-        #     'Sales, General and Administrative (SG&A) Expenses',
-        #     'Other Expenses',
-        #     'Operating Expenses',
-        #     'Cost and Expenses',
-        #     'Interest Expense',
-        #     'Depreciation and Amortization (D&A)',
-        #     'EBITDA',
-        #     'EBITDA Ratio',
-        #     'Operating Income',
-        #     'Operating Income Ratio',
-        #     'Total Other Income Expenses (Net)',
-        #     'Income Before Tax',
-        #     'Income Before Tax Ratio',
-        #     'Income Tax Expense',
-        #     'Net Income',
-        #     'Net Income Ratio',
-        #     'EPS',
-        #     'EPS Diluted',
-        #     'Weighted Average Shares Outstanding',
-        #     'Weighted Average Shares Outstanding (Diluted)',
-        #     'SEC Filing',
-        #     'Date & Time Filing Accepted'
-        #     ]
+        cols = [ 'Date','Quarter & Year', 'Revenue (Sales)',
+            'Cost of Revenue (Sales)',
+            'Gross Profit (Income)',
+            'Gross Profit (Income) Ratio',
+            'Research and Development (R&D) Expenses',
+            'Sales, General and Administrative (SG&A) Expenses',
+            'Other Expenses',
+            'Operating Expenses',
+            'Cost and Expenses',
+            'Interest Expense',
+            'Depreciation and Amortization (D&A)',
+            'EBITDA',
+            'EBITDA Ratio',
+            'Operating Income',
+            'Operating Income Ratio',
+            'Total Other Income Expenses (Net)',
+            'Income Before Tax',
+            'Income Before Tax Ratio',
+            'Income Tax Expense',
+            'Net Income',
+            'Net Income Ratio',
+            'EPS',
+            'EPS Diluted',
+            'Weighted Average Shares Outstanding',
+            'Weighted Average Shares Outstanding (Diluted)',
+            'SEC Filing','Date & Time Filing Accepted']
         self.df = df[cols]
 
     def isnumber(x):
@@ -238,6 +135,7 @@ class FS:
         df_pct_chg_t = df_pct_chg.transpose()
         df_pct_chg_t.columns = list(df_pct_chg['Quarter & Year'])
         df_pct_chg_t = df_pct_chg_t.iloc[1:]
+
         df_pct_chg_t = df_pct_chg.transpose()
         df_pct_chg_t.columns = list(df_pct_chg['Quarter & Year'])
         df_pct_chg_t = df_pct_chg_t.iloc[1:]
@@ -276,6 +174,7 @@ class FS:
         cols = [cols[-1]] + cols[:-1]
         df_t = df_t[cols]
         # df_html = df_t.to_html().replace('<table','<table class="df_tableBoot" id="df_myTable2"')# dt-responsive" id="df_myTable"')
+
         df_n = self.df[self.df.applymap(FS.isnumber)]
         df_n[df_n < 2] = np.nan
         # pd.DataFrame(df_n.sum())#axis=0))
@@ -290,7 +189,7 @@ class FS:
         # df_t.rename(columns={ df_t.columns[0]: "Line Item" }, inplace = True)
         df_t = df_t.iloc[:, 2:]
         # df_t.rename(columns={"col1": "Line Item"})
-        # df_t = df_t[~df_t.iloc[:, 0].str.contains("Gross Profit (Income) Ratio")]
+        df_t = df_t[~df_t.iloc[:, 0].str.contains("Gross Profit (Income) Ratio")]
         
         # df_t[~df_t['Line Item'].str.contains("Gross Profit (Income) Ratio")]
         # "Gross Profit (Income) Ratio","EBITDA Ratio","Operating Income Ratio","Income Before Tax Ratio","Net Income Ratio")
@@ -308,6 +207,9 @@ class FS:
         col_list_str = ''.join(map(str, col_list))
         df_html = df_t.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
         df_html = df_html.replace('NaN','')
+        
+        
+
 
         df_html = df_html.replace('<td>','<td class="td_fin_statement_class fin_statement_class">')
         df_html = df_html.replace('<th>','<th class="th_fin_statement_class fin_statement_class">')
@@ -322,39 +224,83 @@ class FS:
         df = df[['Date', 'Revenue (Sales)']].dropna().to_numpy().tolist()        
         return df
 
+    def df_table_raw(self):
+        return self.df
+
+    def df_labels(self):
+        df = self.df
+        df['Date'] = pd.to_datetime(df['Date']).values.astype(np.int64) // 10 ** 6
+        labels = df[['Date']].to_numpy().tolist(),
+        # labels = list(df['Date'])#[0:19]
+        # labels = list(df['Revenue (Sales)'])
+        return labels
+
+    def df_price(self):
+        df = self.df
+        values = list(df['Revenue (Sales)'])
+        # values = list(df['Beginning Price'])[0:19]
+        return values
+
     def df_values(self):
         fs = FS(self.subject,self.symbol)
-        # fs.df_table()
+        fs.df_table()
         # df = self.df[['date','revenue']].dropna() #.fillna(0)#.fillna(method='bfill')
         df = self.df
         df['Date'] = (pd.to_datetime(self.df['Date']).values.astype(np.int64) // 10 ** 6)
-        # df = df[['Date', 'Revenue (Sales)']]
-
-        df_price = self.df_price
-        df_price['datetime'] = (pd.to_datetime(df_price['datetime']).values.astype(np.int64) // 10 ** 6)
-        df_price = df_price[['datetime', 'adjClose']]
-
+        df = df[['Date', 'Revenue (Sales)']]
         # df_json = df.to_numpy().tolist()
-        # df_json = fs.df_json()
-
-        df_json =df_price.dropna().to_numpy().tolist()
-        
-        
-        # chart_x_dates =  df['Date'].to_list()
-        # chart_y_revenue = df['Revenue (Sales)'].to_list()
-        print("xyzdd", df_price['datetime'])
-        chart_x_dates =  df_price['datetime'].to_list()
-        chart_y_revenue = df_price['adjClose'].to_list()
+        df_json = fs.df_json()
+        chart_x_dates =  df['Date'].to_list()
+        chart_y_revenue = df['Revenue (Sales)'].to_list()
         df_titles = df.columns.values
-        df_close = list(df_price['adjClose'])
-        df_price = df_price[['datetime', 'adjClose']].dropna().to_numpy().tolist()    
-        
         # df_json = fs.df_json()
         # {'df_json': df_json, 'chart_x_dates':chart_x_dates,'chart_y_revenue':chart_y_revenue,'df_titles':df_titles }
-        return {
-            # 'df_table': fs.df_table(), 
-            'df_close':df_close, 
-                # 'df_table_pct':fs.df_table_pct(),
-                
+        return {'df_table': fs.df_table()
+                , 'df_table_pct':fs.df_table_pct(),
                'chart_x_dates': chart_x_dates, 'chart_y_revenue':chart_y_revenue,
                'df_json': df_json, 'df_titles':df_titles}
+
+
+# def FS_csv(subject, symbol):
+#     csv_file = glob.glob("..\data\Historical Financial Statements\*\year\{}\*_{}_*".format(subject,symbol))[-1] #.format("NLOK"))[-1]
+#     df = pd.read_csv(csv_file)
+#     return(df)
+
+# def FS_first_year(df):
+#     earliest_year = list((df['date'].astype(str).str[0:4]))[-1]
+#     return(earliest_year)
+
+# def FS_latest_year(df):
+#     latest_year = list((df_bs['date'].astype(str).str[0:4]))[0]
+#     return(latest_year)
+
+# print(FS_first_year(FS_csv("Income Statement","AAPL")))
+
+
+# labels = list(FS("IS","AAPL")['Year'])[0:19]
+# values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
+
+# tables=FS("IS","AAPL").df_values()['df_table'], 
+
+table_pct = FS("IS","AAPL").df_values()['df_table_pct'], 
+df_date = FS("IS","AAPL").df_values()['chart_x_dates'], 
+df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
+df_json = FS("IS","AAPL").df_values()['df_json'],
+titles=FS("IS","AAPL").df_values()['df_titles']
+# print(str(df_json)[0:200])
+# print(FS("IS","AAPL").df_table_raw())
+# print(FS("IS","AAPL").last())
+
+subject="Income Statement"
+symbol="AAPL"
+csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(subject,symbol))[-1]
+# csv_file = glob.glob("data\Historical Financial Statements\*\year\{}\*_{}_*".format(subject,symbol))[-1]
+# csv_file = glob.glob("data\Historical Financial Statements\*\year\*")
+
+# print(csv_file)
+
+print("up next")
+# print(pd.read_csv(csv_file))
+# print(str(df_json)[0:200])
+# print((FS("IS","AAPL").df_price()))
+# print(( FS("IS","AAPL").df_labels()))

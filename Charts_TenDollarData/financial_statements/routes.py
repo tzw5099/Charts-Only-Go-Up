@@ -262,6 +262,24 @@ def market_caps_table():
 @charts.route('/test/<some_place>', methods=['POST', 'GET'])
 # @cache.cached(timeout=5)
 def fin_test(some_place):
+    fin_paper = FS("BS",some_place)
+    # tables=fin_paper.df_values()['df_table']
+    tables=fin_paper.df_table()
+    
+    # table_pct = fin_paper.df_values()['df_table_pct']
+    table_pct = fin_paper.df_table_pct()
+    fin_paper_values = fin_paper.df_values()
+    df_date = fin_paper_values['chart_x_dates'],
+    df_rev = fin_paper_values['chart_y_revenue']
+    df_json = fin_paper_values['df_json']
+    titles = fin_paper_values['df_titles']
+    labels = fin_paper.df_labels()
+    #  values=FS("BS","AAPL").df_price()
+    values = fin_paper_values['df_close']
+    place_name=some_place
+    max=17000
+
+
     # values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
     return render_template('symbol_main_page.html',
     # return render_template('fin_statements_bootstrapped.html',
@@ -274,28 +292,30 @@ def fin_test(some_place):
     # FS("IS","AAPL").df_values()['df_titles']
 
 
-     tables=FS("IS","AAPL").df_values()['df_table'],
-     table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
-     df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
-     df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
-     df_json = FS("IS","AAPL").df_values()['df_json'],
-     titles=FS("IS","AAPL").df_values()['df_titles'],
-     labels = FS("IS","AAPL").df_labels(),
-     values=FS("IS","AAPL").df_price(),
-     place_name=some_place, max=17000,
-     
-     
-     
-    #  tables=FS("BS","AAPL").df_values()['df_table'],
-    #  table_pct = FS("BS","AAPL").df_values()['df_table_pct'],
-    #  df_date = FS("BS","AAPL").df_values()['chart_x_dates'],
-    #  df_rev = FS("BS","AAPL").df_values()['chart_y_revenue'],
-    #  df_json = FS("BS","AAPL").df_values()['df_json'],
-    #  titles=FS("BS","AAPL").df_values()['df_titles'],
-    #  labels = FS("BS","AAPL").df_labels(),
-    #  values=FS("BS","AAPL").df_price(),
+    #  tables=FS("IS","AAPL").df_values()['df_table'],
+    #  table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
+    #  df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
+    #  df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
+    #  df_json = FS("IS","AAPL").df_values()['df_json'],
+    #  titles=FS("IS","AAPL").df_values()['df_titles'],
+    #  labels = FS("IS","AAPL").df_labels(),
+    #  values=FS("IS","AAPL").df_price(),
     #  place_name=some_place, max=17000,
-     )
+     
+     
+     
+    tables=tables,
+    table_pct = table_pct,
+    df_date = df_date,
+    df_rev = df_rev,
+    df_json = df_json,
+    titles=titles,
+    labels = labels,
+    #  values=FS("BS","AAPL").df_price(),
+    values=values,
+    place_name=some_place,
+    max=17000,
+    )
 
 
 
