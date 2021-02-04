@@ -620,7 +620,10 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     if statement_or_ratio == "none":
         hide_chart_sidebar = "yes"
         statement_or_ratio = "income-statement"
-        statement_or_ratio = list(fin_statements_matching[fin_statements_matching['URL']=="{}".format(url_fin_metric)]['statement_url'])[0]
+        try:
+            statement_or_ratio = list(fin_statements_matching[fin_statements_matching['URL']=="{}".format(url_fin_metric)]['statement_url'])[0]
+        except:
+            statement_or_ratio = "ratio"
         print("dumdumdum", statement_or_ratio)
     else:
         hide_chart_sidebar = "no"
