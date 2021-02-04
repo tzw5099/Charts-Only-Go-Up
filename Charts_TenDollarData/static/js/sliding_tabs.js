@@ -1,5 +1,58 @@
 // jQuery Responsive qaz_page qaz_tabs 1.0
 // $("body").css("overflow", "hidden");
+
+var selectedTab = 0,
+	scrollDelay = 20,
+	scrollSpeed = 400,
+	scrolltopOffset = 0;
+
+$("#tgb_tabs")
+	.children()
+	.each(function (i) {
+		i = i + 1;
+		$(this)
+			.attr("id", "tgb_tab-" + i)
+			.addClass("tgb_tab")
+			.wrapInner("<div class='tgb_tab-wrapper'></div>");
+	});
+var count = $("#tgb_tabs").children().length - 1;
+var tab_width = 100 / count + "%";
+$("#tgb_tabs li")
+	.css("width", tab_width)
+	.eq(0)
+	.addClass("first")
+	.end()
+	.eq(-1)
+	.addClass("last")
+	.end();
+$("#tgb_panels")
+	.children()
+	.each(function (i) {
+		i = i + 1;
+		$(this)
+			.attr("id", "tgb_panel-" + i)
+			.addClass("tgb_panel")
+			.wrapInner("<div class='tgb_panel-wrapper'></div>")
+			.prepend("<div class='tgb_accordion-tab'></div>");
+	});
+$(".tgb_accordion-tab").each(function (i) {
+	i = i + 1;
+	var tab_name = $("#tgb_tab-" + i).html();
+	$(this).html(tab_name);
+});
+$("#tgb_tabs").children().eq(selectedTab).addClass("xactive");
+$("#tgb_panels").children().eq(selectedTab).addClass("xactive");
+$("#tgb_tabs > li").click(function () {
+	$("#tgb_tabs > li, #tgb_panels > li").removeClass("xactive");
+	$("#tgb_panels > li").eq($(this).index()).toggleClass("xactive");
+	$(this).toggleClass("xactive");
+});
+$(".tgb_accordion-tab").click(function () {
+	$("#tgb_tabs > li, #tgb_panels > li").removeClass("xactive");
+	$("#tgb_tabs > li").eq($(this).parent().index()).toggleClass("xactive");
+	$(this).parent().toggleClass("xactive");
+});
+
 var selectedTab = 0,
 	scrollDelay = 20,
 	scrollSpeed = 400,

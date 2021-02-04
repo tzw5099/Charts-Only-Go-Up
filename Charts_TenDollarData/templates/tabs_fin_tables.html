@@ -1,0 +1,160 @@
+    <div id="tgb_page-tgb_tabs" class="tgb_page-tgb_tabs-css rfv-parent">
+        <ul id="tgb_tabs" class="tgb_tabs-css rfv-tabs">
+            <li class="hr_one"><a href="#/" class="tabs_title_links"><div class="innerhref">Income Statement</div></a></li>
+            <li class="hr_two"><a href="#/" class="tabs_title_links"><div class="innerhref">Balance Sheet</div></a></li>
+            <li class="hr_three"><a href="#/" class="tabs_title_links"><div class="innerhref">Cash Flow Statement</div></a></li>
+            <li class="hr_four"><a href="#/" class="tabs_title_links"><div class="innerhref">
+                About the Company
+                <!-- Our Data (free) -->
+                <!-- and Datasets ($10) -->
+            </div></a></li>
+            <hr class="stickyhr" />
+        </ul>
+        <ul id="tgb_panels" class="tgb_panels-css rfv-panels paper">
+            <li>
+                {% for table in income_statement %}
+                            <!-- titles loop.index x -->
+                            {{ table|safe }}
+                {% endfor %}
+            </li>
+            <li>
+                {% for table in balance_sheet %}
+                            <!-- titles loop.index x -->
+                            {{ table|safe }}
+                {% endfor %}
+
+            </li>
+
+            <li>
+                {% for table in cash_flow %}
+                            <!-- titles loop.index x -->
+                            {{ table|safe }}
+                {% endfor %}
+            </li>
+            <li>
+                <span class="key_points">About {{company_name}}</span>
+                    <span class="key_body">
+                <br>
+                <strong>Industry:</strong> {{company_industry}}
+                <br>
+                <strong>Sector:</strong> {{company_sector}}
+                <br>
+                <strong>Country:</strong> {{company_country}}
+                <br>
+                <strong>IPO Date:</strong> {{company_ipo_date}}
+                <br>
+                <strong>Stock Exchange:</strong> {{company_exchange}}
+                <br>
+                <ul>
+                {{html_sentence_list}}
+                </ul>
+                <!-- {{company_description}} -->
+                </span>
+            </li>
+        </ul>
+    </div>
+
+
+    
+<script>
+function checkForm() {
+    var rows = document.getElementsByClassName("item-row");
+    var arr = new Array();
+    for (i = 0; i < rows.length; i++) {
+        var cols = rows[i].getElementsByTagName("td");
+        for (j = 0; j < cols.length; j++) {
+            arr.push(cols[j].textContent);
+        }
+    }
+}
+</script>
+
+<script>
+    //<![CDATA[
+// $(document).ready( function () {
+    // $('table.df_tableBoot').DataTable();
+    function sortNumbersIgnoreText(a, b, high) { 
+        var reg = /[+-]?((\d+(\.\d*)?)|\.\d+)([eE][+-]?[0-9]+)?/;    
+        a = a.match(reg); 
+        a = a !== null ? parseFloat(a[0]) : high; 
+        b = b.match(reg); 
+        b = b !== null ? parseFloat(b[0]) : high; 
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));     
+    } 
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, { 
+        "sort-numbers-ignore-text-asc": function (a, b) { 
+            return sortNumbersIgnoreText(a, b, Number.POSITIVE_INFINITY); 
+        }, 
+        "sort-numbers-ignore-text-desc": function (a, b) { 
+            return sortNumbersIgnoreText(a, b, Number.NEGATIVE_INFINITY) * -1; 
+        } 
+    }); 
+     var xtable = $('.df_tableBoot').DataTable(
+      {
+         // "scrollX": true,
+
+
+                responsive: true,
+                "pageLength": 100,
+                // datatables.net image paginate load
+                // https://stackoverflow.com/questions/41075814/working-example-of-datatables-with-lazy-loading-of-images
+                deferRender: true,
+        columnDefs: [
+          {
+        // "width": "100%" , "targets": [0,1,2,3,4,5,6],
+            "width": "1000","targets": "_all",
+            render: function ( data, type, full, meta ) {
+                if(type === 'display' && !isNaN(data*1) && data > 1000000000){
+                    return (''+(data/1000000).toFixed(1) + '').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data > 1000000 && data < 999999999)){
+                    return (''+(data/1000000).toFixed(1) + '').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data > 1000 && data < 999999)){
+                    return (''+(data/1000000).toFixed(1) + '').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data > .01 && data < 2) && data != 1){
+                    return ((data*100).toFixed(0) + '%').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && data < -1000000000){
+                    return (''+(data/1000000).toFixed(1) + '').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data < -1000000 && data > -999999999)){
+                    return (''+(data/1000000).toFixed(1) + '').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data < -1000 && data > -999999)){
+                    return (''+(data/1000000).toFixed(1) + '').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data < -.01 && data > -2) && data != 1){
+                    return ((data*100).toFixed(0) + '%').toLocaleString();
+                }
+                else{
+                    return data;
+                }
+                    }
+                }
+                ,
+                        // { "width": "1000" , targets: [0,1,2,3,4,5,6]},
+                    ]
+                        ,
+                        dom: 'Bfrtip',
+                        // paginate: false,
+                        fixedHeader: true,
+                        // "sScrollX": "100%",
+                        // "sScrollXInner": "110%",
+                        // "bScrollCollapse": true,
+                        colReorder: true,
+                        // scrollY: 300,
+                buttons: [
+                    { extend: 'copy', text: '<span class="stats-top">Copy</span><i class="material-icons stats-top">content_copy</i>' },
+                    { extend: 'csv', text: '<span class="stats-top">CSV</span><i class="material-icons stats-top">table_chart</i>' },
+                    
+                ]
+                                    
+              // "order": [[ 3, "desc" ]]
+          }
+    );
+// } );
+new $.fn.dataTable.FixedHeader( xtable );
+     //]]>
+</script>

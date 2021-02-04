@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% block charts_quarter_head %}
+<style>
+table {border-spacing: 0;
+border-collapse: collapse;
+}
+.cell { width: 20px; height: 20px; }
+      .page-content {
+      	max-width: 1200px;
+      	margin: 32px auto;
+      	padding: 32px;
+        background: #fff;
+        margin: 0
+      }
+</style>
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  <script src="{{ url_for('static', filename='../static/js/chart.js') }}"></script>
+  <script src="{{ url_for('static', filename='../static/modules/data.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function (data) {
+        var myChart = Highcharts.stockChart('highbar', {
+          chart: {
+              borderWidth: 2,
+              marginRight: 100
+          },
+                title: {
+                    text: 'AAPL Stock Volume'
+                },
+                rangeSelector: {
+                    inputPosition: {                    // align: 'left',
+                        x: 0,                    y: 0                },
+                    buttonPosition: {                    // align: 'right',
+                        x: 0,                    y: 0                }
+                    ,
+                    buttons: [
+            {
+            type: 'year',        count: 3,        text: '3Y'    }, {
+            type: 'year',        count: 5,        text: '5Y'    }, {
+            type: 'year',        count: 10,        text: '10y'  }, {
+            type: 'all',        text: 'All'    }                   ]
+                },
+                xAxis:{
+                    tickInterval: 1 * 24 * 3600 * 1000 // interval of 1 day
+                },
+                yAxis:{
+                  minPadding:100,
+                          tooltip: {
+                          formatter: function (tooltip) {
+                          }
+                      },
+        labels:{
+                        align: 'right',
+                  x: 50,
+                  y: 0,
+                          // formatter:function(){
+                          //     return ('$' + this.value / 1000000000) + 'B';
+                          // }
+                          formatter:function(){
+                      if(this.value >= 1000000000){
+                          return ('$' + this.value / 1000000000) + 'B';
+                      }
+                      else if(this.value >= 1000000) {
+                          return ('$' + this.value / 1000000) + 'M';
+                      }
+                      else if(this.value >= 1000) {
+                          return ('$' + this.value / 1000) + 'K';
+                      }
+                      else {
+                          return '$' + this.value;
+                      }
+                  }
+        }
+    },
+                series: [{
+                    type: 'column',
+                    name: 'AAPL Stock Volume',
+                    data:{{df_json}},
+                }]
+            });
+        });
+      </script>
+{% endblock %}
+{% block quarterly_body %}
+<body>
+<div id="highbar" style="height: 400px; width:1000px;"></div>
+<!-- enables CSV -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+<!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+  </div>
+<div class="table_container mcap_table">
+  
+{% for table in tables %}
+            <!-- {{titles[loop.index]}} -->
+            {{ table|safe }}
+{% endfor %}
+</div>
+asdas <br />
+<br />
+asdad
+<div id="chart"></div>
+<script>
+function checkForm() {
+    var rows = document.getElementsByClassName("item-row");
+    var arr = new Array();
+    for (i = 0; i < rows.length; i++) {
+        var cols = rows[i].getElementsByTagName("td");
+        for (j = 0; j < cols.length; j++) {
+            arr.push(cols[j].textContent);
+        }
+    }
+}
+</script>
+<script>
+$(document).ready( function () {
+    // $('table.df_tableBoot').DataTable();
+    $('#df_myTable').DataTable(
+      {
+         // "scrollX": true,
+        columnDefs: [
+          {
+        // "width": "100%" , "targets": [0,1,2,3,4,5,6],
+            "width": "1000","targets": "_all",
+            render: function ( data, type, full, meta ) {
+                if(type === 'display' && !isNaN(data*1) && data > 1000000000){
+                    return ('$'+(data/1000000000).toFixed(1) + 'B').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data > 1000000 && data < 999999999)){
+                    return ('$'+(data/1000000).toFixed(1) + 'M').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data > 1000 && data < 999999)){
+                    return ('$'+(data/1000).toFixed(1) + 'K').toLocaleString();
+                }
+                else if(type === 'display' && !isNaN(data*1) && (data > .01 && data < 2) && data != 1){
+                    return ((data*100).toFixed(0) + '%').toLocaleString();
+                }
+                else{
+                    return data;
+                }
+            }
+        }
+        ,
+      ]
+        ,
+        dom: 'Bfrtip',
+        paginate: false,
+        colReorder: true,
+buttons: [
+]
+          }
+    );
+} );
+</script>
+{% endblock %}
