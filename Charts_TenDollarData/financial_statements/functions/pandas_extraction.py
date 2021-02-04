@@ -277,7 +277,7 @@ class FS:
         self.df_price = pd.read_csv(self.market_cap_path)
         # "D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/functions"
         # csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
-        csv_file = glob.glob("D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(subject,self.symbol))[-1] #.format("NLOK"))[-1]
+        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(subject,self.symbol))[-1] #.format("NLOK"))[-1]
 
         # csv_file = glob.glob("data\Historical Financial Statements\*\year\{}\*_{}_*".format(self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
         self.year = pd.read_csv(csv_file)
