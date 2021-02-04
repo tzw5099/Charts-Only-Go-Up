@@ -7,66 +7,92 @@
   flex: 0 0 100% !important;
   max-width: 100% !important;
 } */
+th,tr,tr:hover{
+  background-color:transparent !important;
+}
+
+td.similar_companies_names, td.similar_companies_images, th.similar_companies_names {border-top:none;
+border-bottom:none;
+border-left: 1px #b4bec7 solid;
+border-right: 1px #b4bec7 solid;
+margin: 0 auto;
+text-align: center;
+}
+.similar_comp_table_header{
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 700;
+}
+/* a.a_similar_companies_images{
+  border: 1px #EDEDED solid;
+} */
+/* .rightside{
+  display:none;
+}
+.price_center{
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+} */
 
 .dt-buttons{
-  text-align:right;
+  text-align:right !important;
   }
 .dt-buttons .material-icons{
-  font-size: 20px;
-  color:black;
+  font-size: 20px !important;
+  color:black !important;
   }
 button.dt-button{
-  border: 1px solid white;
-  background-color: white;
+  border: 1px solid white !important;
+  background-color: white !important;
 }
 #tgb_page-tgb_tabs #tgb_panels .tgb_panel-wrapper{padding: 5px !important}
 .th_fin_statement_class{
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 .td_fin_statement_class {
-  font-size:14px;
+  font-size:14px !important;
 }
 .middle{
-  margin: 0 auto;
-  text-align: center;
+  margin: 0 auto !important;
+  text-align: center !important;
 }
 .dark_blue{
-  color: #154ee2;
+  color: #154ee2 !important;
 }
 
 a.mcap_link{
-  color:black;
+  color:black !important;
 }
 td.mcap_col_numbers{
   /* padding: 0px; */
 }
 .tr_header{
-  height:30px;
-  font-size: 14px;
+  height:30px !important;
+  font-size: 14px !important;
 }
 .mcap_shares_vol{
-  font-size:12px;
+  font-size:12px !important;
 }
 table.dataTable tbody th, table.dataTable tbody td{
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 .sum_market_number{
   color: #4285f4 !important;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 .sum_market.items>.item{
-  border: 0px solid #FFFFFF;
-  min-height: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border: 0px solid #FFFFFF !important;
+  min-height: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 .sum_market.items{
-  overflow-x:hidden;
+  overflow-x:hidden !important;
   /* width:1000%; */
 }
 /* table.dataTable thead th, table.dataTable thead td{
@@ -75,49 +101,49 @@ table.dataTable tbody th, table.dataTable tbody td{
 } */
 
 td,th{
-  border-left:none;
-  border-right:none;
-    border-top:solid 1px #EDEDED;
-    border-bottom:solid 1px #EDEDED;
+  border-left:none !important;
+  border-right:none !important;
+    border-top:solid 1px #EDEDED !important;
+    border-bottom:solid 1px #EDEDED !important;
 }
 tr.odd,tr.even{
-  border-left:none;
-  border-right:none;
-    border-top:solid 1px #EDEDED;
-    border-bottom:solid 1px #EDEDED;
+  border-left:none !important;
+  border-right:none !important;
+    border-top:solid 1px #EDEDED !important;
+    border-bottom:solid 1px #EDEDED !important;
 }
 
 .mcap_col_numbers{
-  width:80px;
+  width:80px !important;
 }
 /* table thead tr {
     height: 30px;
     font-size: 16px;
 } */
 .mini_tr,.mini_tr2{
-  height: 0px;
+  height: 0px !important;
 }
 .mcap_image{
-  width:80px;
+  width:80px !important;
 }
 th.mcap_symbol{
   border: 0px solid none !important;
 }
 .mcap_image,.mcap_symbol, .mcap_name{
-  padding:0px;
-  border:none;
+  padding:0px !important;
+  border:none !important;
 }
 .navbar{
-  height: 60px;
+  height: 60px !important;
 }
 .charts_left {
-  vertical-align: top;
+  vertical-align: top !important;
   }
 .icon_brand{
   /* font-size:27px; */
-  font-size:39px;
-  font-weight: 700;
-  line-height: 100%;
+  font-size:39px !important;
+  font-weight: 700 !important;
+  line-height: 100% !important;
   /* display: inline-block; */
 }
 /* .icon_brand:before { font-size: 30rem; } */
