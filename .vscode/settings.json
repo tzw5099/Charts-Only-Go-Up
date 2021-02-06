@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "C:\\Users\\Tom\\Anaconda3\\python.exe",
+  "python.pythonPath": "/usr/bin/python3",
   "files.exclude": {
     "__pycache__": true,
     "Charts_TenDollarData\\__pycache__": true,

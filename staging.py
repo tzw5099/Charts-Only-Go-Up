@@ -9,16 +9,15 @@ import sentry_sdk
 from flask import Flask
 from sentry_sdk.integrations.flask import FlaskIntegration
 from werkzeug.contrib.profiler import ProfilerMiddleware
-
-# or configure to use ELASTIC_APM in your application's settings
-import elasticapm
-from elasticapm.contrib.flask import ElasticAPM
-
 sentry_sdk.init(
     dsn="https://ef2188dd9d284bb295241f1e22ad9b2d@o497156.ingest.sentry.io/5582464",
     integrations=[FlaskIntegration()],
     traces_sample_rate=1.0
 )
+import elasticapm
+from elasticapm.contrib.flask import ElasticAPM
+
+
 app = create_app()
 
 app.config['ELASTIC_APM'] = {
@@ -43,6 +42,7 @@ app.config['ELASTIC_APM'] = {
 
 # apm = ElasticAPM(app, logging=logging.ERROR)
 apm = ElasticAPM(app, logging=True)
+
 # app.wsgi_app = ProfilerMiddleware(app.wsgi_app, restrictions=[30])
 
 # flask sometimes gets stuck
@@ -52,7 +52,6 @@ apm = ElasticAPM(app, logging=True)
 # use gevent WSGI server instead of the Flask
 # instead of 5000, you can define whatever port you want.
 # http = WSGIServer(('', 5001), app.wsgi_app)
-
 @elasticapm.capture_span()
 def foo():
     return "foo"
@@ -62,4 +61,5 @@ if __name__ == '__main__':
     # app.run(debug=True, EXPLAIN_TEMPLATE_LOADING=true, port=5001, threaded=True)
     # app.run(debug=True)
     # app.run()
-    app.run(debug=True,host='0.0.0.0')
+    # apm = ElasticAPM(app)
+    app.run(debug=True,host='0.0.0.0', port=8420)

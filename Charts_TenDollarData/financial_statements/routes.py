@@ -2,8 +2,8 @@
 # https://github.com/microsoft/pylance-release/blob/main/DIAGNOSTIC_SEVERITY_RULES.md
 # https://damyan.blog/post/flask-series-optimizations/
 # https://github.com/muatik/flask-profiler
-domain = "http://127.0.0.1:5000"
-subdomain = "http://127.0.0.1:5000"
+domain = "https://chartsonlygoup.com"
+subdomain = "http://chartsonlygoup.com"
 import os
 import sqlite3
 import pandas as pd
@@ -16,7 +16,7 @@ from vprof import runner
 # https://stackoverflow.com/questions/30165475/how-to-compress-minimize-size-of-json-jsonify-with-flask-in-python/30165707
 # TODO compress JSON
 # from flask import Flask, Response
-# from gevent.pywsgi import WSGIServer
+# from gevent.pywsgi import WSGIServer 
 # from gevent import monkey
 # # need to patch sockets to make requests async
 # # you may also need to call this before importing other packages that setup ssl
@@ -79,6 +79,13 @@ import inspect
 # import d6tstack
 from inspect import currentframe, getframeinfo
 from flask import Markup
+
+from flask import send_from_directory     
+
+@charts.route('/favicon.ico') 
+def favicon(): 
+    return send_from_directory(os.path.join(charts.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 def magnitude_num(number, currency_symbol):
         try:
             if len(str(number)) > 12 and number > 1000000000000:
@@ -204,7 +211,7 @@ def market_caps_table():
     # df_html['Market Cap ($MM)'] = df_html.apply(lambda x: x['marketCap']/1000000, axis=1)
     # df_html['Name'] = df_html.apply(lambda x: Markup('<div class="mcap_symbol">'+x['symbol']+'</div> <div class="mcap_name">'+x['name']+"</div>"),axis=1)
     # df_html['Name'] = df_html.apply(lambda x: ('<div class="mcap_symbol">'+x['symbol']+'</div> <div class="mcap_name">'+x['name']+"</div>"),axis=1)
-    df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy" data-original="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, x['symbol'].lower(),domain, x['symbol'])+x['symbol']+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +x['name']+'</td></tr></thead></table></a>'),axis=1)
+    df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy" data-original="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, x['symbol'].lower(),domain, x['symbol'].upper())+x['symbol'].upper()+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +x['name']+'</td></tr></thead></table></a>'),axis=1)
     # df_html['symbol'] = df_html.apply(lambda x: ('<i class="material-icons icon_brand">show_chart</i>'+'<br/>'+x['symbol']+""),axis=1)
     # df_html['Avg $ Vol'] = df_html.apply(lambda x: "{}".format(magnitude_num(x['avgVolume']*x['price'],"$")), axis=1)
     df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
@@ -585,6 +592,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     global domain
     global subdomain
     print("bobobo", url_fin_metric)
+    url_symbol = url_symbol.lower()
     fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")
     if url_fin_metric == "none":
         # print("boopee", url_fin_metric)
@@ -669,12 +677,12 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # url_fin_metric= "revenue-sales"
         # stock_or_etf = "stock"
         # return redirect("http://127.0.0.1:5000/aapl/revenue-sales", code=302)
-        return redirect("https://tendollardata.com/aapl/revenue-sales", code=302)
+        return redirect("{}/aapl/revenue-sales".format(domain), code=302)
     if url_symbol=="random":
         import random
         random_list = ["tsla, aapl, fb, amzn, googl, msft, nflx, zm, nvda, nio, baba, amd, pton, pypl, shop, adbe, dis, dkng, mu, wfc, hd"]
         random_symbol = random.sample(list_us_companies, 1)[0]
-        return redirect("http://127.0.0.1:5000/{}".format(random_symbol), code=302)
+        return redirect("{}/{}".format(domain,random_symbol), code=302)
     else:
         pass
     currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())]['currency symbol'])[0]
@@ -1484,8 +1492,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     df['date'] = df['date'].apply(lambda x: int(x))
     try:
         print("beep",glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ/[[]M[]] Monthly/*")[0:5])
-        print("market cap path1", "Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))
-        market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))[0]
+        print("market cap path1", "Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))
+        market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))[0]
         print("market cap path",market_cap_path, "Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))
         market_cap_df = pd.read_csv(market_cap_path)
         print("mcappy", market_cap_df.head(5))
@@ -1679,7 +1687,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             x = company_similar[n]
             company_similar_x = ('<th class="similar_companies_names"><a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a></th>, '.format(domain,x.lower().strip(),stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
             company_similar_list.append(company_similar_x)
-            company_similar_img = ('<td class="similar_companies_images"><a class="mcap_link a_similar_companies_images " href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40"  onerror=\'this.style.display = "none"\'>'.format(domain, x.upper().strip(), domain,x.strip().upper())+'</a></td>') 
+            company_similar_img = ('<td class="similar_companies_images"><a class="mcap_link a_similar_companies_images " href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40"  onerror=\'this.style.display = "none"\'>'.format(domain, x.strip().lower(), domain,x.strip().upper())+'</a></td>') 
             company_similar_img_list.append(company_similar_img)
             n+=1
         # company_similar_paragraph = Markup(''.join(company_similar_list)[:-2])
@@ -1877,7 +1885,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     company_long_name = profiles_dict['long name']
     company_symbol = profiles_dict['symbol']
     # df_image_name = Markup('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, company_symbol, domain,company_symbol)+company_symbol+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +company_long_name+'</td></tr></thead></table></a>')
-    df_image_name = Markup('<a class="mcap_link" href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40">'.format(domain, company_symbol.lower(), domain,company_symbol)+'</a>')
+    df_image_name = Markup('<a class="mcap_link" href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40">'.format(domain, company_symbol.lower(), domain,company_symbol.upper())+'</a>')
     return render_template('current_ratio.html', \
                             main_page_y_n = main_page_y_n,
                             # fs_table_pct = fs_table_pct,

@@ -41,6 +41,7 @@ class FS:
         self.url_symbol = symbol
         if subject=="BS":
             subject="Balance Sheet"
+            self.subject_long = "Balance Sheet"
             columns_keep = [
                         'Date',
                         'Date & Time Filing Accepted',
@@ -134,6 +135,7 @@ class FS:
                 ]
         elif subject=="CF":
             subject="Cash Flow Statement"
+            self.subject_long = "Cash Flow Statement"
             columns_keep = [
                             'Date',
                             'Date & Time Filing Accepted',
@@ -208,6 +210,7 @@ class FS:
                 ]
         elif subject=="IS":
             subject="Income Statement"
+            self.subject_long = "Income Statement"
             columns_keep = [
                 'Date',
                 'Date & Time Filing Accepted',
@@ -272,12 +275,16 @@ class FS:
                 'Date & Time Filing Accepted'
                 ]
         pd.set_option('display.float_format', '{:.2f}'.format)
-
-        self.market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(self.url_symbol.upper()))[0]
+        
+        url_symbol_upper = self.url_symbol.upper()
+        print("url_symbol_upper", url_symbol_upper, self.subject, self.subject_long)
+        
+        self.market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol_upper))[0]
+        # self.market_cap_path = glob.glob("/var/www/chartsonlygoup.com/public_html/Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(self.url_symbol.upper()))[0]
         self.df_price = pd.read_csv(self.market_cap_path)
         # "D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/functions"
-        # csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
-        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(subject,self.symbol))[-1] #.format("NLOK"))[-1]
+        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(self.subject_long,url_symbol_upper))[-1] #.format("NLOK"))[-1]
+        # csv_file = glob.glob("/var/www/chartsonlygoup.com/public_html/Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(subject,self.symbol))[-1] #.format("NLOK"))[-1]
 
         # csv_file = glob.glob("data\Historical Financial Statements\*\year\{}\*_{}_*".format(self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
         self.year = pd.read_csv(csv_file)
