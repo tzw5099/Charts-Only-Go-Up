@@ -55,11 +55,13 @@ apm = ElasticAPM(app, logging=True)
 @elasticapm.capture_span()
 def foo():
     return "foo"
-
+print("http://dddataverse:8420/aapl#/")
 if __name__ == '__main__':
 	# http.serve_forever()
     # app.run(debug=True, EXPLAIN_TEMPLATE_LOADING=true, port=5001, threaded=True)
     # app.run(debug=True)
     # app.run()
     # apm = ElasticAPM(app)
+	# server = Server(app.run(debug=True,host='0.0.0.0', port=8420))
+    # server.serve()
     app.run(debug=True,host='0.0.0.0', port=8420)

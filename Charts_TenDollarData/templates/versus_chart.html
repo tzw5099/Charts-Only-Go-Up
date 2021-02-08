@@ -108,12 +108,13 @@
                                     plotOptions: {
                                         line:{
                                         dataLabels:{
-                                            enabled:false,
+                                            // opposite: true,
+                                            // enabled:false,
                                             // format: "FY {point.x:%y}",
                                             }
                                         },
                                         spline:{
-                                            visible:false,
+                                            // visible:false,
                                             labels:{
                                                 // enabled: false,
                                                 // visible:false,
@@ -124,7 +125,7 @@
                                 },
                                     legend: {
                                         enabled: true,
-                                        verticalAlign: 'bottom',
+                                        verticalAlign: 'top',
                                     },
                                     mapNavigation: {
                                         enabled: false,
@@ -133,7 +134,7 @@
                                     yAxis: [
                                         {
                                             yAxis: 2,
-                                            opposite: true,
+                                            opposite: false,
                                             labels:{
                                                 // enabled: false,
                                             },

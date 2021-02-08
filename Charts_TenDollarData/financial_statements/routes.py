@@ -86,40 +86,73 @@ from flask import send_from_directory
 def favicon(): 
     return send_from_directory(os.path.join(charts.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-def magnitude_num(number, currency_symbol):
+def magnitude_num(number, currency_symbol, fixed=1, scale=1, trillion=1):
         try:
-            if len(str(number)) > 12 and number > 1000000000000:
-                magnitude = number/1000000000000
-                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"T")
-            elif len(str(number)) > 9 and number > 1000000000:
-                magnitude = number/1000000000
-                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"B")
+            if len(str(number)) > 9 and number > 1000000000:
+                if fixed == 1:
+                    magnitude = number/1000000000
+                    scale = "B"
+                else:
+                    magnitude = number/fixed
+                    
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),scale)
             elif len(str(number)) > 6 and number > 1000000:
-                magnitude = number/1000000
-                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"M")
+                if fixed == 1:
+                    magnitude = number/1000000
+                    scale = "M"
+                else:
+                    magnitude = number/fixed
+                
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),scale)
             elif len(str(number)) > 3 and number > 1000:
-                magnitude = number/1000
-                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),"K")
+                if fixed == 1:
+                    magnitude = number/1000
+                    scale = "K"
+                else:
+                    magnitude = number/fixed
+                magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),scale)
             elif -1000 <= number <= 1000:
                 magnitude = number
                 magnitude_str = "{}{}{}".format("",round(magnitude,2),"")
             elif len(str(number)) > 9 and number < -1000000000:
-                magnitude = abs(number/1000000000)
-                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1)," B")
+                if fixed == 1:
+                    magnitude = abs(number/1000000000)
+                    scale = "B"
+                else:
+                    magnitude = abs(number/fixed)
+                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),scale)
             elif len(str(number)) > 6 and number < -1000000:
-                magnitude = abs(number/1000000)
-                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1)," M")
+                if fixed == 1:
+                    magnitude = abs(number/1000000)
+                    scale = "M"
+                else:
+                    magnitude = abs(number/fixed)
+                magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1),scale)
             elif len(str(number)) > 3 and number < -1000:
-                magnitude = abs(number/1000)
+                if fixed == 1:
+                    magnitude = abs(number/1000)
+                    scale = "K"
+                else:
+                    magnitude = abs(number/fixed)
                 magnitude_str = "-{}{}{}".format(currency_symbol,round(magnitude,1)," T")
             else:
                 magnitude = number
                 magnitude_str = "{}{}{}".format("",round(magnitude,2),"")
+            if trillion==1:
+                if len(str(number)) > 12 and number > 1000000000000:
+                    if fixed == 1:
+                        magnitude = number/1000000000000
+                        scale = "T"
+                    else:
+                        magnitude = number/fixed
+                    magnitude_str = "{}{}{}".format(currency_symbol,round(magnitude,1),scale)
+            else:
+                pass
         except Exception as e:
             magnitude = number
             magnitude_str = number
         return magnitude_str
-def change_markup(change,percent_or_x,arrow_no_arrow = "arrow", css_class = "change_markup",sign="yes"):
+def change_markup(change,percent_or_x,arrow_no_arrow = "arrow", css_class = "change_markup",sign="yes",markup=1):
         try:
             if arrow_no_arrow == "arrow":
                 up_green_prefix = '<span class="up_green {}">'.format(css_class)
@@ -147,11 +180,20 @@ def change_markup(change,percent_or_x,arrow_no_arrow = "arrow", css_class = "cha
                     change_html = "0%"
                 elif change>0:
                     if sign=="yes":
-                        change_html = Markup("{}+{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
+                        if markup==1:
+                            change_html = Markup("{}+{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
+                        else:
+                            change_html = ("{}+{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
                     else:
-                        change_html = Markup("{}{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
+                        if markup==1:
+                            change_html = Markup("{}{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
+                        else:
+                            change_html = ("{}{}%{}".format(up_green_prefix, change_comma, up_green_suffix))
                 elif change<0:
-                    change_html = Markup("{}{}%{}".format(down_red_prefix, change_comma, down_red_suffix))
+                    if markup==1:
+                        change_html = Markup("{}{}%{}".format(down_red_prefix, change_comma, down_red_suffix))
+                    else:
+                        change_html = ("{}{}%{}".format(down_red_prefix, change_comma, down_red_suffix))
                 else:
                     change_html = "-"
             elif percent_or_x == "x":
@@ -159,11 +201,20 @@ def change_markup(change,percent_or_x,arrow_no_arrow = "arrow", css_class = "cha
                     change_html = "0%"
                 elif change>0:
                     if sign=="yes":
-                        change_html = Markup("{}+{}x{}".format(up_green_prefix, change, up_green_suffix))
+                        if markup==1:
+                            change_html = Markup("{}+{}x{}".format(up_green_prefix, change, up_green_suffix))
+                        else:
+                            change_html = ("{}+{}x{}".format(up_green_prefix, change, up_green_suffix))
                     else:
-                        change_html = Markup("{}{}x{}".format(up_green_prefix, change, up_green_suffix))
+                        if markup==1:
+                            change_html = Markup("{}{}x{}".format(up_green_prefix, change, up_green_suffix))
+                        else:
+                            change_html = ("{}{}x{}".format(up_green_prefix, change, up_green_suffix))
                 elif change<0:
-                    change_html = Markup("{}{}x{}".format(down_red_prefix, change, down_red_suffix))
+                    if markup==1:
+                        change_html = Markup("{}{}x{}".format(down_red_prefix, change, down_red_suffix))
+                    else:
+                        change_html = ("{}{}x{}".format(down_red_prefix, change, down_red_suffix))
                 else:
                     change_html = "-"
             else:
@@ -211,36 +262,84 @@ def market_caps_table():
     # df_html['Market Cap ($MM)'] = df_html.apply(lambda x: x['marketCap']/1000000, axis=1)
     # df_html['Name'] = df_html.apply(lambda x: Markup('<div class="mcap_symbol">'+x['symbol']+'</div> <div class="mcap_name">'+x['name']+"</div>"),axis=1)
     # df_html['Name'] = df_html.apply(lambda x: ('<div class="mcap_symbol">'+x['symbol']+'</div> <div class="mcap_name">'+x['name']+"</div>"),axis=1)
-    df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy" data-original="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, x['symbol'].lower(),domain, x['symbol'].upper())+x['symbol'].upper()+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +x['name']+'</td></tr></thead></table></a>'),axis=1)
+    # img data-original -→ img-src. using deferRender, so lazyloading not needed.
+    df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy"  src="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, x['symbol'].lower(),domain, x['symbol'].upper())+x['symbol'].upper()+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +x['name']+'</td></tr></thead></table></a>'),axis=1)
     # df_html['symbol'] = df_html.apply(lambda x: ('<i class="material-icons icon_brand">show_chart</i>'+'<br/>'+x['symbol']+""),axis=1)
     # df_html['Avg $ Vol'] = df_html.apply(lambda x: "{}".format(magnitude_num(x['avgVolume']*x['price'],"$")), axis=1)
+
+    # df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
+    # df_html['90D $ Vol'] = df_html['90D $ Vol'].apply(lambda x: float(magnitude_num(x,"",fixed=1000000, scale="")))
+
+    # df_html['90D $ Vol'] = df_html['90D $ Vol'].map('${:,.0f}M'.format)
+    # df_html['24H $ Vol'] = df_html['price']*df_html['volume']
+    # df_html['24H $ Vol'] = df_html['24H $ Vol'].apply(lambda x: float(magnitude_num(x,"",fixed=1000000, scale="")))
+    # df_html['24H $ Vol'] = df_html['24H $ Vol'].map('${:,.0f}M'.format)
+
+
+
     df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
     df_html['90D $ Vol'] = df_html['90D $ Vol'].map('${:,.0f}'.format)
     df_html['24H $ Vol'] = df_html['price']*df_html['volume']
     df_html['24H $ Vol'] = df_html['24H $ Vol'].map('${:,.0f}'.format)
+
+    df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
+    df_html['24H $ Vol'] = df_html['price']*df_html['volume']
+    df_html['24H $ Vol'] = df_html['24H $ Vol'].apply(lambda x: (magnitude_num(x,"$")))
+    df_html['90D $ Vol'] = df_html['90D $ Vol'].apply(lambda x: (magnitude_num(x,"$")))
+    
+    
+    # df_html['24H $ Vol'] = df_html['24H $ Vol'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="vol_24">'+str(x)+'</span>'))
+    # df_html['90D $ Vol'] = df_html['90D $ Vol'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="vol_90">'+str(x)+'</span>'))
+
+
+    df_html['24H $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['volume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['volume'],"$"))+'</span>'),axis=1)
+    df_html['90D $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['avgVolume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['avgVolume'],"$"))+'</span>'),axis=1)
+
+    # df_html['24H $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['volume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['volume'],"$"))+'</span>'+'<br class="shares_out_br"><span class="mcap_shares_vol">' + str(x['volume']) +" " + str(x['symbol'])+"</span>"),axis=1)
+    # df_html['90D $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['avgVolume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['avgVolume'],"$"))+'</span>'+'<br class="shares_out_br"><span class="mcap_shares_vol">' + str(x['avgVolume']) +" " + str(x['symbol'])+"</span>"),axis=1)
+
+
     df_html['avgVolumex'] = df_html['avgVolume'].map('{:,.0f}'.format)
     df_html['volumex'] = df_html['volume'].map('{:,.0f}'.format)
     # df_html['volume'] = df_html['volume']
     # df_html['volume'] = df_html.apply(lambda x: strx['volume'] + " " + x['symbol'],axis=1)
     #df_html['volume'].map('{:,.0f}'.format) + " shares"
-    df_html['24H $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['24H $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['volumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
-    df_html['90D $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['90D $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['avgVolumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
+
+
+    # df_html['24H $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['24H $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['volumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
+    # df_html['90D $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['90D $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['avgVolumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
+    
+    
     # df_html['price'] = df_html.apply(lambda x: Markup("$"+str(np.round(x['price'],2))), axis=1)
     # df_html['price'] = df_html.apply(lambda x: ("$"+str(np.round(x['price'],2))), axis=1)
     # df_html['pe'] = df_html.apply(lambda x: np.round(x['pe'],2), axis=1)
     df_html['pe'] = df_html['pe'].map('{:,.2f}'.format)
     # df_html['% Chg'] = df_html['changesPercentage'].map('{:,.2f}%'.format)
-    df_html['% Chg'] = df_html.apply(lambda x: change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change", sign="no"), axis=1)#.head(30)
+    df_html['% Chg'] = df_html.apply(lambda x: change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change", sign="no", markup=0), axis=1)#.head(30)
+    df_html['% Chg'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['changesPercentage'])+'"><span class="chg_pct">'+change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change", sign="no", markup=0)+'</span>'),axis=1)
+
     # df_html['% Chg'] = df_html.apply(lambda x: x['changesPercentage'], axis=1)#change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change"), axis=1)#.head(30)
     df_html['Shares Outstanding'] = df_html['sharesOutstanding'].map('{:,.0f}'.format)
     # df_html['Shares Outstanding'] = df_html.apply(lambda x: ('<span class="mcap_shares_out">'+str(x['Shares Outstanding'])+'</span><br/><span class="mcap_pct_out">' + str(np.round((100*x['avgVolume']/x['sharesOutstanding']),3)) +"%</span>"),axis=1)
     df_html['Shares Outstanding'] = df_html.apply(lambda x: ('<span class="mcap_shares_out">'+str(x['Shares Outstanding'])+'</span><br/><span class="mcap_pct_out">'+"</span>"),axis=1)
     df_html['price'] = df_html['price'].map('${:,.2f}'.format)
-    df_html['Market Cap'] = df_html['marketCap'].map('${:,.0f}'.format)
+    # df_html['Market Cap'] = df_html['marketCap'].apply(lambda x: float(magnitude_num(x,"",fixed=1000000000, scale="")))
+    df_html['Market Cap'] = df_html['marketCap'].apply(lambda x: (magnitude_num(x,"$", trillion=0)))
+
+    # df_html['Market Cap'] = df_html['Market Cap'].map('${:,.1f}B'.format)
+    df_html['Market Cap'] = df_html['Market Cap'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="mcap_num">'+str(x)+'</span>'))
+
+
+    # df_html['Market Cap'] = df_html['marketCap'].map('${:,.0f}'.format)
+    # df_html['Market Cap'] = df_html['marketCap']#.map('${:,.0f}'.format)
+
+
     df_html = df_html[['name','price','% Chg', 'Market Cap','24H $ Vol','90D $ Vol','pe',]][0:150]
     df_html.columns = ['Name', 'Price', '% Chg', 'Market Cap','24H $ Vol', '90D $ Volume','P/E']
-    df_html = df_html.to_html().replace('<table','<table class="df_tableBoot compact stripe hover cell-border order-column row-border" id="df_myTable"')
+    df_html = df_html.to_html(escape=False).replace('<table','<table class="df_tableBoot compact stripe hover cell-border order-column row-border" id="df_myTable"')
+    
     df_html = df_html.replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
+    
     # df_html = df_html.replace("[","")
     # df_html = df_html.replace("_"," ")
     # df_html = df_html.replace('.00','')
@@ -250,8 +349,15 @@ def market_caps_table():
     # df_html = df_html.replace('<tr>','<tr class="tr_fin_statement_class fin_statement_class">')
     df_html = df_html[0:].replace(">nan</td>",">-</td>")
     df_html = df_html[0:].replace(">nan%</td>",">-</td>")
-    df_html = df_html[0:].replace("&lt;","<")
-    df_html = df_html[0:].replace("&gt;",">")
+    # df_html = df_html[0:].replace("&lt;","<")
+    # df_html = df_html[0:].replace("&gt;",">")
+    df_html = df_html.replace('td><td data','td data')
+    df_html = df_html.replace('td>&lt;td data','td data')
+     
+    print("dfz_html_printed",df_html)
+
+    
+    
     return render_template('market_caps_table.html',\
         df_html = Markup(df_html),
         df_test = list(df),
@@ -594,7 +700,21 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     print("bobobo", url_fin_metric)
     url_symbol = url_symbol.lower()
     fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")
-    if url_fin_metric == "none":
+
+    if url_fin_metric == "price":
+        main_page_y_n = "no"
+        url_fin_metric = "revenue-sales"
+        chart_type = "price"
+    else:
+        chart_type = "normal"
+    
+
+    if url_fin_metric == "none" and statement_or_ratio != "none":
+        pass
+    else:
+        pass
+
+    if url_fin_metric == "none" and statement_or_ratio == "none":
         # print("boopee", url_fin_metric)
         main_page_y_n = "yes"
         url_fin_metric = "revenue-sales"
@@ -835,6 +955,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         fin_metric_definition_formula = ""
         metric_to_list_variables_map = {
                 'net_working_capital_ratio':['working_capital_math','total_assets',],
+                'long_term_debt_to_equity_ratio': ['long_term_debt','total_se'],
                 'book_value_per_share':['total_se','shares_outstanding_non',],
                 'total_equity_to_total_assets':['total_se','total_assets',],
                 # 'roa_cash_flow': ['operating_cash_flow','total_assets',],
@@ -1888,6 +2009,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     df_image_name = Markup('<a class="mcap_link" href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40">'.format(domain, company_symbol.lower(), domain,company_symbol.upper())+'</a>')
     return render_template('current_ratio.html', \
                             main_page_y_n = main_page_y_n,
+                            chart_type = chart_type,
                             # fs_table_pct = fs_table_pct,
                             balance_sheet = balance_sheet,
                             cash_flow = cash_flow,

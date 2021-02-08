@@ -8,25 +8,43 @@
                     {{ earliest_year }}
                     -
                     2021
-                    | {{company_short_name}} | Charts Only Go Up
-{% include 'versus_card_rightside.html' %}
+                    | {{company_short_name}} | Charts
+
 {% else %}
     {{company_symbol}} Overview - All Historical Data
                     |
                     {{ earliest_year }}
                     -
                     2021
-                    | {{company_short_name}} | Charts Only Go Up
+                    | {{company_short_name}} | Charts
 
-{% include 'versus_card_rightside.html' %}
+
 {% endif %}
 </title>
+
+
+
+
 
 <!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6260e90056330e286d692b412/168a56cc1fa171c0dc39aa3e8.js");</script> -->
 <!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6260e90056330e286d692b412/168a56cc1fa171c0dc39aa3e8.js");</script> -->
 <!-- <script async data-uid="304db69547" src="https://colossal-hustler-7306.ck.page/304db69547/index.js"></script> -->
-<script src="https://code.highcharts.com/maps/modules/map.js"></script>
+<!-- <script src="https://code.highcharts.com/maps/modules/map.js"></script> -->
+
 <style>
+
+
+
+{% if chart_type == "price" %}
+.price_center{margin: 0 auto;}
+
+    {% else %}
+
+
+
+    {% endif %}
+
+
 @import url(https://fonts.googleapis.com/css?family=Rubik);
 a:hover {
   cursor: pointer;
@@ -57,9 +75,9 @@ a:hover {
 <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
 
 <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
-<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-
-
+<!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
+<script src="{{ url_for('static', filename='../static/js/modules/map.js') }}"></script>
+<script src="{{ url_for('static', filename='../static/js/modules/no-data-to-display.js') }}"></script>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
@@ -116,12 +134,23 @@ a:hover {
 
 {% include 'versus_chart.html' %}
         <script>
+        {% if chart_type == "price" %}
+        var df_json = {{ price_json }};
+        var year_df_json = {{ price_json }};
+        var price_json = "";
+        {% else %}
                 var df_json = {{ df_json }};
                 var year_df_json = {{ year_df_json }};
                 var price_json = {{ price_json }};
+        {% endif %}
+
+
                 var currency_symbol = {{currency_symbol}}
         </script>
         <script src="{{ url_for('static', filename='../static/js/quarterly.js') }}"></script>
+
+        
+
 {% endblock %}
         {% block quarterly_body %}
 </div>
@@ -139,7 +168,7 @@ a:hover {
                 <h1>What is {{company_symbol}}'s {{fin_metric_name}}?</h1>
                     <!-- <br> -->
                 {% endif %}
-                    <h3 class="text-primary mb-0 pad-10-top pad-10-bottom">
+                    <h3 class="mobile_h3 text-primary mb-0 pad-10-top pad-10-bottom">
                     <strong>
                         {{df_image_name}}&nbsp;
                         {{ company_long_name }}
@@ -153,6 +182,8 @@ a:hover {
 
                     <!-- {{ fin_metric_name }} -->
                     |
+
+                    <br class="mobile_linebreak">
                     {{ earliest_year }}
                     -
                     <!-- {{ latest_year }}  -->
@@ -184,6 +215,7 @@ a:hover {
                     {{yoy_2_value}} -->
                 {{ fin_metric_name }}
                 <span class="equals_is"> is </span>
+                <br class="mobile_linebreak">
                     <!-- <span class="up_green">
                         <i class="fa fa-arrow-up up_green" aria-hidden="true"></i>
                     </span> -->
@@ -212,11 +244,21 @@ a:hover {
                 <div class="highbar_container">
                     <div class="highbar_title">
                     {{company_symbol}}
-                    <span class="hide_on_mobile">
+                    <span class="hide_on_mobile-disable">
+
+
+                        {% if chart_type == "price" %}
+                    <!-- <span class="highbar_title_stock">
+                    Stock Price</span> &</span> -->
+                    <span class="highbar_title_metric">
+                        Stock Price</span>
+                        {% else %}
                     <span class="highbar_title_stock">
                     Stock Price</span> &</span>
                     <span class="highbar_title_metric">
                     {{ fin_metric_name }}</span>
+
+                    {% endif %}
                     </div>
                     <div id="highbar" class="highbar_mobile">
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
@@ -236,6 +278,14 @@ a:hover {
     </div>
 </div>
 </div>
+
+{% if chart_type == "price" %}
+
+
+    {% else %}
+
+
+
 <div class="col rightside">
     <div class="card shadow border-left-primary py-2 rightside" style="margin: 5px;">
         
@@ -255,6 +305,8 @@ a:hover {
 
 
 </div>
+
+{% endif %}
 <div class="row horizontal_scroll">
   <div class="horizontal_grid-container">
   <main class="horizontal_grid-item main">

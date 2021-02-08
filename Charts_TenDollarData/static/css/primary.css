@@ -1,3 +1,103 @@
+
+/* added 2020-02-06 */
+
+
+	.mcap_col1{
+		width:30px !important;
+	} 
+	.mcap_col2{
+		width:30px !important;
+	} 
+
+	
+	@media (min-width: 500px) {
+		.mobile_linebreak{
+			display: none;
+		}
+	}
+
+	
+	.typeahead{
+	 border: 1px #EDEDED solid !important;   
+	 border-radius: 20px !important;
+	 background-color: #E4E9F1 !important;
+	}
+	
+	.typeahead:focus{
+	 border: 1px #154EE2 solid !important;   
+	 background-color: #FFFFFF !important;
+	}
+
+	::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+	  color: #5f6368 !important;
+	  font-weight: bold;
+	  opacity: 1; /* Firefox */
+	}
+	
+	:-ms-input-placeholder {
+		color: #5f6368 !important;
+		font-weight: bold;
+	}
+	
+	::-ms-input-placeholder { /* Microsoft Edge */
+		color: #5f6368 !important;
+		font-weight: bold;
+	}
+	
+	@media (max-width: 768px) {
+		:is(h1, h2){
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+		.mobile_h3{
+			padding-top: 3px !important;
+			padding-bottom: 3px !important;
+		}
+		
+			.form-group{
+					margin: 0 auto;
+			text-align: center;
+		}
+		.typeahead{
+			width:130px;
+		}
+		.spacer{width:0px !important;}
+	.navbar {
+		padding: 0rem 1rem;
+	}
+	input[type=search]{
+		padding-left: 2px;
+	}
+	}
+	.squarelogo{margin-top: -12px;}
+	@media (min-width: 768px) {
+		.mx-auto > li.nav-item{
+			display: inline-block;
+		}
+		.navbar-collapse > .mx-auto{
+			text-align:right;
+			display: block;
+			width: 100%;
+		}
+		.search_nav_desktop > .nav-item{
+		margin-top:-5px;
+		}
+		
+	}
+/* 	
+
+	@media (max-width: 768px) {
+
+		.input-group-append{
+			display: none;
+		}
+	}
+	@media (min-width: 768px) {
+		}
+		
+	} */
+
+
 /* added 2020-02-04 below */
 
 /* .rightside{
@@ -68,7 +168,7 @@ td.mcap_col_numbers{
   /* padding: 0px; */
 }
 .tr_header{
-  height:30px !important;
+  /* height:30px !important; */
   font-size: 14px !important;
 }
 .mcap_shares_vol{
@@ -92,9 +192,19 @@ table.dataTable tbody th, table.dataTable tbody td{
 }
 
 .sum_market.items{
-  overflow-x:hidden !important;
+  /* overflow-x:hidden !important; */
+  overflow: scroll;
+  overflow-x: hidden;
   /* width:1000%; */
 }
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+/* ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+} */
 /* table.dataTable thead th, table.dataTable thead td{
     border-top:solid 1px #EDEDED;
     border-bottom:solid 1px #EDEDED;
@@ -123,9 +233,19 @@ tr.odd,tr.even{
 .mini_tr,.mini_tr2{
   height: 0px !important;
 }
-.mcap_image{
-  width:80px !important;
+	
+@media (min-width: 768px) {
+	.mcap_image{
+		width:60px;
+	  }
 }
+
+@media (max-width: 768px) {
+	.mcap_image{
+		width:40px;
+	  }
+}
+
 th.mcap_symbol{
   border: 0px solid none !important;
 }
@@ -363,9 +483,7 @@ body {
 
 	background-color: #ffffff;
 }
-.typeahead {
-	width: 300px !important;
-}
+
 .yoy_cards_current {
 	text-align: center;
 	display: block;
@@ -649,7 +767,7 @@ body {
 		display: none;
 	}
 	input[type="search"]:focus {
-		width: 200px !important;
+		/* width: 200px !important; */
 		background-color: #fff;
 		border-color: #66cc75;
 	}
@@ -773,6 +891,9 @@ body {
 }
 
 @media (min-width: 768px) {
+	.typeahead {
+		width: 300px;
+	}
 	.rightside {
 		padding-top: 10px;
 	}
@@ -988,12 +1109,6 @@ tspan.chart_current_price {
 .max_min_summary {
 	text-align: center;
 }
-
-.typeahead {
-	width: 200px;
-	background-color: yellow;
-}
-
 
 
 * {

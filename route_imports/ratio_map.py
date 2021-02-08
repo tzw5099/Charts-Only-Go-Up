@@ -813,6 +813,7 @@ metric_to_url_map = {
 
 url_to_metric_map = {
     'net-working-capital-ratio': "net_working_capital_ratio",
+    'long-term-debt-to-equity-ratio': "long_term_debt_to_equity_ratio",
     # 'roa-cash-flow': "roa_cash_flow",
     'book-value-per-share': "book_value_per_share",
     'total-equity-to-total-assets': "total_equity_to_total_assets",
@@ -1225,6 +1226,7 @@ def metric_to_formula_map(df,metric):
         # 'roa_cash_flow':df['operating_cash_flow']/df['total_assets'],
 	    'net_working_capital_ratio':df['working_capital_math']/df['total_assets'],
 	    'book_value_per_share':df['total_se']/df['shares_outstanding_non'],
+        'long_term_debt_to_equity_ratio': df['long_term_debt']/df['total_se'],
 	    'total_equity_to_total_assets':df['total_se']/df['total_assets'],
 	    'operating_cost_ratio':(df['total_opex'] - df['d_n_a'])/df['net_revenue'],
 	    'perc​entage_of_debt_to_asset_formula':df['total_non_current_liabilities']/df['total_assets'],
@@ -1274,7 +1276,7 @@ def metric_to_formula_map(df,metric):
 	    'income_to_net_worth_ratio':(df['net_income'] - df['deferred_income_tax'])/df['shares_outstanding_non'],
 	    'return_on_assets_roa':df['net_income']/df['total_assets'],
 	    'return_on_equity_roe':df['net_income']/df['total_se'],
-	    'net-profit_margin':df['net_income']/df['net_revenue'],
+	    'net_profit_margin':df['net_income']/df['net_revenue'],
 	    'earnings_per_share':df['net_income']/df['shares_outstanding_non'],
 	    'current_cash_debt_coverage':df['net_cash_by_operating_activities']/df['total_current_liabilities'],
 	    'cash_debt_coverage':df['net_cash_by_operating_activities']/df['total_liabilities'],
@@ -1311,6 +1313,7 @@ def metric_to_formula_map(df,metric):
 
 url_to_var_name_map = {
             'net-working-capital-ratio': "net_working_capital_ratio",
+            'long-term-debt-to-equity-ratio': "long_term_debt_to_equity_ratio",
             # 'roa-cash-flow': "roa_cash_flow",
             'book-value-per-share': "book_value_per_share",
             'total-equity-to-total-assets': "total_equity_to_total_assets",

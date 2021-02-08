@@ -1,69 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W65SWDX');</script>
+        <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <!-- https://stackoverflow.com/questions/26192897/should-i-use-bootstrap-from-cdn-or-make-a-copy-on-my-server -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/primary.min.css') }}">
-        <meta http-equiv="x-dns-prefetch-control" content="on">
-        <link rel="shortcut icon" href="{{ url_for('static', filename='../static/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/bootstrap/css/styles.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/primary.min.css') }}">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='../static/favicon.ico') }}">
 
-        <link rel='preconnect' href='//stackpath.bootstrapcdn.com' crossorigin>
-        <link rel="preconnect" href="//ajax.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
-        <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
-        <link rel="dns-prefetch" href="https://use.fontawesome.com">
-        <link rel="preconnect" href="//cdnjs.cloudflare.com">
-        <link rel="preconnect" href="//www.googletagmanager.com">
-        <link rel="preconnect" href="//www.google-analytics.com">
-        <link rel="dns-prefetch" href="//s3.amazonaws.com">
-        <link rel="dns-prefetch" href="//ajax.googleapis.com">
-        <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-        <link rel="dns-prefetch" href="//www.googletagmanager.com">
-        <link rel="dns-prefetch" href="//www.google-analytics.com">
-        <link rel="dns-prefetch" href="//fonts.googleapis.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"> -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"> -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="{{ url_for('static', filename='../static/js/chart.js') }}"></script>
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-        <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
-        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> -->
+    <link rel='preconnect' href='//stackpath.bootstrapcdn.com' crossorigin>
+    <link rel="preconnect" href="//ajax.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
+    <link rel="dns-prefetch" href="https://use.fontawesome.com">
+    <link rel="preconnect" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="//www.google-analytics.com">
+    <link rel="preconnect" href="//cdn.datatables.net">
+    <link rel="dns-prefetch" href="//cdn.datatables.net">
+    <link rel="dns-prefetch" href="//s3.amazonaws.com">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"> -->
+    
+    <!-- <link href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet"> -->
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ url_for('static', filename='../static/js/chart.js') }}"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> -->
 
-        <!-- <script type="text/javascript" src="{{ url_for('static', filename='../static/js/jquery-3.5.1.js') }}"></script> -->
-        <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
-        <!-- enables CSV -->
-        <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
-        <!-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script> -->
-        <!-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script> -->
-        <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
-        <!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script> -->
-<script>$(".sasa").html(function(i, h){
-    return h.replace(/\(([^\)]+)\)/, "(<b>$1</b>)");
-});</script>
-        <!-- <script src="{{ url_for('static', filename='../static/js/typeahead.bundle.min.js') }}"></script> -->
-        <script src="{{ url_for('static', filename='../static/js/toms_typeahead.bundle.min.js') }}"></script>
-        {% block charts_quarter_head %}
-        {% endblock %}
-        </head>
-        <body class="fixed_body">
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='../static/js/jquery-3.5.1.js') }}"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+    <!-- enables CSV -->
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+    <!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script> -->
+    <script>$(".sasa").html(function(i, h){
+        return h.replace(/\(([^\)]+)\)/, "(<b>$1</b>)");
+    });</script>
+    <!-- <script src="{{ url_for('static', filename='../static/js/typeahead.bundle.min.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='../static/js/toms_typeahead.bundle.min.js') }}"></script>
+    <script data-ad-client="ca-pub-8622650495968210" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- <script data-ad-client="ca-pub-1920116126561813" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+    {% block charts_quarter_head %}
+    {% endblock %}
+    </head>
+    <body class="fixed_body">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W65SWDX"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="color: #212529;">
             <div class="container">
                 <div class="squarelogo">
 
-
+                    <table>
+                        <thead>
+                            <tr>
 <span class="brand_decoration">
+    
+    <th>
     <a href="https://chartsonlygoup.com">
         <!-- <span class="navbar-brand dollar_data charts_left hide_on_mobile" href="#" style="color: #4285f4 !important; margin-right:0px"></span> -->
 
@@ -73,6 +96,12 @@
                     </span>
                     <!-- . -->
 </a>
+
+
+
+</th>
+<th>
+
 <a href="https://chartsonlygoup.com">
                     <span class="navbar-brand dollar_data brand_right" href="#" style="color: #19a419 !important;">
                         <!-- onlygo -->
@@ -83,8 +112,17 @@
                                     </i>
                     </span>
                     </a>
+</th>
+<!-- 
+<th class="mobile_search">
+ -->
 
 
+<!-- </th> -->
+
+</tr>
+</thead>
+</table>
 
 <!-- <a href="https://chartsonlygoup.com">
                     <span class="navbar-brand dollar_data brand_up" href="#" style="color: #19a419 !important;">
@@ -98,6 +136,95 @@
                     </a>
                 </div>
 <div class="spacer"></div>
+
+<!-- <div class="nav navbar-nav search_nav_mobile d-block d-sm-none"> -->
+    <div class="nav navbar-nav search_nav_mobile">
+        <li class="nav-item" role="presentation">
+    
+            <form class="form-inline mr-auto" target="_self">
+    
+    
+                <div class="form-group">
+    
+                    <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+    
+                        <div class="input-group">
+                                <!-- <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="mobile_th"> -->
+                            <div class="lazytype">
+    
+                                <!-- <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY..."> -->
+
+                                <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="&#xF002; TSLA, AAPL, SPY.." style="font-family:Arial, FontAwesome">
+
+                                
+                            </div>
+                        <!-- </th>
+    <th  class="mobile_th"> -->
+                            
+                            <!-- <div class="input-group-append">
+                                <span class="search_btn search_btn-primary btn btn-primary py-0">
+                                    <i class="material-icons typeahead_icon">
+                                        search
+                                    </i>
+                                </span>
+                            </div> -->
+                        <!-- </th>
+                        </tr>
+                        </thead>
+                        </table> -->
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </li>
+    </div>
+<!-- <div class="nav navbar-nav search_nav">
+    <li class="nav-item" role="presentation">
+
+        <form class="form-inline mr-auto" target="_self">
+
+
+            <div class="form-group">
+
+                <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+
+                    <div class="input-group">
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                        <div class="lazytype">
+
+                            <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
+                        </div>
+                    </th>
+<th>
+                        
+                        <div class="input-group-append">
+                            <span class="search_btn search_btn-primary btn btn-primary py-0">
+
+                                <i class="material-icons typeahead_icon">
+                                    search
+                                </i>
+                            </span>
+                        </div>
+                    </th>
+                    </tr>
+                    </thead>
+                    </table>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </li>
+</div> -->
+
+
+
                 <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                     <span class="sr-only">
                         Toggle navigation
@@ -169,52 +296,100 @@
                                 Link 2
                             </a>
                         </li> -->
-                        <li class="nav-item" role="presentation">
+                        <!-- <li class="nav-item" role="presentation">
                             <a class="nav-link" href="#">
                                 Link 3
                             </a>
-                        </li>
+                        </li> -->
 
                     </ul>
+    <!-- <ul class="nav navbar-nav search_nav_desktop d-none d-sm-block d-md-block d-lg-block"> -->
+        <!-- <ul class="nav navbar-nav search_nav_desktop d-none d-sm-block d-md-block d-lg-block">
+    <li class="nav-item" role="presentation">
+
+        <form class="form-inline mr-auto" target="_self">
+
+
+            <div class="form-group">
+
+                <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+
+                    <div class="input-group">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                        <div class="lazytype">
+
+                            <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
+                        </div>
+                    </th>
+<th>
+                        
+                        <div class="input-group-append">
+                            <span class="search_btn search_btn-primary btn btn-primary py-0">
+                                <i class="material-icons typeahead_icon">
+                                    search
+                                </i>
+                            </span>
+                        </div>
+                    </th>
+                    </tr>
+                    </thead>
+                    </table>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </li>
+</ul> -->
                 </div>
 
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation">
-
-                            <form class="form-inline mr-auto" target="_self">
-
-
-                                <div class="form-group">
-
-                                    <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-
-                                        <div class="input-group">
-                                                <!-- <button class="btn btn-primary py-0" type="button"> -->
-                                                    <!-- <!- - <i class="fas fa-search"></i> - -> -->
-                                                    <!-- <i class="material-icons typeahead_icon"> -->
-                                                        <!-- search -->
-                                                    <!-- </i> -->
-                                                <!-- </button> -->
-                                            <div class="lazytype">
-
-                                                <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
-                                            </div>
-                                            <div class="input-group-append">
-                                                <span class="search_btn search_btn-primary btn btn-primary py-0">
-                                                    <!-- <!- - <i class="fas fa-search"></i> - -> -->
-                                                    <i class="material-icons typeahead_icon">
-                                                        search
-                                                    </i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </form>
-                        </li>
-                    </ul>
             </div>
         </nav>
+
+
+        <!-- <div class="nav navbar-nav search_nav_mobile d-block d-sm-none">
+            <li class="nav-item" role="presentation">
+        
+                <form class="form-inline mr-auto" target="_self">
+        
+        
+                    <div class="form-group">
+        
+                        <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+        
+                            <div class="input-group">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="mobile_th">
+                                <div class="lazytype">
+        
+                                    <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
+                                </div>
+                            </th>
+        <th  class="mobile_th">
+                                
+                                <div class="input-group-append">
+                                    <span class="search_btn search_btn-primary btn btn-primary py-0">
+                                        <i class="material-icons typeahead_icon">
+                                            search
+                                        </i>
+                                    </span>
+                                </div>
+                            </th>
+                            </tr>
+                            </thead>
+                            </table>
+                            </div>
+                        </form>
+                    </div>
+                </form>
+            </li>
+        </div> -->
+
+
 <script>
     var stringToHTML = function (str) {
 	var dom = document.createElement('div');
