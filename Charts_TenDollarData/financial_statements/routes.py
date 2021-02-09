@@ -82,6 +82,20 @@ from flask import Markup
 
 from flask import send_from_directory     
 
+
+# https://stackoverflow.com/questions/13081532/return-json-response-from-flask-view
+from flask import json
+
+# @charts.route('/summary')
+# def summary():
+#     data = make_summary()
+#     response = app.response_class(
+#         response=json.dumps(data),
+#         status=200,
+#         mimetype='application/json'
+#     )
+#     return response
+
 @charts.route('/favicon.ico') 
 def favicon(): 
     return send_from_directory(os.path.join(charts.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
@@ -528,8 +542,8 @@ def fin_test(some_place):
     place_name=some_place,
     max=17000,
     )
-@charts.route('/<some_place>/income-statement', methods=['POST', 'GET'])
-@charts.route('/<some_place>/income-statement', methods=['POST', 'GET'])
+# @charts.route('/<some_place>/income-statement', methods=['POST', 'GET'])
+# @charts.route('/<some_place>/income-statement', methods=['POST', 'GET'])
 # @cache.cached(timeout=5)
 # def fin_test(some_place):
 #     global domain
@@ -684,22 +698,53 @@ def fin_test(some_place):
 # def hello(url_symbol):
 #     # /apple/income-statement/revenue-sales
 #     return redirect("{}/{}/income-statement/revenue-sales".format(domain,url_symbol), code=301)
-@charts.route("/json")
-def json_js_practice():
-    return render_template('json_js_practice.html')
+
+
+
+
+# @charts.route("/json")
+# def json_js_practice():
+#     return render_template('json_js_practice.html')
+
+
+
+
+
 # @charts.route("/home")
 # @charts.route('/', methods=['POST', 'GET'])
-@charts.route('/<url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
-@charts.route('/<url_symbol>/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
-@charts.route('/<url_symbol>/<url_fin_metric>', methods=['POST', 'GET'])
-@charts.route('/<url_symbol>', methods=['POST', 'GET'])
-@charts.route('/random', methods=['POST', 'GET'])
+# @charts.route('/<url_symbol>%23/<statement_or_ratio>/<url_fin_metric>', methods=['POST', 'GET'])
+# @charts.route('/<url_symbol>%23/<url_fin_metric>', methods=['POST', 'GET'])
+# @charts.route('/<url_symbol>%23', methods=['POST', 'GET'])
+@charts.route('/<url_symbol>/<statement_or_ratio>/<url_fin_metric>', strict_slashes=False, methods=['POST', 'GET'])
+@charts.route('/<url_symbol>/<url_fin_metric>', strict_slashes=False, methods=['POST', 'GET'])
+@charts.route('/<url_symbol>', strict_slashes=False, methods=['POST', 'GET'])
+
+
+@charts.route('/<url_symbol>-<stock_or_etf>/<url_name>/<statement_or_ratio>/<url_fin_metric>', strict_slashes=False, methods=['POST', 'GET'])
+@charts.route('/<url_symbol>-stock/<statement_or_ratio>/<url_fin_metric>', strict_slashes=False, methods=['POST', 'GET'])
+@charts.route('/<url_symbol>-stock/<url_fin_metric>', strict_slashes=False, methods=['POST', 'GET'])
+@charts.route('/<url_symbol>-stock', strict_slashes=False, methods=['POST', 'GET'])
+
+@charts.route('/random, strict_slashes=False', methods=['POST', 'GET'])
+
+
+@charts.route('/<url_symbol>/<statement_or_ratio>, strict_slashes=False', methods=['POST', 'GET'])
+@charts.route('/<url_symbol>-stock/<statement_or_ratio>, strict_slashes=False', methods=['POST', 'GET'])
+
+
+
 def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple", statement_or_ratio="none", url_fin_metric= "none"):
     global domain
     global subdomain
-    print("bobobo", url_fin_metric)
+    print("bobobo", url_fin_metric, statement_or_ratio)
     url_symbol = url_symbol.lower()
     fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")
+
+
+
+
+
+
 
     if url_fin_metric == "price":
         main_page_y_n = "no"
@@ -707,16 +752,11 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         chart_type = "price"
     else:
         chart_type = "normal"
-    
-
-    if url_fin_metric == "none" and statement_or_ratio != "none":
-        pass
-    else:
-        pass
 
     if url_fin_metric == "none" and statement_or_ratio == "none":
         # print("boopee", url_fin_metric)
         main_page_y_n = "yes"
+        chart_type = "main_page"
         url_fin_metric = "revenue-sales"
         
         
@@ -755,11 +795,44 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         print("dumdumdum", statement_or_ratio)
     else:
         hide_chart_sidebar = "no"
+
+
+
     if url_fin_metric != "none" and statement_or_ratio != "none":
 
         print("nobnob")
     else:
         versus_chart_y_n = "no"
+
+
+    if (url_fin_metric == "cash-flow-statement" or url_fin_metric == "income-statement" or url_fin_metric == "balance-sheet"):
+        main_page_y_n = "no"
+        statement_or_ratio = url_fin_metric
+        url_fin_metric = "revenue-sales"
+        chart_type = "statement"
+        print("xblabloo",url_fin_metric,url_fin_metric,url_symbol)
+
+        if statement_or_ratio == "cash-flow-statement":
+            fin_statement_table = FS("CF",url_symbol).df_table()
+        elif statement_or_ratio == "income-statement":
+            fin_statement_table = FS("IS",url_symbol).df_table()
+
+            print("kekekdc")
+            print(fin_statement_table)
+            print("wwxxss")
+            
+        elif statement_or_ratio == "balance-sheet":
+            fin_statement_table = FS("BS",url_symbol).df_table().replace('<table','<table class="df_tableBoot compact stripe hover cell-border order-column row-border" id="df_myTable"')
+
+
+        
+    else:
+        # chart_type = "normal"
+        print("blebloo")
+        fin_statement_table = ""
+
+
+    print("das ist chart type", url_symbol, chart_type, url_fin_metric, statement_or_ratio)
 
     from route_imports.ratio_map import metric_to_url_map
     from route_imports.ratio_map import url_to_var_name_map
@@ -952,6 +1025,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 df_grouped = df.groupby("Year").sum()
             return df_grouped
     else:
+        fin_statement_dir = ""
         fin_metric_definition_formula = ""
         metric_to_list_variables_map = {
                 'net_working_capital_ratio':['working_capital_math','total_assets',],
@@ -2010,7 +2084,9 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     return render_template('current_ratio.html', \
                             main_page_y_n = main_page_y_n,
                             chart_type = chart_type,
+                            fin_statement_dir = fin_statement_dir,
                             # fs_table_pct = fs_table_pct,
+                            fin_statement_table = fin_statement_table,
                             balance_sheet = balance_sheet,
                             cash_flow = cash_flow,
                             income_statement = income_statement,

@@ -1,15 +1,29 @@
-{% extends "base.html" %}
+{% extends "base.min.html" %}
 {% block charts_quarter_head %}
 <title>
 
-    {% if versus_chart_y_n == "yes" %}
+    {% if chart_type == "normal" %}
     {{company_symbol}}'s {{fin_metric_name}}
                     |
                     {{ earliest_year }}
                     -
                     2021
                     | {{company_short_name}} | Charts
+                    {% elif chart_type == "price" %}
+                    {{company_symbol}}'s Stock Price
+                    |
+                    {{ earliest_year }}
+                    -
+                    2021
+                    | {{company_short_name}} | Charts
 
+                    {% elif chart_type == "statement" %}
+                    {{company_symbol}}'s {{ fin_statement_dir }}
+                    |
+                    {{ earliest_year }}
+                    -
+                    2021
+                    | {{company_short_name}} | Charts
 {% else %}
     {{company_symbol}} Overview - All Historical Data
                     |
@@ -31,20 +45,77 @@
 <!-- <script async data-uid="304db69547" src="https://colossal-hustler-7306.ck.page/304db69547/index.js"></script> -->
 <!-- <script src="https://code.highcharts.com/maps/modules/map.js"></script> -->
 
-<style>
-
 
 
 {% if chart_type == "price" %}
-.price_center{margin: 0 auto;}
-
-    {% else %}
-
-
-
-    {% endif %}
+<style>
+.price_center{margin: 0 auto !important;}
+</style>
 
 
+{% elif chart_type == "statement" %}
+<style>
+
+    .highbar_title{
+  width: 98%;
+    
+}
+
+.statement_center{
+    max-width: 1600px;
+    margin: 0 auto !important;
+}
+
+.all_tabs_container{
+  margin: 0 auto;
+  max-width: 1600px;
+}
+</style>
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" /> -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+
+
+
+<!-- enables CSV -->
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+<!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css">
+
+<!-- 
+https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css
+
+https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css -->
+{% else %}
+
+{% endif %}
+
+
+<style>
+    .dataTables_length, .dataTables_info, .dataTables_paginate {display:none;}
+.l12m,.l12m_2{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.fin_statement_class {
+font-weight: 18px !important;
+}
+.th_fin_statement_class{
+  font-size: 18px !important;
+}
 @import url(https://fonts.googleapis.com/css?family=Rubik);
 a:hover {
   cursor: pointer;
@@ -132,13 +203,27 @@ a:hover {
 
 <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/sliding_tabs.css') }}">
 
+
+
+
+{% if chart_type == "statement" %}
+{% else %}
 {% include 'versus_chart.html' %}
+{% endif %}
+
         <script>
-        {% if chart_type == "price" %}
+        {% if chart_type == "statement" %}
+        
+        
+
+        {% elif chart_type == "price" %}
         var df_json = {{ price_json }};
         var year_df_json = {{ price_json }};
         var price_json = "";
+
         {% else %}
+
+
                 var df_json = {{ df_json }};
                 var year_df_json = {{ year_df_json }};
                 var price_json = {{ price_json }};
@@ -159,11 +244,11 @@ a:hover {
 <div class="d-flex flex-column" id="content-wrapper">
     <div class="row rightrow">
         <!-- <div class="col-md-9 col-lg-9 col-xl-9">  -->
-            <div class="col-md-8 col-lg-8 col-xl-8 price_center">
+            <div class="col-md-8 col-lg-8 col-xl-8 price_center statement_center">
             <div class="text-dark h1_info left_side">
                 <!-- <h1 class="text-primary mb-0 pad-10-top pad-10-bottom pad-10-left pad-10-right"> -->
-                
-                {% if main_page_y_n == "yes" %}
+                 
+                {% if main_page_y_n == "yes" or  chart_type == "price" or chart_type == "statement" %}
                 {% else %}
                 <h1>What is {{company_symbol}}'s {{fin_metric_name}}?</h1>
                     <!-- <br> -->
@@ -201,7 +286,7 @@ a:hover {
                 {% else %}
                 {% endif %} -->
                 <!-- <br> -->
-                <h2 class="text-primary mb-0">
+                <h2 class="text-primary mb-0 l12m">
                     <span class="last12months">
                     <!-- {{ latest_year }} -->
                     <!-- Last 12 Months
@@ -214,7 +299,7 @@ a:hover {
                     <br>
                     {{yoy_2_value}} -->
                 {{ fin_metric_name }}
-                <span class="equals_is"> is </span>
+                <span class="equals_is"> is&nbsp;</span>
                 <br class="mobile_linebreak">
                     <!-- <span class="up_green">
                         <i class="fa fa-arrow-up up_green" aria-hidden="true"></i>
@@ -232,7 +317,7 @@ a:hover {
                     <!-- <br> -->
                 </h2>
                 <!-- <br> -->
-                <h2 class="text-primary mb-0">
+                <h2 class="text-primary mb-0 l12m_2">
                     <span class="last12months">
                     <!-- {{ latest_year }} -->
                     <!-- Target price:  {{currency_symbol}}{{stock_price_10_years}} -->
@@ -247,22 +332,45 @@ a:hover {
                     <span class="hide_on_mobile-disable">
 
 
-                        {% if chart_type == "price" %}
+   
+
+
+
+                {% if chart_type == "statement" %}
+                <!-- kkkggf -->
+
+                {{ fin_statement_dir }}
+                        
+                {% for table in fin_statement_table %}
+                            <!-- titles loop.index x -->
+                            {{ table | safe }}
+                            {% endfor %}
+
+<!-- asdas -->
+
+                        
+
+                        {% elif chart_type == "price" %}
                     <!-- <span class="highbar_title_stock">
                     Stock Price</span> &</span> -->
                     <span class="highbar_title_metric">
                         Stock Price</span>
+                    </div>
+                    <div id="highbar" class="highbar_mobile">
+                        <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
+                    <br>
                         {% else %}
                     <span class="highbar_title_stock">
                     Stock Price</span> &</span>
                     <span class="highbar_title_metric">
                     {{ fin_metric_name }}</span>
 
-                    {% endif %}
+                    
                     </div>
                     <div id="highbar" class="highbar_mobile">
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
                     <br>
+                    {% endif %}
                     {% if company_similar|length > 3 %}
                     <div class="similar_comp_table_header">
 
@@ -279,7 +387,7 @@ a:hover {
 </div>
 </div>
 
-{% if chart_type == "price" %}
+{% if chart_type == "price" or chart_type == "statement" %}
 
 
     {% else %}
@@ -290,9 +398,9 @@ a:hover {
     <div class="card shadow border-left-primary py-2 rightside" style="margin: 5px;">
         
 {% if versus_chart_y_n == "yes" %}
-{% include 'versus_card_rightside.html' %}
+{% include 'versus_card_rightside.min.html' %}
 {% else %}
-{% include 'versus_card_rightside.html' %}
+{% include 'versus_card_rightside.min.html' %}
 {% endif %}
         
 
@@ -480,7 +588,7 @@ slider.addEventListener('mousemove', e => {
 
 {% endif %}
     <br>
-{% include 'extended_tabs.html' %}
+{% include 'extended_tabs.min.html' %}
 </div>
 </div>
     <script>
@@ -522,6 +630,148 @@ slider.addEventListener('mousemove', e => {
 </div>
 <!-- <script src="https://code.highcharts.com/stock/modules/exporting.js"></script> -->
 <script src="{{ url_for('static', filename='../static/js/sliding_tabs.js') }}"></script>
+
+
+
+<script>
+//<![CDATA[
+    // https://datatables.net/forums/discussion/22343/new-sorting-plugin-sort-by-any-number-ignore-text
+    // function sortNumbersIgnoreText(a, b, high) { 
+    //     var reg = /[+-]?((\d+(\.\d*)?)|\.\d+)([eE][+-]?[0-9]+)?/;    
+    //     a = a.match(reg); 
+    //     a = a !== null ? parseFloat(a[0]) : high; 
+    //     b = b.match(reg); 
+    //     b = b !== null ? parseFloat(b[0]) : high; 
+    //     return ((a < b) ? -1 : ((a > b) ? 1 : 0));     
+    // } 
+    // jQuery.extend( jQuery.fn.dataTableExt.oSort, { 
+    //     "sort-numbers-ignore-text-asc": function (a, b) { 
+    //         return sortNumbersIgnoreText(a, b, Number.POSITIVE_INFINITY); 
+    //     }, 
+    //     "sort-numbers-ignore-text-desc": function (a, b) { 
+    //         return sortNumbersIgnoreText(a, b, Number.NEGATIVE_INFINITY) * -1; 
+    //     } 
+    // }); 
+
+
+
+    // $(document).ready(function () {
+        // $('table.df_tableBoot').DataTable();
+        var table = $('#df_myTable').DataTable({
+            // "fixedHeader": {
+            //     header: true,
+            // },
+            
+
+            // "columnDefs": [
+            //     { type: 'sort-numbers-ignore-text', targets : 3 },
+            //     { className: "mcap_col1", "targets": [ 0 ] },
+            //     { className: "mcap_col2", "targets": [ 1 ] },
+            //     { className: "mcap_col_numbers", "targets": [2, 3,4,5,6 ] }
+            // ],
+            // responsive: false,
+
+
+            scrollX: true,
+            scrollCollapse: true,
+
+
+            // responsive: {
+            //     details: {
+            //         type: 'column',
+            //         target: 'tr'
+            //     }
+            // },
+
+            // fixedColumns:   {
+            //     leftColumns: 2
+            // },
+            // fixedHeader: true,
+
+            // responsive: true,
+            "pageLength": 100,
+            // datatables.net image paginate load
+            // https://stackoverflow.com/questions/41075814/working-example-of-datatables-with-lazy-loading-of-images
+
+
+            // drawCallback: function(){
+            //     $("img.lazy").lazyload();
+            // },
+            deferRender: true,
+            
+            // paginate: true,
+            // fixedHeader: true,
+            // // "scrollX": true,
+            columnDefs: [
+                // {
+                //     targets: [0],
+                //     orderData: [0, 1]
+                // },
+                // { type: 'sort-numbers-ignore-text', targets : 0 },
+                // { type: 'sort-numbers-ignore-text', targets : 1 },
+                // { type: 'sort-numbers-ignore-text', targets : 2 },
+                // { type: 'sort-numbers-ignore-text', targets : 3 },
+                // { type: 'sort-numbers-ignore-text', targets : 4 },
+                // { type: 'sort-numbers-ignore-text', targets : 5 },
+                // { type: 'sort-numbers-ignore-text', targets : 6 },
+                // { className: "mcap_col1", "targets": [ 0 ] },
+                // { className: "mcap_col2", "targets": [ 1 ] },
+                // { className: "mcap_col_numbers", "targets": [2, 3,4,5,6 ] }
+
+                // {
+                //     "width": "100%" , "targets": [0,1,2,3,4,5,6],
+
+                //     // "width": "1000",
+                //     "targets": "_all",
+                //     "render": function (data, type, full, meta) {
+                //         if (type === 'display' && !isNaN(data * 1) && data > 1000000000) {
+                //             $(td).addClass('td_fin_statement_class');
+                //             return ('$' + (data / 1000000000).toFixed(1) + 'B')
+                //         .toLocaleString();
+                //         } else if (type === 'display' && !isNaN(data * 1) && (data > 1000000 &&
+                //                 data < 999999999)) {
+                //             $(td).addClass('td_fin_statement_class');
+                //             return ('$' + (data / 1000000).toFixed(1) + 'M').toLocaleString();
+                //         } else if (type === 'display' && !isNaN(data * 1) && (data > 1000 &&
+                //                 data < 999999)) {
+                //             $(td).addClass('td_fin_statement_class');
+                //             return ('$' + (data / 1000).toFixed(1) + 'K').toLocaleString();
+                //         } else if (type === 'display' && !isNaN(data * 1) && (data > .01 &&
+                //                 data < 2) && data != 1) {
+                //             return ((data * 100).toFixed(0) + '%').toLocaleString();
+                //         } else {
+                //             return data;
+                //         }
+                //     }
+                // },
+                // { "width": "1000" , targets: [0,1,2,3,4,5,6]},
+
+
+            ],
+            // dom: 'Bfrtip',
+
+            // // "sScrollX": "100%",
+            // // "sScrollXInner": "110%",
+            // // "bScrollCollapse": true,
+            // colReorder: true,
+
+            // // scrollY: 300,
+            // buttons: [
+            //     // 'csv'
+            //     // 'csvHtml5'
+            //     // 'copy', 'csv', 'excel', 'pdf', 'print'
+            // ]
+            // // "order": [[ 3, "desc" ]]
+            }
+        );
+        // new $.fn.dataTable.FixedHeader( table );
+    // });
+    
+     //]]>
+    //  $('#container').css( 'display', 'block' );
+    //  table.columns.adjust().draw();
+    //  jQuery('.dataTable').wrap('<div class="df_tableBoot" />');
+</script>
 
 <script>
 //     document.addEventListener("DOMContentLoaded", function(event) {

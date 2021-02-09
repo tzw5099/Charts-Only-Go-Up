@@ -146,13 +146,9 @@ button.dt-button{
   background-color: white !important;
 }
 #tgb_page-tgb_tabs #tgb_panels .tgb_panel-wrapper{padding: 5px !important}
-.th_fin_statement_class{
-  font-size: 12px !important;
-}
 
-.td_fin_statement_class {
-  font-size:14px !important;
-}
+
+
 .middle{
   margin: 0 auto !important;
   text-align: center !important;
@@ -883,7 +879,9 @@ body {
 		padding-right: 0px;
 	}
 }
-
+.similar_comp_table_header{
+	border: 1px solid #EDEDED;
+}
 @media (max-width: 768px) {
 	.lazytype {
 		/* width: 360px; */
