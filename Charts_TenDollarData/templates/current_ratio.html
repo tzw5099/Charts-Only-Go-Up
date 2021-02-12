@@ -3,7 +3,7 @@
 <title>
 
     {% if chart_type == "normal" %}
-    {{company_symbol}}'s {{fin_metric_name}}
+    {{company_symbol}}'s {{fin_metric_name}} vs Stock Price 
                     |
                     {{ earliest_year }}
                     -
@@ -15,7 +15,8 @@
                     {{ earliest_year }}
                     -
                     2021
-                    | {{company_short_name}} | Charts
+                    | {{company_short_name}} | Charts 
+                    📈
 
                     {% elif chart_type == "statement" %}
                     {{company_symbol}}'s {{ fin_statement_dir }}
@@ -23,14 +24,16 @@
                     {{ earliest_year }}
                     -
                     2021
-                    | {{company_short_name}} | Charts
+                    | {{company_short_name}} | Charts 
+                    📈
 {% else %}
     {{company_symbol}} Overview - All Historical Data
                     |
                     {{ earliest_year }}
                     -
                     2021
-                    | {{company_short_name}} | Charts
+                    | {{company_short_name}} | Charts 
+                    📈
 
 
 {% endif %}

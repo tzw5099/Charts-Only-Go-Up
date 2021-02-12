@@ -96,7 +96,7 @@ from flask import json
 #     )
 #     return response
 
-@charts.route('/favicon.ico') 
+@charts.route('/favicon.ico', methods=['POST', 'GET']) 
 def favicon(): 
     return send_from_directory(os.path.join(charts.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
@@ -253,18 +253,53 @@ def PrintException():
     return(lineno, line.strip(), exc_obj,)
 # import markdown
 # @charts.route('/mcap', methods=['POST', 'GET'])
-@charts.route('/')
-def market_caps_table():
+import time
+
+# Import extension
+# from server_timing import Timing
+@charts.route('/markets/<collection>', methods=['POST', 'GET'])
+@charts.route('/', methods=['POST', 'GET'])
+def market_caps_table(collection="main"):
+
+
+    # from sqlalchemy import  create_engine
+    # import psycopg2
+
+    # pg_engine = create_engine("postgresql+psycopg2://root:v8qMAEYm145@localhost/pg_dataverse")
+    # pg_list_row = []
+    # with pg_engine.connect() as con:
+    #     rs = con.execute(f"""
+    #         SELECT a.* FROM "stocks_mcap_table.sp500" a
+    #         INNER JOIN (SELECT MAX(timestamp) as timestamp,symbol FROM "stocks_mcap_table.sp500"  GROUP BY symbol) b
+    #         ON a.symbol = b.symbol AND a.timestamp = b.timestamp WHERE "marketCap" IS NOT NULL  ORDER BY "marketCap" DESC
+    #         """)
+    #     for row in rs:
+    #         row = dict(zip(row.keys(), row))
+    #         pg_list_row.append(row)
+    
+    # df = (pd.DataFrame(pg_list_row))
+    # df_html = (pd.DataFrame(pg_list_row))
+    # con.close()
+
+    
     global domain
     global subdomain
-    df = pd.read_csv("reference_data/homepage_final.csv")
-    df_html = pd.read_csv("reference_data/homepage_final.csv")
+    # df = pd.read_csv("reference_data/homepage_final.csv")
+    # df_html = pd.read_csv("reference_data/homepage_final.csv")
+    if collection == "main":
+        df = pd.read_csv("reference_data/homepage.csv")
+        df_html = pd.read_csv("reference_data/homepage.csv")
+    else: 
+        df = pd.read_csv("reference_data/all_stocks.csv")
+        df_html = pd.read_csv("reference_data/all_stocks.csv")
     #.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
     # df_html['Market Cap'] = df_html.apply(lambda x: magnitude_num(x['marketCap'],"$"), axis=1)#.head(30)
     # df_html['Market Cap'] = df_html.apply(lambda x: int(x['marketCap']), axis=1)#.head(30)
     sum_mcap = sum(df_html['marketCap']) #('${:,.0f}'.format)
     sum_01d_vol = sum(df_html['price'] * df_html['volume'])
-    sum_90d_vol = sum(df_html['price'] * df_html['avgVolume'])
+    # sum_90d_vol = sum(df_html['price'] * df_html['avgVolume'])
+    sum_01d_vol = np.sum(df_html["price"] * pd.to_numeric(df_html["volume"], errors='coerce'))
+    sum_90d_vol = np.sum(df_html["price"] * pd.to_numeric(df_html["avgVolume"], errors='coerce'))
     dominance_top_10 = sum(df_html['marketCap'][0:10])
     dominance_top_10_pct = 100*dominance_top_10/sum_mcap
     sum_mcapx = magnitude_num(sum_mcap,"$") #f'${sum_mcap:,.0f}'
@@ -277,7 +312,12 @@ def market_caps_table():
     # df_html['Name'] = df_html.apply(lambda x: Markup('<div class="mcap_symbol">'+x['symbol']+'</div> <div class="mcap_name">'+x['name']+"</div>"),axis=1)
     # df_html['Name'] = df_html.apply(lambda x: ('<div class="mcap_symbol">'+x['symbol']+'</div> <div class="mcap_name">'+x['name']+"</div>"),axis=1)
     # img data-original -→ img-src. using deferRender, so lazyloading not needed.
-    df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy"  src="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, x['symbol'].lower(),domain, x['symbol'].upper())+x['symbol'].upper()+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +x['name']+'</td></tr></thead></table></a>'),axis=1)
+    # df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy"  src="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, x['symbol'].lower(),domain, x['symbol'].upper())+x['symbol'].upper()+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +x['name']+'</td></tr></thead></table></a>'),axis=1)
+    # df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy"  src="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, str(x['symbol'].lower()),domain, str(x['symbol'].upper()))+str(x['symbol'].upper())+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +str(x['name'])+'</td></tr></thead></table></a>'),axis=1)
+    # WORKS BEST df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy"  data-original="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, str(x['symbol'].lower()),domain, str(x['symbol'].upper()))+str(x['symbol'].upper())+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +str(x['name'])+'</td></tr></thead></table></a>'),axis=1)
+
+    # df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"></th><th class="mcap_symbol">'.format(domain, x['symbol'].lower(),domain, x['symbol'].upper())+x['symbol'].upper()+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +x['name']+'</td></tr></thead></table></a>'),axis=1)
+
     # df_html['symbol'] = df_html.apply(lambda x: ('<i class="material-icons icon_brand">show_chart</i>'+'<br/>'+x['symbol']+""),axis=1)
     # df_html['Avg $ Vol'] = df_html.apply(lambda x: "{}".format(magnitude_num(x['avgVolume']*x['price'],"$")), axis=1)
 
@@ -289,67 +329,82 @@ def market_caps_table():
     # df_html['24H $ Vol'] = df_html['24H $ Vol'].apply(lambda x: float(magnitude_num(x,"",fixed=1000000, scale="")))
     # df_html['24H $ Vol'] = df_html['24H $ Vol'].map('${:,.0f}M'.format)
 
-
-
-    df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
-    df_html['90D $ Vol'] = df_html['90D $ Vol'].map('${:,.0f}'.format)
-    df_html['24H $ Vol'] = df_html['price']*df_html['volume']
-    df_html['24H $ Vol'] = df_html['24H $ Vol'].map('${:,.0f}'.format)
-
-    df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
-    df_html['24H $ Vol'] = df_html['price']*df_html['volume']
-    df_html['24H $ Vol'] = df_html['24H $ Vol'].apply(lambda x: (magnitude_num(x,"$")))
-    df_html['90D $ Vol'] = df_html['90D $ Vol'].apply(lambda x: (magnitude_num(x,"$")))
-    
-    
-    # df_html['24H $ Vol'] = df_html['24H $ Vol'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="vol_24">'+str(x)+'</span>'))
-    # df_html['90D $ Vol'] = df_html['90D $ Vol'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="vol_90">'+str(x)+'</span>'))
-
-
-    df_html['24H $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['volume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['volume'],"$"))+'</span>'),axis=1)
-    df_html['90D $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['avgVolume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['avgVolume'],"$"))+'</span>'),axis=1)
-
-    # df_html['24H $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['volume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['volume'],"$"))+'</span>'+'<br class="shares_out_br"><span class="mcap_shares_vol">' + str(x['volume']) +" " + str(x['symbol'])+"</span>"),axis=1)
-    # df_html['90D $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['avgVolume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['avgVolume'],"$"))+'</span>'+'<br class="shares_out_br"><span class="mcap_shares_vol">' + str(x['avgVolume']) +" " + str(x['symbol'])+"</span>"),axis=1)
-
-
-    df_html['avgVolumex'] = df_html['avgVolume'].map('{:,.0f}'.format)
-    df_html['volumex'] = df_html['volume'].map('{:,.0f}'.format)
-    # df_html['volume'] = df_html['volume']
-    # df_html['volume'] = df_html.apply(lambda x: strx['volume'] + " " + x['symbol'],axis=1)
-    #df_html['volume'].map('{:,.0f}'.format) + " shares"
-
-
-    # df_html['24H $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['24H $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['volumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
-    # df_html['90D $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['90D $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['avgVolumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
-    
-    
-    # df_html['price'] = df_html.apply(lambda x: Markup("$"+str(np.round(x['price'],2))), axis=1)
-    # df_html['price'] = df_html.apply(lambda x: ("$"+str(np.round(x['price'],2))), axis=1)
-    # df_html['pe'] = df_html.apply(lambda x: np.round(x['pe'],2), axis=1)
-    df_html['pe'] = df_html['pe'].map('{:,.2f}'.format)
-    # df_html['% Chg'] = df_html['changesPercentage'].map('{:,.2f}%'.format)
-    df_html['% Chg'] = df_html.apply(lambda x: change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change", sign="no", markup=0), axis=1)#.head(30)
-    df_html['% Chg'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['changesPercentage'])+'"><span class="chg_pct">'+change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change", sign="no", markup=0)+'</span>'),axis=1)
-
-    # df_html['% Chg'] = df_html.apply(lambda x: x['changesPercentage'], axis=1)#change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change"), axis=1)#.head(30)
-    df_html['Shares Outstanding'] = df_html['sharesOutstanding'].map('{:,.0f}'.format)
-    # df_html['Shares Outstanding'] = df_html.apply(lambda x: ('<span class="mcap_shares_out">'+str(x['Shares Outstanding'])+'</span><br/><span class="mcap_pct_out">' + str(np.round((100*x['avgVolume']/x['sharesOutstanding']),3)) +"%</span>"),axis=1)
-    df_html['Shares Outstanding'] = df_html.apply(lambda x: ('<span class="mcap_shares_out">'+str(x['Shares Outstanding'])+'</span><br/><span class="mcap_pct_out">'+"</span>"),axis=1)
-    df_html['price'] = df_html['price'].map('${:,.2f}'.format)
-    # df_html['Market Cap'] = df_html['marketCap'].apply(lambda x: float(magnitude_num(x,"",fixed=1000000000, scale="")))
     df_html['Market Cap'] = df_html['marketCap'].apply(lambda x: (magnitude_num(x,"$", trillion=0)))
 
     # df_html['Market Cap'] = df_html['Market Cap'].map('${:,.1f}B'.format)
     df_html['Market Cap'] = df_html['Market Cap'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="mcap_num">'+str(x)+'</span>'))
 
 
-    # df_html['Market Cap'] = df_html['marketCap'].map('${:,.0f}'.format)
-    # df_html['Market Cap'] = df_html['marketCap']#.map('${:,.0f}'.format)
 
 
-    df_html = df_html[['name','price','% Chg', 'Market Cap','24H $ Vol','90D $ Vol','pe',]][0:150]
-    df_html.columns = ['Name', 'Price', '% Chg', 'Market Cap','24H $ Vol', '90D $ Volume','P/E']
+    if collection == "main":
+        print("zzzthisisheresada")
+        df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy"  data-original="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, str(x['symbol'].lower()),domain, str(x['symbol'].upper()))+str(x['symbol'].upper())+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +str(x['name'])+'</td></tr></thead></table></a>'),axis=1)
+        df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
+        df_html['90D $ Vol'] = df_html['90D $ Vol'].map('${:,.0f}'.format)
+        df_html['24H $ Vol'] = df_html['price']*df_html['volume']
+        df_html['24H $ Vol'] = df_html['24H $ Vol'].map('${:,.0f}'.format)
+
+        df_html['90D $ Vol'] = df_html['price']*df_html['avgVolume']
+        df_html['24H $ Vol'] = df_html['price']*df_html['volume']
+        df_html['24H $ Vol'] = df_html['24H $ Vol'].apply(lambda x: (magnitude_num(x,"$")))
+        df_html['90D $ Vol'] = df_html['90D $ Vol'].apply(lambda x: (magnitude_num(x,"$")))
+        
+        
+        # df_html['24H $ Vol'] = df_html['24H $ Vol'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="vol_24">'+str(x)+'</span>'))
+        # df_html['90D $ Vol'] = df_html['90D $ Vol'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="vol_90">'+str(x)+'</span>'))
+
+
+        df_html['24H $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['volume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['volume'],"$"))+'</span>'),axis=1)
+        df_html['90D $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['avgVolume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['avgVolume'],"$"))+'</span>'),axis=1)
+
+        # df_html['24H $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['volume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['volume'],"$"))+'</span>'+'<br class="shares_out_br"><span class="mcap_shares_vol">' + str(x['volume']) +" " + str(x['symbol'])+"</span>"),axis=1)
+        # df_html['90D $ Vol'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['price']*x['avgVolume'])+'"><span class="vol_24">'+str(magnitude_num(x['price']*x['avgVolume'],"$"))+'</span>'+'<br class="shares_out_br"><span class="mcap_shares_vol">' + str(x['avgVolume']) +" " + str(x['symbol'])+"</span>"),axis=1)
+
+
+        df_html['avgVolumex'] = df_html['avgVolume'].map('{:,.0f}'.format)
+        df_html['volumex'] = df_html['volume'].map('{:,.0f}'.format)
+        # df_html['volume'] = df_html['volume']
+        # df_html['volume'] = df_html.apply(lambda x: strx['volume'] + " " + x['symbol'],axis=1)
+        #df_html['volume'].map('{:,.0f}'.format) + " shares"
+
+
+        # df_html['24H $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['24H $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['volumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
+        # df_html['90D $ Vol'] = df_html.apply(lambda x: ('<span class="mcap_dol_vol">'+x['90D $ Vol']+'</span><br/><span class="mcap_shares_vol">' + str(x['avgVolumex']) +" " + str(x['symbol'])+"</span>"),axis=1)
+        
+        
+        # df_html['price'] = df_html.apply(lambda x: Markup("$"+str(np.round(x['price'],2))), axis=1)
+        # df_html['price'] = df_html.apply(lambda x: ("$"+str(np.round(x['price'],2))), axis=1)
+        # df_html['pe'] = df_html.apply(lambda x: np.round(x['pe'],2), axis=1)
+        df_html['pe'] = df_html['pe'].map('{:,.2f}'.format)
+        # df_html['% Chg'] = df_html['changesPercentage'].map('{:,.2f}%'.format)
+        df_html['% Chg'] = df_html.apply(lambda x: change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change", sign="no", markup=0), axis=1)#.head(30)
+        df_html['% Chg'] = df_html.apply(lambda x: ('<td data-sort="'+str(x['changesPercentage'])+'"><span class="chg_pct">'+change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change", sign="no", markup=0)+'</span>'),axis=1)
+
+        # df_html['% Chg'] = df_html.apply(lambda x: x['changesPercentage'], axis=1)#change_markup(x['changesPercentage'],"percent",arrow_no_arrow = "arrow", css_class = "daily_change"), axis=1)#.head(30)
+        df_html['Shares Outstanding'] = df_html['sharesOutstanding'].map('{:,.0f}'.format)
+        # df_html['Shares Outstanding'] = df_html.apply(lambda x: ('<span class="mcap_shares_out">'+str(x['Shares Outstanding'])+'</span><br/><span class="mcap_pct_out">' + str(np.round((100*x['avgVolume']/x['sharesOutstanding']),3)) +"%</span>"),axis=1)
+        df_html['Shares Outstanding'] = df_html.apply(lambda x: ('<span class="mcap_shares_out">'+str(x['Shares Outstanding'])+'</span><br/><span class="mcap_pct_out">'+"</span>"),axis=1)
+        df_html['price'] = df_html['price'].map('${:,.2f}'.format)
+        # df_html['Market Cap'] = df_html['marketCap'].apply(lambda x: float(magnitude_num(x,"",fixed=1000000000, scale="")))
+
+
+        # df_html['Market Cap'] = df_html['marketCap'].map('${:,.0f}'.format)
+        # df_html['Market Cap'] = df_html['marketCap']#.map('${:,.0f}'.format)
+
+
+        df_html = df_html[['name','price','% Chg', 'Market Cap','24H $ Vol','90D $ Vol','pe']][0:]
+        df_html.columns = ['Name', 'Price', '% Chg', 'Market Cap','24H $ Vol', '90D $ Volume','P/E']
+    else: 
+        df_html['name'] = df_html.apply(lambda x: ('<a class="mcap_link" href="{}/{}"><div class="mcap_symbol">'.format(domain, str(x['symbol'].lower()),domain, str(x['symbol'].upper()))+str(x['symbol'].upper())+'</div><div class="mcap_name">' +str(x['name'])+'</div></a>'),axis=1)
+        print("thisisheresada")
+        df_html = df_html[['name','Market Cap']][0:]
+        df_html.columns = ['Name', 'Market Cap']
+
+
+    # df_html = df_html[['name','price','% Chg', 'Market Cap','24H $ Vol','90D $ Vol','pe','industry','sector','country']][0:500]
+    # df_html.columns = ['Name', 'Price', '% Chg', 'Market Cap','24H $ Vol', '90D $ Volume','P/E','Industry','Sector','Country']
+
     df_html = df_html.to_html(escape=False).replace('<table','<table class="df_tableBoot compact stripe hover cell-border order-column row-border" id="df_myTable"')
     
     df_html = df_html.replace("\n","").replace('<tr style="text-align: right;">','<tr class="tr_header">')
@@ -368,13 +423,15 @@ def market_caps_table():
     df_html = df_html.replace('td><td data','td data')
     df_html = df_html.replace('td>&lt;td data','td data')
      
-    print("dfz_html_printed",df_html)
+    # print("dfz_html_printed",df_html)
+    print("line no", get_linenumber())
 
     
     
     return render_template('market_caps_table.html',\
         df_html = Markup(df_html),
         df_test = list(df),
+        collection = collection,
         sum_mcapx = sum_mcapx,
         sum_01d_volx = sum_01d_volx,
         sum_90d_volx = sum_90d_volx,
@@ -382,166 +439,177 @@ def market_caps_table():
         dominance_top_10_pctx = dominance_top_10_pctx
     # df_html = [df_html],
         )
+
+
 # sum_mcapx = f'${sum_mcap:,.0f}'
 # sum_01d_volx = f'${sum_01d_vol:,.0f}'
 # sum_90d_volx = f'${sum_90d_vol:,.0f}'
 # dominance_top_10x = f'${dominance_top_10:,.0f}'
 # dominance_top_10_pctx = f'{dominance_top_10_pct:,.2f}'+"%"
 # df_html = [df_html.replace('<th class="th_fin_statement_class fin_statement_class">YoY % Change</th>      <th class="th_fin_statement_class fin_statement_class">Stock Price</th>', '<th class="th_fin_statement_class fin_statement_class">YoY % Change{}</th>      <th class="th_fin_statement_class fin_statement_class">Stock Price</th>'.format(min_max_warning))],
-@charts.route('/test/<some_place>', methods=['POST', 'GET'])
-# @cache.cached(timeout=5)
-def fin_test(some_place):
-    global domain
-    global subdomain
-    url_symbol = some_place
-    company_profiles = pd.read_csv("reference_data/Company_Profiles.csv")
-    currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())]['currency symbol'])[0]
-    currency_symbol_original = currency_symbol
-    company_profiles_col = ['symbol',
-                            'long name',
-                            'currency',
-                            'exchange',
-                            'industry',
-                            'description',
-                            'sector',
-                            'country',
-                            'ipo date',
-                            'short name',
-                            'Industries',
-                            'Similar Companies',
-                            'shortest name',
-                            'url name']
-    company_profiles = company_profiles[company_profiles_col]
-    profiles_dict = {}
-    profiles_value = company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())].values.tolist()[0]
-    for n, profiles_col in enumerate(company_profiles_col):
-        key = profiles_col
-        value = profiles_value[n]
-        profiles_dict[key] = value
-    chars_to_remove = ["'","[","]"]
-    try:
-        for character in chars_to_remove:
-            profiles_dict['Industries'] = profiles_dict['Industries'].replace(character, "")
-            profiles_dict['Similar Companies'] = profiles_dict['Similar Companies'].replace(character, "")
-    except:
-        pass
-    fin_paper = FS("IS",some_place)
-    # tables=fin_paper.df_values()['df_table']
-    balance_sheet=FS("BS",some_place).df_table()
-    cash_flow=FS("CF",some_place).df_table()
-    income_statement=FS("IS",some_place).df_table()
-    # table_pct = fin_paper.df_values()['df_table_pct']
-    # table_pct = fin_paper.df_table_pct()
-    fin_paper_values = fin_paper.df_values()
-    # df_date = fin_paper_values['chart_x_dates'],
-    # df_rev = fin_paper_values['chart_y_revenue']
-    df_json = fin_paper_values['df_json']
-    # titles = fin_paper_values['df_titles']
-    # labels = fin_paper.df_labels()
-    #  values=FS("BS","AAPL").df_price()
-    values = fin_paper_values['df_close']
-    place_name=some_place
-    max=17000
-    try:
-        split_input = profiles_dict['description'].split(".")
-        pass_index = -100
-        sentence_list = []
-        for n,x in enumerate(split_input):
-            # print(pass_index)
-            if pass_index == n+1:
-                pass
-            else:
-                if (len(x))<30:
-                    try:
-                        sentence = x+split_input[n+1]+"."
-                    except:
-                        sentence = x+"."
-                    pass_index = n+1
-                    sentence = ("<li span='description_list'>{}</li>".format(sentence))
-                    sentence_list.append(sentence)
-                else:
-                    sentence = x+"."
-                    sentence = ("<li span='description_list'>{}</li>".format(sentence))
-                    sentence_list.append(sentence)
-            # print(n,sentence)
-        sentences_list_joined = Markup("".join(sentence_list[:-1]))
-        html_sentence_list = sentences_list_joined #Markup("<ul>"+sentences_list_joined+"</ul>")
-    except:
-        sentence = profiles_dict['description']
-        sentence = ("<li span='description_list'>{}</li>".format(sentence))
-        html_sentence_list = Markup(sentence)
-    # print("this", html_sentence_list)
-    company_long_name = profiles_dict['long name']
-    company_symbol = profiles_dict['symbol']
-    # df_image_name = Markup('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, company_symbol, domain,company_symbol)+company_symbol+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +company_long_name+'</td></tr></thead></table></a>')
-    df_image_name = Markup('<a class="mcap_link" href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40">'.format(domain, company_symbol.lower(), domain,company_symbol)+'</a>')
-    # values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
-    try:
-        company_similar = profiles_dict['Similar Companies'].split(",")
-        company_similar = [ x for x in company_similar if "XL" not in x ]
-        company_similar_list = []
-        n = 0
-        while n < len(company_similar):
-            x = company_similar[n]
-            # company_similar_x = ('<a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a>, '.format(subdomain,x.lower().strip(),stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
-            company_similar_x = ('<a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a>, '.format(subdomain,x.lower().strip(),stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
-            company_similar_img = ('<a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a>, '.format(subdomain,x.lower().strip(),stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
-            company_similar_list.append(company_similar_x)
-            n+=1
-        # company_similar_paragraph = Markup(''.join(company_similar_list)[:-2])
-        company_similar_paragraph = Markup('<table class="tg"> <thead> <tr>',''.join(company_similar_list)[:-2],"</tr></thead><tbody><tr>")
-    except Exception as e:
-        company_similar_paragraph = ''
-    return render_template('symbol_main_page.html',
-    # return render_template('fin_statements_bootstrapped.html',
-    # return render_template('fin_statements_bootstrapped_w_comments.html',
-    # FS("IS","AAPL").df_values()['df_table']
-    # FS("IS","AAPL").df_values()['df_table_pct']
-    # FS("IS","AAPL").df_values()['chart_x_dates']
-    # FS("IS","AAPL").df_values()['chart_y_revenue']
-    # FS("IS","AAPL").df_values()['df_json']
-    # FS("IS","AAPL").df_values()['df_titles']
-    #  tables=FS("IS","AAPL").df_values()['df_table'],
-    #  table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
-    #  df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
-    #  df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
-     df_json = FS("IS","AAPL").df_values()['df_json'],
-     df_image_name = df_image_name,\
-    #  titles=FS("IS","AAPL").df_values()['df_titles'],
-    #  labels = FS("IS","AAPL").df_labels(),
-    #  values=FS("IS","AAPL").df_price(),
-    #  place_name=some_place, max=17000,
-    company_long_name = profiles_dict['long name'],\
-    company_currency = profiles_dict['currency'],\
-    currency_symbol = currency_symbol,\
-    company_exchange = profiles_dict['exchange'],\
-    company_industry = profiles_dict['industry'],\
-    company_description = profiles_dict['description'],\
-    company_sector = profiles_dict['sector'],\
-    company_country = profiles_dict['country'],\
-    company_ipo_date = profiles_dict['ipo date'],\
-    company_short_name = profiles_dict['shortest name'],
-    company_industries = profiles_dict['Industries'],\
-    company_url_name = profiles_dict['url name'],\
-    company_similar = company_similar_paragraph,
-    html_sentence_list = html_sentence_list,\
-    domain = domain,
-    subdomain = subdomain,
-    url_symbol = some_place,
-    balance_sheet=balance_sheet,
-    income_statement = income_statement,
-    cash_flow = cash_flow,
-    # table_pct = table_pct,
-    # df_date = df_date,
-    # df_rev = df_rev,
-    # df_json = df_json,
-    # titles=titles,
-    # labels = labels,
-    #  values=FS("BS","AAPL").df_price(),
-    values=values,
-    place_name=some_place,
-    max=17000,
-    )
+
+
+
+# @charts.route('/test/<some_place>', methods=['POST', 'GET'])
+# # @cache.cached(timeout=5)
+# def fin_test(some_place):
+#     global domain
+#     global subdomain
+#     url_symbol = some_place
+#     company_profiles = pd.read_csv("reference_data/Company_Profiles.csv")
+#     currency_symbol = list(company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())]['currency symbol'])[0]
+#     currency_symbol_original = currency_symbol
+#     company_profiles_col = ['symbol',
+#                             'long name',
+#                             'currency',
+#                             'exchange',
+#                             'industry',
+#                             'description',
+#                             'sector',
+#                             'country',
+#                             'ipo date',
+#                             'short name',
+#                             'Industries',
+#                             'Similar Companies',
+#                             'shortest name',
+#                             'url name']
+#     company_profiles = company_profiles[company_profiles_col]
+#     profiles_dict = {}
+#     profiles_value = company_profiles[company_profiles['symbol']=="{}".format(url_symbol.upper())].values.tolist()[0]
+#     for n, profiles_col in enumerate(company_profiles_col):
+#         key = profiles_col
+#         value = profiles_value[n]
+#         profiles_dict[key] = value
+#     chars_to_remove = ["'","[","]"]
+#     try:
+#         for character in chars_to_remove:
+#             profiles_dict['Industries'] = profiles_dict['Industries'].replace(character, "")
+#             profiles_dict['Similar Companies'] = profiles_dict['Similar Companies'].replace(character, "")
+#     except:
+#         pass
+#     fin_paper = FS("IS",some_place)
+#     # tables=fin_paper.df_values()['df_table']
+#     balance_sheet=FS("BS",some_place).df_table()
+#     cash_flow=FS("CF",some_place).df_table()
+#     income_statement=FS("IS",some_place).df_table()
+#     # table_pct = fin_paper.df_values()['df_table_pct']
+#     # table_pct = fin_paper.df_table_pct()
+#     fin_paper_values = fin_paper.df_values()
+#     # df_date = fin_paper_values['chart_x_dates'],
+#     # df_rev = fin_paper_values['chart_y_revenue']
+#     df_json = fin_paper_values['df_json']
+#     # titles = fin_paper_values['df_titles']
+#     # labels = fin_paper.df_labels()
+#     #  values=FS("BS","AAPL").df_price()
+#     values = fin_paper_values['df_close']
+#     place_name=some_place
+#     max=17000
+#     try:
+#         split_input = profiles_dict['description'].split(".")
+#         pass_index = -100
+#         sentence_list = []
+#         for n,x in enumerate(split_input):
+#             # print(pass_index)
+#             if pass_index == n+1:
+#                 pass
+#             else:
+#                 if (len(x))<30:
+#                     try:
+#                         sentence = x+split_input[n+1]+"."
+#                     except:
+#                         sentence = x+"."
+#                     pass_index = n+1
+#                     sentence = ("<li span='description_list'>{}</li>".format(sentence))
+#                     sentence_list.append(sentence)
+#                 else:
+#                     sentence = x+"."
+#                     sentence = ("<li span='description_list'>{}</li>".format(sentence))
+#                     sentence_list.append(sentence)
+#             # print(n,sentence)
+#         sentences_list_joined = Markup("".join(sentence_list[:-1]))
+#         html_sentence_list = sentences_list_joined #Markup("<ul>"+sentences_list_joined+"</ul>")
+#     except:
+#         sentence = profiles_dict['description']
+#         sentence = ("<li span='description_list'>{}</li>".format(sentence))
+#         html_sentence_list = Markup(sentence)
+#     # print("this", html_sentence_list)
+#     company_long_name = profiles_dict['long name']
+#     company_symbol = profiles_dict['symbol']
+#     # df_image_name = Markup('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, company_symbol, domain,company_symbol)+company_symbol+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +company_long_name+'</td></tr></thead></table></a>')
+#     df_image_name = Markup('<a class="mcap_link" href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40">'.format(domain, company_symbol.lower(), domain,company_symbol)+'</a>')
+#     # values = list(FS("IS","AAPL")['Beginning Price'])[0:19]
+#     try:
+#         company_similar = profiles_dict['Similar Companies'].split(",")
+#         company_similar = [ x for x in company_similar if "XL" not in x ]
+#         company_similar_list = []
+#         n = 0
+#         while n < len(company_similar):
+#             x = company_similar[n]
+#             # company_similar_x = ('<a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a>, '.format(subdomain,x.lower().strip(),stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
+#             company_similar_x = ('<a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a>, '.format(subdomain,x.lower().strip(),stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
+#             company_similar_img = ('<a class="similar_companies_urls" href="{}/{}-{}/{}/{}/{}">{}</a>, '.format(subdomain,x.lower().strip(),stock_or_etf,url_name,statement_or_ratio,url_fin_metric,x))
+#             company_similar_list.append(company_similar_x)
+#             n+=1
+#         # company_similar_paragraph = Markup(''.join(company_similar_list)[:-2])
+#         company_similar_paragraph = Markup('<table class="tg"> <thead> <tr>',''.join(company_similar_list)[:-2],"</tr></thead><tbody><tr>")
+#     except Exception as e:
+#         company_similar_paragraph = ''
+#     return render_template('symbol_main_page.html',
+#     # return render_template('fin_statements_bootstrapped.html',
+#     # return render_template('fin_statements_bootstrapped_w_comments.html',
+#     # FS("IS","AAPL").df_values()['df_table']
+#     # FS("IS","AAPL").df_values()['df_table_pct']
+#     # FS("IS","AAPL").df_values()['chart_x_dates']
+#     # FS("IS","AAPL").df_values()['chart_y_revenue']
+#     # FS("IS","AAPL").df_values()['df_json']
+#     # FS("IS","AAPL").df_values()['df_titles']
+#     #  tables=FS("IS","AAPL").df_values()['df_table'],
+#     #  table_pct = FS("IS","AAPL").df_values()['df_table_pct'],
+#     #  df_date = FS("IS","AAPL").df_values()['chart_x_dates'],
+#     #  df_rev = FS("IS","AAPL").df_values()['chart_y_revenue'],
+#      df_json = FS("IS","AAPL").df_values()['df_json'],
+#      df_image_name = df_image_name,\
+#     #  titles=FS("IS","AAPL").df_values()['df_titles'],
+#     #  labels = FS("IS","AAPL").df_labels(),
+#     #  values=FS("IS","AAPL").df_price(),
+#     #  place_name=some_place, max=17000,
+#     company_long_name = profiles_dict['long name'],\
+#     company_currency = profiles_dict['currency'],\
+#     currency_symbol = currency_symbol,\
+#     company_exchange = profiles_dict['exchange'],\
+#     company_industry = profiles_dict['industry'],\
+#     company_description = profiles_dict['description'],\
+#     company_sector = profiles_dict['sector'],\
+#     company_country = profiles_dict['country'],\
+#     company_ipo_date = profiles_dict['ipo date'],\
+#     company_short_name = profiles_dict['shortest name'],
+#     company_industries = profiles_dict['Industries'],\
+#     company_url_name = profiles_dict['url name'],\
+#     company_similar = company_similar_paragraph,
+#     html_sentence_list = html_sentence_list,\
+#     domain = domain,
+#     subdomain = subdomain,
+#     url_symbol = some_place,
+#     balance_sheet=balance_sheet,
+#     income_statement = income_statement,
+#     cash_flow = cash_flow,
+#     # table_pct = table_pct,
+#     # df_date = df_date,
+#     # df_rev = df_rev,
+#     # df_json = df_json,
+#     # titles=titles,
+#     # labels = labels,
+#     #  values=FS("BS","AAPL").df_price(),
+#     values=values,
+#     place_name=some_place,
+#     max=17000,
+#     )
+
+
+
+
+
+
 # @charts.route('/<some_place>/income-statement', methods=['POST', 'GET'])
 # @charts.route('/<some_place>/income-statement', methods=['POST', 'GET'])
 # @cache.cached(timeout=5)
@@ -1721,6 +1789,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     except Exception as e:
         price_json = []
     import json
+    print("ncappy", df)
     from urllib.request import urlopen
     try:
         fmp_url = ""#"https://financialmodelingprep.com/api/v3/quote/{}?apikey=4b5cd112b74ca86811fd1ccddd4ad9c1".format(url_symbol.upper())
@@ -1770,6 +1839,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     price_json.append([last_price_json_timestamp,last_price])
     first_price = price_json[0][1]
     df_tall = year_df[::-1]
+    print("ocappy", df_tall)
     # print("kk2")
     df_tall['Year'] = "4/1/" + df_tall['Year']
     df_tall['Stock Price'] = df_tall['Price'].apply(lambda x: "${:,}".format(np.round(x,2)))
@@ -1846,6 +1916,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     df_html_tall = df_html_tall.replace("-inf%","-")
     df_html_tall = df_html_tall.replace("inf%","-")
     df_html_tall = df_html_tall.replace("[","")
+    print("pcappy", df_html_tall)
     # df_html_tall = df_html_tall.replace("_"," ")
     # df_html_tall = df_html_tall.replace('.00','')
     # df_html_tall = df_html_tall.replace('.0','')
