@@ -64,4 +64,6 @@ if __name__ == '__main__':
     # apm = ElasticAPM(app)
 	# server = Server(app.run(debug=True,host='0.0.0.0', port=8420))
     # server.serve()
+    app.config['PROFILE'] = True
+    app.wsgi_app = ProfilerMiddleware(app.wsgi_app, restrictions=[30])
     app.run(debug=True,host='0.0.0.0', port=8420, threaded=True)

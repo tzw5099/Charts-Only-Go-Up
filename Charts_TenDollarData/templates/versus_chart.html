@@ -104,7 +104,7 @@
                                     navigator: {
                                         // enabled: false
                                     },
-                                    rangeSelector: {inputEnabled: false},
+                                    // rangeSelector: {inputEnabled: false},
                                     plotOptions: {
                                         line:{
                                         dataLabels:{
@@ -128,8 +128,8 @@
                                         verticalAlign: 'top',
                                     },
                                     mapNavigation: {
-                                        enabled: false,
-                                        enableButtons: false,//false
+                                        // enabled: false,
+                                        // enableButtons: false,//false
                                     },
                                     yAxis: [
                                         {
@@ -354,6 +354,7 @@
                         // },
 
                         // !!!!!!
+                        
                         line: { // SECTION - Highcharts - plotOptions - line
                             allowPointSelect: true,
                             connectNulls: true,
@@ -387,6 +388,7 @@
                             pointPlacement: 'on'
                         },
                         spline: { // SECTION - Highcharts - plotOptions - area
+                            
                         },
                         // column: { // SECTION - Highcharts - plotOptions- column
                         //     groupPadding: 0.1,
@@ -574,6 +576,16 @@
                             data: price_json,
                             zIndex: 98,
                             yAxis: 0,
+                            marker: {
+                                // symbol: 'triangle',
+                                radius: 1,
+                                states: {
+                                    hover: {
+                                        enabled: true,
+                                        lineColor: 'rgb(100,100,100)'
+                                    }
+                                }
+                            },
                         },
                         {
                             // SECTION - Highcharts - series - all

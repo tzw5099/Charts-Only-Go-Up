@@ -1,16 +1,16 @@
-{% extends "base.min.html" %}
+{% extends "base.html" %}
 {% block charts_quarter_head %}
 <title>
 
     {% if chart_type == "normal" %}
-    {{company_symbol}}'s {{fin_metric_name}} vs Stock Price 
+    {{company_symbol}}'s {{fin_metric_name}} vs Stonk Price 
                     |
                     {{ earliest_year }}
                     -
                     2021
                     | {{company_short_name}} | Charts
                     {% elif chart_type == "price" %}
-                    {{company_symbol}}'s Stock Price
+                    {{company_symbol}}'s Stonk Price
                     |
                     {{ earliest_year }}
                     -
@@ -84,7 +84,7 @@
 <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script> -->
 
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
@@ -144,10 +144,6 @@ a:hover {
 
 
 {% if main_page_y_n == "yes" %}
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
-
 <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
 <!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
 <script src="{{ url_for('static', filename='../static/js/modules/map.js') }}"></script>
@@ -218,6 +214,10 @@ a:hover {
         {% if chart_type == "statement" %}
         
         
+        {% elif price_available == "no" %}
+        var df_json = {{ df_json }};
+        var year_df_json = {{ year_df_json }};
+        var price_json = "";
 
         {% elif chart_type == "price" %}
         var df_json = {{ price_json }};
@@ -230,6 +230,7 @@ a:hover {
                 var df_json = {{ df_json }};
                 var year_df_json = {{ year_df_json }};
                 var price_json = {{ price_json }};
+                // var price_json = [[481075200000.0, 0.07484500000000001], [488937600000.0, 0.055914], [496886400000.0, 0.0656], [504835200000.0, 0.08144900000000001], [512611200000.0, 0.106544], [520473600000.0, 0.11006600000000001], [528422400000.0, 0.12195399999999999], [536371200000.0, 0.19547799999999999], [544147200000.0, 0.27912800000000004], [552009600000.0, 0.29102100000000003], [559958400000.0, 0.272856], [567907200000.0, 0.293802], [575769600000.0, 0.290831], [583632000000.0, 0.315391], [591580800000.0, 0.275038], [599529600000.0, 0.269514], [607305600000.0, 0.279204], [615168000000.0, 0.285194], [623116800000.0, 0.334412], [631065600000.0, 0.24511799999999997], [638841600000.0, 0.284781], [646704000000.0, 0.304607], [654652800000.0, 0.223689], [662601600000.0, 0.405079], [670377600000.0, 0.40227399999999996], [678240000000.0, 0.33914], [686188800000.0, 0.37848899999999996], [694137600000.0, 0.47701099999999996], [702000000000.0, 0.443766], [709862400000.0, 0.34574299999999997], [717811200000.0, 0.38931], [725760000000.0, 0.442155], [733536000000.0, 0.381678], [741398400000.0, 0.207096], [749347200000.0, 0.230494], [757296000000.0, 0.246367], [765072000000.0, 0.22649], [772934400000.0, 0.255332], [780883200000.0, 0.32847], [788832000000.0, 0.308002], [796608000000.0, 0.292592], [804470400000.0, 0.34518000000000004], [812419200000.0, 0.279301], [820368000000.0, 0.213141], [828230400000.0, 0.188066], [836092800000.0, 0.169742], [844041600000.0, 0.177457], [851990400000.0, 0.128271], [859766400000.0, 0.131164], [867628800000.0, 0.135022], [875577600000.0, 0.131405], [883526400000.0, 0.141291], [891302400000.0, 0.211213], [899164800000.0, 0.26715], [907113600000.0, 0.286439], [915062400000.0, 0.317783], [922838400000.0, 0.354914], [930700800000.0, 0.429658], [938649600000.0, 0.618207], [946598400000.0, 0.8004859999999999], [954460800000.0, 0.9572069999999999], [962323200000.0, 0.784091], [970272000000.0, 0.30186999999999997], [978220800000.0, 0.33369699999999997], [985996800000.0, 0.393338], [993859200000.0, 0.28995], [1001808000000.0, 0.270969], [1009756800000.0, 0.381456], [1017532800000.0, 0.374512], [1025395200000.0, 0.23547800000000002], [1033344000000.0, 0.247977], [1041292800000.0, 0.22159], [1049068800000.0, 0.21943000000000001], [1056931200000.0, 0.325287], [1064880000000.0, 0.353217], [1072828800000.0, 0.348125], [1080691200000.0, 0.397813], [1088553600000.0, 0.49904], [1096502400000.0, 0.808587], [1104451200000.0, 1.186648], [1112227200000.0, 1.1128879999999999], [1120089600000.0, 1.31627], [1128038400000.0, 1.777349], [1135987200000.0, 2.3303979999999997], [1143763200000.0, 2.172385], [1151625600000.0, 2.0973889999999997], [1159574400000.0, 2.5023009999999997], [1167523200000.0, 2.645809], [1175299200000.0, 3.0800389999999997], [1183161600000.0, 4.066393], [1191110400000.0, 5.862258], [1199059200000.0, 4.177496], [1206921600000.0, 5.3684650000000005], [1214784000000.0, 4.905532], [1222732800000.0, 3.3204550000000004], [1230681600000.0, 2.781602], [1238457600000.0, 3.883379], [1246320000000.0, 5.04256], [1254268800000.0, 5.8175099999999995], [1262217600000.0, 5.927377], [1269993600000.0, 8.057792], [1277856000000.0, 7.939280999999999], [1285804800000.0, 9.288879], [1293753600000.0, 10.472136], [1301529600000.0, 10.805753], [1309392000000.0, 12.051039], [1317340800000.0, 12.492363000000001], [1325289600000.0, 14.087938000000001], [1333152000000.0, 18.022854000000002], [1341014400000.0, 18.849346], [1348963200000.0, 18.451712], [1356912000000.0, 14.182214000000002], [1364688000000.0, 13.866817000000001], [1372550400000.0, 14.265975], [1380499200000.0, 16.586884], [1388448000000.0, 15.978329], [1396224000000.0, 18.947445000000002], [1404086400000.0, 21.607637], [1412035200000.0, 24.531713], [1419984000000.0, 26.72777], [1427760000000.0, 28.66321], [1435622400000.0, 27.897482], [1443571200000.0, 27.607912], [1451520000000.0, 22.584578], [1459382400000.0, 21.867334], [1467244800000.0, 24.457745000000003], [1475193600000.0, 26.791819], [1483142400000.0, 28.78175], [1490918400000.0, 34.218575], [1498780800000.0, 35.574905], [1506729600000.0, 40.591652], [1514678400000.0, 40.349579], [1522454400000.0, 39.988997999999995], [1530316800000.0, 46.223221], [1538265600000.0, 53.349593999999996], [1546214400000.0, 40.713184000000005], [1553990400000.0, 49.296772], [1561852800000.0, 52.53714], [1569801600000.0, 61.579021], [1577750400000.0, 76.84734300000001], [1585612800000.0, 73.119873], [1590475200000.0, 206.06875600000001],[1593475200000.0, 106.06875600000001], [1601424000000.0, 115.355003], [1609372800000.0, 135.37]];
         {% endif %}
 
 
@@ -357,14 +358,14 @@ a:hover {
                     <!-- <span class="highbar_title_stock">
                     Stock Price</span> &</span> -->
                     <span class="highbar_title_metric">
-                        Stock Price</span>
+                        Stonk Price</span>
                     </div>
                     <div id="highbar" class="highbar_mobile">
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
                     <br>
                         {% else %}
                     <span class="highbar_title_stock">
-                    Stock Price</span> &</span>
+                    Stonk Price</span> &</span>
                     <span class="highbar_title_metric">
                     {{ fin_metric_name }}</span>
 
@@ -401,9 +402,9 @@ a:hover {
     <div class="card shadow border-left-primary py-2 rightside" style="margin: 5px;">
         
 {% if versus_chart_y_n == "yes" %}
-{% include 'versus_card_rightside.min.html' %}
+{% include 'versus_card_rightside.html' %}
 {% else %}
-{% include 'versus_card_rightside.min.html' %}
+{% include 'versus_card_rightside.html' %}
 {% endif %}
         
 
@@ -499,8 +500,10 @@ slider.addEventListener('mousemove', e => {
 {% if main_page_y_n == "yes" %}
 <!-- {{fs_table_pct}} -->
 <!-- zzzz -->
+{% if len_table > 1 %}
 {% include 'tabs_fin_tables.html' %}
-
+{% else %}
+{% endif %}
 
 {% else %}
 {% endif %}
@@ -566,7 +569,7 @@ slider.addEventListener('mousemove', e => {
                 <br>
                 <strong>IPO Date:</strong> {{company_ipo_date}}
                 <br>
-                <strong>Stock Exchange:</strong> {{company_exchange}}
+                <strong>Stonk Exchange:</strong> {{company_exchange}}
                 <br>
                 <ul>
                 {{html_sentence_list}}

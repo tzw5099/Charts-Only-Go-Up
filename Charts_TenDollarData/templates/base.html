@@ -20,8 +20,8 @@
     <link rel="preconnect" href="//ajax.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
-    <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
-    <link rel="dns-prefetch" href="https://use.fontawesome.com">
+    <!-- <link rel="preconnect" href="https://use.fontawesome.com" crossorigin> -->
+    <!-- <link rel="dns-prefetch" href="https://use.fontawesome.com"> -->
     <link rel="preconnect" href="//cdnjs.cloudflare.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
     <link rel="preconnect" href="//www.google-analytics.com">
@@ -52,7 +52,7 @@
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="{{ url_for('static', filename='../static/js/chart.js') }}"></script>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
@@ -167,9 +167,10 @@
                                             <th class="mobile_th"> -->
                             <div class="lazytype">
     
-                                <!-- <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY..."> -->
+                                <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="TSLA, AAPL, SPY...">
+                                <!-- https://zavoloklom.github.io/material-design-iconic-font/cheatsheet.html#application -->
 
-                                <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="&#xF002; TSLA, AAPL, SPY.." style="font-family:Arial, FontAwesome">
+                                <!-- <input class="bg-light form-control border-0 small typeahead" type="search" placeholder="&#xF002; TSLA, AAPL, SPY.." style="font-family:Arial, FontAwesome"> -->
 
                                 
                             </div>
@@ -283,10 +284,10 @@
                                 aria-expanded="false"
                                 href="#"
                             >
-                                Data analyst? Buy $10 Datasets.
+                                Our Data Source.
                             </a>
                             <div class="dropdown-menu" role="menu">
-                                <div class="attribute_ten">We use the same data as those on tendollardata.com, listed below.</div>
+                                <div class="attribute_ten">We use the same data as those on tendollardata.com. Check out the datasets, for more quantitative analyses.</div>
                                 <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-minute-data-historical-intraday-data-dataset-all-us-equities-etfs-sp-500-tech-stocks/">⭐ Intraday Price Data  (1991 – Present)</a>
                                 <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-market-cap-dataset-historical-daily-price-price-dataset-all-us-equities-sp-500-tech-stocks/">⭐ Daily Price &amp; Market Cap (1970 – Present)</a>
                                 <a class="dropdown-item" role="presentation" href="https://tendollardata.com/product/historical-financial-statements-data-dataset-all-us-stocks-equities-1994-present/">⭐ Financial Statements   (1994 – Present)</a>
@@ -441,8 +442,8 @@
 
                         // empty: ['<div class="empty-message">', 'Try TSLA, AAPL, SPY,...', '</div>'].join('\n'),
                         suggestion: function (data) {
-                            return stringToHTML('<p class="sasa"><a href="https://chartsonlygoup.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Cash</strong>' + '</a></p>' + '<p class="dada"><a href="https://chartsonlygoup.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Net Revenue</strong>'  + '</a></p>'+'<li class="nav-item dropdown"> <a class="dropdown-toggle search nav-link" data-toggle="dropdown" aria-expanded="false" href="#" > Balance Sheet </a><ul class="dropdown-menu search" role="menu"><li><a class="dropdown-item" role="presentation" href="s">⭐ s</a></li><li><a class="dropdown-item" role="presentation" href="s">⭐ s</a></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" >Balance Sheet</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Submenu</a></li><li><a class="dropdown-item" href="#">Submenu0</a></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Subsubmenu1</a></li><li><a class="dropdown-item" href="#">Subsubmenu1</a></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Subsubmenu2</a></li><li><a class="dropdown-item" href="#">Subsubmenu2</a></li></ul></li></ul></li></ul></li>')
-                            // return "<p class='sasa'><a href=\"https://chartsonlygoup.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>\
+                            // return stringToHTML('<p class="sasa"><a href="https://chartsonlygoup.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Cash</strong>' + '</a></p>' + '<p class="dada"><a href="https://chartsonlygoup.com/' + data['ticker'] + '">' + data['value'] + ' - <strong>Net Revenue</strong>'  + '</a></p>'+'<li class="nav-item dropdown"> <a class="dropdown-toggle search nav-link" data-toggle="dropdown" aria-expanded="false" href="#" > Balance Sheet </a><ul class="dropdown-menu search" role="menu"><li><a class="dropdown-item" role="presentation" href="s">⭐ s</a></li><li><a class="dropdown-item" role="presentation" href="s">⭐ s</a></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" >Balance Sheet</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Submenu</a></li><li><a class="dropdown-item" href="#">Submenu0</a></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Subsubmenu1</a></li><li><a class="dropdown-item" href="#">Subsubmenu1</a></li></ul></li><li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Subsubmenu2</a></li><li><a class="dropdown-item" href="#">Subsubmenu2</a></li></ul></li></ul></li></ul></li>')
+                            return "<p class='sasa'><a href=\"https://chartsonlygoup.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>\
                             // <p><a href=\"https://chartsonlygoup.com/" + data['ticker'] + "\">" + data['value'] + "</a></p>"
                         }
                     }

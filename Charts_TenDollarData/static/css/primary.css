@@ -1,7 +1,9 @@
 
 /* added 2020-02-06 */
 
-
+body {
+    font-family: "Nunito Sans",Roboto, Arial;;
+}
 	.mcap_col1{
 		width:30px !important;
 	} 
@@ -1421,7 +1423,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Lato;
+	/* font-family: Lato; */
 	/* Catamaran; */
 	font-weight: 800 !important;
 	/* font-size: 18px !important; */

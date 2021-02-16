@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block charts_quarter_head %}
 <title>
-    Stock price, revenue, and other financial metrics history. | Charts
+    Stonk price, revenue, and other financial metrics history. | Charts
 </title>
 <style>
+    .squarelogo > table{
+  /* border-color: white; */
+  border: 1px solid white;
+}
     .table_title{
   margin: 0 auto;
   text-align: center;
@@ -84,7 +88,7 @@ https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css 
     <div class="item item1 s_card_2"><span class="sum_market_titles">Market Cap: </span>
         <span class="sum_market_number">{{sum_mcapx}}</span>
     </div>
-    <div class="item item1 s_card_2"><span class="sum_market_titles">Stocks: </span>
+    <div class="item item1 s_card_2"><span class="sum_market_titles">Stonks: </span>
         <span class="sum_market_number">6829</span>
     </div>
     <div class="item item1 s_card_2"><span class="sum_market_titles">24H Vol: </span>
@@ -134,7 +138,7 @@ slider.addEventListener('mousemove', e => {
 });
     </script>
 
-<div class="table_title">The Top 500 Largest Stocks (<a href="https://chartsonlygoup.com/all">all</a>)</div>
+<div class="table_title">The Top 500 Largest Stonks (<a href="https://chartsonlygoup.com/markets/all">all</a>)</div>
 
 <div class="mcap_table">
 {{df_html | safe}}

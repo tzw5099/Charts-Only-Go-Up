@@ -278,19 +278,27 @@ class FS:
         
         url_symbol_upper = self.url_symbol.upper()
         print("url_symbol_upper", url_symbol_upper, self.subject, self.subject_long)
-        
-        self.market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol_upper))[0]
-        # self.market_cap_path = glob.glob("/var/www/chartsonlygoup.com/public_html/Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(self.url_symbol.upper()))[0]
-        self.df_price = pd.read_csv(self.market_cap_path)
+        try:
+            self.market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol_upper))[0]
+            # self.market_cap_path = glob.glob("/var/www/chartsonlygoup.com/public_html/Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(self.url_symbol.upper()))[0]
+            self.df_price = pd.read_csv(self.market_cap_path)
+        except:
+            self.market_cap_path = ""
+            self.df_price = ""
+
         # "D:/Cloud/rclone/OneDrive/Web/TenDollarData/Charts_TenDollarData/financial_statements/functions"
-        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(self.subject_long,url_symbol_upper))[-1] #.format("NLOK"))[-1]
+        # csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(self.subject_long,url_symbol_upper))[-1] #.format("NLOK"))[-1]
+        csv_file = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/all/year/{}/*~{}~*".format(self.subject_long,url_symbol_upper))[-1] #.format("NLOK"))[-1]
+
         # csv_file = glob.glob("/var/www/chartsonlygoup.com/public_html/Charts_TenDollarData/financial_statements/data/Historical Financial Statements/*/year/{}/*~{}~*".format(subject,self.symbol))[-1] #.format("NLOK"))[-1]
 
         # csv_file = glob.glob("data\Historical Financial Statements\*\year\{}\*_{}_*".format(self.subject,self.symbol))[-1] #.format("NLOK"))[-1]
         self.year = pd.read_csv(csv_file)
         df = self.year[0:].iloc[::-1]
         df['Quarter & Year'] = df['period']+" "+(df['date'].astype(str).str[0:4])#((df_bs['date'].astype(str).str[0:4].astype(int))-1).astype(str)
-        df = df.drop([ 'Unnamed: 0','symbol','fillingDate','period','link'],axis=1)
+        # df = df.drop([ 'Unnamed: 0','symbol','fillingDate','period','link'],axis=1)
+        df = df.drop([ 'Unnamed: 0','symbol','fillingDate','period','link','reportedCurrency','timestamp','est_time','est_date'], errors='ignore',axis=1)
+        # df = df.drop(['reportedCurrency','timestamp','est_time','est_date'])
         # print("Listdemcolumns", list(df))
         df.columns = columns_keep
 
@@ -427,28 +435,33 @@ class FS:
         df = self.df
         df['Date'] = (pd.to_datetime(self.df['Date']).values.astype(np.int64) // 10 ** 6)
         # df = df[['Date', 'Revenue']]
-
-        df_price = self.df_price
-        df_price['datetime'] = (pd.to_datetime(df_price['datetime']).values.astype(np.int64) // 10 ** 6)
-        df_price = df_price[['datetime', 'adjClose']]
-
-        # df_json = df.to_numpy().tolist()
-        # df_json = fs.df_json()
-
-        df_json =df_price.dropna().to_numpy().tolist()
-        
-        
-        # chart_x_dates =  df['Date'].to_list()
-        # chart_y_revenue = df['Revenue'].to_list()
-        print("xyzdd", df_price['datetime'])
-        chart_x_dates =  df_price['datetime'].to_list()
-        chart_y_revenue = df_price['adjClose'].to_list()
         df_titles = df.columns.values
-        df_close = list(df_price['adjClose'])
-        df_price = df_price[['datetime', 'adjClose']].dropna().to_numpy().tolist()    
         
-        # df_json = fs.df_json()
-        # {'df_json': df_json, 'chart_x_dates':chart_x_dates,'chart_y_revenue':chart_y_revenue,'df_titles':df_titles }
+        try:
+            df_price = self.df_price
+            df_price['datetime'] = (pd.to_datetime(df_price['datetime']).values.astype(np.int64) // 10 ** 6)
+            df_price = df_price[['datetime', 'adjClose']]
+
+            # df_json = df.to_numpy().tolist()
+            # df_json = fs.df_json()
+
+            df_json =df_price.dropna().to_numpy().tolist()
+            
+            
+            # chart_x_dates =  df['Date'].to_list()
+            # chart_y_revenue = df['Revenue'].to_list()
+            print("xyzdd", df_price['datetime'])
+            chart_x_dates =  df_price['datetime'].to_list()
+            chart_y_revenue = df_price['adjClose'].to_list()
+            df_close = list(df_price['adjClose'])
+            df_price = df_price[['datetime', 'adjClose']].dropna().to_numpy().tolist()    
+        
+            # df_json = fs.df_json()
+            # {'df_json': df_json, 'chart_x_dates':chart_x_dates,'chart_y_revenue':chart_y_revenue,'df_titles':df_titles }
+        except:
+            df_price = ""
+            chart_x_dates = ""
+            chart_y_revenue = ""
         return {
             # 'df_table': fs.df_table(), 
             'df_close':df_close,
