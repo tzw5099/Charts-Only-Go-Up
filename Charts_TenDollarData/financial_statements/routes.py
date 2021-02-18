@@ -80,7 +80,7 @@ import inspect
 from inspect import currentframe, getframeinfo
 from flask import Markup
 
-from flask import send_from_directory     
+from flask import send_from_directory, Response     
 
 
 # https://stackoverflow.com/questions/13081532/return-json-response-from-flask-view
@@ -96,9 +96,33 @@ from flask import json
 #     )
 #     return response
 
+
+
+from werkzeug.exceptions import HTTPException
+
+# @charts.errorhandler(Exception)
+# def handle_exception(e):
+#     # pass through HTTP errors. You wouldn't want to handle these generically.
+#     if isinstance(e, HTTPException):
+#         return e
+
+#     # now you're handling non-HTTP exceptions only
+#     return render_template("500_generic.html", e=e), 500
+
 @charts.route('/favicon.ico', methods=['POST', 'GET']) 
 def favicon(): 
     return send_from_directory(os.path.join(charts.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+# @charts.route('/robots.txt')
+@charts.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(os.path.join(charts.root_path, 'static'), request.path[1:])
+
+@charts.route('/robots.txt')
+def noindex():
+    r = Response(response="User-Agent: *\nDisallow: \n", status=200, mimetype="text/plain")
+    r.headers["Content-Type"] = "text/plain; charset=utf-8"
+    return r
 
 def magnitude_num(number, currency_symbol, fixed=1, scale=1, trillion=1):
         try:
@@ -257,6 +281,108 @@ import time
 
 # Import extension
 # from server_timing import Timing
+@charts.route('/list/<collection>', methods=['POST', 'GET'])
+def lists(collection="all"):
+    global domain
+    global subdomain
+    # df = pd.read_csv("reference_data/homepage_final.csv")
+    # df_html = pd.read_csv("reference_data/homepage_final.csv")
+    if collection == "all":
+        company_profiles_path = "/var/www/chartsonlygoup.com/public_html/reference_data/Company_Profiles.csv"
+        company_profiles = pd.read_csv(company_profiles_path, encoding='latin1')
+    else: 
+        pass
+    # #.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
+    # # df_html['Market Cap'] = df_html.apply(lambda x: magnitude_num(x['marketCap'],"$"), axis=1)#.head(30)
+    # # df_html['Market Cap'] = df_html.apply(lambda x: int(x['marketCap']), axis=1)#.head(30)
+    # sum_mcap = sum(df_html['marketCap']) #('${:,.0f}'.format)
+    # sum_01d_vol = sum(df_html['price'] * df_html['volume'])
+    # # sum_90d_vol = sum(df_html['price'] * df_html['avgVolume'])
+    # sum_01d_vol = np.sum(df_html["price"] * pd.to_numeric(df_html["volume"], errors='coerce'))
+    # sum_90d_vol = np.sum(df_html["price"] * pd.to_numeric(df_html["avgVolume"], errors='coerce'))
+    # dominance_top_10 = sum(df_html['marketCap'][0:10])
+    # dominance_top_10_pct = 100*dominance_top_10/sum_mcap
+    # sum_mcapx = magnitude_num(sum_mcap,"$") #f'${sum_mcap:,.0f}'
+    # sum_01d_volx = magnitude_num(sum_01d_vol,"$") #f'${sum_01d_vol:,.0f}'
+    # sum_90d_volx = magnitude_num(sum_90d_vol,"$") #f'${sum_90d_vol:,.0f}'
+    # dominance_top_10x = magnitude_num(dominance_top_10,"$") #f'${dominance_top_10:,.0f}'
+    # dominance_top_10_pctx = "{}{}".format(np.round(dominance_top_10_pct,2),"%")
+
+    # df_html['Market Cap'] = df_html['marketCap'].apply(lambda x: (magnitude_num(x,"$", trillion=0)))
+
+    # # df_html['Market Cap'] = df_html['Market Cap'].map('${:,.1f}B'.format)
+    # df_html['Market Cap'] = df_html['Market Cap'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="mcap_num">'+str(x)+'</span>'))
+
+    # company_profiles = company_profiles[['symbol','pure name','currency',
+    # 'exchange',
+    # 'industry',
+    # 'sector',
+    # 'country',
+    # ]][0:]
+    # company_profiles.columns = ['symbol','name','currency',
+    # 'exchange',
+    # 'industry',
+    # 'sector',
+    # 'country',
+    # ]
+    company_profiles = company_profiles[['symbol',
+    ]][0:20000]
+    company_profiles.columns = ['symbol',
+    ]
+    def make_clickable(url, name):
+        return '<a href="https://chartsonlygoup.com/{}" class="all_symbols">{}</a>'.format(url,name)
+
+    company_profiles["symbol"] = company_profiles.apply(lambda x: make_clickable(x['symbol'], x['symbol']), axis=1)
+    print("zzsskadfjsdkl")
+    print(company_profiles)
+    return render_template('lists_table.html',\
+        df_html = Markup(company_profiles.to_html(escape=False)),
+    # df_html = [df_html],
+        )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @charts.route('/markets/<collection>', methods=['POST', 'GET'])
 @charts.route('/', methods=['POST', 'GET'])
 def market_caps_table(collection="main"):
@@ -287,11 +413,11 @@ def market_caps_table(collection="main"):
     # df = pd.read_csv("reference_data/homepage_final.csv")
     # df_html = pd.read_csv("reference_data/homepage_final.csv")
     if collection == "main":
-        df = pd.read_csv("reference_data/homepage.csv")
-        df_html = pd.read_csv("reference_data/homepage.csv")
+        df = pd.read_csv("reference_data/homepage.csv", encoding='latin1')
+        df_html = pd.read_csv("reference_data/homepage.csv", encoding='latin1')
     else: 
-        df = pd.read_csv("reference_data/all_stocks.csv")
-        df_html = pd.read_csv("reference_data/all_stocks.csv")
+        df = pd.read_csv("reference_data/all_stocks.csv", encoding='latin1')
+        df_html = pd.read_csv("reference_data/all_stocks.csv", encoding='latin1')
     #.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
     # df_html['Market Cap'] = df_html.apply(lambda x: magnitude_num(x['marketCap'],"$"), axis=1)#.head(30)
     # df_html['Market Cap'] = df_html.apply(lambda x: int(x['marketCap']), axis=1)#.head(30)
@@ -302,9 +428,9 @@ def market_caps_table(collection="main"):
     sum_90d_vol = np.sum(df_html["price"] * pd.to_numeric(df_html["avgVolume"], errors='coerce'))
     dominance_top_10 = sum(df_html['marketCap'][0:10])
     dominance_top_10_pct = 100*dominance_top_10/sum_mcap
-    sum_mcapx = magnitude_num(sum_mcap,"$") #f'${sum_mcap:,.0f}'
-    sum_01d_volx = magnitude_num(sum_01d_vol,"$") #f'${sum_01d_vol:,.0f}'
-    sum_90d_volx = magnitude_num(sum_90d_vol,"$") #f'${sum_90d_vol:,.0f}'
+    sum_mcapx = magnitude_num(sum_mcap*2,"$") #f'${sum_mcap:,.0f}'
+    sum_01d_volx = magnitude_num(sum_01d_vol*1.5,"$") #f'${sum_01d_vol:,.0f}'
+    sum_90d_volx = magnitude_num(sum_90d_vol*1.5,"$") #f'${sum_90d_vol:,.0f}'
     dominance_top_10x = magnitude_num(dominance_top_10,"$") #f'${dominance_top_10:,.0f}'
     dominance_top_10_pctx = "{}{}".format(np.round(dominance_top_10_pct,2),"%")
     # df_html['Market Cap ($MM)'] = df_html['marketCap']/1000000000
@@ -806,8 +932,10 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     global subdomain
     print("bobobo", url_fin_metric, statement_or_ratio)
     url_symbol = url_symbol.lower()
-    fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv")
+    fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv", encoding='latin1')
 
+    url_name = url_symbol
+    # url_name = list(fin_statements_matching[fin_statements_matching['Financial Statement']=="{}".format(fin_statement_dir)]['URL'])
 
 
 
@@ -838,10 +966,15 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         print("zleninc_state")
         # table_pct = fin_paper.df_values()['df_table_pct']
         fs_table_pct = fin_paper.df_table_pct()
-        fin_paper_values = fin_paper.df_values()
+        try:
+            fin_paper_values = fin_paper.df_values()
+            df_json = fin_paper_values['df_json']
+        except:
+            fin_paper_values = ""
+            df_json = ""
         # df_date = fin_paper_values['chart_x_dates'],
         # df_rev = fin_paper_values['chart_y_revenue']
-        df_json = fin_paper_values['df_json']
+        
         print("globglob")
         # titles = fin_paper_values['df_titles']
         # labels = fin_paper.df_labels()
@@ -928,7 +1061,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         return group
     fin_statements_list = ["balance-sheet","income-statement","cash-flow-statement"]
     # company_profiles = pd.read_csv("reference_data/Company_Profiles.csv")
-    company_profiles = pd.read_csv("reference_data/Company_Profiles/profile_{}.csv".format(url_symbol[0].upper()))
+    company_profiles = pd.read_csv("reference_data/Company_Profiles/profile_{}.csv".format(url_symbol[0].upper()), encoding='latin1')
     try:
         print(url_symbol)
     except:
@@ -978,7 +1111,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             profiles_dict['Similar Companies'] = profiles_dict['Similar Companies'].replace(character, "")
     except:
         pass
-    
+    url_name = profiles_dict['url name']
+    print("zuirl name", profiles_dict['url name'])
     if "{}".format(statement_or_ratio) in fin_statements_list:
         if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "balance-sheet" or "{}".format(statement_or_ratio) == "cash-flow-statement":
             if "{}".format(statement_or_ratio) == "income-statement":
@@ -1026,14 +1160,21 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
 
             # print("list_years", list_years)
             # print("list_yezars", len(df),df.head(30))
+            print("das ist amgn")
+            print(df)
+
+            df.to_csv("amgn_df.csv")
             try:
                 list_years = list(df["date"].apply(lambda j: j[0:4]))
-                if len(list_years) > len(list(set(list_years))):
-                    list_years = np.arange(list_years.min(),list_years.max()+2)
+                print("try list years",list_years)
+                # if len(list_years) > len(list(set(list_years))):
+                list_years = np.arange(list_years.min(),list_years.max()+2)
             except: # only here likely bc of AAPL - saving in Excel caused date format change
-                list_years = list(df["date"].apply(lambda j: j[-4:]))
-                if len(list_years) > len(list(set(list_years))):
-                    list_years = np.arange(list_years.min(),list_years.max()+2)
+                pass
+                # list_years = list(df["date"].apply(lambda j: j[-4:]))
+                # print("except list years",list_years)
+                # if len(list_years) > len(list(set(list_years))):
+                #     list_years = np.arange(list_years.min(),list_years.max()+2)
             new_df_list = []
             for n,y in enumerate(list_years):
                 for x in ["12-31","03-31","06-30","09-30"]:

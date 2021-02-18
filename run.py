@@ -33,9 +33,9 @@ app = create_app()
 # }
 # apm = ElasticAPM(app, logging=True)
 
-@elasticapm.capture_span()
-def foo():
-    return "foo"
+# @elasticapm.capture_span()
+# def foo():
+#     return "foo"
 
 
 if __name__ == '__main__':

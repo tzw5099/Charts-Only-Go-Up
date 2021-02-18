@@ -71,8 +71,9 @@
                         zoomType: 'x'
                     },
                     legend: {
+                        // enabled: false,
                         enabled: true,
-                        // verticalAlign: 'top',
+                        verticalAlign: 'bottom',
                         backgroundColor:'#FFFFFF',
                         borderColor:'#E9E9E9',
                         borderWidth:2,
@@ -104,7 +105,7 @@
                                     navigator: {
                                         // enabled: false
                                     },
-                                    // rangeSelector: {inputEnabled: false},
+                                    rangeSelector: {inputEnabled: false},
                                     plotOptions: {
                                         line:{
                                         dataLabels:{
@@ -125,7 +126,7 @@
                                 },
                                     legend: {
                                         enabled: true,
-                                        verticalAlign: 'top',
+                                        verticalAlign: 'bottom',
                                     },
                                     mapNavigation: {
                                         // enabled: false,
@@ -233,7 +234,8 @@
                         // verticalAlign: 'bottom',
                     },
                     rangeSelector: { // SECTION - Highcharts - range selector
-                        selected: 3,
+                        enabled: true,
+                        selected: 2,
                         inputBoxWidth: 100,
                         // verticalAlign: 'bottom',
                         inputDateFormat: '  %Y-%m-%d',
@@ -591,11 +593,14 @@
                             // SECTION - Highcharts - series - all
                             type: 'area', // type: 'column',
                             lineWidth: 0,
-                            color: 'transparent',
+                            // color: 'transparent',
+                            visible: false,
                             borderColor: 'transparent',
-                            showInLegend: false,
-                            // fillOpacity: .1,
+                            // showInLegend: false,
+                            showInLegend: true,
+                            fillOpacity: .1,
                             // color: "#19a419", //"#177737",
+                            // color: "#177737",
                             // marker: {
                             //     // symbol: 'triangle',
                             //     radius: 1,
@@ -606,6 +611,7 @@
                             //         }
                             //     }
                             // },
+
                             name: 'Quarterly (Q)   {{ fin_metric_name }}',
                             // pointInterval: 1,
                             // pointIntervalUnit: 'year',

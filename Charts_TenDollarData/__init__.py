@@ -24,6 +24,8 @@ compress = Compress()
 
 def create_app(config_class=Config):
     app = Flask(__name__, template_folder='templates')
+    app.config['PROPAGATE_EXCEPTIONS'] = True
+    app.config['LOG_FILE'] = '/var/log/logs_chartsonlygoup.log'
     # apm = ElasticAPM(app)
 
     app.config.from_object(Config)

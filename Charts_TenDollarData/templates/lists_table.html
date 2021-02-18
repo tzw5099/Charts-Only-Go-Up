@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block charts_quarter_head %}
+<title>
+    Stonk price, revenue, and other financial metrics history. | Charts
+</title>
+<style>
+    
+    .squarelogo > table{
+  /* border-color: white; */
+  border: 1px solid white;
+}
+    .table_title{
+  margin: 0 auto;
+  text-align: center;
+}
+    /* https://stackoverflow.com/questions/26023319/distribute-divs-evenly-in-a-horizontal-line */
+    .sum_market_titles{
+        font-weight: 700;
+
+
+    }
+    .sum_market_numbers{
+
+    }
+    .sum_market {
+    /* width:100%;
+    text-align:center; */
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    
+     justify-content: flex-start | flex-end | center | space-between | space-around;
+    }
+    .td_fin_statement_class {
+  font-size:14px !important;
+}
+.th_fin_statement_class{
+  font-size: 14px !important;
+}
+    .sum_market > div {
+    /* width: calc(100% / 5);   */
+    display: inline-block;
+    vertical-align: top;   
+    /* border:1px solid red; */
+    text-align:center;
+    margin:2%;    
+    padding:20px;
+    }
+    table{color:black !important;}
+.all_symbols{color:blue;}
+table,th{margin:0 auto;
+text-align:center;}
+</style>
+<!-- <script data-ad-client="ca-pub-1920116126561813" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" /> -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+
+
+
+<!-- enables CSV -->
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+
+<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css"> -->
+
+<!-- 
+https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css
+
+https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css -->
+
+{% endblock %}
+{% block quarterly_body %}
+
+
+
+      <script id="rendered-js" >
+const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
+    </script>
+
+<div class="table_title">All Stonks (<a href="https://chartsonlygoup.com/list/all">all</a>)</div>
+
+<div class="mcap_table">
+{{df_html | safe}}
+</div>
+
+<script>
+    function checkForm() {
+        var rows = document.getElementsByClassName("item-row");
+        var arr = new Array();
+
+        for (i = 0; i < rows.length; i++) {
+            var cols = rows[i].getElementsByTagName("td");
+
+            for (j = 0; j < cols.length; j++) {
+                arr.push(cols[j].textContent);
+            }
+        }
+    }
+</script>
+
+
+<script>
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+<!-- <script src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script> -->
+
+
+
+
+{% endblock %}

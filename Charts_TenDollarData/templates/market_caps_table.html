@@ -4,6 +4,10 @@
     Stonk price, revenue, and other financial metrics history. | Charts
 </title>
 <style>
+    .all_stocks_footer{
+        text-align: center;
+        margin: 0 auto;
+    }
     .squarelogo > table{
   /* border-color: white; */
   border: 1px solid white;
@@ -24,7 +28,7 @@
     .sum_market {
     /* width:100%;
     text-align:center; */
-    max-width: 1200px !important;
+    max-width: 1400px !important;
     margin: 0 auto !important;
     
      justify-content: flex-start | flex-end | center | space-between | space-around;
@@ -49,7 +53,7 @@
 <!-- <script data-ad-client="ca-pub-1920116126561813" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
 <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" /> -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
 <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
 
 
@@ -57,19 +61,19 @@
 <!-- enables CSV -->
 <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+ <!-- <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script> -->
 
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
 <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
-<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+<!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
 
 
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css">  -->
 
 <!-- 
 https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css
@@ -89,7 +93,7 @@ https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css 
         <span class="sum_market_number">{{sum_mcapx}}</span>
     </div>
     <div class="item item1 s_card_2"><span class="sum_market_titles">Stonks: </span>
-        <span class="sum_market_number">6829</span>
+        <span class="sum_market_number">16000+</span>
     </div>
     <div class="item item1 s_card_2"><span class="sum_market_titles">24H Vol: </span>
         <span class="sum_market_number">{{sum_01d_volx}}</span>
@@ -137,8 +141,27 @@ slider.addEventListener('mousemove', e => {
   console.log(walk);
 });
     </script>
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://chartsonlygoup.us1.list-manage.com/subscribe/post?u=ceb9fa4aa39bed0cdd5c2e605&amp;id=445fb4ded6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<!-- <label for="mce-EMAIL">Subscribe</label> -->
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ceb9fa4aa39bed0cdd5c2e605_445fb4ded6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
 
-<div class="table_title">The Top 500 Largest Stonks (<a href="https://chartsonlygoup.com/markets/all">all</a>)</div>
+<!--End mc_embed_signup-->
+<div class="table_title">Global stonks by market cap (S&P 500 below)</div>
 
 <div class="mcap_table">
 {{df_html | safe}}
@@ -235,10 +258,10 @@ drawCallback: function(){
             //     { className: "mcap_col_numbers", "targets": [2, 3,4,5,6 ] }
             // ],
             // responsive: false,
-            scrollY: true,
-            orderCellsTop: true,
-            scrollX: true,
-            scrollCollapse: true,
+            // scrollY: true,
+            // orderCellsTop: true,
+            // scrollX: true,
+            // scrollCollapse: true,
 
 
             // responsive: {
@@ -349,5 +372,32 @@ drawCallback: function(){
 
 </script>
 
-
+<br>
+<div class="all_stocks_footer">
+Looking for a specific stock? Please use our search ("TSLA, AAPL, SPY...") at the top.
+If you are not able to find the stock, you can find it here:  <a href="https://chartsonlygoup.com/list/all">all stocks</a>
+Note: really big (browser may freeze).
+</div>
 {% endblock %}
+
+
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://chartsonlygoup.us1.list-manage.com/subscribe/post?u=ceb9fa4aa39bed0cdd5c2e605&amp;id=445fb4ded6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ceb9fa4aa39bed0cdd5c2e605_445fb4ded6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->

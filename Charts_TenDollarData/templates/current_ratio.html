@@ -75,7 +75,7 @@
 }
 </style>
 <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" /> -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
 <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script> -->
 
 
@@ -89,7 +89,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
 <!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
-<script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+<!-- <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script> -->
 
 
 
@@ -217,12 +217,12 @@ a:hover {
         {% elif price_available == "no" %}
         var df_json = {{ df_json }};
         var year_df_json = {{ year_df_json }};
-        var price_json = "";
+        var price_json = "";//[[0,null],[0,null]];
 
         {% elif chart_type == "price" %}
         var df_json = {{ price_json }};
         var year_df_json = {{ price_json }};
-        var price_json = "";
+        var price_json = "";//[[0,null],[0,null]];
 
         {% else %}
 
@@ -234,7 +234,7 @@ a:hover {
         {% endif %}
 
 
-                var currency_symbol = {{currency_symbol}}
+                var currency_symbol = "{{currency_symbol}}"
         </script>
         <script src="{{ url_for('static', filename='../static/js/quarterly.js') }}"></script>
 
@@ -519,7 +519,7 @@ slider.addEventListener('mousemove', e => {
             <li class="hr_three"><a href="#/" class="tabs_title_links"><div class="innerhref">Definition / Formula</div></a></li>
             <li class="hr_four"><a href="#/" class="tabs_title_links"><div class="innerhref">
                 <!-- About the Company -->
-                Our Data Source
+                <!-- Our Data Source -->
                 <!-- Our Data (free) -->
                 <!-- and Datasets ($10) -->
             </div></a></li>
@@ -786,4 +786,24 @@ slider.addEventListener('mousemove', e => {
 //    })
 // });
 </script>
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://chartsonlygoup.us1.list-manage.com/subscribe/post?u=ceb9fa4aa39bed0cdd5c2e605&amp;id=445fb4ded6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ceb9fa4aa39bed0cdd5c2e605_445fb4ded6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
 {% endblock %}

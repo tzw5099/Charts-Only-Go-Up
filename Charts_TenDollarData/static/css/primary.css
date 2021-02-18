@@ -1,6 +1,18 @@
 
 /* added 2020-02-06 */
+.squarelogo > table{
+  /* border-color: white; */
+  border: 1px solid white;
+}
 
+.beta{
+	font-size: 10px;
+}
+.attribute_ten{
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
 body {
     font-family: "Nunito Sans",Roboto, Arial;;
 }
@@ -191,13 +203,14 @@ table.dataTable tbody th, table.dataTable tbody td{
 
 .sum_market.items{
   /* overflow-x:hidden !important; */
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow: hidden !important;
   overflow-x: hidden;
   /* width:1000%; */
 }
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    /* width: 0px;
+    background: transparent;  */
 }
 /* Optional: show position indicator in red */
 /* ::-webkit-scrollbar-thumb {
