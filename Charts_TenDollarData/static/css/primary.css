@@ -252,6 +252,15 @@ tr.odd,tr.even{
 }
 
 @media (max-width: 768px) {
+
+
+.search_nav_mobile{
+	margin-left:-15px;
+  }
+  
+  .navbar-toggler{
+	padding: .2rem .2rem;
+  }
 	.mcap_image{
 		width:40px;
 	  }

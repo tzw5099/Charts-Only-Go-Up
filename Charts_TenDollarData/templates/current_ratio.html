@@ -3,18 +3,18 @@
 <title>
 
     {% if chart_type == "normal" %}
-    {{company_symbol}}'s {{fin_metric_name}} vs Stonk Price 
+    {{company_symbol}}'s {{fin_metric_name}} vs Stock Price 
                     |
                     {{ earliest_year }}
                     -
-                    2021
+                    Present
                     | {{company_short_name}} | Charts
                     {% elif chart_type == "price" %}
-                    {{company_symbol}}'s Stonk Price
+                    {{company_symbol}}'s Stock Price
                     |
                     {{ earliest_year }}
                     -
-                    2021
+                    Present
                     | {{company_short_name}} | Charts 
                     📈
 
@@ -23,7 +23,7 @@
                     |
                     {{ earliest_year }}
                     -
-                    2021
+                    Present
                     | {{company_short_name}} | Charts 
                     📈
 {% else %}
@@ -31,7 +31,7 @@
                     |
                     {{ earliest_year }}
                     -
-                    2021
+                    Present
                     | {{company_short_name}} | Charts 
                     📈
 
@@ -358,14 +358,14 @@ a:hover {
                     <!-- <span class="highbar_title_stock">
                     Stock Price</span> &</span> -->
                     <span class="highbar_title_metric">
-                        Stonk Price</span>
+                        Stock Price</span>
                     </div>
                     <div id="highbar" class="highbar_mobile">
                         <!-- <div id="highbar" style="height: 400px; width:100%;"> --></div>
                     <br>
                         {% else %}
                     <span class="highbar_title_stock">
-                    Stonk Price</span> &</span>
+                    Stock Price</span> &</span>
                     <span class="highbar_title_metric">
                     {{ fin_metric_name }}</span>
 
@@ -578,6 +578,8 @@ slider.addEventListener('mousemove', e => {
         </span>
             </li>
             <li>{{fin_metric_definition_formula}}
+                <br>
+                For more detailed definitions, please see <a href="https://investopedia.com">Investopedia</a>.
 
 <br>
 
@@ -594,7 +596,7 @@ slider.addEventListener('mousemove', e => {
 
 {% endif %}
     <br>
-{% include 'extended_tabs.min.html' %}
+{% include 'extended_tabs.html' %}
 </div>
 </div>
     <script>

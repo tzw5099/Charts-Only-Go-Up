@@ -1,0 +1,3 @@
+,date,open,high,low,close,adjClose,volume,unadjustedVolume,change,changePercent,vwap,label,changeOverTime
+0,2021-02-12,75.71,84.8,71.51,75.46,75.46,21414245.0,21414245.0,-0.25,-0.33,77.25667,"February 12, 21",-0.0033
+0,2021-02-11,76.0,79.599998,70.0,70.550003,70.550003,43502700.0,43502700.0,-5.45,-7.171,73.38333,"February 11, 21",-0.07171

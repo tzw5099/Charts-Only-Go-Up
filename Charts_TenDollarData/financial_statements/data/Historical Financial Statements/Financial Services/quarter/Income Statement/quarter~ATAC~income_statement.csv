@@ -1,8 +1,0 @@
-,date,symbol,fillingDate,acceptedDate,period,revenue,costOfRevenue,grossProfit,grossProfitRatio,researchAndDevelopmentExpenses,generalAndAdministrativeExpenses,sellingAndMarketingExpenses,otherExpenses,operatingExpenses,costAndExpenses,interestExpense,depreciationAndAmortization,ebitda,ebitdaratio,operatingIncome,operatingIncomeRatio,totalOtherIncomeExpensesNet,incomeBeforeTax,incomeBeforeTaxRatio,incomeTaxExpense,netIncome,netIncomeRatio,eps,epsdiluted,weightedAverageShsOut,weightedAverageShsOutDil,link,finalLink
-0,2018-06-30,ATAC,2018-06-30,2018-06-30,Q2,0.0,0.0,0.0,0.0,0.0,92781.0,0.0,0.0,0.0,114044.0,0.0,0.0,-114044.0,0.0,-114044.0,0.0,0.0,69976.0,0.0,22494.0,47482.0,0.0,-0.04,-0.04,2003058.0,2003058.0,,
-0,2018-03-31,ATAC,2018-03-31,2018-03-31,Q1,0.0,0.0,0.0,0.0,0.0,132259.0,0.0,0.0,0.0,153521.0,0.0,0.0,-153521.0,0.0,-153521.0,0.0,0.0,-19171.0,0.0,0.0,-19171.0,0.0,-0.06,-0.06,1996450.0,1996450.0,,
-0,2017-12-31,ATAC,,,Q4,0.0,0.0,0.0,0.0,0.0,63341.0,0.0,0.0,0.0,76690.0,0.0,0.0,-76690.0,0.0,-76690.0,0.0,0.0,56033.0,0.0,0.0,56033.0,0.0,0.0,0.0,0.0,0.0,,
-0,2017-09-30,ATAC,,,Q3,0.0,0.0,0.0,0.0,0.0,30478.0,0.0,0.0,0.0,51499.0,0.0,0.0,-51499.0,0.0,-51499.0,0.0,0.0,-1037.0,0.0,0.0,-1037.0,0.0,-0.02,-0.02,1467996.0,1467996.0,,
-0,2017-06-30,ATAC,,,Q2,0.0,0.0,0.0,0.0,0.0,56.0,0.0,0.0,0.0,56.0,0.0,0.0,-56.0,0.0,-56.0,0.0,0.0,-56.0,0.0,0.0,-56.0,0.0,0.0,0.0,5872497.0,5872497.0,,
-0,2017-03-31,ATAC,2017-03-31,2017-03-31,Q1,0.0,0.0,0.0,0.0,0.0,25.0,0.0,0.0,0.0,25.0,0.0,0.0,-25.0,0.0,-25.0,0.0,0.0,-25.0,0.0,0.0,-25.0,0.0,0.0,0.0,5872497.0,5872497.0,,
-0,2016-09-30,ATAC,,,Q3,0.0,0.0,0.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,0.0,0.0,-100.0,0.0,-100.0,0.0,0.0,-100.0,0.0,0.0,-100.0,0.0,0.0,0.0,5872497.0,5872497.0,,

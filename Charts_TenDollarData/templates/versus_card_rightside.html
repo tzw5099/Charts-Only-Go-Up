@@ -1,5 +1,6 @@
             <!-- <div class="card shadow border-left-primary py-2 sticky-top" style="margin: 10px;"> -->
             <div class="card-body summary_header">
+                <span class="font12">Note: Stonk = Stock. Both words are used interchangeably. 🙂</span>
                 <h2 class="text-primary mb-0 historical">
                     <!-- Summary Statistics (Annual)
                                 <br> -->
@@ -266,6 +267,11 @@
                         <span class="font12">Down Years = Zero or Negative (0% or less) YoY change </span>
                         <br><br>
 
+                        {% if price_available == "yes" %}
+
+
+
+
 
                         <h2 class="key_points">Key Points <span class="key_subtitle">(Stonk Price Comparison)</span></h2>
                         <!-- <br> -->
@@ -342,7 +348,22 @@
                         's'
                         </li> -->
                         </ul>
+
+                        {% else %}
+                        {% endif %}
+
+                        
+
+
+
+
+
+
+
+
                         {{min_max_disclaimer}}
+
+
                         <!-- </span> -->
 
 

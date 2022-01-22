@@ -194,9 +194,11 @@ def change_markup(change,percent_or_x,arrow_no_arrow = "arrow", css_class = "cha
         try:
             if arrow_no_arrow == "arrow":
                 up_green_prefix = '<span class="up_green {}">'.format(css_class)
-                up_green_suffix = ' <i class="material-icons">arrow_upward</i></span>'
+                # up_green_suffix = ' <i class="material-icons">arrow_upward</i></span>'
+                up_green_suffix = ' <i class="material-icons">&#xe5d8</i></span>'
                 down_red_prefix = '<span class="down_red {}">'.format(css_class)
-                down_red_suffix = ' <i class="material-icons">arrow_downward</i></span>'
+                # down_red_suffix = ' <i class="material-icons">arrow_downward</i></span>'
+                down_red_suffix = ' <i class="material-icons">&#xe5db</i></span>'
             else:
                 up_green_prefix = '<span class="up_green {}">'.format(css_class)
                 up_green_suffix = '</span>'
@@ -287,11 +289,16 @@ def lists(collection="all"):
     global subdomain
     # df = pd.read_csv("reference_data/homepage_final.csv")
     # df_html = pd.read_csv("reference_data/homepage_final.csv")
-    if collection == "all":
-        company_profiles_path = "/var/www/chartsonlygoup.com/public_html/reference_data/Company_Profiles.csv"
-        company_profiles = pd.read_csv(company_profiles_path, encoding='latin1')
-    else: 
-        pass
+    # if collection == "all":
+    #     company_profiles_path = "/var/www/chartsonlygoup.com/public_html/reference_data/Company_Profiles.csv"
+    #     company_profiles = pd.read_csv(company_profiles_path, encoding='latin1')
+    
+    # else: 
+    company_profiles_path = "/var/www/chartsonlygoup.com/public_html/reference_data/Company_Profiles/profile_{}.csv".format(collection.upper())
+    company_profiles = pd.read_csv(company_profiles_path, encoding='latin1')
+
+
+
     # #.to_html().replace('border="1" class="dataframe">','class="df_tableBoot" id="df_myTable" border="1" class="dataframe"><colgroup>{}</colgroup>'.format(col_list_str))
     # # df_html['Market Cap'] = df_html.apply(lambda x: magnitude_num(x['marketCap'],"$"), axis=1)#.head(30)
     # # df_html['Market Cap'] = df_html.apply(lambda x: int(x['marketCap']), axis=1)#.head(30)
@@ -313,30 +320,31 @@ def lists(collection="all"):
     # # df_html['Market Cap'] = df_html['Market Cap'].map('${:,.1f}B'.format)
     # df_html['Market Cap'] = df_html['Market Cap'].apply(lambda x: ('<td data-sort="'+str(x)+'"><span class="mcap_num">'+str(x)+'</span>'))
 
-    # company_profiles = company_profiles[['symbol','pure name','currency',
-    # 'exchange',
-    # 'industry',
-    # 'sector',
-    # 'country',
-    # ]][0:]
-    # company_profiles.columns = ['symbol','name','currency',
-    # 'exchange',
-    # 'industry',
-    # 'sector',
-    # 'country',
-    # ]
-    company_profiles = company_profiles[['symbol',
-    ]][0:20000]
-    company_profiles.columns = ['symbol',
+    company_profiles = company_profiles[['symbol','pure name','currency',
+    'exchange',
+    'industry',
+    'sector',
+    'country',
+    ]][0:]
+    company_profiles.columns = ['symbol','name','currency',
+    'exchange',
+    'industry',
+    'sector',
+    'country',
     ]
+    # company_profiles = company_profiles[['symbol',
+    # ]][0:20000]
+    # company_profiles.columns = ['symbol',
+    # ]
     def make_clickable(url, name):
         return '<a href="https://chartsonlygoup.com/{}" class="all_symbols">{}</a>'.format(url,name)
 
     company_profiles["symbol"] = company_profiles.apply(lambda x: make_clickable(x['symbol'], x['symbol']), axis=1)
-    print("zzsskadfjsdkl")
+    # print("zzsskadfjsdkl")
     print(company_profiles)
     return render_template('lists_table.html',\
-        df_html = Markup(company_profiles.to_html(escape=False)),
+        df_html = Markup(company_profiles.to_html(escape=False)).replace("NaN",""),
+        first_character = collection.upper()
     # df_html = [df_html],
         )
 
@@ -930,7 +938,7 @@ def market_caps_table(collection="main"):
 def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple", statement_or_ratio="none", url_fin_metric= "none"):
     global domain
     global subdomain
-    print("bobobo", url_fin_metric, statement_or_ratio)
+    # print("bobobo", url_fin_metric, statement_or_ratio)
     url_symbol = url_symbol.lower()
     fin_statements_matching = pd.read_csv("reference_data/Financial_Statements_Reference_Matching.csv", encoding='latin1')
 
@@ -959,11 +967,11 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         fin_paper = FS("IS",url_symbol)
         # tables=fin_paper.df_values()['df_table']
         balance_sheet=FS("BS",url_symbol).df_table()
-        print("balbal")
+        # print("balbal")
         # print(balance_sheet)
         cash_flow=FS("CF",url_symbol).df_table()
         income_statement=FS("IS",url_symbol).df_table()
-        print("zleninc_state")
+        # print("zleninc_state")
         # table_pct = fin_paper.df_values()['df_table_pct']
         fs_table_pct = fin_paper.df_table_pct()
         try:
@@ -994,7 +1002,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             statement_or_ratio = list(fin_statements_matching[fin_statements_matching['URL']=="{}".format(url_fin_metric)]['statement_url'])[0]
         except:
             statement_or_ratio = "ratio"
-        print("dumdumdum", statement_or_ratio)
+        # print("dumdumdum", statement_or_ratio)
     else:
         hide_chart_sidebar = "no"
 
@@ -1012,7 +1020,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         statement_or_ratio = url_fin_metric
         url_fin_metric = "revenue-sales"
         chart_type = "statement"
-        print("xblabloo",url_fin_metric,url_fin_metric,url_symbol)
+        # print("xblabloo",url_fin_metric,url_fin_metric,url_symbol)
 
         if statement_or_ratio == "cash-flow-statement":
             fin_statement_table = FS("CF",url_symbol).df_table()
@@ -1030,7 +1038,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         
     else:
         # chart_type = "normal"
-        print("blebloo")
+        # print("blebloo")
         fin_statement_table = ""
 
 
@@ -1112,7 +1120,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     except:
         pass
     url_name = profiles_dict['url name']
-    print("zuirl name", profiles_dict['url name'])
+    # print("zuirl name", profiles_dict['url name'])
     if "{}".format(statement_or_ratio) in fin_statements_list:
         if "{}".format(statement_or_ratio) == "income-statement" or "{}".format(statement_or_ratio) == "balance-sheet" or "{}".format(statement_or_ratio) == "cash-flow-statement":
             if "{}".format(statement_or_ratio) == "income-statement":
@@ -1151,7 +1159,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         df = year_df_file
         all_titles = list(df)
         # print("zlen rev", len(df))
-        if len(df) >= 3:
+        if len(df) >= 300:
+        # if len(df) >= 3:
             len_table = len(df)
             all_numbers_df = df[list(df.select_dtypes(include=['float','int64']))].div(4, axis=0)
             all_objects_df = df[list(df.select_dtypes(include=['object']))]
@@ -1160,8 +1169,9 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
 
             # print("list_years", list_years)
             # print("list_yezars", len(df),df.head(30))
-            print("das ist amgn")
-            print(df)
+            # print("das ist amgn")
+            # print("swetty")
+            # print(df)
 
             df.to_csv("amgn_df.csv")
             try:
@@ -1188,12 +1198,19 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # print(list(df))
         else:
             len_table = len(df)
+            
             fin_file_year = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/all/quarter/{}/*~{}~*".format(fin_statement_dir, url_symbol.upper()))[-1]
             # fin_df = pd.read_csv(csv_file)
             df = pd.read_csv(fin_file_year)  
+            df['date'] = df['acceptedDate']
             df['zeroes'] = 0
             zeroes = df.pop('zeroes')
             df.insert(0, 'index', zeroes)
+            # print("rdoofpoo")
+            # df.to_csv("qtr_amgn_df.csv")
+            # print("qdoofpoo")
+            # print(df)
+            # print("zxcdz")
         df = df.drop(['index'],axis=1)
         df["Year"] = df["date"].apply(lambda x: x[0:4])
         # print("sup1", len(df),df.head(30))
@@ -1342,8 +1359,9 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             df = pd.read_csv(fin_file_year)
             # if len(year_df_file) > len(fin_df):
             #     df = year_df_file
-            print("zlen df",len(df))
-            if len(df) >= 3:
+            # print("zlen df",len(df))
+            if len(df) >= 300:
+            # if len(df) >= 3:
                 len_table = len(df)
                 all_titles = list(df)
                 all_numbers_df = df[list(df.select_dtypes(include=['float','int64']))].div(4, axis=0)
@@ -1371,10 +1389,11 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 fin_file_year = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Financial Statements/all/quarter/{}/*~{}~*".format(x, url_symbol.upper()))[-1]
                 # fin_df = pd.read_csv(csv_file)
                 df = pd.read_csv(fin_file_year)  
+                df['date'] = df['acceptedDate']
                 df['zeroes'] = 0
                 zeroes = df.pop('zeroes')
                 df.insert(0, 'index', zeroes)
-                print("zcloudflare")
+                # print("zcloudflare")
                 # print(df)
             df['date'] = df['date'].apply(lambda x: str(x)[0:10])
             fin_df = df
@@ -1449,7 +1468,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             statement_url = fin_statement_title_statements_dict[key]
             # print("sup","key",key,"value",value,"link",fin_statement_title_links_dict[key],"statement",fin_statement_title_statements_dict[key])
             # yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(fin_statement_title_links_dict[key],profiles_col,value))
-            yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}-{}/{}/{}/{}"><div class="item item1 s_card_{}"><span class="yoy_cards_metric">{}</span><span class="yoy_cards_current">{}</span><span class="yoy_cards_title">{}</span></div></a>'.format(subdomain,url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],n,value,current_value,profiles_col))
+            yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}/{}/{}"><div class="item item1 s_card_{}"><span class="yoy_cards_metric">{}</span><span class="yoy_cards_current">{}</span><span class="yoy_cards_title">{}</span></div></a>'.format(subdomain,url_symbol,statement_url,fin_statement_title_links_dict[key],n,value,current_value,profiles_col))
             yoy_cards_html_list.append(yoy_cards_html)
         yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
         yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
@@ -1698,7 +1717,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         for n, profiles_col in enumerate(list(df_yoyx)):
             key = profiles_col
             value = df_yoyx[key][0]*100 # profiles_value[n]*100
-            print("bling",n, key, value)
+            # print("bling",n, key, value)
             current_value = 4*df_row_1[key][0] # profiles_current_value[n]
             current_value = magnitude_num(current_value,currency_symbol)
             value = change_markup(value,"percent","noarrow", "yoy_cards")
@@ -1707,7 +1726,8 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
             statement_url = fin_statement_title_statements_dict[key]
             # print("sup","key",key,"value",value,"link",fin_statement_title_links_dict[key],"statement",fin_statement_title_statements_dict[key])
             # yoy_cards_html = Markup('<a class="yoy_card_link" href="https://tendollardata.com/{}"><div class="item item1"><span class="yoy_cards_title">{}</span><span class="yoy_cards_metric">{}</span></div></a>'.format(fin_statement_title_links_dict[key],profiles_col,value))
-            yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}-{}/{}/{}/{}"><div class="item item1 s_card_{}"><span class="yoy_cards_metric">{}</span><span class="yoy_cards_current">{}</span><span class="yoy_cards_title">{}</span></div></a>'.format(subdomain,url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],n,value,current_value,profiles_col))
+            # yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}-{}/{}/{}/{}"><div class="item item1 s_card_{}"><span class="yoy_cards_metric">{}</span><span class="yoy_cards_current">{}</span><span class="yoy_cards_title">{}</span></div></a>'.format(subdomain,url_symbol,stock_or_etf,url_name,statement_url,fin_statement_title_links_dict[key],n,value,current_value,profiles_col))
+            yoy_cards_html = Markup('<a class="yoy_card_link" href="{}/{}/{}/{}"><div class="item item1 s_card_{}"><span class="yoy_cards_metric">{}</span><span class="yoy_cards_current">{}</span><span class="yoy_cards_title">{}</span></div></a>'.format(subdomain,url_symbol,statement_url,fin_statement_title_links_dict[key],n,value,current_value,profiles_col))
             yoy_cards_html_list.append(yoy_cards_html)
         yoy_cards_html_joined = Markup("".join(yoy_cards_html_list))
         df = df[cols]
@@ -1793,7 +1813,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         repeated_list.append(last_row)
     df['repeater'] = repeated_list[::-1]
     year_df_json = np.nan_to_num(df[['date',"{}".format("repeater")]].to_numpy()).tolist()[::-1]
-    # print("year_df_json", year_df_json)
+    # print("year_df_jso1", year_df_json)
     len_year_df = len(year_df)
     df_json_date_year  = np.nan_to_num(year_df['year'].to_numpy()).tolist()
     df['Quarter & Year'] = df_quarter+"-"+df['date'].apply(lambda x: str(x)[0:4])
@@ -1817,7 +1837,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     mean_str = magnitude_num(mean, currency_symbol)
     max_str = magnitude_num(max_metric, currency_symbol)
     min_str = magnitude_num(min_metric, currency_symbol)
-    print("min_metric", min_metric, "max_metric",max_metric)
+    # print("min_metric", min_metric, "max_metric",max_metric)
     if min_metric <0 and max_metric>0:
         min_max_warning = "*"
         min_max_disclaimer = Markup('<span class="ruhroh disclaimer_one">* A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate changes that involve negative numbers.</span>')
@@ -1835,9 +1855,12 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     earliest_metric_str = magnitude_num(earliest_metric, currency_symbol)
     latest_metric_str = magnitude_num(latest_metric, currency_symbol)
     up_green_prefix = '<span class="up_green">'
-    up_green_suffix = ' <i class="material-icons">arrow_upward</i></span>'
+    up_green_suffix = ' <i class="material-icons">&#xe5d8</i></span>'
     down_red_prefix = '<span class="down_red">'
-    down_red_suffix = ' <i class="material-icons">arrow_downward</i></span>'
+    down_red_suffix = ' <i class="material-icons">&#xe5db</i></span>'
+
+
+
     # print("max_metricz", max_metric)
     # print("min_metricz", min_metric)
     try:
@@ -1847,7 +1870,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
                 pct_chg = (latest_metric/earliest_metric)
             else:
                 pct_chg = (latest_metric/earliest_metric)
-            print("zx3")
+            # print("zx3")
             if (earliest_metric <0 and latest_metric>0) or (earliest_metric>0 and latest_metric<0):
                 earliest_latest_warning = "*"
                 earliest_latest_disclaimer =  Markup('<span class="ruhroh disclaimer_one">** A modified method (see: <a href="https://math.stackexchange.com/questions/716767/how-to-calculate-the-percentage-of-increase-decrease-with-negative-numbers/716770">here</a>) is used to calculate change, since the bottom/peak contains a negative number.</span>')
@@ -1928,6 +1951,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         # print("beep",glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/NASDAQ/[[]M[]] Monthly/*")[0:5])
         # print("market cap path1", "Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))
         market_cap_path = glob.glob("Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/*/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))[0]
+        
         # print("market cap path",market_cap_path, "Charts_TenDollarData/financial_statements/data/Historical Market Cap & Price/[[]M[]] Monthly/M-*-{}.csv".format(url_symbol.upper()))
         market_cap_df = pd.read_csv(market_cap_path)
         # print("mcappy", market_cap_df.head(5))
@@ -2038,7 +2062,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         df_tall['Stock Price'] = df_tall['Price'].apply(lambda x: "{}{:,}".format(currency_symbol,np.round(x,2)))
         df_tall['YoY Price % Change float'] = df_tall['{}'.format("Price")]/df_tall['{}'.format("Price")].shift(-1)
         price_available = "yes"
-    except:
+    except Exception as e:
         df_tall['Stock Price'] = 1
         df_tall['YoY Price % Change float'] = 1
         price_available = "no"
@@ -2137,6 +2161,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     df_table_html = df_tall[['{}'.format(fin_metric_title)]].iloc[::-1].transpose().to_html()
     y_y = ((last_4_quarters/prev_4_quarters)-1)*100
     df_json  = np.nan_to_num(df[['date',"{}".format("quarter avg")]].to_numpy()).tolist()[::-1]
+    # print("dxz", df_json)
     y_y_chg = change_markup(y_y,"percent","arrow")
     earliest_date = pd.to_datetime(df.date).values.astype(np.int64)[-1]
     max_min_range = np.round(((max_metric - min_metric)/min_metric),2)
@@ -2163,18 +2188,23 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
         company_similar_paragraph = Markup(similar_companies_table).replace(",","").replace("","")
         # company_similar_paragraph = Markup('<table class="tg"> <thead> <tr>',''.join(company_similar_list)[:-2],"</tr></thead><tbody><tr>",''.join(company_similar_list_img_list)[:-2],"</tr></tbody></table>")
     except Exception as e:
-        print("company_similar_zparagraph", e)
+        # print("company_similar_zparagraph", e)
         company_similar_paragraph = ''
     year_df_json = np.nan_to_num(df[['date',"{}".format("repeater")]].to_numpy()).tolist()[::-1]
+    # print("ydj1",year_df_json)
     import numbers
     position_last_value = next(x[0] for x in enumerate(list(df['repeater'])) if  len(str(x[1])) > 1)
-    last_year_timestamp = year_df_json[(-position_last_value)][0]
+    # last_year_timestamp = year_df_json[(-position_last_value)][0]
+    last_year_timestamp = 1619568000000
+    # print("ydj12",year_df_json)
     # last_year_timestamp = year_df_json[(-position_last_value-1)][0]
     year_df_json = year_df_json[0:len(year_df_json)-position_last_value-1]
+    # print("ydj13",year_df_json)
     # year_df_json = year_df_json[0:len(year_df_json)-position_last_value]
-    year_df_json.append([last_year_timestamp,last_4_quarters])
+    # year_df_json.append([last_year_timestamp,last_4_quarters])
     year_df_json = str(year_df_json).replace("''","null")
     year_df_json = str(year_df_json).replace("nan","null")
+    # print("ydj2",year_df_json)
     df_json = str(df_json).replace("nan","null")
     try:
         prev_price = price_json[-5][1]
@@ -2354,7 +2384,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     company_long_name = profiles_dict['long name']
     company_symbol = profiles_dict['symbol']
     # df_image_name = Markup('<a class="mcap_link" href="{}/{}"><table class="mini_table"><thead class="mini_thead"><tr class="mini_tr"><th class="mcap_image"  rowspan="2"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="30" height="30"></th><th class="mcap_symbol">'.format(domain, company_symbol, domain,company_symbol)+company_symbol+'</th></tr><tr class="mini_tr2"><td class="mcap_name">' +company_long_name+'</td></tr></thead></table></a>')
-    df_image_name = Markup('<a class="mcap_link" href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40">'.format(domain, company_symbol.lower(), domain,company_symbol.upper())+'</a>')
+    df_image_name = Markup('<a class="mcap_link" href="{}/{}"><img class="lazy" src="{}/static/img/images-stocks/{}.png" width="40" height="40"  onerror="this.style.display={}">'.format(domain, company_symbol.lower(), domain,company_symbol.upper(),"'none'")+'</a>')
     
     # price_json = price_json[31:-30]
     price_json = price_json[0:]
@@ -2368,6 +2398,7 @@ def current_ratio(url_symbol="random", stock_or_etf = "stock", url_name = "apple
     else:
         pass
     
+    # print("fqlen pjson",len(price_json))
     return render_template('current_ratio.html', \
                             main_page_y_n = main_page_y_n,
                             len_table = len_table,

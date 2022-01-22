@@ -1,0 +1,17 @@
+__pycache__/
+.history*
+data/daily_price/*
+data/Historical Financial G*/*
+data/Historical Financial R*/*
+ocean/*/*
+charts/annual_returns/*
+charts/test data/*
+*.jpg
+*.png
+*.jpeg
+*.svg
+*.ttf
+*.woff*
+*.xlsx
+# *.csv
+

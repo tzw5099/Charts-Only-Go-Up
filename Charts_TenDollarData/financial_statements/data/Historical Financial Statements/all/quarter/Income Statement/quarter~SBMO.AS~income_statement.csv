@@ -1,0 +1,11 @@
+,date,symbol,reportedCurrency,fillingDate,acceptedDate,period,revenue,costOfRevenue,grossProfit,grossProfitRatio,researchAndDevelopmentExpenses,generalAndAdministrativeExpenses,sellingAndMarketingExpenses,otherExpenses,operatingExpenses,costAndExpenses,interestExpense,depreciationAndAmortization,ebitda,ebitdaratio,operatingIncome,operatingIncomeRatio,totalOtherIncomeExpensesNet,incomeBeforeTax,incomeBeforeTaxRatio,incomeTaxExpense,netIncome,netIncomeRatio,eps,epsdiluted,weightedAverageShsOut,weightedAverageShsOutDil,link,finalLink,timestamp,est_time,est_date
+0,2019-06-30,SBMO.AS,USD,2019-06-30,2019-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,60750000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+1,2018-06-30,SBMO.AS,USD,2018-06-30,2018-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+2,2017-06-30,SBMO.AS,USD,2017-06-30,2017-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+3,2016-06-30,SBMO.AS,USD,2016-06-30,2016-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,54750000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+4,2015-06-30,SBMO.AS,USD,2015-06-30,2015-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,53250000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+5,2014-06-30,SBMO.AS,USD,2014-06-30,2014-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,56500000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+6,2013-06-30,SBMO.AS,USD,2013-06-30,2013-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+7,2012-06-30,SBMO.AS,USD,2012-06-30,2012-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+8,2011-06-30,SBMO.AS,USD,2011-06-30,2011-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
+9,2010-06-30,SBMO.AS,USD,2010-06-30,2010-06-30,Q2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1620597619,18:00:19,20210509
