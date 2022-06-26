@@ -31,9 +31,9 @@ supervisorctl restart charts
 
 [Charts Only Go Up - stock chart - AAPL](https://chartsonlygoup.com/aapl)
 
-![Charts Only Go Up - chart - top - AAPL](/screenshots/Charts Only Go Up - chart - top - AAPL.png)
+![Charts Only Go Up - chart - top - AAPL](screenshots/ChartsOnlyGoUp-chart-top-AAPL.png)
 
-![Charts Only Go Up - chart - middle - AAPL](/screenshots/Charts Only Go Up - chart - middle - AAPL.png)
+![Charts Only Go Up - chart - middle - AAPL](screenshots/ChartsOnlyGoUp-chart-middle-AAPL.png)
 
-![Charts Only Go Up - chart - bottom - AAPL](/screenshots/Charts Only Go Up - chart - bottom - AAPL.png)
+![Charts Only Go Up - chart - bottom - AAPL](screenshots/ChartsOnlyGoUp-chart-bottom-AAPL.png)
 
